@@ -647,7 +647,10 @@
           "identityExact": false
         }
       ],
-      "unavailableRecordNote": null
+      "unavailableRecordNote": null,
+      "suitePassed": 5,
+      "suiteExecuted": 20,
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "authored-descriptions",
@@ -1334,7 +1337,10 @@
           "identityExact": false
         }
       ],
-      "unavailableRecordNote": null
+      "unavailableRecordNote": null,
+      "suitePassed": 10,
+      "suiteExecuted": 20,
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "authored-descriptions-full",
@@ -1674,7 +1680,10 @@
           "identityExact": false
         }
       ],
-      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record.",
+      "suitePassed": 10,
+      "suiteExecuted": 13,
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "vocabulary-grounding",
@@ -2241,7 +2250,10 @@
           "identityExact": true
         }
       ],
-      "unavailableRecordNote": null
+      "unavailableRecordNote": null,
+      "suitePassed": 20,
+      "suiteExecuted": 25,
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "vocabulary-grounding-full",
@@ -2537,7 +2549,10 @@
           "identityExact": true
         }
       ],
-      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record.",
+      "suitePassed": 11,
+      "suiteExecuted": 13,
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "evidence-scope",
@@ -2841,7 +2856,8 @@
           "identityExact": true
         }
       ],
-      "unavailableRecordNote": null
+      "unavailableRecordNote": null,
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "evidence-scope-full",
@@ -3144,7 +3160,8 @@
           "identityExact": true
         }
       ],
-      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record.",
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "bm25-acceptance",
@@ -3172,7 +3189,8 @@
           "identityExact": true
         }
       ],
-      "unavailableRecordNote": null
+      "unavailableRecordNote": null,
+      "executionPath": "SearchService through public SDK and real Runtime"
     },
     {
       "name": "expanded-bm25-full",
@@ -3541,7 +3559,267 @@
           "identityExact": false
         }
       ],
-      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record.",
+      "executionPath": "SearchService through public SDK and real Runtime"
+    },
+    {
+      "name": "unchanged-planner-policy-diagnostic",
+      "fullCohort": false,
+      "executionPath": "Public SDK diagnostic operation with sensitive capture; same wrapped question, identity output, limits, World and planner policy; excludes application admission and hydration.",
+      "suitePassed": 10,
+      "suiteExecuted": 10,
+      "summary": {
+        "BM25 pull-request text with profile and merge filters": {
+          "passed": 5,
+          "total": 5
+        },
+        "explicit disjunction across public affiliation and PR evidence": {
+          "passed": 5,
+          "total": 5
+        }
+      },
+      "queryRecords": [
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "3e0226ce-e13a-4cdf-9f7e-2e4765bba58a",
+          "ticketId": "5cfe6d2c-056a-442c-8da4-8d168b19c7c8",
+          "startedAt": "2026-09-10T11:47:03.875Z",
+          "finishedAt": "2026-09-10T11:47:06.002Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "1c0b55f9-2c22-4f0c-ac16-6f5562722ce5",
+          "ticketId": "ac108657-2a78-42d8-8c47-a2bdb9f66462",
+          "startedAt": "2026-09-10T11:47:09.269Z",
+          "finishedAt": "2026-09-10T11:47:11.588Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "99e1d968-6fe1-41a3-a6d7-90d3c71f73b5",
+          "ticketId": "11a05c68-a770-4145-90fc-f9ab3d7e9357",
+          "startedAt": "2026-09-10T11:47:14.855Z",
+          "finishedAt": "2026-09-10T11:47:17.798Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "b5bfd5c5-e95f-47ec-a85a-838f8e0fb79a",
+          "ticketId": "622ecaf4-efef-4064-9992-df450cb363ec",
+          "startedAt": "2026-09-10T11:47:22.282Z",
+          "finishedAt": "2026-09-10T11:47:24.214Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "c79003ca-2c52-433c-a015-e60c5607d2c3",
+          "ticketId": "a69b1110-571d-49fd-ac83-8880b6f672b6",
+          "startedAt": "2026-09-10T11:47:26.997Z",
+          "finishedAt": "2026-09-10T11:47:29.289Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "225af401-ac77-4c30-9786-45b838aa27f3",
+          "ticketId": "84cb183c-0f55-49c1-aafb-419ee590d857",
+          "startedAt": "2026-09-10T11:47:00.103Z",
+          "finishedAt": "2026-09-10T11:47:03.874Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "e97db791-a6c3-4a74-ab19-57984dfce0fe",
+          "ticketId": "349d0761-1ba4-49f0-bc7b-b64ebc8de552",
+          "startedAt": "2026-09-10T11:47:06.002Z",
+          "finishedAt": "2026-09-10T11:47:09.268Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "d3496f00-d4c9-4b54-9cc8-8caec5b3491e",
+          "ticketId": "78347c58-8610-4083-90af-953f55ff25b7",
+          "startedAt": "2026-09-10T11:47:11.589Z",
+          "finishedAt": "2026-09-10T11:47:14.854Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "24557773",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "a8acfdc6-929c-4cdb-9cc4-2b2ab000b1e9",
+          "ticketId": "631c26b0-a626-4bc8-ad26-00bc85815bbc",
+          "startedAt": "2026-09-10T11:47:17.798Z",
+          "finishedAt": "2026-09-10T11:47:22.282Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "8cb2beba-1f2e-438d-b98b-0490ee1746dc",
+          "ticketId": "2278c343-bbe0-4b72-ae23-f6321a70feb8",
+          "startedAt": "2026-09-10T11:47:24.215Z",
+          "finishedAt": "2026-09-10T11:47:26.997Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": false,
+          "identityExact": true
+        }
+      ]
     }
   ],
   "indexedSearchOperatorProof": {
