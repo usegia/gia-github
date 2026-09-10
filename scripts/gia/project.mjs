@@ -51,7 +51,7 @@ if (command === "init" || command === "refresh" || command === "publish") {
         ]
       : command === "refresh"
         ? ["refresh", "--environment", "dev", "--force-harvest", "--enrich", "--yes"]
-        : ["publish", "--environment", "dev", "--yes"];
+        : ["publish", "--environment", "dev"];
   const logPath = filename(".gia", `${command}.log`);
   const log = await open(logPath, "a", 0o600);
   try {
