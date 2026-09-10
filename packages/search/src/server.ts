@@ -81,6 +81,15 @@ export function createSearchService(config: SearchServiceConfig): SearchService 
     connectionTimeoutMillis: 3000,
     statement_timeout: 3000,
   });
+  for (const { pool, name } of [
+    { pool: operationsPool, name: "admission" },
+    { pool: readPool, name: "read" },
+    { pool: cancellationPool, name: "cancellation" },
+  ]) {
+    pool.on("error", () =>
+      console.error(JSON.stringify({ event: "search-database-idle-error", pool: name })),
+    );
+  }
   const executorPool = createExecutorPool(readPool, cancellationPool);
   const lifetime = new AbortController();
   const active = new Set<Promise<SearchOutcome>>();

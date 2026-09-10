@@ -129,6 +129,44 @@ describe("database-backed search admission and cancellation", () => {
     expect(record.rows[0].finished_at).toBeInstanceOf(Date);
   });
 
+  it("retains an active lease across UTC midnight beyond the per-client minute window", async () => {
+    const activeId = randomUUID();
+    const attemptedId = randomUUID();
+    requestIds.push(activeId, attemptedId);
+    await writer.query(
+      "INSERT INTO operations.search_requests(id,client_hash,created_at) VALUES($1,$2,$3)",
+      [activeId, "midnight-integration", new Date("2026-09-10T23:59:00Z")],
+    );
+    const result = await admitSearch(writer, {
+      id: attemptedId,
+      clientKey: `midnight-${randomUUID()}`,
+      maximumConcurrentSearches: 1,
+      maximumDailySearches: 1,
+      maximumSearchesPerMinute: 1,
+      timeoutMs: 180_000,
+      evaluationTime: new Date("2026-09-11T00:00:10Z"),
+    });
+    expect(result).toEqual({ kind: "rejected", code: "SEARCH_BUSY" });
+    await writer.query("UPDATE operations.search_requests SET finished_at=$2 WHERE id=$1", [
+      activeId,
+      new Date("2026-09-11T00:00:15Z"),
+    ]);
+    const afterCompletion = await admitSearch(writer, {
+      id: attemptedId,
+      clientKey: `midnight-${randomUUID()}`,
+      maximumConcurrentSearches: 1,
+      maximumDailySearches: 1,
+      maximumSearchesPerMinute: 1,
+      timeoutMs: 180_000,
+      evaluationTime: new Date("2026-09-11T00:00:20Z"),
+    });
+    expect(afterCompletion).toEqual({ kind: "accepted" });
+    await writer.query("UPDATE operations.search_requests SET finished_at=$2 WHERE id=$1", [
+      attemptedId,
+      new Date("2026-09-11T00:00:21Z"),
+    ]);
+  });
+
   it("cancels a busy single-slot execution pool through independent capacity", async () => {
     const pool = createExecutorPool(reader, cancellation);
     const connection = await pool.connect();

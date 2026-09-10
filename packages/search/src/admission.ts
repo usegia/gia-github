@@ -19,7 +19,7 @@ const countsSchema = z.object({
 
 export async function admitSearch(
   pool: pg.Pool,
-  input: AdmissionLimits & { id: string; clientKey: string },
+  input: AdmissionLimits & { id: string; clientKey: string; evaluationTime?: Date },
 ): Promise<Admission> {
   const client = await pool.connect();
   try {
@@ -29,12 +29,12 @@ export async function admitSearch(
     const clientHash = createHash("sha256").update(input.clientKey).digest("hex");
     const result = await client.query(
       `SELECT
-      count(*) FILTER (WHERE finished_at IS NULL AND created_at > now() - $2::integer * interval '1 millisecond')::integer AS concurrent,
-      count(*) FILTER (WHERE created_at >= date_trunc('day', now() AT TIME ZONE 'UTC') AT TIME ZONE 'UTC')::integer AS daily,
-      count(*) FILTER (WHERE client_hash=$1 AND created_at > now()-interval '1 minute')::integer AS recent
+      count(*) FILTER (WHERE finished_at IS NULL AND created_at > COALESCE($3::timestamptz,now()) - $2::integer * interval '1 millisecond')::integer AS concurrent,
+      count(*) FILTER (WHERE created_at >= date_trunc('day', COALESCE($3::timestamptz,now()) AT TIME ZONE 'UTC') AT TIME ZONE 'UTC')::integer AS daily,
+      count(*) FILTER (WHERE client_hash=$1 AND created_at > COALESCE($3::timestamptz,now())-interval '1 minute')::integer AS recent
       FROM operations.search_requests
-      WHERE created_at >= LEAST(date_trunc('day', now() AT TIME ZONE 'UTC') AT TIME ZONE 'UTC', now()-interval '1 minute')`,
-      [clientHash, input.timeoutMs + 30_000],
+      WHERE created_at <= COALESCE($3::timestamptz,now()) AND created_at >= LEAST(date_trunc('day', COALESCE($3::timestamptz,now()) AT TIME ZONE 'UTC') AT TIME ZONE 'UTC', COALESCE($3::timestamptz,now())-interval '1 minute', COALESCE($3::timestamptz,now())-$2::integer*interval '1 millisecond')`,
+      [clientHash, input.timeoutMs + 30_000, input.evaluationTime ?? null],
     );
     const counts = countsSchema.parse(result.rows[0]);
     const code =
@@ -49,10 +49,10 @@ export async function admitSearch(
       await client.query("ROLLBACK");
       return { kind: "rejected", code };
     }
-    await client.query("INSERT INTO operations.search_requests (id, client_hash) VALUES ($1,$2)", [
-      input.id,
-      clientHash,
-    ]);
+    await client.query(
+      "INSERT INTO operations.search_requests (id, client_hash, created_at) VALUES ($1,$2,COALESCE($3::timestamptz,now()))",
+      [input.id, clientHash, input.evaluationTime ?? null],
+    );
     await client.query("COMMIT");
     return { kind: "accepted" };
   } catch (error) {
