@@ -49,6 +49,7 @@ export function SearchWorkspace() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const controllerRef = useRef<AbortController | null>(null);
   const resultRef = useRef<HTMLElement>(null);
+  const activityOpenerRef = useRef<HTMLElement | null>(null);
   const pending = state.kind === "pending";
 
   useEffect(() => {
@@ -141,6 +142,12 @@ export function SearchWorkspace() {
   function chooseExample(nextQuestion: string) {
     setQuestion(nextQuestion);
     inputRef.current?.focus();
+  }
+
+  function openPerson(person: Person) {
+    activityOpenerRef.current =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setSelectedPerson(person);
   }
 
   const outcome = state.kind === "complete" ? state.outcome : null;
@@ -316,7 +323,7 @@ export function SearchWorkspace() {
                 {outcome.people.length ? (
                   <div className="people-grid">
                     {outcome.people.map((person) => (
-                      <PersonCard key={person.id} person={person} onOpen={setSelectedPerson} />
+                      <PersonCard key={person.id} person={person} onOpen={openPerson} />
                     ))}
                   </div>
                 ) : (
@@ -420,6 +427,7 @@ export function SearchWorkspace() {
         </aside>
       </div>
       <Sheet
+        restoreFocus={() => activityOpenerRef.current?.focus()}
         open={selectedPerson !== null}
         onOpenChange={(open) => {
           if (!open) setSelectedPerson(null);

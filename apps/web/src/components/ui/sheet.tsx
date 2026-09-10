@@ -10,19 +10,27 @@ export function Sheet({
   onOpenChange,
   title,
   description,
+  restoreFocus,
   children,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   title: string;
   description: string;
+  restoreFocus: () => void;
   children: ReactNode;
 }) {
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="sheet-overlay" />
-        <Dialog.Content className="sheet-content">
+        <Dialog.Content
+          className="sheet-content"
+          onCloseAutoFocus={(event) => {
+            event.preventDefault();
+            restoreFocus();
+          }}
+        >
           <div className="sheet-heading">
             <div>
               <span className="eyebrow">PUBLIC SOURCE RECORD</span>

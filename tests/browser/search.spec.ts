@@ -62,6 +62,7 @@ test("searches actual membership and contribution records, then opens source con
   await expect(sheet).toContainText("Observed");
   await page.keyboard.press("Escape");
   await expect(sheet).not.toBeVisible();
+  await expect(card.getByRole("button", { name: "Public activity", exact: true })).toBeFocused();
   await card.getByRole("link").first().click();
   await expect(page).toHaveURL(/\/people\/n1ckoates$/);
   await expect(page.getByRole("heading", { name: "Collected public activity" })).toBeVisible();
@@ -128,6 +129,11 @@ test("rejects invalid, oversized, and cross-origin requests before search admiss
     data: "{",
   });
   expect(malformed.status()).toBe(400);
+  const wrongMediaType = await request.post("/api/search", {
+    headers: { Origin: origin, "Content-Type": "application/jsonp" },
+    data: JSON.stringify({ question: memberQuestion }),
+  });
+  expect(wrongMediaType.status()).toBe(415);
 });
 
 test("renders an actual profile on mobile and distinguishes an uncollected profile", async ({

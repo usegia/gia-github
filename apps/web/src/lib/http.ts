@@ -27,7 +27,9 @@ export class RequestBodyError extends Error {
 
 export async function readSearchBody(request: Request): Promise<unknown> {
   const maximumBytes = 12_288;
-  if (!request.headers.get("content-type")?.toLowerCase().startsWith("application/json")) {
+  if (
+    request.headers.get("content-type")?.split(";")[0]?.trim().toLowerCase() !== "application/json"
+  ) {
     throw new RequestBodyError(415, "Send the search as application/json.");
   }
   if (Number(request.headers.get("content-length")) > maximumBytes) {
