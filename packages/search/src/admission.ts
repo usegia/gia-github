@@ -29,11 +29,11 @@ export async function admitSearch(
     const clientHash = createHash("sha256").update(input.clientKey).digest("hex");
     const result = await client.query(
       `SELECT
-      count(*) FILTER (WHERE finished_at IS NULL AND created_at > COALESCE($3::timestamptz,now()) - $2::integer * interval '1 millisecond')::integer AS concurrent,
-      count(*) FILTER (WHERE created_at >= date_trunc('day', COALESCE($3::timestamptz,now()) AT TIME ZONE 'UTC') AT TIME ZONE 'UTC')::integer AS daily,
-      count(*) FILTER (WHERE client_hash=$1 AND created_at > COALESCE($3::timestamptz,now())-interval '1 minute')::integer AS recent
+      count(*) FILTER (WHERE finished_at IS NULL AND created_at > COALESCE($3::timestamptz,statement_timestamp()) - $2::integer * interval '1 millisecond')::integer AS concurrent,
+      count(*) FILTER (WHERE created_at >= date_trunc('day', COALESCE($3::timestamptz,statement_timestamp()) AT TIME ZONE 'UTC') AT TIME ZONE 'UTC')::integer AS daily,
+      count(*) FILTER (WHERE client_hash=$1 AND created_at > COALESCE($3::timestamptz,statement_timestamp())-interval '1 minute')::integer AS recent
       FROM operations.search_requests
-      WHERE created_at <= COALESCE($3::timestamptz,now()) AND created_at >= LEAST(date_trunc('day', COALESCE($3::timestamptz,now()) AT TIME ZONE 'UTC') AT TIME ZONE 'UTC', COALESCE($3::timestamptz,now())-interval '1 minute', COALESCE($3::timestamptz,now())-$2::integer*interval '1 millisecond')`,
+      WHERE created_at <= COALESCE($3::timestamptz,statement_timestamp()) AND created_at >= LEAST(date_trunc('day', COALESCE($3::timestamptz,statement_timestamp()) AT TIME ZONE 'UTC') AT TIME ZONE 'UTC', COALESCE($3::timestamptz,statement_timestamp())-interval '1 minute', COALESCE($3::timestamptz,statement_timestamp())-$2::integer*interval '1 millisecond')`,
       [clientHash, input.timeoutMs + 30_000, input.evaluationTime ?? null],
     );
     const counts = countsSchema.parse(result.rows[0]);
@@ -50,7 +50,7 @@ export async function admitSearch(
       return { kind: "rejected", code };
     }
     await client.query(
-      "INSERT INTO operations.search_requests (id, client_hash, created_at) VALUES ($1,$2,COALESCE($3::timestamptz,now()))",
+      "INSERT INTO operations.search_requests (id, client_hash, created_at) VALUES ($1,$2,COALESCE($3::timestamptz,statement_timestamp()))",
       [input.id, clientHash, input.evaluationTime ?? null],
     );
     await client.query("COMMIT");

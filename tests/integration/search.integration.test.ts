@@ -102,31 +102,38 @@ describe("public GitHub hydration against actual captured records", () => {
 
 describe("database-backed search admission and cancellation", () => {
   it("serializes simultaneous admission across separate connections", async () => {
-    const clientKey = `integration-${randomUUID()}`;
-    const common = {
-      clientKey,
-      maximumConcurrentSearches: 20,
-      maximumDailySearches: 10_000,
-      maximumSearchesPerMinute: 1,
-      timeoutMs: 180_000,
-    };
-    const ids = [randomUUID(), randomUUID()];
-    requestIds.push(...ids);
-    const attempts = await Promise.all(ids.map((id) => admitSearch(writer, { ...common, id })));
-    expect(attempts.filter((attempt) => attempt.kind === "accepted")).toHaveLength(1);
-    expect(attempts.filter((attempt) => attempt.kind === "rejected")).toEqual([
-      { kind: "rejected", code: "RATE_LIMITED" },
-    ]);
-    const index = attempts.findIndex((attempt) => attempt.kind === "accepted");
-    const id = ids[index];
-    if (id === undefined) throw new Error("Admission had no winner");
-    await finishSearch(writer, { id, outcome: "matches", runtimeRequestId: null, durationMs: 12 });
-    const record = await writer.query(
-      "SELECT finished_at,outcome,duration_ms FROM operations.search_requests WHERE id=$1",
-      [id],
-    );
-    expect(record.rows[0]).toMatchObject({ outcome: "matches", duration_ms: 12 });
-    expect(record.rows[0].finished_at).toBeInstanceOf(Date);
+    for (let repetition = 0; repetition < 10; repetition++) {
+      const clientKey = `integration-${randomUUID()}`;
+      const common = {
+        clientKey,
+        maximumConcurrentSearches: 20,
+        maximumDailySearches: 10_000,
+        maximumSearchesPerMinute: 1,
+        timeoutMs: 180_000,
+      };
+      const ids = [randomUUID(), randomUUID()];
+      requestIds.push(...ids);
+      const attempts = await Promise.all(ids.map((id) => admitSearch(writer, { ...common, id })));
+      expect(attempts.filter((attempt) => attempt.kind === "accepted")).toHaveLength(1);
+      expect(attempts.filter((attempt) => attempt.kind === "rejected")).toEqual([
+        { kind: "rejected", code: "RATE_LIMITED" },
+      ]);
+      const index = attempts.findIndex((attempt) => attempt.kind === "accepted");
+      const id = ids[index];
+      if (id === undefined) throw new Error("Admission had no winner");
+      await finishSearch(writer, {
+        id,
+        outcome: "matches",
+        runtimeRequestId: null,
+        durationMs: 12,
+      });
+      const record = await writer.query(
+        "SELECT finished_at,outcome,duration_ms FROM operations.search_requests WHERE id=$1",
+        [id],
+      );
+      expect(record.rows[0]).toMatchObject({ outcome: "matches", duration_ms: 12 });
+      expect(record.rows[0].finished_at).toBeInstanceOf(Date);
+    }
   });
 
   it("retains an active lease across UTC midnight beyond the per-client minute window", async () => {
