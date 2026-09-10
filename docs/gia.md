@@ -107,4 +107,6 @@ The candidate's clean source revision, selected Runtime process, existing owner 
 
 The selected Runtime revision `112b50f3ab2b44a06ee4847c6150488afb9060df`, from its already-merged main branch, then passed the unchanged 14-case service suite in 45.35 seconds with default none reasoning and sensitive debug off. It includes general stable-projection guidance relative to the earlier none baseline, so this is a separate source observation rather than a reasoning-only comparison. The World and captured GitHub corpus were unchanged. The passing run does not resolve the intermittent disjunction concern recorded above.
 
+Before the requested Gemini Flash low comparison, the selected revision also ran five unchanged disjunction queries and five BM25 controls through the diagnostic SDK path. Both scored 5/5, with exact signed-ticket correlation and an admitted indexed-search operator in every BM25 control. Median times were 3.837 seconds for the disjunction and 2.017 seconds for BM25; total reported provider costs for each five-call group were $0.027235 and $0.016675. This records a baseline with the current prompt guidance rather than relying on the older Runtime revision's repetitions.
+
 Local raw captures are private diagnostics with a 24-hour deletion deadline; they are not repository fixtures.
