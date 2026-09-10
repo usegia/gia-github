@@ -2,5 +2,9 @@
   "version": 1,
   "repository": "usegia/gia-docs",
   "revision": "d2cd27f11982b6a203b99cbccfc681d90e80e602",
-  "pages": ["docs/using-gia/query.md", "docs/using-gia/world-lifecycle.md", "docs/using-gia/source-checkout.md"]
+  "pages": [
+    "docs/using-gia/query.md",
+    "docs/using-gia/world-lifecycle.md",
+    "docs/using-gia/source-checkout.md"
+  ]
 }
