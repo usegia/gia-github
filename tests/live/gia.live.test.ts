@@ -148,6 +148,16 @@ const cases: readonly GoldenCase[] = [
     requiredLogins: [],
     empty: true,
   },
+  {
+    name: "BM25 pull-request text with profile and merge filters",
+    questions: [
+      "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+    ],
+    sql: selectPeople(
+      `a.followers_count<500 AND EXISTS(SELECT 1 FROM github.pull_requests p WHERE p.author_id=a.id AND p.merged_at IS NOT NULL AND p.search_text @@@ 'reranking')`,
+    ),
+    requiredLogins: ["anbuzin"],
+  },
 ];
 
 beforeAll(async () => {
