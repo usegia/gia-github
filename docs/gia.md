@@ -60,6 +60,8 @@ For an operator-owned local investigation, stop the Runtime and start it with `G
 
 The application retains the Runtime's default `terra-openai-none` planner policy: `openai/gpt-5.6-terra` through OpenRouter's OpenAI provider, reasoning disabled, seed 29, and a 16384-token output cap. Planner selection belongs to the Runtime process. Changing a web-process environment variable does not reconfigure an existing Runtime.
 
+The launcher validates `GIA_RUNTIME_HARNESS_PROFILE` with the pinned Runtime's own `parseHarnessProfileId` before creating signing state, migrating, or spawning the server. `.env.example` selects `terra-openai-none`; the shipped Runtime revision `112b50f3ab2b44a06ee4847c6150488afb9060df` accepts only that profile. Benchmark candidates may accept additional profiles, but changing this variable does not make an unsupported profile available in the shipped source.
+
 ## Verification
 
 The PostgreSQL integration suite imports actual public GitHub captures and checks ordering, profile identity, PR attribution, admission races, and cancellation through a saturated execution pool. The live Gia suite runs through the explicit `pnpm test:live` command and requires a published World and a running Runtime. It compares generated query results against independent SQL over those captured records and varies natural-language phrasing. Neither suite mocks providers or substitutes liveness for correctness.
@@ -108,5 +110,26 @@ The candidate's clean source revision, selected Runtime process, existing owner 
 The selected Runtime revision `112b50f3ab2b44a06ee4847c6150488afb9060df`, from its already-merged main branch, then passed the unchanged 14-case service suite in 45.35 seconds with default none reasoning and sensitive debug off. It includes general stable-projection guidance relative to the earlier none baseline, so this is a separate source observation rather than a reasoning-only comparison. The World and captured GitHub corpus were unchanged. The passing run does not resolve the intermittent disjunction concern recorded above.
 
 Before the requested Gemini Flash low comparison, the selected revision also ran five unchanged disjunction queries and five BM25 controls through the diagnostic SDK path. Both scored 5/5, with exact signed-ticket correlation and an admitted indexed-search operator in every BM25 control. Median times were 3.837 seconds for the disjunction and 2.017 seconds for BM25; total reported provider costs for each five-call group were $0.027235 and $0.016675. This records a baseline with the current prompt guidance rather than relying on the older Runtime revision's repetitions.
+
+### Gemini Flash low comparison
+
+The user-requested Gemini comparison used private Runtime candidate `7ac6750b018def65b188f6724f938e913c642c3b`, retained on `usegia/gia-runtime` branch `feat/github-query-reasoning`. Its closed `gemini38-google-low` profile requests `google/gemini-3.8-flash` through `google-vertex/global`, with low reasoning. It preserves the selected revision's prompt guidance, seed, output cap, data-collection policy, and disabled provider fallback. The World, corpus, questions, identity output, Core, SDK, and disabled SQL reuse stayed fixed. This candidate records an experimental benchmark. Its profile is not a released Runtime setting or a shipped application dependency.
+
+| Measurement | Terra none | Gemini low |
+| --- | --- | --- |
+| Disjunction diagnostic identities | 5/5 | 5/5 |
+| BM25 diagnostic identities | 5/5 | 5/5 |
+| Full service suite | 14/14 | 13/14 |
+| Full suite duration | 45.35 s | 55.46 s |
+| Median disjunction duration | 3.837 s | 3.143 s |
+| Median BM25 duration | 2.017 s | 2.537 s |
+| Five disjunction calls, reported cost | $0.027235 | $0.0319125 |
+| Five BM25 calls, reported cost | $0.016675 | $0.034040625 |
+
+The Gemini failure occurred on the same-repository AI SDK and PostgreSQL question. The application returned `PREPARATION_UNAVAILABLE`; the exact request ID correlated with HTTP 503 in the owned Runtime's completion log. Retained evidence does not identify a provider or transport subtype, and no identities were returned. The failure remains in the denominator and was not retried. Every diagnostic result matched independent expected identities, and every BM25 control had an indexed predicate in its exactly correlated signed ticket.
+
+The configured process and clean source pin are recorded. The production decoder validates accepted response model identity, but saved query bundles omit resolved model/provider fields and OpenRouter generation IDs. A generation lookup was therefore unavailable. The decoder also accepts documented cache-hit responses that omit provider metadata, so successful calls alone do not independently prove the resolved provider. No request observer or synthetic preflight was added; the comparison records requested routing and marks returned routing metadata unavailable.
+
+The application retains Terra none. Gemini did not demonstrate an overall improvement in this cohort: one full-suite preparation failure, faster disjunction repetitions, slower BM25 repetitions, and higher reported cost for both subsets. These small measurements do not establish population accuracy or reliability rates. The earlier intermittent disjunction concern remains. A separate fresh-installation proof uses a different project and is excluded from this model comparison.
 
 Local raw captures are private diagnostics with a 24-hour deletion deadline; they are not repository fixtures.
