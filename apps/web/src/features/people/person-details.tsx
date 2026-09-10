@@ -46,7 +46,7 @@ export function PersonTags({ person }: { person: Person }) {
   if (!person.concepts.length) return null;
   return (
     <div className="person-topics">
-      <span className="tiny-label">In their repositories</span>
+      <span className="tiny-label">In associated repositories</span>
       <div className="tag-list">
         {person.concepts.slice(0, 5).map((concept) => (
           <span className="tag" key={concept}>

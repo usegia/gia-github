@@ -52,10 +52,6 @@ export function CollectionCoverage({ coverage }: { coverage: Coverage }) {
           ? `Latest observation ${formatDate(coverage.observedAt)}`
           : "No collection date available yet"}
       </p>
-      <div className="collection-footnote">
-        This is a bounded collection, not all of GitHub. Public membership does not establish
-        employment.
-      </div>
     </section>
   );
 }
