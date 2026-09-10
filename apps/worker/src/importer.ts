@@ -89,7 +89,7 @@ async function upsertAccount(
       .where(
         and(
           eq(accounts.id, BigInt(account.id)),
-        or(isNull(accounts.profileFetchedAt), lte(accounts.profileFetchedAt, date)),
+          or(isNull(accounts.profileFetchedAt), lte(accounts.profileFetchedAt, date)),
         ),
       );
   }
@@ -334,16 +334,32 @@ async function importFacts(tx: DatabaseTransaction, capture: Capture): Promise<v
         .from(repositoryLanguages)
         .where(eq(repositoryLanguages.repositoryId, repositoryId));
       if (latest?.date && new Date(latest.date) > date) return;
-      await tx
-        .delete(repositoryLanguages)
-        .where(eq(repositoryLanguages.repositoryId, repositoryId));
       const rows = Object.entries(payload.records).map(([language, bytes]) => ({
         repositoryId,
         language,
         bytes: BigInt(bytes),
         observedAt: date,
       }));
-      if (rows.length > 0) await tx.insert(repositoryLanguages).values(rows);
+      const languageNames = rows.map((row) => row.language);
+      await tx
+        .delete(repositoryLanguages)
+        .where(
+          and(
+            eq(repositoryLanguages.repositoryId, repositoryId),
+            languageNames.length
+              ? notInArray(repositoryLanguages.language, languageNames)
+              : undefined,
+          ),
+        );
+      for (const row of rows) {
+        await tx
+          .insert(repositoryLanguages)
+          .values(row)
+          .onConflictDoUpdate({
+            target: [repositoryLanguages.repositoryId, repositoryLanguages.language],
+            set: { bytes: row.bytes, observedAt: date },
+          });
+      }
       return;
     }
     case "readme":
@@ -428,7 +444,11 @@ export async function importCapture(
     await tx.execute(
       sql`select pg_advisory_xact_lock(hashtextextended(${`${scope}:${resource}`}, 0))`,
     );
-    await importFacts(tx, capture);
+    const [previous] = await tx
+      .select()
+      .from(syncState)
+      .where(and(eq(syncState.scope, scope), eq(syncState.resource, resource)));
+    if (!previous?.lastSuccessAt || previous.lastSuccessAt <= date) await importFacts(tx, capture);
     await tx
       .insert(captures)
       .values({
@@ -451,7 +471,14 @@ export async function importCapture(
       windowEnd: capture.coverage.windowEnd ? new Date(capture.coverage.windowEnd) : null,
       status: capture.coverage.status,
       pagesFetched: capture.coverage.page,
-      recordsFetched: records,
+      recordsFetched:
+        capture.payload.kind === "pull_requests" &&
+        capture.coverage.page > 1 &&
+        previous?.windowEnd?.toISOString() === capture.coverage.windowEnd
+          ? previous.pagesFetched < capture.coverage.page
+            ? previous.recordsFetched + records
+            : previous.recordsFetched
+          : records,
       lastAttemptAt: date,
       lastSuccessAt: date,
       lastErrorCode: null,

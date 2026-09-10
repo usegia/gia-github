@@ -241,7 +241,7 @@ export function validateModelExtractions(
 export type ModelEnrichment = { apiKey: string; model: string; maximumCalls: number };
 export function createModelEnricher(config: ModelEnrichment) {
   let calls = 0;
-  return async (source: string): Promise<Extraction[]> => {
+  return async (source: string): Promise<{ claims: Extraction[]; rejectedClaims: number }> => {
     if (calls >= config.maximumCalls) throw new Error("Enrichment request budget exhausted");
     calls += 1;
     const boundedSource = source.slice(0, 24_000);
@@ -268,7 +268,31 @@ export function createModelEnricher(config: ModelEnrichment) {
       .parse(await response.json());
     const first = result.choices[0];
     if (!first) throw new Error("Enrichment provider returned no choice");
-    return validateModelExtractions(JSON.parse(first.message.content), boundedSource, config.model);
+    const proposed = z
+      .object({ claims: z.array(z.unknown()).max(16) })
+      .strict()
+      .parse(JSON.parse(first.message.content));
+    const allowed = new Set(conceptDefinitions.map((concept) => concept.slug));
+    const supported = [
+      ...new Map(
+        proposed.claims
+          .flatMap((value) => {
+            const parsed = llmOutputSchema.shape.claims.element.safeParse(value);
+            if (
+              !parsed.success ||
+              !allowed.has(parsed.data.slug) ||
+              !boundedSource.includes(parsed.data.excerpt)
+            )
+              return [];
+            return [parsed.data];
+          })
+          .map((claim) => [claim.slug, claim]),
+      ).values(),
+    ];
+    return {
+      claims: validateModelExtractions({ claims: supported }, boundedSource, config.model),
+      rejectedClaims: proposed.claims.length - supported.length,
+    };
   };
 }
 
