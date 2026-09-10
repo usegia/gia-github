@@ -22,7 +22,12 @@ const service = createSearchService({
   runtimeUrl: process.env.GIA_API_URL ?? "http://127.0.0.1:8798",
   runtimeApiKey: process.env.GIA_API_KEY ?? "",
   profileId: process.env.GIA_ACTIVE_PROFILE ?? "github-dev",
-  maximumDailySearches: 100,
+  maximumDailySearches: z.coerce
+    .number()
+    .int()
+    .min(100)
+    .max(1000)
+    .parse(process.env.GIA_GOLDEN_DAILY_LIMIT ?? 100),
   maximumSearchesPerMinute: 30,
 });
 const repetitions = z.coerce
