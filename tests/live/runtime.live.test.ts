@@ -37,6 +37,20 @@ it("cleans a failed real Runtime startup without stopping the process occupying 
       path.join(project, ".deps/gia-sources/gia-runtime"),
       "dir",
     );
+    const invalidPolicy: unknown = await execute(
+      process.execPath,
+      ["scripts/gia/runtime.mjs", "start"],
+      {
+        cwd: project,
+        env: { ...env, GIA_RUNTIME_HARNESS_PROFILE: "unregistered-profile" },
+        timeout: 15_000,
+      },
+    ).catch((error: unknown) => error);
+    const invalid = z.object({ code: z.literal(1), stderr: z.string() }).parse(invalidPolicy);
+    expect(invalid.stderr).toContain("unknown Harness profile");
+    await expect(
+      readFile(path.join(project, ".gia/local-runtime/signing.json")),
+    ).rejects.toMatchObject({ code: "ENOENT" });
     const failure: unknown = await execute(process.execPath, ["scripts/gia/runtime.mjs", "start"], {
       cwd: project,
       env,

@@ -9,6 +9,7 @@ import {
   root,
   run,
   source,
+  sourceModule,
   state,
   writePrivateJson,
 } from "./common.mjs";
@@ -24,7 +25,6 @@ const configPath = path.join(state, "signing.json");
 const logPath = path.join(state, "runtime.log");
 const port = Number(process.env.GIA_RUNTIME_PORT ?? "8798");
 const apiUrl = `http://127.0.0.1:${port}`;
-const harnessProfileId = "terra-openai-none";
 const localDebug = process.env.GIA_RUNTIME_LOCAL_DEBUG ?? "0";
 if (!["0", "1"].includes(localDebug)) throw new Error("GIA_RUNTIME_LOCAL_DEBUG must be 0 or 1");
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error("Invalid Runtime port");
@@ -81,6 +81,13 @@ if (command === "stop") {
   }).trim();
   if (runtimeRevision !== expectedRevision || sourceChanges)
     throw new Error("Runtime source must be clean at the pinned revision before startup");
+  const { parseHarnessProfileId } = await sourceModule(
+    "gia-runtime",
+    "src/services/prepare/plan/harness/openrouter/profiles.ts",
+  );
+  const harnessProfileId = parseHarnessProfileId(
+    process.env.GIA_RUNTIME_HARNESS_PROFILE ?? "terra-openai-none",
+  );
   if (await healthy()) {
     if (!owned(receipt))
       throw new Error("A Runtime is already listening but is not owned by this project");
@@ -112,6 +119,7 @@ if (command === "stop") {
       GIA_RUNTIME_HOST: "127.0.0.1",
       PORT: String(port),
       GIA_RUNTIME_PREPARE: "enabled",
+      GIA_RUNTIME_HARNESS_PROFILE: harnessProfileId,
       GIA_RUNTIME_TICKET_SIGNING_KEY_ID: requireText(signing.keyId, "Signing key id"),
       GIA_RUNTIME_TICKET_SIGNING_PRIVATE_KEY_PEM: requireText(signing.privateKeyPem, "Signing key"),
       OPENROUTER_API_KEY: requireText(process.env.OPENROUTER_API_KEY, "OPENROUTER_API_KEY"),

@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { access, cp, mkdir, rm, symlink, writeFile } from "node:fs/promises";
+import { access, mkdir, rm, symlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { readJson, root, run, source, sources } from "./common.mjs";
 
@@ -49,19 +49,24 @@ await run("pnpm", ["install", "--frozen-lockfile"], { cwd: source("gia-core") })
 await run("pnpm", ["build"], { cwd: source("gia-core") });
 await run("pnpm", ["install", "--frozen-lockfile"], { cwd: source("gia-sdk-typescript") });
 await run("npm", ["ci"], { cwd: source("gia-runtime") });
-await run("pnpm", ["exec", "tsc", "-p", "packages/client", "--sourceMap", "false"], {
-  cwd: source("gia-sdk-typescript"),
-});
 const clientPackage = path.join(root, ".deps/gia-client");
 await mkdir(clientPackage, { recursive: true });
 await rm(path.join(clientPackage, "dist"), { recursive: true, force: true });
-await cp(
-  path.join(source("gia-sdk-typescript"), "packages/client/dist"),
-  path.join(clientPackage, "dist"),
-  {
-    recursive: true,
-    filter: (filename) => !filename.endsWith(".map") && !filename.endsWith(".tsbuildinfo"),
-  },
+await run(
+  "pnpm",
+  [
+    "exec",
+    "tsc",
+    "-p",
+    "packages/client",
+    "--sourceMap",
+    "false",
+    "--outDir",
+    path.join(clientPackage, "dist"),
+    "--tsBuildInfoFile",
+    path.join(clientPackage, "dist/tsconfig.tsbuildinfo"),
+  ],
+  { cwd: source("gia-sdk-typescript") },
 );
 await writeFile(
   path.join(clientPackage, "package.json"),

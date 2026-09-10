@@ -41,6 +41,9 @@
     "APP_ORIGIN"
   ],
   "globalDependencies": [
+    "scripts/gia/bootstrap.mjs",
+    ".deps/gia-client/dist/**",
+    ".deps/gia-client/package.json",
     ".gia-sources.json",
     ".gia-docs.json",
     ".node-version",

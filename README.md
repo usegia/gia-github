@@ -32,6 +32,8 @@ pnpm --filter @gia-github/web start
 
 Open [localhost:3000](http://localhost:3000). PostgreSQL listens on loopback port 55448 and the local Gia runtime on 8798. The database, writer, and reader passwords in `.env.example` are local development defaults. Production needs its own provisioned credentials.
 
+`GIA_RUNTIME_HARNESS_PROFILE` selects a closed planner policy supported by the pinned Runtime. The reference setting is `terra-openai-none`. Startup verifies the source revision and policy before spawning; stop the owned Runtime before changing either. See [Gia operation](docs/gia.md) for measured model comparisons.
+
 `gia:init` creates a Gia project and publishes its initial enriched World. The checked-in `gia/` documents a reference deployment; initialization binds your installation to its own project. After collecting new values, use `pnpm gia:refresh`, then `pnpm gia:profile` and `pnpm gia:authority`. Restart the web process when its authority changes.
 
 ## Development and verification
