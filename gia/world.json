@@ -2,6 +2,7 @@
   "$schema": "./generated/world-overlay.schema.json",
   "entities": {
     "account": {
+      "description": "One row is an observed public GitHub account profile, including users, organizations, and bots. BM25 index uses id as its key and search_text as its searchable text field.",
       "fields": {
         "bio": {
           "description": "Nullable self-reported profile biography. NULL means no observed biography. A concept being absent from the bio is a condition on this text, independent from that concept being present in PR evidence. Combining absence from the bio with presence in work requires both conditions; one must not replace the other."
@@ -39,12 +40,17 @@
       "source": "github.concept_evidence"
     },
     "pullRequest": {
+      "description": "One row is an observed GitHub pull request and its author, repository, status, and timestamps. BM25 index uses id as its key and search_text as its searchable text field.",
       "fields": {
         "repository_id": {
           "description": "Foreign key identifying the one repository this PR belongs to. A person can author many PRs in one repository or across multiple repositories. Their number of contributed repositories counts distinct repository_id values across qualifying authored PR rows; multiple PRs in the same repository count once."
         }
       },
       "source": "github.pull_requests"
+    },
+    "repository": {
+      "description": "One row is an observed public GitHub repository and its ownership and project metadata. BM25 index uses id as its key and search_text as its searchable text field.",
+      "source": "github.repositories"
     }
   },
   "fieldDistinctions": {

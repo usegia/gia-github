@@ -11,7 +11,7 @@ services:
     volumes:
       - github-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U gia_github -d gia_github"]
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U gia_github -d gia_github"]
       interval: 2s
       timeout: 3s
       retries: 60

@@ -1,14 +1,14 @@
 {
   "authoredInputs": {
     "project.json": "70e8ef93b3961798798f0605063a8e7586a50c62b852cdd4296b61d76e1517e6",
-    "world.json": "20af45c010e8fad02efeeb2c5ed5106826615ca0b10994088cb20d50183d3409"
+    "world.json": "79fa7dcbb085370d34b8f65f8766c72c2b43afae02c4b9be48e67f9237108b46"
   },
-  "candidateSnapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+  "candidateSnapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
   "format": 3,
   "generatedFiles": {
     "generated/effective-world.json": {
-      "fileSha": "3d4a1a8fd14e2a7f77c35345c768d718f1fe0647c79a1b76fdd93a9ecee029cd",
-      "valueSha": "84cd785242e0b029d028c2665ba00bef065b45e3e3052c769ed5b41126afb4d1"
+      "fileSha": "3689894447323986c698a651c0b207312c419c48d8cfeaf645c35ee140b1f181",
+      "valueSha": "2aebeba91701e48dbbc7a90fc1a25b1560928388af709e2cf59140070f9bdc82"
     },
     "generated/evidence/collision-map/world.json": {
       "fileSha": "7cb80ab1b96adab4d7443e8d67c026a7ba0eba9c74c0652367d7ffe64df134d0",
@@ -183,27 +183,27 @@
       "valueSha": "978565fd8a67467b1e0df88f602f8495a070f0e93629774d2baff6f2b3207906"
     },
     "generated/projections/planner-catalog.json": {
-      "fileSha": "4ee9a7437cfcb0730ecdecff1c494c96e02b699c5538070a7a48ad5e28427cdd",
-      "valueSha": "4ef8013cf7232993486c75c03a714d332da60ac169dac7a92ce317095c3f7b2c"
+      "fileSha": "5c2e0193969824e36cd092de9250767e2ec651339cfac67e814af5f6c6579726",
+      "valueSha": "ad3bc95a7da565d25a93e6e4e9b1ded8264f3c6a90ffd35ca9ba2386af2b8dbd"
     },
     "generated/world-overlay.schema.json": {
       "fileSha": "9a441ee205f0652ae095d0ed3e8c2ec353e2a2d06743f5b630c92af4a7082ae0",
       "valueSha": "d06d50dacb9cc887e018f0d1f0887ab8f460b8b7c94538221841aa753fd35bfa"
     },
     "review/proposals/derives.json": {
-      "fileSha": "99e582a6fee23df76fcc4853fc2147c21ec0390cf61d98e0d1cae8082f9bfc5e",
-      "valueSha": "dea847d4b61d580748970b599feef490e0e8e8c0d078b84be72e8b5c0d78e464"
+      "fileSha": "38c6c27d4f70338d67945fde2148e71d81ee2f1ba058d319e84d4f6184745146",
+      "valueSha": "b82140428e538e86760064c3c952091e34b75fd0fe2d00301c486f4956ca9c40"
     },
     "review/proposals/field-distinctions.json": {
       "fileSha": "9f474acb07dec85972ea589f9abc47a8439663ca2a21e9485508993d718289b5",
       "valueSha": "3e6280f571c43ce7ef67e89d14e600fe2bc079ad54301177aff2436520549277"
     },
     "review/proposals/joins.json": {
-      "fileSha": "f8f02a2779498c8b741124a77c1173184ad40e88101854398e5eb352c9afa42c",
-      "valueSha": "a2f9a0703ae645a100e19dbf1619e8d4364986dabf8932abbbbb7fd1bc558a84"
+      "fileSha": "afc122fce71dd4566be5dc47abd0aadab4638a7f28ea81a6c55c5f38dbd75d09",
+      "valueSha": "8840fdef1a4d970b01d8861bae9697b346406706c6f768969f691a4e4cc54747"
     }
   },
-  "generatedTreeSha": "69def24ff98fe7b150edb4773b007c6c089982f05283d33b472378ddcdef89d5",
+  "generatedTreeSha": "476182bcea4cba39a58e1fa5252c46d3a8ec7a51d664e8df1e9fedd9adf07cfc",
   "generatorVersions": {
     "refresh": "refresh-generator.1",
     "world": "catalog-base.1"

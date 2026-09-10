@@ -28,5 +28,7 @@ jobs:
       - run: pnpm --filter @gia-github/db --filter @gia-github/worker typecheck
       - name: Real PostgreSQL data and worker contracts
         run: pnpm exec vitest run --project integration tests/integration/database.integration.test.ts tests/integration/worker.integration.test.ts
+      - if: failure()
+        run: docker compose logs --no-color --tail 100 postgres
       - if: always()
         run: docker compose stop postgres

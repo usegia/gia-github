@@ -6,7 +6,7 @@
   },
   "entities": {
     "account": {
-      "description": "One row is an observed public GitHub account profile, including users, organizations, and bots.",
+      "description": "One row is an observed public GitHub account profile, including users, organizations, and bots. BM25 index uses id as its key and search_text as its searchable text field.",
       "fields": {
         "account_type": {
           "aka": [
@@ -1361,7 +1361,7 @@
       }
     },
     "pullRequest": {
-      "description": "One row is an observed GitHub pull request and its author, repository, status, and timestamps.",
+      "description": "One row is an observed GitHub pull request and its author, repository, status, and timestamps. BM25 index uses id as its key and search_text as its searchable text field.",
       "fields": {
         "author_id": {
           "aka": [
@@ -2054,7 +2054,7 @@
       }
     },
     "repository": {
-      "description": "One row is an observed public GitHub repository and its ownership and project metadata.",
+      "description": "One row is an observed public GitHub repository and its ownership and project metadata. BM25 index uses id as its key and search_text as its searchable text field.",
       "fields": {
         "default_branch": {
           "aka": [

@@ -807,11 +807,11 @@
       "status": "proposed"
     }
   ],
-  "generatedAt": "2026-09-10T11:33:31.548Z",
+  "generatedAt": "2026-09-10T11:41:18.327Z",
   "groundedFrom": {
     "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
     "datasetKind": "authoritative",
-    "harvestedAt": "2026-09-10T11:33:31.548Z"
+    "harvestedAt": "2026-09-10T11:41:18.327Z"
   },
   "measures": [],
   "worldId": "prj_debe3085e1b247b6a7df26022617d7ac"

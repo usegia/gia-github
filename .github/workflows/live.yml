@@ -42,5 +42,7 @@ jobs:
           pnpm --filter @gia-github/web start > /tmp/gia-github-web.log 2>&1 &
           node --input-type=module -e 'for (let attempt = 0; attempt < 60; attempt++) { try { if ((await fetch("http://127.0.0.1:3000/api/catalog", { signal: AbortSignal.timeout(1000) })).ok) process.exit(0); } catch {} await new Promise(resolve => setTimeout(resolve, 1000)); } throw new Error("Production web server did not become ready");'
           pnpm test:e2e
+      - if: failure()
+        run: docker compose logs --no-color --tail 100 postgres
       - if: always()
         run: pnpm gia:stop && docker compose stop postgres

@@ -16,14 +16,14 @@ Use Node 26, install the pinned dependencies, copy `.env.example` to `.env`, and
 | --- | --- |
 | `pnpm check` | Static boundaries and types, then 30 PostgreSQL integration cases using the production capture importer, database permissions, durable jobs, evidence freshness, actual BM25 results, and cancellation |
 | `pnpm exec vitest run --project live tests/live/github.live.test.ts` | Public-read GitHub token and OpenAI key; three live cases covering API rename/ETag behavior, public membership and a known merged PR, and one source-validated enrichment call with cached replay |
-| `pnpm exec vitest run --project live tests/live/gia.live.test.ts` | Seeded development database, running Gia, enriched published World, matching serving profile and authority; 13 questions compared with independent expected identities |
+| `pnpm exec vitest run --project live tests/live/gia.live.test.ts` | Seeded development database, running Gia, enriched published World, matching serving profile and authority; 14 questions compared with independent expected identities |
 | `pnpm test:e2e` | Running production web application and actual Gia; five browser workflows, including two submitted paid searches, source context, mobile profiles, and real HTTP boundary failures |
 
 `pnpm test:live` runs both live files. Missing credentials fail clearly. It spends provider quota, so the automatic public CI job runs only the database and worker tier. The full workflow is an explicit trusted dispatch. Browser tests use `PLAYWRIGHT_BASE_URL` when targeting a different deployment.
 
 ## Golden questions
 
-The Gia suite covers ten query families. Public membership plus dated AI work and contributions across repositories each have two phrasings. One further question requires an unsupported outcome for unavailable private intentions.
+The Gia suite covers the ten planned query families below. Public membership plus dated AI work and contributions across repositories each have two phrasings. A separate hybrid case combines BM25 over PR text with follower and merge filters. One further question requires an unsupported outcome for unavailable private intentions.
 
 | Family | Independent condition |
 | --- | --- |
