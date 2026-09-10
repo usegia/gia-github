@@ -30,9 +30,7 @@
           "startedAt": "2026-09-10T11:07:24.108Z",
           "finishedAt": "2026-09-10T11:07:26.869Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -47,9 +45,7 @@
           "startedAt": "2026-09-10T11:07:34.144Z",
           "finishedAt": "2026-09-10T11:07:36.329Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -64,9 +60,7 @@
           "startedAt": "2026-09-10T11:07:45.586Z",
           "finishedAt": "2026-09-10T11:07:47.742Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -81,9 +75,7 @@
           "startedAt": "2026-09-10T11:07:55.549Z",
           "finishedAt": "2026-09-10T11:07:57.690Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -98,9 +90,7 @@
           "startedAt": "2026-09-10T11:08:05.489Z",
           "finishedAt": "2026-09-10T11:08:07.639Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -485,11 +475,7 @@
           "startedAt": "2026-09-10T11:07:31.313Z",
           "finishedAt": "2026-09-10T11:07:34.142Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -528,15 +514,8 @@
           "startedAt": "2026-09-10T11:07:42.123Z",
           "finishedAt": "2026-09-10T11:07:45.582Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": false
         },
@@ -550,11 +529,7 @@
           "startedAt": "2026-09-10T11:07:52.463Z",
           "finishedAt": "2026-09-10T11:07:55.545Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -593,15 +568,8 @@
           "startedAt": "2026-09-10T11:08:02.366Z",
           "finishedAt": "2026-09-10T11:08:05.487Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": false
         },
@@ -615,11 +583,7 @@
           "startedAt": "2026-09-10T11:08:11.923Z",
           "finishedAt": "2026-09-10T11:08:14.958Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -668,12 +632,8 @@
           "startedAt": "2026-09-10T11:12:58.878Z",
           "finishedAt": "2026-09-10T11:13:01.388Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -687,12 +647,8 @@
           "startedAt": "2026-09-10T11:13:09.162Z",
           "finishedAt": "2026-09-10T11:13:11.514Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -706,12 +662,8 @@
           "startedAt": "2026-09-10T11:13:19.979Z",
           "finishedAt": "2026-09-10T11:13:22.157Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -725,12 +677,8 @@
           "startedAt": "2026-09-10T11:13:30.191Z",
           "finishedAt": "2026-09-10T11:13:32.455Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -744,12 +692,8 @@
           "startedAt": "2026-09-10T11:13:39.866Z",
           "finishedAt": "2026-09-10T11:13:42.020Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -1133,11 +1077,7 @@
           "startedAt": "2026-09-10T11:13:05.928Z",
           "finishedAt": "2026-09-10T11:13:09.157Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -1176,11 +1116,7 @@
           "startedAt": "2026-09-10T11:13:16.643Z",
           "finishedAt": "2026-09-10T11:13:19.975Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -1219,11 +1155,7 @@
           "startedAt": "2026-09-10T11:13:27.086Z",
           "finishedAt": "2026-09-10T11:13:30.187Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -1262,11 +1194,7 @@
           "startedAt": "2026-09-10T11:13:36.733Z",
           "finishedAt": "2026-09-10T11:13:39.864Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -1305,11 +1233,7 @@
           "startedAt": "2026-09-10T11:13:45.872Z",
           "finishedAt": "2026-09-10T11:13:48.919Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -1358,14 +1282,8 @@
           "startedAt": "2026-09-10T11:14:18.135Z",
           "finishedAt": "2026-09-10T11:14:23.874Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "71938701",
-            "58091943"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["71938701", "58091943"],
           "truncated": false,
           "identityExact": true
         },
@@ -1379,10 +1297,7 @@
           "startedAt": "2026-09-10T11:14:23.878Z",
           "finishedAt": "2026-09-10T11:14:26.543Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -1412,12 +1327,8 @@
           "startedAt": "2026-09-10T11:14:26.550Z",
           "finishedAt": "2026-09-10T11:14:28.892Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -1431,12 +1342,8 @@
           "startedAt": "2026-09-10T11:14:28.895Z",
           "finishedAt": "2026-09-10T11:14:33.497Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         },
@@ -1625,16 +1532,8 @@
           "startedAt": "2026-09-10T11:14:49.699Z",
           "finishedAt": "2026-09-10T11:14:52.555Z",
           "kind": "matches",
-          "expectedIds": [
-            "21091016",
-            "57228345",
-            "58091943"
-          ],
-          "actualIds": [
-            "21091016",
-            "58091943",
-            "57228345"
-          ],
+          "expectedIds": ["21091016", "57228345", "58091943"],
+          "actualIds": ["21091016", "58091943", "57228345"],
           "truncated": false,
           "identityExact": true
         },
@@ -1648,11 +1547,7 @@
           "startedAt": "2026-09-10T11:14:52.561Z",
           "finishedAt": "2026-09-10T11:14:55.882Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "100838962",
             "10137",
@@ -1701,10 +1596,7 @@
           "startedAt": "2026-09-10T11:28:41.321Z",
           "finishedAt": "2026-09-10T11:28:44.239Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -1719,10 +1611,7 @@
           "startedAt": "2026-09-10T11:28:56.319Z",
           "finishedAt": "2026-09-10T11:28:59.201Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -1737,10 +1626,7 @@
           "startedAt": "2026-09-10T11:29:11.106Z",
           "finishedAt": "2026-09-10T11:29:14.503Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -1755,10 +1641,7 @@
           "startedAt": "2026-09-10T11:29:24.177Z",
           "finishedAt": "2026-09-10T11:29:27.356Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -1773,10 +1656,7 @@
           "startedAt": "2026-09-10T11:29:37.156Z",
           "finishedAt": "2026-09-10T11:29:40.273Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -1791,12 +1671,8 @@
           "startedAt": "2026-09-10T11:28:44.247Z",
           "finishedAt": "2026-09-10T11:28:46.482Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -1810,12 +1686,8 @@
           "startedAt": "2026-09-10T11:28:59.204Z",
           "finishedAt": "2026-09-10T11:29:01.375Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -1829,12 +1701,8 @@
           "startedAt": "2026-09-10T11:29:14.506Z",
           "finishedAt": "2026-09-10T11:29:16.666Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -1848,12 +1716,8 @@
           "startedAt": "2026-09-10T11:29:27.359Z",
           "finishedAt": "2026-09-10T11:29:29.621Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -1867,12 +1731,8 @@
           "startedAt": "2026-09-10T11:29:40.276Z",
           "finishedAt": "2026-09-10T11:29:42.828Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2146,16 +2006,8 @@
           "startedAt": "2026-09-10T11:28:53.246Z",
           "finishedAt": "2026-09-10T11:28:56.315Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2169,16 +2021,8 @@
           "startedAt": "2026-09-10T11:29:08.219Z",
           "finishedAt": "2026-09-10T11:29:11.099Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2192,16 +2036,8 @@
           "startedAt": "2026-09-10T11:29:20.904Z",
           "finishedAt": "2026-09-10T11:29:24.169Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2215,16 +2051,8 @@
           "startedAt": "2026-09-10T11:29:34.100Z",
           "finishedAt": "2026-09-10T11:29:37.154Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2238,16 +2066,8 @@
           "startedAt": "2026-09-10T11:29:47.340Z",
           "finishedAt": "2026-09-10T11:29:52.347Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         }
@@ -2271,14 +2091,8 @@
           "startedAt": "2026-09-10T11:30:33.386Z",
           "finishedAt": "2026-09-10T11:30:36.671Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2292,10 +2106,7 @@
           "startedAt": "2026-09-10T11:30:36.674Z",
           "finishedAt": "2026-09-10T11:30:40.095Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
           "actualIds": [],
           "truncated": false,
           "identityExact": false
@@ -2325,12 +2136,8 @@
           "startedAt": "2026-09-10T11:30:40.105Z",
           "finishedAt": "2026-09-10T11:30:43.305Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2344,9 +2151,7 @@
           "startedAt": "2026-09-10T11:30:43.308Z",
           "finishedAt": "2026-09-10T11:30:46.838Z",
           "kind": "failed",
-          "expectedIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
           "actualIds": null,
           "failureCode": "DIALECT_EXECUTION_FAILED",
           "identityExact": false
@@ -2514,16 +2319,8 @@
           "startedAt": "2026-09-10T11:31:08.732Z",
           "finishedAt": "2026-09-10T11:31:12.145Z",
           "kind": "matches",
-          "expectedIds": [
-            "21091016",
-            "57228345",
-            "58091943"
-          ],
-          "actualIds": [
-            "21091016",
-            "58091943",
-            "57228345"
-          ],
+          "expectedIds": ["21091016", "57228345", "58091943"],
+          "actualIds": ["21091016", "58091943", "57228345"],
           "truncated": false,
           "identityExact": true
         },
@@ -2537,16 +2334,8 @@
           "startedAt": "2026-09-10T11:31:12.153Z",
           "finishedAt": "2026-09-10T11:31:15.406Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         }
@@ -2572,14 +2361,8 @@
           "startedAt": "2026-09-10T11:34:49.736Z",
           "finishedAt": "2026-09-10T11:34:55.972Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2593,14 +2376,8 @@
           "startedAt": "2026-09-10T11:35:00.841Z",
           "finishedAt": "2026-09-10T11:35:09.826Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2614,14 +2391,8 @@
           "startedAt": "2026-09-10T11:35:15.638Z",
           "finishedAt": "2026-09-10T11:35:23.047Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2635,14 +2406,8 @@
           "startedAt": "2026-09-10T11:35:27.691Z",
           "finishedAt": "2026-09-10T11:35:33.033Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2656,14 +2421,8 @@
           "startedAt": "2026-09-10T11:35:39.279Z",
           "finishedAt": "2026-09-10T11:35:48.966Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2677,12 +2436,8 @@
           "startedAt": "2026-09-10T11:34:55.976Z",
           "finishedAt": "2026-09-10T11:34:58.416Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2696,12 +2451,8 @@
           "startedAt": "2026-09-10T11:35:09.828Z",
           "finishedAt": "2026-09-10T11:35:13.153Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2715,12 +2466,8 @@
           "startedAt": "2026-09-10T11:35:23.050Z",
           "finishedAt": "2026-09-10T11:35:25.525Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2734,12 +2481,8 @@
           "startedAt": "2026-09-10T11:35:33.036Z",
           "finishedAt": "2026-09-10T11:35:37.339Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2753,12 +2496,8 @@
           "startedAt": "2026-09-10T11:35:48.967Z",
           "finishedAt": "2026-09-10T11:35:51.378Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2772,12 +2511,8 @@
           "startedAt": "2026-09-10T11:34:58.420Z",
           "finishedAt": "2026-09-10T11:35:00.835Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         },
@@ -2791,12 +2526,8 @@
           "startedAt": "2026-09-10T11:35:13.157Z",
           "finishedAt": "2026-09-10T11:35:15.630Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         },
@@ -2810,12 +2541,8 @@
           "startedAt": "2026-09-10T11:35:25.528Z",
           "finishedAt": "2026-09-10T11:35:27.684Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         },
@@ -2829,12 +2556,8 @@
           "startedAt": "2026-09-10T11:35:37.342Z",
           "finishedAt": "2026-09-10T11:35:39.272Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         },
@@ -2848,12 +2571,8 @@
           "startedAt": "2026-09-10T11:35:51.380Z",
           "finishedAt": "2026-09-10T11:35:53.810Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         }
@@ -2877,14 +2596,8 @@
           "startedAt": "2026-09-10T11:36:59.095Z",
           "finishedAt": "2026-09-10T11:37:08.428Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2898,14 +2611,8 @@
           "startedAt": "2026-09-10T11:37:08.431Z",
           "finishedAt": "2026-09-10T11:37:14.579Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -2934,12 +2641,8 @@
           "startedAt": "2026-09-10T11:37:14.582Z",
           "finishedAt": "2026-09-10T11:37:17.196Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -2953,12 +2656,8 @@
           "startedAt": "2026-09-10T11:37:17.198Z",
           "finishedAt": "2026-09-10T11:37:19.591Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         },
@@ -3125,16 +2824,8 @@
           "startedAt": "2026-09-10T11:37:42.392Z",
           "finishedAt": "2026-09-10T11:37:44.884Z",
           "kind": "matches",
-          "expectedIds": [
-            "21091016",
-            "57228345",
-            "58091943"
-          ],
-          "actualIds": [
-            "21091016",
-            "58091943",
-            "57228345"
-          ],
+          "expectedIds": ["21091016", "57228345", "58091943"],
+          "actualIds": ["21091016", "58091943", "57228345"],
           "truncated": false,
           "identityExact": true
         },
@@ -3148,16 +2839,8 @@
           "startedAt": "2026-09-10T11:37:44.890Z",
           "finishedAt": "2026-09-10T11:37:48.007Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         }
@@ -3181,12 +2864,8 @@
           "startedAt": "2026-09-10T11:41:53.161Z",
           "finishedAt": "2026-09-10T11:41:55.537Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         }
@@ -3210,14 +2889,8 @@
           "startedAt": "2026-09-10T11:42:38.366Z",
           "finishedAt": "2026-09-10T11:42:44.779Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -3231,14 +2904,8 @@
           "startedAt": "2026-09-10T11:42:44.782Z",
           "finishedAt": "2026-09-10T11:42:50.455Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "identityExact": true
         },
@@ -3267,12 +2934,8 @@
           "startedAt": "2026-09-10T11:43:24.495Z",
           "finishedAt": "2026-09-10T11:43:27.044Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -3286,12 +2949,8 @@
           "startedAt": "2026-09-10T11:42:50.457Z",
           "finishedAt": "2026-09-10T11:42:53.388Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "identityExact": true
         },
@@ -3305,12 +2964,8 @@
           "startedAt": "2026-09-10T11:42:53.389Z",
           "finishedAt": "2026-09-10T11:42:56.182Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "identityExact": true
         },
@@ -3477,16 +3132,8 @@
           "startedAt": "2026-09-10T11:43:14.229Z",
           "finishedAt": "2026-09-10T11:43:16.349Z",
           "kind": "matches",
-          "expectedIds": [
-            "21091016",
-            "57228345",
-            "58091943"
-          ],
-          "actualIds": [
-            "21091016",
-            "58091943",
-            "57228345"
-          ],
+          "expectedIds": ["21091016", "57228345", "58091943"],
+          "actualIds": ["21091016", "58091943", "57228345"],
           "truncated": false,
           "identityExact": true
         },
@@ -3500,11 +3147,7 @@
           "startedAt": "2026-09-10T11:43:16.353Z",
           "finishedAt": "2026-09-10T11:43:22.575Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": [
             "52761222",
             "4278345",
@@ -3596,12 +3239,8 @@
           "finishedAt": "2026-09-10T11:47:06.002Z",
           "elapsedMs": 2127,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -3629,12 +3268,8 @@
           "finishedAt": "2026-09-10T11:47:11.588Z",
           "elapsedMs": 2319,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -3662,12 +3297,8 @@
           "finishedAt": "2026-09-10T11:47:17.798Z",
           "elapsedMs": 2943,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -3695,12 +3326,8 @@
           "finishedAt": "2026-09-10T11:47:24.214Z",
           "elapsedMs": 1932,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -3728,12 +3355,8 @@
           "finishedAt": "2026-09-10T11:47:29.289Z",
           "elapsedMs": 2292,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -3761,16 +3384,8 @@
           "finishedAt": "2026-09-10T11:47:03.874Z",
           "elapsedMs": 3771,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
@@ -3798,16 +3413,8 @@
           "finishedAt": "2026-09-10T11:47:09.268Z",
           "elapsedMs": 3266,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
@@ -3835,16 +3442,8 @@
           "finishedAt": "2026-09-10T11:47:14.854Z",
           "elapsedMs": 3265,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "24557773",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["58091943", "24557773", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
@@ -3872,16 +3471,8 @@
           "finishedAt": "2026-09-10T11:47:22.282Z",
           "elapsedMs": 4484,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
@@ -3909,16 +3500,8 @@
           "finishedAt": "2026-09-10T11:47:26.997Z",
           "elapsedMs": 2782,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
@@ -3960,12 +3543,8 @@
           "finishedAt": "2026-09-10T12:02:33.376Z",
           "elapsedMs": 3737,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -3993,12 +3572,8 @@
           "finishedAt": "2026-09-10T12:03:23.824Z",
           "elapsedMs": 3864,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4026,12 +3601,8 @@
           "finishedAt": "2026-09-10T12:04:02.725Z",
           "elapsedMs": 3597,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4059,12 +3630,8 @@
           "finishedAt": "2026-09-10T12:04:25.704Z",
           "elapsedMs": 3469,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4092,12 +3659,8 @@
           "finishedAt": "2026-09-10T12:04:52.180Z",
           "elapsedMs": 3410,
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4125,16 +3688,8 @@
           "finishedAt": "2026-09-10T12:02:29.638Z",
           "elapsedMs": 18818,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4162,11 +3717,7 @@
           "elapsedMs": 46583,
           "kind": "failed",
           "failureCode": "PREPARATION_MODEL_OUTPUT_INVALID",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
           "actualIds": null,
           "truncated": false,
           "exactSignedTicketCorrelation": false,
@@ -4195,16 +3746,8 @@
           "finishedAt": "2026-09-10T12:03:59.127Z",
           "elapsedMs": 35302,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "24557773",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["58091943", "24557773", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4232,16 +3775,8 @@
           "finishedAt": "2026-09-10T12:04:22.235Z",
           "elapsedMs": 19509,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "24557773",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["58091943", "24557773", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4269,16 +3804,8 @@
           "finishedAt": "2026-09-10T12:04:48.770Z",
           "elapsedMs": 23065,
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
@@ -4315,14 +3842,8 @@
           "startedAt": "2026-09-10T12:05:29.330Z",
           "finishedAt": "2026-09-10T12:05:41.824Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
           "harnessProfileId": "terra-openai-medium",
@@ -4341,14 +3862,8 @@
           "startedAt": "2026-09-10T12:05:41.831Z",
           "finishedAt": "2026-09-10T12:05:51.083Z",
           "kind": "matches",
-          "expectedIds": [
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
           "truncated": false,
           "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
           "harnessProfileId": "terra-openai-medium",
@@ -4367,12 +3882,8 @@
           "startedAt": "2026-09-10T12:05:51.086Z",
           "finishedAt": "2026-09-10T12:05:55.494Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
           "harnessProfileId": "terra-openai-medium",
@@ -4391,12 +3902,8 @@
           "startedAt": "2026-09-10T12:05:55.497Z",
           "finishedAt": "2026-09-10T12:06:01.639Z",
           "kind": "matches",
-          "expectedIds": [
-            "39992"
-          ],
-          "actualIds": [
-            "39992"
-          ],
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
           "truncated": false,
           "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
           "harnessProfileId": "terra-openai-medium",
@@ -4593,16 +4100,8 @@
           "startedAt": "2026-09-10T12:06:35.547Z",
           "finishedAt": "2026-09-10T12:06:39.570Z",
           "kind": "matches",
-          "expectedIds": [
-            "21091016",
-            "57228345",
-            "58091943"
-          ],
-          "actualIds": [
-            "21091016",
-            "57228345",
-            "58091943"
-          ],
+          "expectedIds": ["21091016", "57228345", "58091943"],
+          "actualIds": ["21091016", "57228345", "58091943"],
           "truncated": false,
           "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
           "harnessProfileId": "terra-openai-medium",
@@ -4621,16 +4120,8 @@
           "startedAt": "2026-09-10T12:06:39.573Z",
           "finishedAt": "2026-09-10T12:07:01.431Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
-          "actualIds": [
-            "24557773",
-            "58091943",
-            "71938701"
-          ],
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
           "truncated": false,
           "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
           "harnessProfileId": "terra-openai-medium",
@@ -4669,18 +4160,367 @@
           "startedAt": "2026-09-10T12:07:05.047Z",
           "finishedAt": "2026-09-10T12:07:08.528Z",
           "kind": "matches",
-          "expectedIds": [
-            "24557773"
-          ],
-          "actualIds": [
-            "24557773"
-          ],
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
           "truncated": false,
           "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
           "harnessProfileId": "terra-openai-medium",
           "candidateOnly": true,
           "executionPath": "search-service",
           "elapsedMs": 3481,
+          "identityExact": true
+        }
+      ]
+    },
+    {
+      "name": "selected-runtime-full",
+      "fullCohort": true,
+      "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+      "harnessProfileId": "terra-openai-none",
+      "sensitiveDebug": false,
+      "executionPath": "SearchService through public SDK and real Runtime",
+      "suitePassed": 14,
+      "suiteExecuted": 14,
+      "suiteElapsedMs": 45350,
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record.",
+      "sourceDifferenceNote": "This selected, already-merged Runtime revision includes general stable-projection guidance relative to the earlier none baseline. Its full cohort is a separate source observation, not a reasoning-only comparison.",
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find public Vercel members who authored a merged pull request from June 12, 2026 inclusive to September 11, 2026 exclusive in a repository with accepted repository-level ai concept evidence. Evidence may be explicit or inferred.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "60e498d3-1f4a-4bd2-8fe4-a99550883ce6",
+          "startedAt": "2026-09-10T12:11:45.440Z",
+          "finishedAt": "2026-09-10T12:11:52.273Z",
+          "kind": "matches",
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 6833,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "fb75fa17-2c0d-45a1-98f1-0169db62c692",
+          "startedAt": "2026-09-10T12:11:52.277Z",
+          "finishedAt": "2026-09-10T12:11:57.790Z",
+          "kind": "matches",
+          "expectedIds": ["58091943", "71938701"],
+          "actualIds": ["58091943", "71938701"],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 5513,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "4598ffa2-912e-4dc3-b6b6-19cfe01b903a",
+          "startedAt": "2026-09-10T12:11:57.793Z",
+          "finishedAt": "2026-09-10T12:12:00.244Z",
+          "kind": "matches",
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2451,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "8baca18f-963c-4829-b657-8de5860c3a8c",
+          "startedAt": "2026-09-10T12:12:00.248Z",
+          "finishedAt": "2026-09-10T12:12:02.284Z",
+          "kind": "matches",
+          "expectedIds": ["39992"],
+          "actualIds": ["39992"],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2036,
+          "identityExact": true
+        },
+        {
+          "name": "AI SDK and PostgreSQL on the same repository",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests in a repository having both accepted repository-level npm:ai and postgresql concepts. Both concepts must belong to the same repository; either support level counts.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "b57c2c6a-86cf-4754-b7dd-0abcfdd0c3bd",
+          "startedAt": "2026-09-10T12:12:02.288Z",
+          "finishedAt": "2026-09-10T12:12:08.086Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "4142719",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "4142719",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 5798,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "b3ef562f-7052-4166-96c5-6065b05e8fbe",
+          "startedAt": "2026-09-10T12:12:08.088Z",
+          "finishedAt": "2026-09-10T12:12:10.051Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 1963,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Which contributors have merged PRs under their own authorship across two or more different repositories in this dataset?",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "29b0f507-b79d-4297-93c7-297d446225c5",
+          "startedAt": "2026-09-10T12:12:10.054Z",
+          "finishedAt": "2026-09-10T12:12:12.093Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2039,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "24383cb6-287f-4f2f-a2ff-420787c3533a",
+          "startedAt": "2026-09-10T12:12:12.096Z",
+          "finishedAt": "2026-09-10T12:12:14.537Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2441,
+          "identityExact": true
+        },
+        {
+          "name": "current archive state and popularity constrain project evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored a merged PR in a non-archived repository with more than 100 stars and accepted repository-level postgresql concept evidence. Inferred evidence counts. Archived repositories do not qualify.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "200f849d-f1da-4d07-98e3-b13a90ec23f9",
+          "startedAt": "2026-09-10T12:12:14.541Z",
+          "finishedAt": "2026-09-10T12:12:16.817Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2276,
+          "identityExact": true
+        },
+        {
+          "name": "known follower counts with repeated cross-project work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people with a known follower count below 500 who authored merged pull requests in at least two distinct repositories. Unknown follower counts do not qualify.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "61d1cde1-3917-4aa3-9b32-2b2ff78fb561",
+          "startedAt": "2026-09-10T12:12:16.820Z",
+          "finishedAt": "2026-09-10T12:12:19.152Z",
+          "kind": "matches",
+          "expectedIds": ["21091016", "57228345", "58091943"],
+          "actualIds": ["21091016", "57228345", "58091943"],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2332,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "3bcb9222-11d5-41a2-8057-f638f90b8637",
+          "startedAt": "2026-09-10T12:12:19.156Z",
+          "finishedAt": "2026-09-10T12:12:21.778Z",
+          "kind": "matches",
+          "expectedIds": ["24557773", "58091943", "71938701"],
+          "actualIds": ["24557773", "58091943", "71938701"],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2622,
+          "identityExact": true
+        },
+        {
+          "name": "unknown location cannot satisfy an explicit location filter",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people whose normalized location_city equals Berlin and who authored at least one merged pull request. Missing or unknown locations do not qualify, and do not infer locations from organizations.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "13fbba63-9993-428b-af73-4c3b6e259ce6",
+          "startedAt": "2026-09-10T12:12:21.780Z",
+          "finishedAt": "2026-09-10T12:12:25.697Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 3917,
+          "identityExact": true
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "e79d0304-9a4e-4aee-a59b-8501b3d12acc",
+          "startedAt": "2026-09-10T12:12:25.734Z",
+          "finishedAt": "2026-09-10T12:12:27.921Z",
+          "kind": "matches",
+          "expectedIds": ["24557773"],
+          "actualIds": ["24557773"],
+          "truncated": false,
+          "runtimeRevision": "112b50f3ab2b44a06ee4847c6150488afb9060df",
+          "harnessProfileId": "terra-openai-none",
+          "executionPath": "search-service",
+          "sensitiveDebug": false,
+          "elapsedMs": 2187,
           "identityExact": true
         }
       ]
@@ -4695,12 +4535,8 @@
     "exactSignedTicketCorrelation": true,
     "indexedSearchOperator": "@@@",
     "indexedSearchPresent": true,
-    "expectedIds": [
-      "24557773"
-    ],
-    "actualIds": [
-      "24557773"
-    ],
+    "expectedIds": ["24557773"],
+    "actualIds": ["24557773"],
     "kind": "matches",
     "identityExact": true
   },

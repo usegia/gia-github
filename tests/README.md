@@ -17,9 +17,10 @@ Use Node 26, install the pinned dependencies, copy `.env.example` to `.env`, and
 | `pnpm check` | Static boundaries and types, then 30 PostgreSQL integration cases using the production capture importer, database permissions, durable jobs, evidence freshness, actual BM25 results, and cancellation |
 | `pnpm exec vitest run --project live tests/live/github.live.test.ts` | Public-read GitHub token and OpenAI key; three live cases covering API rename/ETag behavior, public membership and a known merged PR, and one source-validated enrichment call with cached replay |
 | `pnpm exec vitest run --project live tests/live/gia.live.test.ts` | Seeded development database, running Gia, enriched published World, matching serving profile and authority; 14 questions compared with independent expected identities |
+| `pnpm exec vitest run --project live tests/live/runtime.live.test.ts` | Node 26, bootstrapped pinned Runtime, OpenRouter key, and reachable separate registry database; one real-process case verifies occupied-port startup failure clears its dead receipt and preserves the other TCP server |
 | `pnpm test:e2e` | Running production web application and actual Gia; five browser workflows, including two submitted paid searches, source context, mobile profiles, and real HTTP boundary failures |
 
-`pnpm test:live` runs both live files. Missing credentials fail clearly. It spends provider quota, so the automatic public CI job runs only the database and worker tier. The full workflow is an explicit trusted dispatch. Browser tests use `PLAYWRIGHT_BASE_URL` when targeting a different deployment.
+`pnpm test:live` runs all three live files: GitHub, Gia query correctness, and Runtime lifecycle. Missing credentials fail clearly. It spends provider quota, so the automatic public CI job runs only the database and worker tier. The full workflow is an explicit trusted dispatch. Browser tests use `PLAYWRIGHT_BASE_URL` when targeting a different deployment.
 
 ## Golden questions
 

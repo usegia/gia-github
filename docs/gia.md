@@ -105,4 +105,6 @@ The unchanged 14-case service cohort then passed under the candidate in 102.64 s
 
 The candidate's clean source revision, selected Runtime process, existing owner request-assembly test, and successful real provider calls establish the configured route. The assembly test checks `reasoning: { effort: "medium", exclude: true }`. Sensitive captures did not retain outbound model or reasoning controls, and no separate reasoning-token count was available. This is not a direct capture of the outbound request. Per-query source, policy, execution path, outcomes, usage, and measured duration are recorded in `audit/query-evaluations.json`.
 
+The selected Runtime revision `112b50f3ab2b44a06ee4847c6150488afb9060df`, from its already-merged main branch, then passed the unchanged 14-case service suite in 45.35 seconds with default none reasoning and sensitive debug off. It includes general stable-projection guidance relative to the earlier none baseline, so this is a separate source observation rather than a reasoning-only comparison. The World and captured GitHub corpus were unchanged. The passing run does not resolve the intermittent disjunction concern recorded above.
+
 Local raw captures are private diagnostics with a 24-hour deletion deadline; they are not repository fixtures.
