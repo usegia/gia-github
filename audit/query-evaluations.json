@@ -10,7 +10,9 @@
     "provider": "OpenAI via OpenRouter",
     "reasoningEffort": "none",
     "seed": 29,
-    "sqlReuse": "off"
+    "sqlReuse": "off",
+    "harnessProfileId": "terra-openai-none",
+    "scope": "Default for historical cohorts; candidate cohorts record an explicit policy and source override."
   },
   "interpretation": "Identity exactness compares independent SQL expectations with real Gia results; it does not replace the full suite assertions. Queries use the frozen public GitHub corpus. Failure records preserve unavailable actual identities as null. No provider bodies, SQL, signatures, or credentials are included.",
   "cohorts": [
@@ -3587,8 +3589,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "3e0226ce-e13a-4cdf-9f7e-2e4765bba58a",
           "ticketId": "5cfe6d2c-056a-442c-8da4-8d168b19c7c8",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:03.875Z",
           "finishedAt": "2026-09-10T11:47:06.002Z",
+          "elapsedMs": 2127,
           "kind": "matches",
           "expectedIds": [
             "24557773"
@@ -3599,7 +3605,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 86,
+            "totalTokens": 11579,
+            "costUsd": 0.003336
+          },
+          "reasoningTokens": null
         },
         {
           "name": "BM25 pull-request text with profile and merge filters",
@@ -3609,8 +3622,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "1c0b55f9-2c22-4f0c-ac16-6f5562722ce5",
           "ticketId": "ac108657-2a78-42d8-8c47-a2bdb9f66462",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:09.269Z",
           "finishedAt": "2026-09-10T11:47:11.588Z",
+          "elapsedMs": 2319,
           "kind": "matches",
           "expectedIds": [
             "24557773"
@@ -3621,7 +3638,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 108,
+            "totalTokens": 11601,
+            "costUsd": 0.0036
+          },
+          "reasoningTokens": null
         },
         {
           "name": "BM25 pull-request text with profile and merge filters",
@@ -3631,8 +3655,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "99e1d968-6fe1-41a3-a6d7-90d3c71f73b5",
           "ticketId": "11a05c68-a770-4145-90fc-f9ab3d7e9357",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:14.855Z",
           "finishedAt": "2026-09-10T11:47:17.798Z",
+          "elapsedMs": 2943,
           "kind": "matches",
           "expectedIds": [
             "24557773"
@@ -3643,7 +3671,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 92,
+            "totalTokens": 11585,
+            "costUsd": 0.003408
+          },
+          "reasoningTokens": null
         },
         {
           "name": "BM25 pull-request text with profile and merge filters",
@@ -3653,8 +3688,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "b5bfd5c5-e95f-47ec-a85a-838f8e0fb79a",
           "ticketId": "622ecaf4-efef-4064-9992-df450cb363ec",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:22.282Z",
           "finishedAt": "2026-09-10T11:47:24.214Z",
+          "elapsedMs": 1932,
           "kind": "matches",
           "expectedIds": [
             "24557773"
@@ -3665,7 +3704,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 94,
+            "totalTokens": 11587,
+            "costUsd": 0.003432
+          },
+          "reasoningTokens": null
         },
         {
           "name": "BM25 pull-request text with profile and merge filters",
@@ -3675,8 +3721,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "c79003ca-2c52-433c-a015-e60c5607d2c3",
           "ticketId": "a69b1110-571d-49fd-ac83-8880b6f672b6",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:26.997Z",
           "finishedAt": "2026-09-10T11:47:29.289Z",
+          "elapsedMs": 2292,
           "kind": "matches",
           "expectedIds": [
             "24557773"
@@ -3687,7 +3737,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": true,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 108,
+            "totalTokens": 11601,
+            "costUsd": 0.0036
+          },
+          "reasoningTokens": null
         },
         {
           "name": "explicit disjunction across public affiliation and PR evidence",
@@ -3697,8 +3754,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "225af401-ac77-4c30-9786-45b838aa27f3",
           "ticketId": "84cb183c-0f55-49c1-aafb-419ee590d857",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:00.103Z",
           "finishedAt": "2026-09-10T11:47:03.874Z",
+          "elapsedMs": 3771,
           "kind": "matches",
           "expectedIds": [
             "24557773",
@@ -3713,7 +3774,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 256,
+            "totalTokens": 11761,
+            "costUsd": 0.0053784
+          },
+          "reasoningTokens": null
         },
         {
           "name": "explicit disjunction across public affiliation and PR evidence",
@@ -3723,8 +3791,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "e97db791-a6c3-4a74-ab19-57984dfce0fe",
           "ticketId": "349d0761-1ba4-49f0-bc7b-b64ebc8de552",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:06.002Z",
           "finishedAt": "2026-09-10T11:47:09.268Z",
+          "elapsedMs": 3266,
           "kind": "matches",
           "expectedIds": [
             "24557773",
@@ -3739,7 +3811,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 256,
+            "totalTokens": 11761,
+            "costUsd": 0.0053784
+          },
+          "reasoningTokens": null
         },
         {
           "name": "explicit disjunction across public affiliation and PR evidence",
@@ -3749,8 +3828,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "d3496f00-d4c9-4b54-9cc8-8caec5b3491e",
           "ticketId": "78347c58-8610-4083-90af-953f55ff25b7",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:11.589Z",
           "finishedAt": "2026-09-10T11:47:14.854Z",
+          "elapsedMs": 3265,
           "kind": "matches",
           "expectedIds": [
             "24557773",
@@ -3765,7 +3848,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 259,
+            "totalTokens": 11764,
+            "costUsd": 0.0054144
+          },
+          "reasoningTokens": null
         },
         {
           "name": "explicit disjunction across public affiliation and PR evidence",
@@ -3775,8 +3865,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "a8acfdc6-929c-4cdb-9cc4-2b2ab000b1e9",
           "ticketId": "631c26b0-a626-4bc8-ad26-00bc85815bbc",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:17.798Z",
           "finishedAt": "2026-09-10T11:47:22.282Z",
+          "elapsedMs": 4484,
           "kind": "matches",
           "expectedIds": [
             "24557773",
@@ -3791,7 +3885,14 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
-          "identityExact": true
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 260,
+            "totalTokens": 11765,
+            "costUsd": 0.0054264
+          },
+          "reasoningTokens": null
         },
         {
           "name": "explicit disjunction across public affiliation and PR evidence",
@@ -3801,8 +3902,12 @@
           "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
           "requestId": "8cb2beba-1f2e-438d-b98b-0490ee1746dc",
           "ticketId": "2278c343-bbe0-4b72-ae23-f6321a70feb8",
+          "harnessProfileId": "terra-openai-none",
+          "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+          "executionPath": "public-sdk-sensitive-diagnostic",
           "startedAt": "2026-09-10T11:47:24.215Z",
           "finishedAt": "2026-09-10T11:47:26.997Z",
+          "elapsedMs": 2782,
           "kind": "matches",
           "expectedIds": [
             "24557773",
@@ -3817,6 +3922,765 @@
           "truncated": false,
           "exactSignedTicketCorrelation": true,
           "indexedSearchPresent": false,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 204,
+            "totalTokens": 11709,
+            "costUsd": 0.0047544
+          },
+          "reasoningTokens": null
+        }
+      ],
+      "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+      "harnessProfileId": "terra-openai-none"
+    },
+    {
+      "name": "candidate-medium-policy-diagnostic",
+      "fullCohort": false,
+      "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+      "harnessProfileId": "terra-openai-medium",
+      "candidateOnly": true,
+      "executionPath": "Public SDK diagnostic operation with sensitive capture; same wrapped question, identity output, limits, World and explicitly changed planner policy; excludes application admission and hydration.",
+      "suitePassed": 9,
+      "suiteExecuted": 10,
+      "queryRecords": [
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "d24e06b3-7d2a-4447-9fe1-b0431aac2f92",
+          "ticketId": "363435e0-2fe6-41cc-9f45-c53d2bce1cf7",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:02:29.639Z",
+          "finishedAt": "2026-09-10T12:02:33.376Z",
+          "elapsedMs": 3737,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 201,
+            "totalTokens": 11694,
+            "costUsd": 0.0209195
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "a83fb400-bb9f-48bc-9475-8dd4c4b997df",
+          "ticketId": "b0230512-7e48-456b-aaaf-fe6279df41c7",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:03:19.960Z",
+          "finishedAt": "2026-09-10T12:03:23.824Z",
+          "elapsedMs": 3864,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 171,
+            "totalTokens": 11664,
+            "costUsd": 0.004356
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "6f9e7ef7-f8b2-4825-a214-83c6e0a7b8fd",
+          "ticketId": "7f0c03fc-6efb-4260-a825-5656e723f387",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:03:59.128Z",
+          "finishedAt": "2026-09-10T12:04:02.725Z",
+          "elapsedMs": 3597,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 173,
+            "totalTokens": 11666,
+            "costUsd": 0.00438
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "f58734f0-26e1-4bb7-a504-e9c64c53d821",
+          "ticketId": "32801e12-b6d7-4115-9b91-f412cd560f8d",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:04:22.235Z",
+          "finishedAt": "2026-09-10T12:04:25.704Z",
+          "elapsedMs": 3469,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 156,
+            "totalTokens": 11649,
+            "costUsd": 0.004176
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "aa1f3d5b-5741-437c-bc68-d285ab82ff00",
+          "ticketId": "58fc67bc-f55a-41b1-8ad1-7d1d7ad70537",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:04:48.770Z",
+          "finishedAt": "2026-09-10T12:04:52.180Z",
+          "elapsedMs": 3410,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11493,
+            "outputTokens": 180,
+            "totalTokens": 11673,
+            "costUsd": 0.004464
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "4b9e81c7-2b41-44be-87a5-9890136f0e93",
+          "ticketId": "203d7a4c-3cde-42f5-8fce-9a89b5ef3850",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:02:10.820Z",
+          "finishedAt": "2026-09-10T12:02:29.638Z",
+          "elapsedMs": 18818,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 1305,
+            "totalTokens": 12810,
+            "costUsd": 0.044421
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "42781b3e-cff1-44fb-a3ab-251f6a9138de",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:02:33.376Z",
+          "finishedAt": "2026-09-10T12:03:19.959Z",
+          "elapsedMs": 46583,
+          "kind": "failed",
+          "failureCode": "PREPARATION_MODEL_OUTPUT_INVALID",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": null,
+          "truncated": false,
+          "exactSignedTicketCorrelation": false,
+          "indexedSearchPresent": false,
+          "identityExact": false,
+          "providerUsage": {
+            "inputTokens": 35262,
+            "outputTokens": 3093,
+            "totalTokens": 38355,
+            "costUsd": 0.045902700000000005
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "0f1610b9-9528-4590-af8b-79c2e056d651",
+          "ticketId": "79adf55b-25f1-4349-8a01-3acec04a6520",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:03:23.825Z",
+          "finishedAt": "2026-09-10T12:03:59.127Z",
+          "elapsedMs": 35302,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "24557773",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 23341,
+            "outputTokens": 2302,
+            "totalTokens": 25643,
+            "costUsd": 0.0330643
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "3d685990-8eb1-4f50-842c-730a6395dcfa",
+          "ticketId": "fc5855f8-2e5c-4b3f-b08e-08b5a26f529f",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:04:02.726Z",
+          "finishedAt": "2026-09-10T12:04:22.235Z",
+          "elapsedMs": 19509,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "24557773",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 1269,
+            "totalTokens": 12774,
+            "costUsd": 0.0175344
+          },
+          "reasoningTokens": null
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "104d70ea-c127-42fc-91a1-d0142c6ae151",
+          "ticketId": "14f5df47-f501-46bd-b323-b36e778d8cd8",
+          "harnessProfileId": "terra-openai-medium",
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "executionPath": "public-sdk-sensitive-diagnostic",
+          "startedAt": "2026-09-10T12:04:25.705Z",
+          "finishedAt": "2026-09-10T12:04:48.770Z",
+          "elapsedMs": 23065,
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "exactSignedTicketCorrelation": true,
+          "indexedSearchPresent": true,
+          "identityExact": true,
+          "providerUsage": {
+            "inputTokens": 11505,
+            "outputTokens": 1559,
+            "totalTokens": 13064,
+            "costUsd": 0.0210144
+          },
+          "reasoningTokens": null
+        }
+      ]
+    },
+    {
+      "name": "candidate-medium-policy-full",
+      "fullCohort": true,
+      "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+      "harnessProfileId": "terra-openai-medium",
+      "candidateOnly": true,
+      "executionPath": "SearchService through public SDK and real Runtime",
+      "suitePassed": 14,
+      "suiteExecuted": 14,
+      "suiteElapsedMs": 102640,
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record.",
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find public Vercel members who authored a merged pull request from June 12, 2026 inclusive to September 11, 2026 exclusive in a repository with accepted repository-level ai concept evidence. Evidence may be explicit or inferred.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "631b21a6-39b6-43ad-b6e6-b32e24c99f87",
+          "startedAt": "2026-09-10T12:05:29.330Z",
+          "finishedAt": "2026-09-10T12:05:41.824Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 12494,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "72dca128-1ecd-4605-a343-9d5a774361b9",
+          "startedAt": "2026-09-10T12:05:41.831Z",
+          "finishedAt": "2026-09-10T12:05:51.083Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 9252,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "171284c3-2eeb-4dc1-b866-03c05b9faefb",
+          "startedAt": "2026-09-10T12:05:51.086Z",
+          "finishedAt": "2026-09-10T12:05:55.494Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 4408,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "b29db0ea-5e6f-4540-be35-b2f2ad34fe85",
+          "startedAt": "2026-09-10T12:05:55.497Z",
+          "finishedAt": "2026-09-10T12:06:01.639Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 6142,
+          "identityExact": true
+        },
+        {
+          "name": "AI SDK and PostgreSQL on the same repository",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests in a repository having both accepted repository-level npm:ai and postgresql concepts. Both concepts must belong to the same repository; either support level counts.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "c0f1b6e2-8041-4826-886a-5a8658d42ed3",
+          "startedAt": "2026-09-10T12:06:01.643Z",
+          "finishedAt": "2026-09-10T12:06:13.402Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "4142719",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "49612682",
+            "4142719",
+            "58091943",
+            "4060187",
+            "366502",
+            "26875009",
+            "17938322"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 11759,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "aa264c7d-e916-465f-9892-cffe3e4f2bd5",
+          "startedAt": "2026-09-10T12:06:13.408Z",
+          "finishedAt": "2026-09-10T12:06:18.334Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 4926,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Which contributors have merged PRs under their own authorship across two or more different repositories in this dataset?",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "aefc709c-38b1-477f-a46a-2e20e4e3c104",
+          "startedAt": "2026-09-10T12:06:18.337Z",
+          "finishedAt": "2026-09-10T12:06:22.235Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 3898,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "f6fa092f-f66d-498c-ab78-964a223e1c54",
+          "startedAt": "2026-09-10T12:06:22.237Z",
+          "finishedAt": "2026-09-10T12:06:28.003Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 5766,
+          "identityExact": true
+        },
+        {
+          "name": "current archive state and popularity constrain project evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored a merged PR in a non-archived repository with more than 100 stars and accepted repository-level postgresql concept evidence. Inferred evidence counts. Archived repositories do not qualify.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "fa86e5f5-d46e-42af-bcb5-ed057115f570",
+          "startedAt": "2026-09-10T12:06:28.007Z",
+          "finishedAt": "2026-09-10T12:06:35.545Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 7538,
+          "identityExact": true
+        },
+        {
+          "name": "known follower counts with repeated cross-project work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people with a known follower count below 500 who authored merged pull requests in at least two distinct repositories. Unknown follower counts do not qualify.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "0a6ee338-c695-42e7-b962-44ee87e22d53",
+          "startedAt": "2026-09-10T12:06:35.547Z",
+          "finishedAt": "2026-09-10T12:06:39.570Z",
+          "kind": "matches",
+          "expectedIds": [
+            "21091016",
+            "57228345",
+            "58091943"
+          ],
+          "actualIds": [
+            "21091016",
+            "57228345",
+            "58091943"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 4023,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "74276e6f-e5e6-4312-805f-480cf568c59e",
+          "startedAt": "2026-09-10T12:06:39.573Z",
+          "finishedAt": "2026-09-10T12:07:01.431Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 21858,
+          "identityExact": true
+        },
+        {
+          "name": "unknown location cannot satisfy an explicit location filter",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people whose normalized location_city equals Berlin and who authored at least one merged pull request. Missing or unknown locations do not qualify, and do not infer locations from organizations.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "307e2bff-1108-4f6c-a095-9d0c764dff51",
+          "startedAt": "2026-09-10T12:07:01.438Z",
+          "finishedAt": "2026-09-10T12:07:05.011Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 3573,
+          "identityExact": true
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "db289747-6c42-47c9-83d9-9f18aa2d6d50",
+          "startedAt": "2026-09-10T12:07:05.047Z",
+          "finishedAt": "2026-09-10T12:07:08.528Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+          "harnessProfileId": "terra-openai-medium",
+          "candidateOnly": true,
+          "executionPath": "search-service",
+          "elapsedMs": 3481,
           "identityExact": true
         }
       ]
@@ -3839,5 +4703,93 @@
     ],
     "kind": "matches",
     "identityExact": true
+  },
+  "plannerPolicyComparison": {
+    "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+    "baselineRuntimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+    "candidateRuntimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+    "candidateStatus": "Measured only; not recommended for application deployment.",
+    "unchangedControls": [
+      "frozen GitHub corpus",
+      "published World",
+      "question wording",
+      "human-account question wrapper",
+      "account identity output",
+      "Core and SDK revisions",
+      "signed execution and limits",
+      "SQL reuse off",
+      "model and provider",
+      "seed 29",
+      "16384-token output cap"
+    ],
+    "changedControl": "Candidate Runtime adds a closed medium-reasoning profile; baseline uses none.",
+    "summary": [
+      {
+        "profile": "terra-openai-none",
+        "name": "BM25 pull-request text with profile and merge filters",
+        "exact": 5,
+        "total": 5,
+        "medianMs": 2292,
+        "minimumMs": 1932,
+        "maximumMs": 2943,
+        "providerCostUsd": 0.017376
+      },
+      {
+        "profile": "terra-openai-none",
+        "name": "explicit disjunction across public affiliation and PR evidence",
+        "exact": 5,
+        "total": 5,
+        "medianMs": 3266,
+        "minimumMs": 2782,
+        "maximumMs": 4484,
+        "providerCostUsd": 0.026352
+      },
+      {
+        "profile": "terra-openai-medium",
+        "name": "BM25 pull-request text with profile and merge filters",
+        "exact": 5,
+        "total": 5,
+        "medianMs": 3597,
+        "minimumMs": 3410,
+        "maximumMs": 3864,
+        "providerCostUsd": 0.038296
+      },
+      {
+        "profile": "terra-openai-medium",
+        "name": "explicit disjunction across public affiliation and PR evidence",
+        "exact": 4,
+        "total": 5,
+        "medianMs": 23065,
+        "minimumMs": 18818,
+        "maximumMs": 46583,
+        "providerCostUsd": 0.161937
+      }
+    ],
+    "measurementNotes": "Diagnostic elapsed time includes local capture writing and failed attempts. Provider cost sums are reported usage, not application billing. The five-sample comparisons do not establish a population accuracy rate.",
+    "requestControlsEvidence": {
+      "outboundControlsCaptured": false,
+      "selectedProcessVerified": true,
+      "productionRequestAssemblyVerified": true,
+      "providerRequestsAccepted": true,
+      "separateReasoningTokenCountAvailable": false,
+      "sourceRepository": "usegia/gia-runtime",
+      "runtimeRevision": "5c2f931309e3610c32746623481c0da62252bc11",
+      "selectedProcessReceipt": "ignored .gia/local-runtime/process.json",
+      "requestAssemblyTestPath": "src/services/prepare/plan/harness/openrouter/model.test.ts",
+      "requestAssemblyExpectedReasoning": {
+        "effort": "medium",
+        "exclude": true
+      },
+      "limitation": "Clean source, the selected Runtime process, the owner request-assembly test and real provider acceptance establish the configured route. Sensitive captures did not record outbound model/reasoning controls or a separate reasoning-token count; this is not direct wire capture."
+    },
+    "failure": {
+      "cohort": "candidate-medium-policy-diagnostic",
+      "case": "explicit disjunction across public affiliation and PR evidence",
+      "repetition": 2,
+      "code": "PREPARATION_MODEL_OUTPUT_INVALID",
+      "datastoreContacted": false,
+      "description": "The provider produced a union-shaped identity output that failed the requirement to deliver the stored account.id field directly. The failed candidate was not executed."
+    },
+    "decision": "Retain the default none planner policy. Medium showed no demonstrated accuracy gain in these samples and increased latency and reported provider cost. Preserve the earlier 13/14 none service result and the candidate 14/14 service result as separate observations."
   }
 }

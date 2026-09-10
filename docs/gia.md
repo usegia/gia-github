@@ -58,7 +58,7 @@ Runtime management refuses to stop an unowned process. Local loopback serving is
 
 For an operator-owned local investigation, stop the Runtime and start it with `GIA_RUNTIME_LOCAL_DEBUG=1`. This enables the existing Runtime's loopback capture authority; an SDK query must separately request sensitive debug evidence and supply an owner-only debug sink. The web search service continues to request debug off. Captures can contain the full question, World, provider response, and SQL. Keep them under ignored `.gia`, respect their deletion deadline, and restart without this flag after the investigation. Changing the flag on an already running process has no effect.
 
-The pinned Runtime selects the `terra-openai-none` planner policy: `openai/gpt-5.6-terra` through OpenRouter's OpenAI provider, reasoning disabled, seed 29, and a 16384-token output cap. That revision exposes no deployment configuration for selecting another planner model or reasoning effort. A different policy requires a reviewed Runtime release and an updated source receipt.
+The application retains the Runtime's default `terra-openai-none` planner policy: `openai/gpt-5.6-terra` through OpenRouter's OpenAI provider, reasoning disabled, seed 29, and a 16384-token output cap. Planner selection belongs to the Runtime process. Changing a web-process environment variable does not reconfigure an existing Runtime.
 
 ## Verification
 
@@ -88,4 +88,21 @@ The first expanded 14-case cohort passed 13 cases. The disjunction case regresse
 
 An unchanged diagnostic repeat then produced 5/5 exact disjunction answers and 5/5 exact BM25 controls. These calls used the same public SDK operation, question wrapper, identity output, limits, World and planner policy, with sensitive capture enabled to correlate every returned ticket; they omitted application admission and hydration. They establish intermittent composition behavior rather than a missing schema fact. They do not change the recorded 13/14 service-cohort result, and no further schema or prose correction was applied to make that run appear passing.
 
-The comparisons use the same frozen GitHub observations, question wording, identity output, planner policy, and disabled SQL reuse. No application SQL rewriting, provider substitution, weaker assertion, or private Gia implementation change is part of the correction. Local raw captures are private diagnostics with a 24-hour deletion deadline; they are not repository fixtures.
+These schema and World comparisons kept the frozen GitHub observations, question wording, identity output, planner policy, and disabled SQL reuse constant. They used no application SQL rewriting, provider substitution, weaker assertion, or private Gia implementation change.
+
+### Candidate reasoning-policy comparison
+
+A separate Runtime candidate, revision `5c2f931309e3610c32746623481c0da62252bc11`, added a closed medium-reasoning profile. Its controlled comparison kept World `99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6`, the corpus, questions, SDK, Core, model, provider, seed, output cap, and disabled SQL reuse fixed. This was a measured candidate, not an application dependency or recommended deployment setting.
+
+| Diagnostic case | Default none | Candidate medium | Median none | Median medium |
+| --- | --- | --- | --- | --- |
+| Explicit disjunction | 5/5 | 4/5 | 3.27 s | 23.07 s |
+| BM25 plus relational filters | 5/5 | 5/5 | 2.29 s | 3.60 s |
+
+The failed medium sample produced a union-shaped output that did not meet the stored `account.id` identity contract. Gia rejected it before database execution. Diagnostic times include local capture writing and failed attempts. Reported provider cost across five calls rose from $0.026352 to $0.161937 for the disjunction and from $0.017376 to $0.038296 for BM25. These small samples show no demonstrated accuracy gain and do not establish population accuracy rates.
+
+The unchanged 14-case service cohort then passed under the candidate in 102.64 seconds. That result remains separate from its 4/5 diagnostic disjunction result and the default policy's earlier 13/14 service cohort. The application retains the default policy because this comparison did not justify the additional latency and cost.
+
+The candidate's clean source revision, selected Runtime process, existing owner request-assembly test, and successful real provider calls establish the configured route. The assembly test checks `reasoning: { effort: "medium", exclude: true }`. Sensitive captures did not retain outbound model or reasoning controls, and no separate reasoning-token count was available. This is not a direct capture of the outbound request. Per-query source, policy, execution path, outcomes, usage, and measured duration are recorded in `audit/query-evaluations.json`.
+
+Local raw captures are private diagnostics with a 24-hour deletion deadline; they are not repository fixtures.
