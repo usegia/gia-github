@@ -72,14 +72,27 @@ async function upsertAccount(
       target: accounts.id,
       set: {
         ...identity,
-        ...details,
-        observedAt: sql`greatest(${accounts.observedAt}, ${date})`,
         ...(account.avatar_url ? { avatarUrl: account.avatar_url } : {}),
       },
-      setWhere: profile
-        ? sql`${accounts.profileFetchedAt} is null or ${accounts.profileFetchedAt} <= ${date}`
-        : lte(accounts.observedAt, date),
+      setWhere: lte(accounts.observedAt, date),
     });
+  if (profile) {
+    await tx
+      .update(accounts)
+      .set({
+        ...details,
+        searchText: sql`concat_ws(E'\n', ${accounts.login}, ${profile.name}::text, ${profile.bio}::text, ${profile.company}::text, ${profile.location}::text)`,
+        locationCity: sql`case when ${accounts.locationRaw} is distinct from ${profile.location}::text then null else ${accounts.locationCity} end`,
+        locationCountry: sql`case when ${accounts.locationRaw} is distinct from ${profile.location}::text then null else ${accounts.locationCountry} end`,
+        locationNormalization: sql`case when ${accounts.locationRaw} is distinct from ${profile.location}::text then null else ${accounts.locationNormalization} end`,
+      })
+      .where(
+        and(
+          eq(accounts.id, BigInt(account.id)),
+          sql`${accounts.profileFetchedAt} is null or ${accounts.profileFetchedAt} <= ${date.toISOString()}::timestamptz`,
+        ),
+      );
+  }
 }
 
 type EvidenceSource = {
@@ -171,7 +184,7 @@ async function importFacts(tx: DatabaseTransaction, capture: Capture): Promise<v
             target: repositories.id,
             set: {
               ...row,
-              searchText: sql`concat_ws(E'\n', ${row.searchText}, ${repositories.readmeText})`,
+              searchText: sql`concat_ws(E'\n', ${row.searchText}::text, ${repositories.readmeText})`,
             },
             setWhere: lte(repositories.observedAt, date),
           });
@@ -349,7 +362,7 @@ async function importFacts(tx: DatabaseTransaction, capture: Capture): Promise<v
           .set({
             readmeText: text,
             readmeSha: payload.content.sha,
-            searchText: sql`concat_ws(E'\n', ${repositories.fullName}, ${repositories.description}, array_to_string(${repositories.topics}, ' '), ${text})`,
+            searchText: sql`concat_ws(E'\n', ${repositories.fullName}, ${repositories.description}, array_to_string(${repositories.topics}, ' '), ${text}::text)`,
           })
           .where(eq(repositories.id, BigInt(payload.repositoryId)));
       }
@@ -367,7 +380,12 @@ async function importFacts(tx: DatabaseTransaction, capture: Capture): Promise<v
       );
       return;
     }
-    case "pull_request_files":
+    case "pull_request_files": {
+      const [current] = await tx
+        .select({ headSha: pullRequests.headSha })
+        .from(pullRequests)
+        .where(eq(pullRequests.id, BigInt(payload.pullRequestId)));
+      if (!current || current.headSha !== payload.headSha) return;
       for (const file of payload.records) {
         if (!file.patch) continue;
         await replaceSourceEvidence(
@@ -392,6 +410,7 @@ async function importFacts(tx: DatabaseTransaction, capture: Capture): Promise<v
         );
       }
       return;
+    }
   }
 }
 

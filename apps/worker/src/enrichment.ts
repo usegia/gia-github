@@ -163,7 +163,7 @@ export function extractText(text: string): Extraction[] {
         slug,
         excerpt: text.slice(start, end),
         method: "deterministic",
-        supportLevel: "explicit",
+        supportLevel: "inferred",
         extractorVersion: EXTRACTOR_VERSION,
       },
     ];
