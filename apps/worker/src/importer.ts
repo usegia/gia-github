@@ -13,7 +13,7 @@ import {
   repositoryLanguages,
   syncState,
 } from "@gia-github/db/schema";
-import { and, eq, isNull, lte, notInArray, sql } from "drizzle-orm";
+import { and, eq, isNull, lte, notInArray, or, sql } from "drizzle-orm";
 import {
   type Account,
   type Capture,
@@ -89,7 +89,7 @@ async function upsertAccount(
       .where(
         and(
           eq(accounts.id, BigInt(account.id)),
-          sql`${accounts.profileFetchedAt} is null or ${accounts.profileFetchedAt} <= ${date.toISOString()}::timestamptz`,
+        or(isNull(accounts.profileFetchedAt), lte(accounts.profileFetchedAt, date)),
         ),
       );
   }
