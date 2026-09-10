@@ -13,13 +13,13 @@ import {
 } from "./common.mjs";
 
 const command = process.argv[2];
-if (!["init", "publish", "profile", "authority"].includes(command))
-  throw new Error("Usage: node scripts/gia/project.mjs init|publish|profile|authority");
+if (!["init", "refresh", "publish", "profile", "authority"].includes(command))
+  throw new Error("Usage: node scripts/gia/project.mjs init|refresh|publish|profile|authority");
 const projectDirectory = path.resolve(process.env.GIA_PROJECT_DIR ?? root);
 const runtimeUrl = process.env.GIA_API_URL ?? "http://127.0.0.1:8798";
 const profileId = process.env.GIA_ACTIVE_PROFILE ?? "github-dev";
 const filename = (...parts) => path.join(projectDirectory, ...parts);
-if (command === "init" || command === "publish") {
+if (command === "init" || command === "refresh" || command === "publish") {
   const { mkdir } = await import("node:fs/promises");
   await mkdir(filename(".gia"), { recursive: true, mode: 0o700 });
   const env = {
@@ -29,7 +29,7 @@ if (command === "init" || command === "publish") {
       "DATABASE_ADMIN_URL or DATABASE_URL",
     ),
     GIA_API_URL: runtimeUrl,
-    ...(command === "init"
+    ...(command !== "publish"
       ? {
           OPENROUTER_API_KEY: requireText(process.env.OPENROUTER_API_KEY, "OPENROUTER_API_KEY"),
           GIA_ENRICH_DUAL_OPENROUTER: "1",
@@ -49,7 +49,9 @@ if (command === "init" || command === "publish") {
           "--enrich",
           "--yes",
         ]
-      : ["publish", "--environment", "dev", "--yes"];
+      : command === "refresh"
+        ? ["refresh", "--environment", "dev", "--force-harvest", "--enrich", "--yes"]
+        : ["publish", "--environment", "dev", "--yes"];
   const logPath = filename(".gia", `${command}.log`);
   const log = await open(logPath, "a", 0o600);
   try {
