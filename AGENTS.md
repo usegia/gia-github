@@ -13,7 +13,7 @@ Build public GitHub people search. Read this file, `README.md`, and the task's o
 | Commands, CI, deployment, source receipts | `scripts`, root configuration | `CONTRIBUTING.md` |
 | Actual GitHub captures and integration expectations | `fixtures`, `tests` | `tests/README.md` |
 
-Shared Gia documentation is in the sibling workspace `../gia-docs`. Start at `../gia-docs/manifest/reading-paths.json`; exact dependency revisions are in `.gia-sources.json` and `.gia-docs.json`. Current workspace documentation and a pinned snapshot are different sources. Prefer Core parsers, current owner implementation and tests, public declarations, then prose. Do not edit other Gia repositories to make an application check pass. Record and minimize an owner defect, then fix it in an isolated owner lane.
+Start with `docs/README.md` for this application's documentation. When the sibling `../gia-docs` workspace exists, discover shared Gia documentation through `../gia-docs/manifest/reading-paths.json`. In a standalone checkout, use the repository, revision, and pages in `.gia-docs.json` to read the verified snapshot. Exact source dependencies are in `.gia-sources.json`. Current workspace documentation and a pinned snapshot are different sources. Prefer Core parsers, current owner implementation and tests, public declarations, then prose. Do not edit other Gia repositories to make an application check pass. Record and minimize an owner defect, then fix it in an isolated owner lane.
 
 ## Working rules
 
@@ -40,4 +40,4 @@ Before handoff, inspect the diff, run the affected integration suite, then the r
 
 When adding or renaming a command, update `README.md`, `CONTRIBUTING.md`, and its executable check together. When changing a public response, update its Zod contract and browser/integration proof. When changing schema, commit a migration and rebuild the reviewed Gia artifacts through lifecycle commands. Do not hand-edit `gia/generated`.
 
-Use `rg` in the relevant package. `.deps`, `.data`, `.gia`, `node_modules`, build outputs, and worktrees are not source discovery roots. Keep current decisions in the implementation, tests, and short runbooks. `audit/implementation.tsv` records this initial delivery; it is evidence, not a second instruction source.
+Use `rg` in the relevant package. `.deps`, `.data`, `.gia`, `node_modules`, build outputs, and worktrees are not source discovery roots. For Gia authoring, start with `gia/world.json` and the relevant entity in `gia/generated/effective-world.json`; inspect individual evidence records instead of dumping generated value inventories. Keep current decisions in the implementation, tests, and short runbooks. `audit/implementation.tsv` records this initial delivery; it is evidence, not a second instruction source.

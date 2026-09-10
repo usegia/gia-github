@@ -1,0 +1,56 @@
+{
+  "fields": [
+    {
+      "distinct_count": 4,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "108547162",
+          "member_count": 4,
+          "sig": "numeric:none"
+        }
+      ],
+      "inventory": {
+        "kind": "partial",
+        "reason": "sampled",
+        "values": [
+          {
+            "count": 7,
+            "specificity": 667,
+            "value": "108547162"
+          },
+          {
+            "count": 5,
+            "specificity": 625,
+            "value": "74989412"
+          },
+          {
+            "count": 2,
+            "specificity": 417,
+            "value": "14985020"
+          },
+          {
+            "count": 1,
+            "specificity": 292,
+            "value": "189563271"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 15,
+      "path": "owner_id"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:55:05.460Z"
+  },
+  "index": "github.repositories",
+  "source": {
+    "horizon": 4096,
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fields": [
+    {
+      "distinct_count": 3,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "Bot",
+          "member_count": 3,
+          "sig": "alpha:title"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-legal",
+        "values": [
+          {
+            "count": 0,
+            "specificity": 750,
+            "value": "Bot"
+          },
+          {
+            "count": 0,
+            "specificity": 583,
+            "value": "Organization"
+          },
+          {
+            "count": 0,
+            "specificity": 417,
+            "value": "User"
+          }
+        ]
+      },
+      "membership": "schema-closed",
+      "non_null_count": 0,
+      "path": "account_type"
+    }
+  ],
+  "generated_at": "2026-09-10T10:52:22.330Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.accounts",
+  "source": {
+    "horizon": 4096,
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

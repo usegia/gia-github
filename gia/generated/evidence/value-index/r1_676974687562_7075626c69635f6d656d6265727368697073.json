@@ -1,0 +1,454 @@
+{
+  "budget": {
+    "perFieldByteCap": 2000000,
+    "perWorldByteCap": 8000000
+  },
+  "degradations": [],
+  "fields": [
+    {
+      "bandTables": [
+        {
+          "band": 0,
+          "buckets": {
+            "ac6ce9dc": [
+              0
+            ],
+            "d92febc7": [
+              2
+            ],
+            "ff8aef63": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 1,
+          "buckets": {
+            "5c857808": [
+              0,
+              1
+            ],
+            "97b2b32a": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 2,
+          "buckets": {
+            "0ec582ef": [
+              2
+            ],
+            "23c7bc5e": [
+              0
+            ],
+            "2ab05e0e": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 3,
+          "buckets": {
+            "4815b659": [
+              0
+            ],
+            "75b1aa01": [
+              1
+            ],
+            "84e65e98": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 4,
+          "buckets": {
+            "039d4b5f": [
+              0,
+              1
+            ],
+            "9029c90b": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 5,
+          "buckets": {
+            "56319cbd": [
+              1
+            ],
+            "afe8c43d": [
+              2
+            ],
+            "bb98ff35": [
+              0
+            ]
+          }
+        },
+        {
+          "band": 6,
+          "buckets": {
+            "37788b6c": [
+              0,
+              1
+            ],
+            "905bbab3": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 7,
+          "buckets": {
+            "9be86eb0": [
+              2
+            ],
+            "d8cacafd": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "band": 8,
+          "buckets": {
+            "38e60605": [
+              0,
+              1
+            ],
+            "7e7f13c5": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 9,
+          "buckets": {
+            "0a39d44e": [
+              0
+            ],
+            "6ab401c1": [
+              1
+            ],
+            "ab790d5c": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 10,
+          "buckets": {
+            "74de870b": [
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "band": 11,
+          "buckets": {
+            "8b0e7ce1": [
+              0,
+              1
+            ],
+            "f88a515e": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 12,
+          "buckets": {
+            "559486ea": [
+              2
+            ],
+            "6f559fa0": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "band": 13,
+          "buckets": {
+            "90c7ef9c": [
+              1
+            ],
+            "ba197a12": [
+              0,
+              2
+            ]
+          }
+        },
+        {
+          "band": 14,
+          "buckets": {
+            "b3a6e0ad": [
+              2
+            ],
+            "c9155de4": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "band": 15,
+          "buckets": {
+            "648ab15d": [
+              0
+            ],
+            "a84dabde": [
+              2
+            ],
+            "b895df3b": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 16,
+          "buckets": {
+            "357d2fde": [
+              2
+            ],
+            "38b04cd6": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "band": 17,
+          "buckets": {
+            "186046de": [
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "band": 18,
+          "buckets": {
+            "6a3d5f39": [
+              0
+            ],
+            "6e87331b": [
+              2
+            ],
+            "d1a553e3": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 19,
+          "buckets": {
+            "3b0e6598": [
+              2
+            ],
+            "6a12dd72": [
+              0
+            ],
+            "c805877c": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 20,
+          "buckets": {
+            "93250b2e": [
+              0,
+              1
+            ],
+            "f8f3735c": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 21,
+          "buckets": {
+            "2e502952": [
+              0
+            ],
+            "599759e7": [
+              2
+            ],
+            "ec3c28b5": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 22,
+          "buckets": {
+            "8ad8e61e": [
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "band": 23,
+          "buckets": {
+            "7b828dd7": [
+              0
+            ],
+            "9006ce54": [
+              1
+            ],
+            "c711f1b3": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 24,
+          "buckets": {
+            "06ed7350": [
+              0
+            ],
+            "67ca57fd": [
+              2
+            ],
+            "97caa6b1": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 25,
+          "buckets": {
+            "95440193": [
+              2
+            ],
+            "3d088dd1": [
+              0
+            ],
+            "6f0be795": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 26,
+          "buckets": {
+            "6cb98443": [
+              0
+            ],
+            "b7307539": [
+              2
+            ],
+            "f507b555": [
+              1
+            ]
+          }
+        },
+        {
+          "band": 27,
+          "buckets": {
+            "175018b6": [
+              2
+            ],
+            "20b002c2": [
+              1
+            ],
+            "9a1afe42": [
+              0
+            ]
+          }
+        },
+        {
+          "band": 28,
+          "buckets": {
+            "48660398": [
+              0,
+              1
+            ],
+            "2beb5eb1": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 29,
+          "buckets": {
+            "19311956": [
+              1
+            ],
+            "8037eae8": [
+              2
+            ],
+            "bdc481e1": [
+              0
+            ]
+          }
+        },
+        {
+          "band": 30,
+          "buckets": {
+            "9381c8aa": [
+              0
+            ],
+            "f5294b5a": [
+              1
+            ],
+            "ff4b99e9": [
+              2
+            ]
+          }
+        },
+        {
+          "band": 31,
+          "buckets": {
+            "4a709962": [
+              0
+            ],
+            "9136e94d": [
+              2
+            ],
+            "a1a9266a": [
+              1
+            ]
+          }
+        }
+      ],
+      "df": [
+        72,
+        5,
+        2
+      ],
+      "distinctEstimateRaw": 3,
+      "path": "source_url",
+      "sampleCount": 3,
+      "sampled": "df-topk-only",
+      "storageMode": "raw-values",
+      "values": [
+        "https://api.github.com/orgs/vercel/public_members?per_page=100&page=1",
+        "https://api.github.com/orgs/vercel-labs/public_members?per_page=100&page=1",
+        "https://api.github.com/orgs/assistant-ui/public_members?per_page=100&page=1"
+      ]
+    }
+  ],
+  "generated_at": "2026-09-10T10:52:22.330Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.public_memberships",
+  "params": {
+    "bands": 32,
+    "numHashes": 128,
+    "rows": 4,
+    "seed": "b3478c4f8a5c9a7d1e2b3c4d5f60718293a4b5c6d7e8f9011234567890abcdef",
+    "shingle": 3
+  }
+}

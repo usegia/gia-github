@@ -1,0 +1,901 @@
+{
+  "doc_count": 56,
+  "fields": [
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 8,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 56,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 56,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "0433e3038e208089",
+          "057ac9221863258c",
+          "07871915a8107172",
+          "0c83112a5228372c",
+          "1cbaa4e5609fb651",
+          "2442ac5a33bfa359",
+          "25d201f5da2e777a",
+          "274ad4786c3abca6",
+          "30ed5eaee865c661",
+          "3a0b86bff1bab2d0",
+          "3dd8d2d749b7b185",
+          "43cf10a7ba626e33",
+          "482db0ecc10b8a99",
+          "494ba9ff03bdad88",
+          "4961cfd8678dadd0",
+          "4ac778418206cc85",
+          "4ca82782c5372a54",
+          "4e4c5eba10a0b94a",
+          "4f05d4821fe99678",
+          "4f4adcbf8c6f66dc",
+          "53fde96fcc4b4ce7",
+          "554f228d2d2e67d3",
+          "5a2afca61e35f45a",
+          "5a53fbf7e72e3f08",
+          "5bf8aaef51c6e0d3",
+          "6226a42e68cb5f42",
+          "63dc7ed1010d3c3b",
+          "65699726a3c601b9",
+          "6883966fd8f918a4",
+          "708d115d6b3663fa",
+          "748ba69d3e8d1af8",
+          "7840431e46f0ebd7",
+          "955a1584af63a546",
+          "98f13708210194c4",
+          "a1d33d0dfec820b4",
+          "a309fac19ec9cdff",
+          "abdbeb4d8dbe30df",
+          "ac614ac034424f16",
+          "acab0116c354964a",
+          "b091b6931c5bbfd3",
+          "b8c27b7a1c450ffd",
+          "cb13de2e50ac695a",
+          "d6f40e7d91761974",
+          "db0fe4bad0d8be84",
+          "dc10fce584f2cdf0",
+          "df155694b52c1870",
+          "df42e2244c97a0d8",
+          "e47416166871ea0a",
+          "e61f254a56c39ba8",
+          "ef3c0382214d4e05",
+          "ef7db75e56ef7972",
+          "f29c21d4897f7894",
+          "f4a331b7a22d1b23",
+          "f4be00279ee2e0a5",
+          "f8dc989f5ef8d43d",
+          "fa246d0262c39256"
+        ]
+      },
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "23310727",
+        "min": "20"
+      },
+      "null_count": 0,
+      "path": "bytes",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1056"
+        },
+        {
+          "count": 1,
+          "value": "11156"
+        },
+        {
+          "count": 1,
+          "value": "11396"
+        },
+        {
+          "count": 1,
+          "value": "12028"
+        },
+        {
+          "count": 1,
+          "value": "12324"
+        },
+        {
+          "count": 1,
+          "value": "128308"
+        },
+        {
+          "count": 1,
+          "value": "13271"
+        },
+        {
+          "count": 1,
+          "value": "1355"
+        },
+        {
+          "count": 1,
+          "value": "1363684"
+        },
+        {
+          "count": 1,
+          "value": "138265"
+        },
+        {
+          "count": 1,
+          "value": "1440"
+        },
+        {
+          "count": 1,
+          "value": "148415"
+        },
+        {
+          "count": 1,
+          "value": "149673"
+        },
+        {
+          "count": 1,
+          "value": "1535"
+        },
+        {
+          "count": 1,
+          "value": "1720"
+        },
+        {
+          "count": 1,
+          "value": "1743"
+        },
+        {
+          "count": 1,
+          "value": "1908"
+        },
+        {
+          "count": 1,
+          "value": "19471952"
+        },
+        {
+          "count": 1,
+          "value": "20"
+        },
+        {
+          "count": 1,
+          "value": "204"
+        },
+        {
+          "count": 1,
+          "value": "2122"
+        },
+        {
+          "count": 1,
+          "value": "217"
+        },
+        {
+          "count": 1,
+          "value": "224493"
+        },
+        {
+          "count": 1,
+          "value": "23310727"
+        },
+        {
+          "count": 1,
+          "value": "24416"
+        },
+        {
+          "count": 1,
+          "value": "266867"
+        },
+        {
+          "count": 1,
+          "value": "294"
+        },
+        {
+          "count": 1,
+          "value": "2979776"
+        },
+        {
+          "count": 1,
+          "value": "3064"
+        },
+        {
+          "count": 1,
+          "value": "31201"
+        },
+        {
+          "count": 1,
+          "value": "315391"
+        },
+        {
+          "count": 1,
+          "value": "326055"
+        },
+        {
+          "count": 1,
+          "value": "345941"
+        },
+        {
+          "count": 1,
+          "value": "34709"
+        },
+        {
+          "count": 1,
+          "value": "359608"
+        },
+        {
+          "count": 1,
+          "value": "3882"
+        },
+        {
+          "count": 1,
+          "value": "39563"
+        },
+        {
+          "count": 1,
+          "value": "404"
+        },
+        {
+          "count": 1,
+          "value": "4125"
+        },
+        {
+          "count": 1,
+          "value": "4140"
+        },
+        {
+          "count": 1,
+          "value": "4478768"
+        },
+        {
+          "count": 1,
+          "value": "476044"
+        },
+        {
+          "count": 1,
+          "value": "5073"
+        },
+        {
+          "count": 1,
+          "value": "5148"
+        },
+        {
+          "count": 1,
+          "value": "522"
+        },
+        {
+          "count": 1,
+          "value": "528"
+        },
+        {
+          "count": 1,
+          "value": "597781"
+        },
+        {
+          "count": 1,
+          "value": "613"
+        },
+        {
+          "count": 1,
+          "value": "69123"
+        },
+        {
+          "count": 1,
+          "value": "73339"
+        },
+        {
+          "count": 1,
+          "value": "752"
+        },
+        {
+          "count": 1,
+          "value": "77332"
+        },
+        {
+          "count": 1,
+          "value": "8097"
+        },
+        {
+          "count": 1,
+          "value": "83909"
+        },
+        {
+          "count": 1,
+          "value": "889"
+        },
+        {
+          "count": 1,
+          "value": "9999"
+        }
+      ],
+      "total_count": 56,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 2,
+        "min_len": 1
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 56,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 56,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "02e74f10e0327ad8",
+          "1679091c5a880faf",
+          "17e62166fc8586df",
+          "182be0c5cdcd5072",
+          "19ca14e7ea6328a4",
+          "1c383cd30b7c298a",
+          "1f0e3dad99908345",
+          "1ff1de774005f8da",
+          "2838023a778dfaec",
+          "33e75ff09dd601bb",
+          "3416a75f4cea9109",
+          "34173cb38f07f89d",
+          "37693cfc748049e4",
+          "3c59dc048e885024",
+          "45c48cce2e2d7fbd",
+          "4e732ced3463d06d",
+          "6364d3f0f495b6ab",
+          "642e92efb7942173",
+          "6512bd43d9caa6e0",
+          "67c6a1e7ce56d3d6",
+          "6c8349cc7260ae62",
+          "6ea9ab1baa0efb9e",
+          "6f4922f45568161a",
+          "70efdf2ec9b08607",
+          "8e296a067a375633",
+          "8f14e45fceea167a",
+          "98f13708210194c4",
+          "9a1158154dfa42ca",
+          "9bf31c7ff062936a",
+          "9f61408e3afb633e",
+          "a1d0c6e83f027327",
+          "a5771bce93e200c3",
+          "a5bfc9e07964f8dd",
+          "a684eceee76fc522",
+          "a87ff679a2f3e71d",
+          "aab3238922bcc25a",
+          "b53b3a3d6ab90ce0",
+          "b6d767d2f8ed5d21",
+          "c0c7c76d30bd3dca",
+          "c16a5320fa475530",
+          "c20ad4d76fe97759",
+          "c4ca4238a0b92382",
+          "c51ce410c124a10e",
+          "c74d97b01eae257e",
+          "c81e728d9d4c2f63",
+          "c9f0f895fb98ab91",
+          "d3d9446802a44259",
+          "d645920e395fedad",
+          "d67d8ab4f4c10bf2",
+          "d82c8d1619ad8176",
+          "d9d4f495e875a2e0",
+          "e369853df766fa44",
+          "e4da3b7fbbce2345",
+          "eccbc87e4b5ce2fe",
+          "f457c545a9ded88f",
+          "f7177163c833dff4"
+        ]
+      },
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "56",
+        "min": "1"
+      },
+      "null_count": 0,
+      "path": "id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1"
+        },
+        {
+          "count": 1,
+          "value": "10"
+        },
+        {
+          "count": 1,
+          "value": "11"
+        },
+        {
+          "count": 1,
+          "value": "12"
+        },
+        {
+          "count": 1,
+          "value": "13"
+        },
+        {
+          "count": 1,
+          "value": "14"
+        },
+        {
+          "count": 1,
+          "value": "15"
+        },
+        {
+          "count": 1,
+          "value": "16"
+        },
+        {
+          "count": 1,
+          "value": "17"
+        },
+        {
+          "count": 1,
+          "value": "18"
+        },
+        {
+          "count": 1,
+          "value": "19"
+        },
+        {
+          "count": 1,
+          "value": "2"
+        },
+        {
+          "count": 1,
+          "value": "20"
+        },
+        {
+          "count": 1,
+          "value": "21"
+        },
+        {
+          "count": 1,
+          "value": "22"
+        },
+        {
+          "count": 1,
+          "value": "23"
+        },
+        {
+          "count": 1,
+          "value": "24"
+        },
+        {
+          "count": 1,
+          "value": "25"
+        },
+        {
+          "count": 1,
+          "value": "26"
+        },
+        {
+          "count": 1,
+          "value": "27"
+        },
+        {
+          "count": 1,
+          "value": "28"
+        },
+        {
+          "count": 1,
+          "value": "29"
+        },
+        {
+          "count": 1,
+          "value": "3"
+        },
+        {
+          "count": 1,
+          "value": "30"
+        },
+        {
+          "count": 1,
+          "value": "31"
+        },
+        {
+          "count": 1,
+          "value": "32"
+        },
+        {
+          "count": 1,
+          "value": "33"
+        },
+        {
+          "count": 1,
+          "value": "34"
+        },
+        {
+          "count": 1,
+          "value": "35"
+        },
+        {
+          "count": 1,
+          "value": "36"
+        },
+        {
+          "count": 1,
+          "value": "37"
+        },
+        {
+          "count": 1,
+          "value": "38"
+        },
+        {
+          "count": 1,
+          "value": "39"
+        },
+        {
+          "count": 1,
+          "value": "4"
+        },
+        {
+          "count": 1,
+          "value": "40"
+        },
+        {
+          "count": 1,
+          "value": "41"
+        },
+        {
+          "count": 1,
+          "value": "42"
+        },
+        {
+          "count": 1,
+          "value": "43"
+        },
+        {
+          "count": 1,
+          "value": "44"
+        },
+        {
+          "count": 1,
+          "value": "45"
+        },
+        {
+          "count": 1,
+          "value": "46"
+        },
+        {
+          "count": 1,
+          "value": "47"
+        },
+        {
+          "count": 1,
+          "value": "48"
+        },
+        {
+          "count": 1,
+          "value": "49"
+        },
+        {
+          "count": 1,
+          "value": "5"
+        },
+        {
+          "count": 1,
+          "value": "50"
+        },
+        {
+          "count": 1,
+          "value": "51"
+        },
+        {
+          "count": 1,
+          "value": "52"
+        },
+        {
+          "count": 1,
+          "value": "53"
+        },
+        {
+          "count": 1,
+          "value": "54"
+        },
+        {
+          "count": 1,
+          "value": "55"
+        },
+        {
+          "count": 1,
+          "value": "56"
+        },
+        {
+          "count": 1,
+          "value": "6"
+        },
+        {
+          "count": 1,
+          "value": "7"
+        },
+        {
+          "count": 1,
+          "value": "8"
+        },
+        {
+          "count": 1,
+          "value": "9"
+        }
+      ],
+      "total_count": 56,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 17,
+        "min_len": 3
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 12,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 12,
+      "null_count": 0,
+      "path": "language",
+      "top_values": [
+        {
+          "count": 13,
+          "value": "TypeScript"
+        },
+        {
+          "count": 12,
+          "value": "JavaScript"
+        },
+        {
+          "count": 9,
+          "value": "CSS"
+        },
+        {
+          "count": 4,
+          "value": "Python"
+        },
+        {
+          "count": 4,
+          "value": "Shell"
+        },
+        {
+          "count": 4,
+          "value": "Vue"
+        },
+        {
+          "count": 3,
+          "value": "HTML"
+        },
+        {
+          "count": 2,
+          "value": "MDX"
+        },
+        {
+          "count": 2,
+          "value": "Svelte"
+        },
+        {
+          "count": 1,
+          "value": "Batchfile"
+        },
+        {
+          "count": 1,
+          "value": "Dockerfile"
+        },
+        {
+          "count": 1,
+          "value": "Open Policy Agent"
+        }
+      ],
+      "total_count": 56,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 25
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": 15,
+      "null_count": 0,
+      "path": "observed_at",
+      "top_values": [
+        {
+          "count": 11,
+          "value": "2026-09-10 10:28:20.497+00"
+        },
+        {
+          "count": 9,
+          "value": "2026-09-10 10:28:32.461+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:28:23.986+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:28:23.02+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:21.298+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:22.165+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:26.563+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:27.404+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:28.243+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:29.036+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:30.853+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:25.646+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:31.686+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:24.807+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:30.018+00"
+        }
+      ],
+      "total_count": 56,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 10,
+        "min_len": 9
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": 15,
+      "min_max": {
+        "max": "1274085842",
+        "min": "642917329"
+      },
+      "null_count": 0,
+      "path": "repository_id",
+      "top_values": [
+        {
+          "count": 11,
+          "value": "644461337"
+        },
+        {
+          "count": 9,
+          "value": "722184017"
+        },
+        {
+          "count": 5,
+          "value": "1163569028"
+        },
+        {
+          "count": 4,
+          "value": "1138349022"
+        },
+        {
+          "count": 3,
+          "value": "642917329"
+        },
+        {
+          "count": 3,
+          "value": "741829177"
+        },
+        {
+          "count": 3,
+          "value": "794140072"
+        },
+        {
+          "count": 3,
+          "value": "848693066"
+        },
+        {
+          "count": 3,
+          "value": "869760181"
+        },
+        {
+          "count": 3,
+          "value": "900901983"
+        },
+        {
+          "count": 3,
+          "value": "931560949"
+        },
+        {
+          "count": 2,
+          "value": "1135322438"
+        },
+        {
+          "count": 2,
+          "value": "1274085842"
+        },
+        {
+          "count": 1,
+          "value": "1128648949"
+        },
+        {
+          "count": 1,
+          "value": "739473584"
+        }
+      ],
+      "total_count": 56,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.repository_languages",
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "full-scan",
+      "sample_seed": 1,
+      "sampled_rows": 56,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

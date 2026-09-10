@@ -1,0 +1,74 @@
+{
+  "$schema": "./generated/world-overlay.schema.json",
+  "entities": {
+    "account": {
+      "fields": {
+        "bio": {
+          "description": "Nullable self-reported profile biography. NULL means no observed biography. A concept being absent from the bio is a condition on this text, independent from that concept being present in PR evidence. Combining absence from the bio with presence in work requires both conditions; one must not replace the other."
+        }
+      },
+      "source": "github.accounts"
+    },
+    "concept": {
+      "fields": {
+        "slug": {
+          "description": "Unique canonical identifier for a reviewed domain, capability or technology. Use stored slug values or their observed display labels to identify a concept. Scope phrases such as PR-level or repository-level describe concept_evidence.pull_request_id and are not part of a concept name."
+        }
+      },
+      "source": "github.concepts"
+    },
+    "conceptEvidence": {
+      "description": "Each row associates exactly one vocabulary concept with an excerpt from one repository or one specific pull request. Concept meaning requires concept_id joined to concept.id and a condition on concept.slug or concept.label. Scope, review status, extraction method and support level are independent conditions; none identifies the capability. A PR-scoped capability condition must constrain both the PR scope and the linked concept. Several rows can support the same concept for one source, so count distinct projects, PRs or people at the requested grain.",
+      "fields": {
+        "concept_id": {
+          "description": "Foreign key to concept.id. This identifies WHICH capability, technology or domain the evidence concerns. Join the concept table and constrain its slug or label whenever a capability is requested. Filtering only source scope or review_status does not filter the concept."
+        },
+        "pull_request_id": {
+          "description": "Optional foreign key to the exact pull request supplying this excerpt. Non-NULL means PR-level evidence; NULL means repository-level evidence. PR-level and repository-level are scope descriptions, never prefixes in a concept label. To find authors of a specific capability, constrain the linked concept as well as the PR author."
+        },
+        "repository_id": {
+          "description": "Foreign key to the repository containing this evidence. Always present for both repository-scoped and PR-scoped evidence. For authors contributing to a project with a concept, correlate authored pull requests and repository-scoped evidence through their shared repository identity. This does not establish that each contributor personally implemented the project capability."
+        },
+        "review_status": {
+          "description": "Evidence lifecycle state: accepted, pending, rejected or superseded. Current positive evidence requires accepted. Accepted alone neither identifies a capability nor proves explicit implementation; support_level separately distinguishes explicit dependencies from inferred mentions."
+        },
+        "support_level": {
+          "description": "Explicit support comes from exact declared package dependencies. Inferred support comes from source text or added patch-line mentions and model proposals; a mention alone does not prove implementation. This is distinct from review_status and from the concept identity."
+        }
+      },
+      "source": "github.concept_evidence"
+    },
+    "pullRequest": {
+      "fields": {
+        "repository_id": {
+          "description": "Foreign key identifying the one repository this PR belongs to. A person can author many PRs in one repository or across multiple repositories. Their number of contributed repositories counts distinct repository_id values across qualifying authored PR rows; multiple PRs in the same repository count once."
+        }
+      },
+      "source": "github.pull_requests"
+    }
+  },
+  "fieldDistinctions": {
+    "evidence-scope": {
+      "guidance": "Repository evidence has no PR identity. To find contributors to qualifying projects, correlate PRs and evidence through repository_id. Use pull_request_id only for evidence supplied by that exact PR. Keep concept and acceptance filters.",
+      "members": [
+        {
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "pull_request_id"
+          },
+          "role": "Only PR-specific evidence has this key. NULL means repository evidence and cannot match a PR-ID equality join."
+        },
+        {
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "repository_id"
+          },
+          "role": "Repository owning the evidence in either scope. Matches authored PRs through pullRequest.repository_id for project-level conditions."
+        }
+      ]
+    }
+  },
+  "format": 3,
+  "measures": {},
+  "relationships": {}
+}

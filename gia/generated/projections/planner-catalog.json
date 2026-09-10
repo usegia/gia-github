@@ -1,0 +1,2420 @@
+{
+  "collisionMapRef": {
+    "family": "collision-map",
+    "name": "world",
+    "sha": "22dc56d17d8e20e82e4c232454e1235e73ab770af0f4cf95d7ac8989a505c6ff"
+  },
+  "entities": {
+    "account": {
+      "description": "One row is an observed public GitHub account profile, including users, organizations, and bots.",
+      "fields": {
+        "account_type": {
+          "aka": [
+            "account class",
+            "account kind",
+            "account type",
+            "profile type"
+          ],
+          "conventionNote": "Use the Title-case GitHub category labels exactly.",
+          "long": "Classifies the public GitHub account profile as a user, bot, or organization. These are unordered account categories.",
+          "semanticKind": "text",
+          "short": "Kind of GitHub account profile: user, bot, or organization.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-legal",
+              "values": [
+                "Bot",
+                "Organization",
+                "User"
+              ]
+            },
+            "membership": "schema-closed"
+          }
+        },
+        "avatar_url": {
+          "aka": [
+            "avatar",
+            "avatar link",
+            "image URL",
+            "profile image",
+            "profile picture"
+          ],
+          "conventionNote": "Use the full case-sensitive HTTPS URL; GitHub App avatar paths include an /apps/ segment.",
+          "long": "Web address for the public image representing this GitHub account. The URL may identify an avatar service endpoint or a GitHub-hosted image path.",
+          "semanticKind": "text",
+          "short": "HTTPS URL of the account's public avatar image."
+        },
+        "bio": {
+          "aka": [
+            "about",
+            "biography",
+            "profile bio",
+            "profile description"
+          ],
+          "long": "Nullable self-reported profile biography. NULL means no observed biography. A concept being absent from the bio is a condition on this text, independent from that concept being present in PR evidence. Combining absence from the bio with presence in work requires both conditions; one must not replace the other.",
+          "semanticKind": "text",
+          "short": "Nullable self-reported profile biography. NULL means no observed biography. A concept b..."
+        },
+        "company_raw": {
+          "aka": [
+            "affiliation",
+            "company",
+            "employer",
+            "organization",
+            "workplace"
+          ],
+          "conventionNote": "Free text may retain an @-prefixed handle and can contain multiple affiliations separated by \" . \".",
+          "long": "Free-text company or organization affiliation supplied on the public profile. It is not proof of employment or organization membership. A null likely means no company text was supplied or captured.",
+          "semanticKind": "text",
+          "short": "Self-reported company or organization text from the public profile."
+        },
+        "followers_count": {
+          "aka": [
+            "follower total",
+            "followers",
+            "GitHub followers"
+          ],
+          "long": "Follower count observed when the complete public profile was fetched. A null indicates that the profile was not fetched, rather than that it has zero followers.",
+          "semanticKind": "number",
+          "short": "Observed number of followers on the public GitHub profile."
+        },
+        "id": {
+          "aka": [
+            "account ID",
+            "GitHub account ID",
+            "GitHub user ID",
+            "profile ID"
+          ],
+          "long": "Stable numeric identifier of the public GitHub account profile. Use it as an identifier for lookup and joins, not as a quantity.",
+          "semanticKind": "number",
+          "short": "Numeric GitHub account identifier for this profile."
+        },
+        "location_city": {
+          "aka": [
+            "city",
+            "location city",
+            "profile city"
+          ],
+          "long": "City component derived from the account's self-reported profile location. A null likely means no city was extracted.",
+          "semanticKind": "text",
+          "short": "Normalized city extracted from the account's profile location."
+        },
+        "location_country": {
+          "aka": [
+            "country",
+            "location country",
+            "profile country"
+          ],
+          "long": "Country component derived from the account's self-reported profile location. A null likely means no country was extracted.",
+          "semanticKind": "text",
+          "short": "Normalized country extracted from the account's profile location."
+        },
+        "location_normalization": {
+          "aka": [
+            "geocoding provenance",
+            "location enrichment",
+            "location normalization version",
+            "normalization rule"
+          ],
+          "long": "Versioned rule or enrichment provenance for the normalized location fields, while retaining the original location text separately. A null likely means the location was not normalized.",
+          "semanticKind": "text",
+          "short": "Versioned provenance for location normalization."
+        },
+        "location_raw": {
+          "aka": [
+            "declared location",
+            "location",
+            "profile location",
+            "raw location"
+          ],
+          "conventionNote": "Free text may be a place name, abbreviation, or comma-separated locality and region/country text.",
+          "long": "Unverified location text supplied on the public GitHub profile. It does not establish residence, nationality, timezone, or availability. A null likely means no location text was supplied or captured.",
+          "semanticKind": "text",
+          "short": "Self-reported free-text location on the public profile."
+        },
+        "login": {
+          "aka": [
+            "account handle",
+            "GitHub username",
+            "handle",
+            "login name",
+            "username"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "1st1"
+              },
+              {
+                "class": "raw-values",
+                "literal": "aayush-kapoor"
+              },
+              {
+                "class": "raw-values",
+                "literal": "abhiswami2121"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ai-sdk-factory[bot]"
+              },
+              {
+                "class": "raw-values",
+                "literal": "aisk"
+              },
+              {
+                "class": "raw-values",
+                "literal": "alex-grover"
+              },
+              {
+                "class": "raw-values",
+                "literal": "anatrajkovska"
+              },
+              {
+                "class": "raw-values",
+                "literal": "apricot626"
+              },
+              {
+                "class": "raw-values",
+                "literal": "assistant-ui"
+              },
+              {
+                "class": "raw-values",
+                "literal": "atinux"
+              },
+              {
+                "class": "raw-values",
+                "literal": "benjamincanac"
+              },
+              {
+                "class": "raw-values",
+                "literal": "benpankow"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bensabic"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bgw"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bjornmelin"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bobmshannon"
+              },
+              {
+                "class": "raw-values",
+                "literal": "brandon168"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bseymour"
+              },
+              {
+                "class": "raw-values",
+                "literal": "burak-upstash"
+              },
+              {
+                "class": "raw-values",
+                "literal": "calebboyd"
+              },
+              {
+                "class": "raw-values",
+                "literal": "christopherkindl"
+              },
+              {
+                "class": "raw-values",
+                "literal": "chriswdmr"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cosbertgames"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cramforce"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cswprogrammer"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ctate"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cubic-dev-ai[bot]"
+              },
+              {
+                "class": "raw-values",
+                "literal": "daviddragan377"
+              },
+              {
+                "class": "raw-values",
+                "literal": "devjiwonchoi"
+              },
+              {
+                "class": "raw-values",
+                "literal": "diedemiguel"
+              },
+              {
+                "class": "raw-values",
+                "literal": "dominiksipowicz"
+              },
+              {
+                "class": "raw-values",
+                "literal": "dvoytenko"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ecklf"
+              },
+              {
+                "class": "raw-values",
+                "literal": "efedurmaz16"
+              },
+              {
+                "class": "raw-values",
+                "literal": "emeraldsanto"
+              },
+              {
+                "class": "raw-values",
+                "literal": "enesakar"
+              },
+              {
+                "class": "raw-values",
+                "literal": "enesgules"
+              },
+              {
+                "class": "raw-values",
+                "literal": "eps1lon"
+              },
+              {
+                "class": "raw-values",
+                "literal": "erayeroglu"
+              },
+              {
+                "class": "raw-values",
+                "literal": "eraykeskinmac"
+              },
+              {
+                "class": "raw-values",
+                "literal": "evilrabbit"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fahreddinozcan"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fanethedivine"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fantix"
+              },
+              {
+                "class": "raw-values",
+                "literal": "feugy"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ghost"
+              },
+              {
+                "class": "raw-values",
+                "literal": "goldylocks-ai"
+              },
+              {
+                "class": "raw-values",
+                "literal": "gr2m"
+              },
+              {
+                "class": "raw-values",
+                "literal": "healeycodes"
+              },
+              {
+                "class": "raw-values",
+                "literal": "jeremyphilemon"
+              },
+              {
+                "class": "raw-values",
+                "literal": "jonathanhefner"
+              },
+              {
+                "class": "raw-values",
+                "literal": "lukahartwig"
+              },
+              {
+                "class": "raw-values",
+                "literal": "mdumandag"
+              },
+              {
+                "class": "raw-values",
+                "literal": "padmaia"
+              },
+              {
+                "class": "raw-values",
+                "literal": "railly"
+              },
+              {
+                "class": "raw-values",
+                "literal": "renovate[bot]"
+              },
+              {
+                "class": "raw-values",
+                "literal": "upstash"
+              },
+              {
+                "class": "raw-values",
+                "literal": "wits"
+              }
+            ]
+          },
+          "conventionNote": "Match the handle literally, including hyphens, digits, capitalization, and any [bot] suffix.",
+          "long": "Public GitHub login handle identifying the account in GitHub URLs and account references. It is a name-like identifier, not a person's display name.",
+          "semanticKind": "text",
+          "short": "GitHub account login handle."
+        },
+        "name": {
+          "aka": [
+            "display name",
+            "full name",
+            "profile name",
+            "public name"
+          ],
+          "long": "Display name shown on the public GitHub profile. It may be a personal name, a single-name label, or another profile-provided name; a null likely means no display name was supplied or captured.",
+          "semanticKind": "text",
+          "short": "Public display name from the GitHub account profile."
+        },
+        "node_id": {
+          "aka": [
+            "GitHub node ID",
+            "global ID",
+            "GraphQL node ID",
+            "node ID"
+          ],
+          "conventionNote": "Treat as a case-sensitive opaque token; preserve underscores, hyphens, and any trailing \"=\" padding.",
+          "long": "Opaque platform node identifier for this GitHub account, suitable for identifier-based lookup or joins. It is not a human-readable name or a numeric measure.",
+          "semanticKind": "text",
+          "short": "Opaque GitHub node identifier for the account."
+        },
+        "observed_at": {
+          "aka": [
+            "capture time",
+            "observation time",
+            "observed time",
+            "recorded at"
+          ],
+          "conventionNote": "Written as YYYY-MM-DD HH:MM:SS.fraction+00; +00 denotes UTC and fractional-second precision varies.",
+          "long": "Timestamp recording when this account profile observation was captured. The explicit +00 offset denotes UTC, with fractional seconds retained.",
+          "semanticKind": "date",
+          "short": "UTC timestamp when this account observation was recorded.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "profile_fetched_at": {
+          "aka": [
+            "fetch timestamp",
+            "fetched at",
+            "profile fetch time",
+            "profile retrieval time"
+          ],
+          "conventionNote": "Written as YYYY-MM-DD HH:MM:SS.fraction+00; +00 denotes UTC and fractional-second precision varies.",
+          "long": "Timestamp when a complete public GitHub profile was fetched. A null indicates a sparse identity observation rather than a complete profile fetch. The explicit +00 offset denotes UTC.",
+          "semanticKind": "date",
+          "short": "UTC timestamp when the complete public profile was fetched.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "profile_url": {
+          "aka": [
+            "account URL",
+            "GitHub profile",
+            "GitHub URL",
+            "profile link",
+            "profile page"
+          ],
+          "conventionNote": "Use the full case-sensitive HTTPS URL; GitHub App profiles include an /apps/ path segment.",
+          "long": "HTTPS address of the account's public GitHub profile. App profiles use a GitHub path that includes an apps segment.",
+          "semanticKind": "text",
+          "short": "Canonical public GitHub profile URL for the account."
+        },
+        "public_repos_count": {
+          "aka": [
+            "GitHub repos",
+            "public repo count",
+            "public repositories",
+            "repository count"
+          ],
+          "long": "Number of public repositories reported when the complete public profile was fetched. A null likely means the complete profile was not fetched, not that the account has no public repositories.",
+          "semanticKind": "number",
+          "short": "Observed count of public repositories on the GitHub profile."
+        },
+        "search_text": {
+          "aka": [
+            "BM25 text",
+            "full-text search",
+            "profile index text",
+            "profile search text",
+            "search document"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "1st1"
+              },
+              {
+                "class": "raw-values",
+                "literal": "aayush-kapoor"
+              },
+              {
+                "class": "raw-values",
+                "literal": "abhiswami2121"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ai-sdk-factory[bot]"
+              },
+              {
+                "class": "raw-values",
+                "literal": "aisk"
+              },
+              {
+                "class": "raw-values",
+                "literal": "alex-grover"
+              },
+              {
+                "class": "raw-values",
+                "literal": "anatrajkovska"
+              },
+              {
+                "class": "raw-values",
+                "literal": "apricot626"
+              },
+              {
+                "class": "raw-values",
+                "literal": "assistant-ui"
+              },
+              {
+                "class": "raw-values",
+                "literal": "atinux"
+              },
+              {
+                "class": "raw-values",
+                "literal": "benjamincanac"
+              },
+              {
+                "class": "raw-values",
+                "literal": "benpankow"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bensabic"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bgw"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bjornmelin"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bobmshannon"
+              },
+              {
+                "class": "raw-values",
+                "literal": "brandon168"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bseymour"
+              },
+              {
+                "class": "raw-values",
+                "literal": "burak-upstash"
+              },
+              {
+                "class": "raw-values",
+                "literal": "calebboyd"
+              },
+              {
+                "class": "raw-values",
+                "literal": "christopherkindl"
+              },
+              {
+                "class": "raw-values",
+                "literal": "chriswdmr"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cosbertgames"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cramforce"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cswprogrammer"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ctate"
+              },
+              {
+                "class": "raw-values",
+                "literal": "cubic-dev-ai[bot]"
+              },
+              {
+                "class": "raw-values",
+                "literal": "daviddragan377"
+              },
+              {
+                "class": "raw-values",
+                "literal": "devjiwonchoi"
+              },
+              {
+                "class": "raw-values",
+                "literal": "diedemiguel"
+              },
+              {
+                "class": "raw-values",
+                "literal": "dominiksipowicz"
+              },
+              {
+                "class": "raw-values",
+                "literal": "dvoytenko"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ecklf"
+              },
+              {
+                "class": "raw-values",
+                "literal": "efedurmaz16"
+              },
+              {
+                "class": "raw-values",
+                "literal": "emeraldsanto"
+              },
+              {
+                "class": "raw-values",
+                "literal": "enesakar"
+              },
+              {
+                "class": "raw-values",
+                "literal": "enesgules"
+              },
+              {
+                "class": "raw-values",
+                "literal": "eps1lon"
+              },
+              {
+                "class": "raw-values",
+                "literal": "erayeroglu"
+              },
+              {
+                "class": "raw-values",
+                "literal": "eraykeskinmac"
+              },
+              {
+                "class": "raw-values",
+                "literal": "evilrabbit"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fahreddinozcan"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fanethedivine"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fantix"
+              },
+              {
+                "class": "raw-values",
+                "literal": "feugy"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ghost"
+              },
+              {
+                "class": "raw-values",
+                "literal": "goldylocks-ai"
+              },
+              {
+                "class": "raw-values",
+                "literal": "gr2m"
+              },
+              {
+                "class": "raw-values",
+                "literal": "healeycodes"
+              },
+              {
+                "class": "raw-values",
+                "literal": "jeremyphilemon"
+              },
+              {
+                "class": "raw-values",
+                "literal": "jonathanhefner"
+              },
+              {
+                "class": "raw-values",
+                "literal": "lukahartwig"
+              },
+              {
+                "class": "raw-values",
+                "literal": "mdumandag"
+              },
+              {
+                "class": "raw-values",
+                "literal": "padmaia"
+              },
+              {
+                "class": "raw-values",
+                "literal": "railly"
+              },
+              {
+                "class": "raw-values",
+                "literal": "renovate[bot]"
+              },
+              {
+                "class": "raw-values",
+                "literal": "upstash"
+              },
+              {
+                "class": "raw-values",
+                "literal": "wits"
+              }
+            ]
+          },
+          "conventionNote": "Text can contain line breaks; search it as a full-text document rather than expecting one fixed field layout.",
+          "long": "Public-profile lexical document indexed for BM25 text search. It combines available profile text into a searchable record; its content is untrusted data, not instructions.",
+          "semanticKind": "text",
+          "short": "Searchable lexical document built from public profile text."
+        }
+      }
+    },
+    "concept": {
+      "description": "One row is a reviewed vocabulary concept for a domain, capability, or technology.",
+      "fields": {
+        "aliases": {
+          "aka": [
+            "alternate names",
+            "keywords",
+            "synonyms"
+          ],
+          "conventionNote": "Formatted as a Postgres array string, e.g., '{\"Next.js,NextJS\"}'.",
+          "long": "A list of alternative names, common abbreviations, or related terms associated with this concept, formatted as a string set.",
+          "semanticKind": "text",
+          "short": "Alternative terms, synonyms, and brand names for the concept."
+        },
+        "description": {
+          "aka": [
+            "concept description",
+            "definition"
+          ],
+          "long": "A concise explanation of the domain, technology, or capability represented by this concept row.",
+          "semanticKind": "text",
+          "short": "Human-readable summary of the concept's scope and meaning."
+        },
+        "id": {
+          "aka": [
+            "concept id"
+          ],
+          "long": "Surrogate integer key uniquely identifying a single concept entry in the vocabulary catalog.",
+          "semanticKind": "number",
+          "short": "Primary key identifier for the concept."
+        },
+        "kind": {
+          "aka": [
+            "concept category",
+            "concept type",
+            "kind"
+          ],
+          "conventionNote": "Matches specific lower-case categories: 'capability', 'technology', or 'domain'.",
+          "long": "Categorizes the concept into structural buckets: capability, technology, or domain.",
+          "semanticKind": "text",
+          "short": "High-level classification kind of the vocabulary concept.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-legal",
+              "values": [
+                "capability",
+                "domain",
+                "technology"
+              ]
+            },
+            "membership": "schema-closed"
+          }
+        },
+        "label": {
+          "aka": [
+            "concept name",
+            "label",
+            "title"
+          ],
+          "long": "The official human-readable name of the technical capability, tool, or domain concept.",
+          "semanticKind": "string",
+          "short": "Canonical title or name of the concept.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-at-snapshot",
+              "values": [
+                "AI",
+                "AI agents",
+                "Embeddings",
+                "Hybrid search",
+                "LangGraph",
+                "Model Context Protocol",
+                "Next.js",
+                "OpenAI",
+                "PostgreSQL",
+                "Redis",
+                "Reranking",
+                "Retrieval",
+                "Retrieval-augmented generation",
+                "Semantic search",
+                "Tool calling",
+                "Vercel AI SDK"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "slug": {
+          "aka": [
+            "concept key",
+            "identifier slug",
+            "slug"
+          ],
+          "conventionNote": "Written in lower-case using hyphenated words or prefixed package keys like 'npm:ai'.",
+          "long": "Unique canonical identifier for a reviewed domain, capability or technology. Use stored slug values or their observed display labels to identify a concept. Scope phrases such as PR-level or repository-level describe concept_evidence.pull_request_id and are not part of a concept name.",
+          "semanticKind": "string",
+          "short": "Unique canonical identifier for a reviewed domain, capability or technology. Use stored...",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-at-snapshot",
+              "values": [
+                "agents",
+                "ai",
+                "embeddings",
+                "hybrid-search",
+                "langgraph",
+                "mcp",
+                "nextjs",
+                "npm:ai",
+                "openai",
+                "postgresql",
+                "rag",
+                "redis",
+                "reranking",
+                "retrieval",
+                "semantic-search",
+                "tool-calling"
+              ]
+            },
+            "membership": "open-world"
+          }
+        }
+      }
+    },
+    "conceptEvidence": {
+      "description": "Each row associates exactly one vocabulary concept with an excerpt from one repository or one specific pull request. Concept meaning requires concept_id joined to concept.id and a condition on concept.slug or concept.label. Scope, review status, extraction method and support level are independent conditions; none identifies the capability. A PR-scoped capability condition must constrain both the PR scope and the linked concept. Several rows can support the same concept for one source, so count distinct projects, PRs or people at the requested grain.",
+      "fields": {
+        "concept_id": {
+          "aka": [
+            "concept id",
+            "concept key"
+          ],
+          "long": "Foreign key to concept.id. This identifies WHICH capability, technology or domain the evidence concerns. Join the concept table and constrain its slug or label whenever a capability is requested. Filtering only source scope or review_status does not filter the concept.",
+          "semanticKind": "number",
+          "short": "Foreign key to concept.id. This identifies WHICH capability, technology or domain the e...",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-at-snapshot",
+              "values": [
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "excerpt": {
+          "aka": [
+            "code snippet",
+            "evidence text",
+            "excerpt",
+            "text snippet"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "ai sdk 7 migrated to ai sdk 7, mostly just using the migrate skill."
+              },
+              {
+                "class": "raw-values",
+                "literal": "ai sdk v6 compatible api previously built for ai sdk v4, but incompatible with v5 and v6 because of `parameters` instead of `inputschema`"
+              }
+            ]
+          },
+          "long": "The exact verbatim text snippet or documentation excerpt extracted from a repository or pull request. Serves as ground truth supporting the concept association. Must join concept_id to concept.id to interpret meaning.",
+          "semanticKind": "text",
+          "short": "Source text excerpt providing evidence for a concept."
+        },
+        "extractor_version": {
+          "aka": [
+            "extractor version",
+            "parser version"
+          ],
+          "conventionNote": "Virtually always 'github-concepts-v1'.",
+          "long": "Identifies the specific extractor logic or rule set version used to identify and extract this concept evidence.",
+          "semanticKind": "text",
+          "short": "Extractor software version used to capture the evidence."
+        },
+        "id": {
+          "aka": [
+            "concept evidence key",
+            "evidence id"
+          ],
+          "conventionNote": "64-character hex string.",
+          "long": "Unique SHA-256 hash identifying a specific concept evidence record.",
+          "semanticKind": "text",
+          "short": "Unique primary key for the concept evidence record."
+        },
+        "method": {
+          "aka": [
+            "discovery method",
+            "extraction method",
+            "method"
+          ],
+          "conventionNote": "Virtually always 'deterministic'.",
+          "long": "The method used to discover and extract the concept evidence from the source material.",
+          "semanticKind": "text",
+          "short": "Extraction technique or classification method name.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-legal",
+              "values": [
+                "deterministic",
+                "llm"
+              ]
+            },
+            "membership": "schema-closed"
+          }
+        },
+        "observed_at": {
+          "aka": [
+            "captured at",
+            "extraction timestamp",
+            "observed time"
+          ],
+          "long": "The date and time when the concept evidence was extracted from the source material.",
+          "semanticKind": "date",
+          "short": "Timestamp when this evidence was observed or extracted.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "pull_request_id": {
+          "aka": [
+            "pr id",
+            "pull request key"
+          ],
+          "long": "Optional foreign key to the exact pull request supplying this excerpt. Non-NULL means PR-level evidence; NULL means repository-level evidence. PR-level and repository-level are scope descriptions, never prefixes in a concept label. To find authors of a specific capability, constrain the linked concept as well as the PR author.",
+          "semanticKind": "number",
+          "short": "Optional foreign key to the exact pull request supplying this excerpt. Non-NULL means P..."
+        },
+        "repository_id": {
+          "aka": [
+            "repo id",
+            "repository reference"
+          ],
+          "long": "Foreign key to the repository containing this evidence. Always present for both repository-scoped and PR-scoped evidence. For authors contributing to a project with a concept, correlate authored pull requests and repository-scoped evidence through their shared repository identity. This does not establish that each contributor personally implemented the project capability.",
+          "semanticKind": "number",
+          "short": "Foreign key to the repository containing this evidence. Always present for both reposit..."
+        },
+        "review_status": {
+          "aka": [
+            "approval status",
+            "review status"
+          ],
+          "conventionNote": "Literally written as 'accepted'.",
+          "long": "Evidence lifecycle state: accepted, pending, rejected or superseded. Current positive evidence requires accepted. Accepted alone neither identifies a capability nor proves explicit implementation; support_level separately distinguishes explicit dependencies from inferred mentions.",
+          "semanticKind": "text",
+          "short": "Evidence lifecycle state: accepted, pending, rejected or superseded. Current positive e...",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-legal",
+              "values": [
+                "accepted",
+                "pending",
+                "rejected",
+                "superseded"
+              ]
+            },
+            "membership": "schema-closed"
+          }
+        },
+        "source_kind": {
+          "aka": [
+            "document type",
+            "evidence origin",
+            "source kind",
+            "source type"
+          ],
+          "conventionNote": "Matches specific stored categories such as 'pull_request', 'readme', 'manifest', or 'topic'.",
+          "long": "The structural origin type of the evidence snippet, indicating whether it came from a pull request, README file, manifest, or topic metadata.",
+          "semanticKind": "text",
+          "short": "Category of the source document containing the excerpt.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "glosses": [
+              {
+                "gloss": "Pull request",
+                "value": "pull_request"
+              }
+            ],
+            "inventory": {
+              "kind": "complete-legal",
+              "values": [
+                "manifest",
+                "pull_request",
+                "readme",
+                "topic"
+              ]
+            },
+            "membership": "schema-closed"
+          }
+        },
+        "source_revision": {
+          "aka": [
+            "blob hash",
+            "commit sha",
+            "revision id"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "03387a0badc15f211222f1dc5c4cacc2043ed0e6"
+              }
+            ]
+          },
+          "conventionNote": "Written as a single 40-character commit hash or two colon-separated hashes.",
+          "long": "The exact source control version, blob hash, or commit identifier corresponding to the state of the file or pull request when the evidence was sampled.",
+          "semanticKind": "text",
+          "short": "Commit hash, blob identifier, or version tag of the source."
+        },
+        "source_url": {
+          "aka": [
+            "file url",
+            "github url",
+            "source link"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7063"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7115"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7119"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7127"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7128"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7129"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7150"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/11"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/16"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/18"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/30"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/4"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/rag-chat-component/pull/1"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/vercel-labs/ai-python/pull/225"
+              }
+            ]
+          },
+          "long": "The full HTTP URL pointing directly to the web location of the source document, file, or pull request excerpt on GitHub.",
+          "semanticKind": "text",
+          "short": "Web URL pointing directly to the source file or pull request."
+        },
+        "support_level": {
+          "aka": [
+            "evidence strength",
+            "support level"
+          ],
+          "conventionNote": "Values are lower_case strings, specifically 'explicit' or 'inferred'.",
+          "long": "Explicit support comes from exact declared package dependencies. Inferred support comes from source text or added patch-line mentions and model proposals; a mention alone does not prove implementation. This is distinct from review_status and from the concept identity.",
+          "semanticKind": "text",
+          "short": "Explicit support comes from exact declared package dependencies. Inferred support comes...",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-legal",
+              "values": [
+                "explicit",
+                "inferred"
+              ]
+            },
+            "membership": "schema-closed"
+          }
+        }
+      },
+      "relationships": {
+        "conceptEvidence_conceptId_concept": {
+          "cardinality": "one",
+          "coverage": 1000,
+          "description": "Concept evidence referencing Concepts.",
+          "fanOut": 18,
+          "to": "concept"
+        },
+        "conceptEvidence_pullRequestId_repositoryId_pullRequest": {
+          "cardinality": "one",
+          "description": "Concept evidence referencing Pull requests.",
+          "to": "pullRequest"
+        },
+        "conceptEvidence_repositoryId_repository": {
+          "cardinality": "one",
+          "coverage": 1000,
+          "description": "Concept evidence referencing Repositories.",
+          "fanOut": 19,
+          "to": "repository"
+        }
+      }
+    },
+    "publicMembership": {
+      "description": "One row is an observed public GitHub user's membership in a GitHub organization.",
+      "fields": {
+        "currently_public": {
+          "aka": [
+            "is public",
+            "public status"
+          ],
+          "conventionNote": "Boolean stored as lower-case string 'true'.",
+          "long": "Boolean flag indicating whether the user's membership in the GitHub organization is currently public.",
+          "semanticKind": "boolean",
+          "short": "Flag indicating if the user's org membership is public."
+        },
+        "first_seen_at": {
+          "aka": [
+            "first detected",
+            "membership created at"
+          ],
+          "long": "The initial date and time when the user was recorded as a public member of the organization.",
+          "semanticKind": "date",
+          "short": "Timestamp when this public membership was first observed.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "id": {
+          "aka": [
+            "membership id"
+          ],
+          "long": "Unique numeric identifier for the public organization membership association record.",
+          "semanticKind": "number",
+          "short": "Primary key identifier for the public membership record."
+        },
+        "last_checked_at": {
+          "aka": [
+            "check timestamp",
+            "last audited"
+          ],
+          "long": "The most recent date and time the organization public membership list was queried or verified.",
+          "semanticKind": "date",
+          "short": "Timestamp when public status was last checked.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "last_seen_at": {
+          "aka": [
+            "active seen timestamp",
+            "last verified"
+          ],
+          "long": "The date and time when the user was last seen active as a public member of the organization.",
+          "semanticKind": "date",
+          "short": "Timestamp when public membership was most recently confirmed.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "organization_id": {
+          "aka": [
+            "org id",
+            "organization account id",
+            "organization id"
+          ],
+          "long": "Numeric ID identifying the GitHub organization account associated with this public membership record.",
+          "semanticKind": "number",
+          "short": "Foreign key reference to the GitHub organization account.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-at-snapshot",
+              "values": [
+                "108547162",
+                "14985020",
+                "189563271"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "person_id": {
+          "aka": [
+            "account id",
+            "member id",
+            "person id",
+            "user id"
+          ],
+          "long": "Numeric ID identifying the individual user account associated with this public membership record.",
+          "semanticKind": "number",
+          "short": "Foreign key reference to the GitHub user account.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-at-snapshot",
+              "values": [
+                "11356668",
+                "11495867",
+                "115853816",
+                "1162991",
+                "120007119",
+                "12292047",
+                "123822",
+                "13041",
+                "1365881",
+                "13698226",
+                "1387913",
+                "1394504",
+                "13947",
+                "1440854",
+                "1508008",
+                "1570963",
+                "1634922",
+                "1751601",
+                "17536387",
+                "180404",
+                "186268",
+                "200112",
+                "2020473",
+                "20425781",
+                "21013447",
+                "22380829",
+                "22559461",
+                "229881",
+                "23662329",
+                "239003",
+                "2865858",
+                "28912696",
+                "2933988",
+                "29887157",
+                "3088615",
+                "318866",
+                "33291795",
+                "34559231",
+                "35507539",
+                "3676859",
+                "40034115",
+                "41523937",
+                "4172067",
+                "4278345",
+                "43268759",
+                "4586894",
+                "4658208",
+                "490265",
+                "51397083",
+                "52761222",
+                "53372002",
+                "55700336",
+                "56037657",
+                "58091943",
+                "5818726",
+                "5983714",
+                "6616955",
+                "664177",
+                "6849494",
+                "6880091",
+                "688617",
+                "70239736",
+                "71256",
+                "71938701",
+                "7249920",
+                "726049",
+                "739984",
+                "7414521",
+                "755844",
+                "771968",
+                "8146736",
+                "83733486",
+                "8440026",
+                "8722047",
+                "904724",
+                "923787"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "source_url": {
+          "aka": [
+            "api source url",
+            "endpoint url"
+          ],
+          "conventionNote": "Written as a full GitHub API URL, e.g. 'https://api.github.com/orgs/vercel/public_members?per_page=100&page=1'.",
+          "long": "The specific GitHub REST API endpoint URL used during data collection to enumerate public members for the organization.",
+          "semanticKind": "text",
+          "short": "GitHub API URL used to fetch public members."
+        }
+      },
+      "relationships": {
+        "publicMembership_organizationId_account": {
+          "cardinality": "one",
+          "coverage": 1000,
+          "description": "Public memberships referencing Accounts.",
+          "fanOut": 26,
+          "to": "account"
+        },
+        "publicMembership_personId_account": {
+          "cardinality": "one",
+          "coverage": 1000,
+          "description": "Public memberships referencing Accounts.",
+          "fanOut": 1,
+          "to": "account"
+        }
+      }
+    },
+    "pullRequest": {
+      "description": "One row is an observed GitHub pull request and its author, repository, status, and timestamps.",
+      "fields": {
+        "author_id": {
+          "aka": [
+            "author account ID",
+            "author id",
+            "PR author",
+            "pull request author"
+          ],
+          "long": "Reference to the GitHub account recorded as the pull request author. A null likely means the author account is deleted or unavailable; person-specific questions should restrict the joined account to user accounts.",
+          "semanticKind": "number",
+          "short": "Account that authored the pull request.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-at-snapshot",
+              "values": [
+                "100838962",
+                "101020733",
+                "101308415",
+                "10137",
+                "10215173",
+                "102487158",
+                "103972661",
+                "113418245",
+                "113545860",
+                "1143629",
+                "114422072",
+                "115853816",
+                "123822",
+                "141594291",
+                "141974463",
+                "146335736",
+                "150553445",
+                "159464953",
+                "1690830",
+                "17938322",
+                "1797812",
+                "18082091",
+                "189638926",
+                "194825742",
+                "205036",
+                "21091016",
+                "213546777",
+                "22665058",
+                "230457447",
+                "234086",
+                "24557773",
+                "252243939",
+                "26034768",
+                "263799550",
+                "26875009",
+                "273931657",
+                "274821851",
+                "275051718",
+                "27636870",
+                "291087047",
+                "29139614",
+                "29387993",
+                "305873210",
+                "313023939",
+                "32676955",
+                "340349",
+                "35613825",
+                "366502",
+                "39992",
+                "4060187",
+                "4142719",
+                "41898282",
+                "4389565",
+                "47982397",
+                "48079573",
+                "48212803",
+                "49612682",
+                "55143799",
+                "57228345",
+                "58091943",
+                "63066081",
+                "65047246",
+                "66008528",
+                "699636",
+                "71938701",
+                "75971010",
+                "83492835",
+                "88107904",
+                "89679",
+                "93538980",
+                "947949"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "body_text": {
+          "aka": [
+            "description",
+            "PR body",
+            "pull request description"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "hashed",
+                "literal": "85b83e634d5518da2d4a75efe826faf021c0f0867763a7d40c487c98bc3b168d"
+              }
+            ]
+          },
+          "conventionNote": "Text may contain Markdown, code blocks, URLs, and templates; search as free text rather than expecting plain prose.",
+          "long": "The pull request body, containing its author-provided description and potentially Markdown, links, templates, or generated text. A null likely means no pull request description is available.",
+          "semanticKind": "text",
+          "short": "Free-form description text attached to the pull request."
+        },
+        "created_at": {
+          "aka": [
+            "opened at",
+            "PR creation time",
+            "pull request date"
+          ],
+          "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+          "long": "Timestamp marking creation of the pull request. The displayed +00 offset establishes UTC.",
+          "semanticKind": "date",
+          "short": "Timestamp when the pull request was created.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "head_sha": {
+          "aka": [
+            "head commit",
+            "head SHA",
+            "latest commit SHA",
+            "source commit"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "03387a0badc15f211222f1dc5c4cacc2043ed0e6"
+              }
+            ]
+          },
+          "conventionNote": "Use the lowercase 40-character hexadecimal SHA literal; it is not a shortened commit hash.",
+          "long": "Full Git object ID of the commit at the pull request head when observed. It identifies source revision content; the pull request body and title can change independently of this SHA.",
+          "semanticKind": "text",
+          "short": "Git commit SHA at the pull request head."
+        },
+        "id": {
+          "aka": [
+            "GitHub pull request ID",
+            "PR ID",
+            "pull request ID"
+          ],
+          "long": "Platform-level identifier for this pull request record. Use it to identify or join the pull request, not for arithmetic.",
+          "semanticKind": "number",
+          "short": "Unique GitHub identifier for the pull request."
+        },
+        "merged_at": {
+          "aka": [
+            "merge time",
+            "merged at",
+            "merged date"
+          ],
+          "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+          "long": "Timestamp marking when the pull request was merged. A null likely means the pull request was closed without a recorded merge. The displayed +00 offset establishes UTC.",
+          "semanticKind": "date",
+          "short": "Timestamp when the pull request was merged.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "node_id": {
+          "aka": [
+            "global pull request ID",
+            "GraphQL node ID",
+            "node ID"
+          ],
+          "conventionNote": "Use the opaque case-sensitive `PR_`-prefixed token exactly as stored.",
+          "long": "Opaque GitHub node ID for this pull request, suitable for GraphQL-style identity and lookup. It is not the human-facing pull request number or a numeric quantity.",
+          "semanticKind": "text",
+          "short": "GitHub GraphQL node identifier for the pull request."
+        },
+        "number": {
+          "aka": [
+            "issue number",
+            "PR number",
+            "pull request number"
+          ],
+          "long": "The pull request's human-facing sequence number within its repository. It identifies a pull request only in combination with its repository, not across all GitHub repositories.",
+          "semanticKind": "number",
+          "short": "Repository-local pull request number."
+        },
+        "observed_at": {
+          "aka": [
+            "observation time",
+            "record observed time",
+            "snapshot time"
+          ],
+          "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS.fraction+00`; include the numeric offset when using an exact literal.",
+          "long": "Timestamp recording when the pull request was observed in this dataset, rather than when it was created, updated, or merged. The displayed +00 offset establishes UTC.",
+          "semanticKind": "date",
+          "short": "Timestamp when this pull request record was observed.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "pull_request_url": {
+          "aka": [
+            "GitHub PR URL",
+            "PR link",
+            "pull request URL"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7063"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7115"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7119"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7127"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7128"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7129"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/assistant-ui/assistant-ui/pull/7150"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/11"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/16"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/18"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/30"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/agentkit/pull/4"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/upstash/rag-chat-component/pull/1"
+              },
+              {
+                "class": "raw-values",
+                "literal": "https://github.com/vercel-labs/ai-python/pull/225"
+              }
+            ]
+          },
+          "conventionNote": "Use the full lowercase HTTPS URL ending in `/pull/<number>` for an exact match.",
+          "long": "GitHub HTTPS URL locating this pull request in its repository. The repository owner and name, followed by the pull request number, are encoded in the path.",
+          "semanticKind": "text",
+          "short": "Canonical GitHub web URL for the pull request."
+        },
+        "repository_id": {
+          "aka": [
+            "repo id",
+            "repository id"
+          ],
+          "long": "Foreign key identifying the one repository this PR belongs to. A person can author many PRs in one repository or across multiple repositories. Their number of contributed repositories counts distinct repository_id values across qualifying authored PR rows; multiple PRs in the same repository count once.",
+          "semanticKind": "number",
+          "short": "Foreign key identifying the one repository this PR belongs to. A person can author many..."
+        },
+        "search_text": {
+          "aka": [
+            "full-text search",
+            "PR search text",
+            "search document",
+            "title and description"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "7/18/25 data work"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add a `cancelled` check to hook's `set_result` call"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add charts"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add cloudflare example"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add install ci version to nextjs-deployed"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add next.js example and readme"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add pages router test to nextjs example"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add pages router test to nextjs/vercel-ai-sdk"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add reset all namespaces api"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add reset all namespaces option"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add start step"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add support for experimentalteetransform to allow models to re-grep commands"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add support for namespaces"
+              },
+              {
+                "class": "raw-values",
+                "literal": "ai sdk 7 migrated to ai sdk 7, mostly just using the migrate skill."
+              },
+              {
+                "class": "raw-values",
+                "literal": "ai sdk v6 compatible api previously built for ai sdk v4, but incompatible with v5 and v6 because of `parameters` instead of `inputschema`"
+              },
+              {
+                "class": "raw-values",
+                "literal": "allow fetching vectors with prefix"
+              },
+              {
+                "class": "raw-values",
+                "literal": "allow ranging over vectors with prefix"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bump version"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bump version to 0.4.0"
+              },
+              {
+                "class": "raw-values",
+                "literal": "create webpack.yml"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fix default @vercel/sandbox destination"
+              },
+              {
+                "class": "hashed",
+                "literal": "85b83e634d5518da2d4a75efe826faf021c0f0867763a7d40c487c98bc3b168d"
+              }
+            ]
+          },
+          "conventionNote": "Text combines title and body and may contain Markdown, URLs, and code; search as free text.",
+          "long": "Lexical search text combining the pull request title with its body when available. It is intended for text retrieval; matching text is evidence of a mention, not proof that a described feature was implemented.",
+          "semanticKind": "text",
+          "short": "Searchable text combining the pull request title and body."
+        },
+        "state": {
+          "aka": [
+            "open or closed state",
+            "PR status",
+            "pull request state",
+            "state"
+          ],
+          "conventionNote": "Use lowercase GitHub state literals, such as `closed`.",
+          "long": "Pull request lifecycle state as supplied by GitHub. This is an unordered status category, not an ordered progression or a merge indicator.",
+          "semanticKind": "text",
+          "short": "GitHub lifecycle state of the pull request.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "complete-legal",
+              "values": [
+                "closed",
+                "open"
+              ]
+            },
+            "membership": "schema-closed"
+          }
+        },
+        "title": {
+          "aka": [
+            "headline",
+            "PR title",
+            "pull request title",
+            "subject"
+          ],
+          "collision": {
+            "classes": [
+              {
+                "class": "raw-values",
+                "literal": "7/18/25 data work"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add a `cancelled` check to hook's `set_result` call"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add charts"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add cloudflare example"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add install ci version to nextjs-deployed"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add next.js example and readme"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add pages router test to nextjs example"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add pages router test to nextjs/vercel-ai-sdk"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add reset all namespaces api"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add reset all namespaces option"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add start step"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add support for experimentalteetransform to allow models to re-grep commands"
+              },
+              {
+                "class": "raw-values",
+                "literal": "add support for namespaces"
+              },
+              {
+                "class": "raw-values",
+                "literal": "allow fetching vectors with prefix"
+              },
+              {
+                "class": "raw-values",
+                "literal": "allow ranging over vectors with prefix"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bump version"
+              },
+              {
+                "class": "raw-values",
+                "literal": "bump version to 0.4.0"
+              },
+              {
+                "class": "raw-values",
+                "literal": "create webpack.yml"
+              },
+              {
+                "class": "raw-values",
+                "literal": "fix default @vercel/sandbox destination"
+              }
+            ]
+          },
+          "conventionNote": "Titles are case- and punctuation-preserving free text; use text matching rather than normalized status-like literals.",
+          "long": "Short free-form title summarizing the pull request. It may include conventional commit prefixes, issue references, version markers, or punctuation.",
+          "semanticKind": "text",
+          "short": "Human-readable title of the pull request."
+        },
+        "updated_at": {
+          "aka": [
+            "last updated",
+            "modified at",
+            "PR update time",
+            "updated date"
+          ],
+          "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+          "long": "Timestamp for the most recent recorded update to the pull request. The displayed +00 offset establishes UTC.",
+          "semanticKind": "date",
+          "short": "Timestamp when the pull request was last updated.",
+          "temporal": {
+            "domain": "instant"
+          }
+        }
+      },
+      "relationships": {
+        "pullRequest_authorId_account": {
+          "cardinality": "one",
+          "coverage": 1000,
+          "description": "Pull requests referencing Accounts.",
+          "fanOut": 5,
+          "to": "account"
+        },
+        "pullRequest_repositoryId_repository": {
+          "cardinality": "one",
+          "coverage": 1000,
+          "description": "Pull requests referencing Repositories.",
+          "fanOut": 23,
+          "to": "repository"
+        }
+      }
+    },
+    "pullRequestReview": {
+      "description": "One row is a submitted GitHub pull request review by an account.",
+      "fields": {
+        "body_text": {
+          "aka": [
+            "review body",
+            "review comment",
+            "review text"
+          ],
+          "conventionNote": "Text may contain Markdown and HTML comment markup; search as free text rather than expecting plain prose.",
+          "long": "Free-form body attached to the pull request review. An empty string likely means the review was submitted without a written body; populated content can include Markdown, HTML comments, and links.",
+          "semanticKind": "text",
+          "short": "Submitted review body text and any embedded review-summary markup."
+        },
+        "commit_sha": {
+          "aka": [
+            "commit hash",
+            "reviewed commit",
+            "revision SHA"
+          ],
+          "conventionNote": "Use the lowercase 40-character hexadecimal SHA literal; it is not a shortened commit hash.",
+          "long": "Full Git object ID for the commit revision associated with this review. It is a reference for matching commits and joins, not a numeric quantity.",
+          "semanticKind": "text",
+          "short": "Git commit SHA reviewed by this pull request review."
+        },
+        "id": {
+          "aka": [
+            "GitHub review ID",
+            "pull request review ID",
+            "review ID"
+          ],
+          "long": "Platform-level identifier for this submitted pull request review. Use it to identify or join the review record, not for arithmetic.",
+          "semanticKind": "number",
+          "short": "Unique GitHub identifier for the pull request review."
+        },
+        "observed_at": {
+          "aka": [
+            "observation time",
+            "record observed time",
+            "snapshot time"
+          ],
+          "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS.fraction+00`; include the numeric offset when using an exact literal.",
+          "long": "Timestamp recording when this pull request review was observed in this dataset, rather than when the review was submitted. The displayed +00 offset establishes UTC.",
+          "semanticKind": "date",
+          "short": "Timestamp when this review record was observed.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "pull_request_id": {
+          "aka": [
+            "PR ID",
+            "pull request ID",
+            "reviewed pull request"
+          ],
+          "long": "Reference to the pull request that received this review. Use it to join review records to their pull request, not as a numeric measure.",
+          "semanticKind": "number",
+          "short": "Pull request referenced by this review.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "partial",
+              "reason": "sampled",
+              "values": [
+                "1994182370",
+                "2252052632",
+                "4017717586",
+                "4417243097",
+                "4487731670",
+                "4489175312",
+                "4490025499"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "review_url": {
+          "aka": [
+            "GitHub review URL",
+            "review link",
+            "review URL"
+          ],
+          "conventionNote": "Use the full lowercase HTTPS URL, including the `#pullrequestreview-` fragment, for an exact review link.",
+          "long": "Canonical GitHub URL locating this review within its pull request, including a review-specific fragment. It is a link value rather than a stable numeric key.",
+          "semanticKind": "text",
+          "short": "GitHub web URL for the submitted pull request review."
+        },
+        "reviewer_id": {
+          "aka": [
+            "review author",
+            "reviewer",
+            "reviewer account ID",
+            "reviewer id"
+          ],
+          "long": "Reference to the account associated with this submitted review. Use it to join to account details, not as a numeric measure.",
+          "semanticKind": "number",
+          "short": "Account that submitted the pull request review.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "partial",
+              "reason": "sampled",
+              "values": [
+                "191113872",
+                "234086",
+                "24557773",
+                "29387993",
+                "39992",
+                "57228345",
+                "58091943",
+                "88107904"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "state": {
+          "aka": [
+            "review disposition",
+            "review outcome",
+            "review status"
+          ],
+          "conventionNote": "Use uppercase GitHub state literals, such as `APPROVED`; do not query with lowercase labels.",
+          "long": "Review state as a GitHub status category, such as approval, comment-only review, dismissal, pending review, or requested changes. These are unordered workflow categories rather than a ranked scale; pending and dismissed reviews require explicit inclusion semantics.",
+          "semanticKind": "text",
+          "short": "GitHub disposition of the submitted pull request review."
+        },
+        "submitted_at": {
+          "aka": [
+            "review date",
+            "review submission time",
+            "submitted time"
+          ],
+          "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+          "long": "Timestamp for submission of this pull request review. The displayed +00 offset establishes UTC.",
+          "semanticKind": "date",
+          "short": "Timestamp when the pull request review was submitted.",
+          "temporal": {
+            "domain": "instant"
+          }
+        }
+      },
+      "relationships": {
+        "pullRequestReview_pullRequestId_pullRequest": {
+          "cardinality": "one",
+          "description": "Pull request reviews referencing Pull requests.",
+          "to": "pullRequest"
+        },
+        "pullRequestReview_reviewerId_account": {
+          "cardinality": "one",
+          "description": "Pull request reviews referencing Accounts.",
+          "to": "account"
+        }
+      }
+    },
+    "repository": {
+      "description": "One row is an observed public GitHub repository and its ownership and project metadata.",
+      "fields": {
+        "default_branch": {
+          "aka": [
+            "default branch",
+            "main branch",
+            "primary branch"
+          ],
+          "conventionNote": "Virtually always stored in lowercase (e.g., 'main' or 'master').",
+          "long": "The primary branch name used by default for commits and pull requests in the repository.",
+          "semanticKind": "text",
+          "short": "Default Git branch name for the repository."
+        },
+        "description": {
+          "aka": [
+            "about",
+            "project summary",
+            "repo description"
+          ],
+          "long": "A short free-text description of the GitHub repository. Unpopulated values indicate that no repository description was provided.",
+          "semanticKind": "text",
+          "short": "Summary text describing the project's purpose and functionality."
+        },
+        "full_name": {
+          "aka": [
+            "full name",
+            "repo path",
+            "slug"
+          ],
+          "conventionNote": "Virtually always formatted in lowercase as 'owner/repo'.",
+          "long": "The complete combined owner account and repository name identifier separated by a forward slash.",
+          "semanticKind": "text",
+          "short": "Full repository path formatted as owner/repository_name."
+        },
+        "id": {
+          "aka": [
+            "github id",
+            "repo id",
+            "repository id"
+          ],
+          "long": "The primary key identifier assigned by GitHub to uniquely reference the repository.",
+          "semanticKind": "number",
+          "short": "Unique numeric GitHub identifier for the repository."
+        },
+        "is_archived": {
+          "aka": [
+            "archived status",
+            "is archived"
+          ],
+          "long": "Boolean flag showing if the repository is read-only and archived.",
+          "semanticKind": "boolean",
+          "short": "Flag indicating whether the repository has been archived."
+        },
+        "is_fork": {
+          "aka": [
+            "fork status",
+            "is fork"
+          ],
+          "long": "Boolean status marking whether this project was cloned/forked from a parent repository.",
+          "semanticKind": "boolean",
+          "short": "Flag indicating whether the repository is a fork of another project."
+        },
+        "name": {
+          "aka": [
+            "project name",
+            "repo name"
+          ],
+          "conventionNote": "Virtually always formatted in lowercase.",
+          "long": "The single repository name without the owner prefix.",
+          "semanticKind": "text",
+          "short": "Short project name within its owner's namespace."
+        },
+        "node_id": {
+          "aka": [
+            "global id",
+            "node id"
+          ],
+          "long": "Global node identifier string used across GitHub's GraphQL API.",
+          "semanticKind": "text",
+          "short": "Opaque GitHub GraphQL global node ID."
+        },
+        "observed_at": {
+          "aka": [
+            "ingestion time",
+            "observed at",
+            "scraped at"
+          ],
+          "long": "The date and time when the repository metadata was captured into the system.",
+          "semanticKind": "date",
+          "short": "Timestamp when this repository record was ingested.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "owner_id": {
+          "aka": [
+            "account id",
+            "owner id"
+          ],
+          "long": "Unique numeric identifier pointing to the account that owns this repository.",
+          "semanticKind": "number",
+          "short": "Numeric foreign key referencing the owner account.",
+          "valueKnowledge": {
+            "exposure": "raw-values",
+            "inventory": {
+              "kind": "partial",
+              "reason": "sampled",
+              "values": [
+                "108547162",
+                "14985020",
+                "189563271",
+                "74989412"
+              ]
+            },
+            "membership": "open-world"
+          }
+        },
+        "pushed_at": {
+          "aka": [
+            "last commit time",
+            "last pushed date",
+            "pushed at"
+          ],
+          "long": "The date and time of the latest commit push event recorded on the repository.",
+          "semanticKind": "date",
+          "short": "Timestamp of the most recent code push to the repository.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "readme_sha": {
+          "aka": [
+            "readme blob sha",
+            "readme hash"
+          ],
+          "conventionNote": "Virtually always a 40-character lowercase hexadecimal hash.",
+          "long": "The Git blob SHA hash representing the specific version of the captured README file, distinct from a commit SHA.",
+          "semanticKind": "text",
+          "short": "Git SHA hash for the captured README file version."
+        },
+        "readme_text": {
+          "aka": [
+            "readme",
+            "readme content"
+          ],
+          "long": "The raw documentation text extracted from the main README document of the repository.",
+          "semanticKind": "text",
+          "short": "Full text contents of the repository README file."
+        },
+        "repository_url": {
+          "aka": [
+            "github url",
+            "repo url",
+            "web link"
+          ],
+          "conventionNote": "Virtually always formatted starting with 'https://github.com/'.",
+          "long": "Direct HTTPS Web URL pointing to the repository on GitHub.",
+          "semanticKind": "text",
+          "short": "Web URL linking to the GitHub repository page."
+        },
+        "search_text": {
+          "aka": [
+            "bm25 text",
+            "indexed document",
+            "search content"
+          ],
+          "long": "Concatenated full-text index containing the repository name, description, topics, and truncated README text used for BM25 search queries.",
+          "semanticKind": "text",
+          "short": "Search index document combining repository metadata and documentation."
+        },
+        "stars_count": {
+          "aka": [
+            "github stars",
+            "stargazers",
+            "stars"
+          ],
+          "long": "Whole number count of stars or bookmarks awarded to this project on GitHub.",
+          "semanticKind": "number",
+          "short": "Count of GitHub star stargazers for the repository."
+        },
+        "topics": {
+          "aka": [
+            "repo tags",
+            "tags",
+            "topics"
+          ],
+          "conventionNote": "Formatted as a comma-separated array string wrapped in curly braces (e.g. '{ai,nextjs}').",
+          "long": "Comma-separated or formatted list of user-provided categorization tags attached to the repository.",
+          "semanticKind": "text",
+          "short": "Author-assigned topic labels describing the repository focus."
+        }
+      },
+      "relationships": {
+        "repository_ownerId_account": {
+          "cardinality": "one",
+          "description": "Repositories referencing Accounts.",
+          "to": "account"
+        }
+      }
+    },
+    "repositoryLanguage": {
+      "description": "One row is an observed programming language byte count for a GitHub repository.",
+      "fields": {
+        "bytes": {
+          "aka": [
+            "bytes count",
+            "code size",
+            "language bytes"
+          ],
+          "long": "Whole number of bytes written in the associated programming language within the repository.",
+          "semanticKind": "number",
+          "short": "Total source code size in bytes for a specific programming language."
+        },
+        "id": {
+          "aka": [
+            "language record id"
+          ],
+          "long": "Internal unique identifier for one language byte count entry.",
+          "semanticKind": "number",
+          "short": "Surrogate primary key for the repository language record."
+        },
+        "language": {
+          "aka": [
+            "lang",
+            "programming language"
+          ],
+          "conventionNote": "Typically stored in Title Case or uppercase (e.g. 'TypeScript', 'CSS').",
+          "long": "Proper name of the detected programming language or markup dialect.",
+          "semanticKind": "text",
+          "short": "Name of the programming language detected in the repository."
+        },
+        "observed_at": {
+          "aka": [
+            "captured at",
+            "observed time"
+          ],
+          "long": "The date and time when the language statistics were captured.",
+          "semanticKind": "date",
+          "short": "Timestamp when the language byte breakdown was recorded.",
+          "temporal": {
+            "domain": "instant"
+          }
+        },
+        "repository_id": {
+          "aka": [
+            "parent repo id",
+            "repository id"
+          ],
+          "long": "Numeric identifier linking this language byte count breakdown to its parent repository record.",
+          "semanticKind": "number",
+          "short": "Foreign key referencing the parent repository."
+        }
+      },
+      "relationships": {
+        "repositoryLanguage_repositoryId_repository": {
+          "cardinality": "one",
+          "coverage": 1000,
+          "description": "Repository languages referencing Repositories.",
+          "fanOut": 4,
+          "to": "repository"
+        }
+      }
+    }
+  },
+  "evidenceRefs": [
+    {
+      "family": "value-domains",
+      "name": "r1_676974687562_6163636f756e7473",
+      "sha": "924315e01abd07391a0760403b26fcc65fed9aeadeb175cf62865160e511eb0d"
+    },
+    {
+      "family": "value-domains",
+      "name": "r1_676974687562_636f6e636570745f65766964656e6365",
+      "sha": "bec97a4485e566492b83e627a861c32822f5f053656973b5b5f14a46e0f98def"
+    },
+    {
+      "family": "value-domains",
+      "name": "r1_676974687562_636f6e6365707473",
+      "sha": "6b56868fefe6aadbead8e9952ad23c59215915753e4f240a488b1af1620221d9"
+    },
+    {
+      "family": "value-domains",
+      "name": "r1_676974687562_7075626c69635f6d656d6265727368697073",
+      "sha": "de9421dc91bbcad56c8e67684b79869850535e4c6939d12380a541e3d2d622e4"
+    },
+    {
+      "family": "value-domains",
+      "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773",
+      "sha": "b59a41cb5cff755d109cc116aaeef96ad7ada8954e6e851c40bcab655f849e6e"
+    },
+    {
+      "family": "value-domains",
+      "name": "r1_676974687562_70756c6c5f7265717565737473",
+      "sha": "958b917c19d825ea7b024ae06316745ea619fb9737db1888836d072a064ffd8d"
+    },
+    {
+      "family": "value-domains",
+      "name": "r1_676974687562_7265706f7369746f72696573",
+      "sha": "1a2fe10107a2caf8d66c40efbdeaae701a6b48aebddf83f5fb1095690bc53192"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_6163636f756e7473",
+      "sha": "d185fc7d95bbea16dd70bdeaffd59a68055d2273aaec2e0588917c3eb153d1f4"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_636f6e636570745f65766964656e6365",
+      "sha": "3b16af80b90b0d5dbfb70b7d613761c78842c3358dd5b8080e454895e3d8430c"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_636f6e6365707473",
+      "sha": "59c9cd7f450ede74b7f5da93b5dd05aa25e4db751e8ed8b7be33479f04efea7c"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_7075626c69635f6d656d6265727368697073",
+      "sha": "bc7bf4e2c23fb8ffe6db17584c3e2f4bb9e1748671a10235e79538035788e1da"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773",
+      "sha": "f8e7b9e5f8ad7d4bc81a1d36d660cbadae3820ef8a27100531b8a2da83a768c9"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_70756c6c5f7265717565737473",
+      "sha": "aabcea3bd33f9de758999fc3033997ed36c5299af38b723dfceaa484302c0214"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_7265706f7369746f72696573",
+      "sha": "2266bc99c314b83873d1a26c01cc7c382131a6802171b68b12557e9f764217f0"
+    },
+    {
+      "family": "value-index",
+      "name": "r1_676974687562_7265706f7369746f72795f6c616e677561676573",
+      "sha": "a53a351c899a063f6aa5f17a61e838ed3538941f1318fcd94f205d3ce17562e4"
+    }
+  ],
+  "fieldDistinctions": {
+    "evidence-scope": {
+      "guidance": "Repository evidence has no PR identity. To find contributors to qualifying projects, correlate PRs and evidence through repository_id. Use pull_request_id only for evidence supplied by that exact PR. Keep concept and acceptance filters.",
+      "members": [
+        {
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "pull_request_id"
+          },
+          "role": "Only PR-specific evidence has this key. NULL means repository evidence and cannot match a PR-ID equality join."
+        },
+        {
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "repository_id"
+          },
+          "role": "Repository owning the evidence in either scope. Matches authored PRs through pullRequest.repository_id for project-level conditions."
+        }
+      ]
+    }
+  },
+  "worldId": "prj_debe3085e1b247b6a7df26022617d7ac"
+}

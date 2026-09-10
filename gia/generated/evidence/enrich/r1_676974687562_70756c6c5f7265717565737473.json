@@ -1,0 +1,486 @@
+{
+  "entity": {
+    "description": "One row is an observed GitHub pull request and its author, repository, status, and timestamps.",
+    "description_origin": "generated",
+    "generatedFrom": {
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-sdk.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "sourceDescriptionSha": "f8e669abbbcb401f6a705b1cfc832598d54db2789d0a4a40adc945d25dafe269"
+    }
+  },
+  "fields": [
+    {
+      "aka": [
+        "author account ID",
+        "author id",
+        "PR author",
+        "pull request author"
+      ],
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "author_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "072e4ca04a3b87a28f9a9bcf1927c0a3caf7db0093610460b45b7e5323eae057"
+      },
+      "long": "Reference to the GitHub account recorded as the pull request author. A null likely means the author account is deleted or unavailable; person-specific questions should restrict the joined account to user accounts.",
+      "short": "Account that authored the pull request.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-at-snapshot",
+          "values": [
+            "100838962",
+            "101020733",
+            "101308415",
+            "10137",
+            "10215173",
+            "102487158",
+            "103972661",
+            "113418245",
+            "113545860",
+            "1143629",
+            "114422072",
+            "115853816",
+            "123822",
+            "141594291",
+            "141974463",
+            "146335736",
+            "150553445",
+            "159464953",
+            "1690830",
+            "17938322",
+            "1797812",
+            "18082091",
+            "189638926",
+            "194825742",
+            "205036",
+            "21091016",
+            "213546777",
+            "22665058",
+            "230457447",
+            "234086",
+            "24557773",
+            "252243939",
+            "26034768",
+            "263799550",
+            "26875009",
+            "273931657",
+            "274821851",
+            "275051718",
+            "27636870",
+            "291087047",
+            "29139614",
+            "29387993",
+            "305873210",
+            "313023939",
+            "32676955",
+            "340349",
+            "35613825",
+            "366502",
+            "39992",
+            "4060187",
+            "4142719",
+            "41898282",
+            "4389565",
+            "47982397",
+            "48079573",
+            "48212803",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "63066081",
+            "65047246",
+            "66008528",
+            "699636",
+            "71938701",
+            "75971010",
+            "83492835",
+            "88107904",
+            "89679",
+            "93538980",
+            "947949"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "description",
+        "PR body",
+        "pull request description"
+      ],
+      "conventionNote": "Text may contain Markdown, code blocks, URLs, and templates; search as free text rather than expecting plain prose.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "body_text",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The pull request body, containing its author-provided description and potentially Markdown, links, templates, or generated text. A null likely means no pull request description is available.",
+      "short": "Free-form description text attached to the pull request."
+    },
+    {
+      "aka": [
+        "opened at",
+        "PR creation time",
+        "pull request date"
+      ],
+      "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "created_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Timestamp marking creation of the pull request. The displayed +00 offset establishes UTC.",
+      "short": "Timestamp when the pull request was created.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "f3b7692d589de4d4d11dd199158721040a0fc6ef115a9e8d735d459e670b46f0",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "head commit",
+        "head SHA",
+        "latest commit SHA",
+        "source commit"
+      ],
+      "conventionNote": "Use the lowercase 40-character hexadecimal SHA literal; it is not a shortened commit hash.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "head_sha",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "1efede91159baf96acc99edb790c1cbaf65de56a89440b4c08c05707b5aaa3c1"
+      },
+      "long": "Full Git object ID of the commit at the pull request head when observed. It identifies source revision content; the pull request body and title can change independently of this SHA.",
+      "short": "Git commit SHA at the pull request head."
+    },
+    {
+      "aka": [
+        "GitHub pull request ID",
+        "PR ID",
+        "pull request ID"
+      ],
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Platform-level identifier for this pull request record. Use it to identify or join the pull request, not for arithmetic.",
+      "short": "Unique GitHub identifier for the pull request."
+    },
+    {
+      "aka": [
+        "merge time",
+        "merged at",
+        "merged date"
+      ],
+      "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "merged_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Timestamp marking when the pull request was merged. A null likely means the pull request was closed without a recorded merge. The displayed +00 offset establishes UTC.",
+      "short": "Timestamp when the pull request was merged.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "3ed227776f4b42116a0d0058bdc043426d8c1828f54407e0fb0ed3bdbb44c8c6",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "global pull request ID",
+        "GraphQL node ID",
+        "node ID"
+      ],
+      "conventionNote": "Use the opaque case-sensitive `PR_`-prefixed token exactly as stored.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "node_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Opaque GitHub node ID for this pull request, suitable for GraphQL-style identity and lookup. It is not the human-facing pull request number or a numeric quantity.",
+      "short": "GitHub GraphQL node identifier for the pull request."
+    },
+    {
+      "aka": [
+        "issue number",
+        "PR number",
+        "pull request number"
+      ],
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "number",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The pull request's human-facing sequence number within its repository. It identifies a pull request only in combination with its repository, not across all GitHub repositories.",
+      "short": "Repository-local pull request number."
+    },
+    {
+      "aka": [
+        "observation time",
+        "record observed time",
+        "snapshot time"
+      ],
+      "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS.fraction+00`; include the numeric offset when using an exact literal.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "observed_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Timestamp recording when the pull request was observed in this dataset, rather than when it was created, updated, or merged. The displayed +00 offset establishes UTC.",
+      "short": "Timestamp when this pull request record was observed.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "6ac37915211c6036fa8c052a67a384e89f70aad2641a6cbb7bdc69b0e34ca1c0",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "GitHub PR URL",
+        "PR link",
+        "pull request URL"
+      ],
+      "conventionNote": "Use the full lowercase HTTPS URL ending in `/pull/<number>` for an exact match.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "pull_request_url",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "GitHub HTTPS URL locating this pull request in its repository. The repository owner and name, followed by the pull request number, are encoded in the path.",
+      "short": "Canonical GitHub web URL for the pull request."
+    },
+    {
+      "aka": [
+        "repo id",
+        "repository id"
+      ],
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "repository_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Foreign key referencing the primary key of the repository entity where this pull request was submitted.",
+      "short": "Repository ID reference for the owning repository."
+    },
+    {
+      "aka": [
+        "full-text search",
+        "PR search text",
+        "search document",
+        "title and description"
+      ],
+      "conventionNote": "Text combines title and body and may contain Markdown, URLs, and code; search as free text.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "search_text",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "a8783eb93cb48764b531f50146604814e87d19fe76598e19873666d8d05d384c"
+      },
+      "long": "Lexical search text combining the pull request title with its body when available. It is intended for text retrieval; matching text is evidence of a mention, not proof that a described feature was implemented.",
+      "short": "Searchable text combining the pull request title and body."
+    },
+    {
+      "aka": [
+        "open or closed state",
+        "PR status",
+        "pull request state",
+        "state"
+      ],
+      "conventionNote": "Use lowercase GitHub state literals, such as `closed`.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "state",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Pull request lifecycle state as supplied by GitHub. This is an unordered status category, not an ordered progression or a merge indicator.",
+      "short": "GitHub lifecycle state of the pull request.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-legal",
+          "values": [
+            "closed",
+            "open"
+          ]
+        },
+        "membership": "schema-closed"
+      }
+    },
+    {
+      "aka": [
+        "headline",
+        "PR title",
+        "pull request title",
+        "subject"
+      ],
+      "conventionNote": "Titles are case- and punctuation-preserving free text; use text matching rather than normalized status-like literals.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "title",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Short free-form title summarizing the pull request. It may include conventional commit prefixes, issue references, version markers, or punctuation.",
+      "short": "Human-readable title of the pull request."
+    },
+    {
+      "aka": [
+        "last updated",
+        "modified at",
+        "PR update time",
+        "updated date"
+      ],
+      "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+      "description_origin": "generated",
+      "entityId": "pullRequest",
+      "fieldId": "updated_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Timestamp for the most recent recorded update to the pull request. The displayed +00 offset establishes UTC.",
+      "short": "Timestamp when the pull request was last updated.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "040679a669be7106c0b856330b7ab24dd7cf7eecb7643c77e8a90d3c2a84d202",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.pull_requests"
+}

@@ -1,0 +1,256 @@
+{
+  "fields": [
+    {
+      "distinct_count": 16,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "1",
+          "member_count": 16,
+          "sig": "numeric:none"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-at-snapshot",
+        "values": [
+          {
+            "count": 65,
+            "specificity": 750,
+            "value": "1"
+          },
+          {
+            "count": 38,
+            "specificity": 719,
+            "value": "11"
+          },
+          {
+            "count": 32,
+            "specificity": 688,
+            "value": "15"
+          },
+          {
+            "count": 31,
+            "specificity": 656,
+            "value": "13"
+          },
+          {
+            "count": 26,
+            "specificity": 625,
+            "value": "5"
+          },
+          {
+            "count": 21,
+            "specificity": 594,
+            "value": "14"
+          },
+          {
+            "count": 21,
+            "specificity": 563,
+            "value": "6"
+          },
+          {
+            "count": 17,
+            "specificity": 531,
+            "value": "2"
+          },
+          {
+            "count": 13,
+            "specificity": 500,
+            "value": "4"
+          },
+          {
+            "count": 8,
+            "specificity": 469,
+            "value": "12"
+          },
+          {
+            "count": 5,
+            "specificity": 438,
+            "value": "10"
+          },
+          {
+            "count": 5,
+            "specificity": 406,
+            "value": "3"
+          },
+          {
+            "count": 4,
+            "specificity": 375,
+            "value": "9"
+          },
+          {
+            "count": 3,
+            "specificity": 344,
+            "value": "16"
+          },
+          {
+            "count": 1,
+            "specificity": 313,
+            "value": "7"
+          },
+          {
+            "count": 1,
+            "specificity": 281,
+            "value": "8"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 291,
+      "path": "concept_id"
+    },
+    {
+      "distinct_count": 2,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "deterministic",
+          "member_count": 2,
+          "sig": "alpha:lower"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-legal",
+        "values": [
+          {
+            "count": 0,
+            "specificity": 750,
+            "value": "deterministic"
+          },
+          {
+            "count": 0,
+            "specificity": 500,
+            "value": "llm"
+          }
+        ]
+      },
+      "membership": "schema-closed",
+      "non_null_count": 0,
+      "path": "method"
+    },
+    {
+      "distinct_count": 4,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "accepted",
+          "member_count": 4,
+          "sig": "alpha:lower"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-legal",
+        "values": [
+          {
+            "count": 0,
+            "specificity": 750,
+            "value": "accepted"
+          },
+          {
+            "count": 0,
+            "specificity": 625,
+            "value": "pending"
+          },
+          {
+            "count": 0,
+            "specificity": 500,
+            "value": "rejected"
+          },
+          {
+            "count": 0,
+            "specificity": 375,
+            "value": "superseded"
+          }
+        ]
+      },
+      "membership": "schema-closed",
+      "non_null_count": 0,
+      "path": "review_status"
+    },
+    {
+      "distinct_count": 4,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "manifest",
+          "member_count": 3,
+          "sig": "alpha:lower"
+        },
+        {
+          "exemplar": "pull_request",
+          "member_count": 1,
+          "sig": "alnum:lower"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-legal",
+        "values": [
+          {
+            "count": 0,
+            "specificity": 750,
+            "value": "manifest"
+          },
+          {
+            "count": 0,
+            "specificity": 625,
+            "value": "pull_request"
+          },
+          {
+            "count": 0,
+            "specificity": 500,
+            "value": "readme"
+          },
+          {
+            "count": 0,
+            "specificity": 375,
+            "value": "topic"
+          }
+        ]
+      },
+      "membership": "schema-closed",
+      "non_null_count": 0,
+      "path": "source_kind"
+    },
+    {
+      "distinct_count": 2,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "explicit",
+          "member_count": 2,
+          "sig": "alpha:lower"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-legal",
+        "values": [
+          {
+            "count": 0,
+            "specificity": 750,
+            "value": "explicit"
+          },
+          {
+            "count": 0,
+            "specificity": 500,
+            "value": "inferred"
+          }
+        ]
+      },
+      "membership": "schema-closed",
+      "non_null_count": 0,
+      "path": "support_level"
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.concept_evidence",
+  "source": {
+    "horizon": 4096,
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

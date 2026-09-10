@@ -1,0 +1,46 @@
+name: Full Gia and browser integration
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: live-gia-github
+  cancel-in-progress: false
+jobs:
+  full:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ secrets.GIA_SOURCE_TOKEN }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      GIA_GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@d9184bf108216479bc5a137cc391f4d7b14c870b # v6.1.0
+        with:
+          version: 9.15.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - name: Require explicit private-source and model access
+        run: test -n "$GH_TOKEN" && test -n "$OPENROUTER_API_KEY" && test -n "$OPENAI_API_KEY"
+      - run: gh auth setup-git
+      - run: node scripts/gia/bootstrap.mjs
+      - run: pnpm install --frozen-lockfile
+      - run: cp .env.example .env
+      - run: pnpm db:setup
+      - run: pnpm ingest -- --capture fixtures/github
+      - run: pnpm gia:start && pnpm gia:init && pnpm gia:profile && pnpm gia:authority
+      - run: pnpm check:release
+      - run: pnpm check && pnpm build
+      - run: pnpm test:live
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Real browser workflow
+        run: |
+          pnpm --filter @gia-github/web start > /tmp/gia-github-web.log 2>&1 &
+          node --input-type=module -e 'for (let attempt = 0; attempt < 60; attempt++) { try { if ((await fetch("http://127.0.0.1:3000/api/catalog", { signal: AbortSignal.timeout(1000) })).ok) process.exit(0); } catch {} await new Promise(resolve => setTimeout(resolve, 1000)); } throw new Error("Production web server did not become ready");'
+          pnpm test:e2e
+      - if: always()
+        run: pnpm gia:stop && docker compose stop postgres

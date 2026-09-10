@@ -11,6 +11,9 @@ importers:
       '@gia-github/db':
         specifier: workspace:*
         version: link:packages/db
+      '@gia-github/search':
+        specifier: workspace:*
+        version: link:packages/search
       dotenv:
         specifier: 17.4.2
         version: 17.4.2
@@ -33,6 +36,12 @@ importers:
       drizzle-kit:
         specifier: 0.31.10
         version: 0.31.10
+      drizzle-orm:
+        specifier: 0.45.2
+        version: 0.45.2(@types/pg@8.23.1)(pg@8.23.0)
+      pg:
+        specifier: 8.23.0
+        version: 8.23.0
       turbo:
         specifier: 2.10.12
         version: 2.10.12
@@ -42,6 +51,9 @@ importers:
       vitest:
         specifier: 4.1.9
         version: 4.1.9(@types/node@22.20.2)(vite@8.2.2(@types/node@22.20.2)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.13))
+      zod:
+        specifier: 4.6.1
+        version: 4.6.1
 
   apps/web:
     dependencies:
@@ -130,15 +142,9 @@ importers:
 
   packages/search:
     dependencies:
-      '@gia-github/db':
-        specifier: workspace:*
-        version: link:../db
       '@gia/client':
         specifier: link:../../.deps/gia-client
         version: link:../../.deps/gia-client
-      drizzle-orm:
-        specifier: 0.45.2
-        version: 0.45.2(@types/pg@8.23.1)(pg@8.23.0)
       pg:
         specifier: 8.23.0
         version: 8.23.0

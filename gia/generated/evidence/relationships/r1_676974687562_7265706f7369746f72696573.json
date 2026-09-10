@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-10T10:52:22.330Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.repositories",
+  "relationships": [
+    {
+      "distinct_to_count": 0,
+      "edgeId": "github.repositories.owner_id->github.accounts.id",
+      "found_count": 0,
+      "from": "github.repositories",
+      "parts": [
+        {
+          "from_field": "owner_id",
+          "to_field": "id"
+        }
+      ],
+      "sampled_from_count": 0,
+      "to": "github.accounts"
+    }
+  ],
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "table-sample",
+      "sample_seed": 0,
+      "sampled_rows": 0,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "entity": {
+    "description": "One row is an observed public GitHub user's membership in a GitHub organization.",
+    "description_origin": "generated",
+    "generatedFrom": {
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-sdk.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "sourceDescriptionSha": "6c4396ddb8ae6d5ff8585ef9645c7b23991471ce079ebc9a3e62bb0103caa6c8"
+    }
+  },
+  "fields": [
+    {
+      "aka": [
+        "is public",
+        "public status"
+      ],
+      "conventionNote": "Boolean stored as lower-case string 'true'.",
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "currently_public",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "dbad7ad32a8ae746100016f94057359e7049e69a799de50697d3b25f05b874ee"
+      },
+      "long": "Boolean flag indicating whether the user's membership in the GitHub organization is currently public.",
+      "short": "Flag indicating if the user's org membership is public."
+    },
+    {
+      "aka": [
+        "first detected",
+        "membership created at"
+      ],
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "first_seen_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The initial date and time when the user was recorded as a public member of the organization.",
+      "short": "Timestamp when this public membership was first observed.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "0bdcaf77da2a70b6988074848bc9fd3714dc0ea1a9dab7f3c6c16831a9093756",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "membership id"
+      ],
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Unique numeric identifier for the public organization membership association record.",
+      "short": "Primary key identifier for the public membership record."
+    },
+    {
+      "aka": [
+        "check timestamp",
+        "last audited"
+      ],
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "last_checked_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The most recent date and time the organization public membership list was queried or verified.",
+      "short": "Timestamp when public status was last checked.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "084de66b3fee49f41fc532f3aa047a4d66ac993e98da970b009a93666a8d8b46",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "active seen timestamp",
+        "last verified"
+      ],
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "last_seen_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The date and time when the user was last seen active as a public member of the organization.",
+      "short": "Timestamp when public membership was most recently confirmed.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "9ebf9ef6f11f9463c82b41b7c4474ccb50f62d552bcf13b4eec07bb8881e160c",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "org id",
+        "organization account id",
+        "organization id"
+      ],
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "organization_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Numeric ID identifying the GitHub organization account associated with this public membership record.",
+      "short": "Foreign key reference to the GitHub organization account.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-at-snapshot",
+          "values": [
+            "108547162",
+            "14985020",
+            "189563271"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "account id",
+        "member id",
+        "person id",
+        "user id"
+      ],
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "person_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Numeric ID identifying the individual user account associated with this public membership record.",
+      "short": "Foreign key reference to the GitHub user account.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-at-snapshot",
+          "values": [
+            "11356668",
+            "11495867",
+            "115853816",
+            "1162991",
+            "120007119",
+            "12292047",
+            "123822",
+            "13041",
+            "1365881",
+            "13698226",
+            "1387913",
+            "1394504",
+            "13947",
+            "1440854",
+            "1508008",
+            "1570963",
+            "1634922",
+            "1751601",
+            "17536387",
+            "180404",
+            "186268",
+            "200112",
+            "2020473",
+            "20425781",
+            "21013447",
+            "22380829",
+            "22559461",
+            "229881",
+            "23662329",
+            "239003",
+            "2865858",
+            "28912696",
+            "2933988",
+            "29887157",
+            "3088615",
+            "318866",
+            "33291795",
+            "34559231",
+            "35507539",
+            "3676859",
+            "40034115",
+            "41523937",
+            "4172067",
+            "4278345",
+            "43268759",
+            "4586894",
+            "4658208",
+            "490265",
+            "51397083",
+            "52761222",
+            "53372002",
+            "55700336",
+            "56037657",
+            "58091943",
+            "5818726",
+            "5983714",
+            "6616955",
+            "664177",
+            "6849494",
+            "6880091",
+            "688617",
+            "70239736",
+            "71256",
+            "71938701",
+            "7249920",
+            "726049",
+            "739984",
+            "7414521",
+            "755844",
+            "771968",
+            "8146736",
+            "83733486",
+            "8440026",
+            "8722047",
+            "904724",
+            "923787"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "api source url",
+        "endpoint url"
+      ],
+      "conventionNote": "Written as a full GitHub API URL, e.g. 'https://api.github.com/orgs/vercel/public_members?per_page=100&page=1'.",
+      "description_origin": "generated",
+      "entityId": "publicMembership",
+      "fieldId": "source_url",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The specific GitHub REST API endpoint URL used during data collection to enumerate public members for the organization.",
+      "short": "GitHub API URL used to fetch public members."
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.public_memberships"
+}

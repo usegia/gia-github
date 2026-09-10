@@ -15,6 +15,13 @@
       "when": 1789036772529,
       "tag": "0001_search_indexes_and_semantics",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1789039524532,
+      "tag": "0002_bounded_concept_vocabulary",
+      "breakpoints": true
     }
   ]
 }

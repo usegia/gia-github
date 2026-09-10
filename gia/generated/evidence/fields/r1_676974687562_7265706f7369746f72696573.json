@@ -1,0 +1,1120 @@
+{
+  "doc_count": 15,
+  "fields": [
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "ma",
+          "mai",
+          "main"
+        ],
+        "max_len": 6,
+        "min_len": 4
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 2,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "default_branch",
+      "top_values": [
+        {
+          "count": 11,
+          "value": "main"
+        },
+        {
+          "count": 4,
+          "value": "master"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 150,
+        "min_len": 17
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 14,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 1,
+      "path": "description",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "A bash tool for AI SDK"
+        },
+        {
+          "count": 1,
+          "value": "A full-featured, hackable Next.js AI chatbot built by Vercel"
+        },
+        {
+          "count": 1,
+          "value": "AI agent primitives on Upstash Redis: memory, RAG, search, chat history, caching, and rate limiting. With Vercel AI SDK and Eve"
+        },
+        {
+          "count": 1,
+          "value": "AI SDK for Python"
+        },
+        {
+          "count": 1,
+          "value": "GitHub tools and agents for the Vercel AI SDK, wrap GitHub's API as AI SDK tools ready to plug into any agent"
+        },
+        {
+          "count": 1,
+          "value": "Natural language to SQL template built with Next.js and the AI SDK"
+        },
+        {
+          "count": 1,
+          "value": "Open source file-system and knowledge based agent template. Build AI agents that stay up to date with your knowledge base"
+        },
+        {
+          "count": 1,
+          "value": "Prototype SDK for RAG development."
+        },
+        {
+          "count": 1,
+          "value": "React component for RAG-enabled AI Assistant"
+        },
+        {
+          "count": 1,
+          "value": "Real-time fact checking on spoken statements with the AI SDK, Perplexity and DeepGram"
+        },
+        {
+          "count": 1,
+          "value": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents "
+        },
+        {
+          "count": 1,
+          "value": "Typescript/React Library for AI Chat💬🚀"
+        },
+        {
+          "count": 1,
+          "value": "Upstash Vector JS SDK"
+        },
+        {
+          "count": 1,
+          "value": "Upstash Vector Python SDK"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [
+          "up",
+          "ve",
+          "ver",
+          "verc",
+          "verce",
+          "vercel",
+          "vercel-",
+          "vercel-l"
+        ],
+        "max_len": 37,
+        "min_len": 9
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "full_name",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "assistant-ui/assistant-ui"
+        },
+        {
+          "count": 1,
+          "value": "upstash/agentkit"
+        },
+        {
+          "count": 1,
+          "value": "upstash/rag-chat"
+        },
+        {
+          "count": 1,
+          "value": "upstash/rag-chat-component"
+        },
+        {
+          "count": 1,
+          "value": "upstash/vector-js"
+        },
+        {
+          "count": 1,
+          "value": "upstash/vector-py"
+        },
+        {
+          "count": 1,
+          "value": "vercel/ai"
+        },
+        {
+          "count": 1,
+          "value": "vercel/chatbot"
+        },
+        {
+          "count": 1,
+          "value": "vercel-labs/ai-facts"
+        },
+        {
+          "count": 1,
+          "value": "vercel-labs/ai-python"
+        },
+        {
+          "count": 1,
+          "value": "vercel-labs/ai-sdk-persistence-db"
+        },
+        {
+          "count": 1,
+          "value": "vercel-labs/bash-tool"
+        },
+        {
+          "count": 1,
+          "value": "vercel-labs/github-tools"
+        },
+        {
+          "count": 1,
+          "value": "vercel-labs/knowledge-agent-template"
+        },
+        {
+          "count": 1,
+          "value": "vercel-labs/natural-language-postgres"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 10,
+        "min_len": 9
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "1274085842",
+        "min": "642917329"
+      },
+      "null_count": 0,
+      "path": "id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1128648949"
+        },
+        {
+          "count": 1,
+          "value": "1135322438"
+        },
+        {
+          "count": 1,
+          "value": "1138349022"
+        },
+        {
+          "count": 1,
+          "value": "1163569028"
+        },
+        {
+          "count": 1,
+          "value": "1274085842"
+        },
+        {
+          "count": 1,
+          "value": "642917329"
+        },
+        {
+          "count": 1,
+          "value": "644461337"
+        },
+        {
+          "count": 1,
+          "value": "722184017"
+        },
+        {
+          "count": 1,
+          "value": "739473584"
+        },
+        {
+          "count": 1,
+          "value": "741829177"
+        },
+        {
+          "count": 1,
+          "value": "794140072"
+        },
+        {
+          "count": 1,
+          "value": "848693066"
+        },
+        {
+          "count": 1,
+          "value": "869760181"
+        },
+        {
+          "count": 1,
+          "value": "900901983"
+        },
+        {
+          "count": 1,
+          "value": "931560949"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "fa",
+          "fal",
+          "fals",
+          "false"
+        ],
+        "max_len": 5,
+        "min_len": 4
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 2,
+      "distinct_source": "sample_floor",
+      "kind": "boolean",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "is_archived",
+      "top_values": [
+        {
+          "count": 14,
+          "value": "false"
+        },
+        {
+          "count": 1,
+          "value": "true"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "fa",
+          "fal",
+          "fals",
+          "false"
+        ],
+        "max_len": 5,
+        "min_len": 5
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 1,
+      "distinct_source": "sample_floor",
+      "kind": "boolean",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "is_fork",
+      "top_values": [
+        {
+          "count": 15,
+          "value": "false"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [],
+        "max_len": 25,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "name",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "agentkit"
+        },
+        {
+          "count": 1,
+          "value": "ai"
+        },
+        {
+          "count": 1,
+          "value": "ai-facts"
+        },
+        {
+          "count": 1,
+          "value": "ai-python"
+        },
+        {
+          "count": 1,
+          "value": "ai-sdk-persistence-db"
+        },
+        {
+          "count": 1,
+          "value": "assistant-ui"
+        },
+        {
+          "count": 1,
+          "value": "bash-tool"
+        },
+        {
+          "count": 1,
+          "value": "chatbot"
+        },
+        {
+          "count": 1,
+          "value": "github-tools"
+        },
+        {
+          "count": 1,
+          "value": "knowledge-agent-template"
+        },
+        {
+          "count": 1,
+          "value": "natural-language-postgres"
+        },
+        {
+          "count": 1,
+          "value": "rag-chat"
+        },
+        {
+          "count": 1,
+          "value": "rag-chat-component"
+        },
+        {
+          "count": 1,
+          "value": "vector-js"
+        },
+        {
+          "count": 1,
+          "value": "vector-py"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "upper"
+        ],
+        "common_prefixes": [
+          "r_",
+          "r_k",
+          "r_kg",
+          "r_kgd",
+          "r_kgdo"
+        ],
+        "max_len": 12,
+        "min_len": 12
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "node_id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "R_kgDOJlIj0Q"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOJmmzGQ"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOKwunUQ"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOL1WdqA"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOLBN4sA"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOLDdqOQ"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOM9d8tQ"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOMpYHSg"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDON4Z99Q"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDONbKsXw"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOQ0XQ9Q"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOQ6ulRg"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOQ9nT3g"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDORVqnhA"
+        },
+        {
+          "count": 1,
+          "value": "R_kgDOS_EB0g"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 25
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 6,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "observed_at",
+      "top_values": [
+        {
+          "count": 6,
+          "value": "2026-09-10 10:25:42.171+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:25:43.782+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:25:13.102+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:25:13.666+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:25:16.13+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:25:18.685+00"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [
+          "10",
+          "108",
+          "1085",
+          "10854",
+          "108547",
+          "1085471",
+          "10854716",
+          "74"
+        ],
+        "max_len": 9,
+        "min_len": 8
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 4,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "189563271",
+        "min": "14985020"
+      },
+      "null_count": 0,
+      "path": "owner_id",
+      "top_values": [
+        {
+          "count": 7,
+          "value": "108547162"
+        },
+        {
+          "count": 5,
+          "value": "74989412"
+        },
+        {
+          "count": 2,
+          "value": "14985020"
+        },
+        {
+          "count": 1,
+          "value": "189563271"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 22,
+        "min_len": 22
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "pushed_at",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "2025-10-21 06:15:52+00"
+        },
+        {
+          "count": 1,
+          "value": "2025-12-06 19:33:49+00"
+        },
+        {
+          "count": 1,
+          "value": "2025-12-12 08:56:43+00"
+        },
+        {
+          "count": 1,
+          "value": "2025-12-15 08:00:31+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-03-09 11:53:38+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-04-25 08:29:23+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-04-25 09:04:47+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-07-08 21:55:02+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-08-22 03:19:06+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-01 08:26:45+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-01 10:09:55+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-09 22:50:34+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 01:34:22+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 04:33:50+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 08:44:12+00"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower"
+        ],
+        "common_prefixes": [],
+        "max_len": 40,
+        "min_len": 40
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "readme_sha",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "00bf0b8fe329077b6c9487d001abd1d627f3df0f"
+        },
+        {
+          "count": 1,
+          "value": "23597e058669486c9fee806d0db484c9dd861e38"
+        },
+        {
+          "count": 1,
+          "value": "241527fd2370331e3ae16985b9967312fbfacd7d"
+        },
+        {
+          "count": 1,
+          "value": "38e86be88b71d9fcac805bc98f18ae44224f7ae2"
+        },
+        {
+          "count": 1,
+          "value": "3c563bcac9bc450b39845ecb3cf3a49a0c7897ee"
+        },
+        {
+          "count": 1,
+          "value": "411d723b84d7353e035e6226e421bc9622adc37b"
+        },
+        {
+          "count": 1,
+          "value": "620ad2f25a4a38445aa25ba6c8a3bff6c02f35c4"
+        },
+        {
+          "count": 1,
+          "value": "8747e69c14ecdee220a1168d4ba448e5ba3b2a6c"
+        },
+        {
+          "count": 1,
+          "value": "8b4c9a7d26e32323e4cd377742a92d736f3207f8"
+        },
+        {
+          "count": 1,
+          "value": "b2f499e6fe65c5f4e51cb352af2ef7b3d49d7a1a"
+        },
+        {
+          "count": 1,
+          "value": "b4070187c5dd19414472227dcb59a69abd24792b"
+        },
+        {
+          "count": 1,
+          "value": "cfb4743c17336d7602b4045072bed3c4a7051be6"
+        },
+        {
+          "count": 1,
+          "value": "d259829e96e05c90196603bff24ae6b9f7463ee7"
+        },
+        {
+          "count": 1,
+          "value": "d2f6ed9953fff76435b01e65aec03bfbd18c51cd"
+        },
+        {
+          "count": 1,
+          "value": "f3160c5d904c7df979df2b42be56d68071863d84"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [],
+        "common_prefixes": [],
+        "max_len": 0,
+        "min_len": 0
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "readme_text",
+      "top_values": [],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [
+          "ht",
+          "htt",
+          "http",
+          "https",
+          "https:",
+          "https:/",
+          "https://"
+        ],
+        "max_len": 56,
+        "min_len": 28
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "repository_url",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "https://github.com/assistant-ui/assistant-ui"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/agentkit"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/rag-chat"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/rag-chat-component"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-py"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel/ai"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel/chatbot"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/ai-facts"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/ai-python"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/ai-sdk-persistence-db"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/bash-tool"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/github-tools"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/knowledge-agent-template"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/natural-language-postgres"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [],
+        "common_prefixes": [],
+        "max_len": 0,
+        "min_len": 0
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "search_text",
+      "top_values": [],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 5,
+        "min_len": 1
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "integer",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "26667",
+        "min": "7"
+      },
+      "null_count": 0,
+      "path": "stars_count",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1009"
+        },
+        {
+          "count": 1,
+          "value": "12089"
+        },
+        {
+          "count": 1,
+          "value": "124"
+        },
+        {
+          "count": 1,
+          "value": "165"
+        },
+        {
+          "count": 1,
+          "value": "178"
+        },
+        {
+          "count": 1,
+          "value": "19"
+        },
+        {
+          "count": 1,
+          "value": "20933"
+        },
+        {
+          "count": 1,
+          "value": "232"
+        },
+        {
+          "count": 1,
+          "value": "257"
+        },
+        {
+          "count": 1,
+          "value": "26667"
+        },
+        {
+          "count": 1,
+          "value": "276"
+        },
+        {
+          "count": 1,
+          "value": "325"
+        },
+        {
+          "count": 1,
+          "value": "620"
+        },
+        {
+          "count": 1,
+          "value": "7"
+        },
+        {
+          "count": 1,
+          "value": "70"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [
+          "{a",
+          "{ai",
+          "{}"
+        ],
+        "max_len": 149,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 10,
+      "distinct_source": "sample_floor",
+      "kind": "text[]",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "topics",
+      "top_values": [
+        {
+          "count": 5,
+          "value": "{}"
+        },
+        {
+          "count": 2,
+          "value": "{upstash,upstash-sdk,vector}"
+        },
+        {
+          "count": 1,
+          "value": "{agent,agents,ai,ai-sdk,github,presets,tools}"
+        },
+        {
+          "count": 1,
+          "value": "{agents,ai-agent,chatbot,file-system,knowledge-base,nuxt,sandbox,typescript,vue}"
+        },
+        {
+          "count": 1,
+          "value": "{ai,ai-sdk,nextjs,perplexity}"
+        },
+        {
+          "count": 1,
+          "value": "{ai-chatbot,base-ui,chatbot,conversational-ai,copilot,radix-ui,react-chatbot,shadcn,ui-components,vercel-ai-sdk}"
+        },
+        {
+          "count": 1,
+          "value": "{ai,chatgpt,nextjs,react,redis,shadcn-ui,vercel}"
+        },
+        {
+          "count": 1,
+          "value": "{ai,eve,rag,redis,upstash}"
+        },
+        {
+          "count": 1,
+          "value": "{ai,llm,rag,rag-chatbot,upstash,upstash-sdk,vector}"
+        },
+        {
+          "count": 1,
+          "value": "{anthropic,artificial-intelligence,gemini,generative-ai,generative-ui,javascript,language-model,llm,nextjs,openai,react,svelte,typescript,vercel,vue}"
+        }
+      ],
+      "total_count": 15,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.repositories",
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "table-sample",
+      "sample_seed": 1,
+      "sampled_rows": 15,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

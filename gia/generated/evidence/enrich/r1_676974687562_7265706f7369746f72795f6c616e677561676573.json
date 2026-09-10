@@ -1,0 +1,135 @@
+{
+  "entity": {
+    "description": "One row is an observed programming language byte count for a GitHub repository.",
+    "description_origin": "generated",
+    "generatedFrom": {
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-sdk.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "sourceDescriptionSha": "fb35eec6d5857b4b9bfb5e37d1d3eb7a2220986f9dc7f16e9f67c7dbbab2c0cd"
+    }
+  },
+  "fields": [
+    {
+      "aka": [
+        "bytes count",
+        "code size",
+        "language bytes"
+      ],
+      "description_origin": "generated",
+      "entityId": "repositoryLanguage",
+      "fieldId": "bytes",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Whole number of bytes written in the associated programming language within the repository.",
+      "short": "Total source code size in bytes for a specific programming language."
+    },
+    {
+      "aka": [
+        "language record id"
+      ],
+      "description_origin": "generated",
+      "entityId": "repositoryLanguage",
+      "fieldId": "id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Internal unique identifier for one language byte count entry.",
+      "short": "Surrogate primary key for the repository language record."
+    },
+    {
+      "aka": [
+        "lang",
+        "programming language"
+      ],
+      "conventionNote": "Typically stored in Title Case or uppercase (e.g. 'TypeScript', 'CSS').",
+      "description_origin": "generated",
+      "entityId": "repositoryLanguage",
+      "fieldId": "language",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Proper name of the detected programming language or markup dialect.",
+      "short": "Name of the programming language detected in the repository."
+    },
+    {
+      "aka": [
+        "captured at",
+        "observed time"
+      ],
+      "description_origin": "generated",
+      "entityId": "repositoryLanguage",
+      "fieldId": "observed_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The date and time when the language statistics were captured.",
+      "short": "Timestamp when the language byte breakdown was recorded.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "bb211c4865ab788c15b163bee93742e9765737e1d6fb3b0cec259b0e312c042e",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "parent repo id",
+        "repository id"
+      ],
+      "description_origin": "generated",
+      "entityId": "repositoryLanguage",
+      "fieldId": "repository_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Numeric identifier linking this language byte count breakdown to its parent repository record.",
+      "short": "Foreign key referencing the parent repository."
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.repository_languages"
+}

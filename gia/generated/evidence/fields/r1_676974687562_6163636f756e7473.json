@@ -1,0 +1,3311 @@
+{
+  "doc_count": 148,
+  "fields": [
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "upper"
+        ],
+        "common_prefixes": [
+          "us",
+          "use",
+          "user"
+        ],
+        "max_len": 12,
+        "min_len": 3
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 3,
+      "null_count": 0,
+      "path": "account_type",
+      "top_values": [
+        {
+          "count": 137,
+          "value": "User"
+        },
+        {
+          "count": 7,
+          "value": "Bot"
+        },
+        {
+          "count": 4,
+          "value": "Organization"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "upper"
+        ],
+        "common_prefixes": [
+          "ht",
+          "htt",
+          "http",
+          "https",
+          "https:",
+          "https:/",
+          "https://"
+        ],
+        "max_len": 52,
+        "min_len": 26
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 148,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 148,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "0081cff12c3d9e73",
+          "00bf510aa66206c8",
+          "02079d1f80854d76",
+          "025a5100a64127c7",
+          "037eb4d20dd6485d",
+          "0531f44749606ff6",
+          "05ca4b9a19d79596",
+          "062e0380e9ca0a99",
+          "074ee657d679581b",
+          "0914d1262ac8c48e",
+          "0b5c7a41c49f1b9a",
+          "0d01cfc8fa8b78b6",
+          "0dc92ed48915cc3d",
+          "0ed51bfafd54e1b3",
+          "11d90d432a9523af",
+          "12eaf25e0d669913",
+          "1495e5d394a34df1",
+          "1721e319ecc756c8",
+          "18ae6606ff50e4ed",
+          "1fb691a54d6434b1",
+          "21b1b274825e1762",
+          "2287126c025b473e",
+          "2a2d4b307762b907",
+          "2a58da0c4ef85186",
+          "2dd75b9b73bc357c",
+          "2f03e5d3d5cc94d0",
+          "300a24cb49875076",
+          "31b8244ed38cc75c",
+          "3302893da8c11926",
+          "338eb61eb5d2ba63",
+          "34b845b40531f4c4",
+          "36b5d3ccc304d316",
+          "36ce0a1cd52400d1",
+          "3751068b1cd79f98",
+          "37eaa05cb0fcb18b",
+          "384183481f44944e",
+          "3978a6c11908d9c9",
+          "39c8910ac9eb7646",
+          "3b44ec1c44e6ba4d",
+          "3cd4f353f415e90f",
+          "3e111ba43cecaf92",
+          "424205675d09a73e",
+          "48124b7778de7fb8",
+          "4aad4a172135e36a",
+          "4df54ca3c36b2069",
+          "5167b87221aee741",
+          "573eb5833b950b98",
+          "5763119e7f996773",
+          "576db88d670f6966",
+          "5834c5c211b2668c",
+          "58e30a620355cad6",
+          "5980ca8bc460feb3",
+          "5982d0f8a6d6cadb",
+          "5a20d89c99e571ed",
+          "5b4ac72fd0dc7ae3",
+          "5b532c23eaac7622",
+          "5cd146b2014992e7",
+          "5d56d70e74593eaf",
+          "5dab7b32e49c8d93",
+          "603f617caa32021d",
+          "6324a37fd380efe4",
+          "660e54e94c6cd78f",
+          "67e37b744c4adac5",
+          "685328792eabd01b",
+          "692b2d48b0533eb4",
+          "69ac638f7b9e2158",
+          "69c1e38a82ea681c",
+          "6a2c67a219b4b324",
+          "6a37173ddad6f441",
+          "6d705b5593000b42",
+          "6edc224e9953d708",
+          "749e5ea543d711a2",
+          "78a600744dc3f683",
+          "7b0408d0bec5beef",
+          "7d64228069c28bbc",
+          "85abeeffa8cbc600",
+          "873b4603fb11140c",
+          "8773d8ad2928a77e",
+          "87e5d89ff42ba783",
+          "8acd07ac53dfcc6a",
+          "8d9835777a684eb3",
+          "9112a1aa01d7762a",
+          "91fa6777a07a29f6",
+          "930a71a41f1c84ea",
+          "93a83b34e8243283",
+          "93d315fd14e3ac19",
+          "94ecd74e91324791",
+          "96d8136e15eb365d",
+          "97aa33c135678473",
+          "97c9f2295241b13f",
+          "97d3d252ff50449f",
+          "9a9492ea966d493b",
+          "9acef79d6147f0ac",
+          "9b2727e3c93c20f1",
+          "9bb2164e7bf354df",
+          "9d66e8ec9faa1591",
+          "9ebe90c003145a6f",
+          "9f4d623e6a8095cd",
+          "a66fbfb4192d208a",
+          "a7e1bf70298ff0ee",
+          "abc3acc16349924d",
+          "ada06b76b8931194",
+          "ae1a27eabaa1c4b0",
+          "b0c45d9941604d7d",
+          "b151f3fc08bd8f3e",
+          "b84b30d39a0de46b",
+          "bb578d5f04f7527b",
+          "bdb686fc05df9023",
+          "c0d5b250e5a8d566",
+          "c2ef550b42866332",
+          "c3b6103c284d869f",
+          "c5e10c2cfe243791",
+          "c6903e06a168c6c9",
+          "c9c73e2b71d87ce5",
+          "cb7395aa13408481",
+          "cbf158577199c306",
+          "d0050b06578528c2",
+          "d1beb7239c9c935a",
+          "d1ceec0c7503ab2f",
+          "d256df163ff2e74b",
+          "d2f7abac5fbdc66b",
+          "d4251881ad9a9ee7",
+          "d569a43e34daa1d1",
+          "d61f4393ee1029fd",
+          "da9812c22565d1a8",
+          "dd3206eab7c788c9",
+          "dd6dad09306e19e0",
+          "dd9a79bb831c5fdf",
+          "de3c6fe1631d16a1",
+          "e3229ee0494945cc",
+          "e38cf9bda80eac28",
+          "e3b0a39a881e73e6",
+          "e41128a9ecb4da3b",
+          "e9b9e2952446b0cc",
+          "ed9256d67a1a9903",
+          "ef652595a23fd521",
+          "f0cb30831fa73171",
+          "f3db186d01e1e439",
+          "f4cd7545d936658d",
+          "f53432cd15bff167",
+          "f546b1363301c92f",
+          "f58489b2e60f69c5",
+          "f772dfd9b5677ad5",
+          "f88e3333ea6a8d20",
+          "f940e298f2de25d2",
+          "fba7aac4f9402b73",
+          "fc7df6c8c3bf9d64",
+          "fe0b0d373fe010ae"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "avatar_url",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/21091016?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/24557773?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/340349?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/55143799?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/57228345?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/58091943?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/65047246?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://avatars.githubusercontent.com/u/71938701?v=4"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/1st1.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/aayush-kapoor.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/abhiswami2121.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/aisk.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/alex-grover.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/anatrajkovska.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/ai-sdk-factory.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/cubic-dev-ai.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/github-actions.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/renovate.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/rupic-app.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/upstash-tag.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/vercel.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apricot626.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/assistant-ui.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/atinux.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/benjamincanac.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/benpankow.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bensabic.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bgw.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/BjornMelin.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bobmshannon.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/Brandon168.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bseymour.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/burak-upstash.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/calebboyd.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/christopherkindl.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/chriswdmr.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/CosbertGames.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/cramforce.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/CswProgrammer.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ctate.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/daviddragan377.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/devjiwonchoi.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/dieDeMiguel.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/dominiksipowicz.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/dvoytenko.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ecklf.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/EfeDurmaz16.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/emeraldsanto.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/enesakar.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/enesgules.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/eps1lon.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ErayEroglu.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/eraykeskinmac.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/evilrabbit.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/fahreddinozcan.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/FanetheDivine.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/fantix.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/feugy.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/fg-nava.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/Flompe.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/gdborton.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ghost.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/goldylocks-ai.png"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/gr2m.png"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 89,
+        "min_len": 11
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 5,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 5,
+      "null_count": 143,
+      "path": "bio",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "A developer who likes to hack things up. Dedicated learner, mentor and technical blogger."
+        },
+        {
+          "count": 1,
+          "value": "maintainer @better-auth "
+        },
+        {
+          "count": 1,
+          "value": "Software Engineer at @vercel, working on @nuxt 💚"
+        },
+        {
+          "count": 1,
+          "value": "Upstash - DX/Software Developer - Bogazici Uni Cmpe\r\n"
+        },
+        {
+          "count": 1,
+          "value": "▲ uv add ai"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [
+          "@u",
+          "@v",
+          "@ve",
+          "@ver",
+          "@verc",
+          "@verce",
+          "@vercel"
+        ],
+        "max_len": 15,
+        "min_len": 6
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 6,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 6,
+      "null_count": 142,
+      "path": "company_raw",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "@better-auth"
+        },
+        {
+          "count": 1,
+          "value": "@Unkey"
+        },
+        {
+          "count": 1,
+          "value": "@upstash"
+        },
+        {
+          "count": 1,
+          "value": "@Vercel"
+        },
+        {
+          "count": 1,
+          "value": "Vercel"
+        },
+        {
+          "count": 1,
+          "value": "@vercel . @nuxt"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 3,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 8,
+      "distinct_source": "sample_floor",
+      "kind": "integer",
+      "low_card_exact": 8,
+      "min_max": {
+        "max": "661",
+        "min": "19"
+      },
+      "null_count": 140,
+      "path": "followers_count",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "106"
+        },
+        {
+          "count": 1,
+          "value": "178"
+        },
+        {
+          "count": 1,
+          "value": "19"
+        },
+        {
+          "count": 1,
+          "value": "250"
+        },
+        {
+          "count": 1,
+          "value": "47"
+        },
+        {
+          "count": 1,
+          "value": "489"
+        },
+        {
+          "count": 1,
+          "value": "625"
+        },
+        {
+          "count": 1,
+          "value": "661"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 9,
+        "min_len": 5
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 148,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 148,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "0080b8bfde24b7a8",
+          "01d4a045cf6de229",
+          "059d098321e34b3e",
+          "0e38eb16ff737e87",
+          "0f75e20bc59bd68d",
+          "10df5bfc290e7b98",
+          "11a5b72d6319cb64",
+          "136929ecf065a2a0",
+          "13cc1e56c177a1dc",
+          "13d8b03ecaa1f6f6",
+          "13dd5d1f93bb5dfe",
+          "18b93a1baeff9f53",
+          "1e630fdec619abb1",
+          "1ec9c6c44eabf442",
+          "20dc7d6908ed13c7",
+          "229d6dd6484c574c",
+          "263754e66196d7b2",
+          "2696860aec2e2bef",
+          "285be3aa18efe5cd",
+          "2c7a2db627a55a90",
+          "2ca1ce4a65bf5b60",
+          "304526530c5378d3",
+          "30cb57d3362ae1d6",
+          "339667490c94f272",
+          "36c4f6d93354d09a",
+          "39b5a43c5433565d",
+          "3ba4b0c779e1f081",
+          "3d3fcb2fe4335c1e",
+          "4044533eec226977",
+          "44265fb80f4083ce",
+          "44aeaf6169859231",
+          "44d1e865333b671f",
+          "4605d747a7426c6c",
+          "4684fedb18232a42",
+          "47690627ae55f3f1",
+          "47711d4150378212",
+          "481f9448c4ab324f",
+          "4904abf388a1a367",
+          "49fcc500de93181d",
+          "4d5fa0b4e73e7208",
+          "4f19f3bf3251d7a4",
+          "4f45e68c80238506",
+          "4ff3a3c052fa3803",
+          "52418f94464c196f",
+          "52e281251a9984f7",
+          "536577e6ba72c9e1",
+          "551083bfe84d2bb9",
+          "557643c7fc459666",
+          "55facd0405509f91",
+          "567170fcf282977a",
+          "56b0d321c98725ff",
+          "5bf3b96d2160fac5",
+          "5d001af81d0cb5f3",
+          "5ea39e9a133f6205",
+          "5f686ef345572195",
+          "61755a894b0a312b",
+          "62808d3661f26776",
+          "62856388babf63ce",
+          "69f066ea1ba03701",
+          "6a09002566ca5a6b",
+          "6ae5a84182692c49",
+          "6b68310e42ebe2b2",
+          "6fafb74d462c88cb",
+          "715e8ba46f8bc29c",
+          "7400dd183b443fbd",
+          "7418aaa53d490285",
+          "75d068769bebe411",
+          "75f8cde11a97cf3a",
+          "79e62b1cd12a844a",
+          "79fe6ae10b408252",
+          "7a066eef83bee965",
+          "7c94cbb31e17e240",
+          "7e05461d283de5ce",
+          "830e036eb211a4fe",
+          "8476205d89b2e8eb",
+          "8655f16996c8058e",
+          "886cf0e3ba62e9a9",
+          "8c48bb9dba966398",
+          "8d0087167de1b08a",
+          "8e5d65bd1cffccf5",
+          "8ff2d13fc0694892",
+          "90deeb8c91e725b4",
+          "911a326fd171682f",
+          "9247def172eac838",
+          "93553ff9fffa1608",
+          "98f3db37012c8dc3",
+          "99308732cb1e23b1",
+          "9b0ea94742f110dc",
+          "9c84d6f428d05324",
+          "9eccdd15b0fa6ec9",
+          "9f2cf4d04933a8b5",
+          "a06ffaef09664daa",
+          "a154fac9104a6089",
+          "a892c5a214a88eba",
+          "a9f00705e28f7fbe",
+          "aa4b464e45adb546",
+          "ab0bca9bd0bf6a0b",
+          "ad23bc690119393e",
+          "aec335ef2e6a8c08",
+          "b266148b91fdf2df",
+          "b3b48c2e3f47cff9",
+          "b460e2e6025cffc0",
+          "b7e1dd064b0df0a0",
+          "ba424859007ea929",
+          "ba45d3a439811327",
+          "bda7b0388b4cdb47",
+          "c526aab03671bed1",
+          "c8052979bfd0ea14",
+          "c821676842228981",
+          "c83a962ef18f7355",
+          "ce16db5e39d2f628",
+          "ce6bc06b0328c1e4",
+          "d0e0cab97e82f4a3",
+          "d44abe36cefded5f",
+          "d4abbfc875eb74bd",
+          "d53bf334af25d3f0",
+          "d7a4a675a24b6f47",
+          "d9dc0dcbf9f107dc",
+          "dcaa4fda86b50193",
+          "dce52b3c5813ed97",
+          "ddf760dc6489590a",
+          "de261b4693bc0848",
+          "de2730166c556459",
+          "dec9f0fbc5429b0d",
+          "e1dab39978bfbca0",
+          "e203415a3eea94f7",
+          "e2204ddfd48eaeae",
+          "e282d1cf59bc440f",
+          "e364835238ba27ac",
+          "e3e61c28729faeef",
+          "e46f75d46de0eea5",
+          "e6188a7bcc79452b",
+          "e7b00d43ef9980d8",
+          "e8091ec0c09dcc53",
+          "e91860e77fb81236",
+          "e97b60c425dcec0b",
+          "e9fd2f8c06d18fe1",
+          "eb9f8956a4800a0a",
+          "ed3ca2cae61acc68",
+          "ed8e3a87e84cffb1",
+          "efc88723a3f3783b",
+          "f12d755914351b81",
+          "f1773ff6109d7b4e",
+          "f2a6cedcbaa63408",
+          "f56bfef43e86f3cb",
+          "fa4ed985f9109160",
+          "fbcc5127a64aa3fb",
+          "ffacbb7db90628bf"
+        ]
+      },
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "313023939",
+        "min": "10137"
+      },
+      "null_count": 0,
+      "path": "id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "100838962"
+        },
+        {
+          "count": 1,
+          "value": "101020733"
+        },
+        {
+          "count": 1,
+          "value": "101308415"
+        },
+        {
+          "count": 1,
+          "value": "10137"
+        },
+        {
+          "count": 1,
+          "value": "10215173"
+        },
+        {
+          "count": 1,
+          "value": "102487158"
+        },
+        {
+          "count": 1,
+          "value": "103972661"
+        },
+        {
+          "count": 1,
+          "value": "108547162"
+        },
+        {
+          "count": 1,
+          "value": "113418245"
+        },
+        {
+          "count": 1,
+          "value": "113545860"
+        },
+        {
+          "count": 1,
+          "value": "11356668"
+        },
+        {
+          "count": 1,
+          "value": "1143629"
+        },
+        {
+          "count": 1,
+          "value": "114422072"
+        },
+        {
+          "count": 1,
+          "value": "11495867"
+        },
+        {
+          "count": 1,
+          "value": "115853816"
+        },
+        {
+          "count": 1,
+          "value": "1162991"
+        },
+        {
+          "count": 1,
+          "value": "120007119"
+        },
+        {
+          "count": 1,
+          "value": "12292047"
+        },
+        {
+          "count": 1,
+          "value": "123822"
+        },
+        {
+          "count": 1,
+          "value": "13041"
+        },
+        {
+          "count": 1,
+          "value": "1365881"
+        },
+        {
+          "count": 1,
+          "value": "13698226"
+        },
+        {
+          "count": 1,
+          "value": "1387913"
+        },
+        {
+          "count": 1,
+          "value": "1394504"
+        },
+        {
+          "count": 1,
+          "value": "13947"
+        },
+        {
+          "count": 1,
+          "value": "141594291"
+        },
+        {
+          "count": 1,
+          "value": "141974463"
+        },
+        {
+          "count": 1,
+          "value": "1440854"
+        },
+        {
+          "count": 1,
+          "value": "146335736"
+        },
+        {
+          "count": 1,
+          "value": "14985020"
+        },
+        {
+          "count": 1,
+          "value": "150553445"
+        },
+        {
+          "count": 1,
+          "value": "1508008"
+        },
+        {
+          "count": 1,
+          "value": "1570963"
+        },
+        {
+          "count": 1,
+          "value": "159464953"
+        },
+        {
+          "count": 1,
+          "value": "1634922"
+        },
+        {
+          "count": 1,
+          "value": "1690830"
+        },
+        {
+          "count": 1,
+          "value": "1751601"
+        },
+        {
+          "count": 1,
+          "value": "17536387"
+        },
+        {
+          "count": 1,
+          "value": "17938322"
+        },
+        {
+          "count": 1,
+          "value": "1797812"
+        },
+        {
+          "count": 1,
+          "value": "180404"
+        },
+        {
+          "count": 1,
+          "value": "18082091"
+        },
+        {
+          "count": 1,
+          "value": "186268"
+        },
+        {
+          "count": 1,
+          "value": "189563271"
+        },
+        {
+          "count": 1,
+          "value": "189638926"
+        },
+        {
+          "count": 1,
+          "value": "191113872"
+        },
+        {
+          "count": 1,
+          "value": "194825742"
+        },
+        {
+          "count": 1,
+          "value": "200112"
+        },
+        {
+          "count": 1,
+          "value": "2020473"
+        },
+        {
+          "count": 1,
+          "value": "20425781"
+        },
+        {
+          "count": 1,
+          "value": "205036"
+        },
+        {
+          "count": 1,
+          "value": "21013447"
+        },
+        {
+          "count": 1,
+          "value": "21091016"
+        },
+        {
+          "count": 1,
+          "value": "213546777"
+        },
+        {
+          "count": 1,
+          "value": "22380829"
+        },
+        {
+          "count": 1,
+          "value": "22559461"
+        },
+        {
+          "count": 1,
+          "value": "22665058"
+        },
+        {
+          "count": 1,
+          "value": "229881"
+        },
+        {
+          "count": 1,
+          "value": "230457447"
+        },
+        {
+          "count": 1,
+          "value": "234086"
+        },
+        {
+          "count": 1,
+          "value": "23662329"
+        },
+        {
+          "count": 1,
+          "value": "239003"
+        },
+        {
+          "count": 1,
+          "value": "24557773"
+        },
+        {
+          "count": 1,
+          "value": "252243939"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [],
+        "common_prefixes": [],
+        "max_len": 0,
+        "min_len": 0
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 0,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 0,
+      "null_count": 148,
+      "path": "location_city",
+      "top_values": [],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [],
+        "common_prefixes": [],
+        "max_len": 0,
+        "min_len": 0
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 0,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 0,
+      "null_count": 148,
+      "path": "location_country",
+      "top_values": [],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [],
+        "common_prefixes": [],
+        "max_len": 0,
+        "min_len": 0
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 0,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 0,
+      "null_count": 148,
+      "path": "location_normalization",
+      "top_values": [],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 17,
+        "min_len": 3
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 5,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 5,
+      "null_count": 143,
+      "path": "location_raw",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "İstanbul, Turkey"
+        },
+        {
+          "count": 1,
+          "value": "London"
+        },
+        {
+          "count": 1,
+          "value": "pdx"
+        },
+        {
+          "count": 1,
+          "value": "San Francisco, CA"
+        },
+        {
+          "count": 1,
+          "value": "Turkey, Istanbul"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 19,
+        "min_len": 3
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 148,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 148,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "006c329afaaae8bb",
+          "006ddab025a6821e",
+          "0625f2bc62d6707a",
+          "07f3547a728d151d",
+          "098d1d1c0449a1cb",
+          "0e057210ff04eaa2",
+          "0fc9f9f50a67d891",
+          "10cce4cf75e988b3",
+          "1195125fd2323eb3",
+          "169c96a5fe801ce4",
+          "1741b3b6bc57caa9",
+          "17a03222d04aedf5",
+          "1891a05b462c6c66",
+          "19da43787a1ebeec",
+          "1c74457e7ca3144d",
+          "1ccc0e6f489306ed",
+          "1d764ac2c9c2467a",
+          "1e7a70cebe2150d0",
+          "20299179c67f8d8b",
+          "233814ffae2f14c0",
+          "236140b88a30b694",
+          "23c13c72a7ca4ebc",
+          "24c3021ab83f898f",
+          "24e0754638e93009",
+          "250b7d7046e27336",
+          "25fe99718932b82a",
+          "2703efcac7975ae1",
+          "28e16916fb99a990",
+          "2a2a4e6f5f3cff14",
+          "2c05b8be56c6cfa9",
+          "2da2dea17e18faab",
+          "2db0bebc19d781b5",
+          "3399d02f49253deb",
+          "33e377f23960fdd2",
+          "3839ae29fc934a52",
+          "398dd481afb559ba",
+          "3bbaecb250337527",
+          "3d4da7b25fc76214",
+          "3de021cef9896e54",
+          "3f53d966603e673c",
+          "3fcc34be28055eed",
+          "40216b30654f07fc",
+          "433f3c2090775d76",
+          "44f7c7f5e8d54ba9",
+          "489785785b173dbd",
+          "4be7409cc8af0623",
+          "4c61486f500996a3",
+          "4cd5ac840d03902b",
+          "4d5ccff2e5e03576",
+          "4eb75ff893d921ea",
+          "4fd96d6693c720e3",
+          "542bcecea1630061",
+          "5681b8c09473b8d0",
+          "57d1845a08975f65",
+          "5854c9ec162daba7",
+          "5ab383c826e01d92",
+          "5d7457ee51f95055",
+          "5e46d23e82e7811f",
+          "5ef8e5706826fccf",
+          "61eab704be603dc0",
+          "6293fb1b07f8e66f",
+          "648edc523e22c428",
+          "654c407416bd5f56",
+          "65f0f7d50a0aaae2",
+          "67680524aaa7a097",
+          "69255b78f4a7869d",
+          "6a3b28ea5026f713",
+          "6aa4a16ba714f27d",
+          "6be8d86d405010bd",
+          "6e107986c94bdf84",
+          "6feb27a5740719c6",
+          "71144850f4fb4cc5",
+          "71bb9bccee0d23cd",
+          "742721b3a79f71a9",
+          "7475d717eeb4369e",
+          "75b20c15f4e9a310",
+          "78733e513566d833",
+          "78a2779bbe256c43",
+          "7cfeb026d80a7a77",
+          "7e5b8820de3e6475",
+          "81b0a9ff82a7cbaa",
+          "865938f42d3d56bd",
+          "868aa180a3f62639",
+          "88e2d1f01da2ce79",
+          "8c075eebba1c8c88",
+          "8cca020e5dd47cdb",
+          "8d67c504cd5e5107",
+          "8e408d738f312121",
+          "9109b27fb2a834c7",
+          "948bf06eb3fb7a4b",
+          "94d2b39532dcce8e",
+          "96043af2a9db0a02",
+          "96879f607f1a18e1",
+          "978acd5ea891c257",
+          "98e6a7a823f70bbf",
+          "99d565d9e814a273",
+          "9d205db70fbd6327",
+          "9f5d60c7d6cf835f",
+          "9f695506e5d89622",
+          "a05672ccc9c79780",
+          "a10077b041c1d727",
+          "a37338b6dd699f44",
+          "a566097e866f28b2",
+          "a7f9c6b14eefb49d",
+          "ab55013a39379b30",
+          "abced3cd08f2d018",
+          "ac725648585c61ca",
+          "ae5f3922554117ab",
+          "aecb0504d5484ffc",
+          "b3588ebb3cfa39b6",
+          "b43558d303f150d7",
+          "b59f6cf244625964",
+          "b83bcce13ec47014",
+          "b8e2e665b7cecb20",
+          "ba8acbf01e4c6e17",
+          "bb31d94392494ce1",
+          "c0baeeb2a526f55f",
+          "c21fb3025d5c7ed6",
+          "c2bb22c7fbc61e4a",
+          "c41004fec8fc96dd",
+          "c6f14de85db9e4f5",
+          "c8e42027bd2cd452",
+          "cb87ed60cf956bdf",
+          "cbdcc05d7a28d6c1",
+          "cc80df27a0eb8b7b",
+          "ccd17c16e35658d6",
+          "cdd552126ec3ab74",
+          "cee4f1464fae2600",
+          "d4bd63a7ed4019bd",
+          "d595964aa68d5de9",
+          "d82a232409581cfd",
+          "d8a4a40fce11dfbe",
+          "da8adcc552a6adc4",
+          "dbe4e03f99fb1b1c",
+          "e2ee84aba9b520d4",
+          "e47d76769d2acde4",
+          "e4bced7411f4263e",
+          "e5fa5eba0504f362",
+          "e7119b27599db5ae",
+          "e787a94fb4052177",
+          "e7b027711e5b3c63",
+          "e7f6d81eea13d04f",
+          "e8151c86bef6399e",
+          "e94bafd6aaad4916",
+          "f7e321e696a4d428",
+          "f8fbe576daf5fcd6",
+          "fb96350b2f96de01",
+          "fc8cabe1d9e2d293"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "login",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1st1"
+        },
+        {
+          "count": 1,
+          "value": "aayush-kapoor"
+        },
+        {
+          "count": 1,
+          "value": "abhiswami2121"
+        },
+        {
+          "count": 1,
+          "value": "ai-sdk-factory[bot]"
+        },
+        {
+          "count": 1,
+          "value": "aisk"
+        },
+        {
+          "count": 1,
+          "value": "alex-grover"
+        },
+        {
+          "count": 1,
+          "value": "anatrajkovska"
+        },
+        {
+          "count": 1,
+          "value": "anbuzin"
+        },
+        {
+          "count": 1,
+          "value": "apricot626"
+        },
+        {
+          "count": 1,
+          "value": "assistant-ui"
+        },
+        {
+          "count": 1,
+          "value": "atinux"
+        },
+        {
+          "count": 1,
+          "value": "benjamincanac"
+        },
+        {
+          "count": 1,
+          "value": "benpankow"
+        },
+        {
+          "count": 1,
+          "value": "bensabic"
+        },
+        {
+          "count": 1,
+          "value": "bgw"
+        },
+        {
+          "count": 1,
+          "value": "BjornMelin"
+        },
+        {
+          "count": 1,
+          "value": "bobmshannon"
+        },
+        {
+          "count": 1,
+          "value": "Brandon168"
+        },
+        {
+          "count": 1,
+          "value": "bseymour"
+        },
+        {
+          "count": 1,
+          "value": "burak-upstash"
+        },
+        {
+          "count": 1,
+          "value": "CahidArda"
+        },
+        {
+          "count": 1,
+          "value": "calebboyd"
+        },
+        {
+          "count": 1,
+          "value": "christopherkindl"
+        },
+        {
+          "count": 1,
+          "value": "chriswdmr"
+        },
+        {
+          "count": 1,
+          "value": "CosbertGames"
+        },
+        {
+          "count": 1,
+          "value": "cramforce"
+        },
+        {
+          "count": 1,
+          "value": "CswProgrammer"
+        },
+        {
+          "count": 1,
+          "value": "ctate"
+        },
+        {
+          "count": 1,
+          "value": "cubic-dev-ai[bot]"
+        },
+        {
+          "count": 1,
+          "value": "daviddragan377"
+        },
+        {
+          "count": 1,
+          "value": "devjiwonchoi"
+        },
+        {
+          "count": 1,
+          "value": "dieDeMiguel"
+        },
+        {
+          "count": 1,
+          "value": "dominiksipowicz"
+        },
+        {
+          "count": 1,
+          "value": "dvoytenko"
+        },
+        {
+          "count": 1,
+          "value": "ecklf"
+        },
+        {
+          "count": 1,
+          "value": "EfeDurmaz16"
+        },
+        {
+          "count": 1,
+          "value": "emeraldsanto"
+        },
+        {
+          "count": 1,
+          "value": "enesakar"
+        },
+        {
+          "count": 1,
+          "value": "enesgules"
+        },
+        {
+          "count": 1,
+          "value": "ephraimduncan"
+        },
+        {
+          "count": 1,
+          "value": "eps1lon"
+        },
+        {
+          "count": 1,
+          "value": "ErayEroglu"
+        },
+        {
+          "count": 1,
+          "value": "eraykeskinmac"
+        },
+        {
+          "count": 1,
+          "value": "evilrabbit"
+        },
+        {
+          "count": 1,
+          "value": "fahreddinozcan"
+        },
+        {
+          "count": 1,
+          "value": "FanetheDivine"
+        },
+        {
+          "count": 1,
+          "value": "fantix"
+        },
+        {
+          "count": 1,
+          "value": "feugy"
+        },
+        {
+          "count": 1,
+          "value": "fg-nava"
+        },
+        {
+          "count": 1,
+          "value": "Flompe"
+        },
+        {
+          "count": 1,
+          "value": "gdborton"
+        },
+        {
+          "count": 1,
+          "value": "ghost"
+        },
+        {
+          "count": 1,
+          "value": "github-actions[bot]"
+        },
+        {
+          "count": 1,
+          "value": "goldylocks-ai"
+        },
+        {
+          "count": 1,
+          "value": "gr2m"
+        },
+        {
+          "count": 1,
+          "value": "guy-car"
+        },
+        {
+          "count": 1,
+          "value": "haydenbleasel"
+        },
+        {
+          "count": 1,
+          "value": "healeycodes"
+        },
+        {
+          "count": 1,
+          "value": "HugoRCD"
+        },
+        {
+          "count": 1,
+          "value": "icyJoseph"
+        },
+        {
+          "count": 1,
+          "value": "ijjk"
+        },
+        {
+          "count": 1,
+          "value": "jakobhoeg"
+        },
+        {
+          "count": 1,
+          "value": "jaredpalmer"
+        },
+        {
+          "count": 1,
+          "value": "javivelasco"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 19,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 8,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 8,
+      "null_count": 140,
+      "path": "name",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "Andrey Buzin"
+        },
+        {
+          "count": 1,
+          "value": "Cahid Arda"
+        },
+        {
+          "count": 1,
+          "value": "Ephraim Duncan"
+        },
+        {
+          "count": 1,
+          "value": "Hugo"
+        },
+        {
+          "count": 1,
+          "value": "KinfeMichael Tariku"
+        },
+        {
+          "count": 1,
+          "value": "Michael J. Sullivan"
+        },
+        {
+          "count": 1,
+          "value": "Nick Oates"
+        },
+        {
+          "count": 1,
+          "value": "Oz"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "upper"
+        ],
+        "common_prefixes": [
+          "md",
+          "mdq",
+          "mdq6",
+          "mdq6v",
+          "mdq6vx",
+          "mdq6vxn",
+          "mdq6vxnl"
+        ],
+        "max_len": 32,
+        "min_len": 12
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 148,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 148,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "0003c056105ea354",
+          "01ca2a685dcbb790",
+          "0279463ebf9ea705",
+          "027bb7f19cece890",
+          "0301caedb6c2cf3f",
+          "0451852366afdddc",
+          "063993192ec97ce8",
+          "07a6caefa09deb8a",
+          "085e0e38e80c46ff",
+          "0a67689b6502c0ba",
+          "0de6304dcc9f1dcd",
+          "0fb67bf758a3e425",
+          "1305b9aa1daee7e5",
+          "169edb95e59a23f2",
+          "19feae821c36c5e6",
+          "1a1f26a64ab50813",
+          "1d3831b6f660db0e",
+          "1d4f20d4cd66af44",
+          "1ef0739f1594f09d",
+          "1fd849b8dc70e298",
+          "21d9b8bbce062843",
+          "22e29b76330576f3",
+          "23dc18aeced849fa",
+          "27e35be7366eac5e",
+          "28b345c99fcfa26d",
+          "297f2975bbf31965",
+          "29d6688797df3411",
+          "2c4ecbcffaf9c21c",
+          "2cb73323436e5a16",
+          "2f0ac4277252dd8a",
+          "32762b90d21bfc51",
+          "34bcfd25d486b926",
+          "36ddac23b871247c",
+          "375b620a00d6630f",
+          "3a01bd491c932bf8",
+          "3a03879fc9b2d5da",
+          "3a21d720aa9c59e4",
+          "3a717f9964dc5b31",
+          "3adb81dbc4bcdfb2",
+          "3aedfecacd918ac1",
+          "3c0ef02654f226fb",
+          "3de777492ec6bc19",
+          "41a3732b2c7898ab",
+          "4267bd7ee9520f4e",
+          "4824197d2a092537",
+          "48cf9b36778fcccb",
+          "4b29a2b00be7a4e8",
+          "4df6687fff999e78",
+          "505b9221dd911b5f",
+          "51460d93db40b045",
+          "522806813321c483",
+          "52d9a4f70443eead",
+          "5403e0c0b57f69b4",
+          "54b3a552d7f9d2e7",
+          "577b5387d4605d72",
+          "588408005fe47ad8",
+          "58a41a075575a242",
+          "599150d122f92b95",
+          "59ea1ed41422bedd",
+          "5c977badb14209b6",
+          "5ca4fdb9f589782e",
+          "5d7d87f24e01a9bd",
+          "5ecab3daeee7d5bd",
+          "61fae8be39e67063",
+          "626e0647cfbf02e2",
+          "629ff9c03eb21c77",
+          "645181e3f186454f",
+          "67dd8524ecae0813",
+          "68a7e061aef1d7f7",
+          "6ba3fa3626af29ac",
+          "6d0715d86d74c993",
+          "6e78e8f45fc6bdfa",
+          "6f1c88b8cde3bba4",
+          "70a6bb378078e0d2",
+          "7208f4db13ae8a20",
+          "73cd48fdb44896e3",
+          "762c6aebc5e1ea08",
+          "7699d944169697b8",
+          "7907fdd24bc4d73d",
+          "7aeae2b7a748e383",
+          "7cb5bab211eb1e6c",
+          "7db56e7c650c9448",
+          "7e3acb8e5d3ad801",
+          "7e4eb9434fcc298c",
+          "7e72e26844eebf21",
+          "8300c4f5d32fbf15",
+          "830c85db393704ec",
+          "83d93a9f68a46030",
+          "856bed9b1e57294b",
+          "86d17820464edac7",
+          "8b5bffa812bc1f21",
+          "8c04b4acb9bb2df8",
+          "8fb6e42a8b8a8ed8",
+          "904750e3e070946f",
+          "912ef0849d233e36",
+          "91b684d3dcd9b39c",
+          "926220a6a6148e42",
+          "93f098fc5a54830a",
+          "94ff553fd3dd9046",
+          "95952444c3cd22e6",
+          "96214712d2363f2d",
+          "97c04de539af85d8",
+          "9a042cdf37525d33",
+          "9ac6197380ae8798",
+          "9ada94810f60ae38",
+          "9ec407f057814a59",
+          "a0cf5d9a4ad67e0f",
+          "a0ffa745a111be29",
+          "a1a57ae5b539dacd",
+          "a57d42d43a2b49c8",
+          "a6696943b44c6d96",
+          "a88d638c5f4c2e05",
+          "a9711d43bd42d6e4",
+          "aa9e507bba4bffc3",
+          "b1c1d962b7e22753",
+          "b2154124e1910da6",
+          "b241c17e63a1d15d",
+          "b5913c732706dd1b",
+          "ba1d5b9649bc9e7a",
+          "bb2a1299ca594137",
+          "c0723bfd8c81c665",
+          "c19d88a90ac4bd23",
+          "c65d3a6f39ba1863",
+          "c96287edd09963c1",
+          "ca46213509ebeb56",
+          "cc8660910caadb4d",
+          "cde5429610d93a51",
+          "ce4514884ff98dc6",
+          "d02973233e681906",
+          "d1a01bcaf4c7f206",
+          "d5534a5fe15605d5",
+          "d5ef6291b12c7745",
+          "d6fad7fbc77c3ee0",
+          "d72d2987ec57b856",
+          "d79700ebf148c991",
+          "dfd4fd6d8fb2b9b7",
+          "e2bc34379fc122a4",
+          "e750f27c8e9ed954",
+          "eafb505e15d13e2d",
+          "eb50856b5201d1af",
+          "ed43541f17767d9b",
+          "edd548dab823f07d",
+          "f3a6ef7f0995e025",
+          "f4213dce693b2fa4",
+          "f7de9bc5eb6ff354",
+          "f809afec720b02d5",
+          "f995432c084dc5f5",
+          "fa23c75c2aa681a4"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "node_id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "BOT_kgDOC2QqkA"
+        },
+        {
+          "count": 1,
+          "value": "BOT_kgDOEGT0xg"
+        },
+        {
+          "count": 1,
+          "value": "BOT_kgDOEjtBOg"
+        },
+        {
+          "count": 1,
+          "value": "BOT_kgDOEqhdww"
+        },
+        {
+          "count": 1,
+          "value": "MDEyOk9yZ2FuaXphdGlvbjc0OTg5NDEy"
+        },
+        {
+          "count": 1,
+          "value": "MDEyOk9yZ2FuaXphdGlvbjE0OTg1MDIw"
+        },
+        {
+          "count": 1,
+          "value": "MDM6Qm90MjkxMzk2MTQ="
+        },
+        {
+          "count": 1,
+          "value": "MDM6Qm90MzU2MTM4MjU="
+        },
+        {
+          "count": 1,
+          "value": "MDM6Qm90NDE4OTgyODI="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjc0MTQ1MjE="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjc1NTg0NA=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjc1OTcxMDEw"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjc3MTk2OA=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjcwMjM5NzM2"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjcxMjU2"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjcxOTM4NzAx"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjcyNDk5MjA="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjcyNjA0OQ=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjczOTk4NA=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE0NDA4NTQ="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE1MDgwMDg="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE1NzA5NjM="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE2MzQ5MjI="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE2OTA4MzA="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE3NTE2MDE="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE3NTM2Mzg3"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE3OTc4MTI="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE3OTM4MzIy"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE4MDgyMDkx"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE4MDQwNA=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjE4NjI2OA=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEwMjE1MTcz"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEwMTM3"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjExMzU2NjY4"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjExNDk1ODY3"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjExNDM2Mjk="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjExNjI5OTE="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEyMjkyMDQ3"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEyMzgyMg=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEzMDQx"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEzNjk4MjI2"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEzNjU4ODE="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEzODc5MTM="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEzOTQ1MDQ="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjEzOTQ3"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjg0NDAwMjY="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjg3MjIwNDc="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjg4MTA3OTA0"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjg5Njc5"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjgxNDY3MzY="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjgzNDkyODM1"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjgzNzMzNDg2"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI0NTU3Nzcz"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI2MDM0NzY4"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI2ODc1MDA5"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI3NjM2ODcw"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI4NjU4NTg="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI4OTEyNjk2"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI5Mzg3OTkz"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI5MzM5ODg="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjI5ODg3MTU3"
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjIwMDExMg=="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjIwMjA0NzM="
+        },
+        {
+          "count": 1,
+          "value": "MDQ6VXNlcjIwNDI1Nzgx"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 24
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 32,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": 32,
+      "null_count": 0,
+      "path": "observed_at",
+      "top_values": [
+        {
+          "count": 68,
+          "value": "2026-09-10 10:25:20.179+00"
+        },
+        {
+          "count": 16,
+          "value": "2026-09-10 10:26:34.751+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:26:33.587+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:26:35.737+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:26:45.95+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:25:20.697+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:26:38.592+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:26:43.132+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:26:36.687+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:26:37.708+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:26:42.461+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:26:48.435+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:25:21.039+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:26:40.793+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:26:45.121+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:26:47.2+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:36.721+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:25:42.171+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:25:43.782+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:26:41.853+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:26:44.363+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:36.079+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:37.424+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:37.96+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:45.084+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:45.414+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:45.736+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.057+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.365+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.661+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.98+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:47.271+00"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 25
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 8,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": 8,
+      "null_count": 140,
+      "path": "profile_fetched_at",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:45.084+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:45.414+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:45.736+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.057+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.365+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.661+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:46.98+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:47.271+00"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "upper"
+        ],
+        "common_prefixes": [
+          "ht",
+          "htt",
+          "http",
+          "https",
+          "https:",
+          "https:/",
+          "https://"
+        ],
+        "max_len": 38,
+        "min_len": 22
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 148,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 148,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "011711b2e028f6a8",
+          "024adf8db6ce0ec3",
+          "02d71ed4b16fc297",
+          "02f74a810fa7c5ab",
+          "0481fa8beb511df4",
+          "05c2df51965dc8fd",
+          "0720badd3f47904b",
+          "09e99adc0257821f",
+          "0d136a9fef7c5e19",
+          "0ed1335b29c63fa4",
+          "113b66ae2c69f8bb",
+          "13250377c676704c",
+          "1477213cd2407719",
+          "1539134749258f7c",
+          "191f472c044e895c",
+          "19aa6a9f912890e0",
+          "1afc150f49f685ae",
+          "1b7bab1d69b6b70b",
+          "1de5950b5fef7c16",
+          "1f9499177422d56f",
+          "20c554bdb52d54df",
+          "242d35f7da74e637",
+          "2492859d8e65169a",
+          "251a2c652c534e88",
+          "25225e12ed920dac",
+          "2b23c0a879753250",
+          "2bbbe57f37b5acc8",
+          "2ef0d6b578a61b9f",
+          "2f21c5fa6030abc5",
+          "2f3d804c0ed2d202",
+          "313e09f2166449ea",
+          "31b0512eab7ff11a",
+          "3302d493ca09d76d",
+          "351f258caaba4f95",
+          "3b284e17b598ec3b",
+          "3c9ce1dbe9062d4a",
+          "3e9582fdb288b812",
+          "3f7d291416ee61ee",
+          "3fd96000571e4ab1",
+          "41c0eaf1cf47571b",
+          "44b01c12901d52b2",
+          "44e82fc5d596a73e",
+          "4561e5a0adb6edc4",
+          "4b57ffb2cdb6103c",
+          "4c59df732d9172ba",
+          "4eb2b284f2a6fb60",
+          "5053c0e96b17da48",
+          "52209418a03f40ad",
+          "53a29aeb5a64d18f",
+          "56366278cee9b356",
+          "57793d274c3a165e",
+          "5836bc7be8d3f93e",
+          "59ddb9ab7ac2a43d",
+          "5b91a7328b830535",
+          "5c357f4cbe4d80e9",
+          "5e488ea331725171",
+          "62e7a8becb92efdd",
+          "64814a2c5b33cb76",
+          "672d3bd9aca2855b",
+          "691ee802509123a7",
+          "69285df355a16631",
+          "6f7b3af1d397eacd",
+          "70473ea1c0ea00f3",
+          "76136fd1e6f94469",
+          "762a941b27cc0abd",
+          "778d4b563f9735d4",
+          "793d90a076500974",
+          "7acb2ba064903fc2",
+          "8094737563b99db3",
+          "824d9bcaa028a34b",
+          "82aced64cee186da",
+          "85579fcb3c0141bc",
+          "8783e7f973dcfd8a",
+          "8918c5f4f370777c",
+          "892bc75cd04bbe13",
+          "8acc398c12470d21",
+          "8e22ab895bb3d484",
+          "8fe2465468ab46ea",
+          "92d07a240945da93",
+          "93038989bf0a78cf",
+          "96f6f74bfb08d847",
+          "9773e4e78a20406c",
+          "9c3d3ccb41ab4ffc",
+          "9c88b4ea38d777cc",
+          "9e011a910e944bdd",
+          "9e7158decb93ab8e",
+          "9e77e219a0a0f03a",
+          "a0ed1cb7ab4e75f7",
+          "a1144c2c2dc318d5",
+          "a201a4964af0881a",
+          "a2a5112f26694d1b",
+          "a72673cc94528162",
+          "a8d7cf7bfb3951a4",
+          "a8ea7c90b75389d5",
+          "ab1fb6a59766ae8f",
+          "ac1f89128cd45315",
+          "ad006e4bec231d30",
+          "aef81c2909693b87",
+          "b2021adc3317a096",
+          "b38cb5dfb3d52e52",
+          "b5bc0536de953512",
+          "b62819402e215e45",
+          "b631cc30d8509231",
+          "b73b201f208ccbd2",
+          "b8af54850d1b6718",
+          "b9a3eacf6a59e17e",
+          "bb84d2d53e7f65dc",
+          "bbb5f4586155e97a",
+          "bc84318b894e46e3",
+          "bc957eb675969cb5",
+          "c503e66e6cd46ae5",
+          "c5694f0dd18f5d4d",
+          "c93bfede2c57710d",
+          "caef2d423af2d577",
+          "ccd4b268de9ed7d8",
+          "cec2d47d096d5c51",
+          "cf291f6f7c2c5c9e",
+          "cf4125fe79aa3cd0",
+          "cfc42c978313d160",
+          "cfeb92f64802473f",
+          "d25944b8bddeae28",
+          "d65c1ed01ea86d2c",
+          "d8f49c3195206bc6",
+          "dd4427390482d2c4",
+          "de9a4707f5345682",
+          "df01aef0d5a25773",
+          "e0289231cee9901a",
+          "e343aa8df109b243",
+          "e4ac584c450aaf00",
+          "e4d7315dc8abf266",
+          "e50ea721834dc4a1",
+          "ed65840c49db069c",
+          "efeb6743cb7cd8eb",
+          "f30e953b3da09b32",
+          "f59c8a031ea4e9e6",
+          "f66edf15192e2d95",
+          "f804af3e5401c078",
+          "f81bba465acd9786",
+          "f83d530cdcfad555",
+          "f899342eecfc4d54",
+          "f97cb45c94cce5c0",
+          "facfb7cdc6290b85",
+          "fbcd0728bbe15bf0",
+          "fbd42c618cb79759",
+          "fc0b8d81b0c0d893",
+          "fc68238303ad487a",
+          "fe0ab41e5701fbed",
+          "ff5b054eb61c0b22"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "profile_url",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "https://github.com/1st1"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/aayush-kapoor"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/abhiswami2121"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/aisk"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/alex-grover"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/anatrajkovska"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/anbuzin"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/ai-sdk-factory"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/cubic-dev-ai"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/github-actions"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/renovate"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/rupic-app"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/upstash-tag"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apps/vercel"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/apricot626"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/assistant-ui"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/atinux"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/benjamincanac"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/benpankow"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bensabic"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bgw"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/BjornMelin"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bobmshannon"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/Brandon168"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/bseymour"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/burak-upstash"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/CahidArda"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/calebboyd"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/christopherkindl"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/chriswdmr"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/CosbertGames"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/cramforce"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/CswProgrammer"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ctate"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/daviddragan377"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/devjiwonchoi"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/dieDeMiguel"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/dominiksipowicz"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/dvoytenko"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ecklf"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/EfeDurmaz16"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/emeraldsanto"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/enesakar"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/enesgules"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ephraimduncan"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/eps1lon"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ErayEroglu"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/eraykeskinmac"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/evilrabbit"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/fahreddinozcan"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/FanetheDivine"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/fantix"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/feugy"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/fg-nava"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/Flompe"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/gdborton"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/ghost"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/goldylocks-ai"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/gr2m"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/guy-car"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/haydenbleasel"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/healeycodes"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/HugoRCD"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/icyJoseph"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 3,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 8,
+      "distinct_source": "sample_floor",
+      "kind": "integer",
+      "low_card_exact": 8,
+      "min_max": {
+        "max": "247",
+        "min": "15"
+      },
+      "null_count": 140,
+      "path": "public_repos_count",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "105"
+        },
+        {
+          "count": 1,
+          "value": "15"
+        },
+        {
+          "count": 1,
+          "value": "247"
+        },
+        {
+          "count": 1,
+          "value": "28"
+        },
+        {
+          "count": 1,
+          "value": "38"
+        },
+        {
+          "count": 1,
+          "value": "59"
+        },
+        {
+          "count": 1,
+          "value": "65"
+        },
+        {
+          "count": 1,
+          "value": "76"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 130,
+        "min_len": 3
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 148,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 148,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "006c329afaaae8bb",
+          "006ddab025a6821e",
+          "0625f2bc62d6707a",
+          "07f3547a728d151d",
+          "098d1d1c0449a1cb",
+          "0e057210ff04eaa2",
+          "0fc9f9f50a67d891",
+          "10cce4cf75e988b3",
+          "1195125fd2323eb3",
+          "169c96a5fe801ce4",
+          "1741b3b6bc57caa9",
+          "1891a05b462c6c66",
+          "19da43787a1ebeec",
+          "1c74457e7ca3144d",
+          "1d764ac2c9c2467a",
+          "1e7a70cebe2150d0",
+          "20299179c67f8d8b",
+          "233814ffae2f14c0",
+          "236140b88a30b694",
+          "23c13c72a7ca4ebc",
+          "24c3021ab83f898f",
+          "24e0754638e93009",
+          "250b7d7046e27336",
+          "25fe99718932b82a",
+          "2703efcac7975ae1",
+          "28e16916fb99a990",
+          "2a2a4e6f5f3cff14",
+          "2c05b8be56c6cfa9",
+          "2da2dea17e18faab",
+          "2db0bebc19d781b5",
+          "3399d02f49253deb",
+          "33e377f23960fdd2",
+          "3839ae29fc934a52",
+          "398dd481afb559ba",
+          "3bbaecb250337527",
+          "3d4da7b25fc76214",
+          "3de021cef9896e54",
+          "3f53d966603e673c",
+          "3fcc34be28055eed",
+          "40216b30654f07fc",
+          "433f3c2090775d76",
+          "44f7c7f5e8d54ba9",
+          "489785785b173dbd",
+          "4be7409cc8af0623",
+          "4c61486f500996a3",
+          "4cd5ac840d03902b",
+          "4d5ccff2e5e03576",
+          "4eb75ff893d921ea",
+          "4fd96d6693c720e3",
+          "542bcecea1630061",
+          "5681b8c09473b8d0",
+          "57d1845a08975f65",
+          "5854c9ec162daba7",
+          "585ab637f9a2d1f7",
+          "5ab383c826e01d92",
+          "5d7457ee51f95055",
+          "5e46d23e82e7811f",
+          "5e6af3a6d2468c48",
+          "5ef8e5706826fccf",
+          "61eab704be603dc0",
+          "6293fb1b07f8e66f",
+          "648edc523e22c428",
+          "654c407416bd5f56",
+          "65f0f7d50a0aaae2",
+          "67680524aaa7a097",
+          "69255b78f4a7869d",
+          "6aa4a16ba714f27d",
+          "6be8d86d405010bd",
+          "6e107986c94bdf84",
+          "6feb27a5740719c6",
+          "71144850f4fb4cc5",
+          "71bb9bccee0d23cd",
+          "742721b3a79f71a9",
+          "7475d717eeb4369e",
+          "74aa6e4d101b38cf",
+          "75b20c15f4e9a310",
+          "78733e513566d833",
+          "7cfeb026d80a7a77",
+          "7e5b8820de3e6475",
+          "81b0a9ff82a7cbaa",
+          "865938f42d3d56bd",
+          "868aa180a3f62639",
+          "88e2d1f01da2ce79",
+          "8c075eebba1c8c88",
+          "8cca020e5dd47cdb",
+          "8d67c504cd5e5107",
+          "8e408d738f312121",
+          "9109b27fb2a834c7",
+          "948bf06eb3fb7a4b",
+          "94d2b39532dcce8e",
+          "96043af2a9db0a02",
+          "96879f607f1a18e1",
+          "978acd5ea891c257",
+          "98e076bbc3e70a82",
+          "98e6a7a823f70bbf",
+          "99d565d9e814a273",
+          "9d205db70fbd6327",
+          "9f5d60c7d6cf835f",
+          "9f695506e5d89622",
+          "a05672ccc9c79780",
+          "a10077b041c1d727",
+          "a37338b6dd699f44",
+          "a566097e866f28b2",
+          "a7f9c6b14eefb49d",
+          "abced3cd08f2d018",
+          "ac725648585c61ca",
+          "ae5f3922554117ab",
+          "b3588ebb3cfa39b6",
+          "b43558d303f150d7",
+          "b59f6cf244625964",
+          "b83bcce13ec47014",
+          "b8e2e665b7cecb20",
+          "ba8acbf01e4c6e17",
+          "bb31d94392494ce1",
+          "bf893959754ac295",
+          "c0baeeb2a526f55f",
+          "c21fb3025d5c7ed6",
+          "c2bb22c7fbc61e4a",
+          "c41004fec8fc96dd",
+          "c6f14de85db9e4f5",
+          "c8e42027bd2cd452",
+          "cb87ed60cf956bdf",
+          "cbdcc05d7a28d6c1",
+          "cc80df27a0eb8b7b",
+          "ccd17c16e35658d6",
+          "cee4f1464fae2600",
+          "d4bd63a7ed4019bd",
+          "d595964aa68d5de9",
+          "d82a232409581cfd",
+          "d8a4a40fce11dfbe",
+          "da8adcc552a6adc4",
+          "dbe4e03f99fb1b1c",
+          "e1b86332d4bea3e3",
+          "e2ee84aba9b520d4",
+          "e47d76769d2acde4",
+          "e4bced7411f4263e",
+          "e5fa5eba0504f362",
+          "e7119b27599db5ae",
+          "e787a94fb4052177",
+          "e7b027711e5b3c63",
+          "e7f6d81eea13d04f",
+          "e8151c86bef6399e",
+          "f423bfef8035a732",
+          "f613d57cdffe1314",
+          "f7e321e696a4d428",
+          "f8fbe576daf5fcd6",
+          "fb96350b2f96de01",
+          "fc8cabe1d9e2d293"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "search_text",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1st1"
+        },
+        {
+          "count": 1,
+          "value": "aayush-kapoor"
+        },
+        {
+          "count": 1,
+          "value": "abhiswami2121"
+        },
+        {
+          "count": 1,
+          "value": "ai-sdk-factory[bot]"
+        },
+        {
+          "count": 1,
+          "value": "aisk"
+        },
+        {
+          "count": 1,
+          "value": "alex-grover"
+        },
+        {
+          "count": 1,
+          "value": "anatrajkovska"
+        },
+        {
+          "count": 1,
+          "value": "anbuzin\nAndrey Buzin\n▲ uv add ai\nVercel\nSan Francisco, CA"
+        },
+        {
+          "count": 1,
+          "value": "apricot626"
+        },
+        {
+          "count": 1,
+          "value": "assistant-ui"
+        },
+        {
+          "count": 1,
+          "value": "atinux"
+        },
+        {
+          "count": 1,
+          "value": "benjamincanac"
+        },
+        {
+          "count": 1,
+          "value": "benpankow"
+        },
+        {
+          "count": 1,
+          "value": "bensabic"
+        },
+        {
+          "count": 1,
+          "value": "bgw"
+        },
+        {
+          "count": 1,
+          "value": "BjornMelin"
+        },
+        {
+          "count": 1,
+          "value": "bobmshannon"
+        },
+        {
+          "count": 1,
+          "value": "Brandon168"
+        },
+        {
+          "count": 1,
+          "value": "bseymour"
+        },
+        {
+          "count": 1,
+          "value": "burak-upstash"
+        },
+        {
+          "count": 1,
+          "value": "CahidArda\nCahid Arda\nUpstash - DX/Software Developer - Bogazici Uni Cmpe\r\n\n@upstash\nTurkey, Istanbul"
+        },
+        {
+          "count": 1,
+          "value": "calebboyd"
+        },
+        {
+          "count": 1,
+          "value": "christopherkindl"
+        },
+        {
+          "count": 1,
+          "value": "chriswdmr"
+        },
+        {
+          "count": 1,
+          "value": "CosbertGames"
+        },
+        {
+          "count": 1,
+          "value": "cramforce"
+        },
+        {
+          "count": 1,
+          "value": "CswProgrammer"
+        },
+        {
+          "count": 1,
+          "value": "ctate"
+        },
+        {
+          "count": 1,
+          "value": "cubic-dev-ai[bot]"
+        },
+        {
+          "count": 1,
+          "value": "daviddragan377"
+        },
+        {
+          "count": 1,
+          "value": "devjiwonchoi"
+        },
+        {
+          "count": 1,
+          "value": "dieDeMiguel"
+        },
+        {
+          "count": 1,
+          "value": "dominiksipowicz"
+        },
+        {
+          "count": 1,
+          "value": "dvoytenko"
+        },
+        {
+          "count": 1,
+          "value": "ecklf"
+        },
+        {
+          "count": 1,
+          "value": "EfeDurmaz16"
+        },
+        {
+          "count": 1,
+          "value": "emeraldsanto"
+        },
+        {
+          "count": 1,
+          "value": "enesakar"
+        },
+        {
+          "count": 1,
+          "value": "enesgules"
+        },
+        {
+          "count": 1,
+          "value": "ephraimduncan\nEphraim Duncan"
+        },
+        {
+          "count": 1,
+          "value": "eps1lon"
+        },
+        {
+          "count": 1,
+          "value": "ErayEroglu"
+        },
+        {
+          "count": 1,
+          "value": "eraykeskinmac"
+        },
+        {
+          "count": 1,
+          "value": "evilrabbit"
+        },
+        {
+          "count": 1,
+          "value": "fahreddinozcan"
+        },
+        {
+          "count": 1,
+          "value": "FanetheDivine"
+        },
+        {
+          "count": 1,
+          "value": "fantix"
+        },
+        {
+          "count": 1,
+          "value": "feugy"
+        },
+        {
+          "count": 1,
+          "value": "fg-nava"
+        },
+        {
+          "count": 1,
+          "value": "Flompe"
+        },
+        {
+          "count": 1,
+          "value": "gdborton"
+        },
+        {
+          "count": 1,
+          "value": "ghost"
+        },
+        {
+          "count": 1,
+          "value": "github-actions[bot]"
+        },
+        {
+          "count": 1,
+          "value": "goldylocks-ai"
+        },
+        {
+          "count": 1,
+          "value": "gr2m"
+        },
+        {
+          "count": 1,
+          "value": "guy-car"
+        },
+        {
+          "count": 1,
+          "value": "haydenbleasel"
+        },
+        {
+          "count": 1,
+          "value": "healeycodes"
+        },
+        {
+          "count": 1,
+          "value": "HugoRCD\nHugo\nSoftware Engineer at @vercel, working on @nuxt 💚\n@vercel . @nuxt\nLondon"
+        },
+        {
+          "count": 1,
+          "value": "icyJoseph"
+        },
+        {
+          "count": 1,
+          "value": "ijjk"
+        },
+        {
+          "count": 1,
+          "value": "jakobhoeg"
+        },
+        {
+          "count": 1,
+          "value": "jaredpalmer"
+        },
+        {
+          "count": 1,
+          "value": "javivelasco"
+        }
+      ],
+      "total_count": 148,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.accounts",
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "full-scan",
+      "sample_seed": 1,
+      "sampled_rows": 148,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

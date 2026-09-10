@@ -13,6 +13,7 @@ import {
   timestamp,
   unique,
   uniqueIndex,
+  varchar,
 } from "drizzle-orm/pg-core";
 
 export const github = pgSchema("github");
@@ -177,9 +178,9 @@ export const concepts = github.table(
   "concepts",
   {
     id: bigserial("id", { mode: "bigint" }).primaryKey(),
-    slug: text("slug").notNull().unique(),
+    slug: varchar("slug", { length: 100 }).notNull().unique(),
     kind: text("kind", { enum: ["domain", "capability", "technology"] }).notNull(),
-    label: text("label").notNull(),
+    label: varchar("label", { length: 200 }).notNull(),
     description: text("description").notNull(),
     aliases: text("aliases").array().notNull().default(sql`'{}'::text[]`),
   },

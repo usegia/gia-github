@@ -1,0 +1,514 @@
+{
+  "doc_count": 16,
+  "fields": [
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [
+          "{\""
+        ],
+        "max_len": 45,
+        "min_len": 5
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 16,
+      "distinct_source": "sample_floor",
+      "kind": "text[]",
+      "low_card_exact": 16,
+      "null_count": 0,
+      "path": "aliases",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "{agentic,\"AI agent\"}"
+        },
+        {
+          "count": 1,
+          "value": "{\"AI SDK\",\"Vercel AI SDK\"}"
+        },
+        {
+          "count": 1,
+          "value": "{\"artificial intelligence\",\"AI projects\",LLM}"
+        },
+        {
+          "count": 1,
+          "value": "{embedding,\"vector representations\"}"
+        },
+        {
+          "count": 1,
+          "value": "{\"function calling\",tools}"
+        },
+        {
+          "count": 1,
+          "value": "{\"hybrid retrieval\",\"hybrid search\"}"
+        },
+        {
+          "count": 1,
+          "value": "{LangGraph}"
+        },
+        {
+          "count": 1,
+          "value": "{MCP}"
+        },
+        {
+          "count": 1,
+          "value": "{Next.js,NextJS}"
+        },
+        {
+          "count": 1,
+          "value": "{OpenAI}"
+        },
+        {
+          "count": 1,
+          "value": "{Postgres,PostgreSQL}"
+        },
+        {
+          "count": 1,
+          "value": "{RAG,\"retrieval augmented generation\"}"
+        },
+        {
+          "count": 1,
+          "value": "{Redis}"
+        },
+        {
+          "count": 1,
+          "value": "{rerank,re-ranking}"
+        },
+        {
+          "count": 1,
+          "value": "{retrieval,retrieve}"
+        },
+        {
+          "count": 1,
+          "value": "{\"semantic retrieval\"}"
+        }
+      ],
+      "total_count": 16,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [
+          "re"
+        ],
+        "max_len": 63,
+        "min_len": 26
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 16,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 16,
+      "null_count": 0,
+      "path": "description",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "Combines multiple retrieval methods."
+        },
+        {
+          "count": 1,
+          "value": "LangGraph agent workflow technology."
+        },
+        {
+          "count": 1,
+          "value": "Model-driven agents perform actions or workflows."
+        },
+        {
+          "count": 1,
+          "value": "Models invoke application functions or tools."
+        },
+        {
+          "count": 1,
+          "value": "OpenAI model or provider integration."
+        },
+        {
+          "count": 1,
+          "value": "PostgreSQL database technology."
+        },
+        {
+          "count": 1,
+          "value": "Produces or uses embedding vectors."
+        },
+        {
+          "count": 1,
+          "value": "Redis datastore technology."
+        },
+        {
+          "count": 1,
+          "value": "Reorders retrieved candidates using relevance scores."
+        },
+        {
+          "count": 1,
+          "value": "Repository explicitly uses AI models or supplies AI components."
+        },
+        {
+          "count": 1,
+          "value": "Retrieval supplies context for generated answers."
+        },
+        {
+          "count": 1,
+          "value": "Retrieving documents, vectors, or contextual evidence."
+        },
+        {
+          "count": 1,
+          "value": "Searches by meaning with explicit semantic-search evidence."
+        },
+        {
+          "count": 1,
+          "value": "The ai package or an explicit Vercel AI SDK reference."
+        },
+        {
+          "count": 1,
+          "value": "The Next.js web framework."
+        },
+        {
+          "count": 1,
+          "value": "Uses the Model Context Protocol."
+        }
+      ],
+      "total_count": 16,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 2,
+        "min_len": 1
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 16,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": 16,
+      "min_max": {
+        "max": "16",
+        "min": "1"
+      },
+      "null_count": 0,
+      "path": "id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1"
+        },
+        {
+          "count": 1,
+          "value": "10"
+        },
+        {
+          "count": 1,
+          "value": "11"
+        },
+        {
+          "count": 1,
+          "value": "12"
+        },
+        {
+          "count": 1,
+          "value": "13"
+        },
+        {
+          "count": 1,
+          "value": "14"
+        },
+        {
+          "count": 1,
+          "value": "15"
+        },
+        {
+          "count": 1,
+          "value": "16"
+        },
+        {
+          "count": 1,
+          "value": "2"
+        },
+        {
+          "count": 1,
+          "value": "3"
+        },
+        {
+          "count": 1,
+          "value": "4"
+        },
+        {
+          "count": 1,
+          "value": "5"
+        },
+        {
+          "count": 1,
+          "value": "6"
+        },
+        {
+          "count": 1,
+          "value": "7"
+        },
+        {
+          "count": 1,
+          "value": "8"
+        },
+        {
+          "count": 1,
+          "value": "9"
+        }
+      ],
+      "total_count": 16,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "ca",
+          "cap",
+          "capa",
+          "capab",
+          "capabi",
+          "capabil",
+          "capabili",
+          "te"
+        ],
+        "max_len": 10,
+        "min_len": 6
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 3,
+      "null_count": 0,
+      "path": "kind",
+      "top_values": [
+        {
+          "count": 8,
+          "value": "capability"
+        },
+        {
+          "count": 7,
+          "value": "technology"
+        },
+        {
+          "count": 1,
+          "value": "domain"
+        }
+      ],
+      "total_count": 16,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 30,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 16,
+      "distinct_source": "sample_floor",
+      "kind": "character varying",
+      "low_card_exact": 16,
+      "null_count": 0,
+      "path": "label",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "AI"
+        },
+        {
+          "count": 1,
+          "value": "AI agents"
+        },
+        {
+          "count": 1,
+          "value": "Embeddings"
+        },
+        {
+          "count": 1,
+          "value": "Hybrid search"
+        },
+        {
+          "count": 1,
+          "value": "LangGraph"
+        },
+        {
+          "count": 1,
+          "value": "Model Context Protocol"
+        },
+        {
+          "count": 1,
+          "value": "Next.js"
+        },
+        {
+          "count": 1,
+          "value": "OpenAI"
+        },
+        {
+          "count": 1,
+          "value": "PostgreSQL"
+        },
+        {
+          "count": 1,
+          "value": "Redis"
+        },
+        {
+          "count": 1,
+          "value": "Reranking"
+        },
+        {
+          "count": 1,
+          "value": "Retrieval"
+        },
+        {
+          "count": 1,
+          "value": "Retrieval-augmented generation"
+        },
+        {
+          "count": 1,
+          "value": "Semantic search"
+        },
+        {
+          "count": 1,
+          "value": "Tool calling"
+        },
+        {
+          "count": 1,
+          "value": "Vercel AI SDK"
+        }
+      ],
+      "total_count": 16,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [],
+        "max_len": 15,
+        "min_len": 2
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 16,
+      "distinct_source": "sample_floor",
+      "kind": "character varying",
+      "low_card_exact": 16,
+      "null_count": 0,
+      "path": "slug",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "agents"
+        },
+        {
+          "count": 1,
+          "value": "ai"
+        },
+        {
+          "count": 1,
+          "value": "embeddings"
+        },
+        {
+          "count": 1,
+          "value": "hybrid-search"
+        },
+        {
+          "count": 1,
+          "value": "langgraph"
+        },
+        {
+          "count": 1,
+          "value": "mcp"
+        },
+        {
+          "count": 1,
+          "value": "nextjs"
+        },
+        {
+          "count": 1,
+          "value": "npm:ai"
+        },
+        {
+          "count": 1,
+          "value": "openai"
+        },
+        {
+          "count": 1,
+          "value": "postgresql"
+        },
+        {
+          "count": 1,
+          "value": "rag"
+        },
+        {
+          "count": 1,
+          "value": "redis"
+        },
+        {
+          "count": 1,
+          "value": "reranking"
+        },
+        {
+          "count": 1,
+          "value": "retrieval"
+        },
+        {
+          "count": 1,
+          "value": "semantic-search"
+        },
+        {
+          "count": 1,
+          "value": "tool-calling"
+        }
+      ],
+      "total_count": 16,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.concepts",
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "full-scan",
+      "sample_seed": 1,
+      "sampled_rows": 16,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

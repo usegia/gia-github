@@ -1,0 +1,381 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "description": "The authored half of the World: semantic intent only, composed with generated evidence into gia/generated/effective-world.json. Never machine-rewritten except to land your own approvals and authoring verbs.",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "aggregation": {
+      "additionalProperties": false,
+      "description": "An opaque authored semantic block; typed `requires` declare its schema dependencies.",
+      "properties": {
+        "requires": {
+          "additionalProperties": false,
+          "properties": {
+            "entities": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "fields": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "value": {}
+      },
+      "required": [
+        "value"
+      ],
+      "type": "object"
+    },
+    "description": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "entities": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "derives": {
+            "additionalProperties": {
+              "additionalProperties": false,
+              "properties": {
+                "derive": {
+                  "properties": {
+                    "op": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "op"
+                  ],
+                  "type": "object"
+                },
+                "semanticKind": {
+                  "enum": [
+                    "string",
+                    "number",
+                    "date",
+                    "boolean",
+                    "text"
+                  ]
+                }
+              },
+              "required": [
+                "derive",
+                "semanticKind"
+              ],
+              "type": "object"
+            },
+            "description": "Derived fields: a recipe over physical fields plus the semantic kind.",
+            "type": "object"
+          },
+          "description": {
+            "type": "string"
+          },
+          "enabled": {
+            "const": false,
+            "description": "Suppress this generated declaration. Absence means no authored opinion; `true` is unrepresentable on purpose."
+          },
+          "fields": {
+            "additionalProperties": {
+              "additionalProperties": false,
+              "properties": {
+                "conventionNote": {
+                  "description": "How this field's values are literally written, so a question's wording becomes a correct filter. Replaces the enrichment pass's drafted note. One line, non-blank, at most 180 characters.",
+                  "maxLength": 180,
+                  "minLength": 1,
+                  "pattern": "^[^\\r\\n]*\\S[^\\r\\n]*$",
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "enabled": {
+                  "const": false,
+                  "description": "Suppress this generated declaration. Absence means no authored opinion; `true` is unrepresentable on purpose."
+                },
+                "temporal": {
+                  "description": "Override the generated temporal meaning, or false to suppress it. Timezone values must be UTC or canonical path-shaped IANA identifiers.",
+                  "oneOf": [
+                    {
+                      "const": false
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "domain": {
+                          "enum": [
+                            "date",
+                            "instant"
+                          ]
+                        },
+                        "periodTimeZone": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "domain"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "domain": {
+                          "const": "local-datetime"
+                        },
+                        "periodTimeZone": {
+                          "type": "string"
+                        },
+                        "storageTimeZone": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "domain",
+                        "storageTimeZone"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                }
+              },
+              "type": "object"
+            },
+            "description": "Per physical field id: description, value-writing convention, temporal convention, or enabled: false to suppress.",
+            "type": "object"
+          },
+          "source": {
+            "description": "The stable physical collection selector, \"schema.table\". This is what pins the semantic id to the source.",
+            "pattern": "^[^.\\s]+\\.[^.\\s]+$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ],
+        "type": "object"
+      },
+      "description": "Authored opinion per semantic entity id.",
+      "type": "object"
+    },
+    "fieldDistinctions": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "guidance": {
+            "description": "Non-blank group guidance, at most 240 Unicode code points.",
+            "maxLength": 240,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "members": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "field": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "entityId": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "fieldId": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "entityId",
+                    "fieldId"
+                  ],
+                  "type": "object"
+                },
+                "role": {
+                  "maxLength": 160,
+                  "minLength": 1,
+                  "pattern": "\\S",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "field",
+                "role"
+              ],
+              "type": "object"
+            },
+            "maxItems": 16,
+            "minItems": 2,
+            "type": "array"
+          }
+        },
+        "required": [
+          "members",
+          "guidance"
+        ],
+        "type": "object"
+      },
+      "description": "Named authored groups for planner-visible fields that are easy to confuse. Members use Core's canonical field order.",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[^.\\s]+$"
+      },
+      "type": "object"
+    },
+    "format": {
+      "const": 3
+    },
+    "measures": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "agg": {
+            "enum": [
+              "sum",
+              "count",
+              "countDistinct",
+              "avg",
+              "min",
+              "max"
+            ]
+          },
+          "entity": {
+            "type": "string"
+          },
+          "over": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "entity",
+          "agg",
+          "over"
+        ],
+        "type": "object"
+      },
+      "description": "Named aggregations over one entity's field.",
+      "type": "object"
+    },
+    "relationships": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "cardinality": {
+            "enum": [
+              "one",
+              "many"
+            ]
+          },
+          "countGrain": {
+            "enum": [
+              "rows",
+              "distinct-owners"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "enabled": {
+            "const": false,
+            "description": "Suppress this generated declaration. Absence means no authored opinion; `true` is unrepresentable on purpose."
+          },
+          "from": {
+            "type": "string"
+          },
+          "join": {
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "const": "direct"
+              },
+              "parts": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "fromField": {
+                      "type": "string"
+                    },
+                    "toField": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "fromField",
+                    "toField"
+                  ],
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "targetUniqueness": {
+                "enum": [
+                  "entity-identity",
+                  "declared-unique",
+                  "not-required"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "parts",
+              "targetUniqueness"
+            ],
+            "type": "object"
+          },
+          "to": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Overrides for generated FK edges (by edge id), or complete manual edges.",
+      "type": "object"
+    },
+    "valueSemantics": {
+      "additionalProperties": false,
+      "description": "An opaque authored semantic block; typed `requires` declare its schema dependencies.",
+      "properties": {
+        "requires": {
+          "additionalProperties": false,
+          "properties": {
+            "entities": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "fields": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "value": {}
+      },
+      "required": [
+        "value"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "format"
+  ],
+  "title": "Gia World overlay (gia/world.json)",
+  "type": "object"
+}

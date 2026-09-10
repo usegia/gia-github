@@ -1,0 +1,2095 @@
+{
+  "collisions": [
+    {
+      "class": "raw-values",
+      "literal": "03387a0badc15f211222f1dc5c4cacc2043ed0e6",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "03387a0badc15f211222f1dc5c4cacc2043ed0e6"
+          ],
+          "path": "github.concept_evidence.source_revision",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "03387a0badc15f211222f1dc5c4cacc2043ed0e6"
+          ],
+          "path": "github.pull_requests.head_sha",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "1st1",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "1st1"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "1st1"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "7/18/25 data work",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "7/18/25 data work"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "7/18/25 data work"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "aayush-kapoor",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "aayush-kapoor"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "aayush-kapoor"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "abhiswami2121",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "abhiswami2121"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "abhiswami2121"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add a `cancelled` check to hook's `set_result` call",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add a `cancelled` check to hook's `set_result` call"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add a `cancelled` check to hook's `set_result` call"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add charts",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "add charts"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "add charts"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add cloudflare example",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add Cloudflare Example"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add Cloudflare Example"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add install ci version to nextjs-deployed",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add install ci version to nextjs-deployed"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add install ci version to nextjs-deployed"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add next.js example and readme",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add Next.js Example and README"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add Next.js Example and README"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add pages router test to nextjs example",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add pages router test to nextjs example"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add pages router test to nextjs example"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add pages router test to nextjs/vercel-ai-sdk",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add pages router test to nextjs/vercel-ai-sdk"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add pages router test to nextjs/vercel-ai-sdk"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add reset all namespaces api",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add reset all namespaces API"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add reset all namespaces API"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add reset all namespaces option",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add reset all namespaces option"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add reset all namespaces option"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add start step",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "add start step"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "add start step"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add support for experimentalteetransform to allow models to re-grep commands",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add support for experimentalTeeTransform to allow models to re-grep commands"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add support for experimentalTeeTransform to allow models to re-grep commands"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "add support for namespaces",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add support for namespaces"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Add support for namespaces"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "ai sdk 7 migrated to ai sdk 7, mostly just using the migrate skill.",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "AI SDK 7\nMigrated to AI SDK 7, mostly just using the migrate skill."
+          ],
+          "path": "github.concept_evidence.excerpt",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "AI SDK 7\nMigrated to AI SDK 7, mostly just using the migrate skill."
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "ai sdk v6 compatible api previously built for ai sdk v4, but incompatible with v5 and v6 because of `parameters` instead of `inputschema`",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "AI SDK v6 compatible API\npreviously built for ai sdk v4, but incompatible with v5 and v6 because of `parameters` instead of `inputSchema`"
+          ],
+          "path": "github.concept_evidence.excerpt",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "AI SDK v6 compatible API\npreviously built for ai sdk v4, but incompatible with v5 and v6 because of `parameters` instead of `inputSchema`"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "ai-sdk-factory[bot]",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "ai-sdk-factory[bot]"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "ai-sdk-factory[bot]"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "aisk",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "aisk"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "aisk"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "alex-grover",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "alex-grover"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "alex-grover"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "allow fetching vectors with prefix",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Allow fetching vectors with prefix"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Allow fetching vectors with prefix"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "allow ranging over vectors with prefix",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Allow ranging over vectors with prefix"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Allow ranging over vectors with prefix"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "anatrajkovska",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "anatrajkovska"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "anatrajkovska"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "apricot626",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "apricot626"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "apricot626"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "assistant-ui",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "assistant-ui"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "assistant-ui"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "atinux",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "atinux"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "atinux"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "benjamincanac",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "benjamincanac"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "benjamincanac"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "benpankow",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "benpankow"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "benpankow"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "bensabic",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "bensabic"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "bensabic"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "bgw",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "bgw"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "bgw"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "bjornmelin",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "BjornMelin"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "BjornMelin"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "bobmshannon",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "bobmshannon"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "bobmshannon"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "brandon168",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Brandon168"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Brandon168"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "bseymour",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "bseymour"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "bseymour"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "bump version",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "bump version"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "bump version"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "bump version to 0.4.0",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "bump version to 0.4.0"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "bump version to 0.4.0"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "burak-upstash",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "burak-upstash"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "burak-upstash"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "calebboyd",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "calebboyd"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "calebboyd"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "christopherkindl",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "christopherkindl"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "christopherkindl"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "chriswdmr",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "chriswdmr"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "chriswdmr"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "cosbertgames",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "CosbertGames"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "CosbertGames"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "cramforce",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "cramforce"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "cramforce"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "create webpack.yml",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "Create webpack.yml"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 2,
+          "matchedValues": [
+            "Create webpack.yml"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "cswprogrammer",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "CswProgrammer"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "CswProgrammer"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "ctate",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "ctate"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "ctate"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "cubic-dev-ai[bot]",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "cubic-dev-ai[bot]"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "cubic-dev-ai[bot]"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "daviddragan377",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "daviddragan377"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "daviddragan377"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "devjiwonchoi",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "devjiwonchoi"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "devjiwonchoi"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "diedemiguel",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "dieDeMiguel"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "dieDeMiguel"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "dominiksipowicz",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "dominiksipowicz"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "dominiksipowicz"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "dvoytenko",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "dvoytenko"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "dvoytenko"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "ecklf",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "ecklf"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "ecklf"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "efedurmaz16",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "EfeDurmaz16"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "EfeDurmaz16"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "emeraldsanto",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "emeraldsanto"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "emeraldsanto"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "enesakar",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "enesakar"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "enesakar"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "enesgules",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "enesgules"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "enesgules"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "eps1lon",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "eps1lon"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "eps1lon"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "erayeroglu",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "ErayEroglu"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "ErayEroglu"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "eraykeskinmac",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "eraykeskinmac"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "eraykeskinmac"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "evilrabbit",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "evilrabbit"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "evilrabbit"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "fahreddinozcan",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "fahreddinozcan"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "fahreddinozcan"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "fanethedivine",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "FanetheDivine"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "FanetheDivine"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "fantix",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "fantix"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "fantix"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "feugy",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "feugy"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "feugy"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "fix default @vercel/sandbox destination",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Fix default @vercel/sandbox destination"
+          ],
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Fix default @vercel/sandbox destination"
+          ],
+          "path": "github.pull_requests.title",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "ghost",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "ghost"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "ghost"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "goldylocks-ai",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "goldylocks-ai"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "goldylocks-ai"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "gr2m",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "gr2m"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "gr2m"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "healeycodes",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "healeycodes"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "healeycodes"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/assistant-ui/assistant-ui/pull/7063",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7063"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7063"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/assistant-ui/assistant-ui/pull/7115",
+      "members": [
+        {
+          "df": 3,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7115"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7115"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/assistant-ui/assistant-ui/pull/7119",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7119"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7119"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/assistant-ui/assistant-ui/pull/7127",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7127"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7127"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/assistant-ui/assistant-ui/pull/7128",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7128"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7128"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/assistant-ui/assistant-ui/pull/7129",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7129"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7129"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/assistant-ui/assistant-ui/pull/7150",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7150"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/assistant-ui/assistant-ui/pull/7150"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/upstash/agentkit/pull/11",
+      "members": [
+        {
+          "df": 4,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/11"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/11"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/upstash/agentkit/pull/16",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/16"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/16"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/upstash/agentkit/pull/18",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/18"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/18"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/upstash/agentkit/pull/30",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/30"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/30"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/upstash/agentkit/pull/4",
+      "members": [
+        {
+          "df": 2,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/4"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/agentkit/pull/4"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/upstash/rag-chat-component/pull/1",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/rag-chat-component/pull/1"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/upstash/rag-chat-component/pull/1"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "https://github.com/vercel-labs/ai-python/pull/225",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/vercel-labs/ai-python/pull/225"
+          ],
+          "path": "github.concept_evidence.source_url",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "https://github.com/vercel-labs/ai-python/pull/225"
+          ],
+          "path": "github.pull_requests.pull_request_url",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "jeremyphilemon",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "jeremyphilemon"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "jeremyphilemon"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "jonathanhefner",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "jonathanhefner"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "jonathanhefner"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "lukahartwig",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "lukahartwig"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "lukahartwig"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "mdumandag",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "mdumandag"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "mdumandag"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "padmaia",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "padmaia"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "padmaia"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "railly",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "Railly"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "Railly"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "renovate[bot]",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "renovate[bot]"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "renovate[bot]"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "upstash",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "upstash"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "upstash"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "raw-values",
+      "literal": "wits",
+      "members": [
+        {
+          "df": 1,
+          "matchedValues": [
+            "WITS"
+          ],
+          "path": "github.accounts.login",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "matchedValues": [
+            "WITS"
+          ],
+          "path": "github.accounts.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    },
+    {
+      "class": "hashed",
+      "literal": "85b83e634d5518da2d4a75efe826faf021c0f0867763a7d40c487c98bc3b168d",
+      "members": [
+        {
+          "df": 1,
+          "path": "github.pull_requests.body_text",
+          "storageMode": "raw-values"
+        },
+        {
+          "df": 1,
+          "path": "github.pull_requests.search_text",
+          "storageMode": "raw-values"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-09-10T10:52:22.330Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "world"
+}

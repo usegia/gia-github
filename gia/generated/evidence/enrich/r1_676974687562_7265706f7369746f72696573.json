@@ -1,0 +1,414 @@
+{
+  "entity": {
+    "description": "One row is an observed public GitHub repository and its ownership and project metadata.",
+    "description_origin": "generated",
+    "generatedFrom": {
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-sdk.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "sourceDescriptionSha": "68857c93ab4b0fcb1029900de471f91477665faaf34d545944d0cea69613cec7"
+    }
+  },
+  "fields": [
+    {
+      "aka": [
+        "default branch",
+        "main branch",
+        "primary branch"
+      ],
+      "conventionNote": "Virtually always stored in lowercase (e.g., 'main' or 'master').",
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "default_branch",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The primary branch name used by default for commits and pull requests in the repository.",
+      "short": "Default Git branch name for the repository."
+    },
+    {
+      "aka": [
+        "about",
+        "project summary",
+        "repo description"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "description",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "A short free-text description of the GitHub repository. Unpopulated values indicate that no repository description was provided.",
+      "short": "Summary text describing the project's purpose and functionality."
+    },
+    {
+      "aka": [
+        "full name",
+        "repo path",
+        "slug"
+      ],
+      "conventionNote": "Virtually always formatted in lowercase as 'owner/repo'.",
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "full_name",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The complete combined owner account and repository name identifier separated by a forward slash.",
+      "short": "Full repository path formatted as owner/repository_name."
+    },
+    {
+      "aka": [
+        "github id",
+        "repo id",
+        "repository id"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The primary key identifier assigned by GitHub to uniquely reference the repository.",
+      "short": "Unique numeric GitHub identifier for the repository."
+    },
+    {
+      "aka": [
+        "archived status",
+        "is archived"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "is_archived",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Boolean flag showing if the repository is read-only and archived.",
+      "short": "Flag indicating whether the repository has been archived."
+    },
+    {
+      "aka": [
+        "fork status",
+        "is fork"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "is_fork",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Boolean status marking whether this project was cloned/forked from a parent repository.",
+      "short": "Flag indicating whether the repository is a fork of another project."
+    },
+    {
+      "aka": [
+        "project name",
+        "repo name"
+      ],
+      "conventionNote": "Virtually always formatted in lowercase.",
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "name",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The single repository name without the owner prefix.",
+      "short": "Short project name within its owner's namespace."
+    },
+    {
+      "aka": [
+        "global id",
+        "node id"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "node_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Global node identifier string used across GitHub's GraphQL API.",
+      "short": "Opaque GitHub GraphQL global node ID."
+    },
+    {
+      "aka": [
+        "ingestion time",
+        "observed at",
+        "scraped at"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "observed_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The date and time when the repository metadata was captured into the system.",
+      "short": "Timestamp when this repository record was ingested.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "dc9dcb00cc5e7fb74c6cbef17d4e4b4234e339a6609a7fb05f1779bc8598edff",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "account id",
+        "owner id"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "owner_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Unique numeric identifier pointing to the account that owns this repository.",
+      "short": "Numeric foreign key referencing the owner account.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "partial",
+          "reason": "sampled",
+          "values": [
+            "108547162",
+            "14985020",
+            "189563271",
+            "74989412"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "last commit time",
+        "last pushed date",
+        "pushed at"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "pushed_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The date and time of the latest commit push event recorded on the repository.",
+      "short": "Timestamp of the most recent code push to the repository.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "889c5d5fbd30ef12610f69c52c9d8aa2ebdce8e910cb9c0ce564d3d4cbc8e8b1",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "readme blob sha",
+        "readme hash"
+      ],
+      "conventionNote": "Virtually always a 40-character lowercase hexadecimal hash.",
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "readme_sha",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "ae21009ecd323f46a9afdbe167c7a03cd1c24dd7b984a7e602867f59fb8aa3da"
+      },
+      "long": "The Git blob SHA hash representing the specific version of the captured README file, distinct from a commit SHA.",
+      "short": "Git SHA hash for the captured README file version."
+    },
+    {
+      "aka": [
+        "readme",
+        "readme content"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "readme_text",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The raw documentation text extracted from the main README document of the repository.",
+      "short": "Full text contents of the repository README file."
+    },
+    {
+      "aka": [
+        "github url",
+        "repo url",
+        "web link"
+      ],
+      "conventionNote": "Virtually always formatted starting with 'https://github.com/'.",
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "repository_url",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Direct HTTPS Web URL pointing to the repository on GitHub.",
+      "short": "Web URL linking to the GitHub repository page."
+    },
+    {
+      "aka": [
+        "bm25 text",
+        "indexed document",
+        "search content"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "search_text",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "b3744a3cc1a884bdf4c18ae7ab2bbbd48a4ce51b2316b0d5841d7b90cbbf4666"
+      },
+      "long": "Concatenated full-text index containing the repository name, description, topics, and truncated README text used for BM25 search queries.",
+      "short": "Search index document combining repository metadata and documentation."
+    },
+    {
+      "aka": [
+        "github stars",
+        "stargazers",
+        "stars"
+      ],
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "stars_count",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Whole number count of stars or bookmarks awarded to this project on GitHub.",
+      "short": "Count of GitHub star stargazers for the repository."
+    },
+    {
+      "aka": [
+        "repo tags",
+        "tags",
+        "topics"
+      ],
+      "conventionNote": "Formatted as a comma-separated array string wrapped in curly braces (e.g. '{ai,nextjs}').",
+      "description_origin": "generated",
+      "entityId": "repository",
+      "fieldId": "topics",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "dcceae6f6f186dcfe11a75110895617c0957be1f0f7eb21fad5dbe77cc38a590"
+      },
+      "long": "Comma-separated or formatted list of user-provided categorization tags attached to the repository.",
+      "short": "Author-assigned topic labels describing the repository focus."
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.repositories"
+}

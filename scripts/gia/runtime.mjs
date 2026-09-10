@@ -25,8 +25,7 @@ const logPath = path.join(state, "runtime.log");
 const port = Number(process.env.GIA_RUNTIME_PORT ?? "8798");
 const apiUrl = `http://127.0.0.1:${port}`;
 const localDebug = process.env.GIA_RUNTIME_LOCAL_DEBUG ?? "0";
-if (!["0", "1"].includes(localDebug))
-  throw new Error("GIA_RUNTIME_LOCAL_DEBUG must be 0 or 1");
+if (!["0", "1"].includes(localDebug)) throw new Error("GIA_RUNTIME_LOCAL_DEBUG must be 0 or 1");
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error("Invalid Runtime port");
 const receipt = await readJson(receiptPath).catch((error) => {
   if (error.code === "ENOENT") return undefined;

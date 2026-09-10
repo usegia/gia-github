@@ -1,0 +1,388 @@
+{
+  "entity": {
+    "description": "One row is a versioned source excerpt supporting a concept for a GitHub repository or pull request.",
+    "description_origin": "generated",
+    "generatedFrom": {
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-sdk.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "sourceDescriptionSha": "80f1d27345c78f0f79ba9aa6e91f22b601dc805e0c1958add4f3adf074038c4a"
+    }
+  },
+  "fields": [
+    {
+      "aka": [
+        "concept id",
+        "concept key"
+      ],
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "concept_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Identifies the vocabulary concept that this excerpt provides evidence for. Links directly to the concept table.",
+      "short": "Foreign key referencing the supported concept.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-at-snapshot",
+          "values": [
+            "1",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "code snippet",
+        "evidence text",
+        "excerpt",
+        "text snippet"
+      ],
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "excerpt",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "8e65f5d8cca9c6531e955572b5127a98e6c2b1f4cf0d474cd4a7c95c05c6854c"
+      },
+      "long": "The exact verbatim text snippet or documentation excerpt extracted from a repository or pull request. Serves as ground truth supporting the concept association. Must join concept_id to concept.id to interpret meaning.",
+      "short": "Source text excerpt providing evidence for a concept."
+    },
+    {
+      "aka": [
+        "extractor version",
+        "parser version"
+      ],
+      "conventionNote": "Virtually always 'github-concepts-v1'.",
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "extractor_version",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Identifies the specific extractor logic or rule set version used to identify and extract this concept evidence.",
+      "short": "Extractor software version used to capture the evidence."
+    },
+    {
+      "aka": [
+        "concept evidence key",
+        "evidence id"
+      ],
+      "conventionNote": "64-character hex string.",
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Unique SHA-256 hash identifying a specific concept evidence record.",
+      "short": "Unique primary key for the concept evidence record."
+    },
+    {
+      "aka": [
+        "discovery method",
+        "extraction method",
+        "method"
+      ],
+      "conventionNote": "Virtually always 'deterministic'.",
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "method",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The method used to discover and extract the concept evidence from the source material.",
+      "short": "Extraction technique or classification method name.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-legal",
+          "values": [
+            "deterministic",
+            "llm"
+          ]
+        },
+        "membership": "schema-closed"
+      }
+    },
+    {
+      "aka": [
+        "captured at",
+        "extraction timestamp",
+        "observed time"
+      ],
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "observed_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The date and time when the concept evidence was extracted from the source material.",
+      "short": "Timestamp when this evidence was observed or extracted.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "8f1317994662dd8548cfb0d2e49151b772fcdc7ae5a8d4765a325aab28a613f3",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "pr id",
+        "pull request key"
+      ],
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "pull_request_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "c37001c2522d04bb2f8539920f7f27c8b6678b6ac3ebc6c727e4472baf08020a"
+      },
+      "long": "Identifies the specific pull request from which the evidence was extracted. A null value implies the excerpt came directly from repository-level files rather than a pull request.",
+      "short": "Foreign key identifying the related pull request, if applicable."
+    },
+    {
+      "aka": [
+        "repo id",
+        "repository reference"
+      ],
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "repository_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Foreign key reference pointing to the associated repository or pull request where the evidence was extracted.",
+      "short": "Foreign key identifying the source repository."
+    },
+    {
+      "aka": [
+        "approval status",
+        "review status"
+      ],
+      "conventionNote": "Literally written as 'accepted'.",
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "review_status",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Indicates whether the extracted evidence has been validated for inclusion in the concept index.",
+      "short": "Review and acceptance status of the evidence.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-legal",
+          "values": [
+            "accepted",
+            "pending",
+            "rejected",
+            "superseded"
+          ]
+        },
+        "membership": "schema-closed"
+      }
+    },
+    {
+      "aka": [
+        "document type",
+        "evidence origin",
+        "source kind",
+        "source type"
+      ],
+      "conventionNote": "Matches specific stored categories such as 'pull_request', 'readme', 'manifest', or 'topic'.",
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "source_kind",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The structural origin type of the evidence snippet, indicating whether it came from a pull request, README file, manifest, or topic metadata.",
+      "short": "Category of the source document containing the excerpt.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "glosses": [
+          {
+            "gloss": "Pull request",
+            "value": "pull_request"
+          }
+        ],
+        "inventory": {
+          "kind": "complete-legal",
+          "values": [
+            "manifest",
+            "pull_request",
+            "readme",
+            "topic"
+          ]
+        },
+        "membership": "schema-closed"
+      }
+    },
+    {
+      "aka": [
+        "blob hash",
+        "commit sha",
+        "revision id"
+      ],
+      "conventionNote": "Written as a single 40-character commit hash or two colon-separated hashes.",
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "source_revision",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "d71c1f7c6b5a384aef1281b5b6de8df86be44da9d240a78822851d9a4f6ea6b5"
+      },
+      "long": "The exact source control version, blob hash, or commit identifier corresponding to the state of the file or pull request when the evidence was sampled.",
+      "short": "Commit hash, blob identifier, or version tag of the source."
+    },
+    {
+      "aka": [
+        "file url",
+        "github url",
+        "source link"
+      ],
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "source_url",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The full HTTP URL pointing directly to the web location of the source document, file, or pull request excerpt on GitHub.",
+      "short": "Web URL pointing directly to the source file or pull request."
+    },
+    {
+      "aka": [
+        "evidence strength",
+        "support level"
+      ],
+      "conventionNote": "Values are lower_case strings, specifically 'explicit' or 'inferred'.",
+      "description_origin": "generated",
+      "entityId": "conceptEvidence",
+      "fieldId": "support_level",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Indicates whether the evidence explicitly states the concept or provides an indirect heuristic reference.",
+      "short": "Confidence degree of concept support.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-legal",
+          "values": [
+            "explicit",
+            "inferred"
+          ]
+        },
+        "membership": "schema-closed"
+      }
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.concept_evidence"
+}

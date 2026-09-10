@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-09-10T10:52:22.330Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.concept_evidence",
+  "relationships": [
+    {
+      "distinct_to_count": 16,
+      "edgeId": "github.concept_evidence.concept_id->github.concepts.id",
+      "found_count": 291,
+      "from": "github.concept_evidence",
+      "parts": [
+        {
+          "from_field": "concept_id",
+          "to_field": "id"
+        }
+      ],
+      "sampled_from_count": 291,
+      "to": "github.concepts"
+    },
+    {
+      "edgeId": "github.concept_evidence.(pull_request_id,repository_id)->github.pull_requests.(id,repository_id)",
+      "from": "github.concept_evidence",
+      "parts": [
+        {
+          "from_field": "pull_request_id",
+          "to_field": "id"
+        },
+        {
+          "from_field": "repository_id",
+          "to_field": "repository_id"
+        }
+      ],
+      "to": "github.pull_requests"
+    },
+    {
+      "distinct_to_count": 15,
+      "edgeId": "github.concept_evidence.repository_id->github.repositories.id",
+      "found_count": 291,
+      "from": "github.concept_evidence",
+      "parts": [
+        {
+          "from_field": "repository_id",
+          "to_field": "id"
+        }
+      ],
+      "sampled_from_count": 291,
+      "to": "github.repositories"
+    }
+  ],
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "full-scan",
+      "sample_seed": 0,
+      "sampled_rows": 291,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

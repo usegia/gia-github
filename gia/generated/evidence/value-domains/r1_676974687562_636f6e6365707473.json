@@ -1,0 +1,278 @@
+{
+  "fields": [
+    {
+      "distinct_count": 3,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "capability",
+          "member_count": 3,
+          "sig": "alpha:lower"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-legal",
+        "values": [
+          {
+            "count": 0,
+            "specificity": 750,
+            "value": "capability"
+          },
+          {
+            "count": 0,
+            "specificity": 583,
+            "value": "domain"
+          },
+          {
+            "count": 0,
+            "specificity": 417,
+            "value": "technology"
+          }
+        ]
+      },
+      "membership": "schema-closed",
+      "non_null_count": 0,
+      "path": "kind"
+    },
+    {
+      "distinct_count": 16,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "Hybrid search",
+          "member_count": 5,
+          "sig": "punct-mixed:title"
+        },
+        {
+          "exemplar": "Embeddings",
+          "member_count": 4,
+          "sig": "alpha:title"
+        },
+        {
+          "exemplar": "LangGraph",
+          "member_count": 3,
+          "sig": "alpha:mixed"
+        },
+        {
+          "exemplar": "AI agents",
+          "member_count": 3,
+          "sig": "punct-mixed:mixed"
+        },
+        {
+          "exemplar": "AI",
+          "member_count": 1,
+          "sig": "alpha:upper"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-at-snapshot",
+        "values": [
+          {
+            "count": 1,
+            "specificity": 750,
+            "value": "AI"
+          },
+          {
+            "count": 1,
+            "specificity": 719,
+            "value": "AI agents"
+          },
+          {
+            "count": 1,
+            "specificity": 688,
+            "value": "Embeddings"
+          },
+          {
+            "count": 1,
+            "specificity": 656,
+            "value": "Hybrid search"
+          },
+          {
+            "count": 1,
+            "specificity": 625,
+            "value": "LangGraph"
+          },
+          {
+            "count": 1,
+            "specificity": 594,
+            "value": "Model Context Protocol"
+          },
+          {
+            "count": 1,
+            "specificity": 563,
+            "value": "Next.js"
+          },
+          {
+            "count": 1,
+            "specificity": 531,
+            "value": "OpenAI"
+          },
+          {
+            "count": 1,
+            "specificity": 500,
+            "value": "PostgreSQL"
+          },
+          {
+            "count": 1,
+            "specificity": 469,
+            "value": "Redis"
+          },
+          {
+            "count": 1,
+            "specificity": 438,
+            "value": "Reranking"
+          },
+          {
+            "count": 1,
+            "specificity": 406,
+            "value": "Retrieval"
+          },
+          {
+            "count": 1,
+            "specificity": 375,
+            "value": "Retrieval-augmented generation"
+          },
+          {
+            "count": 1,
+            "specificity": 344,
+            "value": "Semantic search"
+          },
+          {
+            "count": 1,
+            "specificity": 313,
+            "value": "Tool calling"
+          },
+          {
+            "count": 1,
+            "specificity": 281,
+            "value": "Vercel AI SDK"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 16,
+      "path": "label"
+    },
+    {
+      "distinct_count": 16,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "agents",
+          "member_count": 12,
+          "sig": "alpha:lower"
+        },
+        {
+          "exemplar": "hybrid-search",
+          "member_count": 3,
+          "sig": "alnum:lower"
+        },
+        {
+          "exemplar": "npm:ai",
+          "member_count": 1,
+          "sig": "punct-mixed:lower"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-at-snapshot",
+        "values": [
+          {
+            "count": 1,
+            "specificity": 750,
+            "value": "agents"
+          },
+          {
+            "count": 1,
+            "specificity": 719,
+            "value": "ai"
+          },
+          {
+            "count": 1,
+            "specificity": 688,
+            "value": "embeddings"
+          },
+          {
+            "count": 1,
+            "specificity": 656,
+            "value": "hybrid-search"
+          },
+          {
+            "count": 1,
+            "specificity": 625,
+            "value": "langgraph"
+          },
+          {
+            "count": 1,
+            "specificity": 594,
+            "value": "mcp"
+          },
+          {
+            "count": 1,
+            "specificity": 563,
+            "value": "nextjs"
+          },
+          {
+            "count": 1,
+            "specificity": 531,
+            "value": "npm:ai"
+          },
+          {
+            "count": 1,
+            "specificity": 500,
+            "value": "openai"
+          },
+          {
+            "count": 1,
+            "specificity": 469,
+            "value": "postgresql"
+          },
+          {
+            "count": 1,
+            "specificity": 438,
+            "value": "rag"
+          },
+          {
+            "count": 1,
+            "specificity": 406,
+            "value": "redis"
+          },
+          {
+            "count": 1,
+            "specificity": 375,
+            "value": "reranking"
+          },
+          {
+            "count": 1,
+            "specificity": 344,
+            "value": "retrieval"
+          },
+          {
+            "count": 1,
+            "specificity": 313,
+            "value": "semantic-search"
+          },
+          {
+            "count": 1,
+            "specificity": 281,
+            "value": "tool-calling"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 16,
+      "path": "slug"
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.concepts",
+  "source": {
+    "horizon": 4096,
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

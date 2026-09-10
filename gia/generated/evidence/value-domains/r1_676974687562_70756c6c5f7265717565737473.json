@@ -1,0 +1,419 @@
+{
+  "fields": [
+    {
+      "distinct_count": 71,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "57228345",
+          "member_count": 71,
+          "sig": "numeric:none"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-at-snapshot",
+        "values": [
+          {
+            "count": 31,
+            "specificity": 667,
+            "value": "57228345"
+          },
+          {
+            "count": 30,
+            "specificity": 660,
+            "value": "71938701"
+          },
+          {
+            "count": 25,
+            "specificity": 736,
+            "value": "41898282"
+          },
+          {
+            "count": 21,
+            "specificity": 646,
+            "value": "29387993"
+          },
+          {
+            "count": 19,
+            "specificity": 722,
+            "value": "65047246"
+          },
+          {
+            "count": 18,
+            "specificity": 715,
+            "value": "340349"
+          },
+          {
+            "count": 17,
+            "specificity": 583,
+            "value": "58091943"
+          },
+          {
+            "count": 15,
+            "specificity": 701,
+            "value": "29139614"
+          },
+          {
+            "count": 12,
+            "specificity": 694,
+            "value": "18082091"
+          },
+          {
+            "count": 12,
+            "specificity": 687,
+            "value": "21091016"
+          },
+          {
+            "count": 12,
+            "specificity": 596,
+            "value": "88107904"
+          },
+          {
+            "count": 10,
+            "specificity": 673,
+            "value": "305873210"
+          },
+          {
+            "count": 10,
+            "specificity": 665,
+            "value": "313023939"
+          },
+          {
+            "count": 10,
+            "specificity": 658,
+            "value": "49612682"
+          },
+          {
+            "count": 9,
+            "specificity": 568,
+            "value": "24557773"
+          },
+          {
+            "count": 8,
+            "specificity": 644,
+            "value": "55143799"
+          },
+          {
+            "count": 8,
+            "specificity": 637,
+            "value": "89679"
+          },
+          {
+            "count": 5,
+            "specificity": 630,
+            "value": "4389565"
+          },
+          {
+            "count": 4,
+            "specificity": 623,
+            "value": "205036"
+          },
+          {
+            "count": 3,
+            "specificity": 616,
+            "value": "100838962"
+          },
+          {
+            "count": 3,
+            "specificity": 609,
+            "value": "27636870"
+          },
+          {
+            "count": 3,
+            "specificity": 602,
+            "value": "83492835"
+          },
+          {
+            "count": 3,
+            "specificity": 595,
+            "value": "93538980"
+          },
+          {
+            "count": 2,
+            "specificity": 588,
+            "value": "146335736"
+          },
+          {
+            "count": 2,
+            "specificity": 581,
+            "value": "17938322"
+          },
+          {
+            "count": 2,
+            "specificity": 574,
+            "value": "263799550"
+          },
+          {
+            "count": 2,
+            "specificity": 567,
+            "value": "291087047"
+          },
+          {
+            "count": 2,
+            "specificity": 560,
+            "value": "32676955"
+          },
+          {
+            "count": 2,
+            "specificity": 553,
+            "value": "366502"
+          },
+          {
+            "count": 2,
+            "specificity": 546,
+            "value": "75971010"
+          },
+          {
+            "count": 1,
+            "specificity": 539,
+            "value": "101020733"
+          },
+          {
+            "count": 1,
+            "specificity": 532,
+            "value": "101308415"
+          },
+          {
+            "count": 1,
+            "specificity": 525,
+            "value": "10137"
+          },
+          {
+            "count": 1,
+            "specificity": 518,
+            "value": "10215173"
+          },
+          {
+            "count": 1,
+            "specificity": 511,
+            "value": "102487158"
+          },
+          {
+            "count": 1,
+            "specificity": 504,
+            "value": "103972661"
+          },
+          {
+            "count": 1,
+            "specificity": 496,
+            "value": "113418245"
+          },
+          {
+            "count": 1,
+            "specificity": 489,
+            "value": "113545860"
+          },
+          {
+            "count": 1,
+            "specificity": 482,
+            "value": "1143629"
+          },
+          {
+            "count": 1,
+            "specificity": 475,
+            "value": "114422072"
+          },
+          {
+            "count": 1,
+            "specificity": 385,
+            "value": "115853816"
+          },
+          {
+            "count": 1,
+            "specificity": 378,
+            "value": "123822"
+          },
+          {
+            "count": 1,
+            "specificity": 454,
+            "value": "141594291"
+          },
+          {
+            "count": 1,
+            "specificity": 447,
+            "value": "141974463"
+          },
+          {
+            "count": 1,
+            "specificity": 440,
+            "value": "150553445"
+          },
+          {
+            "count": 1,
+            "specificity": 433,
+            "value": "159464953"
+          },
+          {
+            "count": 1,
+            "specificity": 426,
+            "value": "1690830"
+          },
+          {
+            "count": 1,
+            "specificity": 419,
+            "value": "1797812"
+          },
+          {
+            "count": 1,
+            "specificity": 412,
+            "value": "189638926"
+          },
+          {
+            "count": 1,
+            "specificity": 405,
+            "value": "194825742"
+          },
+          {
+            "count": 1,
+            "specificity": 398,
+            "value": "213546777"
+          },
+          {
+            "count": 1,
+            "specificity": 391,
+            "value": "22665058"
+          },
+          {
+            "count": 1,
+            "specificity": 384,
+            "value": "230457447"
+          },
+          {
+            "count": 1,
+            "specificity": 293,
+            "value": "234086"
+          },
+          {
+            "count": 1,
+            "specificity": 370,
+            "value": "252243939"
+          },
+          {
+            "count": 1,
+            "specificity": 363,
+            "value": "26034768"
+          },
+          {
+            "count": 1,
+            "specificity": 356,
+            "value": "26875009"
+          },
+          {
+            "count": 1,
+            "specificity": 349,
+            "value": "273931657"
+          },
+          {
+            "count": 1,
+            "specificity": 342,
+            "value": "274821851"
+          },
+          {
+            "count": 1,
+            "specificity": 335,
+            "value": "275051718"
+          },
+          {
+            "count": 1,
+            "specificity": 327,
+            "value": "35613825"
+          },
+          {
+            "count": 1,
+            "specificity": 237,
+            "value": "39992"
+          },
+          {
+            "count": 1,
+            "specificity": 313,
+            "value": "4060187"
+          },
+          {
+            "count": 1,
+            "specificity": 306,
+            "value": "4142719"
+          },
+          {
+            "count": 1,
+            "specificity": 299,
+            "value": "47982397"
+          },
+          {
+            "count": 1,
+            "specificity": 292,
+            "value": "48079573"
+          },
+          {
+            "count": 1,
+            "specificity": 285,
+            "value": "48212803"
+          },
+          {
+            "count": 1,
+            "specificity": 278,
+            "value": "63066081"
+          },
+          {
+            "count": 1,
+            "specificity": 271,
+            "value": "66008528"
+          },
+          {
+            "count": 1,
+            "specificity": 264,
+            "value": "699636"
+          },
+          {
+            "count": 1,
+            "specificity": 257,
+            "value": "947949"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 343,
+      "path": "author_id"
+    },
+    {
+      "distinct_count": 2,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "closed",
+          "member_count": 2,
+          "sig": "alpha:lower"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-legal",
+        "values": [
+          {
+            "count": 0,
+            "specificity": 750,
+            "value": "closed"
+          },
+          {
+            "count": 0,
+            "specificity": 500,
+            "value": "open"
+          }
+        ]
+      },
+      "membership": "schema-closed",
+      "non_null_count": 0,
+      "path": "state"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:55:05.460Z"
+  },
+  "index": "github.pull_requests",
+  "source": {
+    "horizon": 4096,
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

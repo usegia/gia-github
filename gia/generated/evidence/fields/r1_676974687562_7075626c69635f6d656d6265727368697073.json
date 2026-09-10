@@ -1,0 +1,1010 @@
+{
+  "doc_count": 79,
+  "fields": [
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "tr",
+          "tru",
+          "true"
+        ],
+        "max_len": 4,
+        "min_len": 4
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 1,
+      "distinct_source": "sample_floor",
+      "kind": "boolean",
+      "low_card_exact": 1,
+      "null_count": 0,
+      "path": "currently_public",
+      "top_values": [
+        {
+          "count": 79,
+          "value": "true"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 26
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": 3,
+      "null_count": 0,
+      "path": "first_seen_at",
+      "top_values": [
+        {
+          "count": 72,
+          "value": "2026-09-10 10:25:20.179+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:25:20.697+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:25:21.039+00"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 2,
+        "min_len": 1
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 79,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 79,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "02e74f10e0327ad8",
+          "03afdbd66e7929b1",
+          "072b030ba126b2f4",
+          "093f65e080a295f8",
+          "14bfa6bb14875e45",
+          "1679091c5a880faf",
+          "17e62166fc8586df",
+          "182be0c5cdcd5072",
+          "19ca14e7ea6328a4",
+          "1c383cd30b7c298a",
+          "1f0e3dad99908345",
+          "1ff1de774005f8da",
+          "2838023a778dfaec",
+          "28dd2c7955ce9264",
+          "3295c76acbf4caae",
+          "32bb90e8976aab52",
+          "33e75ff09dd601bb",
+          "3416a75f4cea9109",
+          "34173cb38f07f89d",
+          "35f4a8d465e6e1ed",
+          "37693cfc748049e4",
+          "3c59dc048e885024",
+          "44f683a84163b352",
+          "45c48cce2e2d7fbd",
+          "4e732ced3463d06d",
+          "6364d3f0f495b6ab",
+          "642e92efb7942173",
+          "6512bd43d9caa6e0",
+          "66f041e16a60928b",
+          "67c6a1e7ce56d3d6",
+          "6c8349cc7260ae62",
+          "6ea9ab1baa0efb9e",
+          "6f4922f45568161a",
+          "70efdf2ec9b08607",
+          "72b32a1f754ba1c0",
+          "735b90b4568125ed",
+          "7cbbc409ec990f19",
+          "7f39f8317fbdb198",
+          "8e296a067a375633",
+          "8f14e45fceea167a",
+          "98f13708210194c4",
+          "9a1158154dfa42ca",
+          "9bf31c7ff062936a",
+          "9f61408e3afb633e",
+          "a1d0c6e83f027327",
+          "a3f390d88e4c41f2",
+          "a5771bce93e200c3",
+          "a5bfc9e07964f8dd",
+          "a684eceee76fc522",
+          "a87ff679a2f3e71d",
+          "aab3238922bcc25a",
+          "ad61ab143223efbc",
+          "b53b3a3d6ab90ce0",
+          "b6d767d2f8ed5d21",
+          "c0c7c76d30bd3dca",
+          "c16a5320fa475530",
+          "c20ad4d76fe97759",
+          "c4ca4238a0b92382",
+          "c51ce410c124a10e",
+          "c74d97b01eae257e",
+          "c81e728d9d4c2f63",
+          "c9f0f895fb98ab91",
+          "d09bf41544a3365a",
+          "d1fe173d08e95939",
+          "d2ddea18f00665ce",
+          "d3d9446802a44259",
+          "d645920e395fedad",
+          "d67d8ab4f4c10bf2",
+          "d82c8d1619ad8176",
+          "d9d4f495e875a2e0",
+          "e2c420d928d4bf8c",
+          "e369853df766fa44",
+          "e4da3b7fbbce2345",
+          "ea5d2f1c4608232e",
+          "eccbc87e4b5ce2fe",
+          "f457c545a9ded88f",
+          "f7177163c833dff4",
+          "fbd7939d674997cd",
+          "fc490ca45c00b124"
+        ]
+      },
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "79",
+        "min": "1"
+      },
+      "null_count": 0,
+      "path": "id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "1"
+        },
+        {
+          "count": 1,
+          "value": "10"
+        },
+        {
+          "count": 1,
+          "value": "11"
+        },
+        {
+          "count": 1,
+          "value": "12"
+        },
+        {
+          "count": 1,
+          "value": "13"
+        },
+        {
+          "count": 1,
+          "value": "14"
+        },
+        {
+          "count": 1,
+          "value": "15"
+        },
+        {
+          "count": 1,
+          "value": "16"
+        },
+        {
+          "count": 1,
+          "value": "17"
+        },
+        {
+          "count": 1,
+          "value": "18"
+        },
+        {
+          "count": 1,
+          "value": "19"
+        },
+        {
+          "count": 1,
+          "value": "2"
+        },
+        {
+          "count": 1,
+          "value": "20"
+        },
+        {
+          "count": 1,
+          "value": "21"
+        },
+        {
+          "count": 1,
+          "value": "22"
+        },
+        {
+          "count": 1,
+          "value": "23"
+        },
+        {
+          "count": 1,
+          "value": "24"
+        },
+        {
+          "count": 1,
+          "value": "25"
+        },
+        {
+          "count": 1,
+          "value": "26"
+        },
+        {
+          "count": 1,
+          "value": "27"
+        },
+        {
+          "count": 1,
+          "value": "28"
+        },
+        {
+          "count": 1,
+          "value": "29"
+        },
+        {
+          "count": 1,
+          "value": "3"
+        },
+        {
+          "count": 1,
+          "value": "30"
+        },
+        {
+          "count": 1,
+          "value": "31"
+        },
+        {
+          "count": 1,
+          "value": "32"
+        },
+        {
+          "count": 1,
+          "value": "33"
+        },
+        {
+          "count": 1,
+          "value": "34"
+        },
+        {
+          "count": 1,
+          "value": "35"
+        },
+        {
+          "count": 1,
+          "value": "36"
+        },
+        {
+          "count": 1,
+          "value": "37"
+        },
+        {
+          "count": 1,
+          "value": "38"
+        },
+        {
+          "count": 1,
+          "value": "39"
+        },
+        {
+          "count": 1,
+          "value": "4"
+        },
+        {
+          "count": 1,
+          "value": "40"
+        },
+        {
+          "count": 1,
+          "value": "41"
+        },
+        {
+          "count": 1,
+          "value": "42"
+        },
+        {
+          "count": 1,
+          "value": "43"
+        },
+        {
+          "count": 1,
+          "value": "44"
+        },
+        {
+          "count": 1,
+          "value": "45"
+        },
+        {
+          "count": 1,
+          "value": "46"
+        },
+        {
+          "count": 1,
+          "value": "47"
+        },
+        {
+          "count": 1,
+          "value": "48"
+        },
+        {
+          "count": 1,
+          "value": "49"
+        },
+        {
+          "count": 1,
+          "value": "5"
+        },
+        {
+          "count": 1,
+          "value": "50"
+        },
+        {
+          "count": 1,
+          "value": "51"
+        },
+        {
+          "count": 1,
+          "value": "52"
+        },
+        {
+          "count": 1,
+          "value": "53"
+        },
+        {
+          "count": 1,
+          "value": "54"
+        },
+        {
+          "count": 1,
+          "value": "55"
+        },
+        {
+          "count": 1,
+          "value": "56"
+        },
+        {
+          "count": 1,
+          "value": "57"
+        },
+        {
+          "count": 1,
+          "value": "58"
+        },
+        {
+          "count": 1,
+          "value": "59"
+        },
+        {
+          "count": 1,
+          "value": "6"
+        },
+        {
+          "count": 1,
+          "value": "60"
+        },
+        {
+          "count": 1,
+          "value": "61"
+        },
+        {
+          "count": 1,
+          "value": "62"
+        },
+        {
+          "count": 1,
+          "value": "63"
+        },
+        {
+          "count": 1,
+          "value": "64"
+        },
+        {
+          "count": 1,
+          "value": "65"
+        },
+        {
+          "count": 1,
+          "value": "66"
+        },
+        {
+          "count": 1,
+          "value": "67"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 26
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": 3,
+      "null_count": 0,
+      "path": "last_checked_at",
+      "top_values": [
+        {
+          "count": 72,
+          "value": "2026-09-10 10:25:20.179+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:25:20.697+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:25:21.039+00"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 26
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": 3,
+      "null_count": 0,
+      "path": "last_seen_at",
+      "top_values": [
+        {
+          "count": 72,
+          "value": "2026-09-10 10:25:20.179+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:25:20.697+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:25:21.039+00"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [
+          "14",
+          "149",
+          "1498",
+          "14985",
+          "149850",
+          "1498502",
+          "14985020"
+        ],
+        "max_len": 9,
+        "min_len": 8
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": 3,
+      "min_max": {
+        "max": "189563271",
+        "min": "14985020"
+      },
+      "null_count": 0,
+      "path": "organization_id",
+      "top_values": [
+        {
+          "count": 72,
+          "value": "14985020"
+        },
+        {
+          "count": 5,
+          "value": "108547162"
+        },
+        {
+          "count": 2,
+          "value": "189563271"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 9,
+        "min_len": 5
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 76,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 76,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "11a5b72d6319cb64",
+          "13cc1e56c177a1dc",
+          "229d6dd6484c574c",
+          "263754e66196d7b2",
+          "285be3aa18efe5cd",
+          "2ca1ce4a65bf5b60",
+          "304526530c5378d3",
+          "339667490c94f272",
+          "39b5a43c5433565d",
+          "3ba4b0c779e1f081",
+          "3d3fcb2fe4335c1e",
+          "4605d747a7426c6c",
+          "47690627ae55f3f1",
+          "47711d4150378212",
+          "4904abf388a1a367",
+          "4d5fa0b4e73e7208",
+          "4f19f3bf3251d7a4",
+          "4f45e68c80238506",
+          "4ff3a3c052fa3803",
+          "536577e6ba72c9e1",
+          "557643c7fc459666",
+          "5ea39e9a133f6205",
+          "5f686ef345572195",
+          "62808d3661f26776",
+          "6a09002566ca5a6b",
+          "6ae5a84182692c49",
+          "6fafb74d462c88cb",
+          "7400dd183b443fbd",
+          "75d068769bebe411",
+          "75f8cde11a97cf3a",
+          "79e62b1cd12a844a",
+          "7c94cbb31e17e240",
+          "8476205d89b2e8eb",
+          "8655f16996c8058e",
+          "8c48bb9dba966398",
+          "8ff2d13fc0694892",
+          "90deeb8c91e725b4",
+          "911a326fd171682f",
+          "9247def172eac838",
+          "93553ff9fffa1608",
+          "98f3db37012c8dc3",
+          "99308732cb1e23b1",
+          "9b0ea94742f110dc",
+          "9c84d6f428d05324",
+          "9eccdd15b0fa6ec9",
+          "aa4b464e45adb546",
+          "ab0bca9bd0bf6a0b",
+          "ad23bc690119393e",
+          "aec335ef2e6a8c08",
+          "ba424859007ea929",
+          "c526aab03671bed1",
+          "c8052979bfd0ea14",
+          "c821676842228981",
+          "c83a962ef18f7355",
+          "ce16db5e39d2f628",
+          "ce6bc06b0328c1e4",
+          "d0e0cab97e82f4a3",
+          "d44abe36cefded5f",
+          "d7a4a675a24b6f47",
+          "d9dc0dcbf9f107dc",
+          "dcaa4fda86b50193",
+          "de261b4693bc0848",
+          "de2730166c556459",
+          "dec9f0fbc5429b0d",
+          "e203415a3eea94f7",
+          "e282d1cf59bc440f",
+          "e364835238ba27ac",
+          "e46f75d46de0eea5",
+          "e6188a7bcc79452b",
+          "e8091ec0c09dcc53",
+          "e91860e77fb81236",
+          "e9fd2f8c06d18fe1",
+          "eb9f8956a4800a0a",
+          "ed3ca2cae61acc68",
+          "f12d755914351b81",
+          "f2a6cedcbaa63408"
+        ]
+      },
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "120007119",
+        "min": "13041"
+      },
+      "null_count": 0,
+      "path": "person_id",
+      "top_values": [
+        {
+          "count": 2,
+          "value": "490265"
+        },
+        {
+          "count": 2,
+          "value": "51397083"
+        },
+        {
+          "count": 2,
+          "value": "71938701"
+        },
+        {
+          "count": 1,
+          "value": "11356668"
+        },
+        {
+          "count": 1,
+          "value": "11495867"
+        },
+        {
+          "count": 1,
+          "value": "115853816"
+        },
+        {
+          "count": 1,
+          "value": "1162991"
+        },
+        {
+          "count": 1,
+          "value": "120007119"
+        },
+        {
+          "count": 1,
+          "value": "12292047"
+        },
+        {
+          "count": 1,
+          "value": "123822"
+        },
+        {
+          "count": 1,
+          "value": "13041"
+        },
+        {
+          "count": 1,
+          "value": "1365881"
+        },
+        {
+          "count": 1,
+          "value": "13698226"
+        },
+        {
+          "count": 1,
+          "value": "1387913"
+        },
+        {
+          "count": 1,
+          "value": "1394504"
+        },
+        {
+          "count": 1,
+          "value": "13947"
+        },
+        {
+          "count": 1,
+          "value": "1440854"
+        },
+        {
+          "count": 1,
+          "value": "1508008"
+        },
+        {
+          "count": 1,
+          "value": "1570963"
+        },
+        {
+          "count": 1,
+          "value": "1634922"
+        },
+        {
+          "count": 1,
+          "value": "1751601"
+        },
+        {
+          "count": 1,
+          "value": "17536387"
+        },
+        {
+          "count": 1,
+          "value": "180404"
+        },
+        {
+          "count": 1,
+          "value": "186268"
+        },
+        {
+          "count": 1,
+          "value": "200112"
+        },
+        {
+          "count": 1,
+          "value": "2020473"
+        },
+        {
+          "count": 1,
+          "value": "20425781"
+        },
+        {
+          "count": 1,
+          "value": "21013447"
+        },
+        {
+          "count": 1,
+          "value": "22380829"
+        },
+        {
+          "count": 1,
+          "value": "22559461"
+        },
+        {
+          "count": 1,
+          "value": "229881"
+        },
+        {
+          "count": 1,
+          "value": "23662329"
+        },
+        {
+          "count": 1,
+          "value": "239003"
+        },
+        {
+          "count": 1,
+          "value": "2865858"
+        },
+        {
+          "count": 1,
+          "value": "28912696"
+        },
+        {
+          "count": 1,
+          "value": "2933988"
+        },
+        {
+          "count": 1,
+          "value": "29887157"
+        },
+        {
+          "count": 1,
+          "value": "3088615"
+        },
+        {
+          "count": 1,
+          "value": "318866"
+        },
+        {
+          "count": 1,
+          "value": "33291795"
+        },
+        {
+          "count": 1,
+          "value": "34559231"
+        },
+        {
+          "count": 1,
+          "value": "35507539"
+        },
+        {
+          "count": 1,
+          "value": "3676859"
+        },
+        {
+          "count": 1,
+          "value": "40034115"
+        },
+        {
+          "count": 1,
+          "value": "41523937"
+        },
+        {
+          "count": 1,
+          "value": "4172067"
+        },
+        {
+          "count": 1,
+          "value": "4278345"
+        },
+        {
+          "count": 1,
+          "value": "43268759"
+        },
+        {
+          "count": 1,
+          "value": "4586894"
+        },
+        {
+          "count": 1,
+          "value": "4658208"
+        },
+        {
+          "count": 1,
+          "value": "52761222"
+        },
+        {
+          "count": 1,
+          "value": "53372002"
+        },
+        {
+          "count": 1,
+          "value": "55700336"
+        },
+        {
+          "count": 1,
+          "value": "56037657"
+        },
+        {
+          "count": 1,
+          "value": "58091943"
+        },
+        {
+          "count": 1,
+          "value": "5818726"
+        },
+        {
+          "count": 1,
+          "value": "5983714"
+        },
+        {
+          "count": 1,
+          "value": "6616955"
+        },
+        {
+          "count": 1,
+          "value": "664177"
+        },
+        {
+          "count": 1,
+          "value": "6849494"
+        },
+        {
+          "count": 1,
+          "value": "6880091"
+        },
+        {
+          "count": 1,
+          "value": "688617"
+        },
+        {
+          "count": 1,
+          "value": "70239736"
+        },
+        {
+          "count": 1,
+          "value": "71256"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [
+          "ht",
+          "htt",
+          "http",
+          "https",
+          "https:",
+          "https:/",
+          "https://"
+        ],
+        "max_len": 75,
+        "min_len": 69
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 3,
+      "null_count": 0,
+      "path": "source_url",
+      "top_values": [
+        {
+          "count": 72,
+          "value": "https://api.github.com/orgs/vercel/public_members?per_page=100&page=1"
+        },
+        {
+          "count": 5,
+          "value": "https://api.github.com/orgs/vercel-labs/public_members?per_page=100&page=1"
+        },
+        {
+          "count": 2,
+          "value": "https://api.github.com/orgs/assistant-ui/public_members?per_page=100&page=1"
+        }
+      ],
+      "total_count": 79,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.public_memberships",
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "full-scan",
+      "sample_seed": 1,
+      "sampled_rows": 79,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

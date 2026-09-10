@@ -1,0 +1,3908 @@
+{
+  "authoredInputs": {
+    "project.json": "70e8ef93b3961798798f0605063a8e7586a50c62b852cdd4296b61d76e1517e6",
+    "world.json": "20af45c010e8fad02efeeb2c5ed5106826615ca0b10994088cb20d50183d3409"
+  },
+  "candidateSnapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+  "format": 3,
+  "generatedFiles": {
+    "generated/effective-world.json": {
+      "fileSha": "3d4a1a8fd14e2a7f77c35345c768d718f1fe0647c79a1b76fdd93a9ecee029cd",
+      "valueSha": "84cd785242e0b029d028c2665ba00bef065b45e3e3052c769ed5b41126afb4d1"
+    },
+    "generated/evidence/collision-map/world.json": {
+      "fileSha": "7cb80ab1b96adab4d7443e8d67c026a7ba0eba9c74c0652367d7ffe64df134d0",
+      "valueSha": "22dc56d17d8e20e82e4c232454e1235e73ab770af0f4cf95d7ac8989a505c6ff"
+    },
+    "generated/evidence/enrich/r1_676974687562_6163636f756e7473.json": {
+      "fileSha": "4e9f8794211a68231e84f041a79ec761bbbf6d81e85d80beee9fd4b5ec828c7b",
+      "valueSha": "c257172a43b67f71ab6c7d54ec9bc6a1d0cf2ba75caa05eba41894edad513b31"
+    },
+    "generated/evidence/enrich/r1_676974687562_636f6e636570745f65766964656e6365.json": {
+      "fileSha": "eb2439e5de60df7d679613c5fba2819244cba1da7832fda32bfd5b090e8b75c8",
+      "valueSha": "e15a8a91f691795b73a9614907baf50ab0eb153cf6971b01fa2c3973d385a8aa"
+    },
+    "generated/evidence/enrich/r1_676974687562_636f6e6365707473.json": {
+      "fileSha": "08d9fd2648b8b4c5a57a1bb4fe50ca775b371f265d01ca87e2598ab52d2e88b0",
+      "valueSha": "c62516e8ef731e6ead48b79cd10eb200316f5f91441d346cefc404b47d8547f4"
+    },
+    "generated/evidence/enrich/r1_676974687562_7075626c69635f6d656d6265727368697073.json": {
+      "fileSha": "91acb08da4f97cb892ed947a6e7fa136dff596e83f2d9f336600b01bbe394e11",
+      "valueSha": "1e0b6eb1b82871ed9142039747fa6c95f9e1c9f0eb650568636c81d2f7a07e54"
+    },
+    "generated/evidence/enrich/r1_676974687562_70756c6c5f726571756573745f72657669657773.json": {
+      "fileSha": "2b10bd378642596ad5790bc5de1e6b93e755fc9dcb29c09ac3fddabba864b286",
+      "valueSha": "d2715fa18c6b796b61ebb1705b9136664f992033362f91f46b1ae93e53e995a2"
+    },
+    "generated/evidence/enrich/r1_676974687562_70756c6c5f7265717565737473.json": {
+      "fileSha": "c86c2a8ace5ae70937a084d6a600f8e52a23507e24e575d3f4581f9da891f326",
+      "valueSha": "7784847fd29a7032a542830cc966ac284291df4ed238bf41bd38c4e03df900c4"
+    },
+    "generated/evidence/enrich/r1_676974687562_7265706f7369746f72696573.json": {
+      "fileSha": "5d90038e7c447be98b301f040ac1b469977dd1b7e21e43252f948e646bd1f4fc",
+      "valueSha": "bf04462fc91eec635fe31f2954009953a8251ca089835759bc5ee7aa7b522ee0"
+    },
+    "generated/evidence/enrich/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json": {
+      "fileSha": "ac97e56af07b12dfcef4252987e4d7997f3e927416c68dab442e5a8690439160",
+      "valueSha": "83789fd64f52dc7fa0da04510980889e79538e3fe3c0a7110843596592934acf"
+    },
+    "generated/evidence/fields/r1_676974687562_6163636f756e7473.json": {
+      "fileSha": "ad95787c8cbab3c6e7d88c004d768c92e0acb6eff6ae7a28b15ad105e9aacbc5",
+      "valueSha": "ebe4de09a8a6c1e586c650a77822e87954dfcced152d16f2adf15ea1f7257a29"
+    },
+    "generated/evidence/fields/r1_676974687562_636f6e636570745f65766964656e6365.json": {
+      "fileSha": "27555c824ac2962efdb63aba0a64603a1bc2a799202e88494082abc29e809efb",
+      "valueSha": "886c5f28757061710abe543b34e93535497785a2edc04c68b39a23a79e86b173"
+    },
+    "generated/evidence/fields/r1_676974687562_636f6e6365707473.json": {
+      "fileSha": "e4cdc6daa744c61d419ad1594306942672e421a22a20c361ce8e1c3856cfed97",
+      "valueSha": "4234eedfd5cde507dda5428899b1b197a425734379def6a4530df6a4be81b0bd"
+    },
+    "generated/evidence/fields/r1_676974687562_7075626c69635f6d656d6265727368697073.json": {
+      "fileSha": "fab85aca73b69cf8bf80ad8e459cb983c47f7bf9429364f28324f36685609373",
+      "valueSha": "b3d19b7efee22d823dd3c4a9f3fd00e6b3fa77b1c00e0b58dc3f7e8f2d4cc78e"
+    },
+    "generated/evidence/fields/r1_676974687562_70756c6c5f726571756573745f72657669657773.json": {
+      "fileSha": "739ff4757fedbb9d1fdfa7487f2c10673d9fa807dd7cb8904e1ac96c6b5cbbf7",
+      "valueSha": "14d68ca523820940c023d08ecae579044f71b825986e033c1bd105882ef86e81"
+    },
+    "generated/evidence/fields/r1_676974687562_70756c6c5f7265717565737473.json": {
+      "fileSha": "2a87bf7bace16bb7d9ebfaaa285cf2527f6afb40e009b1d4c4b18c3ebb7b6288",
+      "valueSha": "64714881036162c9d2590cb3d1a900002f5136b17df2befa4eb8645aa1af5446"
+    },
+    "generated/evidence/fields/r1_676974687562_7265706f7369746f72696573.json": {
+      "fileSha": "41823492650bf09dbfaec37dc42b81738459d8c2364bb92d257b08a0cebb0afe",
+      "valueSha": "2055b507be6afe9315c0ecc483e7c6d11496ec4b44786216cebd02c33dd1bf8a"
+    },
+    "generated/evidence/fields/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json": {
+      "fileSha": "65bbd7aa5d9bd5d51ef1558c0f1ba894015e234f925aff3945c311de53978253",
+      "valueSha": "2e49a9c141ef3e55a2bff0b2b494b1d5623f7d2e6f6d436ffafc68486eaca7ad"
+    },
+    "generated/evidence/relationships/r1_676974687562_6163636f756e7473.json": {
+      "fileSha": "cf460abe2697901ffa30a9ff3dfae1a4dd4390fff34a2d1398a3ae83b6b7a182",
+      "valueSha": "80d07b1044361e18dc6421280ed8037e736ee71a8e5219b367fc367cf072d18c"
+    },
+    "generated/evidence/relationships/r1_676974687562_636f6e636570745f65766964656e6365.json": {
+      "fileSha": "f84507872cb16009aa41a56fc52db5877e676137adfc3be92712ae8a54550e49",
+      "valueSha": "b7e7bf6e79ce3ae161d7cd24268cfe59f5578d2ce8019943566eb91120fb452e"
+    },
+    "generated/evidence/relationships/r1_676974687562_636f6e6365707473.json": {
+      "fileSha": "e5442b60a6ad8fb3b55a55e822b4475de9fdc905f5cc30cdf359a236a3197f17",
+      "valueSha": "31947117e7dbe84ab01ba58a963ea121e8c90da275ed6a87b2ec2bd62c99fcc5"
+    },
+    "generated/evidence/relationships/r1_676974687562_7075626c69635f6d656d6265727368697073.json": {
+      "fileSha": "9a613062d89027c1f3137f544b6d5ece3f40262420795607bfc93b8cd789fdb1",
+      "valueSha": "218b1bbe5345b93cd3ada6710f423d1a317f3232498064bdd7c22b3b3c90e5de"
+    },
+    "generated/evidence/relationships/r1_676974687562_70756c6c5f726571756573745f72657669657773.json": {
+      "fileSha": "10c26b120032fbb7bb6f6e0d4f55a682018c02214b06ec81736ca33f0e339098",
+      "valueSha": "6881f3f8fbae005626e3031c45d577cd8a12f1cca8d6c424b24981ce6a02fef7"
+    },
+    "generated/evidence/relationships/r1_676974687562_70756c6c5f7265717565737473.json": {
+      "fileSha": "f1d93e9bc08cefc174a378f7866caf19ee8cbecd4daa669571cfd8827477787b",
+      "valueSha": "c06fad3deeb85436e1dcc1eb5b103d5de1d2af32f5d4041b1aed06edfeeab5c3"
+    },
+    "generated/evidence/relationships/r1_676974687562_7265706f7369746f72696573.json": {
+      "fileSha": "b5938ba50df7f4cf65619c559aa31edb4ab92dbb158111aad26b698b623f75a3",
+      "valueSha": "0cf6fe5e190fa220c7cf2d8105dc02f135302c0f19d1b5cef4d8d538c9e67368"
+    },
+    "generated/evidence/relationships/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json": {
+      "fileSha": "64b06d4067f0c415636b9d4cf382693b5d10650419a8f4728631db1495e66986",
+      "valueSha": "6446673acf36c76a434288e8d0237b0108231decd66e783fcdcfa439ca25d45c"
+    },
+    "generated/evidence/schema.json": {
+      "fileSha": "db78d07f17e08bd591a65613a9b623e5821433db4c9c3345ff25d5320dbb3d45",
+      "valueSha": "555552999285e6e2b2bdb0f270b9b2e30e23fc00a8564edf95d58c00ad593311"
+    },
+    "generated/evidence/value-domains/r1_676974687562_6163636f756e7473.json": {
+      "fileSha": "e9b14bd95d4eb547b93bd52a9614e3b891272380b50864b092bd9ef44511f917",
+      "valueSha": "924315e01abd07391a0760403b26fcc65fed9aeadeb175cf62865160e511eb0d"
+    },
+    "generated/evidence/value-domains/r1_676974687562_636f6e636570745f65766964656e6365.json": {
+      "fileSha": "a4b640f0d9d6c3c0bc96c6118c9ee31a81eb6731ad5dfde905e557b794b18d12",
+      "valueSha": "bec97a4485e566492b83e627a861c32822f5f053656973b5b5f14a46e0f98def"
+    },
+    "generated/evidence/value-domains/r1_676974687562_636f6e6365707473.json": {
+      "fileSha": "5083c67fe984bc07e7caa1a1aa4053d00478fcfb0add4c79fe1d10fcacf24d03",
+      "valueSha": "6b56868fefe6aadbead8e9952ad23c59215915753e4f240a488b1af1620221d9"
+    },
+    "generated/evidence/value-domains/r1_676974687562_7075626c69635f6d656d6265727368697073.json": {
+      "fileSha": "17e2df971067dc3c0826acff138e63255c318bc0fbcc0de09881ccf59af73396",
+      "valueSha": "de9421dc91bbcad56c8e67684b79869850535e4c6939d12380a541e3d2d622e4"
+    },
+    "generated/evidence/value-domains/r1_676974687562_70756c6c5f726571756573745f72657669657773.json": {
+      "fileSha": "79d9a40ae1575deed5233bec3a66fcc06a4815b48756e0d5d3b38a9c2bd3c213",
+      "valueSha": "b59a41cb5cff755d109cc116aaeef96ad7ada8954e6e851c40bcab655f849e6e"
+    },
+    "generated/evidence/value-domains/r1_676974687562_70756c6c5f7265717565737473.json": {
+      "fileSha": "e6301e6225a44a313bc3a2381c98bc787d1c8c25f276b026ef4e35926b895bc1",
+      "valueSha": "958b917c19d825ea7b024ae06316745ea619fb9737db1888836d072a064ffd8d"
+    },
+    "generated/evidence/value-domains/r1_676974687562_7265706f7369746f72696573.json": {
+      "fileSha": "5db48dea4aa0297bdebddd64b18b4ba0cc53074286f2ace3638dbccbab8b9122",
+      "valueSha": "1a2fe10107a2caf8d66c40efbdeaae701a6b48aebddf83f5fb1095690bc53192"
+    },
+    "generated/evidence/value-index/r1_676974687562_6163636f756e7473.json": {
+      "fileSha": "e18da1742c9352a84d37b04cffaf25e06e20fd7f6d332ef133635afd46c25949",
+      "valueSha": "d185fc7d95bbea16dd70bdeaffd59a68055d2273aaec2e0588917c3eb153d1f4"
+    },
+    "generated/evidence/value-index/r1_676974687562_636f6e636570745f65766964656e6365.json": {
+      "fileSha": "9abf31b9625232ba4f5280abca42c86a839441ad0d07def99563e49a8c35d1a2",
+      "valueSha": "3b16af80b90b0d5dbfb70b7d613761c78842c3358dd5b8080e454895e3d8430c"
+    },
+    "generated/evidence/value-index/r1_676974687562_636f6e6365707473.json": {
+      "fileSha": "5388a644e1ce75e8e2ce225fdcb0b6f4d5f3c40c00364733631a36197db83ccc",
+      "valueSha": "59c9cd7f450ede74b7f5da93b5dd05aa25e4db751e8ed8b7be33479f04efea7c"
+    },
+    "generated/evidence/value-index/r1_676974687562_7075626c69635f6d656d6265727368697073.json": {
+      "fileSha": "909566081036421047ada59ceac36f78534963b5f7abeb02396e1743c5a57c61",
+      "valueSha": "bc7bf4e2c23fb8ffe6db17584c3e2f4bb9e1748671a10235e79538035788e1da"
+    },
+    "generated/evidence/value-index/r1_676974687562_70756c6c5f726571756573745f72657669657773.json": {
+      "fileSha": "1ff968999b76b6f29be6c32d7c7aefb6a182ef74bb272d46a4ebca285016f11a",
+      "valueSha": "f8e7b9e5f8ad7d4bc81a1d36d660cbadae3820ef8a27100531b8a2da83a768c9"
+    },
+    "generated/evidence/value-index/r1_676974687562_70756c6c5f7265717565737473.json": {
+      "fileSha": "ecb823e3f093c6e55d141c676ab9c2ad0ca4b8a1d10d57d32e6d0d7e5f050d4a",
+      "valueSha": "aabcea3bd33f9de758999fc3033997ed36c5299af38b723dfceaa484302c0214"
+    },
+    "generated/evidence/value-index/r1_676974687562_7265706f7369746f72696573.json": {
+      "fileSha": "ab46c3febbcf18ea493dafeda043f521f62a16167e06eca8ab06b8daf468d970",
+      "valueSha": "2266bc99c314b83873d1a26c01cc7c382131a6802171b68b12557e9f764217f0"
+    },
+    "generated/evidence/value-index/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json": {
+      "fileSha": "1261df224226a7628a04778f801072921521da5d516603d2694315e5308fb155",
+      "valueSha": "a53a351c899a063f6aa5f17a61e838ed3538941f1318fcd94f205d3ce17562e4"
+    },
+    "generated/projections/compiler-binding.json": {
+      "fileSha": "259da64f209c81ca0c41272245127cd47a6883e5483e8da7efd764bbd9d1bb70",
+      "valueSha": "7cf1bfe40b169dedf6d83f7e31da665cd71d8a2dccebe15a408f70091c8b42cc"
+    },
+    "generated/projections/guidance.json": {
+      "fileSha": "c938b331465e63c12eeaae197f95c8d34bdf4b041e12e9f78a3e4bd759fd94f9",
+      "valueSha": "978565fd8a67467b1e0df88f602f8495a070f0e93629774d2baff6f2b3207906"
+    },
+    "generated/projections/planner-catalog.json": {
+      "fileSha": "4ee9a7437cfcb0730ecdecff1c494c96e02b699c5538070a7a48ad5e28427cdd",
+      "valueSha": "4ef8013cf7232993486c75c03a714d332da60ac169dac7a92ce317095c3f7b2c"
+    },
+    "generated/world-overlay.schema.json": {
+      "fileSha": "9a441ee205f0652ae095d0ed3e8c2ec353e2a2d06743f5b630c92af4a7082ae0",
+      "valueSha": "d06d50dacb9cc887e018f0d1f0887ab8f460b8b7c94538221841aa753fd35bfa"
+    },
+    "review/proposals/derives.json": {
+      "fileSha": "99e582a6fee23df76fcc4853fc2147c21ec0390cf61d98e0d1cae8082f9bfc5e",
+      "valueSha": "dea847d4b61d580748970b599feef490e0e8e8c0d078b84be72e8b5c0d78e464"
+    },
+    "review/proposals/field-distinctions.json": {
+      "fileSha": "9f474acb07dec85972ea589f9abc47a8439663ca2a21e9485508993d718289b5",
+      "valueSha": "3e6280f571c43ce7ef67e89d14e600fe2bc079ad54301177aff2436520549277"
+    },
+    "review/proposals/joins.json": {
+      "fileSha": "f8f02a2779498c8b741124a77c1173184ad40e88101854398e5eb352c9afa42c",
+      "valueSha": "a2f9a0703ae645a100e19dbf1619e8d4364986dabf8932abbbbb7fd1bc558a84"
+    }
+  },
+  "generatedTreeSha": "69def24ff98fe7b150edb4773b007c6c089982f05283d33b472378ddcdef89d5",
+  "generatorVersions": {
+    "refresh": "refresh-generator.1",
+    "world": "catalog-base.1"
+  },
+  "ledger": {
+    "entities": {
+      "r1_676974687562_6163636f756e7473": {
+        "id": "account"
+      },
+      "r1_676974687562_636f6e636570745f65766964656e6365": {
+        "id": "conceptEvidence"
+      },
+      "r1_676974687562_636f6e6365707473": {
+        "id": "concept"
+      },
+      "r1_676974687562_7075626c69635f6d656d6265727368697073": {
+        "id": "publicMembership"
+      },
+      "r1_676974687562_70756c6c5f726571756573745f72657669657773": {
+        "id": "pullRequestReview"
+      },
+      "r1_676974687562_70756c6c5f7265717565737473": {
+        "id": "pullRequest"
+      },
+      "r1_676974687562_7265706f7369746f72696573": {
+        "id": "repository"
+      },
+      "r1_676974687562_7265706f7369746f72795f6c616e677561676573": {
+        "id": "repositoryLanguage"
+      }
+    },
+    "recordIdentities": {
+      "r1_676974687562_6163636f756e7473": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "accounts_pkey",
+          "kind": "primary-key"
+        }
+      },
+      "r1_676974687562_636f6e636570745f65766964656e6365": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "concept_evidence_pkey",
+          "kind": "primary-key"
+        }
+      },
+      "r1_676974687562_636f6e6365707473": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "concepts_pkey",
+          "kind": "primary-key"
+        }
+      },
+      "r1_676974687562_7075626c69635f6d656d6265727368697073": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "public_memberships_pkey",
+          "kind": "primary-key"
+        }
+      },
+      "r1_676974687562_70756c6c5f726571756573745f72657669657773": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "pull_request_reviews_pkey",
+          "kind": "primary-key"
+        }
+      },
+      "r1_676974687562_70756c6c5f7265717565737473": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "pull_requests_pkey",
+          "kind": "primary-key"
+        }
+      },
+      "r1_676974687562_7265706f7369746f72696573": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "repositories_pkey",
+          "kind": "primary-key"
+        }
+      },
+      "r1_676974687562_7265706f7369746f72795f6c616e677561676573": {
+        "fields": [
+          "id"
+        ],
+        "kind": "field-tuple",
+        "proof": {
+          "constraintId": "repository_languages_pkey",
+          "kind": "primary-key"
+        }
+      }
+    },
+    "relationships": {
+      "[\"r1_676974687562_636f6e636570745f65766964656e6365\",[{\"fromField\":\"concept_id\",\"toField\":\"id\"}],\"r1_676974687562_636f6e6365707473\"]": {
+        "id": "conceptEvidence_conceptId_concept"
+      },
+      "[\"r1_676974687562_636f6e636570745f65766964656e6365\",[{\"fromField\":\"pull_request_id\",\"toField\":\"id\"},{\"fromField\":\"repository_id\",\"toField\":\"repository_id\"}],\"r1_676974687562_70756c6c5f7265717565737473\"]": {
+        "id": "conceptEvidence_pullRequestId_repositoryId_pullRequest"
+      },
+      "[\"r1_676974687562_636f6e636570745f65766964656e6365\",[{\"fromField\":\"repository_id\",\"toField\":\"id\"}],\"r1_676974687562_7265706f7369746f72696573\"]": {
+        "id": "conceptEvidence_repositoryId_repository"
+      },
+      "[\"r1_676974687562_7075626c69635f6d656d6265727368697073\",[{\"fromField\":\"organization_id\",\"toField\":\"id\"}],\"r1_676974687562_6163636f756e7473\"]": {
+        "id": "publicMembership_organizationId_account"
+      },
+      "[\"r1_676974687562_7075626c69635f6d656d6265727368697073\",[{\"fromField\":\"person_id\",\"toField\":\"id\"}],\"r1_676974687562_6163636f756e7473\"]": {
+        "id": "publicMembership_personId_account"
+      },
+      "[\"r1_676974687562_70756c6c5f726571756573745f72657669657773\",[{\"fromField\":\"pull_request_id\",\"toField\":\"id\"}],\"r1_676974687562_70756c6c5f7265717565737473\"]": {
+        "id": "pullRequestReview_pullRequestId_pullRequest"
+      },
+      "[\"r1_676974687562_70756c6c5f726571756573745f72657669657773\",[{\"fromField\":\"reviewer_id\",\"toField\":\"id\"}],\"r1_676974687562_6163636f756e7473\"]": {
+        "id": "pullRequestReview_reviewerId_account"
+      },
+      "[\"r1_676974687562_70756c6c5f7265717565737473\",[{\"fromField\":\"author_id\",\"toField\":\"id\"}],\"r1_676974687562_6163636f756e7473\"]": {
+        "id": "pullRequest_authorId_account"
+      },
+      "[\"r1_676974687562_70756c6c5f7265717565737473\",[{\"fromField\":\"repository_id\",\"toField\":\"id\"}],\"r1_676974687562_7265706f7369746f72696573\"]": {
+        "id": "pullRequest_repositoryId_repository"
+      },
+      "[\"r1_676974687562_7265706f7369746f72696573\",[{\"fromField\":\"owner_id\",\"toField\":\"id\"}],\"r1_676974687562_6163636f756e7473\"]": {
+        "id": "repository_ownerId_account"
+      },
+      "[\"r1_676974687562_7265706f7369746f72795f6c616e677561676573\",[{\"fromField\":\"repository_id\",\"toField\":\"id\"}],\"r1_676974687562_7265706f7369746f72696573\"]": {
+        "id": "repositoryLanguage_repositoryId_repository"
+      }
+    }
+  },
+  "policyVersions": {
+    "evidence": "evidence-policy.2",
+    "guidance": "requirements.1"
+  },
+  "producers": [
+    {
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "21a805b0d6dee54f276273415c41c21db81d9638e49583ae411a76b4bfaaa4b1",
+      "key": "f1_676974687562_6163636f756e7473_6176617461725f75726c",
+      "kind": "join-sketch",
+      "logicalOutputSha": "2355b189c3b3a38a2bbe506a5414518fa30c308a42b38f727e8691bb623a95d0",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "5ddf5dc4124ba6e5f31e945cd5c3979a37f47d5828667a021147072bd0ea6cef",
+      "key": "f1_676974687562_6163636f756e7473_6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "657a304da66b03f466b021ce7d65ffebc83848ef36176a64b948db120b5d9543",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "06ff5f8dd54215b78c60295634866735901dca03a971c785800e11e01980c832",
+      "key": "f1_676974687562_6163636f756e7473_6c6f67696e",
+      "kind": "join-sketch",
+      "logicalOutputSha": "1de5cee826db1f322b6990f5b7c5daa8871eab4db845fb229968b52e4e574147",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "15e3ef7648cb66df3def36935de4849183af0a0b5e30ff3f2ea6b910cb668507",
+      "key": "f1_676974687562_6163636f756e7473_6e6f64655f6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "5e3256d7caaac297e99d4209a02ab98c807a2a1928ae18c21b5832fd6ebb1a14",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "4b56646c3d4a285bb065b62d1cbe6ac7674716863257e2fc342e7f6161f82ab9",
+      "key": "f1_676974687562_6163636f756e7473_70726f66696c655f75726c",
+      "kind": "join-sketch",
+      "logicalOutputSha": "e4afd678bab456bda99cbf9065adcea93bb4cd7f4829d886733466f8a7b9de7b",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "af6039e1b8febb94fc5046b8810e3e3873c181c8ff59b9112bb0352fea9179aa",
+      "key": "f1_676974687562_6163636f756e7473_7365617263685f74657874",
+      "kind": "join-sketch",
+      "logicalOutputSha": "7b09256936024ca40ffa708ca5608848a5e7801f4ad34fba9b17ef6197c00553",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "f14e03d0ba737cbaf11390faadf96a6ce2981211f203a855e17c4696efff3a52",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_65786365727074",
+      "kind": "join-sketch",
+      "logicalOutputSha": "e3083a053076ec3c62ebd20b0efe92e6b80f832ffa1af32594652ee59ccd2e90",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "55055ee444b6320ef5fbf6f805e39fd67abffd92da5d09bf0c6beee87636a7c4",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "4767c15a70f97f7dd78ec09f1b6c642b7320e1185acb2d421df06c8f4683805a",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "bf759509a7e1872321b902edd94f4dadc6da259584a0be7a370eaf3cb17cd1a6",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_70756c6c5f726571756573745f6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "704db8ddc348ab5d91c9c918ce93ff9755a5e787bc5d1d66d5e2e43098511616",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "3e126ca88c67e12d66f7efbe20e704ad5bbbd15b9f06b9ab0e8ea3a0c76a7153",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f7265766973696f6e",
+      "kind": "join-sketch",
+      "logicalOutputSha": "19018415a5191b6284a3ffee2cc9a846cc27306e773578a15c52d0328d9c01b0",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "77c0f90bf5e3851de8940633976d88d5a10abbda95832c784c603bdb6a83f72e",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f75726c",
+      "kind": "join-sketch",
+      "logicalOutputSha": "cda4d0c5ff89ec08445ecf6040c7cdcab34b60ae0d51838ec34a2cd965acb182",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "a13f555ca7a2e0bb2c112f25f6be15f0231ad179b9c88091f58bd9402857440e",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "f8e6b2379c053f2b9c044fb5e30694fe32f5be03716a98a68d2eb23b25a8ccfc",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "b5695b29487c81f34bc225d09c24a0e2d45bc72c2d23b4a631dc799cefccb298",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_706572736f6e5f6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "44edc09d9023f98bbed6c3f04adff0cbad8adb3e9a1b4f1e367ea340d9a69739",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "20595b2604fb1c2f2f6609e8e40b3e0c82da2ac1cd2fffad8f3a7befdd8bfc3a",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_617574686f725f6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "367eaefc4e97f1487228d987a9cd27dcfbb655518a529fdb030aa62b9f535c7e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "21d369d3decbf46bdc1d0abf6677d4c4303cbd49e911a615745724d452ac4cf8",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_626f64795f74657874",
+      "kind": "join-sketch",
+      "logicalOutputSha": "8364bd97ee9067769878f8de35d7c5c1c60bf6b97b5a168c3b5eed6bb6b2fa49",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "48f8d2bb122091b8a721083e9959d67df48bc1930cc526a38dbae32eda0bfbd2",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_686561645f736861",
+      "kind": "join-sketch",
+      "logicalOutputSha": "2726877a55a3417cb38cb003108f2c44dd726d4bef2e0f99ea5fe522e6a6d8d8",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "5ddf5dc4124ba6e5f31e945cd5c3979a37f47d5828667a021147072bd0ea6cef",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "58cd73a6c485deac66b7be307030b83e5bf1bfb054c4aa725b33a6bf37e04319",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "15e3ef7648cb66df3def36935de4849183af0a0b5e30ff3f2ea6b910cb668507",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6e6f64655f6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "d0c1dcfeb20b221022e42fb3ca605170e13b9b29fd6e5e9c61d150f3a006877e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "79391139ca915474b4b1f3ec9e89987b60cd100e77c870aa71a54946e7a28f19",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6e756d626572",
+      "kind": "join-sketch",
+      "logicalOutputSha": "53af7edd0555779f3dac059042dc9c587b25ea529603f0e20af07308c860dd98",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "84a53f3c239f8e3619672dd236623dfa52498fdff47fe77727250c09b57f5a80",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_70756c6c5f726571756573745f75726c",
+      "kind": "join-sketch",
+      "logicalOutputSha": "1e51e9959aff42aa025b440f66357c3e16d1b0eb5e036c7ee15a74bb37ace052",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "548a62f9840d3f0baa48f0dcb1942fd6a7e12b31aa95da5d2a782ebe78d63a60",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7365617263685f74657874",
+      "kind": "join-sketch",
+      "logicalOutputSha": "954af8f3a06b4beb5c6119411683fa549f530b535296ced99177f2765b916a3e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "6ead4306e2dcfc7dd7e603cd2390e022cc7e686bf165ebab4ef876ff5e0e162d",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7469746c65",
+      "kind": "join-sketch",
+      "logicalOutputSha": "fffeecb31d1528eee7fbe8f0c42cf14b943e10fb1f73217e4bb8e44e9c669b88",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "f21d3271cf8cd4ae3f2be8b71de2e6e71b5050c12c6a6f6510db62b7ae64f5cd",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6279746573",
+      "kind": "join-sketch",
+      "logicalOutputSha": "69f01a26655a191ac155a461a541d0194c6073fff5923cd9a8826f08a86eb8f3",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "0ff8cf26ebbc5dfd23a86d8fefe51adb184a801c6f781e3d6a2b560893c29403",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6964",
+      "kind": "join-sketch",
+      "logicalOutputSha": "b233c0eb2b9a9ceb18b42d81a77dce9ad90cdf282f3774154efdb78e7eb86cc7",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "join-sketch.co-profile.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "d4928358ec0debc136dde04f8f9f60813830558ec9c3bbe89709369bdad4758f",
+      "key": "f1_676974687562_6163636f756e7473_6163636f756e745f74797065",
+      "kind": "profile-stat",
+      "logicalOutputSha": "eae5f70f193de9fa6968122ddabe656577ee2e7ef5a5327299767cd9642d9e8c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "9ba98144068497e29958a6817dfb8fb6eeb14692b309b8d37eecf9b42c901e5c",
+      "key": "f1_676974687562_6163636f756e7473_6176617461725f75726c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "f0574617c35203a8757b953c1d73fd5221639729dbd9a325a6217d2565e16162",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "7dbd4c4c452e3e6c2cb6603db9e558dfae2df58c1175ed109a6a3571399078dc",
+      "key": "f1_676974687562_6163636f756e7473_62696f",
+      "kind": "profile-stat",
+      "logicalOutputSha": "7c6aebb025914dcdfe20c95183ff48843ff31185efec4d982622700f2552972c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "370b0dcefa54e077cbadd4bf7108678cf8fbf5058badf3b8fbdd9dedde4a84e3",
+      "key": "f1_676974687562_6163636f756e7473_636f6d70616e795f726177",
+      "kind": "profile-stat",
+      "logicalOutputSha": "5ef0aa9fefb16a1705e2c3bb8b78329d56643b53d29b466ef989009b85b429e9",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "f7d20f303821ae0324ccfabfda7c8d10716ee89ef6187349ad87fe40703d46ba",
+      "key": "f1_676974687562_6163636f756e7473_666f6c6c6f776572735f636f756e74",
+      "kind": "profile-stat",
+      "logicalOutputSha": "e92fd2aa3c87289a2031875e41c949579ec83f2d3994ac9b4adde1182db0444f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "b807f0b187200f45e97b24d7b45b993338a15814326edb48090251d305a3909c",
+      "key": "f1_676974687562_6163636f756e7473_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "09756cd44717692835cf1c5a792b48ffd60173593b2847ee4fa44331be519c4f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "be334030662131b9162b71cad5ae158157b80e254e68ce99fa13f8bd74aac770",
+      "key": "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f63697479",
+      "kind": "profile-stat",
+      "logicalOutputSha": "6345cbaa6e4fdf45c987a8e097c1aab37067fca5c45737bb7d244a9d169b70e1",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "540426dfda44ec3aeca952187e1197a612c584eb7bf59156ebc8cea7f82103f4",
+      "key": "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f636f756e747279",
+      "kind": "profile-stat",
+      "logicalOutputSha": "db68b51de283fd2bf5c951834cbe94c6c5e0a9868bbaa21eb3d749f920e55328",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "3a290d6f8fd3bde513c63fda654626d6bd1001a344252b54fa84850ff641f5ab",
+      "key": "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f6e6f726d616c697a6174696f6e",
+      "kind": "profile-stat",
+      "logicalOutputSha": "eb929b7299437873980c6e026cf84302b6f194393d4833c4dd114867b4e00db1",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "311e042c02e226e2b7579103bfcd057ee33b4860ab83756dc08afa14458fa610",
+      "key": "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f726177",
+      "kind": "profile-stat",
+      "logicalOutputSha": "c22e19cbc0af0bb898d0d3d94edd4a9598f3113f69954164dd68b3a37930d7c4",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "baa67b85727fce98958e6889c869d026d5b2a90f8fca3b9ff40529f0dbc24fa0",
+      "key": "f1_676974687562_6163636f756e7473_6c6f67696e",
+      "kind": "profile-stat",
+      "logicalOutputSha": "61278dac6929f5f4829fa4739312ee7215a7d2994bfd257043cb0d48151fa2fa",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "822407b636b2986e11c1538591aebcee3026582a3abea382bf8ede81b701151d",
+      "key": "f1_676974687562_6163636f756e7473_6e616d65",
+      "kind": "profile-stat",
+      "logicalOutputSha": "f00ca55e50113be5176f4ab03e45381e8a6db7f03d62e5fd3608c638679994e4",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "d95b38a80fb3cc3ac07710e14a80ced7d88fdcb7397524879f0150fd1c27a369",
+      "key": "f1_676974687562_6163636f756e7473_6e6f64655f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "88f76b95e0382c760f302c99b86b16c5a795416a247d7633a1f7366aebc315d4",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "9d697520c959eaf379abd27332f6a209484adebe4226f47e19855037f57c3f50",
+      "key": "f1_676974687562_6163636f756e7473_6f627365727665645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "5a697da74acbc234bda6110e1d622ef1f38848d30c4713975f7a4f7d3d4b416f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "753684c24c7c4a1bca351067fe992b6e315c415f88f43c24415254cf2702918c",
+      "key": "f1_676974687562_6163636f756e7473_70726f66696c655f666574636865645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "d2d01fc5203cd5dd2248ea161f567a9ddfda818888af97a13123b23ee5c11769",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "b0c28cce7439b8caaa56704bd068d62da788f27b48088d005fad5f70c0a71ef9",
+      "key": "f1_676974687562_6163636f756e7473_70726f66696c655f75726c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "0925d39fa6a702f795c66bfdebbd88c8d535d3c183a5184a3b22bd60b4cb4ff1",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "3474235d9fcf9c94142326a78047d71c50069e7415dc63900fdfef3ecfd307cd",
+      "key": "f1_676974687562_6163636f756e7473_7075626c69635f7265706f735f636f756e74",
+      "kind": "profile-stat",
+      "logicalOutputSha": "935cfa43869c5f09585e727d9535eb81a77aa58d62bfcd938b45c36356ef4ec6",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "6d2710293ac94946fbbf7605117126438840374847d26c53f05cfe2b7b263563",
+      "key": "f1_676974687562_6163636f756e7473_7365617263685f74657874",
+      "kind": "profile-stat",
+      "logicalOutputSha": "038fa74664931dcaf942af54b784abb2e9a44a81d71516229a33f1015c3302f3",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "25395a2dc1f56953dc3e956ed6641e3c8987bc78eebfcb5aaab98be6ea94e8dd",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_636f6e636570745f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4b58803fd1111eb5b7eeb97ca386a5ddef6bb126bbd7837778002a622c04d277",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "891bcefc58ed92857356c4286c35c3190feb313de9c555aa890230e60f590c82",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_65786365727074",
+      "kind": "profile-stat",
+      "logicalOutputSha": "3a1bd9f2e2eaaa0e35239742c19b6365a2fc3ad8e353860dcad37959f923e697",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "b29b1d21bd936830823a5b9074ee4d14e9f8f0cf127da402ef5f10c619ba8f4d",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_657874726163746f725f76657273696f6e",
+      "kind": "profile-stat",
+      "logicalOutputSha": "de5f42f6459e84f6648a25a6263bb760121ee7447bd4ac71dc29cf2b904c3d09",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "39c7334f6f6c441388fb02f92ad05f5e6fd71903b4ab4b1bd14793a9d6fc3bfb",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "f2c434ab2821845092b9a2582a76f7abfe24ba0b77422bdb3fb96d90b762cd8e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "d9efe314127ca7f5226dc0c04acf28aa3adf2922b4629a62792ef83a17e2410f",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_6d6574686f64",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4211a0fe14146d6c0060fab5e3fa090343a60a0bce8131554029ea3c72328e37",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "34ab13401aaf99b6b7c3304e1e91266a1424cdc2e1a76ce2c991576901b8174a",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_6f627365727665645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "49b23559b7c1ce536e2a048297a722a4296663103dac833d8b5b01a49d919940",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "7298980b81b5be2fcf90a3a46d5cc629aa3a141a3d14fbcf4ecf0557f80adcf0",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_70756c6c5f726571756573745f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "beefe7ecfc244c241d9149b1b758bbb29c96ea602ba78817d4f794b6a44f64a1",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "60b57b1cfdfeaac5b04984e114b8e124ca2e6da1f8afb9ec750fdd65a37adf5e",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_7265706f7369746f72795f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "de05f1275ee29f5d7ff241d5ba39cdbf29725ec0d8872deb88249a1dfd9e5310",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "56ad081522ddd6f2e65b110aadca28cf000362102b3947b0adef0e3dcaecf6ba",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_7265766965775f737461747573",
+      "kind": "profile-stat",
+      "logicalOutputSha": "d689a429ca26124cef089dbbcb533be7e3362b9dc5e39732be8709c6fd8ae3e4",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "880a6ddd0c37afb3c4afbab562dc07434e17e9c18e22c09022efd9351f480542",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f6b696e64",
+      "kind": "profile-stat",
+      "logicalOutputSha": "ffeed152788ede80ee013198f621a3b2ff5f476e056382ae0153e04bfe8b1a2f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "bba84b274bfaf4997e97a833255880668d57a166e2f056d886c9561c2feafa49",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f7265766973696f6e",
+      "kind": "profile-stat",
+      "logicalOutputSha": "121a01149a8b32de6bac866a5bea89a475b7bdd8d42115a90fb9a48c9c092d96",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "374ef480a84f1e0c0a5bdcc6514927897bb0e8006182300f4220766a8b819ff9",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f75726c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "55ac34f7aafb8e54de4ecc9c88e43c82323adf9eef8ab2df78ccb5b64bf02bae",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "9d4f93e68bf4c688e4f06da0119f9986f111f041764b75cfb95435932e0f962a",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_737570706f72745f6c6576656c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "b9d83fd53a289b5f7158950c22e30237d7e6f0d1649fe909fb5a93d2e17fbcda",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "8776cd06d3b2eb198244226d6be00573f2dd2e8aa526470d1e06c190f5f8c147",
+      "key": "f1_676974687562_636f6e6365707473_616c6961736573",
+      "kind": "profile-stat",
+      "logicalOutputSha": "6bc7b5ac8530465043c7758c732439cfd1c2f05fcad59dd1ee62e8da6cd5166d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "0bca86449993a1cc0ad9fbe2f7d720095252ca801f27890a5ff50c3baf7ea7ef",
+      "key": "f1_676974687562_636f6e6365707473_6465736372697074696f6e",
+      "kind": "profile-stat",
+      "logicalOutputSha": "8642f071520d5f7a11db926b2022f756200587719828bb619d7d0a137a807517",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "81e914f7dd471ca7a21f6d2e69236f2a9f16b6d13479f4147e7b708b6249742f",
+      "key": "f1_676974687562_636f6e6365707473_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "a175d85233a7d018e7f664f03e971d5d3e4b4bd3f4f25ef53c2d548e6831d296",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "bc9d9b7bb330ecc28405f868df5590bafced8954f68c9dc22491f88ff818a309",
+      "key": "f1_676974687562_636f6e6365707473_6b696e64",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4b0bb45671ef6d058341c3659cf91fb25315343ac4fd836421bb75b24226961e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "0c53047bbf6afc75e328eaa1b1c8d17c8b747166bb59c61696bc961fa9cf45fe",
+      "key": "f1_676974687562_636f6e6365707473_6c6162656c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "207cc12b89a8a68aea8f52c92f4bf70cbd91f3c729ea47d7a36ca21a5bb17eb7",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "9b65261cf93289e11703fba2e81e4eb464abc38e95ba74c37ce4194de073cd78",
+      "key": "f1_676974687562_636f6e6365707473_736c7567",
+      "kind": "profile-stat",
+      "logicalOutputSha": "99dde6aea9ee7f031a13c08b8c937df8baa9191835cac535d89869c73dd70837",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "607c3d2ab5033ca61c6217e07ede0e6ab2c772dec089c1caca427d236fea1bac",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_63757272656e746c795f7075626c6963",
+      "kind": "profile-stat",
+      "logicalOutputSha": "9b8ea43b7def0852161f301ffa4150dbc3d763861da19d421149ae28dfefd751",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "8c577d2dbf7aaa05262e9fbeeb0d5a16bd5b71829c2b07e79c5ffbddfafd7e9e",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_66697273745f7365656e5f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "f002cfbd58ea9a89791529edee602e633692a7c6078c00a21e6f8b3eb3c20d0b",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "6d0857cf695739d147c66fa230407bce3eb30344c6983858ce2ac53d3e481012",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "cbe6a06375c4125da4ad2b79b1489ef1b5690370726a7fcd37e1c66a7b0b1adc",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "1f34fbc028efe94a0990db1f3e7e80bfb287b59082629866f323638bd5cf125b",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_6c6173745f636865636b65645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "3536beda91ee1f96629669747d53dac3db790bbbd2f5f8f245a10fea2b372ef7",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "337f473fa15e029a8d07be4b4a407b4073773f1736d6e67332c1a4cf73099176",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_6c6173745f7365656e5f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "6c1418cb6afedae1af8128d99d0c341dd05198a8c13e335431a1ab68ca085695",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "acc96e125c9fc3281d58c02bb27685e7194cc5678391fc81613a6b712653968b",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_6f7267616e697a6174696f6e5f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "12b74be45077964c7c25266ff52c2aa58208aafb58f300b9aa1af717a9b5ebcb",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "3eaf183b90349fa19a2baef2e714e03fdd0d092f20b1f163299e53c7bff0d6c7",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_706572736f6e5f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "e165901bc38f80ba94041b6b39970e0eba1150cc4dbc290f1af38c6d90d79089",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "6d543b413009aec3fe10794d26961408d5d539aa77b605599402a870ec51353b",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_736f757263655f75726c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "3102a540785245ab10c0d2b8643ef67f2a4a4ddd0db68e54f9e931401b363b94",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "ff48e0fc5bcd36029034d627da2d666017351e1266d60e55f6ae7480681019fe",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_626f64795f74657874",
+      "kind": "profile-stat",
+      "logicalOutputSha": "904c64dad1d93370fbed9a91e0a13ea5dc69b604c68e9577bde5917c34bffa5e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "368a109166e36e48671803ca6884da72553ec8d71bb80559cf8ab0321db8b440",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_636f6d6d69745f736861",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4643c74d7ca8403248374b21fd157f816af6f92ea7ef9d239202e308a5238fd9",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "b807f0b187200f45e97b24d7b45b993338a15814326edb48090251d305a3909c",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "d9b3bff273dc7e5a1b66e28330d955e290fe69ec2d24092bf6d8cb3dc7789291",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "29edbc2cd81c62e8db001e11585067bc080e90f255eab6a7b2e77bcadbbf0dfc",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_6f627365727665645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "e1ca7841a46537f421025b546c5cba3090c112f7dd8ab2f86424d6df5e0b8feb",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "79fb36cbbe294caac799316ec02baee3dfc49c8431a71f7cdbc12d6ca7e36091",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_70756c6c5f726571756573745f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "ee06137e5b97d111bb19fd3aa0a27ff5e4016fe29c3ba8b2ed8bd808bc7ecc73",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "8c7f9ff4d622e7b5ae64cdc83abeb338ad9453e7e540552a7b765a8c10ea0856",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_7265766965775f75726c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "e708d9f7764e74a57e37df0b2aeef1d1e725d8136a3559d91a9d9524da568562",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "f768e5e55a30f83f4a68de6c6171a42d8e066d5bec832062145a3de7f9941818",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_72657669657765725f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "a3cc07684ebf01023547df5f8128dc8f765cfab65c63f3471bd8cbefd2ed0cc5",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "ee80b9b3b08514755ffb3be6544796bd77a7bbc1d58ea140a0f3cc08e977989c",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_7374617465",
+      "kind": "profile-stat",
+      "logicalOutputSha": "187fb357c67ab5d6cc34892b9e9461d8cbb747618a283ee685ba7b01d412784e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "02d805343d3dac57b2dc5ce63f144a36b62fb8ca6fd58d3bc729c7dea2f918e7",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_7375626d69747465645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "8038246077da4d6b5cf507e2187816ffcb09b21bd1e9b2c8b92316dd8e765839",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "8c11b56c9c31cec3af8f164c13315664f3154fcc812ac51b157869d6caa16d27",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_617574686f725f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "a39fde8d5d91993678b44a6e71ac656c3cbe22c5a2a6395c17a4df4290c77fe7",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "4d32c74bd7d478b17904b3dca55072a8887dc9d0ef619b665ec0a325a49000f3",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_626f64795f74657874",
+      "kind": "profile-stat",
+      "logicalOutputSha": "a96eb79ff0ee31e95731144868339e650496b93b47a2920477d146b6382add91",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "7be240cb809e87bc0596f488f4e538b54ea8410d4d25e01a4170bc97ae87a704",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_637265617465645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "8621bff79311e70d17a8ea67fe36494c457ace98b375a2cafa0d064f5b796b42",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "1dc50ffe6b49fcf86f155a01f4242cc65fc95dd7d4db20d95d84dc8e95eb9c3c",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_686561645f736861",
+      "kind": "profile-stat",
+      "logicalOutputSha": "f61a4bcb56b2949068585c8fae775a126c04b6d748f95ae70b7e65cafc2f449d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "b807f0b187200f45e97b24d7b45b993338a15814326edb48090251d305a3909c",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4be6b292cd58f811f94a0b15f669e3a285cf58154ae51693395ccec79e6ba672",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "9b53f6ab34e7a9e90feb249a9eeb3da8b40d1f16773ec0afc0f23474a4d02c62",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6d65726765645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "bf4f7c5f06b7a7e928e2c89209c3ac755f1e35858ce0cbba40941f703b6c2f3d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "d95b38a80fb3cc3ac07710e14a80ced7d88fdcb7397524879f0150fd1c27a369",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6e6f64655f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "3c72eeac9e7185da5281f9b5d6ddf286c4339ff79bb0069272fd46219e85c18c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "d5acc931289fd02c6dadddaa6d3ce03c829cbed35d2213f68533066aaeb8b5e9",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6e756d626572",
+      "kind": "profile-stat",
+      "logicalOutputSha": "b48eb9851d7c71695533b46993834d8d47066c534fd21d648cac5e15783af348",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "61808dfe17100b11088e4c8073f690a6033875ee524ae9cb12ab8c2ce95f2a57",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6f627365727665645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "d2bfa5d7ece2caa43347eaf08826a28b301aec894d4653782da36d56258d844f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "69f8ce2e4421d0bc13eb6f6735190188e38a5add2354174fdc4333f2fbb1a5c5",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_70756c6c5f726571756573745f75726c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "3427f19a37c3731870e78b422f1f078c829e5636595bd21f1c9d4fb910ec6b91",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "515af039fd41dd5b9dc6cebd0bbe492edff40b1ad0c09932694f6a0eb1e0f44c",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7265706f7369746f72795f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "21d22ae4457a1f0ef865033249f5898a15cd772ddb7e25f2aea432237f0f892a",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "7edd52a7786ac838fac8cabcde0678971aef01f1cd5e8165946a772d81d1990a",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7365617263685f74657874",
+      "kind": "profile-stat",
+      "logicalOutputSha": "f8fea33bf59ed40acfce279a6ee8f69bd8537a84b30988234432147114e6ad5c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "bd80bc9cd3b72afe2e6f4bd9a6008036dceb8db6b6ebb47bf231098fe30afb06",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7374617465",
+      "kind": "profile-stat",
+      "logicalOutputSha": "977f257f06c89ff04408e10563f69b62923eed570facb00bddc3a7576135cdb1",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "60e9b6c15eb8f6f30d94418f90412ff7f75c7678f1670bb9504f181776415eaf",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7469746c65",
+      "kind": "profile-stat",
+      "logicalOutputSha": "d12ec314d8f8ebb1bd793f1fd41c7efd366317c834c225091a1d160b2d74b1cb",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "b3d802b6f5fc628633fd9451880588045ca320f963701aacd5d3bbe9f81cab27",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_757064617465645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "708c3f3bec0003c5acb2b0fb94245d26685e154dd766b6a1f869fb5391495769",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "0e512308287ee52d4006f577447565a35a3d509cffc4d81de687dc1aaca748f3",
+      "key": "f1_676974687562_7265706f7369746f72696573_64656661756c745f6272616e6368",
+      "kind": "profile-stat",
+      "logicalOutputSha": "e8f5d56408d8c5a0d9457498f163459905eaf2b0223377cb8397b344b408a9f2",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "9ddf5001ca7b7a4fd78df1e81c3f538fae9c624fdbb6a04fb871f9586ce120c7",
+      "key": "f1_676974687562_7265706f7369746f72696573_6465736372697074696f6e",
+      "kind": "profile-stat",
+      "logicalOutputSha": "db1d8a3e79fd75ec0598b15f9662825ec8e3f6d80cfad3845b5389dcb5555e71",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "9129cfc0e85b5e72653dd3259f82d1ae9d03b5afe4a1b09b26fc8ed0bc492379",
+      "key": "f1_676974687562_7265706f7369746f72696573_66756c6c5f6e616d65",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4fa77096b9d9c36f1a474b66046bf4f08200c8821e9e3a7f058406220c5f4348",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "b807f0b187200f45e97b24d7b45b993338a15814326edb48090251d305a3909c",
+      "key": "f1_676974687562_7265706f7369746f72696573_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "dd2612ae8fe43fafa97b518bf4c5a63200f29d906103c13ffd25c44373d56f81",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "1705e8a3fc33367742f1eb8fd75a319c0517469f4114f6bf5dfd4ab64b63ad08",
+      "key": "f1_676974687562_7265706f7369746f72696573_69735f6172636869766564",
+      "kind": "profile-stat",
+      "logicalOutputSha": "2a12ef107ec800c0cfd4b4405ad73bd03e45356a7e27c37cad6f0c4947647220",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "85be2de5708d88e0e42cc68e6f73b81f2e6a839c773906486d4c561d4e280cca",
+      "key": "f1_676974687562_7265706f7369746f72696573_69735f666f726b",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4e1919a5f473b0f38c456717365e8cdf92ee72b20120c0166e2329d5a1a41c7c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "df589ca7832b2ad876ad02788990c49b1f6ad8e69de104dc97756fb78af7096c",
+      "key": "f1_676974687562_7265706f7369746f72696573_6e616d65",
+      "kind": "profile-stat",
+      "logicalOutputSha": "67c6c50b3326de516887a56f22c4a654bc4b8257da7921e7fbce658bd5779c22",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "d95b38a80fb3cc3ac07710e14a80ced7d88fdcb7397524879f0150fd1c27a369",
+      "key": "f1_676974687562_7265706f7369746f72696573_6e6f64655f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "6062386353090304d2e85505cd0335be22f6e2f94e25c6806313fc2db9e74bf3",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "fbdb3c105fedb7cc7798c589dc33e4cb4c0f136ede987ccc52d43a38df5d1969",
+      "key": "f1_676974687562_7265706f7369746f72696573_6f627365727665645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "ab8846fe422eb15a76122dec94f7d9f033febcdb86992bfe708931dafedd652d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "c4b0617cdee44c3ca3de84c8e8e6f50eb87a082de4ea9bb0042ab2a25687ce43",
+      "key": "f1_676974687562_7265706f7369746f72696573_6f776e65725f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "8e271eca82f35a0204474381eca0f4a8b325419b63837d2a1bceee14f55a2038",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "bc7c317bf749118f5cbf7e391097f824085a57c703b2615874ca22e8f32d4758",
+      "key": "f1_676974687562_7265706f7369746f72696573_7075736865645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "2d34bc9a7c88fda360b1e6ceddd33d36bcd101385876c1177aaef9010deb1c1e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "8b6f2b4c9717c2a83789f2af3de4e88066946e8f2e1554eed3cac8f776d0e6ba",
+      "key": "f1_676974687562_7265706f7369746f72696573_726561646d655f736861",
+      "kind": "profile-stat",
+      "logicalOutputSha": "a9951bd2c7af4ea2fbfa31e134e5df61646bebec06d38f59f35abe0aad2b4fe2",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "d2aa0e8fef2f65afdad47f7273853da7efc972c6dc770bd850490b5887d34f66",
+      "key": "f1_676974687562_7265706f7369746f72696573_726561646d655f74657874",
+      "kind": "profile-stat",
+      "logicalOutputSha": "2a20263705c6222f781839d26a253d50b6e7bbb29b3d9c58e63802261fce4396",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "ef1b29b29922c74e3c71c9249c133cdce4d2444ee9afd3664b00de9390680750",
+      "key": "f1_676974687562_7265706f7369746f72696573_7265706f7369746f72795f75726c",
+      "kind": "profile-stat",
+      "logicalOutputSha": "0488d91c3913618bd0fbf3c10636f9df4dd1cd8564819e62da8899c8209b7380",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "6d2710293ac94946fbbf7605117126438840374847d26c53f05cfe2b7b263563",
+      "key": "f1_676974687562_7265706f7369746f72696573_7365617263685f74657874",
+      "kind": "profile-stat",
+      "logicalOutputSha": "b387880b82268cf73d2e44a206f55974638ef10d07de85334bc907c4480395cb",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "3b4f311c565dd05cb068b9fe00d9f3bc245ffcf002b92c65205f197a75171ccc",
+      "key": "f1_676974687562_7265706f7369746f72696573_73746172735f636f756e74",
+      "kind": "profile-stat",
+      "logicalOutputSha": "4c3e4bfd16e9ba73f4d1bdc8ab63ef41742686512408033f96cd2b243789523c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "d081233804bb80fbc1ab70a6e8950b4951a125ea5d6240245579ef3f93b44881",
+      "key": "f1_676974687562_7265706f7369746f72696573_746f70696373",
+      "kind": "profile-stat",
+      "logicalOutputSha": "f3ed8eb74f390c3becc5db1d6c53c4caaec7f99b4748749061d506fbbe8f07ab",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72795f6c616e677561676573"
+      },
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "40498b8fb73effdf7513e8c6fe1bb28a09fb435239b92d4f089e2268c948eea3",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6279746573",
+      "kind": "profile-stat",
+      "logicalOutputSha": "c5382cd25c507411dfeb16538340c4ce2adb7a8a5955f123f3472c98380650f4",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72795f6c616e677561676573"
+      },
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "cc7114d9c2437909ece108cf049004d75d94da7252f328da3d6ab0508f734587",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "861f44b476f9034d9060e09865214e2fbc5879c8ad5714f81c3fdccec6d6cbff",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72795f6c616e677561676573"
+      },
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "6498548c109a7d891307ba88d7c39bb504d41ac1a705e2b8d25a96083a2a778a",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6c616e6775616765",
+      "kind": "profile-stat",
+      "logicalOutputSha": "6c574a4a48aa4cc967c1d97f5da64e2ae8fb39331aa70b59dedc45ee28d2beb9",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72795f6c616e677561676573"
+      },
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "242fed2ce41930162ace35f196fe9d052d3cd108ed2dc3a0a3bd4c8ee2eb9ff9",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6f627365727665645f6174",
+      "kind": "profile-stat",
+      "logicalOutputSha": "d3748cae1eecafd4c3ffc65dda063f1360d036374fdd808766ca766fe5efa474",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "fields",
+        "name": "r1_676974687562_7265706f7369746f72795f6c616e677561676573"
+      },
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "60b57b1cfdfeaac5b04984e114b8e124ca2e6da1f8afb9ec750fdd65a37adf5e",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_7265706f7369746f72795f6964",
+      "kind": "profile-stat",
+      "logicalOutputSha": "b0fb5c5a0d04096a96b34a8a2be22fc71e179f5a304827e77752d34407f07a48",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "profile-stat.2;dialect=postgres;adapter=@gia/postgres;contract=2;policy=bounded-sample.1",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:35.209Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "02897a80d26058f91c2653e6df7b892b6a5c7a52773c0fe41cd76d0a725e152a",
+      "key": "f1_676974687562_6163636f756e7473_6163636f756e745f74797065",
+      "kind": "value-domain",
+      "logicalOutputSha": "a92a3d1df6fac772e12e888ad81b92c614f313eb8af0884d7d6809fe19b8bef5",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "998038700e2b1fc754d470999e10402ce0a96f3e867d3799deaa65ad7f4496cd",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_636f6e636570745f6964",
+      "kind": "value-domain",
+      "logicalOutputSha": "2b641c94e0977d3aae0cacb0e1bfad9462f0e775521eaa4962228d6433f66a4d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "0b389fb52ecb063401d339293558d2f252dbe8ca12039fa391e324a5ef9102a8",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_6d6574686f64",
+      "kind": "value-domain",
+      "logicalOutputSha": "2b9f0b643d7218cfc54012b4c5ea4607efcdff609d9234fc50813b7b2d20e561",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "50992d6b2252a148ae1bf7b1d8ba523847d6fdbecfecd42bd5e6a987fe21f88e",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_7265766965775f737461747573",
+      "kind": "value-domain",
+      "logicalOutputSha": "8357c8d0f1797f04773f90aff8d7a84fdff5a7ce5a0c0bb67b9e149c56d1e2d2",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "0d643cedd46d9a5fcff7b3fdf64f2e327f8bd033850e461adbc475d4cac08785",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f6b696e64",
+      "kind": "value-domain",
+      "logicalOutputSha": "f86e06ff6bd9ceebba2e7f41d94b995e8508d64629f35a768de32e0664d7551f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "0944ca2b7a0365a6943b45793c27c5afd6597ee6feef4b95fc28b6ed370ceb07",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_737570706f72745f6c6576656c",
+      "kind": "value-domain",
+      "logicalOutputSha": "4e2e31a6417dbdfe4a13a6fbf062d0608ac6d45c83deeb3f283e3da9ac8cee83",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "0cc23db4c2002db2cc2ccfe6ceb598f5a346fdb9cd6710b6cc100299e66a89a2",
+      "key": "f1_676974687562_636f6e6365707473_6b696e64",
+      "kind": "value-domain",
+      "logicalOutputSha": "4228ce172bbc890de9f85febba0060a331eac60304942973bb004e983d3572a3",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "64a8ee6ea11282e590bf1c2a25f561ea0487b89cd028475cc4f8d62ee54066de",
+      "key": "f1_676974687562_636f6e6365707473_6c6162656c",
+      "kind": "value-domain",
+      "logicalOutputSha": "bfc5b4702157ecad6aa8852b328de8aa4cbae01ec72c50b701c85e26155328f9",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "0116bcbe49690b6b40d7ce318634a947d4147dd66f8de536f562827b598aa3cd",
+      "key": "f1_676974687562_636f6e6365707473_736c7567",
+      "kind": "value-domain",
+      "logicalOutputSha": "f678e13cb0edbccc7414cd570bef96cdde6cf316467b9ec1bfe61127ffddb0a1",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "dbae00c3902e699d282be58f46f5591168c27636aa637c656bb1c7c7b9110ad1",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_6f7267616e697a6174696f6e5f6964",
+      "kind": "value-domain",
+      "logicalOutputSha": "9cf0a724c01af176a19f3cb4b01064c1b383dd19b8a1962d011a2228f247234f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "5a19f73bb4e4c8c1d93201e129b020706b98b6e995448ecb7b52d0cd26fa62ca",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_706572736f6e5f6964",
+      "kind": "value-domain",
+      "logicalOutputSha": "c2b486be70e721531793edf3730cbb966aa92c25d9935475af89108841871ee1",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "594659412379d9b5871c24130a4afade7148f7e86bf02199f9b6c9e7bee0fcc8",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_70756c6c5f726571756573745f6964",
+      "kind": "value-domain",
+      "logicalOutputSha": "08737a7c7e26fc4ab0bedf3c281b0ac759db236409dbcc40a40e114a8cdabb78",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T10:50:57.706Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "246c3fd0734dfdc7dea2616fac6e4c90c7de535b4e721cdee2e6344e59f62f4a",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_72657669657765725f6964",
+      "kind": "value-domain",
+      "logicalOutputSha": "b7e240fd892f808597be293bbfd9da6707119b88c010a66a41edadd02704b63c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T10:50:57.706Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "ea193b424852d7868da1d748b862798e8f0d132aae2bc61e340c864ea9f93097",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_617574686f725f6964",
+      "kind": "value-domain",
+      "logicalOutputSha": "dd81211ccc84f780df7987c9316a690156859b5af0a41356d7e83ad0ce75da14",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "2a149252b48f42636fe770c568b45ceebe91c21e069abe0e539ecd97b2973b63",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7374617465",
+      "kind": "value-domain",
+      "logicalOutputSha": "c4d03c0f4ae905433af43bb0da522e945d798092706f6b7c8315e8fd54df445e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-domains",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "9c5feb6043ad9a97b75e5a6997ba5a2e8f00dd617dc8706a47f0da787cdbe3dc",
+      "key": "f1_676974687562_7265706f7369746f72696573_6f776e65725f6964",
+      "kind": "value-domain",
+      "logicalOutputSha": "fa683a5445dfdf86ff4c7c186b0e93d6f21d55703cb9e6edffc85532792dc829",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-domain.co-profile.3",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T10:50:57.706Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "612c7dc2a95414011bc27b14c339bd589cc4ce3f1c1e3dde2e5aa23f040d22c3",
+      "key": "f1_676974687562_6163636f756e7473_6163636f756e745f74797065",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "680228895dec9105161acd97c404b73bd7fffdaadc99fcb0731ce0eb7432e5fb",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "71ab4ff4ec20c4f24775124872e14fe027a123e1564a60bc0cc1702bb837ff30",
+      "key": "f1_676974687562_6163636f756e7473_6176617461725f75726c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "596f4fc4e552865cffbeae1f4761390dd178aa85ab9078695f0fd7c6ca3a391f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "ccc200bb19b9349254504d430eaa3ca2fac94cc3c9b3c8c19ef76d2d446ba6b2",
+      "key": "f1_676974687562_6163636f756e7473_62696f",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "1933ca045f3984de9d8c7b0dfa3304f6424cffd91cde917e9564d70c1b302bb2",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "d2ee2bc40e53683ace7b73becdbc22bdac908ee7f1dd4da8ccdcc0ab7a24aec5",
+      "key": "f1_676974687562_6163636f756e7473_636f6d70616e795f726177",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "5de9f0d32765a46785af11fb7dc264a55fe18afefffdb506d517ac4dca51d3d0",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "208b2065362aa73a263041dc1fa20f20386d33a1680bb622804ab8834450d3c3",
+      "key": "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f726177",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "c6cb0ed201bbc823beadcf44285b76010932d6d4e13094ae9336153fd9f29df6",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "2f15eb33c8814afb89be38e66a89fe003c18e862459a643688cc3380209854ef",
+      "key": "f1_676974687562_6163636f756e7473_6c6f67696e",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "e77ee3a14ecdd2826db96be2a060e9882707969a4ce688aa63dfcd31151d1001",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "4f833776ac70a267ac03b79b6c2cbce431d49a972dcf1e82327c23dedc2882ba",
+      "key": "f1_676974687562_6163636f756e7473_6e616d65",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "4ffd1127e8dc6d6c5d3b0da6894cbbb35c5177c7ea2faf76f1309b800bb218b3",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "ae45d0fcc5833b1eecf4ddebfbb166bba9653f39f55578b2f7a7fa974650d25c",
+      "key": "f1_676974687562_6163636f756e7473_6e6f64655f6964",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "1d94f840a4efadab79b039913bd3b9814b7d8e8d17424d3c675e014df058c6d3",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "96a04da64c1db9ff25da3c627b26c88b22503895fa21f37e19569d4dbfcef115",
+      "key": "f1_676974687562_6163636f756e7473_70726f66696c655f75726c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "40e39c7354c9b2e24105f1402026abe0231012229c6c045a17d5785aea1ea28d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_6163636f756e7473"
+      },
+      "freshnessToken": "c8d261ed9518bef230c1aecbe3c069e6862ed16587e78ea8f5af7fe9de37e0f7",
+      "inputSignature": "0a43ce8aefcafec79ca431c823d279390a0b3e8305ef3a77c13300dbe215daad",
+      "key": "f1_676974687562_6163636f756e7473_7365617263685f74657874",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "f77b25a1820623f55ac73c63892e3a901d4907978e8b5f87047d8ef47dbeafd0",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "458eec4c7bd8efb8f80619bf05c88e3b8b202374123bc9e9e5d34a2bd65d207b",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_65786365727074",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "4ef307d031e67b16e3f65e14e83ba110e5c0dc105281f58ba8d324323415f234",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "67aa1e4e8126433edcde2ed1035194b69f47c1f2c6903c2a32bc492fd9ab4780",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_657874726163746f725f76657273696f6e",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "9dc9fe8d9be2bd0720a186128646e1191ce5e45ee0787779c4c71281d263e3ed",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "84cbc5ed5673eb65b14dfee67ad0347f1a104536e011580cc087d40b3e131297",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_6964",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "1c76d76225e235e5258e9ea7d368cbe204a2c2561619e560ed57cecc77d1d2d0",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "a2c09e4650ad49b00dc48ea0538cb3c5c62d2dc2df1a3ad8ab4bf15a989b66ac",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_6d6574686f64",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "fa285af967a500df97d26a294b40d65db1c1f094eb92da1f044e394545d7a720",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "7b81fed29ef36104dd263022ebd4a23941d1f3aba6e33b5a042aa9995af38820",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_7265766965775f737461747573",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "0af59c26db327a069467a39fd8c921add641e5ad64f6376147a4615e1baa7ac6",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "060a393fa6bdd33efef9c9909c5af782663a28d04a6658eaad881f421c3d27fe",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f6b696e64",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "b21fd39113176f42e442f49f5c229cef04c09af8a0c28dcc4231f759baf16488",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "e453d2b7da24fe2461d4306b034fe7a974053a30c7584cd39ec71dc245efc49b",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f7265766973696f6e",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "f7e03f741f028cd9ee9d130639b54dd3c3df4f5265689de963f69d0c5091292f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "6e3d7feadd8ac241c6590a6036b5cf735e7c1da48abc79c396faf2af67079d9c",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f75726c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "34cfc6201e94c9e2c4f332ad8df6b864e190575822afcf5cdd353648a5e48823",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e636570745f65766964656e6365"
+      },
+      "freshnessToken": "4ce08358ebe92e90db7e710922597d0a0359e831128d6a45332a5ee85cc73fb0",
+      "inputSignature": "74732d76a944c0af0fdfd2cb8c53f23eb0734abea8ce512af3eeaf2f5e78f952",
+      "key": "f1_676974687562_636f6e636570745f65766964656e6365_737570706f72745f6c6576656c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "2ee72feae0b43bbb8ee5fc8a9b2a3486bfb7de1b59c2248e8fd8dc6a67d9c2ca",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "abf3984debf8b59170467c42fd6a0f3f0c80d12a6f72ddc80a07339e9da24106",
+      "key": "f1_676974687562_636f6e6365707473_616c6961736573",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "5c8cb49b183694949198f505efa02fc3117ee4ba33755426930ef987c62005ba",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "e0c53b97c632dc8b2d4336e300febe4916d0e892357d499d03aff76794dcbff8",
+      "key": "f1_676974687562_636f6e6365707473_6465736372697074696f6e",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "dd2de4c223dcaf7f5726368d15999770765fe7a751590c8442e015523f863442",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "48dffc3b0f2db8bedf637900d3550e6a58a9e0c3e1f7df3f3eaf5ab07abd7d6c",
+      "key": "f1_676974687562_636f6e6365707473_6b696e64",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "70c8945a47674b3a6b3b8bb2af0c6350cb6f0f1700e6669487bb718c8f58781b",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "4571a228da1a60f5a62a0e54f17a4996d6e662be086b1b078c5c3fea71c3406d",
+      "key": "f1_676974687562_636f6e6365707473_6c6162656c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "b17da792f967f704d68951e1493fd6d48ea304b87048b13c830ab724b3a77d67",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_636f6e6365707473"
+      },
+      "freshnessToken": "f33f84907fcd20225a8a3451c48a41e4609ec6632197ee5357fb6297215a9850",
+      "inputSignature": "11fc8d2cf1bf437f774f5cc0a5ccd248e4673fd5d5a69e6c69dc62ec5e1243c6",
+      "key": "f1_676974687562_636f6e6365707473_736c7567",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "efd52123045279a706449ad82b20912686f41a92d191e1d3fc32fcfc17fd7f64",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7075626c69635f6d656d6265727368697073"
+      },
+      "freshnessToken": "a8185b25861d05ad10a1a8d7bb7d83b0ab0b1434ab2fdf20b77653d57b4dedbd",
+      "inputSignature": "14445cc9461dfc73980da2f797d6e6e0d42d66ffb96eff35c777eac731ba3fe9",
+      "key": "f1_676974687562_7075626c69635f6d656d6265727368697073_736f757263655f75726c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "16911b5136941ae49b2c640b9d3b04888675bf520254b0412db5a1496e4b728e",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "38bbbfd1da995873338a4d6d6bb653ee88bd9a3abf3eb2b0666c5187b62668ae",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_626f64795f74657874",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "5320b55bf3001fa1aa916ad14b1f4dec83f5e9f729061a0576cf7256754d6492",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "3ec36b0f0560a383a402de9efe8d16af3366ac54e3795f6f4ac0d757c69c6b8b",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_636f6d6d69745f736861",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "9074e62c337071be4648ab36b0753173c915a2f5af0907d6fd6b62b028e5153c",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "5c214dcb78385b1e36834d304727f1046d88bd760c8f1b70e37b334b750feae7",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_7265766965775f75726c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "0003e4932a48e3ded1b88c6937d54ce1f888cb31f7f5a1b3bf9492e0678b6dbb",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f726571756573745f72657669657773"
+      },
+      "freshnessToken": "344c4b503b31677e7627c7aa16f164f590eec82b1f628ffc7d2a3ccc25e7b519",
+      "inputSignature": "655375f0fc9684446701803c535f5c6e78e918731aee8773cb57cf1ca4c4dcde",
+      "key": "f1_676974687562_70756c6c5f726571756573745f72657669657773_7374617465",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "65f0215f5cac14f66769ea53ae785f0f38a81a8da56409d04ed79b91529565b2",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "9f75064a9d6c50dad7f5811b33e3b2db6fcae18d4168f8931daf7feb1f4f886a",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_626f64795f74657874",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "138403d1208ad83a0c46c8712e9178b2e0398e14545df268960dad4b941ce82a",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "2265f1f9c63867954d3fb480e5b14049d569b8ceb39c7dac6167c74332e91e2d",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_686561645f736861",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "8976f2621ba25396cf26e03910058413d809993a0046b672c871bfe1104e579d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "ae45d0fcc5833b1eecf4ddebfbb166bba9653f39f55578b2f7a7fa974650d25c",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_6e6f64655f6964",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "96d4eeb6023abd76b9c0d50dfebcab9a1461a6b365e0614a00efa4bd198685dd",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "6bf36395429a227adc3c77fa5a30009e58c6c60b390ef30c8179030833f03010",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_70756c6c5f726571756573745f75726c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "567782c92e2ac105c9499c4a4499b50bec49bfad218baeb0158df15362f63991",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "dfb7b422384590db0ffb90ccaaceaf3c898ce73ebf3b992b7485973c9f7aa1cd",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7365617263685f74657874",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "ce3a05ace82b05482a9be69c045965e81b175cf3f6f629aa9e3baf8c303cb02b",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "ca35eebe1ce450a20b357cd9c46c6b24334925df81d24d280c11d10a7f834049",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7374617465",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "4f2f4e0c5b430a33475aaaef33d1e67f2d087f69f091712eb3478ee109271618",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_70756c6c5f7265717565737473"
+      },
+      "freshnessToken": "34e407c13998bf11c7e0a37f587529a3050e3a41474c4c25b37c1957888e7d4c",
+      "inputSignature": "5722ce111f6831a4461cf8b8b31f14f7b480afcdb6ecdaad0f81967d79a8210d",
+      "key": "f1_676974687562_70756c6c5f7265717565737473_7469746c65",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "f530be38d14cdf9334700d7e2465242f1f67f5a52916a1179ae768c1aca50666",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "56675b53d415d0d6afb6da36f694b46c12733b0b74fd44c2d61de8f36036edd4",
+      "key": "f1_676974687562_7265706f7369746f72696573_64656661756c745f6272616e6368",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "ce605b5480b3c9d4401eca334506b68605e88c7ec93450a68070ed914ebc80e0",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "64e1b16dac0dd2898290037288008abd58e7a1f5ddb19b38ef9d61dd5309b7cf",
+      "key": "f1_676974687562_7265706f7369746f72696573_6465736372697074696f6e",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "953c4f892aa10919866c65e6c56dfc88c3804e6e0c3a58f167129f4dc67597ca",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "46953ab8e9b509c40c2821b91788218783c74198bc6316943b5ef1cb6f92496d",
+      "key": "f1_676974687562_7265706f7369746f72696573_66756c6c5f6e616d65",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "955a8fdf4974c2f902452600123bd0ac3ddc5b6facf22f933cb1545d8a156d0f",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "eb14cc4a9406e1211e3cb52a5c7bfc70024144cfca9aba9f0594795245096b06",
+      "key": "f1_676974687562_7265706f7369746f72696573_6e616d65",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "106bc349573f1fac1e60fbef1a0aa054b11389dae576641e77ab6ec47e8cf919",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "ae45d0fcc5833b1eecf4ddebfbb166bba9653f39f55578b2f7a7fa974650d25c",
+      "key": "f1_676974687562_7265706f7369746f72696573_6e6f64655f6964",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "eece24466ffb6072b301114df3b17b8eea1095c24f0f4ef5cb585fd16fc8cf8d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "3e97df95f3729a2b842caaff10d5274607ce6712d0813d6659017496b9798885",
+      "key": "f1_676974687562_7265706f7369746f72696573_726561646d655f736861",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "7e0fa2ed9971e58cec40047859a588137b7e1e84c524fd3473a29cc45a825c53",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "a450dda0ce11a232a518bfc7f74280d6bc1d94edbc64bcaf66a5f3d447dd0f1b",
+      "key": "f1_676974687562_7265706f7369746f72696573_7265706f7369746f72795f75726c",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "59f7f4fe45a20bc7afbee1415472c6c017f6c57ec18970c3c852598c9775361d",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72696573"
+      },
+      "freshnessToken": "de9e8d765d78e4f543b9eb5af079ded17a7435e6f50a26450171dca4e4fab161",
+      "inputSignature": "ef9dcebdeab5a214f0b7c1a651cb533c9378357802a3499e8df3279129816dae",
+      "key": "f1_676974687562_7265706f7369746f72696573_746f70696373",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "9b839ea6bca0981c4e210cb780d7565232bbcecd52f8b807a54e549c208847e3",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    },
+    {
+      "evidence": {
+        "family": "value-index",
+        "name": "r1_676974687562_7265706f7369746f72795f6c616e677561676573"
+      },
+      "freshnessToken": "988e4c3a08d63db951e8c3f089645311f5b5cba2f35f598350080399f4e19fbb",
+      "inputSignature": "b8984716f000c92b5de9faf92511e7065a62ae4f75a10df730c1f6b3d5f2da80",
+      "key": "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6c616e6775616765",
+      "kind": "value-index-candidate",
+      "logicalOutputSha": "202c9558bb9c56e9d678ec9e52277184b3be4219353f6049506e2baf04da2f45",
+      "outcome": {
+        "kind": "complete"
+      },
+      "producerVersion": "value-index.co-profile.4",
+      "provenance": {
+        "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+        "datasetKind": "authoritative",
+        "harvestedAt": "2026-09-10T11:25:59.638Z"
+      }
+    }
+  ],
+  "project": {
+    "id": "prj_debe3085e1b247b6a7df26022617d7ac"
+  },
+  "schemaFingerprintBaseline": "9533f26a7fb9cf6fc454dedd44d965424f1f9e4243d6732f3cb5846ebf56184b",
+  "schemaFingerprints": {
+    "aggregate": "9533f26a7fb9cf6fc454dedd44d965424f1f9e4243d6732f3cb5846ebf56184b",
+    "columns": {
+      "f1_676974687562_6163636f756e7473_6163636f756e745f74797065": "0303ec42a8900931130531d822d8da9ff857339d7de981065c44b07cf3518e50",
+      "f1_676974687562_6163636f756e7473_6176617461725f75726c": "24a746e3bae0fc92fb65d1b6edc557eded158a9f18799dbf80ae7269825ed101",
+      "f1_676974687562_6163636f756e7473_62696f": "09a4345530af851902c2a19cdc3700e3311c25ab02d4357917ea4b02b6af7c4e",
+      "f1_676974687562_6163636f756e7473_636f6d70616e795f726177": "736fce7c05ffe83ec7d2f66dd777d0b275ccd8ae4198a1195046e8df325f349c",
+      "f1_676974687562_6163636f756e7473_666f6c6c6f776572735f636f756e74": "498fbb33a9d3a7ff6aa78d3bea1170d343874599b23a475eb086373aae4af4eb",
+      "f1_676974687562_6163636f756e7473_6964": "763f378491e75e37b1b77fed384e66d66f993bd1db02ae391966283556c71087",
+      "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f63697479": "bade24dcf3ebf7970eea81d86310b1163b252aa0b09c24f8d57729c0a4155b1e",
+      "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f636f756e747279": "08b2955973581285e32e3d4eb88a4902d2ea4bc01de61a68304515f4047d8bf1",
+      "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f6e6f726d616c697a6174696f6e": "b033991fece6e79d33678df13d4fb86381041eafd98ca1822f461565a6cbafb7",
+      "f1_676974687562_6163636f756e7473_6c6f636174696f6e5f726177": "3c5e2ac1f7c94ae64542169e193fc0fc55313968feefafedbf2b18623897c3f2",
+      "f1_676974687562_6163636f756e7473_6c6f67696e": "f97d92cf11fe9d62983b0c00ef294748de08f71468af53120729ed98e3476997",
+      "f1_676974687562_6163636f756e7473_6e616d65": "52d0c11a970a5c1a3d46625ae8a9b0dce4e9b2a2cc3761992bd6b7d5c1bcbf68",
+      "f1_676974687562_6163636f756e7473_6e6f64655f6964": "892f0e786828172fe62ae9b328c18e5def78c5d0d00de746201e2004dfed99ac",
+      "f1_676974687562_6163636f756e7473_6f627365727665645f6174": "ce45e98d7ea262688a2762544aebaf8d98945d57e0587695cbfc65c5d3befacc",
+      "f1_676974687562_6163636f756e7473_70726f66696c655f666574636865645f6174": "3ec8a835307080f6c119ace704cc7c31212fb13855dee7f3ca10071e0ac9a611",
+      "f1_676974687562_6163636f756e7473_70726f66696c655f75726c": "266defe24a8d4f3ad3e520b0e7a15e7583aa134145d40e6c579f9135103d4739",
+      "f1_676974687562_6163636f756e7473_7075626c69635f7265706f735f636f756e74": "c14c588a89b9f18ac230575db97005a3b72a79f4f189e33f2d2b559bbb67dbf5",
+      "f1_676974687562_6163636f756e7473_7365617263685f74657874": "0873b0fb4ce12f3ca9cde4f2d7bf8bf5bf2f0e96c872c5822a914574955459ac",
+      "f1_676974687562_636f6e636570745f65766964656e6365_636f6e636570745f6964": "c472d356c282e021dc858026baa9b7948c2a096068561c164677a2332a29b446",
+      "f1_676974687562_636f6e636570745f65766964656e6365_65786365727074": "55bf7ed06621354d7e404e3e5be9509fbc4949a5283f228984cf4815d7c55590",
+      "f1_676974687562_636f6e636570745f65766964656e6365_657874726163746f725f76657273696f6e": "4c0d0e3ab80775cfa0769d7b69d6f036700eaf6e47ce0b3bdd416bb209dab020",
+      "f1_676974687562_636f6e636570745f65766964656e6365_6964": "c2712c1598f32535856fab58b80a4b63cf0cb230bf05b12b97ad9b9b0d5d6f20",
+      "f1_676974687562_636f6e636570745f65766964656e6365_6d6574686f64": "085e8e0d7519de2023957c56c546bfbaa70f90c2e80ed045480b5f9f088d8d58",
+      "f1_676974687562_636f6e636570745f65766964656e6365_6f627365727665645f6174": "8f1317994662dd8548cfb0d2e49151b772fcdc7ae5a8d4765a325aab28a613f3",
+      "f1_676974687562_636f6e636570745f65766964656e6365_70756c6c5f726571756573745f6964": "b401a2dfc091c559ac1edbaa0be7cd84d3be6246bcf720e2dce7ce886d688684",
+      "f1_676974687562_636f6e636570745f65766964656e6365_7265706f7369746f72795f6964": "ae297e47a122f80a15336d014b07377a3396073191bde6a059f7bb9e4f396bc3",
+      "f1_676974687562_636f6e636570745f65766964656e6365_7265766965775f737461747573": "4ceb5ca82b6486719770b0b4cc0827d362cd96197ace8f6ced993084c71ae486",
+      "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f6b696e64": "d096c8cfaf1db25217e42820c278b989bd7f77f258480094bffb86f9222f54e1",
+      "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f7265766973696f6e": "9765211f31f1ed807293e0d92e23dc8ad3267a92a04abded775bd6df45e9dd4f",
+      "f1_676974687562_636f6e636570745f65766964656e6365_736f757263655f75726c": "2b6eb2d5e2dc3baf94f0c36ccf5a5fb6f3315c9be971122ce0f3fdf19f42bbf8",
+      "f1_676974687562_636f6e636570745f65766964656e6365_737570706f72745f6c6576656c": "797da629f4c6fee8305a97220f8fb0f94125d26f695b066a40075943ac5fc424",
+      "f1_676974687562_636f6e6365707473_616c6961736573": "e2eb8a867eacb02cf5bc7bf5c1d8ec81fb40dd2b8744ce9d791f6e07d52197c7",
+      "f1_676974687562_636f6e6365707473_6465736372697074696f6e": "8b7f8dd3b0028eef3e4ebc468311da18302ecc788925a7cfe0fb1c3d1bf7e935",
+      "f1_676974687562_636f6e6365707473_6964": "3d48396cb24e1dc493cc39116775f8332481f8aef7ffc09db954b92c1da29e5e",
+      "f1_676974687562_636f6e6365707473_6b696e64": "a5e5bf824f999788e4fc48e1e66d6c5bfa68f2a37b385abc8a19b7b683d2edb4",
+      "f1_676974687562_636f6e6365707473_6c6162656c": "c83a961e8c31d1273b0d1eb98aa027f5e798b965f1fdbbbe8721b312150d7412",
+      "f1_676974687562_636f6e6365707473_736c7567": "27241fdeba791102f8310426cee84418315d083ee53e9a26a16a5f4d7e21530a",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_63757272656e746c795f7075626c6963": "45b370e5235f34a1c5659c7f7e21ea48a8423f886349205a3543dd263519a5d5",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_66697273745f7365656e5f6174": "0bdcaf77da2a70b6988074848bc9fd3714dc0ea1a9dab7f3c6c16831a9093756",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_6964": "5479a18d75e99b1ca1128482df1271e14ce90b8dcc5807d1330b42821394390e",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_6c6173745f636865636b65645f6174": "084de66b3fee49f41fc532f3aa047a4d66ac993e98da970b009a93666a8d8b46",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_6c6173745f7365656e5f6174": "9ebf9ef6f11f9463c82b41b7c4474ccb50f62d552bcf13b4eec07bb8881e160c",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_6f7267616e697a6174696f6e5f6964": "a5017ffa28df89cde2bf4edb887316a9d96d8b555c1b141c6a0b97dfedb5294c",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_706572736f6e5f6964": "72e26dd1f6f121f95e494a5157b7f80556fbec41852a8bd3e06e2d8aa7723654",
+      "f1_676974687562_7075626c69635f6d656d6265727368697073_736f757263655f75726c": "16f06e14db1af0d0f9ee6c233653f1d35d8ae42780d9efc6e754a458797a2c7c",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_626f64795f74657874": "df67eed3f5578db660a5fa454d773353f0417b9752a4befea3f0ca830e5f0bf1",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_636f6d6d69745f736861": "f46d5162183079769e17d8a9ec5e9de189398e8d0da2c9a7f6bbf1c6815c5507",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_6964": "763f378491e75e37b1b77fed384e66d66f993bd1db02ae391966283556c71087",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_6f627365727665645f6174": "c1a6ccea4c96140c3b19bffb826a880825d1b25fd527078f92b19b412c0c06d5",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_70756c6c5f726571756573745f6964": "db105d8a446d0da3d55d3d1293416e3bc67e5c18ce51ea19222c112cad0a3e90",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_7265766965775f75726c": "e8405df32f54ec021213e61b595dd82343290c8b09c75fef951e83a4bdfb9118",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_72657669657765725f6964": "f827684a473acff69a1077ab797b1dc25b36d1c76a5bfc281dfa5e809268229d",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_7374617465": "cb2d820212241eb3444464ad2d18d4f134b8d6aee03f00571dac04b8625a2476",
+      "f1_676974687562_70756c6c5f726571756573745f72657669657773_7375626d69747465645f6174": "80d73f8e56678e841beddfd81d8f31653cfbc5cbbbf5df32f1455ce9f13eb0d0",
+      "f1_676974687562_70756c6c5f7265717565737473_617574686f725f6964": "d45f2b02c3272341a03a47582bf828e73734b6d6185ccecf28bf24b30be52bdd",
+      "f1_676974687562_70756c6c5f7265717565737473_626f64795f74657874": "fe727ca783825e7d992ea8b51958ce5e93cf96edcf5ba93c1d0f7ee780f7e2a3",
+      "f1_676974687562_70756c6c5f7265717565737473_637265617465645f6174": "f3b7692d589de4d4d11dd199158721040a0fc6ef115a9e8d735d459e670b46f0",
+      "f1_676974687562_70756c6c5f7265717565737473_686561645f736861": "764a3ef4fea7db596f4b571fc29a1dba58de8ad2b7d3486e8eb71b5cbfbdd44b",
+      "f1_676974687562_70756c6c5f7265717565737473_6964": "763f378491e75e37b1b77fed384e66d66f993bd1db02ae391966283556c71087",
+      "f1_676974687562_70756c6c5f7265717565737473_6d65726765645f6174": "3ed227776f4b42116a0d0058bdc043426d8c1828f54407e0fb0ed3bdbb44c8c6",
+      "f1_676974687562_70756c6c5f7265717565737473_6e6f64655f6964": "892f0e786828172fe62ae9b328c18e5def78c5d0d00de746201e2004dfed99ac",
+      "f1_676974687562_70756c6c5f7265717565737473_6e756d626572": "079afdb893199febf5abd2e0417cc40793faf494b068ee98ca5369bc55bfca5a",
+      "f1_676974687562_70756c6c5f7265717565737473_6f627365727665645f6174": "6ac37915211c6036fa8c052a67a384e89f70aad2641a6cbb7bdc69b0e34ca1c0",
+      "f1_676974687562_70756c6c5f7265717565737473_70756c6c5f726571756573745f75726c": "238fc1df55286dd81639c9ae6c4185609cef8b67d4afa61fe772921199aa3547",
+      "f1_676974687562_70756c6c5f7265717565737473_7265706f7369746f72795f6964": "99307003ccdc1dbad383fb7e3491afde6281e8e3139d59ec41ca25cce148038f",
+      "f1_676974687562_70756c6c5f7265717565737473_7365617263685f74657874": "41e37982b7c2700ad67c9e6af9fed6a7345e7d66674d3594bce83bf131cf06ef",
+      "f1_676974687562_70756c6c5f7265717565737473_7374617465": "1a6fa374ebfb9c97aac823cd222665e854ce973989a11c7cfda98f802a5a8844",
+      "f1_676974687562_70756c6c5f7265717565737473_7469746c65": "a0498cfdb426fe780958b2dd6e9ccecdce36b564e674c61315273526e0b3cf32",
+      "f1_676974687562_70756c6c5f7265717565737473_757064617465645f6174": "040679a669be7106c0b856330b7ab24dd7cf7eecb7643c77e8a90d3c2a84d202",
+      "f1_676974687562_7265706f7369746f72696573_64656661756c745f6272616e6368": "b780e8d94988a8b772b01f2771a69b9eb73366cc3523c393a1bd15a86ecc152f",
+      "f1_676974687562_7265706f7369746f72696573_6465736372697074696f6e": "89f41d68002c93daaabd00af4aeac71f5697f4f6ec9bf40f97185b850bd22ed4",
+      "f1_676974687562_7265706f7369746f72696573_66756c6c5f6e616d65": "a12896d1a6e6b3768d1ce57bad78493083f3828fb5e63b3ac9530c396dbf0b05",
+      "f1_676974687562_7265706f7369746f72696573_6964": "763f378491e75e37b1b77fed384e66d66f993bd1db02ae391966283556c71087",
+      "f1_676974687562_7265706f7369746f72696573_69735f6172636869766564": "e4112239e9dd0fcf9eab9b41eeb500318484e0f8abae078d1b7c030d327bb3f6",
+      "f1_676974687562_7265706f7369746f72696573_69735f666f726b": "705c323335a8c1fb5577676f41be7b5113b65a6abbca856ffc7858aa7a533275",
+      "f1_676974687562_7265706f7369746f72696573_6e616d65": "8c1c05d7e27e7be73f312962b35fbf67d2f1ec74cd6726e3c5385792c8348db0",
+      "f1_676974687562_7265706f7369746f72696573_6e6f64655f6964": "892f0e786828172fe62ae9b328c18e5def78c5d0d00de746201e2004dfed99ac",
+      "f1_676974687562_7265706f7369746f72696573_6f627365727665645f6174": "dc9dcb00cc5e7fb74c6cbef17d4e4b4234e339a6609a7fb05f1779bc8598edff",
+      "f1_676974687562_7265706f7369746f72696573_6f776e65725f6964": "f36e7711dafa80a83fc617e3c815053d79b002a8ba1016c34f773c0b60c268d4",
+      "f1_676974687562_7265706f7369746f72696573_7075736865645f6174": "889c5d5fbd30ef12610f69c52c9d8aa2ebdce8e910cb9c0ce564d3d4cbc8e8b1",
+      "f1_676974687562_7265706f7369746f72696573_726561646d655f736861": "bbd4bbfbb733e2c02623cc3b73d09508152dec34221cb7e4f39e82ac08d4d5a9",
+      "f1_676974687562_7265706f7369746f72696573_726561646d655f74657874": "103fa16368b9b78057a86c9cdbf69fc15c0dcefe933a86d02099dc5536272975",
+      "f1_676974687562_7265706f7369746f72696573_7265706f7369746f72795f75726c": "2a39a2c0ca6366377dd88a6663a876ee8e5359d5bfeacd0449e498e9b9bfce17",
+      "f1_676974687562_7265706f7369746f72696573_7365617263685f74657874": "0873b0fb4ce12f3ca9cde4f2d7bf8bf5bf2f0e96c872c5822a914574955459ac",
+      "f1_676974687562_7265706f7369746f72696573_73746172735f636f756e74": "b54d972c5809785438404e3b3f918644fa4d7d49213cac0e7cda584926fb7e2a",
+      "f1_676974687562_7265706f7369746f72696573_746f70696373": "83d46fad0b2dec1bc89170f5caaa362ee8bd781befbe0fdb3fada8d56fba3132",
+      "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6279746573": "64edc2b89f2d252ff22cb69fdfab7bb6489655a459e41cd4dca8fe5578fe5c6c",
+      "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6964": "cebe20bca90939ea41ac6776f9f254b76b1ddc00bca2121cbe15b806ab6af28a",
+      "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6c616e6775616765": "439c230d0be477fd8f1a0b251ef32604b053c184522cc6e211e413835ab3c15a",
+      "f1_676974687562_7265706f7369746f72795f6c616e677561676573_6f627365727665645f6174": "bb211c4865ab788c15b163bee93742e9765737e1d6fb3b0cec259b0e312c042e",
+      "f1_676974687562_7265706f7369746f72795f6c616e677561676573_7265706f7369746f72795f6964": "ae297e47a122f80a15336d014b07377a3396073191bde6a059f7bb9e4f396bc3"
+    },
+    "tables": {
+      "r1_676974687562_6163636f756e7473": "bd3395454d4e819ec4d259fd08d3efe02b6e590bffea5379150ca0e92848165c",
+      "r1_676974687562_636f6e636570745f65766964656e6365": "30790088a2280b9587b9c868cbe54c4d9a0a22785ca1fbf09163749cae8b139c",
+      "r1_676974687562_636f6e6365707473": "0ccdc452de41c564eb7818bc864fc755f82e421b023063806a29e475305e20da",
+      "r1_676974687562_7075626c69635f6d656d6265727368697073": "9e9fd363b420fe97f1ac54684213331961e097bbd34b5541b52014367330bb12",
+      "r1_676974687562_70756c6c5f726571756573745f72657669657773": "62eb648978eba44fd3b2da00d02a3447e2f01a2356b69ac59c74e574534311f5",
+      "r1_676974687562_70756c6c5f7265717565737473": "36345d822962f89ad3db123f38bf6877b14ce41c0b1506d46a70b23c75aa4813",
+      "r1_676974687562_7265706f7369746f72696573": "7b011b7088e3200e9c3a4b2a1bc34aefb8752e1ca076ed7adf414ab8eb15e1a8",
+      "r1_676974687562_7265706f7369746f72795f6c616e677561676573": "be59cf71c93c9c51ce2afb6041fffe419e8dc9e1f4ea6a65426001579874993e"
+    }
+  },
+  "scope": {
+    "connection": "main",
+    "fingerprint": "37a464bffbcc5f4afd56d8c698de14aea532f180db204cfd38cd1e79f32826cc"
+  },
+  "source": {
+    "accessContextFingerprint": "8a726ad5f43ef8dfba74dfd849978d18cdbd04824230b56d137c722c35c87c1f",
+    "fingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "strength": "strong"
+  },
+  "valueEvidencePolicy": {
+    "signatureOnlyFields": []
+  }
+}

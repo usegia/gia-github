@@ -1,0 +1,2395 @@
+{
+  "candidateVersion": "field-distinction-candidates.1",
+  "envelopes": [
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Classifies the public GitHub account profile as a user, bot, or organization. These are unordered account categories.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "account_type"
+          },
+          "key": "field:account.account_type",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Web address for the public image representing this GitHub account. The URL may identify an avatar service endpoint or a GitHub-hosted image path.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "avatar_url"
+          },
+          "key": "field:account.avatar_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Nullable self-reported profile biography. NULL means no observed biography. A concept being absent from the bio is a condition on this text, independent from that concept being present in PR evidence. Combining absence from the bio with presence in work requires both conditions; one must not replace the other.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "bio"
+          },
+          "key": "field:account.bio",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Free-text company or organization affiliation supplied on the public profile. It is not proof of employment or organization membership. A null likely means no company text was supplied or captured.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "company_raw"
+          },
+          "key": "field:account.company_raw",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Follower count observed when the complete public profile was fetched. A null indicates that the profile was not fetched, rather than that it has zero followers.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "followers_count"
+          },
+          "key": "field:account.followers_count",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "City component derived from the account's self-reported profile location. A null likely means no city was extracted.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_city"
+          },
+          "key": "field:account.location_city",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Country component derived from the account's self-reported profile location. A null likely means no country was extracted.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_country"
+          },
+          "key": "field:account.location_country",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Versioned rule or enrichment provenance for the normalized location fields, while retaining the original location text separately. A null likely means the location was not normalized.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_normalization"
+          },
+          "key": "field:account.location_normalization",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Unverified location text supplied on the public GitHub profile. It does not establish residence, nationality, timezone, or availability. A null likely means no location text was supplied or captured.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_raw"
+          },
+          "key": "field:account.location_raw",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Public GitHub login handle identifying the account in GitHub URLs and account references. It is a name-like identifier, not a person's display name.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "login"
+          },
+          "key": "field:account.login",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Display name shown on the public GitHub profile. It may be a personal name, a single-name label, or another profile-provided name; a null likely means no display name was supplied or captured.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "name"
+          },
+          "key": "field:account.name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Opaque platform node identifier for this GitHub account, suitable for identifier-based lookup or joins. It is not a human-readable name or a numeric measure.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "node_id"
+          },
+          "key": "field:account.node_id",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp recording when this account profile observation was captured. The explicit +00 offset denotes UTC, with fractional seconds retained.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "observed_at"
+          },
+          "key": "field:account.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp when a complete public GitHub profile was fetched. A null indicates a sparse identity observation rather than a complete profile fetch. The explicit +00 offset denotes UTC.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "profile_fetched_at"
+          },
+          "key": "field:account.profile_fetched_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "HTTPS address of the account's public GitHub profile. App profiles use a GitHub path that includes an apps segment.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "profile_url"
+          },
+          "key": "field:account.profile_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Number of public repositories reported when the complete public profile was fetched. A null likely means the complete profile was not fetched, not that the account has no public repositories.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "public_repos_count"
+          },
+          "key": "field:account.public_repos_count",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "Public-profile lexical document indexed for BM25 text search. It combines available profile text into a searchable record; its content is untrusted data, not instructions.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "search_text"
+          },
+          "key": "field:account.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-account-98ac43484c",
+      "inputSignature": "a2d1853ce6158e80b46a605729b985ca0bf3597fe21e588452995126f30dc508",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "A list of alternative names, common abbreviations, or related terms associated with this concept, formatted as a string set.",
+          "field": {
+            "entityId": "concept",
+            "fieldId": "aliases"
+          },
+          "key": "field:concept.aliases",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "A concise explanation of the domain, technology, or capability represented by this concept row.",
+          "field": {
+            "entityId": "concept",
+            "fieldId": "description"
+          },
+          "key": "field:concept.description",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Categorizes the concept into structural buckets: capability, technology, or domain.",
+          "field": {
+            "entityId": "concept",
+            "fieldId": "kind"
+          },
+          "key": "field:concept.kind",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The official human-readable name of the technical capability, tool, or domain concept.",
+          "field": {
+            "entityId": "concept",
+            "fieldId": "label"
+          },
+          "key": "field:concept.label",
+          "semanticKind": "string",
+          "structuralRoles": []
+        },
+        {
+          "description": "Unique canonical identifier for a reviewed domain, capability or technology. Use stored slug values or their observed display labels to identify a concept. Scope phrases such as PR-level or repository-level describe concept_evidence.pull_request_id and are not part of a concept name.",
+          "field": {
+            "entityId": "concept",
+            "fieldId": "slug"
+          },
+          "key": "field:concept.slug",
+          "semanticKind": "string",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-concept-d81d134b73",
+      "inputSignature": "b73048822bfb9f04c1560459ae12a89241bc463c1918a8df9f357f4992dc4a8b",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The exact verbatim text snippet or documentation excerpt extracted from a repository or pull request. Serves as ground truth supporting the concept association. Must join concept_id to concept.id to interpret meaning.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "excerpt"
+          },
+          "key": "field:conceptEvidence.excerpt",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Identifies the specific extractor logic or rule set version used to identify and extract this concept evidence.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "extractor_version"
+          },
+          "key": "field:conceptEvidence.extractor_version",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The method used to discover and extract the concept evidence from the source material.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "method"
+          },
+          "key": "field:conceptEvidence.method",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the concept evidence was extracted from the source material.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "observed_at"
+          },
+          "key": "field:conceptEvidence.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "Evidence lifecycle state: accepted, pending, rejected or superseded. Current positive evidence requires accepted. Accepted alone neither identifies a capability nor proves explicit implementation; support_level separately distinguishes explicit dependencies from inferred mentions.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "review_status"
+          },
+          "key": "field:conceptEvidence.review_status",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The structural origin type of the evidence snippet, indicating whether it came from a pull request, README file, manifest, or topic metadata.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_kind"
+          },
+          "key": "field:conceptEvidence.source_kind",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The exact source control version, blob hash, or commit identifier corresponding to the state of the file or pull request when the evidence was sampled.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_revision"
+          },
+          "key": "field:conceptEvidence.source_revision",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The full HTTP URL pointing directly to the web location of the source document, file, or pull request excerpt on GitHub.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_url"
+          },
+          "key": "field:conceptEvidence.source_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Explicit support comes from exact declared package dependencies. Inferred support comes from source text or added patch-line mentions and model proposals; a mention alone does not prove implementation. This is distinct from review_status and from the concept identity.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "support_level"
+          },
+          "key": "field:conceptEvidence.support_level",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-conceptevidence-4d9280dee9",
+      "inputSignature": "b09c4650286ec43715c280f9783ae8e8cba019d10c01cb3fc155a359910030c2",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Boolean flag indicating whether the user's membership in the GitHub organization is currently public.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "currently_public"
+          },
+          "key": "field:publicMembership.currently_public",
+          "semanticKind": "boolean",
+          "structuralRoles": []
+        },
+        {
+          "description": "The initial date and time when the user was recorded as a public member of the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "first_seen_at"
+          },
+          "key": "field:publicMembership.first_seen_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The most recent date and time the organization public membership list was queried or verified.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "last_checked_at"
+          },
+          "key": "field:publicMembership.last_checked_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the user was last seen active as a public member of the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "last_seen_at"
+          },
+          "key": "field:publicMembership.last_seen_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The specific GitHub REST API endpoint URL used during data collection to enumerate public members for the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "source_url"
+          },
+          "key": "field:publicMembership.source_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-publicmembership-97250fe400",
+      "inputSignature": "f5d2b55b81b6fc1cdf4d1abaa53206bd33851efec0c0955aaf2002874cfd2647",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The pull request body, containing its author-provided description and potentially Markdown, links, templates, or generated text. A null likely means no pull request description is available.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "body_text"
+          },
+          "key": "field:pullRequest.body_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp marking creation of the pull request. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "created_at"
+          },
+          "key": "field:pullRequest.created_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "Full Git object ID of the commit at the pull request head when observed. It identifies source revision content; the pull request body and title can change independently of this SHA.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "head_sha"
+          },
+          "key": "field:pullRequest.head_sha",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp marking when the pull request was merged. A null likely means the pull request was closed without a recorded merge. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "merged_at"
+          },
+          "key": "field:pullRequest.merged_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "Opaque GitHub node ID for this pull request, suitable for GraphQL-style identity and lookup. It is not the human-facing pull request number or a numeric quantity.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "node_id"
+          },
+          "key": "field:pullRequest.node_id",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The pull request's human-facing sequence number within its repository. It identifies a pull request only in combination with its repository, not across all GitHub repositories.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "number"
+          },
+          "key": "field:pullRequest.number",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp recording when the pull request was observed in this dataset, rather than when it was created, updated, or merged. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "observed_at"
+          },
+          "key": "field:pullRequest.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "GitHub HTTPS URL locating this pull request in its repository. The repository owner and name, followed by the pull request number, are encoded in the path.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "pull_request_url"
+          },
+          "key": "field:pullRequest.pull_request_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Lexical search text combining the pull request title with its body when available. It is intended for text retrieval; matching text is evidence of a mention, not proof that a described feature was implemented.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "search_text"
+          },
+          "key": "field:pullRequest.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Pull request lifecycle state as supplied by GitHub. This is an unordered status category, not an ordered progression or a merge indicator.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "state"
+          },
+          "key": "field:pullRequest.state",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Short free-form title summarizing the pull request. It may include conventional commit prefixes, issue references, version markers, or punctuation.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "title"
+          },
+          "key": "field:pullRequest.title",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp for the most recent recorded update to the pull request. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "updated_at"
+          },
+          "key": "field:pullRequest.updated_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-pullrequest-14425238f2",
+      "inputSignature": "dc524df61f24c506f25b56c4f1e08ab410420340ffc4d2cd82c0bea99ae3331e",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Free-form body attached to the pull request review. An empty string likely means the review was submitted without a written body; populated content can include Markdown, HTML comments, and links.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "body_text"
+          },
+          "key": "field:pullRequestReview.body_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Full Git object ID for the commit revision associated with this review. It is a reference for matching commits and joins, not a numeric quantity.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "commit_sha"
+          },
+          "key": "field:pullRequestReview.commit_sha",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp recording when this pull request review was observed in this dataset, rather than when the review was submitted. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "observed_at"
+          },
+          "key": "field:pullRequestReview.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "Canonical GitHub URL locating this review within its pull request, including a review-specific fragment. It is a link value rather than a stable numeric key.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "review_url"
+          },
+          "key": "field:pullRequestReview.review_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Review state as a GitHub status category, such as approval, comment-only review, dismissal, pending review, or requested changes. These are unordered workflow categories rather than a ranked scale; pending and dismissed reviews require explicit inclusion semantics.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "state"
+          },
+          "key": "field:pullRequestReview.state",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp for submission of this pull request review. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "submitted_at"
+          },
+          "key": "field:pullRequestReview.submitted_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-pullrequestreview-addb296f5a",
+      "inputSignature": "57725e87c5d8aaa26e1b8916595870711d234294be42dfda44f39867df0e6500",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The primary branch name used by default for commits and pull requests in the repository.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "default_branch"
+          },
+          "key": "field:repository.default_branch",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "A short free-text description of the GitHub repository. Unpopulated values indicate that no repository description was provided.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "description"
+          },
+          "key": "field:repository.description",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The complete combined owner account and repository name identifier separated by a forward slash.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "full_name"
+          },
+          "key": "field:repository.full_name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Boolean flag showing if the repository is read-only and archived.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "is_archived"
+          },
+          "key": "field:repository.is_archived",
+          "semanticKind": "boolean",
+          "structuralRoles": []
+        },
+        {
+          "description": "Boolean status marking whether this project was cloned/forked from a parent repository.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "is_fork"
+          },
+          "key": "field:repository.is_fork",
+          "semanticKind": "boolean",
+          "structuralRoles": []
+        },
+        {
+          "description": "The single repository name without the owner prefix.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "name"
+          },
+          "key": "field:repository.name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Global node identifier string used across GitHub's GraphQL API.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "node_id"
+          },
+          "key": "field:repository.node_id",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the repository metadata was captured into the system.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "observed_at"
+          },
+          "key": "field:repository.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time of the latest commit push event recorded on the repository.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "pushed_at"
+          },
+          "key": "field:repository.pushed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The Git blob SHA hash representing the specific version of the captured README file, distinct from a commit SHA.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "readme_sha"
+          },
+          "key": "field:repository.readme_sha",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The raw documentation text extracted from the main README document of the repository.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "readme_text"
+          },
+          "key": "field:repository.readme_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Direct HTTPS Web URL pointing to the repository on GitHub.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "repository_url"
+          },
+          "key": "field:repository.repository_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Concatenated full-text index containing the repository name, description, topics, and truncated README text used for BM25 search queries.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "search_text"
+          },
+          "key": "field:repository.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Whole number count of stars or bookmarks awarded to this project on GitHub.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "stars_count"
+          },
+          "key": "field:repository.stars_count",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "Comma-separated or formatted list of user-provided categorization tags attached to the repository.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "topics"
+          },
+          "key": "field:repository.topics",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-repository-3446024495",
+      "inputSignature": "5d718d9eeb5d3c3f4be145723a46f45fd16dd8db1844439e77edcba729f32b58",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Whole number of bytes written in the associated programming language within the repository.",
+          "field": {
+            "entityId": "repositoryLanguage",
+            "fieldId": "bytes"
+          },
+          "key": "field:repositoryLanguage.bytes",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "Proper name of the detected programming language or markup dialect.",
+          "field": {
+            "entityId": "repositoryLanguage",
+            "fieldId": "language"
+          },
+          "key": "field:repositoryLanguage.language",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the language statistics were captured.",
+          "field": {
+            "entityId": "repositoryLanguage",
+            "fieldId": "observed_at"
+          },
+          "key": "field:repositoryLanguage.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-entity-repositorylanguage-1182adb874",
+      "inputSignature": "167a88871bc1b4f092513a36362aa0e518f9da4f9f9b939bed9a28d648eaeec2",
+      "reasons": [
+        "same-entity"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The pull request body, containing its author-provided description and potentially Markdown, links, templates, or generated text. A null likely means no pull request description is available.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "body_text"
+          },
+          "key": "field:pullRequest.body_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Free-form body attached to the pull request review. An empty string likely means the review was submitted without a written body; populated content can include Markdown, HTML comments, and links.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "body_text"
+          },
+          "key": "field:pullRequestReview.body_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-body-text-46dc7add8c",
+      "inputSignature": "18180a68c2c73f17b32e2a78fdc547ef776bde13781a38540eafc1bb1ac3ff99",
+      "reasons": [
+        "exact-name",
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "A concise explanation of the domain, technology, or capability represented by this concept row.",
+          "field": {
+            "entityId": "concept",
+            "fieldId": "description"
+          },
+          "key": "field:concept.description",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "A short free-text description of the GitHub repository. Unpopulated values indicate that no repository description was provided.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "description"
+          },
+          "key": "field:repository.description",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-description-38fc804d5e",
+      "inputSignature": "8d455c989fc37e10705808ac7422469d91147076aa47969d68d9b35b7303b0c7",
+      "reasons": [
+        "exact-name",
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Display name shown on the public GitHub profile. It may be a personal name, a single-name label, or another profile-provided name; a null likely means no display name was supplied or captured.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "name"
+          },
+          "key": "field:account.name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The single repository name without the owner prefix.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "name"
+          },
+          "key": "field:repository.name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-name-41271efb14",
+      "inputSignature": "4eadd26e025a173abfc3029caceba593be549f0eb21959e7ae045e6a071bc377",
+      "reasons": [
+        "exact-name"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Opaque platform node identifier for this GitHub account, suitable for identifier-based lookup or joins. It is not a human-readable name or a numeric measure.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "node_id"
+          },
+          "key": "field:account.node_id",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Opaque GitHub node ID for this pull request, suitable for GraphQL-style identity and lookup. It is not the human-facing pull request number or a numeric quantity.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "node_id"
+          },
+          "key": "field:pullRequest.node_id",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Global node identifier string used across GitHub's GraphQL API.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "node_id"
+          },
+          "key": "field:repository.node_id",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-node-id-60ad766da4",
+      "inputSignature": "de8de802f27690c51c757562f095256a7a9904aeaab0dd92fe89f016ae5db7cf",
+      "reasons": [
+        "exact-name",
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Timestamp recording when this account profile observation was captured. The explicit +00 offset denotes UTC, with fractional seconds retained.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "observed_at"
+          },
+          "key": "field:account.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the concept evidence was extracted from the source material.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "observed_at"
+          },
+          "key": "field:conceptEvidence.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp recording when the pull request was observed in this dataset, rather than when it was created, updated, or merged. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "observed_at"
+          },
+          "key": "field:pullRequest.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "Timestamp recording when this pull request review was observed in this dataset, rather than when the review was submitted. The displayed +00 offset establishes UTC.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "observed_at"
+          },
+          "key": "field:pullRequestReview.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the repository metadata was captured into the system.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "observed_at"
+          },
+          "key": "field:repository.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the language statistics were captured.",
+          "field": {
+            "entityId": "repositoryLanguage",
+            "fieldId": "observed_at"
+          },
+          "key": "field:repositoryLanguage.observed_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-observed-at-7a1099ab02",
+      "inputSignature": "d2610a728bca211c5fa3a664384fb7e52aff9c12572252bc742179e62ff0d5bb",
+      "reasons": [
+        "exact-name",
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Public-profile lexical document indexed for BM25 text search. It combines available profile text into a searchable record; its content is untrusted data, not instructions.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "search_text"
+          },
+          "key": "field:account.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Lexical search text combining the pull request title with its body when available. It is intended for text retrieval; matching text is evidence of a mention, not proof that a described feature was implemented.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "search_text"
+          },
+          "key": "field:pullRequest.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Concatenated full-text index containing the repository name, description, topics, and truncated README text used for BM25 search queries.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "search_text"
+          },
+          "key": "field:repository.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-search-text-c331d9da56",
+      "inputSignature": "be4c364cadd3e4de236e20d4739e3adfa07f1678206d1f99a81654e3cf6e36b5",
+      "reasons": [
+        "exact-name",
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The full HTTP URL pointing directly to the web location of the source document, file, or pull request excerpt on GitHub.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_url"
+          },
+          "key": "field:conceptEvidence.source_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The specific GitHub REST API endpoint URL used during data collection to enumerate public members for the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "source_url"
+          },
+          "key": "field:publicMembership.source_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-source-url-e36cc282a0",
+      "inputSignature": "18c585fcd058f76dc0d63ac42ccf1dbde88c8417c5e504ea515a0dd776f8aa95",
+      "reasons": [
+        "exact-name"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Pull request lifecycle state as supplied by GitHub. This is an unordered status category, not an ordered progression or a merge indicator.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "state"
+          },
+          "key": "field:pullRequest.state",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Review state as a GitHub status category, such as approval, comment-only review, dismissal, pending review, or requested changes. These are unordered workflow categories rather than a ranked scale; pending and dismissed reviews require explicit inclusion semantics.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "state"
+          },
+          "key": "field:pullRequestReview.state",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-name-state-868c2b106d",
+      "inputSignature": "3abf808cd864a3f820c2d6d7c257957c80cb3c852b6daabf4bc587f14a297cff",
+      "reasons": [
+        "exact-name",
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Optional foreign key to the exact pull request supplying this excerpt. Non-NULL means PR-level evidence; NULL means repository-level evidence. PR-level and repository-level are scope descriptions, never prefixes in a concept label. To find authors of a specific capability, constrain the linked concept as well as the PR author.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "pull_request_id"
+          },
+          "key": "field:conceptEvidence.pull_request_id",
+          "semanticKind": "number",
+          "structuralRoles": [
+            "relationship:conceptEvidence_pullRequestId_repositoryId_pullRequest:from"
+          ]
+        },
+        {
+          "description": "Foreign key to the repository containing this evidence. Always present for both repository-scoped and PR-scoped evidence. For authors contributing to a project with a concept, correlate authored pull requests and repository-scoped evidence through their shared repository identity. This does not establish that each contributor personally implemented the project capability.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "repository_id"
+          },
+          "key": "field:conceptEvidence.repository_id",
+          "semanticKind": "number",
+          "structuralRoles": [
+            "relationship:conceptEvidence_pullRequestId_repositoryId_pullRequest:from",
+            "relationship:conceptEvidence_repositoryId_repository:from"
+          ]
+        }
+      ],
+      "id": "fde-relationship-conceptevidence-pullrequest-4c2cbd887d",
+      "inputSignature": "a72b43496f448fa62c1c6833bbadef16ded6d01349bb755d865a3fd8f1db5fdd",
+      "reasons": [
+        "relationship-role"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Numeric ID identifying the GitHub organization account associated with this public membership record.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "organization_id"
+          },
+          "key": "field:publicMembership.organization_id",
+          "semanticKind": "number",
+          "structuralRoles": [
+            "relationship:publicMembership_organizationId_account:from"
+          ]
+        },
+        {
+          "description": "Numeric ID identifying the individual user account associated with this public membership record.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "person_id"
+          },
+          "key": "field:publicMembership.person_id",
+          "semanticKind": "number",
+          "structuralRoles": [
+            "relationship:publicMembership_personId_account:from"
+          ]
+        }
+      ],
+      "id": "fde-relationship-publicmembership-account-d613bd5653",
+      "inputSignature": "116e857fbc66b170c59fbe27cba5783a7f8bad83089c15353e467defa0bfcdb9",
+      "reasons": [
+        "relationship-role"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Follower count observed when the complete public profile was fetched. A null indicates that the profile was not fetched, rather than that it has zero followers.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "followers_count"
+          },
+          "key": "field:account.followers_count",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "Number of public repositories reported when the complete public profile was fetched. A null likely means the complete profile was not fetched, not that the account has no public repositories.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "public_repos_count"
+          },
+          "key": "field:account.public_repos_count",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "Whole number count of stars or bookmarks awarded to this project on GitHub.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "stars_count"
+          },
+          "key": "field:repository.stars_count",
+          "semanticKind": "number",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-count-2ce842db35",
+      "inputSignature": "1e5a78ee62f0e77c190aeeaf262f5d19886781069e3aaa7f8b917c86559b7305",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Categorizes the concept into structural buckets: capability, technology, or domain.",
+          "field": {
+            "entityId": "concept",
+            "fieldId": "kind"
+          },
+          "key": "field:concept.kind",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The structural origin type of the evidence snippet, indicating whether it came from a pull request, README file, manifest, or topic metadata.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_kind"
+          },
+          "key": "field:conceptEvidence.source_kind",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-kind-ea2af26f5f",
+      "inputSignature": "4b38df750c14842eb786cc899af3fe40035a25069b39a6dccee6fdb6ff39b6cb",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The most recent date and time the organization public membership list was queried or verified.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "last_checked_at"
+          },
+          "key": "field:publicMembership.last_checked_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the user was last seen active as a public member of the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "last_seen_at"
+          },
+          "key": "field:publicMembership.last_seen_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-last-7c642dd1d4",
+      "inputSignature": "3a8ded71cf466324bf7793940ffa7f25c142bb1c4432a8029fe7dbc5e4679a2c",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "City component derived from the account's self-reported profile location. A null likely means no city was extracted.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_city"
+          },
+          "key": "field:account.location_city",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Country component derived from the account's self-reported profile location. A null likely means no country was extracted.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_country"
+          },
+          "key": "field:account.location_country",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Versioned rule or enrichment provenance for the normalized location fields, while retaining the original location text separately. A null likely means the location was not normalized.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_normalization"
+          },
+          "key": "field:account.location_normalization",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Unverified location text supplied on the public GitHub profile. It does not establish residence, nationality, timezone, or availability. A null likely means no location text was supplied or captured.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "location_raw"
+          },
+          "key": "field:account.location_raw",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-location-3983d574df",
+      "inputSignature": "361240c3a27920ed2d2fa477b805f3c3ea11d42c87933c8a6b8bb8d668e365a2",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Display name shown on the public GitHub profile. It may be a personal name, a single-name label, or another profile-provided name; a null likely means no display name was supplied or captured.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "name"
+          },
+          "key": "field:account.name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The complete combined owner account and repository name identifier separated by a forward slash.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "full_name"
+          },
+          "key": "field:repository.full_name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The single repository name without the owner prefix.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "name"
+          },
+          "key": "field:repository.name",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-name-f6f8bb7468",
+      "inputSignature": "566c64ecf5a51da5f00007177284e40df46b5f74b03b084b176311ff8fd7b5b0",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Timestamp when a complete public GitHub profile was fetched. A null indicates a sparse identity observation rather than a complete profile fetch. The explicit +00 offset denotes UTC.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "profile_fetched_at"
+          },
+          "key": "field:account.profile_fetched_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "HTTPS address of the account's public GitHub profile. App profiles use a GitHub path that includes an apps segment.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "profile_url"
+          },
+          "key": "field:account.profile_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-profile-eeaaca34ee",
+      "inputSignature": "54582c18b8dd56e7f7f497894595ea52574e445d5d4580527d5f289e888d2b48",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Number of public repositories reported when the complete public profile was fetched. A null likely means the complete profile was not fetched, not that the account has no public repositories.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "public_repos_count"
+          },
+          "key": "field:account.public_repos_count",
+          "semanticKind": "number",
+          "structuralRoles": []
+        },
+        {
+          "description": "Boolean flag indicating whether the user's membership in the GitHub organization is currently public.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "currently_public"
+          },
+          "key": "field:publicMembership.currently_public",
+          "semanticKind": "boolean",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-public-e903e8ed4a",
+      "inputSignature": "08574de111d8bf3eee827e45c320481e8774179a9b6385f1315099f1e57907f3",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The Git blob SHA hash representing the specific version of the captured README file, distinct from a commit SHA.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "readme_sha"
+          },
+          "key": "field:repository.readme_sha",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The raw documentation text extracted from the main README document of the repository.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "readme_text"
+          },
+          "key": "field:repository.readme_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-readme-c0afafc7ba",
+      "inputSignature": "3ef5da7a1e7cddbdff48540bb4eb2ee9574d2faa762556d40559864f70414d50",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Evidence lifecycle state: accepted, pending, rejected or superseded. Current positive evidence requires accepted. Accepted alone neither identifies a capability nor proves explicit implementation; support_level separately distinguishes explicit dependencies from inferred mentions.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "review_status"
+          },
+          "key": "field:conceptEvidence.review_status",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Canonical GitHub URL locating this review within its pull request, including a review-specific fragment. It is a link value rather than a stable numeric key.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "review_url"
+          },
+          "key": "field:pullRequestReview.review_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-review-85cfa6c50a",
+      "inputSignature": "2aeb58fd3251c4b470dd87d975135e4c3da42012d85b4a817e13ce7a44e5acbc",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The initial date and time when the user was recorded as a public member of the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "first_seen_at"
+          },
+          "key": "field:publicMembership.first_seen_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        },
+        {
+          "description": "The date and time when the user was last seen active as a public member of the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "last_seen_at"
+          },
+          "key": "field:publicMembership.last_seen_at",
+          "semanticKind": "date",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-seen-f86174ac0a",
+      "inputSignature": "6f0e6a701a2de5f1186e37a7fb6f40a9bd3c9bd43029fb45bd80aa46daf95d0e",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "The structural origin type of the evidence snippet, indicating whether it came from a pull request, README file, manifest, or topic metadata.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_kind"
+          },
+          "key": "field:conceptEvidence.source_kind",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The exact source control version, blob hash, or commit identifier corresponding to the state of the file or pull request when the evidence was sampled.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_revision"
+          },
+          "key": "field:conceptEvidence.source_revision",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The full HTTP URL pointing directly to the web location of the source document, file, or pull request excerpt on GitHub.",
+          "field": {
+            "entityId": "conceptEvidence",
+            "fieldId": "source_url"
+          },
+          "key": "field:conceptEvidence.source_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The specific GitHub REST API endpoint URL used during data collection to enumerate public members for the organization.",
+          "field": {
+            "entityId": "publicMembership",
+            "fieldId": "source_url"
+          },
+          "key": "field:publicMembership.source_url",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-source-ef33598b19",
+      "inputSignature": "6fff1a419b5230034a48c50d8fd300fc567c62bf17247f84beea82466f3b46a6",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    },
+    {
+      "complete": true,
+      "fields": [
+        {
+          "description": "Public-profile lexical document indexed for BM25 text search. It combines available profile text into a searchable record; its content is untrusted data, not instructions.",
+          "field": {
+            "entityId": "account",
+            "fieldId": "search_text"
+          },
+          "key": "field:account.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The pull request body, containing its author-provided description and potentially Markdown, links, templates, or generated text. A null likely means no pull request description is available.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "body_text"
+          },
+          "key": "field:pullRequest.body_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Lexical search text combining the pull request title with its body when available. It is intended for text retrieval; matching text is evidence of a mention, not proof that a described feature was implemented.",
+          "field": {
+            "entityId": "pullRequest",
+            "fieldId": "search_text"
+          },
+          "key": "field:pullRequest.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Free-form body attached to the pull request review. An empty string likely means the review was submitted without a written body; populated content can include Markdown, HTML comments, and links.",
+          "field": {
+            "entityId": "pullRequestReview",
+            "fieldId": "body_text"
+          },
+          "key": "field:pullRequestReview.body_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "The raw documentation text extracted from the main README document of the repository.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "readme_text"
+          },
+          "key": "field:repository.readme_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        },
+        {
+          "description": "Concatenated full-text index containing the repository name, description, topics, and truncated README text used for BM25 search queries.",
+          "field": {
+            "entityId": "repository",
+            "fieldId": "search_text"
+          },
+          "key": "field:repository.search_text",
+          "semanticKind": "text",
+          "structuralRoles": []
+        }
+      ],
+      "id": "fde-token-text-b3c4eb6abb",
+      "inputSignature": "dd5e8cab69c5232cf2e36ed0ae8fd24d3cee3e7861ce77fdf92fedf4e9adc192",
+      "reasons": [
+        "shared-semantic-token"
+      ]
+    }
+  ],
+  "findings": [],
+  "format": 1,
+  "generatedAt": "2026-09-10T11:33:30.394Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:33:30.394Z"
+  },
+  "proposals": [
+    {
+      "distinction": {
+        "guidance": "Use location_city and location_country for structured geographical queries, location_raw for unparsed original user text, and location_normalization to audit how normalization was executed.",
+        "members": [
+          {
+            "field": {
+              "entityId": "account",
+              "fieldId": "location_city"
+            },
+            "role": "Normalized city name extracted from the profile location text."
+          },
+          {
+            "field": {
+              "entityId": "account",
+              "fieldId": "location_country"
+            },
+            "role": "Normalized country name extracted from the profile location text."
+          },
+          {
+            "field": {
+              "entityId": "account",
+              "fieldId": "location_normalization"
+            },
+            "role": "Metadata describing the rule version or enrichment process applied to normalize location values."
+          },
+          {
+            "field": {
+              "entityId": "account",
+              "fieldId": "location_raw"
+            },
+            "role": "Unparsed, original location string as entered directly on the user's public profile."
+          }
+        ]
+      },
+      "envelopeId": "fde-token-location-3983d574df",
+      "id": "field-distinction:account-location-city-vs-account-location-country-vs-account-246083b8b890",
+      "inputSignature": "361240c3a27920ed2d2fa477b805f3c3ea11d42c87933c8a6b8bb8d668e365a2",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use observed_at for the dataset observation time; use profile_fetched_at specifically to establish or time a complete-profile fetch.",
+        "members": [
+          {
+            "field": {
+              "entityId": "account",
+              "fieldId": "observed_at"
+            },
+            "role": "Time this account profile observation was captured in the dataset."
+          },
+          {
+            "field": {
+              "entityId": "account",
+              "fieldId": "profile_fetched_at"
+            },
+            "role": "Time a complete public profile was fetched."
+          }
+        ]
+      },
+      "envelopeId": "fde-entity-account-98ac43484c",
+      "id": "field-distinction:account-observed-at-vs-account-profile-fetched-at-c23d8103714c",
+      "inputSignature": "a2d1853ce6158e80b46a605729b985ca0bf3597fe21e588452995126f30dc508",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use concept.kind to filter or group target concepts by semantic type; use conceptEvidence.source_kind to filter evidence by document type like PR, README, or manifest.",
+        "members": [
+          {
+            "field": {
+              "entityId": "concept",
+              "fieldId": "kind"
+            },
+            "role": "Classification category for the concept entity itself (e.g., capability, technology, or domain)."
+          },
+          {
+            "field": {
+              "entityId": "conceptEvidence",
+              "fieldId": "source_kind"
+            },
+            "role": "Classification of the underlying document or artifact source type where evidence was extracted."
+          }
+        ]
+      },
+      "envelopeId": "fde-token-kind-ea2af26f5f",
+      "id": "field-distinction:concept-kind-vs-conceptevidence-source-kind-11c71da2ec11",
+      "inputSignature": "4b38df750c14842eb786cc899af3fe40035a25069b39a6dccee6fdb6ff39b6cb",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use review_status to decide whether evidence is currently positive, then use support_level to distinguish explicit dependency evidence from inferred evidence.",
+        "members": [
+          {
+            "field": {
+              "entityId": "conceptEvidence",
+              "fieldId": "review_status"
+            },
+            "role": "Lifecycle decision on whether the evidence is accepted, pending, rejected, or superseded."
+          },
+          {
+            "field": {
+              "entityId": "conceptEvidence",
+              "fieldId": "support_level"
+            },
+            "role": "Strength and basis of support: explicit declared dependency versus inferred mention or proposal."
+          }
+        ]
+      },
+      "envelopeId": "fde-entity-conceptevidence-4d9280dee9",
+      "id": "field-distinction:conceptevidence-review-status-vs-conceptevidence-support-lev-0ec032dba138",
+      "inputSignature": "b09c4650286ec43715c280f9783ae8e8cba019d10c01cb3fc155a359910030c2",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use the concept-evidence URL to locate the cited source content; use the public-membership URL to identify the collection API endpoint.",
+        "members": [
+          {
+            "field": {
+              "entityId": "conceptEvidence",
+              "fieldId": "source_url"
+            },
+            "role": "GitHub web URL for the evidence-bearing document, file, or pull request excerpt."
+          },
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "source_url"
+            },
+            "role": "GitHub REST API endpoint used to collect the organization's public-membership listing."
+          }
+        ]
+      },
+      "envelopeId": "fde-token-source-ef33598b19",
+      "id": "field-distinction:conceptevidence-source-url-vs-publicmembership-source-url-ad5063d14186",
+      "inputSignature": "6fff1a419b5230034a48c50d8fd300fc567c62bf17247f84beea82466f3b46a6",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use first_seen_at and last_seen_at for the observed membership interval; use last_checked_at for the recency of verification.",
+        "members": [
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "first_seen_at"
+            },
+            "role": "Earliest recorded time the user was publicly listed as an organization member."
+          },
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "last_checked_at"
+            },
+            "role": "Most recent time the organization membership list was checked, whether or not the user was seen."
+          },
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "last_seen_at"
+            },
+            "role": "Most recent time the user was seen as a public member."
+          }
+        ]
+      },
+      "envelopeId": "fde-entity-publicmembership-97250fe400",
+      "id": "field-distinction:publicmembership-first-seen-at-vs-publicmembership-last-chec-f46b7e51a9ee",
+      "inputSignature": "f5d2b55b81b6fc1cdf4d1abaa53206bd33851efec0c0955aaf2002874cfd2647",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use first_seen_at for when public membership was initially recorded; use last_seen_at for the latest observed active public membership.",
+        "members": [
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "first_seen_at"
+            },
+            "role": "Earliest recorded observation of the user's public membership."
+          },
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "last_seen_at"
+            },
+            "role": "Most recent recorded observation of the user's public membership activity."
+          }
+        ]
+      },
+      "envelopeId": "fde-token-seen-f86174ac0a",
+      "id": "field-distinction:publicmembership-first-seen-at-vs-publicmembership-last-seen-2f58e7914cf8",
+      "inputSignature": "6f0e6a701a2de5f1186e37a7fb6f40a9bd3c9bd43029fb45bd80aa46daf95d0e",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use last_checked_at to evaluate data freshness of the synchronization job; use last_seen_at to verify when the user was last confirmed active in the organization.",
+        "members": [
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "last_checked_at"
+            },
+            "role": "Timestamp marking the latest API verification query performed on the organization membership list."
+          },
+          {
+            "field": {
+              "entityId": "publicMembership",
+              "fieldId": "last_seen_at"
+            },
+            "role": "Timestamp marking when the individual user was last observed actively belonging to the organization."
+          }
+        ]
+      },
+      "envelopeId": "fde-token-last-7c642dd1d4",
+      "id": "field-distinction:publicmembership-last-checked-at-vs-publicmembership-last-se-bc740fdf79cf",
+      "inputSignature": "3a8ded71cf466324bf7793940ffa7f25c142bb1c4432a8029fe7dbc5e4679a2c",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use body_text for the original pull request description; use search_text for retrieval-oriented combined text, not as the source body.",
+        "members": [
+          {
+            "field": {
+              "entityId": "pullRequest",
+              "fieldId": "body_text"
+            },
+            "role": "Author-provided pull request description body."
+          },
+          {
+            "field": {
+              "entityId": "pullRequest",
+              "fieldId": "search_text"
+            },
+            "role": "Search-index text combining pull request title and available body text."
+          }
+        ]
+      },
+      "envelopeId": "fde-token-text-b3c4eb6abb",
+      "id": "field-distinction:pullrequest-body-text-vs-pullrequest-search-text-f870bf5fad1f",
+      "inputSignature": "dd5e8cab69c5232cf2e36ed0ae8fd24d3cee3e7861ce77fdf92fedf4e9adc192",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Choose the timestamp by event: creation, latest update, merge, or dataset observation; observed_at is not a GitHub lifecycle event time.",
+        "members": [
+          {
+            "field": {
+              "entityId": "pullRequest",
+              "fieldId": "created_at"
+            },
+            "role": "Time the pull request was created."
+          },
+          {
+            "field": {
+              "entityId": "pullRequest",
+              "fieldId": "merged_at"
+            },
+            "role": "Time it was merged, if a merge was recorded."
+          },
+          {
+            "field": {
+              "entityId": "pullRequest",
+              "fieldId": "observed_at"
+            },
+            "role": "Time this dataset observed the pull request."
+          },
+          {
+            "field": {
+              "entityId": "pullRequest",
+              "fieldId": "updated_at"
+            },
+            "role": "Time of its most recent recorded update."
+          }
+        ]
+      },
+      "envelopeId": "fde-entity-pullrequest-14425238f2",
+      "id": "field-distinction:pullrequest-created-at-vs-pullrequest-merged-at-vs-pullreque-3463b3b70972",
+      "inputSignature": "dc524df61f24c506f25b56c4f1e08ab410420340ffc4d2cd82c0bea99ae3331e",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use submitted_at for the review action and observed_at for when the dataset recorded that review.",
+        "members": [
+          {
+            "field": {
+              "entityId": "pullRequestReview",
+              "fieldId": "observed_at"
+            },
+            "role": "Time this dataset observed the review."
+          },
+          {
+            "field": {
+              "entityId": "pullRequestReview",
+              "fieldId": "submitted_at"
+            },
+            "role": "Time the review was submitted."
+          }
+        ]
+      },
+      "envelopeId": "fde-entity-pullrequestreview-addb296f5a",
+      "id": "field-distinction:pullrequestreview-observed-at-vs-pullrequestreview-submitted-5d558457efbf",
+      "inputSignature": "57725e87c5d8aaa26e1b8916595870711d234294be42dfda44f39867df0e6500",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "distinction": {
+        "guidance": "Use repository.full_name for globally unique qualified repository references; use repository.name for display or local matching within an owner scope.",
+        "members": [
+          {
+            "field": {
+              "entityId": "repository",
+              "fieldId": "full_name"
+            },
+            "role": "Combined repository identifier string in owner/repo format."
+          },
+          {
+            "field": {
+              "entityId": "repository",
+              "fieldId": "name"
+            },
+            "role": "Standalone repository name string excluding the owner prefix."
+          }
+        ]
+      },
+      "envelopeId": "fde-token-name-f6f8bb7468",
+      "id": "field-distinction:repository-full-name-vs-repository-name-174369e31cab",
+      "inputSignature": "566c64ecf5a51da5f00007177284e40df46b5f74b03b084b176311ff8fd7b5b0",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    }
+  ],
+  "reviews": [
+    {
+      "envelopeId": "fde-entity-account-98ac43484c",
+      "inputSignature": "a2d1853ce6158e80b46a605729b985ca0bf3597fe21e588452995126f30dc508",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-entity-concept-d81d134b73",
+      "inputSignature": "b73048822bfb9f04c1560459ae12a89241bc463c1918a8df9f357f4992dc4a8b",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "unavailable"
+    },
+    {
+      "envelopeId": "fde-entity-conceptevidence-4d9280dee9",
+      "inputSignature": "b09c4650286ec43715c280f9783ae8e8cba019d10c01cb3fc155a359910030c2",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-entity-publicmembership-97250fe400",
+      "inputSignature": "f5d2b55b81b6fc1cdf4d1abaa53206bd33851efec0c0955aaf2002874cfd2647",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-entity-pullrequest-14425238f2",
+      "inputSignature": "dc524df61f24c506f25b56c4f1e08ab410420340ffc4d2cd82c0bea99ae3331e",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-entity-pullrequestreview-addb296f5a",
+      "inputSignature": "57725e87c5d8aaa26e1b8916595870711d234294be42dfda44f39867df0e6500",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-entity-repository-3446024495",
+      "inputSignature": "5d718d9eeb5d3c3f4be145723a46f45fd16dd8db1844439e77edcba729f32b58",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "unavailable"
+    },
+    {
+      "envelopeId": "fde-entity-repositorylanguage-1182adb874",
+      "inputSignature": "167a88871bc1b4f092513a36362aa0e518f9da4f9f9b939bed9a28d648eaeec2",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "unavailable"
+    },
+    {
+      "envelopeId": "fde-name-body-text-46dc7add8c",
+      "inputSignature": "18180a68c2c73f17b32e2a78fdc547ef776bde13781a38540eafc1bb1ac3ff99",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-name-description-38fc804d5e",
+      "inputSignature": "8d455c989fc37e10705808ac7422469d91147076aa47969d68d9b35b7303b0c7",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-name-name-41271efb14",
+      "inputSignature": "4eadd26e025a173abfc3029caceba593be549f0eb21959e7ae045e6a071bc377",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-name-node-id-60ad766da4",
+      "inputSignature": "de8de802f27690c51c757562f095256a7a9904aeaab0dd92fe89f016ae5db7cf",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-name-observed-at-7a1099ab02",
+      "inputSignature": "d2610a728bca211c5fa3a664384fb7e52aff9c12572252bc742179e62ff0d5bb",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-name-search-text-c331d9da56",
+      "inputSignature": "be4c364cadd3e4de236e20d4739e3adfa07f1678206d1f99a81654e3cf6e36b5",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-name-source-url-e36cc282a0",
+      "inputSignature": "18c585fcd058f76dc0d63ac42ccf1dbde88c8417c5e504ea515a0dd776f8aa95",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-name-state-868c2b106d",
+      "inputSignature": "3abf808cd864a3f820c2d6d7c257957c80cb3c852b6daabf4bc587f14a297cff",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-relationship-conceptevidence-pullrequest-4c2cbd887d",
+      "inputSignature": "d2d39dd232716ba37af9a4ec1ede1cec93741dfe8b633403c2e63c47061cd32e",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "stale"
+    },
+    {
+      "envelopeId": "fde-relationship-conceptevidence-pullrequest-4c2cbd887d",
+      "inputSignature": "a72b43496f448fa62c1c6833bbadef16ded6d01349bb755d865a3fd8f1db5fdd",
+      "state": "unreviewed"
+    },
+    {
+      "envelopeId": "fde-relationship-publicmembership-account-d613bd5653",
+      "inputSignature": "116e857fbc66b170c59fbe27cba5783a7f8bad83089c15353e467defa0bfcdb9",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-count-2ce842db35",
+      "inputSignature": "1e5a78ee62f0e77c190aeeaf262f5d19886781069e3aaa7f8b917c86559b7305",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-kind-ea2af26f5f",
+      "inputSignature": "4b38df750c14842eb786cc899af3fe40035a25069b39a6dccee6fdb6ff39b6cb",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-last-7c642dd1d4",
+      "inputSignature": "3a8ded71cf466324bf7793940ffa7f25c142bb1c4432a8029fe7dbc5e4679a2c",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-location-3983d574df",
+      "inputSignature": "361240c3a27920ed2d2fa477b805f3c3ea11d42c87933c8a6b8bb8d668e365a2",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-name-f6f8bb7468",
+      "inputSignature": "566c64ecf5a51da5f00007177284e40df46b5f74b03b084b176311ff8fd7b5b0",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-profile-eeaaca34ee",
+      "inputSignature": "54582c18b8dd56e7f7f497894595ea52574e445d5d4580527d5f289e888d2b48",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-public-e903e8ed4a",
+      "inputSignature": "08574de111d8bf3eee827e45c320481e8774179a9b6385f1315099f1e57907f3",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-readme-c0afafc7ba",
+      "inputSignature": "3ef5da7a1e7cddbdff48540bb4eb2ee9574d2faa762556d40559864f70414d50",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-review-85cfa6c50a",
+      "inputSignature": "2aeb58fd3251c4b470dd87d975135e4c3da42012d85b4a817e13ce7a44e5acbc",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-seen-f86174ac0a",
+      "inputSignature": "6f0e6a701a2de5f1186e37a7fb6f40a9bd3c9bd43029fb45bd80aa46daf95d0e",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-source-ef33598b19",
+      "inputSignature": "6fff1a419b5230034a48c50d8fd300fc567c62bf17247f84beea82466f3b46a6",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    },
+    {
+      "envelopeId": "fde-token-text-b3c4eb6abb",
+      "inputSignature": "dd5e8cab69c5232cf2e36ed0ae8fd24d3cee3e7861ce77fdf92fedf4e9adc192",
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-field-distinction-review.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "state": "current"
+    }
+  ],
+  "worldId": "prj_debe3085e1b247b6a7df26022617d7ac"
+}

@@ -1,0 +1,62 @@
+{
+  "datastore": {
+    "connections": [
+      {
+        "dialect": "postgres",
+        "name": "main",
+        "secret": {
+          "ref": "DATABASE_URL",
+          "source": "env"
+        }
+      }
+    ]
+  },
+  "format": 2,
+  "project": {
+    "id": "prj_debe3085e1b247b6a7df26022617d7ac",
+    "name": "gia-github"
+  },
+  "runtime": {
+    "baseUrl": "http://127.0.0.1:8798"
+  },
+  "scope": {
+    "connection": "main",
+    "tables": [
+      {
+        "name": "accounts",
+        "schema": "github"
+      },
+      {
+        "name": "concept_evidence",
+        "schema": "github"
+      },
+      {
+        "name": "concepts",
+        "schema": "github"
+      },
+      {
+        "name": "public_memberships",
+        "schema": "github"
+      },
+      {
+        "name": "pull_request_reviews",
+        "schema": "github"
+      },
+      {
+        "name": "pull_requests",
+        "schema": "github"
+      },
+      {
+        "name": "repositories",
+        "schema": "github"
+      },
+      {
+        "name": "repository_languages",
+        "schema": "github"
+      }
+    ]
+  },
+  "valueEvidence": {
+    "signatureOnlyFields": []
+  }
+}

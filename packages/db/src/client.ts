@@ -10,6 +10,9 @@ export function createDatabase(input: { connectionString: string; maximumConnect
     idleTimeoutMillis: 30_000,
     application_name: "gia-github",
   });
+  pool.on("error", () => {
+    process.stderr.write("An idle PostgreSQL connection failed; the pool will replace it.\n");
+  });
   return { db: drizzle(pool, { schema }), pool, close: () => pool.end() };
 }
 

@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-09-10T10:52:22.330Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.public_memberships",
+  "relationships": [
+    {
+      "distinct_to_count": 3,
+      "edgeId": "github.public_memberships.organization_id->github.accounts.id",
+      "found_count": 79,
+      "from": "github.public_memberships",
+      "parts": [
+        {
+          "from_field": "organization_id",
+          "to_field": "id"
+        }
+      ],
+      "sampled_from_count": 79,
+      "to": "github.accounts"
+    },
+    {
+      "distinct_to_count": 76,
+      "edgeId": "github.public_memberships.person_id->github.accounts.id",
+      "found_count": 79,
+      "from": "github.public_memberships",
+      "parts": [
+        {
+          "from_field": "person_id",
+          "to_field": "id"
+        }
+      ],
+      "sampled_from_count": 79,
+      "to": "github.accounts"
+    }
+  ],
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "full-scan",
+      "sample_seed": 0,
+      "sampled_rows": 79,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

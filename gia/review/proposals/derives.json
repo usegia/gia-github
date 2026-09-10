@@ -1,0 +1,818 @@
+{
+  "countGrains": [
+    {
+      "edgeId": "conceptEvidence_conceptId_concept",
+      "evidence": {
+        "avgFromPerTo": 18.19,
+        "cardinality": "one",
+        "estimate": true,
+        "note": "fan-out 18.19 on 291 sampled rows; insufficient sample, conservative default",
+        "sampledFrom": 291
+      },
+      "grain": "rows",
+      "status": "proposed"
+    },
+    {
+      "edgeId": "conceptEvidence_repositoryId_repository",
+      "evidence": {
+        "avgFromPerTo": 19.4,
+        "cardinality": "one",
+        "estimate": true,
+        "note": "fan-out 19.4 on 291 sampled rows; insufficient sample, conservative default",
+        "sampledFrom": 291
+      },
+      "grain": "rows",
+      "status": "proposed"
+    },
+    {
+      "edgeId": "publicMembership_organizationId_account",
+      "evidence": {
+        "avgFromPerTo": 26.33,
+        "cardinality": "one",
+        "estimate": true,
+        "note": "fan-out 26.33 on 79 sampled rows; insufficient sample, conservative default",
+        "sampledFrom": 79
+      },
+      "grain": "rows",
+      "status": "proposed"
+    },
+    {
+      "edgeId": "publicMembership_personId_account",
+      "evidence": {
+        "avgFromPerTo": 1.04,
+        "cardinality": "one",
+        "estimate": true,
+        "note": "fan-out 1.04 on 79 sampled rows; insufficient sample, conservative default",
+        "sampledFrom": 79
+      },
+      "grain": "rows",
+      "status": "proposed"
+    },
+    {
+      "edgeId": "pullRequest_authorId_account",
+      "evidence": {
+        "avgFromPerTo": 4.83,
+        "cardinality": "one",
+        "estimate": true,
+        "note": "fan-out 4.83 on 343 sampled rows; insufficient sample, conservative default",
+        "sampledFrom": 343
+      },
+      "grain": "rows",
+      "status": "proposed"
+    },
+    {
+      "edgeId": "pullRequest_repositoryId_repository",
+      "evidence": {
+        "avgFromPerTo": 22.87,
+        "cardinality": "one",
+        "estimate": true,
+        "note": "fan-out 22.87 on 343 sampled rows; insufficient sample, conservative default",
+        "sampledFrom": 343
+      },
+      "grain": "rows",
+      "status": "proposed"
+    },
+    {
+      "edgeId": "repositoryLanguage_repositoryId_repository",
+      "evidence": {
+        "avgFromPerTo": 3.73,
+        "cardinality": "one",
+        "estimate": true,
+        "note": "fan-out 3.73 on 56 sampled rows; insufficient sample, conservative default",
+        "sampledFrom": 56
+      },
+      "grain": "rows",
+      "status": "proposed"
+    }
+  ],
+  "derives": [
+    {
+      "entity": "account",
+      "evidence": {
+        "note": "month grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_month",
+      "id": "account.observed_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "account",
+      "evidence": {
+        "note": "quarter grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_quarter",
+      "id": "account.observed_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "account",
+      "evidence": {
+        "note": "year grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_year",
+      "id": "account.observed_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "account",
+      "evidence": {
+        "note": "month grain over the date field profile_fetched_at",
+        "signal": "date-field"
+      },
+      "fieldId": "profile_fetched_month",
+      "id": "account.profile_fetched_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "profile_fetched_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "account",
+      "evidence": {
+        "note": "quarter grain over the date field profile_fetched_at",
+        "signal": "date-field"
+      },
+      "fieldId": "profile_fetched_quarter",
+      "id": "account.profile_fetched_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "profile_fetched_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "account",
+      "evidence": {
+        "note": "year grain over the date field profile_fetched_at",
+        "signal": "date-field"
+      },
+      "fieldId": "profile_fetched_year",
+      "id": "account.profile_fetched_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "profile_fetched_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "conceptEvidence",
+      "evidence": {
+        "note": "month grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_month",
+      "id": "conceptEvidence.observed_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "conceptEvidence",
+      "evidence": {
+        "note": "quarter grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_quarter",
+      "id": "conceptEvidence.observed_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "conceptEvidence",
+      "evidence": {
+        "note": "year grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_year",
+      "id": "conceptEvidence.observed_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "month grain over the date field first_seen_at",
+        "signal": "date-field"
+      },
+      "fieldId": "first_seen_month",
+      "id": "publicMembership.first_seen_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "first_seen_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "quarter grain over the date field first_seen_at",
+        "signal": "date-field"
+      },
+      "fieldId": "first_seen_quarter",
+      "id": "publicMembership.first_seen_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "first_seen_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "year grain over the date field first_seen_at",
+        "signal": "date-field"
+      },
+      "fieldId": "first_seen_year",
+      "id": "publicMembership.first_seen_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "first_seen_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "month grain over the date field last_checked_at",
+        "signal": "date-field"
+      },
+      "fieldId": "last_checked_month",
+      "id": "publicMembership.last_checked_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "last_checked_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "quarter grain over the date field last_checked_at",
+        "signal": "date-field"
+      },
+      "fieldId": "last_checked_quarter",
+      "id": "publicMembership.last_checked_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "last_checked_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "year grain over the date field last_checked_at",
+        "signal": "date-field"
+      },
+      "fieldId": "last_checked_year",
+      "id": "publicMembership.last_checked_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "last_checked_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "month grain over the date field last_seen_at",
+        "signal": "date-field"
+      },
+      "fieldId": "last_seen_month",
+      "id": "publicMembership.last_seen_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "last_seen_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "quarter grain over the date field last_seen_at",
+        "signal": "date-field"
+      },
+      "fieldId": "last_seen_quarter",
+      "id": "publicMembership.last_seen_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "last_seen_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "publicMembership",
+      "evidence": {
+        "note": "year grain over the date field last_seen_at",
+        "signal": "date-field"
+      },
+      "fieldId": "last_seen_year",
+      "id": "publicMembership.last_seen_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "last_seen_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "month grain over the date field created_at",
+        "signal": "date-field"
+      },
+      "fieldId": "created_month",
+      "id": "pullRequest.created_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "created_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "quarter grain over the date field created_at",
+        "signal": "date-field"
+      },
+      "fieldId": "created_quarter",
+      "id": "pullRequest.created_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "created_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "year grain over the date field created_at",
+        "signal": "date-field"
+      },
+      "fieldId": "created_year",
+      "id": "pullRequest.created_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "created_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "month grain over the date field merged_at",
+        "signal": "date-field"
+      },
+      "fieldId": "merged_month",
+      "id": "pullRequest.merged_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "merged_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "quarter grain over the date field merged_at",
+        "signal": "date-field"
+      },
+      "fieldId": "merged_quarter",
+      "id": "pullRequest.merged_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "merged_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "year grain over the date field merged_at",
+        "signal": "date-field"
+      },
+      "fieldId": "merged_year",
+      "id": "pullRequest.merged_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "merged_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "month grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_month",
+      "id": "pullRequest.observed_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "quarter grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_quarter",
+      "id": "pullRequest.observed_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "year grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_year",
+      "id": "pullRequest.observed_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "month grain over the date field updated_at",
+        "signal": "date-field"
+      },
+      "fieldId": "updated_month",
+      "id": "pullRequest.updated_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "updated_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "quarter grain over the date field updated_at",
+        "signal": "date-field"
+      },
+      "fieldId": "updated_quarter",
+      "id": "pullRequest.updated_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "updated_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequest",
+      "evidence": {
+        "note": "year grain over the date field updated_at",
+        "signal": "date-field"
+      },
+      "fieldId": "updated_year",
+      "id": "pullRequest.updated_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "updated_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequestReview",
+      "evidence": {
+        "note": "month grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_month",
+      "id": "pullRequestReview.observed_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequestReview",
+      "evidence": {
+        "note": "quarter grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_quarter",
+      "id": "pullRequestReview.observed_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequestReview",
+      "evidence": {
+        "note": "year grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_year",
+      "id": "pullRequestReview.observed_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequestReview",
+      "evidence": {
+        "note": "month grain over the date field submitted_at",
+        "signal": "date-field"
+      },
+      "fieldId": "submitted_month",
+      "id": "pullRequestReview.submitted_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "submitted_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequestReview",
+      "evidence": {
+        "note": "quarter grain over the date field submitted_at",
+        "signal": "date-field"
+      },
+      "fieldId": "submitted_quarter",
+      "id": "pullRequestReview.submitted_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "submitted_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "pullRequestReview",
+      "evidence": {
+        "note": "year grain over the date field submitted_at",
+        "signal": "date-field"
+      },
+      "fieldId": "submitted_year",
+      "id": "pullRequestReview.submitted_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "submitted_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repository",
+      "evidence": {
+        "note": "month grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_month",
+      "id": "repository.observed_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repository",
+      "evidence": {
+        "note": "quarter grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_quarter",
+      "id": "repository.observed_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repository",
+      "evidence": {
+        "note": "year grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_year",
+      "id": "repository.observed_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repository",
+      "evidence": {
+        "note": "month grain over the date field pushed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "pushed_month",
+      "id": "repository.pushed_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "pushed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repository",
+      "evidence": {
+        "note": "quarter grain over the date field pushed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "pushed_quarter",
+      "id": "repository.pushed_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "pushed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repository",
+      "evidence": {
+        "note": "year grain over the date field pushed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "pushed_year",
+      "id": "repository.pushed_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "pushed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repositoryLanguage",
+      "evidence": {
+        "note": "month grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_month",
+      "id": "repositoryLanguage.observed_month",
+      "recipe": {
+        "grain": "month",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repositoryLanguage",
+      "evidence": {
+        "note": "quarter grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_quarter",
+      "id": "repositoryLanguage.observed_quarter",
+      "recipe": {
+        "grain": "quarter",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    },
+    {
+      "entity": "repositoryLanguage",
+      "evidence": {
+        "note": "year grain over the date field observed_at",
+        "signal": "date-field"
+      },
+      "fieldId": "observed_year",
+      "id": "repositoryLanguage.observed_year",
+      "recipe": {
+        "grain": "year",
+        "op": "dateGrain",
+        "source": "observed_at"
+      },
+      "semanticKind": "date",
+      "status": "proposed"
+    }
+  ],
+  "generatedAt": "2026-09-10T11:33:31.548Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:33:31.548Z"
+  },
+  "measures": [],
+  "worldId": "prj_debe3085e1b247b6a7df26022617d7ac"
+}

@@ -1,0 +1,449 @@
+{
+  "fields": [
+    {
+      "distinct_count": 3,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "14985020",
+          "member_count": 3,
+          "sig": "numeric:none"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-at-snapshot",
+        "values": [
+          {
+            "count": 72,
+            "specificity": 667,
+            "value": "14985020"
+          },
+          {
+            "count": 5,
+            "specificity": 500,
+            "value": "108547162"
+          },
+          {
+            "count": 2,
+            "specificity": 333,
+            "value": "189563271"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 79,
+      "path": "organization_id"
+    },
+    {
+      "distinct_count": 76,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "490265",
+          "member_count": 76,
+          "sig": "numeric:none"
+        }
+      ],
+      "inventory": {
+        "kind": "complete-at-snapshot",
+        "values": [
+          {
+            "count": 2,
+            "specificity": 750,
+            "value": "490265"
+          },
+          {
+            "count": 2,
+            "specificity": 743,
+            "value": "51397083"
+          },
+          {
+            "count": 2,
+            "specificity": 654,
+            "value": "71938701"
+          },
+          {
+            "count": 1,
+            "specificity": 730,
+            "value": "11356668"
+          },
+          {
+            "count": 1,
+            "specificity": 724,
+            "value": "11495867"
+          },
+          {
+            "count": 1,
+            "specificity": 634,
+            "value": "115853816"
+          },
+          {
+            "count": 1,
+            "specificity": 711,
+            "value": "1162991"
+          },
+          {
+            "count": 1,
+            "specificity": 704,
+            "value": "120007119"
+          },
+          {
+            "count": 1,
+            "specificity": 697,
+            "value": "12292047"
+          },
+          {
+            "count": 1,
+            "specificity": 607,
+            "value": "123822"
+          },
+          {
+            "count": 1,
+            "specificity": 684,
+            "value": "13041"
+          },
+          {
+            "count": 1,
+            "specificity": 678,
+            "value": "1365881"
+          },
+          {
+            "count": 1,
+            "specificity": 671,
+            "value": "13698226"
+          },
+          {
+            "count": 1,
+            "specificity": 664,
+            "value": "1387913"
+          },
+          {
+            "count": 1,
+            "specificity": 658,
+            "value": "1394504"
+          },
+          {
+            "count": 1,
+            "specificity": 651,
+            "value": "13947"
+          },
+          {
+            "count": 1,
+            "specificity": 645,
+            "value": "1440854"
+          },
+          {
+            "count": 1,
+            "specificity": 638,
+            "value": "1508008"
+          },
+          {
+            "count": 1,
+            "specificity": 632,
+            "value": "1570963"
+          },
+          {
+            "count": 1,
+            "specificity": 625,
+            "value": "1634922"
+          },
+          {
+            "count": 1,
+            "specificity": 618,
+            "value": "1751601"
+          },
+          {
+            "count": 1,
+            "specificity": 612,
+            "value": "17536387"
+          },
+          {
+            "count": 1,
+            "specificity": 605,
+            "value": "180404"
+          },
+          {
+            "count": 1,
+            "specificity": 599,
+            "value": "186268"
+          },
+          {
+            "count": 1,
+            "specificity": 592,
+            "value": "200112"
+          },
+          {
+            "count": 1,
+            "specificity": 586,
+            "value": "2020473"
+          },
+          {
+            "count": 1,
+            "specificity": 579,
+            "value": "20425781"
+          },
+          {
+            "count": 1,
+            "specificity": 572,
+            "value": "21013447"
+          },
+          {
+            "count": 1,
+            "specificity": 566,
+            "value": "22380829"
+          },
+          {
+            "count": 1,
+            "specificity": 559,
+            "value": "22559461"
+          },
+          {
+            "count": 1,
+            "specificity": 553,
+            "value": "229881"
+          },
+          {
+            "count": 1,
+            "specificity": 546,
+            "value": "23662329"
+          },
+          {
+            "count": 1,
+            "specificity": 539,
+            "value": "239003"
+          },
+          {
+            "count": 1,
+            "specificity": 533,
+            "value": "2865858"
+          },
+          {
+            "count": 1,
+            "specificity": 526,
+            "value": "28912696"
+          },
+          {
+            "count": 1,
+            "specificity": 520,
+            "value": "2933988"
+          },
+          {
+            "count": 1,
+            "specificity": 513,
+            "value": "29887157"
+          },
+          {
+            "count": 1,
+            "specificity": 507,
+            "value": "3088615"
+          },
+          {
+            "count": 1,
+            "specificity": 500,
+            "value": "318866"
+          },
+          {
+            "count": 1,
+            "specificity": 493,
+            "value": "33291795"
+          },
+          {
+            "count": 1,
+            "specificity": 487,
+            "value": "34559231"
+          },
+          {
+            "count": 1,
+            "specificity": 480,
+            "value": "35507539"
+          },
+          {
+            "count": 1,
+            "specificity": 474,
+            "value": "3676859"
+          },
+          {
+            "count": 1,
+            "specificity": 467,
+            "value": "40034115"
+          },
+          {
+            "count": 1,
+            "specificity": 461,
+            "value": "41523937"
+          },
+          {
+            "count": 1,
+            "specificity": 454,
+            "value": "4172067"
+          },
+          {
+            "count": 1,
+            "specificity": 447,
+            "value": "4278345"
+          },
+          {
+            "count": 1,
+            "specificity": 441,
+            "value": "43268759"
+          },
+          {
+            "count": 1,
+            "specificity": 434,
+            "value": "4586894"
+          },
+          {
+            "count": 1,
+            "specificity": 428,
+            "value": "4658208"
+          },
+          {
+            "count": 1,
+            "specificity": 421,
+            "value": "52761222"
+          },
+          {
+            "count": 1,
+            "specificity": 414,
+            "value": "53372002"
+          },
+          {
+            "count": 1,
+            "specificity": 408,
+            "value": "55700336"
+          },
+          {
+            "count": 1,
+            "specificity": 401,
+            "value": "56037657"
+          },
+          {
+            "count": 1,
+            "specificity": 270,
+            "value": "58091943"
+          },
+          {
+            "count": 1,
+            "specificity": 388,
+            "value": "5818726"
+          },
+          {
+            "count": 1,
+            "specificity": 382,
+            "value": "5983714"
+          },
+          {
+            "count": 1,
+            "specificity": 375,
+            "value": "6616955"
+          },
+          {
+            "count": 1,
+            "specificity": 368,
+            "value": "664177"
+          },
+          {
+            "count": 1,
+            "specificity": 362,
+            "value": "6849494"
+          },
+          {
+            "count": 1,
+            "specificity": 355,
+            "value": "6880091"
+          },
+          {
+            "count": 1,
+            "specificity": 349,
+            "value": "688617"
+          },
+          {
+            "count": 1,
+            "specificity": 342,
+            "value": "70239736"
+          },
+          {
+            "count": 1,
+            "specificity": 336,
+            "value": "71256"
+          },
+          {
+            "count": 1,
+            "specificity": 329,
+            "value": "7249920"
+          },
+          {
+            "count": 1,
+            "specificity": 322,
+            "value": "726049"
+          },
+          {
+            "count": 1,
+            "specificity": 316,
+            "value": "739984"
+          },
+          {
+            "count": 1,
+            "specificity": 309,
+            "value": "7414521"
+          },
+          {
+            "count": 1,
+            "specificity": 303,
+            "value": "755844"
+          },
+          {
+            "count": 1,
+            "specificity": 296,
+            "value": "771968"
+          },
+          {
+            "count": 1,
+            "specificity": 289,
+            "value": "8146736"
+          },
+          {
+            "count": 1,
+            "specificity": 283,
+            "value": "83733486"
+          },
+          {
+            "count": 1,
+            "specificity": 276,
+            "value": "8440026"
+          },
+          {
+            "count": 1,
+            "specificity": 270,
+            "value": "8722047"
+          },
+          {
+            "count": 1,
+            "specificity": 263,
+            "value": "904724"
+          },
+          {
+            "count": 1,
+            "specificity": 257,
+            "value": "923787"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 79,
+      "path": "person_id"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:55:05.460Z"
+  },
+  "index": "github.public_memberships",
+  "source": {
+    "horizon": 4096,
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

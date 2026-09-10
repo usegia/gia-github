@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "typecheck": "turbo run typecheck",
+    "typecheck": "turbo run typecheck && pnpm typecheck:tools",
     "lint": "biome check .",
     "format": "biome check --write .",
     "check:boundaries": "node scripts/check-boundaries.mjs",
@@ -33,12 +33,16 @@
     "gia:stop": "node --env-file=.env scripts/gia/runtime.mjs stop",
     "gia:init": "node --env-file=.env scripts/gia/project.mjs init",
     "gia:profile": "node --env-file=.env scripts/gia/project.mjs profile",
-    "gia:authority": "node --env-file=.env scripts/gia/project.mjs authority"
+    "gia:authority": "node --env-file=.env scripts/gia/project.mjs authority",
+    "gia:refresh": "node --env-file=.env scripts/gia/project.mjs refresh",
+    "gia:publish": "node --env-file=.env scripts/gia/project.mjs publish",
+    "typecheck:tools": "tsc --noEmit -p tsconfig.tools.json"
   },
   "dependencies": {
     "dotenv": "17.4.2",
     "tsx": "4.23.13",
-    "@gia-github/db": "workspace:*"
+    "@gia-github/db": "workspace:*",
+    "@gia-github/search": "workspace:*"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.12",
@@ -48,6 +52,9 @@
     "drizzle-kit": "0.31.10",
     "turbo": "2.10.12",
     "typescript": "5.9.3",
-    "vitest": "4.1.9"
+    "vitest": "4.1.9",
+    "pg": "8.23.0",
+    "drizzle-orm": "0.45.2",
+    "zod": "4.6.1"
   }
 }

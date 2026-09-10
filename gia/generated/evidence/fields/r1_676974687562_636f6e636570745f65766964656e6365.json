@@ -1,0 +1,2881 @@
+{
+  "doc_count": 291,
+  "fields": [
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 2,
+        "min_len": 1
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 16,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": 16,
+      "min_max": {
+        "max": "16",
+        "min": "1"
+      },
+      "null_count": 0,
+      "path": "concept_id",
+      "top_values": [
+        {
+          "count": 65,
+          "value": "1"
+        },
+        {
+          "count": 38,
+          "value": "11"
+        },
+        {
+          "count": 32,
+          "value": "15"
+        },
+        {
+          "count": 31,
+          "value": "13"
+        },
+        {
+          "count": 26,
+          "value": "5"
+        },
+        {
+          "count": 21,
+          "value": "14"
+        },
+        {
+          "count": 21,
+          "value": "6"
+        },
+        {
+          "count": 17,
+          "value": "2"
+        },
+        {
+          "count": 13,
+          "value": "4"
+        },
+        {
+          "count": 8,
+          "value": "12"
+        },
+        {
+          "count": 5,
+          "value": "10"
+        },
+        {
+          "count": 5,
+          "value": "3"
+        },
+        {
+          "count": 4,
+          "value": "9"
+        },
+        {
+          "count": 3,
+          "value": "16"
+        },
+        {
+          "count": 1,
+          "value": "7"
+        },
+        {
+          "count": 1,
+          "value": "8"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 296,
+        "min_len": 4
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 230,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 230,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "005fc97ecc236a9c",
+          "022f2df3f78840c5",
+          "03df7c84e366d988",
+          "046b5f53ba9547d4",
+          "07c16a10f27b9fc1",
+          "0842ca18fec69135",
+          "0850da5de3c37272",
+          "0867d5c4f6097633",
+          "0904bf194869ac05",
+          "0921077ed11d271f",
+          "096d65b7d8c72c05",
+          "0b82e904cfc161c9",
+          "0c34c0bbdc435fdc",
+          "0d1a153f8db5ba47",
+          "0f13606da72c4daa",
+          "100deab388cf9657",
+          "10c2e8c5a3066260",
+          "1137b9f427eb0408",
+          "118cd8385ec5ea41",
+          "132ba8a3f5bd6661",
+          "14b87fe06c034f59",
+          "15b13f87a108ec5a",
+          "15bc52a52e4269c4",
+          "19ba5d749e0c0de0",
+          "19f70f2f3c448882",
+          "1a1ad53ea1215817",
+          "1abb66e92dbf60f0",
+          "1b47ecfbbf135c0c",
+          "1bac2358f728c0c6",
+          "1e38965d5fa81a57",
+          "1e53549772f8e65f",
+          "1ed69a045ae3eb2f",
+          "1f9b08f6231f824a",
+          "2165a57ad4f70998",
+          "2288484968b3cdf2",
+          "22c6c039a445f2e9",
+          "233aba801808f5de",
+          "26e8287198d09099",
+          "2750c19c51a18058",
+          "27bffd33fdbb71cd",
+          "28000624aad5b594",
+          "29a5e628b70153df",
+          "29d880ac47c5c48d",
+          "2a52d07dd6ac6823",
+          "2ad759bb988fc890",
+          "2b547ad4fbbf700b",
+          "2e15a8eabb439a77",
+          "2e5043c015ec65ad",
+          "2e6b920b33e82b1c",
+          "303546a92447963c",
+          "30a6ae3fcf7cb32f",
+          "31123f72e593951a",
+          "342d641277ee3770",
+          "35ae733a7453ed2d",
+          "3a3e2884a2de44c3",
+          "3a9428cfea2819d0",
+          "3b86115f21ef61e9",
+          "3cba79a7ba301bab",
+          "3d66f4949a91b16e",
+          "3e5967dcf9bf7083",
+          "3e869a28bfe3ea7a",
+          "3f9a34cb3ec1e725",
+          "411a1882cbff61ee",
+          "41c689a76496aa2f",
+          "41f85a4b78dfbac4",
+          "424054b106fc9c91",
+          "4367b902878f83ef",
+          "465116e9df3cf355",
+          "47617cceeaf0c6dc",
+          "481a816cf15d2d42",
+          "48e65ca79c23844b",
+          "4ab843da5b566dbf",
+          "4b48364ba5f3d6fb",
+          "4ce22b833c20b79f",
+          "50607e2850daf03d",
+          "513dac3688431112",
+          "5273ca27cca1b00c",
+          "52f025fddb2f4738",
+          "546385281b4d395d",
+          "557f575c3351fe20",
+          "57178800750de5ce",
+          "5720718c0d9b356d",
+          "5b314c6c72091b86",
+          "5b92fe54dbf5f2a6",
+          "5bc400442dbbe425",
+          "5d3205e47ac7d1b2",
+          "5d79bc575cd082b6",
+          "5ebc95d96e441d87",
+          "601511325b71bc6a",
+          "60636f08ea0747c6",
+          "62b2e326a456c4da",
+          "648c8bfc0940b3b0",
+          "651a52e3b98d82b0",
+          "6658cce119a20fe5",
+          "666fee722903e23a",
+          "66fc4d6a6949e991",
+          "695afcc04c48459a",
+          "698ceffd227f9b26",
+          "6a7dca4ec64a81e4",
+          "6b34e95eb4aa4c1b",
+          "6c090db85ee130da",
+          "6d4b6ef3c350cd6a",
+          "6f94a5945427315f",
+          "70162cfd943e1243",
+          "70deba9f648129dd",
+          "7236fca150ddb3ce",
+          "73a6149c64c97b63",
+          "74769d188a878aae",
+          "7483dfb1f6c537cc",
+          "759822a23a318c7e",
+          "75c6e6e7a2543649",
+          "76a23bfce30ba25d",
+          "76efef6ee2ab8fb8",
+          "77967b840c5e090e",
+          "78cb5c72ca33a06e",
+          "78d4fdab0372ec96",
+          "7981594c736ea57c",
+          "7ada60435caf82bf",
+          "7bf2a35ade5f2ade",
+          "7d5ed67cf7538a0c",
+          "7f01f7dbbe5d5eb6",
+          "7fa48c6cdf2f536d",
+          "80e01182233bb5e4",
+          "81cd76d305fafb02",
+          "824ecfefe47bb9b8",
+          "83aac5e53d8fd2e4",
+          "840c9758903bfc19",
+          "847c10a8c5a6f672",
+          "85ac91c198eeae23",
+          "85f65b54842709ce",
+          "86a8afe04f63ab21",
+          "87e33a04e550fc7a",
+          "8a54ce047b9d75e0",
+          "8acd9d1d4700cb75",
+          "8caa82edff69a1a0",
+          "8db563e6f4f516a6",
+          "8dfb72aa869258e4",
+          "8fa79183397dee74",
+          "90bac00eaa6368d3",
+          "913c1320cb53a859",
+          "91601bb0a89665c5",
+          "9281e9621fc0bf6f",
+          "93c42c2ad463fb82",
+          "93dd365c3c34432a",
+          "93f19b4193f972c4",
+          "95809bcd6320e373",
+          "9715acad66536899",
+          "975b3953826607f7",
+          "99aa4b93498efcf7",
+          "99fecd48433f820f",
+          "9ac2d61ba50bb0f3",
+          "9b844ae3c90c2ccf",
+          "9e77457942e1cc3b",
+          "9edcb9e991a8442a",
+          "9eec0884c4de3e87",
+          "a0a9bc7862d88798",
+          "a1a8908808cab233",
+          "a278fc13a4ba1d47",
+          "a3840943826278ec",
+          "a3fec36c2bc07fea",
+          "a976e94dbe21192c",
+          "aa0516aa025ac2d6",
+          "ac64e4417546a196",
+          "ae1d6c62d49ca458",
+          "ae5840db1ecae605",
+          "aea757936fe71dd5",
+          "b02aff475c1193b0",
+          "b0d871bc119fd9f8",
+          "b11eff69ddc47f62",
+          "b2f0dc6cad68979f",
+          "b3acb89f2a4a6774",
+          "b5ff027dff72e91a",
+          "b609f74925f6061a",
+          "b710c6af6b188a8d",
+          "babef971c9e8db67",
+          "bc22dac382120477",
+          "bcf562aeea282a35",
+          "bf543131e7a20019",
+          "bf560fcbc88ce57b",
+          "c1765c0e6184db71",
+          "c2bdcfc9fd83d0c5",
+          "c3dc7484d651d9c9",
+          "c4c2c6ab3ddb10ab",
+          "c5b3267033e2a264",
+          "c5e20ee7ebf7d4c2",
+          "c8524edd8a0ded95",
+          "ca375dacea5c4d0f",
+          "ca86dc84d1ec87e4",
+          "cb148ebda3e9ac1f",
+          "cba73ab3a96b1f13",
+          "ccbf1b2fae3d8ecb",
+          "ccdbc3b666c81ae0",
+          "ccf8014d4b91cf86",
+          "cfc7baf37d6faab8",
+          "cffd5c204e783519",
+          "d1f736829a73b2dc",
+          "d40654e74d9132b3",
+          "d472aa5a0e26c0bf",
+          "d51328dabaf2c875",
+          "dae6a6ba5db99454",
+          "db9381283075a026",
+          "dd814ea578664038",
+          "dec613e40a8d4947",
+          "df21935e4ad3fcd6",
+          "e002e15a00657efd",
+          "e0ad828230e0160a",
+          "e2ab05e33708cf7a",
+          "e353749f0843711c",
+          "e5099091f59d5b8e",
+          "e50aaf7a18092431",
+          "e5cb0ba723f25c02",
+          "e833f5a9b21cd70b",
+          "e9830e81445c5131",
+          "eac0f074e678fbd4",
+          "ed7bcb8da09f9321",
+          "edfb48e9a967c20f",
+          "ef5699c5eb5e0305",
+          "efd76cfc57804691",
+          "f2982daef5934a96",
+          "f40aa7ffb7211916",
+          "f47dc03b0e2c0df3",
+          "f69c43a919c125c6",
+          "f761ac1ab3bb3bdf",
+          "f7b0b6593c7107ee",
+          "f8e89c92f42e65f4",
+          "fae4b0f89924623d",
+          "fb073a754247c0c7",
+          "fbd42f638e9163a4",
+          "fe3ecd0cf049cf0b",
+          "ff4162e559103f20"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "excerpt",
+      "top_values": [
+        {
+          "count": 12,
+          "value": "\"ai\""
+        },
+        {
+          "count": 4,
+          "value": "\"next\""
+        },
+        {
+          "count": 4,
+          "value": "+    provider = ai.get_provider(\"openai\", api_key=\"sk-test\")"
+        },
+        {
+          "count": 3,
+          "value": "+model = ai.get_model(\"openai/text-embedding-3-small\")"
+        },
+        {
+          "count": 2,
+          "value": "AI SDK 7\nMigrated to AI SDK 7, mostly just using the migrate skill."
+        },
+        {
+          "count": 2,
+          "value": "# AI SDK for Python\n\nA toolkit for building LLM-powered applications and agent loops.\n\n> [!NOTE]\n> The AI SDK for Python is in public beta.\n\n## Installation\n\n```bash\nuv"
+        },
+        {
+          "count": 2,
+          "value": "\"@ai-sdk/openai\""
+        },
+        {
+          "count": 2,
+          "value": "  - @ai-sdk/openai@2.0.126\n## @ai-sdk/gateway@2.0.148\n\n### Patch Changes\n\n- 79ac7d9: Backport: chore(provider/gateway): update gateway model settings files\n- ca8f9e5: Backport: c"
+        },
+        {
+          "count": 2,
+          "value": "  - @ai-sdk/openai@3.0.111\n## @ai-sdk/angular@2.0.280\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279\n## @ai-sdk/azure@3.0.118\n\n### Patch Changes\n\n- 1f75808: "
+        },
+        {
+          "count": 2,
+          "value": "  - @ai-sdk/openai@4.0.65\n  - @ai-sdk/anthropic@4.0.52\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/angular@3.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated "
+        },
+        {
+          "count": 2,
+          "value": "# AI SDK\n\nThe [AI SDK](https://ai-sdk.dev/docs) is a provider-agnostic TypeScript toolkit designed to help you build AI-powered applications and agents using popular UI"
+        },
+        {
+          "count": 2,
+          "value": "AI SDK v6 compatible API\npreviously built for ai sdk v4, but incompatible with v5 and v6 because of `parameters` instead of `inputSchema`"
+        },
+        {
+          "count": 2,
+          "value": "+   * Allows disabling RAG and use chat as LLM in combination with prompt. This will give you ability to build your own pipelines."
+        },
+        {
+          "count": 2,
+          "value": "  as a peer, apps provide the single copy). Providers to stable: `@ai-sdk/openai ^4.0.15`,\r\n  `@ai-sdk/provider ^4.0.3`, `@ai-sdk/react ^4.0.33`.\r\n- Fixed 7 pre-existing test failures the bump surfaced: tests passed colon-containing\r\n  `uni"
+        },
+        {
+          "count": 2,
+          "value": "+    assert captured_body[\"providerOptions\"] == {\"openai\": {\"dimensions\": 256}}"
+        },
+        {
+          "count": 2,
+          "value": "A toolkit for building production AI agents entirely on [Upstash Redis](https://upstash.com/). It\ngives you the stateful primitives agents need — memory, conversation history, search, and caching —\nplus "
+        },
+        {
+          "count": 2,
+          "value": "- b0ef882: Upgrade to eve 0.32 (repo now builds and tests against eve 0.32.0 / AI SDK 7.0.58).\n\n  `@upstash/agentkit-eve`:\n\n  - The Upstash Box sandbox backend implements eve ≥0.32's `SandboxBackendHandle.stop()` (authored\n    `ctx.getSandbox()."
+        },
+        {
+          "count": 2,
+          "value": "  <b>Template.</b> Fork it, customize it, and deploy your own file-system based AI agent.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fknowledge-agent-template&env=BETTER_A"
+        },
+        {
+          "count": 2,
+          "value": "    Chatbot (formerly AI Chatbot) is a free, open-source template built with Next.js and the AI SDK that helps you quickly build powerful chatbot applications.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://chatbot.ai-sdk.dev/docs\"><strong>Read Docs</strong></a>"
+        },
+        {
+          "count": 2,
+          "value": "chore: upgrade AI SDK dependencies and refactor to new API\n## Summary\n\nUpgrades AI SDK and related dependencies to the latest versions, refactoring the codebase to align with the ne"
+        },
+        {
+          "count": 2,
+          "value": "feat(openai): add batch cancellation and listing\n## Background\r\n\r\nhttps://github.com/vercel/ai/pull/20543 added batch cancel and list APIs\r\n\r\n## Summary\r\n\r\nadd support for"
+        },
+        {
+          "count": 2,
+          "value": "fix: add AI SDK 7 compatibility\n## Summary\n\n- allow consumers to use either AI SDK 6 or AI SDK 7\n- compile and test the package against AI SDK 7, including portable tool retur"
+        },
+        {
+          "count": 2,
+          "value": "Generic bash tool for AI agents, compatible with [AI SDK](https://ai-sdk.dev/).\n\n## Installation\n\n```bash\nnpm install bash-tool just-bash\n```\n\nFor full VM support, install [`@vercel/sandbox`]"
+        },
+        {
+          "count": 2,
+          "value": "+`@github-tools/sdk` wraps GitHub's REST API as 84 AI SDK-compatible tools for agents and `generateText`/`streamText` calls — with presets, approval control, and integrations for eve, Vercel Workflow, and Chat SDK. Do"
+        },
+        {
+          "count": 2,
+          "value": "**Give any agent GitHub access.** A typed tool layer for GitHub AI agents, with presets, human approval, and durable execution. Works with [eve](https://eve.dev), the [AI SDK](https://ai-sdk.dev), Vercel Workflow, and [Chat SDK](http"
+        },
+        {
+          "count": 2,
+          "value": "+      // If rag is disabled and prompt is missing use DEFAULT_PROMPT_WITHOUT_RAG this as LLM. Only includes chat history."
+        },
+        {
+          "count": 2,
+          "value": "It's backed by [`@browser-ai/core`](https://browser-ai.dev/), an AI SDK community provider ([listed on ai-sdk.dev](https://ai-sdk.dev/providers/community-providers), and the subject of the Chrome for Developers post [Use the Prompt"
+        },
+        {
+          "count": 2,
+          "value": "+- `media/` contains image, video, multimodal, embedding, and reranking examples."
+        },
+        {
+          "count": 2,
+          "value": "+    model = ai.get_model(\"openai/text-embedding-3-small\")"
+        },
+        {
+          "count": 2,
+          "value": "OpenAI and OpenAI-compatible non-streaming chat models returned a raw TypeError when an HTTP 200 response contained no choices, preventing normal AI SDK error handlin"
+        },
+        {
+          "count": 2,
+          "value": "# Persist Messages with AI SDK, Postgres, and Next.js\n\nThis example demonstrates how to persist chat messages using Vercel AI SDK with a Postgres database in a Next.js application. It uses:\n"
+        },
+        {
+          "count": 2,
+          "value": "Prototype: Skills support for AI SDK\n```ts\r\n  // Discover skills and get files to upload\r\n  const { loadSkill, skills, files, instructions } = await createSkillTool({\r\n    skillsDirectory: path.jo"
+        },
+        {
+          "count": 2,
+          "value": "/redirect.github.com/vercel/ai/commit/c44166d): Add support for Amazon Nova Models, cross region inference profiles and OpenAI gpt-oss in `@ai-sdk/amazon-bedrock` provider\n- [`fbc9f06`](https://redirect.github.com/vercel/ai/commit/fbc9f06): feat(amazon-bedrock): add topK support\n\n### ["
+        },
+        {
+          "count": 2,
+          "value": "Right now, the only Batch request type is `text`. Both AI SDK Core and provider packages follow that TypeScript type, and assume `type` is *always* `text`.\r\n\r\nWhen we extend that `type` to a union and add other request ty"
+        },
+        {
+          "count": 2,
+          "value": "Route models through HypO OpenAI-compatible gateway\nReplace Vercel AI Gateway with custom OpenAI-compatible provider. Simplify model list, selector UI, chat route accordingly."
+        },
+        {
+          "count": 2,
+          "value": "Support anthropic>=1.0.0 and openai>=3.0.0 (httpx2 change)\nStop doing our own runtime enforcement of the client objects for anthropic and openai, just pass them through and see what they allow. ("
+        },
+        {
+          "count": 2,
+          "value": "Support passing store=False to openai SDK for Responses\nBeing able to do this is necessary for using the Codex endpoints directly. It can be *set* directly as a param, but we want to also pass it n"
+        },
+        {
+          "count": 2,
+          "value": "- Switches OpenAI calls to `@ai-sdk/gateway` (`openai/gpt-4o-mini`) with OIDC auth\n- Keeps Perplexity via `createOpenAI` (no gateway support for Perplexity)\n- Upgrades ai to v6,"
+        },
+        {
+          "count": 2,
+          "value": " that allows users to query a PostgreSQL database using natural language and visualize the results. It's powered by the AI SDK by Vercel and uses OpenAI's GPT-4o model to translate natural language queries into SQL.\n\n## Features\n\n- Natural Language to SQL: Users can input queries in pl"
+        },
+        {
+          "count": 2,
+          "value": "The AI SDK UI `finish` event always carries `finishReason: \"stop\"`, regardless of why the model actually stopped: `_StreamState` discarded `StreamEnd.finish_reason` and `"
+        },
+        {
+          "count": 2,
+          "value": " - The catalog is exported as `githubToolsErrors`; use evlog's `parseError` to read the structure from thrown errors in AI SDK apps.\n## @github-tools/eve-extension@0.7.0\n\n### Minor Changes\n\n- [#127](https://github.com/vercel-labs/github-tools/pull/127) [`d6a0ef3`](https://github.com/ve"
+        },
+        {
+          "count": 2,
+          "value": "The idea is to catch up with other ai sdk allowing for tooling use, this implementation are using openai only, other models still implementing it with different apis \r\n\r\nFor example \r\n\r\n```typescript\r\n"
+        },
+        {
+          "count": 2,
+          "value": "> The RAG Chat SDK is designed to facilitate easier and faster prototype creation. For real projects, use Vercel AI SDK, Langchain, and LlamaIndex.\n\n\n> [!NOTE]  \n> **This project is a Community Project.**\n>\n> The project is maintained and supported by the community. Upstash may "
+        },
+        {
+          "count": 2,
+          "value": "tion/issue-20156-generate-image-empty-result-retry.ts` using the branch-native `ImageModelV3` equivalent of the issue's AI SDK 7 mock.\n- With `maxRetries: 2`, the first empty image result caused `generateImage` to reject with `AI_NoImageGeneratedError` after one model call; expected be"
+        },
+        {
+          "count": 2,
+          "value": "[v5.0] fix: surface empty chat completion choices as AI SDK response errors\n## Background\n\nOpenAI and OpenAI-compatible non-streaming chat calls returned a raw TypeError when successful provider responses contained no c"
+        },
+        {
+          "count": 2,
+          "value": "xporter`, `createAssistantCloudSpanProcessor`, `assistantCloudTraceMetadata` and `withAssistantCloudTraceMetadata` send AI SDK GenAI spans to `POST /v1/traces` and hand the trace id to the browser, so the client report and the server spans merge into one run; the OpenTelemetry packages"
+        },
+        {
+          "count": 1,
+          "value": "- 0117c2e: feat(eve): add `@upstash/agentkit-eve/memory` — Upstash Redis behind eve's memory slots\n\n  A new subpath with two integrations for eve's [memory](https://eve.dev/docs/memory) feature\n  (`agent/memory/<slot>.ts`), because "
+        },
+        {
+          "count": 1,
+          "value": "    0.13, 0.87, ... // dense embedding\n  ],\n  metadata: {\n    title: 'Lord of The Rings',\n    genre: 'fantasy',\n    category: 'classic'\n  }\n}])\n\n// Upsert to sparse index\nawait index.upsert([{\n  id:"
+        },
+        {
+          "count": 1,
+          "value": "- 1336501: fix(openai): return an AI SDK error for empty chat completion choices\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/openai-compat"
+        },
+        {
+          "count": 1,
+          "value": "56 ETag through a shared response helper. Apply the helper to the Elements, examples, tap, pricing, blog, and combined `llms-full.txt` routes.\n\nThe digest helper is shared with agent-discovery so both surfaces use the same validator format. The platform-aware docs and design routes a"
+        },
+        {
+          "count": 1,
+          "value": "- 5c93af5: feat: report the sdk name + version to Upstash via the redis client's telemetry headers\n\n  Every feature that takes a `redis` client now appends its package tag to the client's\n  `Upstash-Telemetry-Sdk` header (e.g.\n  `@"
+        },
+        {
+          "count": 1,
+          "value": "- a15b75a: Add async function tool calling support for OpenAI Responses models.\n## @ai-sdk/react@2.0.257\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-sdk/rsc@1.0.256\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-s"
+        },
+        {
+          "count": 1,
+          "value": "A customizable Reach chat component that combines Upstash Vector for similarity search, Together AI for LLM, and Vercel AI SDK for streaming responses. This ready-to-use component provides an out of the box solution for adding RAG-Powered chat interfaces to your Next"
+        },
+        {
+          "count": 1,
+          "value": "A customizable Reach chat component that combines Upstash Vector for similarity search, Together AI for LLM, and Vercel AI SDK for streaming responses. This ready-to-use component provides an out of the box solution for adding RAG-Powered chat interfaces to your Next.js application.\n\n<"
+        },
+        {
+          "count": 1,
+          "value": "Add hybrid search\nCI won't pass because we haven't created and added indexes which use sparse/hybrid index yet.\r\n\r\nREADME will be updated once everything is finished."
+        },
+        {
+          "count": 1,
+          "value": "Add Next.js Example and README"
+        },
+        {
+          "count": 1,
+          "value": "- Adjust OpenAI model specification for new SDK version\n\n---\n\n[Chat](https://openharness.dev/sessions/XQ6A-bZ4Uql26afGR9P7Q/chats/5c728e30-0cba-454f-bdf3-dd4d63aee2be) - Built"
+        },
+        {
+          "count": 1,
+          "value": " AgentKit as a mountable eve extension (eve ≥0.24). One file in `agent/extensions/` composes memory tools, schema-aware Redis Search tools, an opt-in durable chat-history hook, and a memory instructions fragment under one namespace.\n\n  `@upstash/agentkit-eve` moves to **eve 0.24.6** a"
+        },
+        {
+          "count": 1,
+          "value": "/agentkit-sdk` alongside the extension. Consumers need eve ≥0.25.2; apps that configure `search` also declare `@upstash/redis` themselves (their own mount file imports the `s` schema builder from it — a mount without `search` needs no extra installs).\n## eve-extension-demo@0.0.2\n\n### "
+        },
+        {
+          "count": 1,
+          "value": "| `agentkit__search` / `agentkit__search_aggregate` / `agentkit__search_count` | schema-aware Redis Search tools (RAG) — only exist when `search` is configured |\r\n| `agentkit__chat_history` (hook) | every message durably captured to `agentkit:chat:<userId>:<sessionId>` — searc"
+        },
+        {
+          "count": 1,
+          "value": " `AgentSessionCard` (client component) imported `getBackoffDelay` from `agent-sse-manager`, which transitively imports `postgres` → Node.js built-ins (`net`, `tls`, `crypto`, `stream`, `perf_hooks`) leaked into client bundle\n- Fix: extract `getBackoffDelay` into `lib/agent-sse-utils.ts` "
+        },
+        {
+          "count": 1,
+          "value": "│              AI SDK compatible tools (bash, bash_batch)         │\n└─────────────────────────────────┬───────────────────────────────┘\n                                  │ API calls"
+        },
+        {
+          "count": 1,
+          "value": "- [AI SDK](https://sdk.vercel.ai/) for interacting with LLMs\n- [Vercel AI Gateway](https://vercel.com/docs/ai-gateway) for unified access to OpenAI and Perplexity\n- [Dee"
+        },
+        {
+          "count": 1,
+          "value": "  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/amazon-bedrock@3.0.130\n\n### Patch Changes\n\n- Updated dependencies [c2"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [
+          "gi",
+          "git",
+          "gith",
+          "githu",
+          "github",
+          "github-",
+          "github-c"
+        ],
+        "max_len": 18,
+        "min_len": 18
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 1,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 1,
+      "null_count": 0,
+      "path": "extractor_version",
+      "top_values": [
+        {
+          "count": 291,
+          "value": "github-concepts-v1"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower"
+        ],
+        "common_prefixes": [],
+        "max_len": 64,
+        "min_len": 64
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 291,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 284,
+        "exact": false,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "0039dfec199d02d1",
+          "005841bc2806d53d",
+          "00968973aa10fc4e",
+          "01a96ee64cc3335c",
+          "02fd3eeb6d346088",
+          "0407a820491ac154",
+          "04666f549c000658",
+          "04c069e80f0f25bd",
+          "05ade854e8d78496",
+          "05c6f662aad6a0c6",
+          "06297461a9e9a104",
+          "065d9992cd82a79e",
+          "0790ea655ff3a37e",
+          "0811acb568b7ef92",
+          "084a23552e087cbe",
+          "0928427694dcd830",
+          "09841a261ba0c165",
+          "09ddaf02477da8e0",
+          "0b9724e98231ce7e",
+          "0d963a30895d4a7d",
+          "0d9b79c7b0fa2946",
+          "0e287a5fa372471a",
+          "0e59989255c64d4d",
+          "0fe5fd2be11117ea",
+          "1188d2568eafc044",
+          "1382a005796db822",
+          "13b565ce01658110",
+          "15d25f06c1c025c3",
+          "15e7ab4fe37f91d9",
+          "15ef5542d8dae590",
+          "17d6e2150a73ff7a",
+          "187069c27e4882ce",
+          "1a183c3e50bc5c7e",
+          "1a477af9703ddac6",
+          "1b296a68aa63877a",
+          "1da041b9507961fa",
+          "1dcbd131dd5c2ac2",
+          "1e81d5f172aa661e",
+          "1f6bc1d34f5e0c02",
+          "1f721c61d1791539",
+          "2054dc72ba51df2a",
+          "20aede0c283a1b1e",
+          "21182e8f59987e7f",
+          "237c4db7da096ba4",
+          "246724a8f9ce0d75",
+          "258c7fdb7c6a98bf",
+          "2810e0d271b6a196",
+          "28349092cbaa254a",
+          "284f910f576ecbfc",
+          "286308cf9f1fa296",
+          "2a08162ba7432ed3",
+          "2b6f3327ea43d9b9",
+          "2b8db6cf635a73a5",
+          "2c52a9e7b896cb5c",
+          "2efa67efd9237694",
+          "2faf59a8e3d63cbf",
+          "2ffaf2411cf30bfd",
+          "3053b4f196ef42c1",
+          "30b63099e6d324a6",
+          "30bce1238d9d0997",
+          "313ddc5377df28bc",
+          "324f4858bc964477",
+          "32c318b7be4997aa",
+          "3328937fd6c7168f",
+          "33444a6609d4a979",
+          "34aaa68c20473d1c",
+          "37a24f570527c906",
+          "38640a7dd26031ac",
+          "39fcf7af598db503",
+          "3a73348c504da987",
+          "3b6c05eb56323a45",
+          "3bd842cdc12f083e",
+          "3cb2ee008e0f0e09",
+          "3dab84393a98a58a",
+          "3f8e3152c6ad843d",
+          "40ae8de65b368e39",
+          "4181a3c551fbdf4b",
+          "41c41679a27b54c1",
+          "41ea4d7d6865372a",
+          "4443374c4010bbeb",
+          "45bfc1c0891d4588",
+          "45f218c5d63f411d",
+          "46ef1258b2446f7c",
+          "48153156221dddf8",
+          "48726cce06f7b211",
+          "4a0b87bd45fc6e2c",
+          "4a78d930b2925850",
+          "4b3ec7d3fa66f03a",
+          "4c3d3a1774735aaf",
+          "4d606f76d5e3a7ed",
+          "4e19775806c0a0c5",
+          "4ecfed3c6ba0245e",
+          "4ffc0ede7e5e461a",
+          "505d5f32e36d59d0",
+          "52cc82e38cb9728c",
+          "55f3022f1aa698b9",
+          "5756c967e5dfa9a5",
+          "59cd6e4c6302f066",
+          "5acba3f0beec510a",
+          "5b45ac3149bd1dc7",
+          "5bf759026b8a4532",
+          "5cfcba880ba88249",
+          "5ddc83c24e4fa438",
+          "5e504117219ad7d0",
+          "5efe4bd981fa2a39",
+          "5f0a884b31c32a9b",
+          "5f17c40dec20773e",
+          "5f1c261b8f6facc8",
+          "610f04aef10e85d8",
+          "61ff6f6fa19d9947",
+          "620883a84d501c3e",
+          "6210a004d4a6fd37",
+          "62775314d01e53f8",
+          "6328b114fb313d55",
+          "633bbc3586e907ad",
+          "63c8fba73b6adab8",
+          "655738f4cf0e1e35",
+          "65d0a6ddb3c32dc1",
+          "670f7365fc4e3865",
+          "683aaf8e4e67b3b3",
+          "689af99e213c4ca5",
+          "6927d283f6861e7f",
+          "6a0bd774530dc0f6",
+          "6a33fc70b0b15b69",
+          "6a4ea91eaafc6301",
+          "6eab340d53b83255",
+          "6f7a90fc51b56f84",
+          "6fb857abb6760c50",
+          "70ebb6ccd4a50372",
+          "71bf65d9982fc90a",
+          "7281bc186d9cd7c6",
+          "734bf4d4488c2d6b",
+          "753aa508bc9a3f0b",
+          "77b82ce98fe96273",
+          "787cf8c5729ae241",
+          "79ba562117f566ac",
+          "7a8c69874f555fba",
+          "7acd1bc737934618",
+          "7b14f1722da646c2",
+          "7c37e5e3f79819e3",
+          "7d31b6be8698afee",
+          "7f8219b33ca487ef",
+          "8009336f0434863c",
+          "80ecc6a6a7f37b65",
+          "810d3a2d5e470cc8",
+          "83ce938f36bf7812",
+          "83f328a1633ea0a6",
+          "86198976fff9dcc0",
+          "8730d40a67e178c9",
+          "87d16fe317baca12",
+          "8a1aabcd5b4ab54e",
+          "8a665b19bedb47d0",
+          "8a91df23db91e526",
+          "8c014ec9882e0af8",
+          "8c8abe25c665aaec",
+          "8cbeb26919dd746e",
+          "8d653b28a353187e",
+          "8e8118a1b604d8dc",
+          "8fe93a38bf8e3af0",
+          "90efc0daecd0a68b",
+          "911b928e7e17573e",
+          "925b44c447a911fb",
+          "92770e4a1305dafd",
+          "93225b8cc1c83237",
+          "93807f7d66e86b74",
+          "951791daacfe3b9e",
+          "959ccc487d976789",
+          "96570c5b0b5f8c24",
+          "976e8211a53e1f49",
+          "981c5ef6e4e3b870",
+          "99f70b37b7510b53",
+          "9bf012abb17945db",
+          "9bf4b2117f8ec721",
+          "9c2c5904e1e5b560",
+          "9d3fa69af9112c70",
+          "9d7f8b3c5d0953d9",
+          "9fa961e7c84799e1",
+          "9faf4c28e66ab2e1",
+          "a05e9a25eea46215",
+          "a47265f01e359359",
+          "a4d085feffe04f0b",
+          "a506ebe9677f9cc4",
+          "a5439349cb3c24b0",
+          "a6a4be3e5005d43d",
+          "a711513ca71261d2",
+          "a818f81498539099",
+          "a8fefd3a09d797dd",
+          "a9dcdeb17ef06ef2",
+          "aa2b0a373e261590",
+          "abafda6b3e6e6be1",
+          "ae0c0dc453ac9d0b",
+          "ae6f331e17038fed",
+          "ae9c2d5543273f37",
+          "b151f7ac279d5ee2",
+          "b1be655486c34001",
+          "b1ce44c9f8443087",
+          "b2af6cc4487879f6",
+          "b3394a743dbcdfcd",
+          "b43341336027f14c",
+          "b8e266ca39955d85",
+          "b9054ec8dde1c0a6",
+          "b98bc0e72b7aa8db",
+          "b9e6b52dda659545",
+          "bb31131bdf7a0403",
+          "bb385624798206d7",
+          "bb62f1e3d6371b8b",
+          "bc81175921d6bc9d",
+          "bf2f717d2cff92b3",
+          "bf4753e9f6c53e5d",
+          "bf70f77793b9ff6d",
+          "c347e54e4dcb3d75",
+          "c392f0083f02ae11",
+          "c6b16dc8dd4abc6b",
+          "c6b373f806831590",
+          "c7d069c1fd51c773",
+          "c7ed2d84f366791a",
+          "c958de1e179c7780",
+          "ca7546eec70e00ec",
+          "cb4b0f486fecba14",
+          "cb55f19174a8cda3",
+          "cb8096e88028b35d",
+          "cbb5bf2261d80798",
+          "cd328425134c17d4",
+          "cd5ee3b99eeda3aa",
+          "cd91df29a24f8f52",
+          "ce30fcd3155ce18f",
+          "cf9dd84440ef0320",
+          "d134486bcb4d8a56",
+          "d15a7d19210d2300",
+          "d2deb7fdb7028bd4",
+          "d30a8ae71dee0a0c",
+          "d313a044ce821183",
+          "d32e8ec11b9f8bd4",
+          "d33c6bb7b043a475",
+          "d3cddda89ef32ed7",
+          "d467291d7e34e218",
+          "d4c91a73fc92326e",
+          "d58ee0205e3c47ce",
+          "d5a857ce80e092b5",
+          "d6a41fb3ffb66f54",
+          "d6a47fd39bd9b9e9",
+          "d6b9124524f5845d",
+          "d7c8d2b3122abf36",
+          "d8240b7006b26822",
+          "d837cf92ac73e2a2",
+          "dab47e9494885f8e",
+          "dc74ccf68db5653f",
+          "dd10f65abd15b28a",
+          "df0d07a22f623575",
+          "df5753bb19fc2475",
+          "dffe088147cb84ed",
+          "e00268a0d1141c96",
+          "e24247fadd9d0e67",
+          "e3ce665f0f1c6c36",
+          "e3f5394c55ddfadb",
+          "e559fd23cebe0790"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "00dc780fb91e142bfb89d44b7282443e8a14cf7c7446a66e55406e0ea29e69eb"
+        },
+        {
+          "count": 1,
+          "value": "0139bc526a01db4b47aa9bb74e1b5562f4d138ab83fdd404f9477f3df0a1fed7"
+        },
+        {
+          "count": 1,
+          "value": "026ab91c802c3fbdbca7b1bc47cd119ef688607c7a532786495af420985ae82e"
+        },
+        {
+          "count": 1,
+          "value": "029a3da871f99e851ef48de2968dc39839a624ea6b547e5656f6707f95043e3b"
+        },
+        {
+          "count": 1,
+          "value": "030ebfb0efb10bcb06d49713232077066a74063ec1d55d71ed83b8865f6ceaeb"
+        },
+        {
+          "count": 1,
+          "value": "03daa91454aa4a69c110e3a0017bff1908ddcd21406d1acf3ddd7a1fa595c795"
+        },
+        {
+          "count": 1,
+          "value": "04765a05bf1008f8ee8e9436d58da3ab896f2af726772fb1d3c74518d41971f9"
+        },
+        {
+          "count": 1,
+          "value": "05ee7273e7331cf0eb8e12a9e82f9b059b343e128efd10ab324f081399e69700"
+        },
+        {
+          "count": 1,
+          "value": "07131460a2916d4ffe5bd00f508ee86f1e298a5777157d6ee30811d66c1dd612"
+        },
+        {
+          "count": 1,
+          "value": "09f006c2f03778d304302dc2ef569957fd1c9579dce21ecdffeac0c4b3290b1a"
+        },
+        {
+          "count": 1,
+          "value": "0a52c8cdf29662f420cceaaf9d99939f9c6e018283bebf42587a6c463837ec95"
+        },
+        {
+          "count": 1,
+          "value": "0b64b316aa9d7754f27cb1aff902a770819e81453a0e5ac71f1c4e5f39a5a1b6"
+        },
+        {
+          "count": 1,
+          "value": "0cc91d9ccdc6c23f28c5a426b049d013bf68bda6adb7590811eaf159e42de778"
+        },
+        {
+          "count": 1,
+          "value": "0e38f8b7c7e8f9ed7b0ddcc53a94d05c2d097cb0f7f799cf3bb7e4b375a8e467"
+        },
+        {
+          "count": 1,
+          "value": "0e4f5bde2ab161537a0688efe8d2142d041298bc4827aab27efb10fd0966204d"
+        },
+        {
+          "count": 1,
+          "value": "0ef58195c0bcfe0fb73d444ba8484ca903d5aec8b836a9fee0460c87c2b992ec"
+        },
+        {
+          "count": 1,
+          "value": "0f207f185b3b72316d681149ef2f405216a9321b8cb9276684f9fbf280be9a22"
+        },
+        {
+          "count": 1,
+          "value": "0f58491ca6a65360606edb91b4b14d9aa63cf707fa813ce3fb01d98c8584f2c3"
+        },
+        {
+          "count": 1,
+          "value": "0f95076165e01fc78aedacf73ca0755e91c409bf8cc62f7378452291d4f9540b"
+        },
+        {
+          "count": 1,
+          "value": "0fa5090d6c53386223acd7105b161bf9d61e56643277b705d92f2126dd026e13"
+        },
+        {
+          "count": 1,
+          "value": "10827d2d1f51ff37c7425e04a86d9d9841f1d9a4df589236dc5c315ade766ed2"
+        },
+        {
+          "count": 1,
+          "value": "125fb0cf35ddf2cac20a09bda11262016cb8ac6208d6212c36178031e11649ce"
+        },
+        {
+          "count": 1,
+          "value": "127452157e29f9c3d347d3aac7bbd7f8d63b212a6864683976bc1344448b5c08"
+        },
+        {
+          "count": 1,
+          "value": "12bdf700dee2ab31052a27e324f991ec33fa6c31db9ff8a3e557851baf0ca675"
+        },
+        {
+          "count": 1,
+          "value": "13239ef2ccdf28969b2818cd4bfd4355c43ab3d33f8b4ba132cc809e314dd1b0"
+        },
+        {
+          "count": 1,
+          "value": "133d78e8bb3f372af8f43d20072f944d0debd0b2377546a0f7fd443e924282ad"
+        },
+        {
+          "count": 1,
+          "value": "1553b3ce590c95e19bbb48e348f8991b149b541960a0d998ec39af6ff150a8e7"
+        },
+        {
+          "count": 1,
+          "value": "16e3dab7e141b4f0a3e74b6e85e7a758348051aeed282e525e342ec4cad4e0ed"
+        },
+        {
+          "count": 1,
+          "value": "174a402dc8396178fe9d238bd0ad917d29e4e7b99e85b4e5145f77ffc8852d4e"
+        },
+        {
+          "count": 1,
+          "value": "17be1394a0e024ac52602a1657e28e522826b2d8100079be3a51da69b4cb3570"
+        },
+        {
+          "count": 1,
+          "value": "18b2142ddbb6a2d9735f9ce020bbb714aac2bf911d6a31ab6e9bc39faf5127a9"
+        },
+        {
+          "count": 1,
+          "value": "1a6ef44b31b158a6c4ec656142e0780c6d765d5e43f5f4d22c52469357d06471"
+        },
+        {
+          "count": 1,
+          "value": "1d4576e4f8be2e2815b9c7f65015010b1bf6bb9f77eeadb82da33d76f28af56c"
+        },
+        {
+          "count": 1,
+          "value": "1dd0000b1be3f0f7bc164eafaf96d0813ddc133cb3d0a1fbe255540830c3edcf"
+        },
+        {
+          "count": 1,
+          "value": "1e3bffd7350b86a7553f279021bf04c0caa6cc93f8674bd22ccdaa454aa64e5c"
+        },
+        {
+          "count": 1,
+          "value": "1ff0ab82e2997ab3515934fcde67d6b37aa5ac0533bb8b366d6933e4830014e8"
+        },
+        {
+          "count": 1,
+          "value": "207b0b5e8d44332b68424157a1afab30c8e8cb48533370f6fc535adb09a5338a"
+        },
+        {
+          "count": 1,
+          "value": "2160a57c0be9b63ce53ea47d529359e7f5ba7868b124d68d587fc48be8f8ff9e"
+        },
+        {
+          "count": 1,
+          "value": "21a3675c14550b340b379e79f21d68e8491236542186ecbf55d12e2318f0e364"
+        },
+        {
+          "count": 1,
+          "value": "2374c221245ad6dc7bccdea95cc92680a56c4aed009c648000fbb432325201a4"
+        },
+        {
+          "count": 1,
+          "value": "24424f5a9961bfdde7fa3ba1fb9af6ee7a1ff6b752b1c04003a8247ec35f80cc"
+        },
+        {
+          "count": 1,
+          "value": "25242fbd0f10a001c8f7984e00173f9313228e14165ac517bfc13d7a0a04537b"
+        },
+        {
+          "count": 1,
+          "value": "272bd1f55d894e3b982d1dd048d7e1156be514a3b1a04c1a5d7d39c33c8962ec"
+        },
+        {
+          "count": 1,
+          "value": "27928e106fa740233611b1b6358ca8fedf9302e5adc494136d8fac8d4d9592e6"
+        },
+        {
+          "count": 1,
+          "value": "28650262dcdca2e804ba9ee8b270c9ef347f67285c42ed93304ec747353906bf"
+        },
+        {
+          "count": 1,
+          "value": "2882b275a5335d976ab9b2ad293d9db4957305ce25ccf651e30e829d9bafb4dd"
+        },
+        {
+          "count": 1,
+          "value": "28ede77039e8dde5a7628ff48fe3a9ba4bbd934e05edae5782725755e2051a49"
+        },
+        {
+          "count": 1,
+          "value": "28ee77d93850e2072c0a819e940ac6392219764fda94b732c7ddfaf993293d0c"
+        },
+        {
+          "count": 1,
+          "value": "2a90da19deb7efaac2dfa6383507385a852224a276bf5f826a9a7b9bc8057074"
+        },
+        {
+          "count": 1,
+          "value": "2c2424c37107ac6f210ce4da74c919ae93888233264da0f5dcd62befdefa4b03"
+        },
+        {
+          "count": 1,
+          "value": "2db5c034dd65592c20807f892dd33afbb1d6e40f44c1d11ba553c35f943cdbf2"
+        },
+        {
+          "count": 1,
+          "value": "30acbedab20ee40794785fc748696d014df10cc8739964b3bb5e6883c711c62b"
+        },
+        {
+          "count": 1,
+          "value": "3121c6ba209f692132b6e97fdd8b2264cd80bfb5e9855b45f60f5f5cd5531d0f"
+        },
+        {
+          "count": 1,
+          "value": "31c9384feb4c5d172c431fd1b659060562fb1114323b6a47ee39da69576dc703"
+        },
+        {
+          "count": 1,
+          "value": "32892f3fc41baff59e50a56975d95a950329ba20f22c1ef28f83adbc4cec7969"
+        },
+        {
+          "count": 1,
+          "value": "33f531091b66e2547923ae509b4959e610f58dd3252c669c750a7a01ce98bea5"
+        },
+        {
+          "count": 1,
+          "value": "34299edd6777b35d68003de0d78102e1e3c2dbc8330aecc27fc81907d20f46cc"
+        },
+        {
+          "count": 1,
+          "value": "36a0f1727025ae400109253ae557e218684b444954cef418ccf3f25b6e370e3e"
+        },
+        {
+          "count": 1,
+          "value": "3703608323fbd37f9138ab727d7135a38c20f94ceabeb285cb211ce02da2b0f2"
+        },
+        {
+          "count": 1,
+          "value": "37df9db07f1de700ea3c56167abc73c8a9f2546851a0687426278d54f909383b"
+        },
+        {
+          "count": 1,
+          "value": "3908ecffb013b79d1153d505e5e84069e5bfe186050de988d8b202044c30aefc"
+        },
+        {
+          "count": 1,
+          "value": "3911837b4870b810a47be9511ec1a483b420f48a714cea64af79664f9d2687ad"
+        },
+        {
+          "count": 1,
+          "value": "391aa50546d26e12e2cd968a3f645a0ea8f59fbb930d259ee4f0182ba790c364"
+        },
+        {
+          "count": 1,
+          "value": "392b348ee9b0d882d0103c8491356b7a2a7ecd0493873f1aa8bbb689ed7471a7"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "de",
+          "det",
+          "dete",
+          "deter",
+          "determ",
+          "determi",
+          "determin"
+        ],
+        "max_len": 13,
+        "min_len": 13
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 1,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 1,
+      "null_count": 0,
+      "path": "method",
+      "top_values": [
+        {
+          "count": 291,
+          "value": "deterministic"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 24
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 44,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": 44,
+      "null_count": 0,
+      "path": "observed_at",
+      "top_values": [
+        {
+          "count": 27,
+          "value": "2026-09-10 10:26:33.587+00"
+        },
+        {
+          "count": 27,
+          "value": "2026-09-10 10:26:47.2+00"
+        },
+        {
+          "count": 21,
+          "value": "2026-09-10 10:26:48.435+00"
+        },
+        {
+          "count": 17,
+          "value": "2026-09-10 10:28:39.457+00"
+        },
+        {
+          "count": 13,
+          "value": "2026-09-10 10:26:40.793+00"
+        },
+        {
+          "count": 13,
+          "value": "2026-09-10 10:26:43.132+00"
+        },
+        {
+          "count": 13,
+          "value": "2026-09-10 10:28:38.828+00"
+        },
+        {
+          "count": 9,
+          "value": "2026-09-10 10:28:23.399+00"
+        },
+        {
+          "count": 8,
+          "value": "2026-09-10 10:26:34.751+00"
+        },
+        {
+          "count": 7,
+          "value": "2026-09-10 10:28:25.168+00"
+        },
+        {
+          "count": 7,
+          "value": "2026-09-10 10:28:27.732+00"
+        },
+        {
+          "count": 7,
+          "value": "2026-09-10 10:28:31.194+00"
+        },
+        {
+          "count": 6,
+          "value": "2026-09-10 10:26:36.687+00"
+        },
+        {
+          "count": 6,
+          "value": "2026-09-10 10:26:38.592+00"
+        },
+        {
+          "count": 6,
+          "value": "2026-09-10 10:28:20.869+00"
+        },
+        {
+          "count": 6,
+          "value": "2026-09-10 10:28:26.943+00"
+        },
+        {
+          "count": 6,
+          "value": "2026-09-10 10:28:28.602+00"
+        },
+        {
+          "count": 6,
+          "value": "2026-09-10 10:28:32.046+00"
+        },
+        {
+          "count": 6,
+          "value": "2026-09-10 10:28:40.693+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:26:41.853+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:26:45.95+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:28:21.641+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:28:42.046+00"
+        },
+        {
+          "count": 5,
+          "value": "2026-09-10 10:28:43.61+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:25:43.782+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:26:35.737+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:28:20.079+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:28:22.521+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:28:26.023+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:28:42.377+00"
+        },
+        {
+          "count": 4,
+          "value": "2026-09-10 10:28:44.017+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:26:37.708+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:26:45.121+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:24.335+00"
+        },
+        {
+          "count": 3,
+          "value": "2026-09-10 10:28:43.23+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:25:13.102+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:29.353+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:30.355+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:40.073+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:41.27+00"
+        },
+        {
+          "count": 2,
+          "value": "2026-09-10 10:28:44.717+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:25:13.666+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:26:42.461+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:26:44.363+00"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [
+          "44"
+        ],
+        "max_len": 10,
+        "min_len": 10
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 90,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 90,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "017156a8580d075a",
+          "0286a36d331c4aec",
+          "041bde95a085c363",
+          "05210f73279dc9b2",
+          "08971e0e44dfdc89",
+          "0b58a1523013b358",
+          "10fddd8907441386",
+          "11ea322c0dbc1a10",
+          "134f3d1c23b4bc78",
+          "16b7c19941f1ee24",
+          "21a1be595085b13b",
+          "243f0c5d9b5e4362",
+          "27c93e6fab7b1a5b",
+          "28b2d8d343ed96b3",
+          "31f75f22c95788b1",
+          "325cfbf30c6701f2",
+          "32e81de678366021",
+          "33c482bdbb4458fc",
+          "33f3a7b0d12b2250",
+          "3a530bd5f1aa2019",
+          "3d2d3e472deb88d4",
+          "406ba9b097426d21",
+          "41618739ace8b34b",
+          "485f4c1ff60a9cbf",
+          "4a0de34fc1b12775",
+          "4d40808299d446fc",
+          "4dc1a12bc7ecb31a",
+          "4e67c53a3d533d4e",
+          "52c2b2fed1aaf3f0",
+          "54819c213ec5d0f2",
+          "54a45ca9a02ef564",
+          "54ec72469f2d96f2",
+          "57c04d24b67571a4",
+          "5a0754e0bb9276b1",
+          "5d97f2f65a13b4fb",
+          "64ad37508129c047",
+          "65438c30a3fdd3b7",
+          "6a8c0bfa8d0e6982",
+          "6c293c913e3b1137",
+          "6e67ca4c048685cd",
+          "71a638fada85915b",
+          "74d6e4583a544949",
+          "77eaca4080305318",
+          "79835694b97755d9",
+          "7c05859840a24565",
+          "7cc104285060ca0b",
+          "7ded9a6ba04d7ad1",
+          "82d64618b2765a19",
+          "833cbcaab6d85bae",
+          "836c8e9f6820c1f9",
+          "846b965360b107b7",
+          "86054acfab391b6b",
+          "89ce5fddaae05885",
+          "97c7233de2474496",
+          "9810308d1f878228",
+          "9bf744917d36df94",
+          "9bffee56b3079be7",
+          "9e074344e052028f",
+          "a0a47a4825c2a894",
+          "a296783da31228c3",
+          "a5f0672dc7bdd38b",
+          "a60b20dfd560cc5c",
+          "a9043f05467c03e9",
+          "ac21dfeea19c92ce",
+          "ac9b9d4ea901e83e",
+          "b350fde41e3a8fc5",
+          "b3e1a4910a1e5a4d",
+          "b64c6302bba5646f",
+          "b8f14700c5e6cf72",
+          "bb672dc78df4b599",
+          "bbef7273327e305d",
+          "c2765eecbc8c5eee",
+          "c376794e8342bfa2",
+          "cbc155c5d6c5c441",
+          "d75a320897358475",
+          "dbb1c9028f1aab17",
+          "dc07a8a6ededa954",
+          "ddd5feab155cd1a7",
+          "dfe515c2582d34e8",
+          "e0fb6f8b0eca188e",
+          "e0fb7dc6a2501d41",
+          "e9a86d6bd7037cfd",
+          "ef2a9ee6838184c7",
+          "ef5f13fc8ba72b28",
+          "efc27211794ce8af",
+          "eff67ea4aafd1d01",
+          "f0a766d15933c1b1",
+          "f705b8a89294e637",
+          "f73db6ab3d176635",
+          "f780d5ad959f0c7a"
+        ]
+      },
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "4490327199",
+        "min": "1804249533"
+      },
+      "null_count": 108,
+      "path": "pull_request_id",
+      "top_values": [
+        {
+          "count": 18,
+          "value": "4224468960"
+        },
+        {
+          "count": 14,
+          "value": "4230553909"
+        },
+        {
+          "count": 6,
+          "value": "1994182370"
+        },
+        {
+          "count": 5,
+          "value": "2233643670"
+        },
+        {
+          "count": 4,
+          "value": "4076110581"
+        },
+        {
+          "count": 4,
+          "value": "4486191357"
+        },
+        {
+          "count": 3,
+          "value": "2252052632"
+        },
+        {
+          "count": 3,
+          "value": "3204789563"
+        },
+        {
+          "count": 3,
+          "value": "3472441842"
+        },
+        {
+          "count": 3,
+          "value": "4233611958"
+        },
+        {
+          "count": 3,
+          "value": "4476234342"
+        },
+        {
+          "count": 3,
+          "value": "4484871560"
+        },
+        {
+          "count": 3,
+          "value": "4485828641"
+        },
+        {
+          "count": 3,
+          "value": "4485908800"
+        },
+        {
+          "count": 3,
+          "value": "4486190414"
+        },
+        {
+          "count": 3,
+          "value": "4488845515"
+        },
+        {
+          "count": 2,
+          "value": "2248419342"
+        },
+        {
+          "count": 2,
+          "value": "3150188256"
+        },
+        {
+          "count": 2,
+          "value": "3179727638"
+        },
+        {
+          "count": 2,
+          "value": "3260878204"
+        },
+        {
+          "count": 2,
+          "value": "3551710520"
+        },
+        {
+          "count": 2,
+          "value": "3552563223"
+        },
+        {
+          "count": 2,
+          "value": "3925446855"
+        },
+        {
+          "count": 2,
+          "value": "3981169097"
+        },
+        {
+          "count": 2,
+          "value": "4028749890"
+        },
+        {
+          "count": 2,
+          "value": "4145913397"
+        },
+        {
+          "count": 2,
+          "value": "4269493440"
+        },
+        {
+          "count": 2,
+          "value": "4298150836"
+        },
+        {
+          "count": 2,
+          "value": "4301575573"
+        },
+        {
+          "count": 2,
+          "value": "4387073746"
+        },
+        {
+          "count": 2,
+          "value": "4401456048"
+        },
+        {
+          "count": 2,
+          "value": "4411010951"
+        },
+        {
+          "count": 2,
+          "value": "4415691255"
+        },
+        {
+          "count": 2,
+          "value": "4436994628"
+        },
+        {
+          "count": 2,
+          "value": "4437493655"
+        },
+        {
+          "count": 2,
+          "value": "4474616829"
+        },
+        {
+          "count": 2,
+          "value": "4479091505"
+        },
+        {
+          "count": 2,
+          "value": "4485667291"
+        },
+        {
+          "count": 2,
+          "value": "4486882241"
+        },
+        {
+          "count": 2,
+          "value": "4486937875"
+        },
+        {
+          "count": 2,
+          "value": "4487038754"
+        },
+        {
+          "count": 2,
+          "value": "4487731670"
+        },
+        {
+          "count": 2,
+          "value": "4488224232"
+        },
+        {
+          "count": 2,
+          "value": "4490327199"
+        },
+        {
+          "count": 1,
+          "value": "1804249533"
+        },
+        {
+          "count": 1,
+          "value": "2010659123"
+        },
+        {
+          "count": 1,
+          "value": "2086083744"
+        },
+        {
+          "count": 1,
+          "value": "2107368771"
+        },
+        {
+          "count": 1,
+          "value": "2136731315"
+        },
+        {
+          "count": 1,
+          "value": "2153595334"
+        },
+        {
+          "count": 1,
+          "value": "2160293825"
+        },
+        {
+          "count": 1,
+          "value": "2173744858"
+        },
+        {
+          "count": 1,
+          "value": "2187984517"
+        },
+        {
+          "count": 1,
+          "value": "2197845331"
+        },
+        {
+          "count": 1,
+          "value": "2315406469"
+        },
+        {
+          "count": 1,
+          "value": "2317107201"
+        },
+        {
+          "count": 1,
+          "value": "2606532027"
+        },
+        {
+          "count": 1,
+          "value": "3076854946"
+        },
+        {
+          "count": 1,
+          "value": "3076872483"
+        },
+        {
+          "count": 1,
+          "value": "3229740407"
+        },
+        {
+          "count": 1,
+          "value": "3442137467"
+        },
+        {
+          "count": 1,
+          "value": "3583074998"
+        },
+        {
+          "count": 1,
+          "value": "3910284690"
+        },
+        {
+          "count": 1,
+          "value": "3927614711"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [],
+        "max_len": 10,
+        "min_len": 9
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 15,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": 15,
+      "min_max": {
+        "max": "1274085842",
+        "min": "642917329"
+      },
+      "null_count": 0,
+      "path": "repository_id",
+      "top_values": [
+        {
+          "count": 50,
+          "value": "1135322438"
+        },
+        {
+          "count": 36,
+          "value": "1274085842"
+        },
+        {
+          "count": 33,
+          "value": "644461337"
+        },
+        {
+          "count": 32,
+          "value": "794140072"
+        },
+        {
+          "count": 27,
+          "value": "722184017"
+        },
+        {
+          "count": 20,
+          "value": "642917329"
+        },
+        {
+          "count": 14,
+          "value": "1163569028"
+        },
+        {
+          "count": 13,
+          "value": "869760181"
+        },
+        {
+          "count": 12,
+          "value": "900901983"
+        },
+        {
+          "count": 12,
+          "value": "931560949"
+        },
+        {
+          "count": 11,
+          "value": "1128648949"
+        },
+        {
+          "count": 10,
+          "value": "1138349022"
+        },
+        {
+          "count": 9,
+          "value": "741829177"
+        },
+        {
+          "count": 7,
+          "value": "848693066"
+        },
+        {
+          "count": 5,
+          "value": "739473584"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "ac",
+          "acc",
+          "acce",
+          "accep",
+          "accept",
+          "accepte",
+          "accepted"
+        ],
+        "max_len": 8,
+        "min_len": 8
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 1,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 1,
+      "null_count": 0,
+      "path": "review_status",
+      "top_values": [
+        {
+          "count": 291,
+          "value": "accepted"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [
+          "pu",
+          "pul",
+          "pull",
+          "pull_",
+          "pull_r",
+          "pull_re",
+          "pull_req"
+        ],
+        "max_len": 12,
+        "min_len": 5
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 4,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 4,
+      "null_count": 0,
+      "path": "source_kind",
+      "top_values": [
+        {
+          "count": 183,
+          "value": "pull_request"
+        },
+        {
+          "count": 78,
+          "value": "readme"
+        },
+        {
+          "count": 23,
+          "value": "manifest"
+        },
+        {
+          "count": 7,
+          "value": "topic"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [],
+        "max_len": 105,
+        "min_len": 40
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 118,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 118,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "040c819b49530630",
+          "0a40904fee4c5bf8",
+          "0ffa1cd4e9102647",
+          "160df00167bdf363",
+          "162e95d22d40aad7",
+          "16354838497552d4",
+          "17e4b4749e3a0631",
+          "1a26c11483507e29",
+          "1c748f34f9ce5601",
+          "1e5c9b38ebd84059",
+          "1e670ab3fecb34a7",
+          "267f9fe1beaf9e88",
+          "27f09202016aecae",
+          "2812c2ee72b198b6",
+          "2aefc079b52498ad",
+          "2c3250c9ae37a54d",
+          "2e16429fb8ed6579",
+          "2e8c50603a5e9006",
+          "2f64def16144947f",
+          "3085c40c7f0c173d",
+          "30ee9968ab89e646",
+          "31423479dfd87697",
+          "3188d278e4d36fa5",
+          "32067bed041db187",
+          "346805c5bd2b626a",
+          "3c40c45f11b5650b",
+          "40137b7e69cd1a60",
+          "4043671f7002052b",
+          "40a8b5f165f15e77",
+          "416d9699702a4724",
+          "4171cbde6eec7cb9",
+          "446473f8288ba10e",
+          "447d445014157fa8",
+          "4918d56bcf9e62a8",
+          "4a065a54f4438c71",
+          "4b2a07c9fb03716f",
+          "4b612ba2fa97d8bf",
+          "4ec909faf9045ddd",
+          "522fae2259f045fc",
+          "5358f8b6d6b685f4",
+          "579b39f6793e6649",
+          "5a04190323cc2e69",
+          "5ee589c04f89d1d8",
+          "5f1f7549648e5359",
+          "5fa9b77c2861f140",
+          "60e3edb6342c37c2",
+          "6224102c5b8126ea",
+          "62cb3048e0f95691",
+          "62e284b3ca2dc68a",
+          "6341b066fd671240",
+          "640d9f0502514b65",
+          "6569af56c91d85ef",
+          "6683e213f0332779",
+          "6698352c45eee0eb",
+          "6c7ef6ee04f48ba8",
+          "6ecdd0a0b09f0cdf",
+          "6f47568334f710b5",
+          "6f6c3f83538bd7fa",
+          "71e6b207ffab9210",
+          "740dc78628c3dd75",
+          "76626037cd950748",
+          "77e7b4048f46e775",
+          "781e2594a9219981",
+          "7dc9ae22cbe6a148",
+          "7dccfe2bc10e7a60",
+          "821e446f8731a4b2",
+          "85e387a047b476cd",
+          "88da8bb226807ca2",
+          "89b28632d2019d08",
+          "8bb05b81c4e3879e",
+          "8ec9e32e743a69b0",
+          "8f32cf5753f323af",
+          "900ebeef7a7d1668",
+          "9373040a30f99a74",
+          "97ad40845f5223ac",
+          "99c333e87ebb04ff",
+          "9a89e14cc3621184",
+          "9cc2170d6318edc4",
+          "9d4dbbe634559bc5",
+          "9e6f7a7326fc9c43",
+          "9ed7d889af300192",
+          "a1cc961643b12432",
+          "a1d299810c2d59c0",
+          "a6d09ac33ac38b39",
+          "a9eec527782bbdbd",
+          "ac186d4ddf44f8c7",
+          "ac8a928c37882217",
+          "b9d7aa46a61ddf8c",
+          "bd36ea78a62e7e25",
+          "c0612dd1c4815d10",
+          "c1269d4f9dbbae12",
+          "c2970cb6dc63e21f",
+          "c2ac2925ac8c19f8",
+          "c32d9abf6ccf5243",
+          "c4a3a38e8380957f",
+          "c7734c52dae0318f",
+          "cb3b3c9ade07dd6e",
+          "cdc71f2002c0dc1d",
+          "cef32c7b4c3753b8",
+          "d16e10683ac745fd",
+          "d643f74a1f165e8d",
+          "dafbeeb075e6dd83",
+          "dd41c302f294e3e8",
+          "e228f301cb5d3905",
+          "e6640e8ad2bc7b44",
+          "e68b072c6d7806e5",
+          "ead59db42aa85e39",
+          "ede30357827c6523",
+          "ef04e7ac0a008a64",
+          "f0c6790f8edd7f17",
+          "f12e9a3cffe942f7",
+          "f51808d1020e6dbb",
+          "f708893a61352c92",
+          "f85e3642cf87a89b",
+          "faabd91f533508f6",
+          "fd9b345fee211899",
+          "feedd2ccf1e59946",
+          "ffd33ea82d8fb979"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "source_revision",
+      "top_values": [
+        {
+          "count": 17,
+          "value": "e23aabd3cde9ecdfd06a49aa457c28f9a45fd359"
+        },
+        {
+          "count": 13,
+          "value": "36203e6087353672d1a9444bd07cf3757d57b797"
+        },
+        {
+          "count": 9,
+          "value": "8b4c9a7d26e32323e4cd377742a92d736f3207f8"
+        },
+        {
+          "count": 7,
+          "value": "23597e058669486c9fee806d0db484c9dd861e38"
+        },
+        {
+          "count": 7,
+          "value": "411d723b84d7353e035e6226e421bc9622adc37b"
+        },
+        {
+          "count": 7,
+          "value": "8747e69c14ecdee220a1168d4ba448e5ba3b2a6c"
+        },
+        {
+          "count": 6,
+          "value": "241527fd2370331e3ae16985b9967312fbfacd7d"
+        },
+        {
+          "count": 6,
+          "value": "38e86be88b71d9fcac805bc98f18ae44224f7ae2"
+        },
+        {
+          "count": 6,
+          "value": "77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7"
+        },
+        {
+          "count": 6,
+          "value": "b4070187c5dd19414472227dcb59a69abd24792b"
+        },
+        {
+          "count": 6,
+          "value": "f3160c5d904c7df979df2b42be56d68071863d84"
+        },
+        {
+          "count": 5,
+          "value": "620ad2f25a4a38445aa25ba6c8a3bff6c02f35c4"
+        },
+        {
+          "count": 5,
+          "value": "77bece53bdad4f5bf57c9c66f57d33482bb753ce:f5be0850c36b9a1910f00cdbe3afa64981099fb886298cc78049326f0b332a42"
+        },
+        {
+          "count": 5,
+          "value": "8eb590ab7937b763db1ca159501235ad04a8fd3e"
+        },
+        {
+          "count": 5,
+          "value": "a1417e8fcb0343ae750029d98d663bc5cb2d528e"
+        },
+        {
+          "count": 4,
+          "value": "00bf0b8fe329077b6c9487d001abd1d627f3df0f"
+        },
+        {
+          "count": 4,
+          "value": "186e80b17b424dda47758392337d0c91066f6f40:c98b127a17c00fa32154074de29e2f0ac16b06175264de719420151e5b3eaf3d"
+        },
+        {
+          "count": 4,
+          "value": "229552bcc783cf551a29649bc8eaee8e50628120:8c22859bf7df589d9ab3d179d3e4bed0c3fa53af4572dea9eaf7e4afb8940afb"
+        },
+        {
+          "count": 4,
+          "value": "b13eec68188a0a8abaac8863a95af9a8e79d40b4"
+        },
+        {
+          "count": 4,
+          "value": "cfb4743c17336d7602b4045072bed3c4a7051be6"
+        },
+        {
+          "count": 4,
+          "value": "d14d7123e61612577790a7f008044c4feb843e99"
+        },
+        {
+          "count": 4,
+          "value": "d2f6ed9953fff76435b01e65aec03bfbd18c51cd"
+        },
+        {
+          "count": 3,
+          "value": "0d5fb1678a0d0b6d8219e5a38a8a4aa16f7a8345:aca1cab6c517e52caa91b3ea0c76f4cf44d9165263c971c7a54e868d77afdbfd"
+        },
+        {
+          "count": 3,
+          "value": "44ad939493564fed0f3bcf5d804431062ad2b3ca"
+        },
+        {
+          "count": 3,
+          "value": "567a2ee463d0c294a34f9f53705fa0d79b70ab06:dd0d2316342ba3205de8b417c668d22f7ca1cd9a00041fb2af07eca092eac890"
+        },
+        {
+          "count": 3,
+          "value": "63cfde4dce91cdf4ece5c4d76af19b22a71454fc:a94896ce0508be7ef8ba00138b2abde07522df96d9ad6b2f135496107b547e83"
+        },
+        {
+          "count": 3,
+          "value": "7212268125df4ee2906c64fc93ac80e0f3fd796d:3c8a04c0975b8516ec4a0e928e986ac67337edb23519e3192b93daef02088e65"
+        },
+        {
+          "count": 3,
+          "value": "8a182fc51f4912c02c1f4e85d6ef79ae868e4659:2a3518daab4b61f3126dfea8ef7a1e20d436acd9146b53b7b2f91dadb20d2e6c"
+        },
+        {
+          "count": 3,
+          "value": "b3474f745c56fb02b63f68966362879f581a43b1:cea1b6a054c7cbed02a38476f412852e409d6d2b6505b48f23859aa07fa4c10a"
+        },
+        {
+          "count": 3,
+          "value": "c8462597535919aeaba27aae49472f4755cef99f:4d679a3592a2f58ce7ca1384c0228331a98d396de15070a4ccca5563f772a3ce"
+        },
+        {
+          "count": 3,
+          "value": "d259829e96e05c90196603bff24ae6b9f7463ee7"
+        },
+        {
+          "count": 3,
+          "value": "f2c13bdcf2f67827680042ae0a2f34908d003bd7:6143dfcf2be1e59292650c4e3d17264488aaff0e59e1fef3011dc3907e171cbc"
+        },
+        {
+          "count": 3,
+          "value": "fce1d37eb03601208753c790ed53c93ce3960462:ee72e96c882bc61abd0936685445ef0cbd999d65e2caa4fb8101d1b5e386c29e"
+        },
+        {
+          "count": 2,
+          "value": "03387a0badc15f211222f1dc5c4cacc2043ed0e6"
+        },
+        {
+          "count": 2,
+          "value": "043e4961d50f9783fc7e39450212de54229e0df7:0d7399f9ac3359bfd362bcf41266544e61586f47bef17b343f004c0895b90460"
+        },
+        {
+          "count": 2,
+          "value": "0687380b08d07b4bf21306b3d4622c40f5193fec:fc048d335bef42ac3f7813e1bed0ef0ccea15b577281d177270d87b5cb43678a"
+        },
+        {
+          "count": 2,
+          "value": "08d618e295938fe60057b5d892d1cb532f37514c:20ec0eeb1431d3cda2a198da89c5ed054495eb655099d57188da52901360d9c8"
+        },
+        {
+          "count": 2,
+          "value": "129ad7f45f2038dcc637cf1071985808b8976dfe:5a537c74e5c0383b0388d331194bbbcbbb2100fe2ccb8e43fbe118a6bd50b6c3"
+        },
+        {
+          "count": 2,
+          "value": "195ab29d29c49dab110cfa4c30fd6e8abacecdf4:746493ba8075ef600a0209656b40ce11408f6f363f05fe2bf09b8f738b35b703"
+        },
+        {
+          "count": 2,
+          "value": "20eb24f64511c3d5aa7ae2dd31734a00f15d6d4a:62e9601b46e148cf085db8a274dcaf0b77148308ea0258706ec1d2b86bbf46d8"
+        },
+        {
+          "count": 2,
+          "value": "273ce8370f8c78939b7cd339ab267325f7058241:8a04d635e16f17cf1db2b4c0da90cd5f3558f5c592bc7f4ed9fbb0f21a2c6435"
+        },
+        {
+          "count": 2,
+          "value": "27aef44aa4fbed953394809864fbb8833ad7747e:049a7384c352d2f80151528a17dc10b3cbe92684324be21092a692cb2a8b074b"
+        },
+        {
+          "count": 2,
+          "value": "27d0ccc8682d082710dbe12b6bb3e44ddf1db85c:e97e80b559104e7578720dbf3696568b75b5027107d7324c9b5c14429114df1d"
+        },
+        {
+          "count": 2,
+          "value": "2d411e6db32b214032c545f925873bfd9be3b003:be7f1da49e10c47d9223e9331dc17321ba2775ae875e42fcdc906a898675b761"
+        },
+        {
+          "count": 2,
+          "value": "3c563bcac9bc450b39845ecb3cf3a49a0c7897ee"
+        },
+        {
+          "count": 2,
+          "value": "3e6bb8ba486c1be13ce2d27eaeb6d52e1d81c8d4fa6543739615b93fe9a4e87f"
+        },
+        {
+          "count": 2,
+          "value": "521b3a7bff927804166b75afcc9b6b22f1ca54af:b90962c9ded5e0e8425d5011b35154f8fa954a76b38dc889e046a5cfc77868d6"
+        },
+        {
+          "count": 2,
+          "value": "5e858d8378d355b75e33086a06b4379982b1cc23:b4ace958d7013ad0447393c8b34686b8f6cf14a5e20935bd8056fe7e644e9959"
+        },
+        {
+          "count": 2,
+          "value": "71e534d838a2a1341072f24c45cb1bd4d57da2d8:e6d97ca598170fc14115d67dbbc98c35e6b4575d3ce66a574bde697b110451e1"
+        },
+        {
+          "count": 2,
+          "value": "793de1ad387b5159a1fab96c1e8139cd64055db62d3fe8eb899a0af5bbaa6553"
+        },
+        {
+          "count": 2,
+          "value": "7bcba9b6270515ef25717f1fcf6957aaf9a39a76:f0909912c709026ea81141efeacae5c4d17115c6eaff906078f140efbcff204d"
+        },
+        {
+          "count": 2,
+          "value": "818d7b212439b8f3e5a4d5d1e3974f45029331fb:db96bba0c3e0885125f15169c876cab7e27cdd7fe6ab27e1b850c8d099f14584"
+        },
+        {
+          "count": 2,
+          "value": "9436081fab8070c9f4e41c6e5c20e830ab3c09f1:6466be47162dde12b57936294dfc83739a6a1f14585091cff1830160f16ddaef"
+        },
+        {
+          "count": 2,
+          "value": "9da59bdbd089d20cb49cdca2be6066fa40ebb00c:ed44d6bc488c9f1fc40a80e95b4d3747055033de8eeabb9f8993f160a5cc1191"
+        },
+        {
+          "count": 2,
+          "value": "9f3938042f45942cd744740e480d06807ed574ee:c4e2337367f46402e8222562c33f7fed39f18c319ae49ff4e1a70bc641cbd438"
+        },
+        {
+          "count": 2,
+          "value": "a2bc387c85f54a91f0fa925c730f4dd8261720ed:b7ab2625606f9219bf707d94f388d8674d5508f0cfd7bed21ed446a9fad9143a"
+        },
+        {
+          "count": 2,
+          "value": "aedd50e02836efbcd660cc9f27db997d651280e6a8ee011b10f4f3b5e76fdb10"
+        },
+        {
+          "count": 2,
+          "value": "b2f499e6fe65c5f4e51cb352af2ef7b3d49d7a1a"
+        },
+        {
+          "count": 2,
+          "value": "b84d8ac85e618b095a763dd07e277c455085c0dd:c60881961130b6afdfc1645b5e7e3e1837d842250826e7218e3429cbf5b9a0cb"
+        },
+        {
+          "count": 2,
+          "value": "c82bf4b8e1044746c0ff3f0daf58f53a48a476ca:ac3674dc45ca97aac9c9a7bd67bb8a76cbf686e3240c686270d9c9e2b891be56"
+        },
+        {
+          "count": 2,
+          "value": "c8760bf9e5ff330954cb3a9a5208c20c85851990:a74d7c015907f6d77f2975abe2df02f4b2caa8c5f3577823ef4e640d17e0bde5"
+        },
+        {
+          "count": 2,
+          "value": "ce1bb22ec32807c42c83cebf2b6672512c2cc38d:2a41628168967ae84ea41bf0213fc903dd0fd50eb1d3e74850dbf5310ddb30cd"
+        },
+        {
+          "count": 2,
+          "value": "d1acea9be5474bb81c4ce9d4fba9d91cb0e2c5e9:7fea86e957663ebf64cdfb5e528692d92377d7eb42107878b6fde63df0187ef8"
+        },
+        {
+          "count": 2,
+          "value": "d4ac4c223e09a997bdae1c81d954171d6935f645:2b3a59586eda9a0c04c5a99a60334b0de9a3ba2a58cad7e35711ec6b1818b709"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "upper"
+        ],
+        "common_prefixes": [
+          "ht",
+          "htt",
+          "http",
+          "https",
+          "https:",
+          "https:/",
+          "https://"
+        ],
+        "max_len": 142,
+        "min_len": 28
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 137,
+      "distinct_source": "sample_floor",
+      "join_sketch": {
+        "cardinalityEstimate": 137,
+        "exact": true,
+        "hash": "md5-64-nfc-casefold",
+        "k": 256,
+        "mins": [
+          "0006cc1996b9216e",
+          "0114da1a60296822",
+          "07e6d01efaf5dcf7",
+          "08130591f643a0bd",
+          "0d80af8f2d49fa5b",
+          "0da0bcd1f4e40428",
+          "0e1f55c641ad13aa",
+          "128144c0123e9879",
+          "13db54764edade0d",
+          "17e47026f9537c4d",
+          "18dd1ff8b9464a40",
+          "198e7c0b6a8f3b98",
+          "1af0338bf43169c7",
+          "1d92ecca1173dc9d",
+          "200ed0f7270c6c5b",
+          "214c6268efbf1d03",
+          "21ffdb313fde8da7",
+          "23df67d35330e5f0",
+          "24845c3de4f62742",
+          "2630f5aeced05f6b",
+          "27fa26862dd38563",
+          "289e64de20fcc487",
+          "2a94fc9d5ddb3e95",
+          "2b977dacf4ede8db",
+          "2c9ef9d961ea912a",
+          "2ed15ee35b924c73",
+          "2f6b22633ae7cf6f",
+          "2fc8b7fb1807bf49",
+          "2fe3bfa41263c9fc",
+          "30b0458722c1743f",
+          "33c97857e170d20c",
+          "3565d376b9d5bada",
+          "3946d1d23ebb22df",
+          "3fc0c20710ab52d3",
+          "416640369b75e618",
+          "41dedfccf6351b34",
+          "44c7741de4061f38",
+          "46d4642c239748bf",
+          "473744439d17b7b0",
+          "4b6a87d78dd081a0",
+          "4cd33795050ac772",
+          "540de71ed662342b",
+          "58b9bf310f0b58c7",
+          "5cd7e8f3ce4019f1",
+          "5d3f711f4bbb0bd7",
+          "5db070d098253cce",
+          "610cc898aebea339",
+          "615f1aea403d83c7",
+          "62360e4f62288018",
+          "63b9d2a6db5ca47a",
+          "662a3078ff59cb06",
+          "6982e4ed5df447d2",
+          "69cd655dba21227f",
+          "6b9671082baa4017",
+          "6d2fc59071fca504",
+          "6eaa6ecb5a0a4275",
+          "6fcb99f663d54465",
+          "7004b7cd5884c405",
+          "70256c446eb2ad92",
+          "7230cacc558260a1",
+          "74933d7708f52ae2",
+          "771b0aa479bbcdc2",
+          "784bafa1f2ceb8a5",
+          "7b7f3b201daaaf71",
+          "7c3915fdf09fbb25",
+          "7cb5d564ee4d2fce",
+          "7e8be8e2aa78b041",
+          "7f89214fd142ebea",
+          "82069e6b8736645a",
+          "83230f1dd7a718bf",
+          "8409da6441652811",
+          "852f717ebe1f5031",
+          "8561c512a6ae2ba3",
+          "862d5887babe7811",
+          "8634a1772a672e65",
+          "8a707216a5025066",
+          "8d0760d4bdc0656d",
+          "8d4085a8b60da1dc",
+          "8e2af64817fe23dc",
+          "9065e149d2c617ee",
+          "91f3ed3787d162d1",
+          "93a5fa5519c44af9",
+          "9756a862c35d6e44",
+          "9882c9a52ef9d939",
+          "9914ae1000767ff6",
+          "9d2342bc6d861fa3",
+          "9eec1f5dce73b8e3",
+          "9f3d47d8e1d27ee9",
+          "9f47d75875236097",
+          "9f73fc83236ce764",
+          "a0263e46d32d2039",
+          "a05e55aa99795a05",
+          "a0e8dd8b7f650351",
+          "a19719d5acdf5e80",
+          "a2d0b8e33b4ce805",
+          "a37a0736f5670b79",
+          "a7952e1fc39ca3f6",
+          "a8a0a4cc070d2435",
+          "ac0dd0491ef9756f",
+          "adddf7540f4ed163",
+          "af5bfa250372cb98",
+          "afa5de692ddf4c6f",
+          "aff82e1d13e0067f",
+          "b2c65f88356ea391",
+          "b5c101b552deee72",
+          "be263811dd67a0fe",
+          "be983178f531b02a",
+          "bf828225b96fffba",
+          "c1d5eec8a678b95e",
+          "c3bdb18232de8dbc",
+          "c3deaf4dcd52a9f5",
+          "c5832c33d27479d0",
+          "c835f923f5a8792e",
+          "d0cbdbd06906553f",
+          "d2abd95f96654a4f",
+          "d421101428fed25a",
+          "d481e459517d82af",
+          "d5e09615fa964cbe",
+          "d61832dc0692e0c1",
+          "d948e3be0a3f31a3",
+          "dcecaba6af1fdcfd",
+          "de8146a4c6f8e62b",
+          "e337303f9b99b62d",
+          "e493b5b916775c3d",
+          "e6c3b48f3eb7578c",
+          "e9546613b0159288",
+          "ecf9038e93622286",
+          "eed1f015e6f6fae1",
+          "ef1a0eb54ee75509",
+          "f028459f7c42ff68",
+          "f0f5429bbf517b6f",
+          "f7cdfc69dc852878",
+          "f8f4ab097eaf2b3d",
+          "f992a58946d2164a",
+          "fa0f55a36113334a",
+          "fa8e2909c4fc7866",
+          "ffda7c4bd1cd40a2"
+        ]
+      },
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "source_url",
+      "top_values": [
+        {
+          "count": 9,
+          "value": "https://github.com/vercel-labs/github-tools/blob/main/README.md"
+        },
+        {
+          "count": 7,
+          "value": "https://github.com/upstash/agentkit/blob/main/README.md"
+        },
+        {
+          "count": 7,
+          "value": "https://github.com/upstash/rag-chat/blob/master/README.md"
+        },
+        {
+          "count": 7,
+          "value": "https://github.com/vercel-labs/ai-python/blob/main/README.md"
+        },
+        {
+          "count": 6,
+          "value": "https://github.com/assistant-ui/assistant-ui/blob/main/README.md"
+        },
+        {
+          "count": 6,
+          "value": "https://github.com/upstash/rag-chat-component/blob/master/README.md"
+        },
+        {
+          "count": 6,
+          "value": "https://github.com/vercel/chatbot/blob/main/README.md"
+        },
+        {
+          "count": 6,
+          "value": "https://github.com/vercel-labs/ai-sdk-persistence-db/blob/main/README.md"
+        },
+        {
+          "count": 5,
+          "value": "https://github.com/upstash/rag-chat/pull/97"
+        },
+        {
+          "count": 5,
+          "value": "https://github.com/vercel/chatbot/blob/main/package.json"
+        },
+        {
+          "count": 5,
+          "value": "https://github.com/vercel-labs/ai-sdk-persistence-db/blob/main/package.json"
+        },
+        {
+          "count": 5,
+          "value": "https://github.com/vercel-labs/natural-language-postgres/blob/main/README.md"
+        },
+        {
+          "count": 4,
+          "value": "https://github.com/upstash/agentkit/pull/11"
+        },
+        {
+          "count": 4,
+          "value": "https://github.com/upstash/rag-chat/blob/master/package.json"
+        },
+        {
+          "count": 4,
+          "value": "https://github.com/vercel/ai/blob/main/README.md"
+        },
+        {
+          "count": 4,
+          "value": "https://github.com/vercel/ai/pull/20526"
+        },
+        {
+          "count": 4,
+          "value": "https://github.com/vercel-labs/ai-facts/blob/main/README.md"
+        },
+        {
+          "count": 4,
+          "value": "https://github.com/vercel-labs/knowledge-agent-template/blob/main/README.md"
+        },
+        {
+          "count": 4,
+          "value": "https://github.com/vercel-labs/natural-language-postgres/blob/main/package.json"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7115"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel/ai/pull/20453"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel/ai/pull/20522"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel/ai/pull/20523"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel/ai/pull/20525"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel/ai/pull/20562"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/ai-facts/blob/main/package.json"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/tests%2Fops%2Ftest_reranking.py"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/examples%2Fmedia%2Fembeddings.py"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fops%2Fembeddings.py"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/tests%2Fops%2Ftest_embeddings.py"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/tests%2Fproviders%2Fai_gateway%2Fprotocol%2Ftest_v4.py"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/ai-python/pull/259"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/bash-tool/blob/main/README.md"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/knowledge-agent-template/pull/2"
+        },
+        {
+          "count": 3,
+          "value": "https://github.com/vercel-labs/natural-language-postgres/pull/19"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7063"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7119"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7127"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7128"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7129"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7150"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/agentkit"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/agentkit/pull/16"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/agentkit/pull/18"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/agentkit/pull/32"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/agentkit/pull/4"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/rag-chat"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat.test.ts"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat.ts"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Ftypes.ts"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/rag-chat/pull/100"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/vector-js/blob/master/README.md"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/upstash/vector-py/blob/master/README.md"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/ai"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/ai/pull/20337"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/ai/pull/20502"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/ai/pull/20551"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/ai/pull/20555"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/chatbot/pull/1515"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/chatbot/pull/1541"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel/chatbot/pull/1546"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel-labs/ai-facts/pull/2"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel-labs/ai-facts/pull/3"
+        },
+        {
+          "count": 2,
+          "value": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/examples%2FREADME.md"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "lower"
+        ],
+        "common_prefixes": [
+          "in",
+          "inf",
+          "infe",
+          "infer",
+          "inferr",
+          "inferre",
+          "inferred"
+        ],
+        "max_len": 8,
+        "min_len": 8
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 2,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": 2,
+      "null_count": 0,
+      "path": "support_level",
+      "top_values": [
+        {
+          "count": 268,
+          "value": "inferred"
+        },
+        {
+          "count": 23,
+          "value": "explicit"
+        }
+      ],
+      "total_count": 291,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.concept_evidence",
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "full-scan",
+      "sample_seed": 1,
+      "sampled_rows": 291,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "fields": [
+    {
+      "distinct_count": 7,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "2252052632",
+          "member_count": 7,
+          "sig": "numeric:none"
+        }
+      ],
+      "inventory": {
+        "kind": "partial",
+        "reason": "sampled",
+        "values": [
+          {
+            "count": 11,
+            "specificity": 750,
+            "value": "2252052632"
+          },
+          {
+            "count": 1,
+            "specificity": 679,
+            "value": "1994182370"
+          },
+          {
+            "count": 1,
+            "specificity": 607,
+            "value": "4017717586"
+          },
+          {
+            "count": 1,
+            "specificity": 536,
+            "value": "4417243097"
+          },
+          {
+            "count": 1,
+            "specificity": 464,
+            "value": "4487731670"
+          },
+          {
+            "count": 1,
+            "specificity": 393,
+            "value": "4489175312"
+          },
+          {
+            "count": 1,
+            "specificity": 321,
+            "value": "4490025499"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 17,
+      "path": "pull_request_id"
+    },
+    {
+      "distinct_count": 8,
+      "exposure": "raw-values",
+      "families": [
+        {
+          "exemplar": "88107904",
+          "member_count": 8,
+          "sig": "numeric:none"
+        }
+      ],
+      "inventory": {
+        "kind": "partial",
+        "reason": "sampled",
+        "values": [
+          {
+            "count": 8,
+            "specificity": 667,
+            "value": "88107904"
+          },
+          {
+            "count": 2,
+            "specificity": 604,
+            "value": "39992"
+          },
+          {
+            "count": 2,
+            "specificity": 542,
+            "value": "57228345"
+          },
+          {
+            "count": 1,
+            "specificity": 563,
+            "value": "191113872"
+          },
+          {
+            "count": 1,
+            "specificity": 417,
+            "value": "234086"
+          },
+          {
+            "count": 1,
+            "specificity": 354,
+            "value": "24557773"
+          },
+          {
+            "count": 1,
+            "specificity": 292,
+            "value": "29387993"
+          },
+          {
+            "count": 1,
+            "specificity": 188,
+            "value": "58091943"
+          }
+        ]
+      },
+      "membership": "open-world",
+      "non_null_count": 17,
+      "path": "reviewer_id"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:55:05.460Z"
+  },
+  "index": "github.pull_request_reviews",
+  "source": {
+    "horizon": 4096,
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

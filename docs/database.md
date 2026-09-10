@@ -19,7 +19,9 @@ The application uses PostgreSQL 17 and the pinned ParadeDB 0.24.3 image in `comp
 
 Every GitHub identity uses PostgreSQL bigint. JavaScript application boundaries preserve IDs as decimal strings or bigint, never 32-bit integers. Unknown follower counts and missing profiles stay NULL. A closed PR is merged only when `merged_at` is non-NULL. A reviewed-PR count uses distinct PRs and excludes self-reviews when the question requires other people's work.
 
-Concept evidence references one repository, and optional PR evidence has a composite foreign key that guarantees the same repository. Positive confirmed-capability filters require accepted, explicit evidence. Rejected, pending, and superseded records cannot satisfy that filter. The source excerpt must be found in its source revision.
+Concept evidence references one repository, and optional PR evidence has a composite foreign key that guarantees the same repository. Exact manifest dependencies carry explicit support. Text and patch keyword matches carry inferred support because a mention alone does not prove implementation. Positive confirmed-capability filters require accepted, explicit evidence. Rejected, pending, and superseded records cannot satisfy that filter. The source excerpt must be found in its source revision.
+
+Concept keys and display labels use bounded `varchar` fields. Gia classifies them as short strings and can harvest their actual vocabulary for query planning. Free-form descriptions, biographies, README text, and excerpts remain `text`. A normalized lookup key should not be modeled as unbounded prose.
 
 ## Permissions
 

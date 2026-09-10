@@ -7,10 +7,22 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "typecheck": {
       "dependsOn": ["^typecheck"]
+    },
+    "@gia-github/db#build": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "@gia-github/search#build": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "@gia-github/worker#build": {
+      "dependsOn": ["^build"],
+      "outputs": []
     }
   },
   "globalPassThroughEnv": [
@@ -25,6 +37,13 @@
     "PORT",
     "HOSTNAME",
     "CI",
-    "INIT_CWD"
+    "INIT_CWD",
+    "APP_ORIGIN"
+  ],
+  "globalDependencies": [
+    ".gia-sources.json",
+    ".gia-docs.json",
+    ".node-version",
+    "gia/client-authority.json"
   ]
 }

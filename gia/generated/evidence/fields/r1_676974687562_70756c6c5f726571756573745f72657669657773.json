@@ -1,0 +1,657 @@
+{
+  "doc_count": 17,
+  "fields": [
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct",
+          "space",
+          "upper"
+        ],
+        "common_prefixes": [],
+        "max_len": 581,
+        "min_len": 0
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 2,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "body_text",
+      "top_values": [
+        {
+          "count": 16,
+          "value": ""
+        },
+        {
+          "count": 1,
+          "value": "<!-- cubic:review-summary:start -->\n**No issues found** across 4 files\n<!-- cubic:review-summary:end -->\n\n<sub>[Re-trigger cubic](https://www.cubic.dev/action/re-review/pr/assistant-ui/assistant-ui/7142/ai_pr_review_github_delivery_0f8494b83a5054faa1de9cb3451a223bb4bf28fafa2e3ec66118bb1c69c080d3?returnTo=https%3A%2F%2Fgithub.com%2Fassistant-ui%2Fassistant-ui%2Fpull%2F7142)</sub>\n\n<!-- cubic:review-post:ai_pr_review_github_delivery_0f8494b83a5054faa1de9cb3451a223bb4bf28fafa2e3ec66118bb1c69c080d3:9228343e86a021eeb37140283555c727bdef1024:fa6b68ac-f34f-53c8-9973-393a841d5acb -->"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower"
+        ],
+        "common_prefixes": [
+          "9f",
+          "9fe",
+          "9fe8",
+          "9fe82",
+          "9fe82c",
+          "9fe82ca",
+          "9fe82ca8"
+        ],
+        "max_len": 40,
+        "min_len": 40
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 10,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "commit_sha",
+      "top_values": [
+        {
+          "count": 7,
+          "value": "9fe82ca85784489218e3ede24944948e586dab7b"
+        },
+        {
+          "count": 2,
+          "value": "e34429e45511f7adbd8c2a3cc670394f87e9ee09"
+        },
+        {
+          "count": 1,
+          "value": "1d24f490bf8941ac3aa01cf26222b6efabb9f395"
+        },
+        {
+          "count": 1,
+          "value": "56529db48f5848785105be92ab93b26726a58933"
+        },
+        {
+          "count": 1,
+          "value": "703911954e14b6c6a1b303b0bb40f1c137a2f765"
+        },
+        {
+          "count": 1,
+          "value": "77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7"
+        },
+        {
+          "count": 1,
+          "value": "9228343e86a021eeb37140283555c727bdef1024"
+        },
+        {
+          "count": 1,
+          "value": "9436081fab8070c9f4e41c6e5c20e830ab3c09f1"
+        },
+        {
+          "count": 1,
+          "value": "e5020c6f5dcc106b1d2c7c813e08b808492e286a"
+        },
+        {
+          "count": 1,
+          "value": "f8ea5b16a28162737566dac47c1b0e9bb0f9336e"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [
+          "25",
+          "252",
+          "2523"
+        ],
+        "max_len": 10,
+        "min_len": 10
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 17,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "5160700789",
+        "min": "2207592755"
+      },
+      "null_count": 0,
+      "path": "id",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "2207592755"
+        },
+        {
+          "count": 1,
+          "value": "2523012633"
+        },
+        {
+          "count": 1,
+          "value": "2523034423"
+        },
+        {
+          "count": 1,
+          "value": "2523790523"
+        },
+        {
+          "count": 1,
+          "value": "2523795456"
+        },
+        {
+          "count": 1,
+          "value": "2523795851"
+        },
+        {
+          "count": 1,
+          "value": "2523917833"
+        },
+        {
+          "count": 1,
+          "value": "2523918379"
+        },
+        {
+          "count": 1,
+          "value": "2523920027"
+        },
+        {
+          "count": 1,
+          "value": "2525360428"
+        },
+        {
+          "count": 1,
+          "value": "2525740647"
+        },
+        {
+          "count": 1,
+          "value": "2526300812"
+        },
+        {
+          "count": 1,
+          "value": "4658204362"
+        },
+        {
+          "count": 1,
+          "value": "5091479208"
+        },
+        {
+          "count": 1,
+          "value": "5158369115"
+        },
+        {
+          "count": 1,
+          "value": "5159721641"
+        },
+        {
+          "count": 1,
+          "value": "5160700789"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2026",
+          "2026-",
+          "2026-0",
+          "2026-09",
+          "2026-09-"
+        ],
+        "max_len": 26,
+        "min_len": 25
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 7,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "observed_at",
+      "top_values": [
+        {
+          "count": 11,
+          "value": "2026-09-10 10:28:36.721+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:33.827+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:34.519+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:35.064+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:36.079+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:37.424+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-10 10:28:37.96+00"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [
+          "22",
+          "225",
+          "2252",
+          "22520",
+          "225205",
+          "2252052",
+          "22520526"
+        ],
+        "max_len": 10,
+        "min_len": 10
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 7,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "4490025499",
+        "min": "1994182370"
+      },
+      "null_count": 0,
+      "path": "pull_request_id",
+      "top_values": [
+        {
+          "count": 11,
+          "value": "2252052632"
+        },
+        {
+          "count": 1,
+          "value": "1994182370"
+        },
+        {
+          "count": 1,
+          "value": "4017717586"
+        },
+        {
+          "count": 1,
+          "value": "4417243097"
+        },
+        {
+          "count": 1,
+          "value": "4487731670"
+        },
+        {
+          "count": 1,
+          "value": "4489175312"
+        },
+        {
+          "count": 1,
+          "value": "4490025499"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "lower",
+          "punct"
+        ],
+        "common_prefixes": [
+          "ht",
+          "htt",
+          "http",
+          "https",
+          "https:",
+          "https:/",
+          "https://"
+        ],
+        "max_len": 83,
+        "min_len": 68
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 17,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "review_url",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "https://github.com/assistant-ui/assistant-ui/pull/7142#pullrequestreview-5160700789"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/rag-chat/pull/28#pullrequestreview-2207592755"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523012633"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523034423"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523790523"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523795456"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523795851"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523917833"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523918379"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523920027"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2525360428"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2525740647"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2526300812"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel/ai/pull/20551#pullrequestreview-5158369115"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel/ai/pull/20564#pullrequestreview-5159721641"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel/chatbot/pull/1529#pullrequestreview-4658204362"
+        },
+        {
+          "count": 1,
+          "value": "https://github.com/vercel-labs/ai-python/pull/277#pullrequestreview-5091479208"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit"
+        ],
+        "common_prefixes": [
+          "88",
+          "881",
+          "8810",
+          "88107",
+          "881079",
+          "8810790",
+          "88107904"
+        ],
+        "max_len": 9,
+        "min_len": 5
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 8,
+      "distinct_source": "sample_floor",
+      "kind": "bigint",
+      "low_card_exact": null,
+      "min_max": {
+        "max": "191113872",
+        "min": "39992"
+      },
+      "null_count": 0,
+      "path": "reviewer_id",
+      "top_values": [
+        {
+          "count": 8,
+          "value": "88107904"
+        },
+        {
+          "count": 2,
+          "value": "39992"
+        },
+        {
+          "count": 2,
+          "value": "57228345"
+        },
+        {
+          "count": 1,
+          "value": "191113872"
+        },
+        {
+          "count": 1,
+          "value": "234086"
+        },
+        {
+          "count": 1,
+          "value": "24557773"
+        },
+        {
+          "count": 1,
+          "value": "29387993"
+        },
+        {
+          "count": 1,
+          "value": "58091943"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "upper"
+        ],
+        "common_prefixes": [
+          "ap",
+          "co",
+          "com",
+          "comm",
+          "comme",
+          "commen",
+          "comment",
+          "commente"
+        ],
+        "max_len": 9,
+        "min_len": 8
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 3,
+      "distinct_source": "sample_floor",
+      "kind": "text",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "state",
+      "top_values": [
+        {
+          "count": 10,
+          "value": "COMMENTED"
+        },
+        {
+          "count": 6,
+          "value": "APPROVED"
+        },
+        {
+          "count": 1,
+          "value": "DISMISSED"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    },
+    {
+      "char_shape": {
+        "alphabet": [
+          "digit",
+          "punct",
+          "space"
+        ],
+        "common_prefixes": [
+          "20",
+          "202",
+          "2024",
+          "2024-",
+          "2024-1",
+          "2024-12",
+          "2024-12-"
+        ],
+        "max_len": 22,
+        "min_len": 22
+      },
+      "count_basis": "sample",
+      "distinct_estimate_raw": 17,
+      "distinct_source": "sample_floor",
+      "kind": "timestamp with time zone",
+      "low_card_exact": null,
+      "null_count": 0,
+      "path": "submitted_at",
+      "top_values": [
+        {
+          "count": 1,
+          "value": "2024-07-30 12:47:24+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-26 09:43:12+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-26 10:03:40+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-27 07:51:49+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-27 07:58:26+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-27 07:58:59+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-27 10:17:45+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-27 10:18:27+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-27 10:20:41+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-30 09:20:07+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-30 15:54:44+00"
+        },
+        {
+          "count": 1,
+          "value": "2024-12-31 09:17:09+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-07-08 21:54:14+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-02 15:10:40+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-09 18:36:03+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-09 20:50:35+00"
+        },
+        {
+          "count": 1,
+          "value": "2026-09-09 22:53:42+00"
+        }
+      ],
+      "total_count": 17,
+      "under_nested": false,
+      "value_exposure": "raw-values"
+    }
+  ],
+  "generated_at": "2026-09-10T10:55:05.460Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T10:50:57.706Z"
+  },
+  "index": "github.pull_request_reviews",
+  "source": {
+    "sampling": {
+      "low_cardinality_ceiling": 50,
+      "sample_method": "table-sample",
+      "sample_seed": 1,
+      "sampled_rows": 17,
+      "value_budget": 64
+    },
+    "store": "postgres",
+    "store_version": "170010"
+  }
+}

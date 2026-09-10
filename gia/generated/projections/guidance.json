@@ -1,0 +1,19 @@
+{
+  "entries": [],
+  "matcher": {
+    "defaultThresholdProfile": "default",
+    "matcherSemanticsSha": "bdcc5cc57e73aafa57c55714b72d92e84405ae3f1c1bf3611e11076fa1b6e6d5",
+    "similarity": "cosine",
+    "sketchFeatureSha": "594a3b3f7e6f80748d62682a5058ba262959ff284452e9b4a1871186287b6d74",
+    "thresholdProfiles": [
+      {
+        "id": "default",
+        "maxTriggers": 5,
+        "minMargin": 0.05,
+        "minPositiveScore": 0.2,
+        "negativeVetoScore": 0.95,
+        "scoreMode": "lexical"
+      }
+    ]
+  }
+}

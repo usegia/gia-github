@@ -29,7 +29,7 @@ The two applications share ordinary typed functions. We use Drizzle for applicat
 5. The adapter preserves returned identity order, deduplicates only duplicate identity rows when the public person contract requires it, and hydrates those people. It does not run a second planner or replace the result set.
 6. The UI shows assumptions, unsupported requests, empty results, incomplete coverage, and failures as different outcomes.
 
-Relational conditions handle membership, dates, distinct counts, and joins. ParadeDB BM25 handles text relevance. Versioned concepts normalize terms such as reranking and AI SDK. This is hybrid retrieval without profile vectors. We will add embeddings only after measured golden-query failures show a need.
+Relational conditions handle membership, dates, distinct counts, and joins. ParadeDB BM25 handles text relevance. Versioned concepts normalize terms such as reranking and AI SDK. Keyword mentions retain inferred support; exact manifest dependencies carry explicit support. This is hybrid retrieval without profile vectors. We will add embeddings only after measured golden-query failures show a need.
 
 ## What the data can establish
 

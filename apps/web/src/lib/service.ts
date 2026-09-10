@@ -15,6 +15,7 @@ const environmentSchema = z.object({
   GIA_API_KEY: z.string().default(""),
   GIA_ACTIVE_PROFILE: z.string().min(1).default("github-dev"),
   SEARCH_TIMEOUT_MS: z.coerce.number().int().min(1_000).max(180_000).default(120_000),
+  SEARCH_MAXIMUM_DAILY_SEARCHES: z.coerce.number().int().min(1).max(10_000).default(100),
 });
 
 function repositoryRoot() {
@@ -71,6 +72,7 @@ export function getSearchService(): SearchService {
     runtimeApiKey: environment.GIA_API_KEY,
     profileId: environment.GIA_ACTIVE_PROFILE,
     timeoutMs: environment.SEARCH_TIMEOUT_MS,
+    maximumDailySearches: environment.SEARCH_MAXIMUM_DAILY_SEARCHES,
   });
   service = created;
   return created;

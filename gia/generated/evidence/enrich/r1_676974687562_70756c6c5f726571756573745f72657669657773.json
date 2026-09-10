@@ -1,0 +1,275 @@
+{
+  "entity": {
+    "description": "One row is a submitted GitHub pull request review by an account.",
+    "description_origin": "generated",
+    "generatedFrom": {
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-sdk.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "sourceDescriptionSha": "c558465c940feb4ccfac41058c845d0316c9914ecaab5985f7dbcb87e4afe4a4"
+    }
+  },
+  "fields": [
+    {
+      "aka": [
+        "review body",
+        "review comment",
+        "review text"
+      ],
+      "conventionNote": "Text may contain Markdown and HTML comment markup; search as free text rather than expecting plain prose.",
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "body_text",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Free-form body attached to the pull request review. An empty string likely means the review was submitted without a written body; populated content can include Markdown, HTML comments, and links.",
+      "short": "Submitted review body text and any embedded review-summary markup."
+    },
+    {
+      "aka": [
+        "commit hash",
+        "reviewed commit",
+        "revision SHA"
+      ],
+      "conventionNote": "Use the lowercase 40-character hexadecimal SHA literal; it is not a shortened commit hash.",
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "commit_sha",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Full Git object ID for the commit revision associated with this review. It is a reference for matching commits and joins, not a numeric quantity.",
+      "short": "Git commit SHA reviewed by this pull request review."
+    },
+    {
+      "aka": [
+        "GitHub review ID",
+        "pull request review ID",
+        "review ID"
+      ],
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Platform-level identifier for this submitted pull request review. Use it to identify or join the review record, not for arithmetic.",
+      "short": "Unique GitHub identifier for the pull request review."
+    },
+    {
+      "aka": [
+        "observation time",
+        "record observed time",
+        "snapshot time"
+      ],
+      "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS.fraction+00`; include the numeric offset when using an exact literal.",
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "observed_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Timestamp recording when this pull request review was observed in this dataset, rather than when the review was submitted. The displayed +00 offset establishes UTC.",
+      "short": "Timestamp when this review record was observed.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "c1a6ccea4c96140c3b19bffb826a880825d1b25fd527078f92b19b412c0c06d5",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    },
+    {
+      "aka": [
+        "PR ID",
+        "pull request ID",
+        "reviewed pull request"
+      ],
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "pull_request_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Reference to the pull request that received this review. Use it to join review records to their pull request, not as a numeric measure.",
+      "short": "Pull request referenced by this review.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "partial",
+          "reason": "sampled",
+          "values": [
+            "1994182370",
+            "2252052632",
+            "4017717586",
+            "4417243097",
+            "4487731670",
+            "4489175312",
+            "4490025499"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "GitHub review URL",
+        "review link",
+        "review URL"
+      ],
+      "conventionNote": "Use the full lowercase HTTPS URL, including the `#pullrequestreview-` fragment, for an exact review link.",
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "review_url",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Canonical GitHub URL locating this review within its pull request, including a review-specific fragment. It is a link value rather than a stable numeric key.",
+      "short": "GitHub web URL for the submitted pull request review."
+    },
+    {
+      "aka": [
+        "review author",
+        "reviewer",
+        "reviewer account ID",
+        "reviewer id"
+      ],
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "reviewer_id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Reference to the account associated with this submitted review. Use it to join to account details, not as a numeric measure.",
+      "short": "Account that submitted the pull request review.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "partial",
+          "reason": "sampled",
+          "values": [
+            "191113872",
+            "234086",
+            "24557773",
+            "29387993",
+            "39992",
+            "57228345",
+            "58091943",
+            "88107904"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "review disposition",
+        "review outcome",
+        "review status"
+      ],
+      "conventionNote": "Use uppercase GitHub state literals, such as `APPROVED`; do not query with lowercase labels.",
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "state",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": "c5bd21b029ed486e37f9818bff963873ff337a6174f6a75fc69c4a4c417d32f3"
+      },
+      "long": "Review state as a GitHub status category, such as approval, comment-only review, dismissal, pending review, or requested changes. These are unordered workflow categories rather than a ranked scale; pending and dismissed reviews require explicit inclusion semantics.",
+      "short": "GitHub disposition of the submitted pull request review."
+    },
+    {
+      "aka": [
+        "review date",
+        "review submission time",
+        "submitted time"
+      ],
+      "conventionNote": "Written as UTC `YYYY-MM-DD HH:MM:SS+00`; use a space between date and time, not `T`.",
+      "description_origin": "generated",
+      "entityId": "pullRequestReview",
+      "fieldId": "submitted_at",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Timestamp for submission of this pull request review. The displayed +00 offset establishes UTC.",
+      "short": "Timestamp when the pull request review was submitted.",
+      "temporal": {
+        "convention": {
+          "domain": "instant"
+        },
+        "generatedFrom": {
+          "logicalColumnFingerprint": "80d73f8e56678e841beddfd81d8f31653cfbc5cbbbf5df32f1455ce9f13eb0d0",
+          "sourceDescriptionSha": null
+        },
+        "origin": "inspection"
+      }
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.pull_request_reviews"
+}

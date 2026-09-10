@@ -1,0 +1,212 @@
+{
+  "entity": {
+    "description": "One row is a reviewed vocabulary concept for a domain, capability, or technology.",
+    "description_origin": "generated",
+    "generatedFrom": {
+      "producer": {
+        "model": "openai/gpt-5.6-terra",
+        "promptVersion": "enrich-sdk.v7",
+        "provider": "dual-openrouter-models",
+        "reasoningEffort": "none"
+      },
+      "sourceDescriptionSha": "24f4b9fb824f4e662e8c7b1e1aa0e9aa0f056c41cd8c91f64a6c24dde476018b"
+    }
+  },
+  "fields": [
+    {
+      "aka": [
+        "alternate names",
+        "keywords",
+        "synonyms"
+      ],
+      "conventionNote": "Formatted as a Postgres array string, e.g., '{\"Next.js,NextJS\"}'.",
+      "description_origin": "generated",
+      "entityId": "concept",
+      "fieldId": "aliases",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "A list of alternative names, common abbreviations, or related terms associated with this concept, formatted as a string set.",
+      "short": "Alternative terms, synonyms, and brand names for the concept."
+    },
+    {
+      "aka": [
+        "concept description",
+        "definition"
+      ],
+      "description_origin": "generated",
+      "entityId": "concept",
+      "fieldId": "description",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "A concise explanation of the domain, technology, or capability represented by this concept row.",
+      "short": "Human-readable summary of the concept's scope and meaning."
+    },
+    {
+      "aka": [
+        "concept id"
+      ],
+      "description_origin": "generated",
+      "entityId": "concept",
+      "fieldId": "id",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Surrogate integer key uniquely identifying a single concept entry in the vocabulary catalog.",
+      "short": "Primary key identifier for the concept."
+    },
+    {
+      "aka": [
+        "concept category",
+        "concept type",
+        "kind"
+      ],
+      "conventionNote": "Matches specific lower-case categories: 'capability', 'technology', or 'domain'.",
+      "description_origin": "generated",
+      "entityId": "concept",
+      "fieldId": "kind",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Categorizes the concept into structural buckets: capability, technology, or domain.",
+      "short": "High-level classification kind of the vocabulary concept.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-legal",
+          "values": [
+            "capability",
+            "domain",
+            "technology"
+          ]
+        },
+        "membership": "schema-closed"
+      }
+    },
+    {
+      "aka": [
+        "concept name",
+        "label",
+        "title"
+      ],
+      "description_origin": "generated",
+      "entityId": "concept",
+      "fieldId": "label",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "The official human-readable name of the technical capability, tool, or domain concept.",
+      "short": "Canonical title or name of the concept.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-at-snapshot",
+          "values": [
+            "AI",
+            "AI agents",
+            "Embeddings",
+            "Hybrid search",
+            "LangGraph",
+            "Model Context Protocol",
+            "Next.js",
+            "OpenAI",
+            "PostgreSQL",
+            "Redis",
+            "Reranking",
+            "Retrieval",
+            "Retrieval-augmented generation",
+            "Semantic search",
+            "Tool calling",
+            "Vercel AI SDK"
+          ]
+        },
+        "membership": "open-world"
+      }
+    },
+    {
+      "aka": [
+        "concept key",
+        "identifier slug",
+        "slug"
+      ],
+      "conventionNote": "Written in lower-case using hyphenated words or prefixed package keys like 'npm:ai'.",
+      "description_origin": "generated",
+      "entityId": "concept",
+      "fieldId": "slug",
+      "generatedFrom": {
+        "producer": {
+          "model": "openai/gpt-5.6-terra",
+          "promptVersion": "enrich-sdk.v7",
+          "provider": "dual-openrouter-models",
+          "reasoningEffort": "none"
+        },
+        "sourceDescriptionSha": null
+      },
+      "long": "Normalized machine-readable identifier used for programmatic lookups and URL paths.",
+      "short": "URL-friendly string key for the concept.",
+      "valueKnowledge": {
+        "exposure": "raw-values",
+        "inventory": {
+          "kind": "complete-at-snapshot",
+          "values": [
+            "agents",
+            "ai",
+            "embeddings",
+            "hybrid-search",
+            "langgraph",
+            "mcp",
+            "nextjs",
+            "npm:ai",
+            "openai",
+            "postgresql",
+            "rag",
+            "redis",
+            "reranking",
+            "retrieval",
+            "semantic-search",
+            "tool-calling"
+          ]
+        },
+        "membership": "open-world"
+      }
+    }
+  ],
+  "generated_at": "2026-09-10T11:25:59.638Z",
+  "groundedFrom": {
+    "connectionFingerprint": "05f33f737a66b59159b8f0968fa5bdda9b7acce67cbce45163c4cce9a82ca7d1",
+    "datasetKind": "authoritative",
+    "harvestedAt": "2026-09-10T11:25:59.638Z"
+  },
+  "index": "github.concepts"
+}
