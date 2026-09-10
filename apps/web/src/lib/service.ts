@@ -28,11 +28,40 @@ function repositoryRoot() {
 }
 
 let service: SearchService | undefined;
+let environmentRoot: string | undefined;
+
+function loadWebEnvironment() {
+  if (environmentRoot) return environmentRoot;
+  const root = repositoryRoot();
+  loadEnvironment({ path: resolve(root, ".env"), quiet: true });
+  environmentRoot = root;
+  return root;
+}
+
+export function getExpectedOrigin(request: Request): string {
+  loadWebEnvironment();
+  if (process.env.APP_ORIGIN) {
+    const origin = new URL(process.env.APP_ORIGIN);
+    if (
+      !["http:", "https:"].includes(origin.protocol) ||
+      origin.username ||
+      origin.password ||
+      origin.pathname !== "/" ||
+      origin.search ||
+      origin.hash
+    ) {
+      throw new Error("APP_ORIGIN must be an HTTP or HTTPS origin without credentials or a path");
+    }
+    return origin.origin;
+  }
+  const url = new URL(request.url);
+  // Next may normalize Request.url to its bind address. Host retains the direct request authority.
+  return new URL(`${url.protocol}//${request.headers.get("host") ?? url.host}`).origin;
+}
 
 export function getSearchService(): SearchService {
   if (service) return service;
-  const root = repositoryRoot();
-  loadEnvironment({ path: resolve(root, ".env"), quiet: true });
+  const root = loadWebEnvironment();
   const environment = environmentSchema.parse(process.env);
   const created: SearchService = createSearchService({
     databaseUrl: environment.DATABASE_URL,

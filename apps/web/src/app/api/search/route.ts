@@ -1,20 +1,19 @@
 import { searchInputSchema, searchOutcomeSchema } from "@gia-github/search/contracts";
 import { failureResponse, RequestBodyError, readSearchBody } from "@/lib/http";
-import { getSearchService } from "@/lib/service";
+import { getExpectedOrigin, getSearchService } from "@/lib/service";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 180;
 
 export async function POST(request: Request) {
-  const origin = request.headers.get("origin");
-  const requestUrl = new URL(request.url);
-  // Next may normalize Request.url to its bind address. Host retains the direct request authority.
-  const expectedOrigin = `${requestUrl.protocol}//${request.headers.get("host") ?? requestUrl.host}`;
-  if (origin !== expectedOrigin || request.headers.get("sec-fetch-site") === "cross-site") {
-    return failureResponse(403, "ORIGIN_REJECTED", "Submit searches from this application.");
-  }
   try {
+    if (
+      request.headers.get("origin") !== getExpectedOrigin(request) ||
+      request.headers.get("sec-fetch-site") === "cross-site"
+    ) {
+      return failureResponse(403, "ORIGIN_REJECTED", "Submit searches from this application.");
+    }
     const input = searchInputSchema.safeParse(await readSearchBody(request));
     if (!input.success) {
       return failureResponse(
