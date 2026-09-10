@@ -1,10 +1,12 @@
 import { z } from "zod";
 
 export const githubIdSchema = z.string().regex(/^[1-9]\d*$/);
-export const searchInputSchema = z.object({
-  question: z.string().trim().min(3).max(2_000),
-  limit: z.number().int().min(1).max(50).default(20),
-}).strict();
+export const searchInputSchema = z
+  .object({
+    question: z.string().trim().min(3).max(2_000),
+    limit: z.number().int().min(1).max(50).default(20),
+  })
+  .strict();
 export type SearchInput = z.infer<typeof searchInputSchema>;
 
 export const sourceContextSchema = z.object({
@@ -65,7 +67,13 @@ export const searchOutcomeSchema = z.discriminatedUnion("kind", [
     durationMs: z.number().nonnegative(),
   }),
   z.object({ kind: z.literal("unsupported"), requestId: z.string(), explanation: z.string() }),
-  z.object({ kind: z.literal("failed"), requestId: z.string(), code: z.string(), message: z.string(), retryable: z.boolean() }),
+  z.object({
+    kind: z.literal("failed"),
+    requestId: z.string(),
+    code: z.string(),
+    message: z.string(),
+    retryable: z.boolean(),
+  }),
 ]);
 export type SearchOutcome = z.infer<typeof searchOutcomeSchema>;
 

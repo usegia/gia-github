@@ -1,8 +1,30 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "tasks": {
-    "dev": { "cache": false, "persistent": true },
-    "build": { "dependsOn": ["^build"], "outputs": [".next/**", "!.next/cache/**", "dist/**"] },
-    "typecheck": { "dependsOn": ["^typecheck"] }
-  }
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    }
+  },
+  "globalPassThroughEnv": [
+    "DATABASE_*",
+    "GIA_*",
+    "TEST_DATABASE_URL",
+    "OPENROUTER_API_KEY",
+    "OPENAI_API_KEY",
+    "ENRICHMENT_*",
+    "SEARCH_*",
+    "PLAYWRIGHT_*",
+    "PORT",
+    "HOSTNAME",
+    "CI",
+    "INIT_CWD"
+  ]
 }

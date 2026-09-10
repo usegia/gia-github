@@ -1,2 +1,5 @@
-timestamp	action	owner	status	evidence
-2026-09-10T10:36:28.738942+00:00	Establish schema and contracts; isolated worktrees and actual GitHub captures	lead	in-progress	AGENTS.md; fixtures/README.md
+ts	phase	decision	why	evidence	result
+2026-09-10T10:36:28.738942+00:00	foundation	Establish schema and contracts; isolated worktrees and actual GitHub captures	Shared contracts permit isolated concurrent implementation	AGENTS.md; fixtures/README.md	in-progress
+2026-09-10T10:41:36Z	database	Pin ParadeDB and separate database roles	Search requires BM25 and read-only execution independent of ingestion	packages/db/migrations/0001_search_indexes_and_semantics.sql	open
+2026-09-10T10:48:41Z	gia	Bootstrap the Runtime-accepted private source graph in ignored isolated clones	Existing SDK and Runtime working trees contain unrelated changes; public client is not released	.gia-sources.json	Bootstrap passed; local Runtime started on 8798
+2026-09-10T10:48:42Z	ingestion	Require real database import before accepting the worker lane	Typechecking missed an untyped polymorphic SQL parameter	apps/worker/src/importer.ts	First import failed; source owner fixing explicit text casts

@@ -23,7 +23,17 @@
     "worker": "pnpm --filter @gia-github/worker start",
     "test:integration": "vitest run --project integration",
     "test:live": "vitest run --project live",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "db:prepare": "tsx scripts/prepare-local-database.ts",
+    "db:grant": "tsx scripts/grant-database.ts",
+    "db:setup": "pnpm db:up && pnpm db:prepare && pnpm db:migrate && pnpm db:grant",
+    "check:release": "node scripts/check-release.mjs",
+    "gia:bootstrap": "node scripts/gia/bootstrap.mjs",
+    "gia:start": "node --env-file=.env scripts/gia/runtime.mjs start",
+    "gia:stop": "node --env-file=.env scripts/gia/runtime.mjs stop",
+    "gia:init": "node --env-file=.env scripts/gia/project.mjs init",
+    "gia:profile": "node --env-file=.env scripts/gia/project.mjs profile",
+    "gia:authority": "node --env-file=.env scripts/gia/project.mjs authority"
   },
   "dependencies": {
     "dotenv": "17.4.2",
