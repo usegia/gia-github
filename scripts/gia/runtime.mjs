@@ -24,6 +24,9 @@ const configPath = path.join(state, "signing.json");
 const logPath = path.join(state, "runtime.log");
 const port = Number(process.env.GIA_RUNTIME_PORT ?? "8798");
 const apiUrl = `http://127.0.0.1:${port}`;
+const localDebug = process.env.GIA_RUNTIME_LOCAL_DEBUG ?? "0";
+if (!["0", "1"].includes(localDebug))
+  throw new Error("GIA_RUNTIME_LOCAL_DEBUG must be 0 or 1");
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error("Invalid Runtime port");
 const receipt = await readJson(receiptPath).catch((error) => {
   if (error.code === "ENOENT") return undefined;
@@ -98,7 +101,8 @@ if (command === "stop") {
       GIA_RUNTIME_DATABASE_STATEMENT_TIMEOUT_MS: "185000",
       GIA_RUNTIME_DATABASE_LOCK_TIMEOUT_MS: "10000",
       GIA_RUNTIME_SQL_REUSE: "off",
-      GIA_RUNTIME_DEBUG: "off",
+      GIA_RUNTIME_DEBUG: localDebug === "1" ? "enabled" : "off",
+      GIA_RUNTIME_DEBUG_CAPTURE_GRANTS: localDebug === "1" ? "local" : "off",
       GIA_RUNTIME_OBSERVABILITY: "off",
     };
     await run(process.execPath, ["scripts/migrate.ts"], { cwd: runtimeRoot, env });

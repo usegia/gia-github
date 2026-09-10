@@ -56,6 +56,10 @@ node scripts/gia/runtime.mjs stop
 
 Runtime management refuses to stop an unowned process. Local loopback serving is the reference setup; this command does not configure production TLS, external authentication, or a public Gia service.
 
+For an operator-owned local investigation, stop the Runtime and start it with `GIA_RUNTIME_LOCAL_DEBUG=1`. This enables the existing Runtime's loopback capture authority; an SDK query must separately request sensitive debug evidence and supply an owner-only debug sink. The web search service continues to request debug off. Captures can contain the full question, World, provider response, and SQL. Keep them under ignored `.gia`, respect their deletion deadline, and restart without this flag after the investigation. Changing the flag on an already running process has no effect.
+
+The pinned Runtime selects the `terra-openai-none` planner policy: `openai/gpt-5.6-terra` through OpenRouter's OpenAI provider, reasoning disabled, seed 29, and a 16384-token output cap. That revision exposes no deployment configuration for selecting another planner model or reasoning effort. A different policy requires a reviewed Runtime release and an updated source receipt.
+
 ## Verification
 
 The PostgreSQL integration suite imports actual public GitHub captures and checks ordering, profile identity, PR attribution, admission races, and cancellation through a saturated execution pool. The live Gia suite runs through the explicit `pnpm test:live` command and requires a published World and a running Runtime. It compares generated query results against independent SQL over those captured records and varies natural-language phrasing. Neither suite mocks providers or substitutes liveness for correctness.
