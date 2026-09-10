@@ -12,8 +12,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@gia-github/db": "workspace:*",
-    "drizzle-orm": "0.45.2",
     "pg": "8.23.0",
     "zod": "4.6.1",
     "@gia/client": "link:../../.deps/gia-client"
