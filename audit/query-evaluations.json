@@ -1,0 +1,3565 @@
+{
+  "version": 1,
+  "observationDate": "2026-09-10",
+  "fixtureManifest": "fixtures/github/manifest.json",
+  "fixtureManifestSha256": "5da671e5f235d6861cdd32452d0237625063c6801120b5880bed0ac92d29380d",
+  "suite": "tests/live/gia.live.test.ts",
+  "providerPolicy": {
+    "runtimeRevision": "46322bd6b0ab34a0679a712ba669a6b97866d685",
+    "model": "openai/gpt-5.6-terra",
+    "provider": "OpenAI via OpenRouter",
+    "reasoningEffort": "none",
+    "seed": 29,
+    "sqlReuse": "off"
+  },
+  "interpretation": "Identity exactness compares independent SQL expectations with real Gia results; it does not replace the full suite assertions. Queries use the frozen public GitHub corpus. Failure records preserve unavailable actual identities as null. No provider bodies, SQL, signatures, or credentials are included.",
+  "cohorts": [
+    {
+      "name": "before-authored-descriptions",
+      "fullCohort": false,
+      "queryRecords": [
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "9ece1b74-e365-4c3b-b9b6-16251df455a8",
+          "startedAt": "2026-09-10T11:07:24.108Z",
+          "finishedAt": "2026-09-10T11:07:26.869Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "6c9f1ea1-9340-4f39-9c08-5c5148fd14dd",
+          "startedAt": "2026-09-10T11:07:34.144Z",
+          "finishedAt": "2026-09-10T11:07:36.329Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "c1c1249c-62d9-41e8-b956-912b83e4d4a6",
+          "startedAt": "2026-09-10T11:07:45.586Z",
+          "finishedAt": "2026-09-10T11:07:47.742Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "ae889df3-743f-4367-a9ea-0ccf9e259189",
+          "startedAt": "2026-09-10T11:07:55.549Z",
+          "finishedAt": "2026-09-10T11:07:57.690Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "48bc10a5-84f9-4a2b-a651-a27006276e2f",
+          "startedAt": "2026-09-10T11:08:05.489Z",
+          "finishedAt": "2026-09-10T11:08:07.639Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "9b84a4cb-d395-4763-9fa9-aef28f7b5b74",
+          "startedAt": "2026-09-10T11:07:26.875Z",
+          "finishedAt": "2026-09-10T11:07:28.782Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "7245b8d6-f6d4-4816-a4c9-01f862b19235",
+          "startedAt": "2026-09-10T11:07:36.333Z",
+          "finishedAt": "2026-09-10T11:07:38.825Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "63d758f9-8de4-44b6-ad0e-3e3951b24243",
+          "startedAt": "2026-09-10T11:07:47.745Z",
+          "finishedAt": "2026-09-10T11:07:49.980Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "73418ad8-df2c-40a6-850b-cb83f2b356a8",
+          "startedAt": "2026-09-10T11:07:57.694Z",
+          "finishedAt": "2026-09-10T11:07:59.773Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "8de63354-30c6-438d-81f4-39297641c81f",
+          "startedAt": "2026-09-10T11:08:07.641Z",
+          "finishedAt": "2026-09-10T11:08:09.515Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "993ac877-19ce-4e68-8fa0-890b5a58bc42",
+          "startedAt": "2026-09-10T11:07:28.784Z",
+          "finishedAt": "2026-09-10T11:07:31.308Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "10137",
+            "146335736",
+            "57228345",
+            "66008528",
+            "22665058",
+            "21091016",
+            "49612682",
+            "18082091",
+            "340349",
+            "29387993",
+            "27636870",
+            "71938701",
+            "58091943",
+            "89679",
+            "366502",
+            "32676955",
+            "4389565",
+            "55143799",
+            "100838962",
+            "17938322",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "6dd2c801-a84d-44a8-86ab-e43926d13cf7",
+          "startedAt": "2026-09-10T11:07:38.827Z",
+          "finishedAt": "2026-09-10T11:07:42.120Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "55143799",
+            "57228345",
+            "340349",
+            "71938701",
+            "366502",
+            "10137",
+            "17938322",
+            "49612682",
+            "4389565",
+            "29387993",
+            "27636870",
+            "22665058",
+            "89679",
+            "32676955",
+            "146335736",
+            "88107904",
+            "18082091",
+            "100838962",
+            "66008528"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "41c19711-15c2-4d3a-baac-1556587df04c",
+          "startedAt": "2026-09-10T11:07:49.983Z",
+          "finishedAt": "2026-09-10T11:07:52.459Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "10137",
+            "146335736",
+            "57228345",
+            "66008528",
+            "22665058",
+            "21091016",
+            "49612682",
+            "18082091",
+            "340349",
+            "29387993",
+            "27636870",
+            "71938701",
+            "58091943",
+            "89679",
+            "366502",
+            "32676955",
+            "4389565",
+            "55143799",
+            "100838962",
+            "17938322",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "2cd94681-a944-43a8-86c5-0eb996fca18d",
+          "startedAt": "2026-09-10T11:07:59.776Z",
+          "finishedAt": "2026-09-10T11:08:02.361Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "10137",
+            "146335736",
+            "57228345",
+            "66008528",
+            "22665058",
+            "21091016",
+            "49612682",
+            "18082091",
+            "340349",
+            "29387993",
+            "27636870",
+            "71938701",
+            "58091943",
+            "89679",
+            "366502",
+            "32676955",
+            "4389565",
+            "55143799",
+            "100838962",
+            "17938322",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "e896df97-d153-47fb-8f26-c2f9c620b1d4",
+          "startedAt": "2026-09-10T11:08:09.518Z",
+          "finishedAt": "2026-09-10T11:08:11.919Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "55143799",
+            "57228345",
+            "340349",
+            "71938701",
+            "366502",
+            "10137",
+            "17938322",
+            "49612682",
+            "4389565",
+            "29387993",
+            "27636870",
+            "22665058",
+            "89679",
+            "32676955",
+            "146335736",
+            "88107904",
+            "18082091",
+            "100838962",
+            "66008528"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "bbf6fb83-9251-4859-8595-06e74f48023e",
+          "startedAt": "2026-09-10T11:07:31.313Z",
+          "finishedAt": "2026-09-10T11:07:34.142Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "43e5d298-becd-47d2-a112-2c0a5d69ac12",
+          "startedAt": "2026-09-10T11:07:42.123Z",
+          "finishedAt": "2026-09-10T11:07:45.582Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "62fbb310-4563-4a47-88be-033222d0acba",
+          "startedAt": "2026-09-10T11:07:52.463Z",
+          "finishedAt": "2026-09-10T11:07:55.545Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "758ae3fa-8623-4d37-9bd9-4269ca167222",
+          "startedAt": "2026-09-10T11:08:02.366Z",
+          "finishedAt": "2026-09-10T11:08:05.487Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "4791ef5597eca98731f3b284eeb32783e2db8b13fc58f21aa85e0e72060ce4c8",
+          "requestId": "8be4e33e-0f43-4ba0-9209-ee01643e8d69",
+          "startedAt": "2026-09-10T11:08:11.923Z",
+          "finishedAt": "2026-09-10T11:08:14.958Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        }
+      ],
+      "unavailableRecordNote": null
+    },
+    {
+      "name": "authored-descriptions",
+      "fullCohort": false,
+      "queryRecords": [
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "4952ab1d-23bb-4cd3-8846-77475ffc1adb",
+          "startedAt": "2026-09-10T11:12:58.878Z",
+          "finishedAt": "2026-09-10T11:13:01.388Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "9dda9d2b-6c27-4471-ac5b-98751c0a3c74",
+          "startedAt": "2026-09-10T11:13:09.162Z",
+          "finishedAt": "2026-09-10T11:13:11.514Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "26044af1-1bad-4023-8c7f-813c93714d9d",
+          "startedAt": "2026-09-10T11:13:19.979Z",
+          "finishedAt": "2026-09-10T11:13:22.157Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "0f6759fc-6ec4-4c05-bac9-d60e5b5800f3",
+          "startedAt": "2026-09-10T11:13:30.191Z",
+          "finishedAt": "2026-09-10T11:13:32.455Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "39a40ab8-e070-4263-8d99-c30eabae9dc1",
+          "startedAt": "2026-09-10T11:13:39.866Z",
+          "finishedAt": "2026-09-10T11:13:42.020Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "fd8f0df3-80a8-4ec6-8c3b-94b4c1d64bd8",
+          "startedAt": "2026-09-10T11:13:01.392Z",
+          "finishedAt": "2026-09-10T11:13:03.351Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "8163c7f9-aa6f-4198-b196-76beadbedf2a",
+          "startedAt": "2026-09-10T11:13:11.517Z",
+          "finishedAt": "2026-09-10T11:13:13.533Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "9037d0e4-c848-4cf6-8ceb-dea1fd48775f",
+          "startedAt": "2026-09-10T11:13:22.159Z",
+          "finishedAt": "2026-09-10T11:13:24.691Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "e72a6c5b-671f-4853-8f7e-0c3d4c3adb8e",
+          "startedAt": "2026-09-10T11:13:32.459Z",
+          "finishedAt": "2026-09-10T11:13:34.430Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "c023beac-2d2a-41ef-91c7-7a47fecff67f",
+          "startedAt": "2026-09-10T11:13:42.023Z",
+          "finishedAt": "2026-09-10T11:13:43.755Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "58e00a8b-6f44-4234-9914-739e3efb5f0b",
+          "startedAt": "2026-09-10T11:13:03.355Z",
+          "finishedAt": "2026-09-10T11:13:05.917Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "55143799",
+            "57228345",
+            "340349",
+            "71938701",
+            "366502",
+            "10137",
+            "17938322",
+            "49612682",
+            "4389565",
+            "29387993",
+            "27636870",
+            "22665058",
+            "89679",
+            "32676955",
+            "146335736",
+            "88107904",
+            "18082091",
+            "100838962",
+            "66008528"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "4f19485c-da39-401d-9686-a9746b2edb8e",
+          "startedAt": "2026-09-10T11:13:13.537Z",
+          "finishedAt": "2026-09-10T11:13:16.641Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "55143799",
+            "57228345",
+            "340349",
+            "71938701",
+            "366502",
+            "10137",
+            "17938322",
+            "49612682",
+            "4389565",
+            "29387993",
+            "27636870",
+            "22665058",
+            "89679",
+            "32676955",
+            "146335736",
+            "88107904",
+            "18082091",
+            "100838962",
+            "66008528"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "6efbc8ce-7780-4c7f-8958-b0569d9d6f2b",
+          "startedAt": "2026-09-10T11:13:24.693Z",
+          "finishedAt": "2026-09-10T11:13:27.082Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "55143799",
+            "57228345",
+            "340349",
+            "71938701",
+            "366502",
+            "10137",
+            "17938322",
+            "49612682",
+            "4389565",
+            "29387993",
+            "27636870",
+            "22665058",
+            "89679",
+            "32676955",
+            "146335736",
+            "88107904",
+            "18082091",
+            "100838962",
+            "66008528"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "cbfff369-ef22-40ae-a482-b3fb7e5aa0ac",
+          "startedAt": "2026-09-10T11:13:34.434Z",
+          "finishedAt": "2026-09-10T11:13:36.728Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "10137",
+            "146335736",
+            "57228345",
+            "66008528",
+            "22665058",
+            "21091016",
+            "49612682",
+            "18082091",
+            "340349",
+            "29387993",
+            "27636870",
+            "71938701",
+            "58091943",
+            "89679",
+            "366502",
+            "32676955",
+            "4389565",
+            "55143799",
+            "100838962",
+            "17938322",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "b1a2b4b1-7b0a-42e4-8723-05de402d4787",
+          "startedAt": "2026-09-10T11:13:43.758Z",
+          "finishedAt": "2026-09-10T11:13:45.867Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "55143799",
+            "57228345",
+            "340349",
+            "71938701",
+            "366502",
+            "10137",
+            "17938322",
+            "49612682",
+            "4389565",
+            "29387993",
+            "27636870",
+            "22665058",
+            "89679",
+            "32676955",
+            "146335736",
+            "88107904",
+            "18082091",
+            "100838962",
+            "66008528"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "3ce42ec1-7a7a-456f-83b1-e3b79b803fdb",
+          "startedAt": "2026-09-10T11:13:05.928Z",
+          "finishedAt": "2026-09-10T11:13:09.157Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "25d0a18e-239b-4dd8-9752-f16b90fc6f93",
+          "startedAt": "2026-09-10T11:13:16.643Z",
+          "finishedAt": "2026-09-10T11:13:19.975Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "217322eb-2cdf-4105-8c1e-12623918b626",
+          "startedAt": "2026-09-10T11:13:27.086Z",
+          "finishedAt": "2026-09-10T11:13:30.187Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "4307d4e6-0298-414a-b556-27c6631ad98e",
+          "startedAt": "2026-09-10T11:13:36.733Z",
+          "finishedAt": "2026-09-10T11:13:39.864Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "0ebeb15d-d7fa-478c-8b37-ace4478d192b",
+          "startedAt": "2026-09-10T11:13:45.872Z",
+          "finishedAt": "2026-09-10T11:13:48.919Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        }
+      ],
+      "unavailableRecordNote": null
+    },
+    {
+      "name": "authored-descriptions-full",
+      "fullCohort": true,
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find public Vercel members who authored a merged pull request from June 12, 2026 inclusive to September 11, 2026 exclusive in a repository with accepted repository-level ai concept evidence. Evidence may be explicit or inferred.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "6b4180dc-cfa7-4806-bd35-a5ba4d770c89",
+          "startedAt": "2026-09-10T11:14:18.135Z",
+          "finishedAt": "2026-09-10T11:14:23.874Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "71938701",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "8e49b204-9052-4d4a-95a4-af6d29cc2f7d",
+          "startedAt": "2026-09-10T11:14:23.878Z",
+          "finishedAt": "2026-09-10T11:14:26.543Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "unknown location cannot satisfy an explicit location filter",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people whose normalized location_city equals Berlin and who authored at least one merged pull request. Missing or unknown locations do not qualify, and do not infer locations from organizations.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "f152d472-c9a2-4c15-ae82-8104501ea4db",
+          "startedAt": "2026-09-10T11:14:55.889Z",
+          "finishedAt": "2026-09-10T11:14:57.985Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "f808514c-5cd4-4b26-93ab-ebbd85456958",
+          "startedAt": "2026-09-10T11:14:26.550Z",
+          "finishedAt": "2026-09-10T11:14:28.892Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "f8189b8e-db5f-49c2-b835-44b901d0f011",
+          "startedAt": "2026-09-10T11:14:28.895Z",
+          "finishedAt": "2026-09-10T11:14:33.497Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "AI SDK and PostgreSQL on the same repository",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests in a repository having both accepted repository-level npm:ai and postgresql concepts. Both concepts must belong to the same repository; either support level counts.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "aa84f4f2-64ee-4712-b335-6c8bfe15c4af",
+          "startedAt": "2026-09-10T11:14:33.501Z",
+          "finishedAt": "2026-09-10T11:14:39.041Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "4142719",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "4142719",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "163aa9de-12c1-4f8a-a477-d5726d7d1e53",
+          "startedAt": "2026-09-10T11:14:39.043Z",
+          "finishedAt": "2026-09-10T11:14:41.395Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Which contributors have merged PRs under their own authorship across two or more different repositories in this dataset?",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "5bc2fd67-1bc4-4692-8524-848fdda8c575",
+          "startedAt": "2026-09-10T11:14:41.397Z",
+          "finishedAt": "2026-09-10T11:14:43.886Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "8ccc9cec-d7ff-4eb2-a7ba-36f5f452e683",
+          "startedAt": "2026-09-10T11:14:43.891Z",
+          "finishedAt": "2026-09-10T11:14:47.413Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "55143799",
+            "57228345",
+            "340349",
+            "71938701",
+            "366502",
+            "10137",
+            "17938322",
+            "49612682",
+            "4389565",
+            "29387993",
+            "27636870",
+            "22665058",
+            "89679",
+            "32676955",
+            "146335736",
+            "88107904",
+            "18082091",
+            "100838962",
+            "66008528"
+          ],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "current archive state and popularity constrain project evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored a merged PR in a non-archived repository with more than 100 stars and accepted repository-level postgresql concept evidence. Inferred evidence counts. Archived repositories do not qualify.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "5a76e1ef-3f3a-44ef-8e85-31f243904b72",
+          "startedAt": "2026-09-10T11:14:47.419Z",
+          "finishedAt": "2026-09-10T11:14:49.696Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "49612682",
+            "4060187",
+            "17938322",
+            "366502",
+            "10137",
+            "26875009",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "known follower counts with repeated cross-project work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people with a known follower count below 500 who authored merged pull requests in at least two distinct repositories. Unknown follower counts do not qualify.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "b1107640-b963-4a5a-86f1-56421c642dfb",
+          "startedAt": "2026-09-10T11:14:49.699Z",
+          "finishedAt": "2026-09-10T11:14:52.555Z",
+          "kind": "matches",
+          "expectedIds": [
+            "21091016",
+            "57228345",
+            "58091943"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "a5baeb5b048f623ea6f001fb2897fb9ac04111da689c29469222ef57e4b22f15",
+          "requestId": "80b3cd5b-6d95-4132-9d0e-b7d38d6c4725",
+          "startedAt": "2026-09-10T11:14:52.561Z",
+          "finishedAt": "2026-09-10T11:14:55.882Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "100838962",
+            "10137",
+            "146335736",
+            "17938322",
+            "18082091",
+            "21091016",
+            "22665058",
+            "24557773",
+            "27636870",
+            "29387993",
+            "32676955",
+            "340349",
+            "366502",
+            "4389565",
+            "49612682",
+            "55143799",
+            "57228345",
+            "58091943",
+            "65047246",
+            "66008528",
+            "71938701",
+            "88107904",
+            "89679"
+          ],
+          "truncated": false,
+          "identityExact": false
+        }
+      ],
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+    },
+    {
+      "name": "vocabulary-grounding",
+      "fullCohort": false,
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "2ccd233e-7e76-4e8c-b523-9d0bf71624a2",
+          "startedAt": "2026-09-10T11:28:41.321Z",
+          "finishedAt": "2026-09-10T11:28:44.239Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 2,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "6ff8f8b2-3472-45b4-9626-e6079bd31cea",
+          "startedAt": "2026-09-10T11:28:56.319Z",
+          "finishedAt": "2026-09-10T11:28:59.201Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 3,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "8820684c-ff22-4082-8c79-f47f9c7abf39",
+          "startedAt": "2026-09-10T11:29:11.106Z",
+          "finishedAt": "2026-09-10T11:29:14.503Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 4,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "aaf739e2-1f19-48c3-bd13-d33cfbefb590",
+          "startedAt": "2026-09-10T11:29:24.177Z",
+          "finishedAt": "2026-09-10T11:29:27.356Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 5,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "f634abd9-bb85-456b-9255-24423b596a8f",
+          "startedAt": "2026-09-10T11:29:37.156Z",
+          "finishedAt": "2026-09-10T11:29:40.273Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "d1d81194-ebbf-4b51-a15f-d74df9e9a3ce",
+          "startedAt": "2026-09-10T11:28:44.247Z",
+          "finishedAt": "2026-09-10T11:28:46.482Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "67fa0b2a-ee4b-4d7f-bd6e-e8fe8d6a41a9",
+          "startedAt": "2026-09-10T11:28:59.204Z",
+          "finishedAt": "2026-09-10T11:29:01.375Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "53c7f66e-738b-4cca-ad33-9d33761021dd",
+          "startedAt": "2026-09-10T11:29:14.506Z",
+          "finishedAt": "2026-09-10T11:29:16.666Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "ab8ca27b-c17a-4c98-bc31-ff2be9a13205",
+          "startedAt": "2026-09-10T11:29:27.359Z",
+          "finishedAt": "2026-09-10T11:29:29.621Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "b64aacc0-d94c-4324-a668-2cb227fa0cfe",
+          "startedAt": "2026-09-10T11:29:40.276Z",
+          "finishedAt": "2026-09-10T11:29:42.828Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "8743a23f-ce05-4efa-a46c-74eb41d5ee44",
+          "startedAt": "2026-09-10T11:28:46.487Z",
+          "finishedAt": "2026-09-10T11:28:50.648Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "5e8a35f7-4183-403c-97d9-e9d13b49a8fc",
+          "startedAt": "2026-09-10T11:29:01.377Z",
+          "finishedAt": "2026-09-10T11:29:05.071Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "7b358cbd-6d7c-41c9-857a-3e90b4731ab7",
+          "startedAt": "2026-09-10T11:29:16.668Z",
+          "finishedAt": "2026-09-10T11:29:18.464Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "c4a3d9a8-6cbb-447d-92be-edc7e9b74d46",
+          "startedAt": "2026-09-10T11:29:29.624Z",
+          "finishedAt": "2026-09-10T11:29:31.563Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "13bcf277-598f-40da-ba83-b037b39fcbad",
+          "startedAt": "2026-09-10T11:29:42.832Z",
+          "finishedAt": "2026-09-10T11:29:44.918Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "f5bbcaee-5476-43c4-a069-815bd96308ba",
+          "startedAt": "2026-09-10T11:28:50.653Z",
+          "finishedAt": "2026-09-10T11:28:53.239Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "d7ce66d8-57ed-4e61-aeda-6114acfa0f8d",
+          "startedAt": "2026-09-10T11:29:05.075Z",
+          "finishedAt": "2026-09-10T11:29:08.213Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "0681aab8-71c1-4800-9181-8c12994ab775",
+          "startedAt": "2026-09-10T11:29:18.468Z",
+          "finishedAt": "2026-09-10T11:29:20.899Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "f082cc18-4a2c-44d6-b5b9-7b96be30f7a4",
+          "startedAt": "2026-09-10T11:29:31.567Z",
+          "finishedAt": "2026-09-10T11:29:34.091Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "e679ac1c-644c-4bd6-89e3-5b92fdf6758c",
+          "startedAt": "2026-09-10T11:29:44.921Z",
+          "finishedAt": "2026-09-10T11:29:47.337Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "07598f6e-4d82-410c-9e25-0ea7ab9e15ba",
+          "startedAt": "2026-09-10T11:28:53.246Z",
+          "finishedAt": "2026-09-10T11:28:56.315Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "c99e9164-2bd0-4074-a86f-909a0486ba3f",
+          "startedAt": "2026-09-10T11:29:08.219Z",
+          "finishedAt": "2026-09-10T11:29:11.099Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "8e323341-c8c3-48e9-b63e-48cf65205a3b",
+          "startedAt": "2026-09-10T11:29:20.904Z",
+          "finishedAt": "2026-09-10T11:29:24.169Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "99b58e8f-f05e-4039-b360-10de7461d0fa",
+          "startedAt": "2026-09-10T11:29:34.100Z",
+          "finishedAt": "2026-09-10T11:29:37.154Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "f9adeb2a-55ce-42c3-92e8-2024e33074a4",
+          "startedAt": "2026-09-10T11:29:47.340Z",
+          "finishedAt": "2026-09-10T11:29:52.347Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        }
+      ],
+      "unavailableRecordNote": null
+    },
+    {
+      "name": "vocabulary-grounding-full",
+      "fullCohort": true,
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find public Vercel members who authored a merged pull request from June 12, 2026 inclusive to September 11, 2026 exclusive in a repository with accepted repository-level ai concept evidence. Evidence may be explicit or inferred.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "8f96a790-1525-4b8c-a30d-b98037d7cd13",
+          "startedAt": "2026-09-10T11:30:33.386Z",
+          "finishedAt": "2026-09-10T11:30:36.671Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "73f92e02-2e7e-46ae-a394-84ac172d9de8",
+          "startedAt": "2026-09-10T11:30:36.674Z",
+          "finishedAt": "2026-09-10T11:30:40.095Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": false
+        },
+        {
+          "name": "unknown location cannot satisfy an explicit location filter",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people whose normalized location_city equals Berlin and who authored at least one merged pull request. Missing or unknown locations do not qualify, and do not infer locations from organizations.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "8cd2afff-4893-468e-99d6-9a62e7d5b224",
+          "startedAt": "2026-09-10T11:31:15.407Z",
+          "finishedAt": "2026-09-10T11:31:17.298Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "05801b30-fc0b-47b0-b28d-35ee0f94974b",
+          "startedAt": "2026-09-10T11:30:40.105Z",
+          "finishedAt": "2026-09-10T11:30:43.305Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "04efde98-a5ca-48e4-bad9-955bb8986e80",
+          "startedAt": "2026-09-10T11:30:43.308Z",
+          "finishedAt": "2026-09-10T11:30:46.838Z",
+          "kind": "failed",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": null,
+          "failureCode": "DIALECT_EXECUTION_FAILED",
+          "identityExact": false
+        },
+        {
+          "name": "AI SDK and PostgreSQL on the same repository",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests in a repository having both accepted repository-level npm:ai and postgresql concepts. Both concepts must belong to the same repository; either support level counts.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "61325c96-69f2-43ce-90db-6f7ac82d59f7",
+          "startedAt": "2026-09-10T11:30:46.844Z",
+          "finishedAt": "2026-09-10T11:30:57.519Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "4142719",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "4142719",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "6925efeb-8811-4425-983c-911e0120f3c5",
+          "startedAt": "2026-09-10T11:30:57.527Z",
+          "finishedAt": "2026-09-10T11:30:59.708Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Which contributors have merged PRs under their own authorship across two or more different repositories in this dataset?",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "1b8f2d76-96e0-4193-8776-78af08722f64",
+          "startedAt": "2026-09-10T11:30:59.711Z",
+          "finishedAt": "2026-09-10T11:31:03.476Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "bd3ff675-5f32-45ee-8fb9-489043347d61",
+          "startedAt": "2026-09-10T11:31:03.483Z",
+          "finishedAt": "2026-09-10T11:31:06.144Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "current archive state and popularity constrain project evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored a merged PR in a non-archived repository with more than 100 stars and accepted repository-level postgresql concept evidence. Inferred evidence counts. Archived repositories do not qualify.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "562e9019-3e51-4e9d-89cb-9a4e2bc3d478",
+          "startedAt": "2026-09-10T11:31:06.150Z",
+          "finishedAt": "2026-09-10T11:31:08.730Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "known follower counts with repeated cross-project work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people with a known follower count below 500 who authored merged pull requests in at least two distinct repositories. Unknown follower counts do not qualify.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "304ba830-bee8-40f1-9986-927bd278ee99",
+          "startedAt": "2026-09-10T11:31:08.732Z",
+          "finishedAt": "2026-09-10T11:31:12.145Z",
+          "kind": "matches",
+          "expectedIds": [
+            "21091016",
+            "57228345",
+            "58091943"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+          "requestId": "c3308b19-b5ba-49d5-a1c2-d6225d03f933",
+          "startedAt": "2026-09-10T11:31:12.153Z",
+          "finishedAt": "2026-09-10T11:31:15.406Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        }
+      ],
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+    },
+    {
+      "name": "evidence-scope",
+      "fullCohort": false,
+      "suitePassed": 15,
+      "suiteExecuted": 15,
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "0d7998bd-426c-4a6b-acbc-b18d343241ed",
+          "startedAt": "2026-09-10T11:34:49.736Z",
+          "finishedAt": "2026-09-10T11:34:55.972Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 2,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "e29ea418-ce36-4290-92c3-3e089302743e",
+          "startedAt": "2026-09-10T11:35:00.841Z",
+          "finishedAt": "2026-09-10T11:35:09.826Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 3,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "a0e7938b-8943-4af6-ac8a-24cf66c29fe1",
+          "startedAt": "2026-09-10T11:35:15.638Z",
+          "finishedAt": "2026-09-10T11:35:23.047Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 4,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "001860e6-23fd-40c5-b147-efab177d4068",
+          "startedAt": "2026-09-10T11:35:27.691Z",
+          "finishedAt": "2026-09-10T11:35:33.033Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 5,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "9b6c48b1-fde4-4d1e-91d2-7e3602334d47",
+          "startedAt": "2026-09-10T11:35:39.279Z",
+          "finishedAt": "2026-09-10T11:35:48.966Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "49b89e2b-57ad-44ce-b0a8-c5fb0586fcad",
+          "startedAt": "2026-09-10T11:34:55.976Z",
+          "finishedAt": "2026-09-10T11:34:58.416Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "29e9fcd3-da9d-4168-9a4b-f6be2bf3e0b9",
+          "startedAt": "2026-09-10T11:35:09.828Z",
+          "finishedAt": "2026-09-10T11:35:13.153Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "5dda3c43-4992-4cbe-a319-c5c0e3c4da95",
+          "startedAt": "2026-09-10T11:35:23.050Z",
+          "finishedAt": "2026-09-10T11:35:25.525Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "ed72f643-daa2-4742-8d2f-497be160d713",
+          "startedAt": "2026-09-10T11:35:33.036Z",
+          "finishedAt": "2026-09-10T11:35:37.339Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "26e17d71-abb6-4404-b05d-d5f094b771b8",
+          "startedAt": "2026-09-10T11:35:48.967Z",
+          "finishedAt": "2026-09-10T11:35:51.378Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "b17aabf2-1758-4ea5-809f-97e37a6b3251",
+          "startedAt": "2026-09-10T11:34:58.420Z",
+          "finishedAt": "2026-09-10T11:35:00.835Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 2,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "3f362436-bf5c-44cf-b3b2-28042e81d468",
+          "startedAt": "2026-09-10T11:35:13.157Z",
+          "finishedAt": "2026-09-10T11:35:15.630Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 3,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "8aed2b35-c056-4636-b546-3ab04de90000",
+          "startedAt": "2026-09-10T11:35:25.528Z",
+          "finishedAt": "2026-09-10T11:35:27.684Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 4,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "f9d20bb5-d995-4488-9b04-a7f227917db2",
+          "startedAt": "2026-09-10T11:35:37.342Z",
+          "finishedAt": "2026-09-10T11:35:39.272Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 5,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "de579008-c98a-41c6-ae60-23f045385e51",
+          "startedAt": "2026-09-10T11:35:51.380Z",
+          "finishedAt": "2026-09-10T11:35:53.810Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        }
+      ],
+      "unavailableRecordNote": null
+    },
+    {
+      "name": "evidence-scope-full",
+      "fullCohort": true,
+      "suitePassed": 13,
+      "suiteExecuted": 13,
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find public Vercel members who authored a merged pull request from June 12, 2026 inclusive to September 11, 2026 exclusive in a repository with accepted repository-level ai concept evidence. Evidence may be explicit or inferred.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "58a2f706-5a98-44cc-9962-8286f53c9ae4",
+          "startedAt": "2026-09-10T11:36:59.095Z",
+          "finishedAt": "2026-09-10T11:37:08.428Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "c1f41b41-a1d2-4f7b-9795-7405ab77adee",
+          "startedAt": "2026-09-10T11:37:08.431Z",
+          "finishedAt": "2026-09-10T11:37:14.579Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "unknown location cannot satisfy an explicit location filter",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people whose normalized location_city equals Berlin and who authored at least one merged pull request. Missing or unknown locations do not qualify, and do not infer locations from organizations.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "c9cf903a-2ced-4630-8515-c3bc58e35ffc",
+          "startedAt": "2026-09-10T11:37:48.009Z",
+          "finishedAt": "2026-09-10T11:37:49.872Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "2013c18f-5fda-4fd3-869a-4f8ab9676dde",
+          "startedAt": "2026-09-10T11:37:14.582Z",
+          "finishedAt": "2026-09-10T11:37:17.196Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "c33306f9-91dc-479f-9d11-0fae5afa9169",
+          "startedAt": "2026-09-10T11:37:17.198Z",
+          "finishedAt": "2026-09-10T11:37:19.591Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "AI SDK and PostgreSQL on the same repository",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests in a repository having both accepted repository-level npm:ai and postgresql concepts. Both concepts must belong to the same repository; either support level counts.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "246bbeec-b1a6-4c80-935a-7d9df6bc5488",
+          "startedAt": "2026-09-10T11:37:19.597Z",
+          "finishedAt": "2026-09-10T11:37:25.782Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "4142719",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "4142719",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "b4fe2613-9647-4979-afce-8b6d9057ae33",
+          "startedAt": "2026-09-10T11:37:25.788Z",
+          "finishedAt": "2026-09-10T11:37:28.454Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Which contributors have merged PRs under their own authorship across two or more different repositories in this dataset?",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "a95fb7ca-195e-407e-b0f5-31ce8729c590",
+          "startedAt": "2026-09-10T11:37:28.458Z",
+          "finishedAt": "2026-09-10T11:37:36.474Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "661a2f83-47cb-488a-9ab6-78e41ac13cfb",
+          "startedAt": "2026-09-10T11:37:36.476Z",
+          "finishedAt": "2026-09-10T11:37:39.229Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "current archive state and popularity constrain project evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored a merged PR in a non-archived repository with more than 100 stars and accepted repository-level postgresql concept evidence. Inferred evidence counts. Archived repositories do not qualify.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "8e4294c2-42ea-422e-91ec-e337181f7ae0",
+          "startedAt": "2026-09-10T11:37:39.234Z",
+          "finishedAt": "2026-09-10T11:37:42.389Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "known follower counts with repeated cross-project work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people with a known follower count below 500 who authored merged pull requests in at least two distinct repositories. Unknown follower counts do not qualify.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "c517d5f8-032f-4992-8b68-42c8cc4f919e",
+          "startedAt": "2026-09-10T11:37:42.392Z",
+          "finishedAt": "2026-09-10T11:37:44.884Z",
+          "kind": "matches",
+          "expectedIds": [
+            "21091016",
+            "57228345",
+            "58091943"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "91a32b7f551c70a448ed47217c0744b7bd7d8f3a579b51f0a1a47d4685592609",
+          "requestId": "e811f524-eff2-4502-af17-1dd89ee9d3fa",
+          "startedAt": "2026-09-10T11:37:44.890Z",
+          "finishedAt": "2026-09-10T11:37:48.007Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        }
+      ],
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+    },
+    {
+      "name": "bm25-acceptance",
+      "fullCohort": false,
+      "suitePassed": 1,
+      "suiteExecuted": 1,
+      "queryRecords": [
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "7301b9eb-edbd-46ed-82d5-384b3cb62ba3",
+          "startedAt": "2026-09-10T11:41:53.161Z",
+          "finishedAt": "2026-09-10T11:41:55.537Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        }
+      ],
+      "unavailableRecordNote": null
+    },
+    {
+      "name": "expanded-bm25-full",
+      "fullCohort": true,
+      "suitePassed": 13,
+      "suiteExecuted": 14,
+      "queryRecords": [
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find public Vercel members who authored a merged pull request from June 12, 2026 inclusive to September 11, 2026 exclusive in a repository with accepted repository-level ai concept evidence. Evidence may be explicit or inferred.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "a548b384-5613-4efb-870b-25fd7c40c7a8",
+          "startedAt": "2026-09-10T11:42:38.366Z",
+          "finishedAt": "2026-09-10T11:42:44.779Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "public organization membership and dated merged AI work",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Among people publicly listed as members of the vercel organization, who authored an AI-repository pull request merged between 2026-06-12 inclusive and 2026-09-11 exclusive? Use accepted repository-level concept ai, including inferred evidence.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "ea21c902-69f4-4a03-9c0a-a210da29b4f5",
+          "startedAt": "2026-09-10T11:42:44.782Z",
+          "finishedAt": "2026-09-10T11:42:50.455Z",
+          "kind": "matches",
+          "expectedIds": [
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "58091943",
+            "71938701"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "unknown location cannot satisfy an explicit location filter",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people whose normalized location_city equals Berlin and who authored at least one merged pull request. Missing or unknown locations do not qualify, and do not infer locations from organizations.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "e9c26972-db97-4369-919d-c9cf21f01b02",
+          "startedAt": "2026-09-10T11:43:22.579Z",
+          "finishedAt": "2026-09-10T11:43:24.437Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "BM25 pull-request text with profile and merge filters",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "91bc4778-6b73-454f-89a4-9cce999674e1",
+          "startedAt": "2026-09-10T11:43:24.495Z",
+          "finishedAt": "2026-09-10T11:43:27.044Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "specific PR capability evidence rather than repository inheritance",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who authored merged pull requests with accepted PR-level reranking concept evidence? Inferred text or patch mentions count; repository-level evidence alone does not count.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "993d7d16-8d0b-4df7-b381-ffb1dd36d5ae",
+          "startedAt": "2026-09-10T11:42:50.457Z",
+          "finishedAt": "2026-09-10T11:42:53.388Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773"
+          ],
+          "actualIds": [
+            "24557773"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "distinct reviews of other authors",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Who reviewed at least two distinct pull requests authored by other people? Multiple reviews of the same pull request count once; exclude self-reviews.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "9d255882-d1e8-4eab-bcbe-f6330599e2ce",
+          "startedAt": "2026-09-10T11:42:53.389Z",
+          "finishedAt": "2026-09-10T11:42:56.182Z",
+          "kind": "matches",
+          "expectedIds": [
+            "39992"
+          ],
+          "actualIds": [
+            "39992"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "AI SDK and PostgreSQL on the same repository",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests in a repository having both accepted repository-level npm:ai and postgresql concepts. Both concepts must belong to the same repository; either support level counts.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "da141a5b-0bbf-467b-a77e-4f209db1498e",
+          "startedAt": "2026-09-10T11:42:56.186Z",
+          "finishedAt": "2026-09-10T11:43:02.747Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "4142719",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "4142719",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "ad123443-fd8c-4f3c-842c-d999f679159b",
+          "startedAt": "2026-09-10T11:43:02.750Z",
+          "finishedAt": "2026-09-10T11:43:04.543Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "contributions across distinct repositories",
+          "variant": 2,
+          "repetition": 1,
+          "question": "Which contributors have merged PRs under their own authorship across two or more different repositories in this dataset?",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "8869936e-4b83-49ed-8f40-169d1337c88c",
+          "startedAt": "2026-09-10T11:43:04.546Z",
+          "finishedAt": "2026-09-10T11:43:09.680Z",
+          "kind": "matches",
+          "expectedIds": [
+            "366502",
+            "17938322",
+            "18082091",
+            "21091016",
+            "27636870",
+            "49612682",
+            "57228345",
+            "58091943",
+            "71938701",
+            "88107904"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345",
+            "71938701",
+            "366502",
+            "17938322",
+            "49612682",
+            "27636870",
+            "88107904",
+            "18082091"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "profile absence does not substitute for PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find authors of merged pull requests with accepted PR-level reranking evidence whose biography has no case-insensitive literal substring AI. A null biography satisfies the biography condition. Inferred reranking evidence counts.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "16c89201-79d2-4ee3-8193-347bf74a834b",
+          "startedAt": "2026-09-10T11:43:09.684Z",
+          "finishedAt": "2026-09-10T11:43:11.886Z",
+          "kind": "matches",
+          "expectedIds": [],
+          "actualIds": [],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "current archive state and popularity constrain project evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people who authored a merged PR in a non-archived repository with more than 100 stars and accepted repository-level postgresql concept evidence. Inferred evidence counts. Archived repositories do not qualify.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "fe56e06c-3e71-447e-b8f1-87765ed622ad",
+          "startedAt": "2026-09-10T11:43:11.894Z",
+          "finishedAt": "2026-09-10T11:43:14.226Z",
+          "kind": "matches",
+          "expectedIds": [
+            "10137",
+            "366502",
+            "4060187",
+            "17938322",
+            "26875009",
+            "49612682",
+            "58091943"
+          ],
+          "actualIds": [
+            "10137",
+            "17938322",
+            "26875009",
+            "366502",
+            "4060187",
+            "49612682",
+            "58091943"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "known follower counts with repeated cross-project work",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people with a known follower count below 500 who authored merged pull requests in at least two distinct repositories. Unknown follower counts do not qualify.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "2a6bb59b-0b62-475f-af2e-f91f25ebc82a",
+          "startedAt": "2026-09-10T11:43:14.229Z",
+          "finishedAt": "2026-09-10T11:43:16.349Z",
+          "kind": "matches",
+          "expectedIds": [
+            "21091016",
+            "57228345",
+            "58091943"
+          ],
+          "actualIds": [
+            "21091016",
+            "58091943",
+            "57228345"
+          ],
+          "truncated": false,
+          "identityExact": true
+        },
+        {
+          "name": "explicit disjunction across public affiliation and PR evidence",
+          "variant": 1,
+          "repetition": 1,
+          "question": "Find people satisfying either condition: they are a public Vercel member with at least one authored merged PR, OR they authored a merged PR with accepted PR-level reranking evidence. Include inferred evidence. This is OR, not AND.",
+          "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+          "requestId": "27ae79f6-09a5-452f-ac95-f6aebad1d3d6",
+          "startedAt": "2026-09-10T11:43:16.353Z",
+          "finishedAt": "2026-09-10T11:43:22.575Z",
+          "kind": "matches",
+          "expectedIds": [
+            "24557773",
+            "58091943",
+            "71938701"
+          ],
+          "actualIds": [
+            "52761222",
+            "4278345",
+            "13698226",
+            "6616955",
+            "41523937",
+            "7414521",
+            "70239736",
+            "239003",
+            "3088615",
+            "35507539",
+            "904724",
+            "739984",
+            "180404",
+            "5983714",
+            "6849494",
+            "5818726",
+            "53372002",
+            "7249920",
+            "120007119",
+            "55700336",
+            "1570963",
+            "726049",
+            "8146736",
+            "33291795",
+            "12292047",
+            "6880091",
+            "1751601",
+            "186268",
+            "4172067",
+            "34559231",
+            "21013447",
+            "22380829",
+            "1634922",
+            "40034115",
+            "318866",
+            "4658208",
+            "1508008",
+            "4586894",
+            "83733486",
+            "22559461",
+            "2865858",
+            "8722047",
+            "688617",
+            "664177",
+            "43268759",
+            "13041",
+            "23662329",
+            "20425781",
+            "28912696",
+            "200112"
+          ],
+          "truncated": true,
+          "identityExact": false
+        }
+      ],
+      "unavailableRecordNote": "The separate unsupported case passed in the full Vitest report; this version of the harness did not persist its per-case record."
+    }
+  ],
+  "indexedSearchOperatorProof": {
+    "snapshotId": "99d2f089490819f8eaedbe269e0386c3b63a4ecac902816a5479a4e8804e72a6",
+    "question": "Find people who authored merged pull requests mentioning reranking in their searchable PR text. Use full-text matching, and include only people whose follower count is known and below 500.",
+    "requestId": "19a6e7ac-d982-4511-877d-917a590a1cc7",
+    "ticketId": "a5f3be89-289e-4c3e-a80d-e9889ea32d5d",
+    "programDigest": "741bcab7c5546c36d4483364b3ed63f9f42500ad3bf64931dafde47489ed3a47",
+    "exactSignedTicketCorrelation": true,
+    "indexedSearchOperator": "@@@",
+    "indexedSearchPresent": true,
+    "expectedIds": [
+      "24557773"
+    ],
+    "actualIds": [
+      "24557773"
+    ],
+    "kind": "matches",
+    "identityExact": true
+  }
+}
