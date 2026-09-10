@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/ai",
+  "observedAt": "2026-09-10T10:25:13.102938+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"cbbeb36fccd4113d988e80addb59bf4bfe9d2b36ff36861d4aa4e2b3c82abe5d\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "repositories",
+    "records": [
+      {
+        "id": 644461337,
+        "node_id": "R_kgDOJmmzGQ",
+        "name": "ai",
+        "full_name": "vercel/ai",
+        "html_url": "https://github.com/vercel/ai",
+        "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents ",
+        "fork": false,
+        "created_at": "2023-05-23T15:04:08Z",
+        "updated_at": "2026-09-10T10:00:06Z",
+        "pushed_at": "2026-09-09T22:50:34Z",
+        "homepage": "https://ai-sdk.dev",
+        "size": 382632,
+        "stargazers_count": 26667,
+        "watchers_count": 26667,
+        "language": "TypeScript",
+        "forks_count": 5101,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 1503,
+        "topics": [
+          "anthropic",
+          "artificial-intelligence",
+          "gemini",
+          "generative-ai",
+          "generative-ui",
+          "javascript",
+          "language-model",
+          "llm",
+          "nextjs",
+          "openai",
+          "react",
+          "svelte",
+          "typescript",
+          "vercel",
+          "vue"
+        ],
+        "default_branch": "main",
+        "visibility": "public",
+        "owner": {
+          "id": 14985020,
+          "node_id": "MDEyOk9yZ2FuaXphdGlvbjE0OTg1MDIw",
+          "login": "vercel",
+          "type": "Organization",
+          "html_url": "https://github.com/vercel"
+        }
+      }
+    ]
+  }
+}

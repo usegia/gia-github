@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/orgs/vercel-labs/public_members?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:25:20.697668+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"7d98e9dcf19f30252703dce731a5c169eef9e62430898b44e1b63d79d55cadf5\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "memberships",
+    "organization": {
+      "id": 108547162,
+      "node_id": "O_kgDOBnhMWg",
+      "login": "vercel-labs",
+      "type": "Organization",
+      "html_url": "https://github.com/vercel-labs"
+    },
+    "records": [
+      {
+        "id": 923787,
+        "node_id": "MDQ6VXNlcjkyMzc4Nw==",
+        "login": "Brandon168",
+        "type": "User",
+        "html_url": "https://github.com/Brandon168"
+      },
+      {
+        "id": 71938701,
+        "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+        "login": "HugoRCD",
+        "type": "User",
+        "html_url": "https://github.com/HugoRCD"
+      },
+      {
+        "id": 771968,
+        "node_id": "MDQ6VXNlcjc3MTk2OA==",
+        "login": "jonathanhefner",
+        "type": "User",
+        "html_url": "https://github.com/jonathanhefner"
+      },
+      {
+        "id": 490265,
+        "node_id": "MDQ6VXNlcjQ5MDI2NQ==",
+        "login": "qiao",
+        "type": "User",
+        "html_url": "https://github.com/qiao"
+      },
+      {
+        "id": 51397083,
+        "node_id": "MDQ6VXNlcjUxMzk3MDgz",
+        "login": "Railly",
+        "type": "User",
+        "html_url": "https://github.com/Railly"
+      }
+    ]
+  }
+}

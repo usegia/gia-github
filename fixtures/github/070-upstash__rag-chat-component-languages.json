@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/rag-chat-component/languages",
+  "observedAt": "2026-09-10T10:28:29.036423+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"3d2c9ef8396e9479163448f01c07325a85184d61fe2881882cca74efad3ad3f8\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 848693066,
+    "repository": "upstash/rag-chat-component",
+    "records": {
+      "TypeScript": 24416,
+      "JavaScript": 752,
+      "CSS": 404
+    }
+  }
+}

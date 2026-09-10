@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/assistant-ui/assistant-ui/pulls/7142/reviews?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:37.960553+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"2f1dc99410ad6c698b548817baec1d443486b37a475cd0f657d8facd23c3f842\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "reviews",
+    "repositoryId": 722184017,
+    "repository": "assistant-ui/assistant-ui",
+    "pullRequestId": 4490025499,
+    "records": [
+      {
+        "id": 5160700789,
+        "node_id": "PRR_kwDOKwunUc8AAAABM5oLdQ",
+        "body": "<!-- cubic:review-summary:start -->\n**No issues found** across 4 files\n<!-- cubic:review-summary:end -->\n\n<sub>[Re-trigger cubic](https://www.cubic.dev/action/re-review/pr/assistant-ui/assistant-ui/7142/ai_pr_review_github_delivery_0f8494b83a5054faa1de9cb3451a223bb4bf28fafa2e3ec66118bb1c69c080d3?returnTo=https%3A%2F%2Fgithub.com%2Fassistant-ui%2Fassistant-ui%2Fpull%2F7142)</sub>\n\n<!-- cubic:review-post:ai_pr_review_github_delivery_0f8494b83a5054faa1de9cb3451a223bb4bf28fafa2e3ec66118bb1c69c080d3:9228343e86a021eeb37140283555c727bdef1024:fa6b68ac-f34f-53c8-9973-393a841d5acb -->",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7142#pullrequestreview-5160700789",
+        "submitted_at": "2026-09-09T22:53:42Z",
+        "commit_id": "9228343e86a021eeb37140283555c727bdef1024",
+        "user": {
+          "id": 191113872,
+          "node_id": "BOT_kgDOC2QqkA",
+          "login": "cubic-dev-ai[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/cubic-dev-ai"
+        }
+      }
+    ]
+  }
+}

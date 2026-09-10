@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-python/pulls/255/files?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:39.457180+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"e1e3d381200d3ec9fcf85d4bf78044a67174f93a274d83119797a39fcfad9a09\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_request_files",
+    "repositoryId": 1135322438,
+    "repository": "vercel-labs/ai-python",
+    "pullRequestId": 4224468960,
+    "records": [
+      {
+        "sha": "46be848d77d36a112e5666722ba91588f7afc401",
+        "filename": "examples/README.md",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1,
+        "changes": 2,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/examples%2FREADME.md",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/examples%2FREADME.md",
+        "patch": "@@ -4,7 +4,7 @@ Examples are grouped by the main API surface they demonstrate.\n \n - `apps/` contains end-to-end demos.\n - `agents/` contains agent loops, tools, hooks, and MCP examples.\n-- `media/` contains image, video, and multimodal examples.\n+- `media/` contains image, video, multimodal, and embedding examples.\n - `models/` contains model streaming, structured output, and provider examples.\n \n Provider-specific model examples live under `models/<provider>/`, such as"
+      },
+      {
+        "sha": "4d8d74698890c3f8866d4579f27b09534a7c8d0b",
+        "filename": "examples/media/embeddings.py",
+        "previous_filename": null,
+        "status": "added",
+        "additions": 41,
+        "deletions": 0,
+        "changes": 41,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/examples%2Fmedia%2Fembeddings.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/examples%2Fmedia%2Fembeddings.py",
+        "patch": "@@ -0,0 +1,41 @@\n+\"\"\"Text embeddings — dedicated embedding model via ai.ops.embed().\"\"\"\n+\n+import asyncio\n+import math\n+\n+import ai\n+\n+model = ai.get_model(\"openai/text-embedding-3-small\")\n+\n+values = [\n+    \"The quick brown fox jumps over the lazy dog.\",\n+    \"A fast auburn fox leaps above a sleepy canine.\",\n+    \"The stock market closed higher today.\",\n+]\n+\n+\n+def cosine_similarity(a: list[float], b: list[float]) -> float:\n+    dot = sum(x * y for x, y in zip(a, b, strict=True))\n+    norm_a = math.sqrt(sum(x * x for x in a))\n+    norm_b = math.sqrt(sum(x * x for x in b))\n+    return dot / (norm_a * norm_b)\n+\n+\n+async def main() -> None:\n+    result = await ai.ops.embed(model, values)\n+\n+    print(f\"Embedded {len(result.value)} values\")\n+    for text, vector in zip(values, result.value, strict=True):\n+        print(f\"  {len(vector)} dims: {text!r}\")\n+    if result.usage:\n+        print(f\"Token usage: {result.usage.input_tokens}\")\n+\n+    query, *candidates = values\n+    print(f\"\\nSimilarity to {query!r}:\")\n+    for text, vector in zip(candidates, result.value[1:], strict=True):\n+        score = cosine_similarity(result.value[0], vector)\n+        print(f\"  {score:.3f}: {text!r}\")\n+\n+\n+if __name__ == \"__main__\":\n+    asyncio.run(main())"
+      },
+      {
+        "sha": "79a0ff11d56a1676064a65db1012ee5517fe1e8a",
+        "filename": "src/ai/ops/__init__.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 3,
+        "deletions": 0,
+        "changes": 3,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fops%2F__init__.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fops%2F__init__.py",
+        "patch": "@@ -1,15 +1,18 @@\n \"\"\"Model operations beyond LLM chat: media generation and friends.\"\"\"\n \n from .audio import AudioParams, generate_audio\n+from .embeddings import EmbedParams, embed\n from .images import ImageParams, generate_image\n from .items import Item\n from .videos import VideoParams, generate_video\n \n __all__ = [\n     \"AudioParams\",\n+    \"EmbedParams\",\n     \"ImageParams\",\n     \"Item\",\n     \"VideoParams\",\n+    \"embed\",\n     \"generate_audio\",\n     \"generate_image\",\n     \"generate_video\","
+      },
+      {
+        "sha": "f86c5fcdf98e64ecaef91a931574175bb5c43270",
+        "filename": "src/ai/ops/embeddings.py",
+        "previous_filename": null,
+        "status": "added",
+        "additions": 49,
+        "deletions": 0,
+        "changes": 49,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fops%2Fembeddings.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fops%2Fembeddings.py",
+        "patch": "@@ -0,0 +1,49 @@\n+\"\"\"Text embeddings via dedicated embedding models.\n+\n+::\n+\n+    import ai\n+\n+    model = ai.get_model(\"openai/text-embedding-3-small\")\n+\n+    result = await ai.ops.embed(model, [\"hello\", \"world\"])\n+    result.value  # list[list[float]], same order as the input\n+\"\"\"\n+\n+from __future__ import annotations\n+\n+import dataclasses\n+from typing import TYPE_CHECKING, Any\n+\n+if TYPE_CHECKING:\n+    from collections.abc import Mapping\n+\n+    from ..models.core import model as model_\n+    from . import items\n+\n+\n+@dataclasses.dataclass(frozen=True, kw_only=True)\n+class EmbedParams:\n+    \"\"\"Parameters for embedding generation.\"\"\"\n+\n+    provider_options: Mapping[str, Any] = dataclasses.field(\n+        default_factory=dict\n+    )\n+    \"\"\"Provider-specific options, keyed by provider name.\"\"\"\n+\n+\n+async def embed(\n+    model: model_.Model,\n+    values: list[str],\n+    *,\n+    params: EmbedParams | None = None,\n+) -> items.Item[list[list[float]]]:\n+    \"\"\"Embed text values with a dedicated embedding model.\n+\n+    Returns an :class:`~ai.ops.Item` whose ``value`` is one embedding\n+    vector per input string, in input order. Embedding models report\n+    input token usage only.\n+    \"\"\"\n+    return await model.provider.embed(\n+        model, values, params=params or EmbedParams()\n+    )"
+      },
+      {
+        "sha": "9ee32a20e490c396db73f2875228b80eebbfda72",
+        "filename": "src/ai/providers/ai_gateway/client/_client.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 4,
+        "deletions": 1,
+        "changes": 5,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fproviders%2Fai_gateway%2Fclient%2F_client.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fproviders%2Fai_gateway%2Fclient%2F_client.py",
+        "patch": "@@ -23,7 +23,7 @@\n _VERSIONED_BASE_RE = re.compile(r\"/v\\d+/ai$\")\n \n AuthMethod = Literal[\"api-key\", \"oidc\"]\n-ModelType = Literal[\"language\", \"image\", \"video\", \"speech\"]\n+ModelType = Literal[\"language\", \"image\", \"video\", \"speech\", \"embedding\"]\n \n \n class GatewayClient:\n@@ -103,6 +103,9 @@ def model_headers(\n         elif model_type == \"video\":\n             headers[\"ai-video-model-specification-version\"] = spec_version\n             headers[\"ai-model-id\"] = model.id\n+        elif model_type == \"embedding\":\n+            headers[\"ai-embedding-model-specification-version\"] = spec_version\n+            headers[\"ai-model-id\"] = model.id\n         else:\n             headers[\"ai-speech-model-specification-version\"] = spec_version\n             headers[\"ai-model-id\"] = model.id"
+      },
+      {
+        "sha": "e9dfe980c7237deab437ff43c5b9bcecb37cfc2a",
+        "filename": "src/ai/providers/ai_gateway/protocol/v4.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 57,
+        "deletions": 0,
+        "changes": 57,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fproviders%2Fai_gateway%2Fprotocol%2Fv4.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fproviders%2Fai_gateway%2Fprotocol%2Fv4.py",
+        "patch": "@@ -527,6 +527,51 @@ async def stream(\n         raise errors.map_error(response_error) from exc\n \n \n+# ---------------------------------------------------------------------------\n+# Embeddings\n+# ---------------------------------------------------------------------------\n+\n+\n+async def embed(\n+    gateway: gateway_client.GatewayClient,\n+    model: models.Model,\n+    values: list[str],\n+    *,\n+    params: ops.embeddings.EmbedParams,\n+) -> ops.items.Item[list[list[float]]]:\n+    \"\"\"Hit ``/embedding-model`` and return an Item with vectors.\"\"\"\n+    body: dict[str, Any] = {\"values\": values}\n+    if params.provider_options:\n+        body[\"providerOptions\"] = dict(params.provider_options)\n+\n+    try:\n+        response = await gateway.post(\n+            \"embedding-model\",\n+            body,\n+            model=model,\n+            model_type=\"embedding\",\n+            spec_version=SPEC_VERSION,\n+        )\n+    except gateway_client.errors.GatewayError as exc:\n+        raise errors.map_error(exc) from exc\n+\n+    data = response.json()\n+    usage_data = data.get(\"usage\")\n+    usage = None\n+    if usage_data:\n+        # Embedding models only consume input tokens.\n+        usage = types.usage.Usage(\n+            input_tokens=usage_data.get(\"tokens\") or 0,\n+            raw=usage_data,\n+        )\n+\n+    return ops.items.Item(\n+        value=data.get(\"embeddings\", []),\n+        usage=usage,\n+        provider_metadata=data.get(\"providerMetadata\"),\n+    )\n+\n+\n class GatewayV4Protocol(base.ProviderProtocol[gateway_client.GatewayClient]):\n     \"\"\"AI Gateway v4 wire protocol.\"\"\"\n \n@@ -594,3 +639,15 @@ async def generate_audio(\n         return await _shared.generate_audio(\n             client, model, messages, params=params, spec_version=SPEC_VERSION\n         )\n+\n+    async def embed(\n+        self,\n+        client: gateway_client.GatewayClient,\n+        model: models.Model,\n+        values: list[str],\n+        *,\n+        params: ops.embeddings.EmbedParams,\n+        provider: str,\n+    ) -> ops.items.Item[list[list[float]]]:\n+        _ = provider\n+        return await embed(client, model, values, params=params)"
+      },
+      {
+        "sha": "169d8bd2f9b7ca0a5fa676aa20dc4efa8b16be25",
+        "filename": "src/ai/providers/base.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 32,
+        "deletions": 1,
+        "changes": 33,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fproviders%2Fbase.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/src%2Fai%2Fproviders%2Fbase.py",
+        "patch": "@@ -24,7 +24,7 @@\n \n     from ..models.core import model as model_\n     from ..models.core import params as params_\n-    from ..ops import audio, images, items, videos\n+    from ..ops import audio, embeddings, images, items, videos\n     from ..types import events\n     from ..types import messages as messages_\n     from ..types import tools as tools_\n@@ -215,6 +215,20 @@ async def generate_audio(\n             f\"generate_audio()\"\n         )\n \n+    async def embed(\n+        self,\n+        client: ClientT,\n+        model: model_.Model,\n+        values: list[str],\n+        *,\n+        params: embeddings.EmbedParams,\n+        provider: str,\n+    ) -> items.Item[list[list[float]]]:\n+        \"\"\"Embed text values with a dedicated embedding model using *client*.\"\"\"\n+        raise NotImplementedError(\n+            f\"protocol {type(self).__name__!r} does not support embed()\"\n+        )\n+\n \n class Provider(pydantic.BaseModel, Generic[ClientT]):\n     \"\"\"Base class for model providers.\n@@ -509,6 +523,23 @@ async def generate_audio(\n             provider=self.name,\n         )\n \n+    async def embed(\n+        self,\n+        model: model_.Model,\n+        values: list[str],\n+        *,\n+        params: embeddings.EmbedParams,\n+    ) -> items.Item[list[list[float]]]:\n+        \"\"\"Embed text values with this provider's embedding model.\"\"\"\n+        selected_protocol = model.protocol or self.protocol\n+        return await selected_protocol.embed(\n+            self.client,\n+            model,\n+            values,\n+            params=params,\n+            provider=self.name,\n+        )\n+\n     async def probe(self, model: model_.Model) -> None:\n         \"\"\"Probe if provider is online and can serve given model.\n "
+      },
+      {
+        "sha": "ee148347281a2871db8c6ab82f6bad3694a8a962",
+        "filename": "tests/ops/test_embeddings.py",
+        "previous_filename": null,
+        "status": "added",
+        "additions": 23,
+        "deletions": 0,
+        "changes": 23,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/tests%2Fops%2Ftest_embeddings.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/tests%2Fops%2Ftest_embeddings.py",
+        "patch": "@@ -0,0 +1,23 @@\n+\"\"\"Tests for ``ai.ops.embeddings`` dispatch behavior.\n+\n+Gateway wire-format specifics live in\n+``tests/providers/ai_gateway/protocol/test_shared.py``; these tests cover\n+the ops layer: parameter defaults and provider dispatch.\n+\"\"\"\n+\n+from __future__ import annotations\n+\n+import ai\n+from ai import ops\n+\n+\n+async def test_embed_raises_not_implemented() -> None:\n+    provider = ai.get_provider(\"openai\", api_key=\"sk-test\")\n+    model = ai.Model(id=\"text-embedding-3-small\", provider=provider)\n+\n+    try:\n+        await ops.embed(model, [\"hello\"])\n+    except NotImplementedError as exc:\n+        assert \"embed\" in str(exc)\n+    else:\n+        raise AssertionError(\"expected NotImplementedError\")"
+      },
+      {
+        "sha": "a292e50319bdf507414501dc114f5138c20e1dc4",
+        "filename": "tests/providers/ai_gateway/protocol/test_v4.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 133,
+        "deletions": 1,
+        "changes": 134,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/tests%2Fproviders%2Fai_gateway%2Fprotocol%2Ftest_v4.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/e23aabd3cde9ecdfd06a49aa457c28f9a45fd359/tests%2Fproviders%2Fai_gateway%2Fprotocol%2Ftest_v4.py",
+        "patch": "@@ -5,6 +5,9 @@\n - ``v4._apply_reasoning``: the standardized effort field\n - ``v4._parse_stream_part``: object finish reasons, tagged file data,\n   response metadata, error parts, warnings\n+- ``v4.GatewayV4Protocol.embed``: the v4-only embedding endpoint,\n+  exercised end-to-end via ``ai.ops.embed`` with a provider wired to\n+  an ``httpx.MockTransport``\n \n Version-independent pieces are tested in ``test_shared.py``; end-to-end\n request/response behavior in ``../test_stream.py``.\n@@ -13,16 +16,21 @@\n from __future__ import annotations\n \n import base64\n+import json\n from typing import Any\n \n+import httpx\n import pytest\n \n-from ai import models\n+import ai\n+from ai import models, ops\n from ai.providers.ai_gateway.client import errors as client_errors\n from ai.providers.ai_gateway.protocol import v4\n from ai.types import events as events_\n from ai.types import messages\n \n+from ..conftest import mock_model\n+\n # ---------------------------------------------------------------------------\n # _messages_to_prompt, v4 encoding\n # ---------------------------------------------------------------------------\n@@ -267,3 +275,127 @@ def test_tool_result_file_content() -> None:\n         },\n         \"filename\": \"out.png\",\n     }\n+\n+\n+# ---------------------------------------------------------------------------\n+# embed (embedding-model endpoint, via ops.embed)\n+# ---------------------------------------------------------------------------\n+\n+_EMBEDDING_MODEL_ID = \"openai/text-embedding-3-small\"\n+_EMBEDDINGS = [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]\n+\n+\n+async def test_basic_embed() -> None:\n+    \"\"\"Two strings in -> two vectors back, with usage.\"\"\"\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        return httpx.Response(\n+            200,\n+            json={\"embeddings\": _EMBEDDINGS, \"usage\": {\"tokens\": 4}},\n+        )\n+\n+    model = mock_model(\n+        httpx.MockTransport(handler), model_id=_EMBEDDING_MODEL_ID\n+    )\n+    result = await ops.embed(model, [\"hello\", \"world\"])\n+\n+    assert result.value == _EMBEDDINGS\n+    assert result.usage is not None\n+    assert result.usage.input_tokens == 4\n+    assert result.usage.output_tokens == 0\n+\n+\n+async def test_embed_request_body_and_url() -> None:\n+    captured_body: dict[str, Any] = {}\n+    captured_url: list[str] = []\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured_body.update(json.loads(req.content))\n+        captured_url.append(str(req.url))\n+        return httpx.Response(200, json={\"embeddings\": _EMBEDDINGS})\n+\n+    await ops.embed(\n+        mock_model(httpx.MockTransport(handler), model_id=_EMBEDDING_MODEL_ID),\n+        [\"hello\", \"world\"],\n+    )\n+\n+    assert captured_body == {\"values\": [\"hello\", \"world\"]}\n+    assert captured_url[0] == \"https://gw.test/v4/ai/embedding-model\"\n+\n+\n+async def test_embed_protocol_headers() -> None:\n+    captured: dict[str, str] = {}\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured.update(dict(req.headers))\n+        return httpx.Response(200, json={\"embeddings\": _EMBEDDINGS})\n+\n+    model = mock_model(\n+        httpx.MockTransport(handler),\n+        api_key=\"sk-test\",\n+        model_id=_EMBEDDING_MODEL_ID,\n+    )\n+    await ops.embed(model, [\"hi\"])\n+\n+    assert captured[\"authorization\"] == \"Bearer sk-test\"\n+    assert captured[\"ai-embedding-model-specification-version\"] == \"4\"\n+    assert captured[\"ai-model-id\"] == _EMBEDDING_MODEL_ID\n+    assert captured[\"ai-gateway-auth-method\"] == \"api-key\"\n+\n+\n+async def test_embed_forwards_provider_options() -> None:\n+    captured_body: dict[str, Any] = {}\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured_body.update(json.loads(req.content))\n+        return httpx.Response(200, json={\"embeddings\": _EMBEDDINGS})\n+\n+    await ops.embed(\n+        mock_model(httpx.MockTransport(handler), model_id=_EMBEDDING_MODEL_ID),\n+        [\"hello\"],\n+        params=ops.EmbedParams(\n+            provider_options={\"openai\": {\"dimensions\": 256}}\n+        ),\n+    )\n+\n+    assert captured_body[\"providerOptions\"] == {\"openai\": {\"dimensions\": 256}}\n+\n+\n+async def test_embed_provider_metadata_and_missing_usage() -> None:\n+    \"\"\"``providerMetadata`` lands on the item; absent usage stays None.\"\"\"\n+    metadata = {\"gateway\": {\"cost\": \"0.0001\"}}\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        return httpx.Response(\n+            200,\n+            json={\"embeddings\": _EMBEDDINGS, \"providerMetadata\": metadata},\n+        )\n+\n+    result = await ops.embed(\n+        mock_model(httpx.MockTransport(handler), model_id=_EMBEDDING_MODEL_ID),\n+        [\"hello\"],\n+    )\n+\n+    assert result.provider_metadata == metadata\n+    assert result.usage is None\n+\n+\n+async def test_embed_401_authentication_error() -> None:\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        return httpx.Response(\n+            401,\n+            json={\n+                \"error\": {\n+                    \"message\": \"Invalid API key\",\n+                    \"type\": \"authentication_error\",\n+                }\n+            },\n+        )\n+\n+    with pytest.raises(ai.ProviderAuthenticationError):\n+        await ops.embed(\n+            mock_model(\n+                httpx.MockTransport(handler), model_id=_EMBEDDING_MODEL_ID\n+            ),\n+            [\"test\"],\n+        )"
+      }
+    ],
+    "headSha": "e23aabd3cde9ecdfd06a49aa457c28f9a45fd359"
+  }
+}

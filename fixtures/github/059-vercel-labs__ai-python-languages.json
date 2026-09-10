@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-python/languages",
+  "observedAt": "2026-09-10T10:28:25.646406+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"ddd99c65d11d072466849710ab46dc89185e9416779d9ccf99f5e4781daed7ba\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 1135322438,
+    "repository": "vercel-labs/ai-python",
+    "records": {
+      "Python": 1363684,
+      "Shell": 522
+    }
+  }
+}

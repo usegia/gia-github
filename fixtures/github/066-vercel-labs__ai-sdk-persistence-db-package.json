@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-sdk-persistence-db/contents/package.json",
+  "observedAt": "2026-09-10T10:28:43.610764+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"8eb590ab7937b763db1ca159501235ad04a8fd3e\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "manifest",
+    "repositoryId": 931560949,
+    "repository": "vercel-labs/ai-sdk-persistence-db",
+    "content": {
+      "type": "file",
+      "encoding": "base64",
+      "size": 1016,
+      "name": "package.json",
+      "path": "package.json",
+      "content": "ewogICJuYW1lIjogImFpLXNkay1wZXJzaXN0ZW5jZS1kYiIsCiAgInZlcnNp\nb24iOiAiMC4xLjAiLAogICJwcml2YXRlIjogdHJ1ZSwKICAic2NyaXB0cyI6\nIHsKICAgICJkZXYiOiAibmV4dCBkZXYiLAogICAgImJ1aWxkIjogIm5leHQg\nYnVpbGQiLAogICAgInN0YXJ0IjogIm5leHQgc3RhcnQiLAogICAgImxpbnQi\nOiAibmV4dCBsaW50IiwKICAgICJkYjpwdXNoIjogImRyaXp6bGUta2l0IHB1\nc2giLAogICAgImRiOnN0dWRpbyI6ICJkcml6emxlLWtpdCBzdHVkaW8iCiAg\nfSwKICAiZGVwZW5kZW5jaWVzIjogewogICAgIkBhaS1zZGsvb3BlbmFpIjog\nIjIuMC4wLWJldGEuOSIsCiAgICAiQGFpLXNkay9yZWFjdCI6ICIyLjAuMC1i\nZXRhLjIxIiwKICAgICJhaSI6ICI1LjAuMC1iZXRhLjIxIiwKICAgICJkb3Rl\nbnYiOiAiXjE2LjQuNyIsCiAgICAiZHJpenpsZS1vcm0iOiAiXjAuMzkuMyIs\nCiAgICAibmFub2lkIjogIl41LjAuOSIsCiAgICAibmV4dCI6ICJeMTUuMS45\nIiwKICAgICJwZyI6ICJeOC4xMy4yIiwKICAgICJyZWFjdCI6ICJeMTkuMC4w\nIiwKICAgICJyZWFjdC1kb20iOiAiXjE5LjAuMCIsCiAgICAic3RyZWFtZG93\nbiI6ICJeMS42LjciLAogICAgInRhaWx3aW5kY3NzLWFuaW1hdGUiOiAiXjEu\nMC43IiwKICAgICJ6b2QiOiAiXjMuMjUuNjEiCiAgfSwKICAiZGV2RGVwZW5k\nZW5jaWVzIjogewogICAgIkBlc2xpbnQvZXNsaW50cmMiOiAiXjMiLAogICAg\nIkB0eXBlcy9ub2RlIjogIl4yMCIsCiAgICAiQHR5cGVzL3BnIjogIl44LjEx\nLjExIiwKICAgICJAdHlwZXMvcmVhY3QiOiAiXjE5IiwKICAgICJAdHlwZXMv\ncmVhY3QtZG9tIjogIl4xOSIsCiAgICAiZHJpenpsZS1raXQiOiAiXjAuMzAu\nNCIsCiAgICAiZXNsaW50IjogIl45IiwKICAgICJlc2xpbnQtY29uZmlnLW5l\neHQiOiAiMTUuMS43IiwKICAgICJwb3N0Y3NzIjogIl44IiwKICAgICJ0YWls\nd2luZGNzcyI6ICJeMy40LjEiLAogICAgInRzeCI6ICJeNC4xOS4yIiwKICAg\nICJ0eXBlc2NyaXB0IjogIl41IgogIH0KfQo=\n",
+      "sha": "8eb590ab7937b763db1ca159501235ad04a8fd3e",
+      "url": "https://api.github.com/repos/vercel-labs/ai-sdk-persistence-db/contents/package.json?ref=main",
+      "git_url": "https://api.github.com/repos/vercel-labs/ai-sdk-persistence-db/git/blobs/8eb590ab7937b763db1ca159501235ad04a8fd3e",
+      "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/blob/main/package.json"
+    }
+  }
+}

@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/assistant-ui/assistant-ui/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:48.435566+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"b0a05b873cc8e9a26eefb2bc82848b83f1e5072cbfdee008ab8343207e1d9c91\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/722184017/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 722184017,
+    "repository": "assistant-ui/assistant-ui",
+    "records": [
+      {
+        "id": 4490630355,
+        "node_id": "PR_kwDOKwunUc8AAAABC6mU0w",
+        "number": 7151,
+        "state": "closed",
+        "title": "fix(cloud-ai-sdk): cancel telemetry streams with chat runs",
+        "body": "## Problem\n\nCancelling a Cloud chat before its first token did not cancel the response stream for custom transports that rely on stream cancellation. The transport stream was split for telemetry, but cancellation only reached the branch returned to the chat runtime, leaving the telemetry branch waiting for a token.\n\n## Root cause\n\n`observeTelemetryStream()` returned one side of a `ReadableStream.tee()` while consuming the other side in the background. A tee source is cancelled only after both branches are cancelled, so cancelling the chat branch alone never propagated to the source.\n\n## Change\n\nForward chunks through one owned source reader. It reads eagerly only until the first token to preserve arrival-time telemetry, then follows downstream backpressure. Cancellation now reaches the source with the caller's original reason, and every completion path releases the reader lock.\n\n## Verification\n\n- Added a bounded pre-token cancellation regression that hangs before this change and confirms the original reason reaches the source after it.\n- Added post-token cancellation and source-error forwarding coverage.\n- Extended the telemetry completion test to pin eager first-token timing and source lock release.\n- `pnpm -C packages/cloud-ai-sdk test`: 134 tests passed.\n- `aui-build` for `@assistant-ui/cloud-ai-sdk` passed.\n- Focused oxlint and changeset validation passed.\n\n## Public surface\n\n`@assistant-ui/cloud-ai-sdk` runtime behavior only. No exports or API signatures changed. Includes a patch changeset.\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7151",
+        "created_at": "2026-09-10T00:28:59Z",
+        "updated_at": "2026-09-10T03:45:42Z",
+        "closed_at": "2026-09-10T03:45:37Z",
+        "merged_at": "2026-09-10T03:45:37Z",
+        "merge_commit_sha": "1a5da0f272668cf313e5213e49aa70e0f987de6d",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "93c945c5b61de5bc0a040774af2001bed8963b12",
+          "ref": "fix/cloud-telemetry-stream-cancellation"
+        },
+        "base": {
+          "sha": "18f40a91028b7699646f31a164fe6a88a5479525",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4490652826,
+        "node_id": "PR_kwDOKwunUc8AAAABC6nsmg",
+        "number": 7153,
+        "state": "closed",
+        "title": "fix(react-generative-ui): tolerate malformed text props",
+        "body": "## Problem\n\nNon-conforming model output can place an object in a built-in vocabulary property that renders as text. React then throws `Objects are not valid as a React child` and interrupts the generated UI instead of rendering the remaining response. Numeric values already rendered successfully and must remain supported.\n\n## Root cause\n\nGenerative UI schemas guide model output but are not runtime validators. Several built-in vocabulary components passed their text properties directly to React without narrowing their runtime type.\n\n## Change\n\nUse one internal text-content guard across the built-in text, Markdown, fact, layout, alert, and interactive vocabularies. Strings and numbers render unchanged; unsupported values render no text while nested children and component structure remain intact.\n\n## Verification\n\n- Added focused coverage for every affected built-in text-child path, including streaming `Text`, `Caption`, and `Markdown` values.\n- Added coverage confirming numeric text still renders.\n- `pnpm -C packages/react-generative-ui test`: 650 tests passed.\n- `aui-build` for `@assistant-ui/react-generative-ui` passed.\n- Focused oxlint and changeset validation passed.\n\n## Public surface\n\n`@assistant-ui/react-generative-ui` runtime behavior only. Release tooling also patches its direct dependent `@assistant-ui/react-ag-ui`; no source or API signatures change there. No exports or API signatures changed. Includes a patch changeset.\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.ktTOSBENEE8YP0wkVCptkTnlfpF_PSNlkjz3iA80lPC_JzK1kbyZRHP9mxs?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7153",
+        "created_at": "2026-09-10T00:32:28Z",
+        "updated_at": "2026-09-10T03:45:15Z",
+        "closed_at": "2026-09-10T03:45:09Z",
+        "merged_at": "2026-09-10T03:45:09Z",
+        "merge_commit_sha": "c46251c1d6797eda7627738a403efd3c0adb2354",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "2a39fbd9e9015404e1acdc372ba9895d5037c4e3",
+          "ref": "fix/generative-ui-malformed-text"
+        },
+        "base": {
+          "sha": "18f40a91028b7699646f31a164fe6a88a5479525",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4490025499,
+        "node_id": "PR_kwDOKwunUc8AAAABC6BaGw",
+        "number": 7142,
+        "state": "closed",
+        "title": "perf(assistant-stream): lazy tools arguments parsing ",
+        "body": "## Problem\n\n`ToolCallArgsReaderImpl` reparses the full accumulated argument prefix after every text delta, including execute-only tools that never read partial arguments. The final execution path parses the completed JSON separately, so this repeated partial parsing adds work without producing an observable value.\n\nWith a 10 KB argument streamed in 16-character chunks, the public tool-result path took about 34 ms locally before this change. The cost grew faster than the argument size because every delta reparsed a larger prefix.\n\nFixes #7133.\n\n## Root cause\n\nThe argument stream started processing immediately and called `parsePartialJsonObject` unconditionally for every delta. Reader handles that had already resolved also remained registered until the argument stream ended, keeping partial parsing active after the last consumer was done.\n\n## Change\n\n- Retain streamed argument text without parsing it when no partial reader is active.\n- Parse the current buffer when the first reader registers, preserving readers created after earlier deltas or after completion.\n- Remove resolved, closed, errored, and cancelled handles immediately so parsing stops when the final consumer settles.\n- Preserve the final strict JSON parse used for frontend tool execution and malformed-argument errors.\n- Add a public-path wall-time benchmark for execute-only tool arguments.\n\n## Verification\n\n- `pnpm -C packages/assistant-stream test`\n  - 13 focused reader tests pass.\n  - Full package suite passes against both supported peer versions.\n  - The regression test observes zero partial parses when no reader is active; it fails before the fix.\n  - Early, late, completed, settled, cancelled, and unparseable-delta reader behavior is covered.\n- `pnpm -C packages/x-performance exec vitest bench --run bench/tool-args.bench.ts`\n- `pnpm lint`\n- `pnpm build` — 95/95 tasks passed.\n- `pnpm changesets:check`\n- `pnpm size:check`\n\nLocal median timings for the public execute-only path with 16-character deltas:\n\n| Argument size | Before | After |\n| --- | ---: | ---: |\n| 5 KB | 11.19 ms | 3.12 ms |\n| 10 KB | 34.15 ms | 4.78 ms |\n\n## Public surface\n\n- `assistant-stream`: internal argument-reader behavior only; no exports or types changed.\n- `@assistant-ui/x-performance`: adds a private benchmark.\n- Documentation: none.\n- Templates: none.\n- Changeset: patch for `assistant-stream`.\n\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7142?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.-bU3sKqORMi6xWQCtI3WwmWVzDrGS3rN8ENpzS_iAlF0lsKt4oQpMZre7ec?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7142",
+        "created_at": "2026-09-09T22:43:26Z",
+        "updated_at": "2026-09-10T01:11:39Z",
+        "closed_at": "2026-09-10T01:11:33Z",
+        "merged_at": "2026-09-10T01:11:33Z",
+        "merge_commit_sha": "07eeb54de16fed4b7a1afc7de0b2aa264c51a299",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "9228343e86a021eeb37140283555c727bdef1024",
+          "ref": "perf/lazy-tool-args-parsing"
+        },
+        "base": {
+          "sha": "a24a47fbc265b97e34d130143b2ed98ff42c38e4",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4490327199,
+        "node_id": "PR_kwDOKwunUc8AAAABC6T0nw",
+        "number": 7150,
+        "state": "closed",
+        "title": "fix(react-langgraph): avoid repeated tool-call chunk scans",
+        "body": "## Problem\n\nIn `@assistant-ui/react-langgraph` 0.14.26, converting an AI message with many tool calls repeatedly scans `tool_call_chunks` from the beginning for every completed call. With tool calls ordered opposite their streamed chunks, this performs a quadratic number of identity comparisons.\n\nA local reproduction with generated tool calls measured median conversion time at about 2.56 ms for 1,000 calls and 49.1 ms for 5,000 calls on the base commit.\n\n## Root cause\n\nEach entry in `message.tool_calls` used `message.tool_call_chunks.find(...)` to locate its streamed arguments. Matching `n` calls against `n` chunks therefore required up to `n²` chunk visits.\n\n## Change\n\nWhen completed tool calls are present, build first-match indexes for chunk IDs and indices once per AI message, then resolve each tool call through a constant-time lookup. The indexes deliberately keep the first entry for duplicate IDs or indices, matching the previous `Array.find` behavior. Chunk-only messages skip indexing, and malformed `NaN` indices remain unmatched to preserve strict-equality semantics.\n\nThe regression tests verify that 100 streamed chunk identities are each read exactly once, chunk-only messages perform no identity reads, duplicate matches keep the first chunk, and `NaN` indices do not match.\n\nWith the same local reproduction after the change, median conversion time was about 0.66 ms for 1,000 calls and 2.76 ms for 5,000 calls.\n\n## Verification\n\n- `pnpm --filter @assistant-ui/react-langgraph test` — 322 tests passed\n- `pnpm --filter @assistant-ui/react-langgraph build`\n- `pnpm exec oxlint packages/react-langgraph/src/convertLangChainMessages.ts packages/react-langgraph/src/convertLangChainMessages.test.ts`\n- `pnpm exec oxfmt --check packages/react-langgraph/src/convertLangChainMessages.ts packages/react-langgraph/src/convertLangChainMessages.test.ts .changeset/fast-tools-match.md`\n- `pnpm changesets:check`\n\n## Public surface\n\n- Published package: `@assistant-ui/react-langgraph` (patch changeset)\n- Exports: none\n- Documentation, API-reference output, and templates: none\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.KwJAu_RSWT3yrhAa1ywPAbCJeZ7vTwhBRjXHEN_HiabaV9Fcr2MUj_zAVFw?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7150",
+        "created_at": "2026-09-09T23:36:05Z",
+        "updated_at": "2026-09-10T00:17:07Z",
+        "closed_at": "2026-09-10T00:17:01Z",
+        "merged_at": "2026-09-10T00:17:01Z",
+        "merge_commit_sha": "18f40a91028b7699646f31a164fe6a88a5479525",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "a2bc387c85f54a91f0fa925c730f4dd8261720ed",
+          "ref": "fix/langgraph-index-tool-chunks"
+        },
+        "base": {
+          "sha": "efebf22ed3dcfb075d19d234bb5477152495ff99",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4487623749,
+        "node_id": "PR_kwDOKwunUc8AAAABC3u0RQ",
+        "number": 7131,
+        "state": "closed",
+        "title": "fix(react-generative-ui): tolerate malformed collection props",
+        "body": "## Problem\n\nIn `@assistant-ui/react-generative-ui` 0.0.17, built-in collection components can crash an entire generated UI when streamed or malformed model output does not match the schema. For example, rendering `{ $type: \"Select\" }` throws while reading `options.map`, and a `Table` with non-array `columns` or a non-array row throws in the same way.\n\n## Root cause\n\nThe built-in `Select` and `Table` renderers trusted collection props at runtime even though generated content can be partial or invalid. Nearby `RadioGroup` handling already guards this boundary.\n\n## Change\n\nGuard `Select` options and `Table` columns, rows, and row entries before iterating them. Valid entries render unchanged; malformed collections or entries are ignored so the rest of the generated UI remains usable.\n\n## Verification\n\n- Added focused renderer tests for missing and malformed Select options.\n- Added focused renderer tests for malformed Table columns and rows.\n- `pnpm --filter @assistant-ui/react-generative-ui test` (29 files, 636 tests)\n- `pnpm --filter @assistant-ui/react-generative-ui build`\n- `pnpm changesets:check`\n- `pnpm lint`\n\nThe focused reproductions throw on `main` and render safely with this change.\n\n## Public surface\n\nAffected package: `@assistant-ui/react-generative-ui` (patch changeset). No exports, API reference, docs, or templates change.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7131?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.4IuP1e37yWiaA1tEPJIvFIvPJUs2vu7YGgB3QByBW9jTmkmvDNIzLAUQsKg?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7131",
+        "created_at": "2026-09-09T17:25:42Z",
+        "updated_at": "2026-09-09T22:55:18Z",
+        "closed_at": "2026-09-09T22:55:13Z",
+        "merged_at": "2026-09-09T22:55:13Z",
+        "merge_commit_sha": "efebf22ed3dcfb075d19d234bb5477152495ff99",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "91f4052df6a12004732d745834ffab8b987d8b4f",
+          "ref": "fix/generative-collection-props"
+        },
+        "base": {
+          "sha": "0bea0fc504a169ccb699c4c9efd2d7a29651c186",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4487489793,
+        "node_id": "PR_kwDOKwunUc8AAAABC3mpAQ",
+        "number": 7130,
+        "state": "closed",
+        "title": "fix(react-generative-ui): handle prototype-named component types",
+        "body": "## Problem\n\nA model-emitted component type such as `toString` or `constructor` resolves through `Object.prototype` when it is not registered in the Generative UI library. The renderer then treats that inherited function as a component entry and crashes with `TypeError: render is not a function` instead of ignoring the unknown component.\n\n## Root cause\n\n`renderGenerativeUI()` indexed the library directly without checking whether the component name was an own property.\n\n## Change\n\nRequire an own library property before rendering an entry. Explicitly registered prototype-named components remain supported.\n\n## Verification\n\n- Confirmed `{ $type: \"toString\" }` crashes before the fix and renders nothing after it.\n- Added coverage for inherited `toString` and `constructor` names.\n- Added coverage proving an explicitly registered `toString` component still renders.\n- `pnpm --filter @assistant-ui/react-generative-ui test` (637 tests)\n- `pnpm --filter @assistant-ui/react-generative-ui build`\n- `pnpm changesets:check`\n- `pnpm lint`\n\n## Public surface\n\n`@assistant-ui/react-generative-ui` receives a patch changeset. No exports or API types change.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7130?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.5ArdYnzhyts3G8haLc_8HvWxJ-efutH_rWyuAhUSp4TlIL0eZbPin79gkmc?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7130",
+        "created_at": "2026-09-09T17:09:09Z",
+        "updated_at": "2026-09-09T22:54:58Z",
+        "closed_at": "2026-09-09T22:54:53Z",
+        "merged_at": "2026-09-09T22:54:53Z",
+        "merge_commit_sha": "83122bc9054d4e78c8453860e79a2e21fe1f1fe4",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "a928b4aadfea8b863d0fc8a516dda041b66b8dde",
+          "ref": "fix/generative-component-name-lookup"
+        },
+        "base": {
+          "sha": "0bea0fc504a169ccb699c4c9efd2d7a29651c186",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4490014931,
+        "node_id": "PR_kwDOKwunUc8AAAABC6Aw0w",
+        "number": 7141,
+        "state": "closed",
+        "title": "fix(assistant-stream): reuse raw enqueue channels",
+        "body": "## Problem\n\nLow-level protocol adapters can emit raw `AssistantStreamChunk` values through `AssistantStreamController.enqueue()`. Each call currently creates a one-chunk `ReadableStream`, acquires a reader, and adds it to the merger.\n\nFor 10,000 consecutive raw chunks, that means 10,000 streams and readers.\n\nCloses #7139.\n\n## Root cause\n\n`createMergeStream().enqueue()` implements a raw chunk by delegating to `addStream()` with a newly allocated one-chunk stream.\n\n## Change\n\nReuse one lazily-created raw chunk stream for consecutive `enqueue()` calls. Adding a child stream closes the current raw channel before inserting the child, so raw and child stream ordering remains unchanged.\n\nThe focused benchmark measures 10,000 raw enqueues at about 6.5 ms after the change. The same local median probe measured approximately 82 ms on `origin/main`.\n\n## Verification\n\n- `pnpm --filter assistant-stream test` (536 passed, 22 skipped)\n- `pnpm --filter assistant-stream build`\n- `pnpm -C packages/x-performance exec vitest bench --run bench/accumulator.bench.ts`\n- `node scripts/check-changesets.mjs`\n- Focused tests cover reader reuse, raw ordering, child-stream interleaving, sealing, and cancellation.\n\n## Public surface\n\n- `assistant-stream`: internal performance change, no API changes\n- Added a patch changeset\n- Added an `@assistant-ui/x-performance` benchmark\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7141?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7141",
+        "created_at": "2026-09-09T22:41:46Z",
+        "updated_at": "2026-09-09T22:49:49Z",
+        "closed_at": "2026-09-09T22:43:15Z",
+        "merged_at": null,
+        "merge_commit_sha": "dd011e48211421a8a40d209b881f3b1e774150ed",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "59d32bcbbec4f30448067547f2a05288bf821673",
+          "ref": "perf/reuse-raw-enqueue"
+        },
+        "base": {
+          "sha": "a24a47fbc265b97e34d130143b2ed98ff42c38e4",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4488664687,
+        "node_id": "PR_kwDOKwunUc8AAAABC4uWbw",
+        "number": 7135,
+        "state": "closed",
+        "title": "WIP: issue #7133",
+        "body": "This run ended without completing the fix.",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7135",
+        "created_at": "2026-09-09T19:32:44Z",
+        "updated_at": "2026-09-09T19:41:27Z",
+        "closed_at": "2026-09-09T19:33:25Z",
+        "merged_at": null,
+        "merge_commit_sha": "91e042d2fb2b26815122de46d47343477000d21e",
+        "draft": true,
+        "user": {
+          "id": 275051718,
+          "node_id": "BOT_kgDOEGT0xg",
+          "login": "rupic-app[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/rupic-app"
+        },
+        "head": {
+          "sha": "a38d35f5c5c6fcfd27f45ab781064ac99558aabc",
+          "ref": "rupic/fix-7133-40d52ab2"
+        },
+        "base": {
+          "sha": "a24a47fbc265b97e34d130143b2ed98ff42c38e4",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4487038754,
+        "node_id": "PR_kwDOKwunUc8AAAABC3LHIg",
+        "number": 7129,
+        "state": "closed",
+        "title": "perf(docs): cache markdown via selected platforms",
+        "body": "## Problem\n\nThe main docs Markdown now follows the selected React, React Native, or React Ink platform as well as the Base UI or Radix UI flavor. Reading both query parameters inside one `force-dynamic` handler causes every request to rebuild the MDX, including repeated requests for the same page and selection.\n\nThis is the platform-aware part of #6742 and follows #7128.\n\n## Root cause\n\nThe six possible `platform + flavor` combinations had no stable route identity for Next.js to cache. The request-time handler also allowed irrelevant query parameters to keep reaching the expensive renderer.\n\n## Change\n\nMap the supported query combinations to one internal static route keyed by platform, flavor, and page slug. Keep the existing internal route as the static React + Base default. Unsupported platform values fall back to React, while non-Radix view values use Base and preserve a supported platform. Unrelated query parameters reuse the normalized static target.\n\nThe public `.md`, legacy `.mdx`, and `Accept: text/markdown` entry points remain unchanged.\n\nThe platform route fills its cache on demand instead of using `generateStaticParams`, because eagerly prerendering every page would multiply the docs render set by all six platform and flavor combinations. `dynamic = \"force-static\"` also makes the handler independent of request query data, so unrelated query parameters reuse the same route cache entry. The smaller design routes can use build-time generation without that sixfold cost.\n\n## Verification\n\n- `apps/docs/node_modules/.bin/vitest run apps/docs/lib/markdown-rewrites.test.ts apps/docs/lib/markdown-response.test.ts`\n- `pnpm lint`\n- `pnpm -C apps/docs exec next build`\n  - `/llms.mdx/[[...slug]]` and `/platform-llms.mdx/[platform]/[flavor]/[[...slug]]` are emitted as static routes.\n- Started the production build locally and exercised all six React/React Native/React Ink and Base/Radix combinations.\n  - First request: `x-nextjs-cache: MISS`\n  - Repeated request: `x-nextjs-cache: HIT`\n  - React, React Native, and React Ink returned distinct platform output.\n  - Random ignored query parameters still hit the normalized cached route.\n- Confirmed `.md`, `.mdx`, and `Accept: text/markdown` requests return Markdown with the cache policy.\n\n## Public surface\n\nNone. Route URLs and the platform-aware Markdown behavior are preserved.\n\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7129?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.lQeVBi_Agie9gkoGvEQEGGRe7_evt5Lox7ooggjL-CVELvdzsfi9DtmHqjg?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->\n\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7129",
+        "created_at": "2026-09-09T16:16:00Z",
+        "updated_at": "2026-09-09T19:05:09Z",
+        "closed_at": "2026-09-09T19:05:03Z",
+        "merged_at": "2026-09-09T19:05:03Z",
+        "merge_commit_sha": "a24a47fbc265b97e34d130143b2ed98ff42c38e4",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "0687380b08d07b4bf21306b3d4622c40f5193fec",
+          "ref": "perf/cache-markdown-platform"
+        },
+        "base": {
+          "sha": "31946e25e940baab37fa39f498bf079159b917b2",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4486937875,
+        "node_id": "PR_kwDOKwunUc8AAAABC3E9Ew",
+        "number": 7128,
+        "state": "closed",
+        "title": "perf(docs): cache design markdown via UI flavor",
+        "body": "## Problem\n\nDesign Markdown varies between Base UI and Radix UI through `?view=radix-ui`. The route reads that query parameter at request time, so every request repeats the MDX-to-Markdown render.\n\nThis is the UI-flavor part of #6742 and follows #7127.\n\n## Root cause\n\nBoth flavors share one `force-dynamic` route. Next.js cannot prerender or reuse either response while the flavor is resolved from the request inside the handler.\n\n## Change\n\nRoute the Radix query variant to a dedicated internal static handler and keep the existing handler as the static Base UI variant. Both handlers share the same renderer, but each flavor now has its own deterministic cache target. Public `.md`, legacy `.mdx`, and `Accept: text/markdown` URLs stay unchanged.\n\n## Verification\n\n- `pnpm -C apps/docs build`\n  - Both `/llms.mdx/design/[[...slug]]` and `/radix-llms.mdx/design/[[...slug]]` are emitted as SSG routes.\n- Started the production build locally and requested `/design/components/button.md` in both flavors.\n  - Both responses reported `x-nextjs-cache: HIT`.\n  - Base output contained `@base-ui/react`; Radix output contained `radix-ui`.\n- `pnpm lint`\n\n## Public surface\n\nNone. Public URLs and Markdown content are preserved; only their internal cache targets change.\n\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7128?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.ytbpBEm5NwSeMn9OG4hR_ff8DUzwzFIOMhW2JpPYuCoDp-Q21Qaqr3R04wk?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7128",
+        "created_at": "2026-09-09T16:05:22Z",
+        "updated_at": "2026-09-09T18:17:47Z",
+        "closed_at": "2026-09-09T18:17:39Z",
+        "merged_at": "2026-09-09T18:17:39Z",
+        "merge_commit_sha": "31946e25e940baab37fa39f498bf079159b917b2",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "129ad7f45f2038dcc637cf1071985808b8976dfe",
+          "ref": "perf/cache-markdown-view"
+        },
+        "base": {
+          "sha": "0b4497a7cb2a25c4f1aff0edb518b81101f05c06",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4486882241,
+        "node_id": "PR_kwDOKwunUc8AAAABC3BjwQ",
+        "number": 7127,
+        "state": "closed",
+        "title": "perf(docs): add validators to plain markdown responses",
+        "body": "## Problem\n\nThe static Markdown routes did not include content validators. Revalidating clients therefore had no reliable way to confirm that an unchanged document was still current without receiving the full response body.\n\n## Root cause\n\nThe Next.js Full Route Cache avoids rebuilding these static routes, while the public HTTP response intentionally requires freshness. The existing response headers did not include an ETag that Vercel could use for conditional revalidation.\n\n## Change\n\nKeep `no-cache, must-revalidate` so stable documentation URLs do not serve stale content, and add a content-derived SHA-256 ETag through a shared response helper. Apply the helper to the Elements, examples, tap, pricing, blog, and combined `llms-full.txt` routes.\n\nThe digest helper is shared with agent-discovery so both surfaces use the same validator format. The platform-aware docs and design routes are handled by the two stacked PRs because those routes first need stable static variants. `llms.txt` remains separate because it intentionally has a different robots policy.\n\n## Verification\n\n- Focused Vitest coverage for the response helper, agent discovery, and all six colocated route handlers\n- `pnpm lint`\n- `pnpm -C apps/docs exec next build`\n- On the Vercel preview, the initial request returned `200` with the content ETag; repeating it with `If-None-Match` returned `304` with no response body\n\n## Public surface\n\nNone. The affected routes keep their existing URLs and content types.",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7127",
+        "created_at": "2026-09-09T15:59:23Z",
+        "updated_at": "2026-09-09T18:04:53Z",
+        "closed_at": "2026-09-09T18:04:47Z",
+        "merged_at": "2026-09-09T18:04:47Z",
+        "merge_commit_sha": "0b4497a7cb2a25c4f1aff0edb518b81101f05c06",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "08d618e295938fe60057b5d892d1cb532f37514c",
+          "ref": "perf/cache-plain-markdown"
+        },
+        "base": {
+          "sha": "0bea0fc504a169ccb699c4c9efd2d7a29651c186",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4485667291,
+        "node_id": "PR_kwDOKwunUc8AAAABC13Z2w",
+        "number": 7119,
+        "state": "closed",
+        "title": "feat(docs): keep page markdown on the selected platform",
+        "body": "## Problem\n\nOn pages with platform-specific instructions:\n\n1. Select React Native or React Ink.\n2. Open the page actions.\n3. Use Copy page or View as Markdown.\n\nThe generated Markdown still contains the React tab and React package imports instead of the selected platform. This affects the current docs deployment.\n\n## Root cause\n\nThe selected platform lives in client-side docs state, but the page actions linked to a platform-neutral Markdown URL. The Markdown route and static MDX components also always rendered the React default. The copy hook cached its first request without accounting for a later platform URL change.\n\n## Change\n\n- Carry React Native and Ink selections into page Markdown URLs while keeping React URLs canonical.\n- Parse and validate the platform in the Markdown route.\n- Render the matching PlatformTabs and PlatformOnly content.\n- Rewrite exact @assistant-ui/react references in fenced code for React Native and Ink.\n- Key copied Markdown content by URL so switching platforms fetches the correct page.\n- Keep non-platform docs surfaces and default MCP/LLM output on React.\n\n## Verification\n\n- pnpm -C apps/docs exec vitest run lib/docs-platform.test.ts components/pages/docs/platform/rewrite.test.tsx components/pages/docs/platform/mdx.llm.test.tsx hooks/use-markdown-copy.test.tsx\n- pnpm -C apps/docs test\n- pnpm -C apps/docs exec tsc --noEmit\n- pnpm lint\n- pnpm -C apps/docs build\n- Started the production build locally and confirmed:\n  - /docs/runtimes/custom/local-runtime.md returns React instructions.\n  - ?platform=rn returns React Native and Expo instructions.\n  - ?platform=ink returns React Ink and terminal instructions.\n\nThe reproduction returns React before this change and the selected platform after it.\n\n## Public surface\n\nNone. This changes only the private docs application, so no changeset is required.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7119?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.XfraXVAnI5JmR-MAZ8HZqWe7gm7PvtcGKgP8IOJ7DxRxEvM8JUBRu28yals?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7119",
+        "created_at": "2026-09-09T13:50:56Z",
+        "updated_at": "2026-09-09T15:51:51Z",
+        "closed_at": "2026-09-09T15:51:44Z",
+        "merged_at": "2026-09-09T15:51:44Z",
+        "merge_commit_sha": "0bea0fc504a169ccb699c4c9efd2d7a29651c186",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "9f3938042f45942cd744740e480d06807ed574ee",
+          "ref": "fix/docs-platform-markdown"
+        },
+        "base": {
+          "sha": "4767a923d818cc2a4a7b0e50ce12d2abbe83bccb",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4485799611,
+        "node_id": "PR_kwDOKwunUc8AAAABC1_euw",
+        "number": 7123,
+        "state": "closed",
+        "title": "fix(safe-content-frame): clear completed load timers",
+        "body": "## Problem\n\nA successful SafeContentFrame load leaves the timeout created by fullyLoadedPromiseWithTimeout scheduled until the full deadline. Repeated renders retain unnecessary timers and their closures after the frame has already settled.\n\n## Root cause\n\nPromise.race settled the returned promise but did not cancel the losing timeout branch.\n\n## Change\n\nTrack the timeout handle and clear it in a finally block after the load promise either resolves or rejects. Timeout behavior and existing error codes remain unchanged.\n\n## Verification\n\n- `cd packages/safe-content-frame && node_modules/.bin/vitest run src/index.test.ts`\n- `cd packages/safe-content-frame && node_modules/.bin/vitest run`\n- `cd packages/safe-content-frame && node_modules/.bin/aui-build`\n- `node scripts/check-changesets.mjs`\n- Confirmed successful completion leaves one timer without the fix and zero timers with it.\n\n## Public surface\n\n`safe-content-frame` behavior only. No exports, documentation, templates, or API-reference output changed. Includes a patch changeset.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7123?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.-YDLQL6KdiKHOdUNJU1zSBFkJ5MZBC1KwSC3K3F7hAP1r5DbLc2LbqY2j5Y?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7123",
+        "created_at": "2026-09-09T14:04:12Z",
+        "updated_at": "2026-09-09T14:52:20Z",
+        "closed_at": "2026-09-09T14:52:14Z",
+        "merged_at": "2026-09-09T14:52:14Z",
+        "merge_commit_sha": "318e4da0bc4b54064758744209fca8da857b8e31",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "1fb2f4bc0ba2650139490140561538e4fc59b053",
+          "ref": "fix/safe-content-frame-load-timer"
+        },
+        "base": {
+          "sha": "4767a923d818cc2a4a7b0e50ce12d2abbe83bccb",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4485796623,
+        "node_id": "PR_kwDOKwunUc8AAAABC1_TDw",
+        "number": 7122,
+        "state": "closed",
+        "title": "fix(core): handle assistant frame result serialization failures",
+        "body": "## Problem\n\nAn AssistantFrame tool can complete with a valid JavaScript value that cannot be structured-cloned, such as a function. In the focused reproduction, posting that result threw DataCloneError, no tool result reached the host, and the host could wait until its request timeout.\n\n## Root cause\n\nThe provider converted tool execution failures into tool-result errors, but the result postMessage call itself was outside that protection. Synchronous serialization failures therefore escaped the asynchronous message handler.\n\n## Change\n\nIf posting a successful tool result fails, send a clone-safe tool-result error for the same call. The message handler also contains a failure from the fallback transport so it cannot become an unhandled rejection.\n\n## Verification\n\n- `cd packages/core && node_modules/.bin/vitest run src/model-context/frame/provider.test.ts`\n- `cd packages/core && node_modules/.bin/aui-build`\n- `node scripts/check-changesets.mjs`\n- Confirmed the regression throws DataCloneError and sends no reply without the fix, then sends the structured fallback error with the fix.\n\n## Public surface\n\n`@assistant-ui/core` behavior only. No exports, documentation, templates, or API-reference output changed. Includes a patch changeset.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7122?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.eqxeZYseeyzAz4XqiCOrSa8M339jFdVSbEs1khdsUDqCm9G1KoSBCZwLwqY?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7122",
+        "created_at": "2026-09-09T14:03:55Z",
+        "updated_at": "2026-09-09T14:52:09Z",
+        "closed_at": "2026-09-09T14:52:02Z",
+        "merged_at": "2026-09-09T14:52:02Z",
+        "merge_commit_sha": "0529e2d53ddacca05ab722705529a0999119a6a8",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "40f0b30d82b81dde5f4b54a19d28ec5c8b0ac7ba",
+          "ref": "fix/assistant-frame-result-serialization"
+        },
+        "base": {
+          "sha": "4767a923d818cc2a4a7b0e50ce12d2abbe83bccb",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4485785792,
+        "node_id": "PR_kwDOKwunUc8AAAABC1-owA",
+        "number": 7121,
+        "state": "closed",
+        "title": "fix(react): cancel WebMCP tools during async validation",
+        "body": "## Problem\n\nWebMCP tool execution can remain pending after cancellation when a Standard Schema validator returns a slow or unresolved promise. In the focused reproduction, aborting either the caller signal or the provider lifecycle signal did not settle the tool call, and the tool implementation never ran.\n\n## Root cause\n\nCancellation was checked only after asynchronous schema validation completed. An unresolved validator therefore prevented the execution path from reaching the cancellation check.\n\n## Change\n\nRace only thenable validation results against the active cancellation signal, using the same sentinel-based shape as the primary tool-execution path in assistant-stream. Synchronous validators remain synchronous, and checks before and after validation close the cancellation windows around the race.\n\nThe helper remains local because the assistant-stream implementation is package-private; exporting it would broaden another package's surface for one internal WebMCP caller.\n\n## Verification\n\n- `cd packages/react && node_modules/.bin/vitest run src/unstable/webmcp/convertTools.test.ts`\n- `cd packages/react && node_modules/.bin/vitest run`\n- `cd packages/react && node_modules/.bin/aui-build`\n- `node scripts/check-changesets.mjs`\n- Confirmed the regression test stays pending without the fix and passes with it for caller and lifecycle cancellation.\n- Confirmed cancellation after validation settles still prevents tool execution.\n\n## Public surface\n\n`@assistant-ui/react` behavior only. No exports, documentation, templates, or API-reference output changed. Includes a patch changeset.",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7121",
+        "created_at": "2026-09-09T14:02:56Z",
+        "updated_at": "2026-09-09T14:51:55Z",
+        "closed_at": "2026-09-09T14:51:49Z",
+        "merged_at": "2026-09-09T14:51:49Z",
+        "merge_commit_sha": "94c3fd52654eac096a5e7305d03d1ca6e96d15ad",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "35499d52d58644b347e444aa177f36478a895cad",
+          "ref": "fix/webmcp-async-cancellation"
+        },
+        "base": {
+          "sha": "4767a923d818cc2a4a7b0e50ce12d2abbe83bccb",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4484871560,
+        "node_id": "PR_kwDOKwunUc8AAAABC1G1iA",
+        "number": 7115,
+        "state": "closed",
+        "title": "feat: align the cloud SDK with Assistant Cloud 0.2",
+        "body": "refs #4826\n\n## summary\n\n- run reports now carry `provider`, `outcome_type` (`aborted`, `disconnected`, `length`, `content_filter`), `error_code`, `message_id`, `first_token_ms`, `duration_ms`, a `finish_reason` per step and `trace_id`, plus `environment`, `release` and `tags` from the `telemetry` config; one `createRunReport` builder in `assistant-cloud` assembles the body for the assistant-ui runtime and for `@assistant-ui/cloud-ai-sdk`, and `provider_type` and `metadata` stay on the wire so older self hosted clouds keep working\n- new server side subpath `assistant-cloud/telemetry`: `createAssistantCloudTraceExporter`, `createAssistantCloudSpanProcessor`, `assistantCloudTraceMetadata` and `withAssistantCloudTraceMetadata` send AI SDK GenAI spans to `POST /v1/traces` and hand the trace id to the browser, so the client report and the server spans merge into one run; the OpenTelemetry packages are optional peers of the subpath only\n- engagement events (sends, edits, stops, regenerates, copies, branch switches, suggestions, attachments, thread switches, speech, voice, shown errors) batched to `POST /v1/events` without message content, `telemetry.events: false` opts out; `cloud.scores.create`, `useCloudChat().feedback`, `cloud.files.generatePresignedDownloadUrl` with the object `key` on uploads, and `CloudAPIError.code` and `details` (including `plan_limit_reached` on a 402)\n- the core store gains the events the engagement reporter reads: `composer.send` carries `chars`, `attachments` and `suggestion`, plus `composer.cancel`, a `message.*` event map (`reload`, `speak`, `branchSwitched`, `copied`, `error`), `thread.cancelRun` and `thread.voiceStarted`, emitted from the composer, message and thread runtime clients\n- the docs site exports its AI SDK spans to the cloud when `ASSISTANT_API_KEY` is set (its Axiom leg now reuses the package's span processor with the site's own filter) and carries the trace id through `messageMetadata`; docs cover outcomes, traces, engagement, scores, signed attachments and allowed origins\n- the reviewable logic lives in `packages/cloud/src`, `packages/core/src/react/runtimes/cloud`, `packages/core/src/store` (scopes and runtime clients), `packages/core/src/runtime/base` and `packages/cloud-ai-sdk/src`; `api-surface/*.ts`, `size-budgets.json` and `pnpm-lock.yaml` are generated, and three manifests change by hand: `api-surface/package.json` (the OpenTelemetry packages the surface types reference), `apps/docs/package.json` (a direct `assistant-cloud` dependency for the subpath) and `packages/core/package.json` (the peer floor)\n- `AGENTS.md` records two policies: a subpath that needs a runtime the host owns declares it as an optional peer, and an approved minor carries the `caret-break: intended` marker; one changeset may describe a whole release\n\n## breaking changes\n\n- `assistant-cloud` and `@assistant-ui/cloud-ai-sdk` move to 0.2.0; consumers on a `^0.1.x` range take both together. the changeset declares the range break with `<!-- caret-break: intended -->`, which `scripts/check-changeset-semver.mjs` now lists as intended instead of failing the check\n- `@assistant-ui/core` ships as a patch but raises its `assistant-cloud` peer floor to `^0.2.0`, so an app that pins `assistant-cloud@0.1.x` next to core must move it in the same upgrade; the semver check cannot see a peer floor raise, so this line is the notice\n\n## test plan\n\n### already verified\n\n- [x] `node packages/x-buildutils/check-resource-memoization.mjs` -> every resource hosting file compiles under the React Compiler (the message and thread clients read their ids by value now)\n- [x] `packages/cloud` vitest -> 192/192, `packages/cloud-ai-sdk` vitest -> 131/131 on both peer legs (`vitest.peer-v6.config.ts` included), `packages/core` vitest -> 1800/1800, `packages/react` -> 581/581, `packages/ai-sdk` -> 274/274\n- [x] `pnpm api-surface` regenerated and `pnpm api-surface:check` passes; `pnpm size:update` adds `assistant-cloud ./telemetry` (gzip 628), records the main entry at gzip 7115 (from 5352), `@assistant-ui/core ./store/internal` at 8788 (from 7876, the new store events and their emit sites) and `./react` at 79735 (from 76397); `pnpm size:check`, `pnpm lint`, `pnpm changesets:check`, `pnpm changeset-semver:test` (27/27) and `pnpm workspace-ranges:test` pass\n- [x] `apps/docs` `next build` passes and the touched docs files typecheck\n- [x] end to end: the docs demo run locally against a local cloud API (`wrangler dev` with `ENV=development`) on the staging database. server spans arrived through `POST /v1/traces` (three `chat` spans and two `execute_tool` spans with tool call ids and finish reasons), the browser's `POST /v1/runs` report merged into the same run whether the spans or the report arrived first, and `POST /v1/events` landed `message_sent` with the remote thread id\n\n### reviewer should verify\n\n- [ ] on a project with the new cloud deployed, send one message from `examples/with-cloud`: the run on the dashboard shows an outcome, a duration and a first token time, and the Engagement page counts the send\n- [ ] with `instrumentation.ts` registering `createAssistantCloudSpanProcessor(createAssistantCloudTraceExporter({ apiKey }))` and the route using `messageMetadata: withAssistantCloudTraceMetadata()`, one turn produces one run carrying both server spans and the client's `message_id`\n\n## notes\n\n- publish this release before the assistant-cloud follow-up PR; nothing here depends on it, and the new fields are silently dropped by clouds that predate them\n- the cloud merge path does not yet adopt `thread_id`, `created_by` or `first_token_ms` from a client report that lands after the spans (assistant-ui/assistant-cloud#75), and message lists do not yet sign attachment URLs (assistant-ui/assistant-cloud#76)\n- on the assistant-ui runtime with the `ai-sdk/v6` persistence format `first_token_ms` (#7112) and `error` with `error_code` (#7116) are not reported yet, and `tool_approved` and `tool_rejected` have no producer (#7113)\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7115",
+        "created_at": "2026-09-09T12:29:21Z",
+        "updated_at": "2026-09-09T13:43:16Z",
+        "closed_at": "2026-09-09T13:43:08Z",
+        "merged_at": "2026-09-09T13:43:07Z",
+        "merge_commit_sha": "4767a923d818cc2a4a7b0e50ce12d2abbe83bccb",
+        "draft": false,
+        "user": {
+          "id": 66008528,
+          "node_id": "MDQ6VXNlcjY2MDA4NTI4",
+          "login": "okisdev",
+          "type": "User",
+          "html_url": "https://github.com/okisdev"
+        },
+        "head": {
+          "sha": "63cfde4dce91cdf4ece5c4d76af19b22a71454fc",
+          "ref": "feat/cloud-0.2"
+        },
+        "base": {
+          "sha": "3a45a01c0d6141102638ecd4f32d1af4d01fb510",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4480936721,
+        "node_id": "PR_kwDOKwunUc8AAAABCxWrEQ",
+        "number": 7107,
+        "state": "closed",
+        "title": "fix(assistant-stream): preserve prototype-named tool call IDs",
+        "body": "## Problem\n\nWhen at least one pending tool executes, another unresolved tool call whose ID is `constructor`, `toString`, or `__proto__` can be assigned a phantom result. The call is then marked complete even though no matching tool ran.\n\nThe regression combines one executable tool with an unavailable prototype-named call. Before this change, the unavailable call is rewritten with `state: \"result\"`; it remains pending here.\n\n## Root cause\n\nExecuted results were collected in a plain object and read with `results[toolCallId]`. Missing prototype-named IDs resolve inherited `Object.prototype` properties, so the merge treats them as real tool responses.\n\n## Change\n\nIndex tool responses with a `Map`. This preserves string IDs and last-result-wins behavior without inherited keys or `__proto__` assignment semantics.\n\n## Verification\n\n- `pnpm --filter assistant-stream test`: v6 and peer-v5 suites each pass 530 tests with 22 skipped; peer-v5 type check passes\n- `pnpm --filter assistant-stream build`\n- scoped Oxlint and Oxfmt checks\n- `pnpm changesets:check`\n- the three prototype-key cases fail on `origin/main` and pass here\n\n## Public surface\n\n`assistant-stream` behavior only. No exported signatures or documentation change. Includes a patch changeset.\n\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7107?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.hjrlfvK77L_5BEVvDUR7heQ9xVNjVkN82R-DZDhYcl1gO5wz_A5v3s3GSyo?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7107",
+        "created_at": "2026-09-09T03:57:26Z",
+        "updated_at": "2026-09-09T13:11:37Z",
+        "closed_at": "2026-09-09T13:11:30Z",
+        "merged_at": "2026-09-09T13:11:30Z",
+        "merge_commit_sha": "e6158c8af3306f9af4af2fea8987ded698d6393e",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "5a1b4db460aca6c5b7edb388360d3f52b010ebd4",
+          "ref": "fix/assistant-stream-prototype-tool-call-ids"
+        },
+        "base": {
+          "sha": "1f787162bd7832a19f30104df2d00cc509d88255",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4480915420,
+        "node_id": "PR_kwDOKwunUc8AAAABCxVX3A",
+        "number": 7106,
+        "state": "closed",
+        "title": "fix(assistant-stream): settle cancellation during tool validation",
+        "body": "## Problem\n\nCancelling a pending tool call while its asynchronous Standard Schema validator never settles leaves `unstable_runPendingTools()` pending forever. The tool does not execute, but the run cannot finish cancellation and consumers can remain stuck in a running state.\n\nA focused regression starts a validator promise, aborts the run without settling that promise, and waits for the pending-tool pass. Before this change, that await never completes.\n\n## Root cause\n\nThe tool execution abort race was created only after schema validation finished. An asynchronous validator therefore sat outside the cancellation boundary.\n\n## Change\n\nRace asynchronous validation against the existing abort signal. Cancellation returns the established cancelled-tool response and removes the temporary listener. Synchronous validation and already-started tool execution retain their existing ordering and behavior.\n\n## Verification\n\n- `pnpm --filter assistant-stream test`: v6 and peer-v5 suites each pass 528 tests with 22 skipped; peer-v5 type check passes\n- `pnpm --filter assistant-stream build`\n- scoped Oxlint and Oxfmt checks\n- `pnpm changesets:check`\n- the regression hangs on `origin/main` and settles as cancelled here; resolving validation afterward does not execute the tool\n\n## Public surface\n\n`assistant-stream` behavior only. No exported signatures or documentation change. Includes a patch changeset.\n\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7106?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.6qOH5rd_YEjTqMBzXjhRk1RB0fEc_xx4MYa-EHnV7_7r3ZmEMmLhkbZzy1I?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7106",
+        "created_at": "2026-09-09T03:52:56Z",
+        "updated_at": "2026-09-09T13:11:21Z",
+        "closed_at": "2026-09-09T13:11:15Z",
+        "merged_at": "2026-09-09T13:11:15Z",
+        "merge_commit_sha": "253c80de81d07ee556978d99e342f8bc1b57cb0a",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "c90434fecc867bde186014dfea0565750eb5fab5",
+          "ref": "fix/assistant-stream-validation-abort"
+        },
+        "base": {
+          "sha": "1f787162bd7832a19f30104df2d00cc509d88255",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4480877829,
+        "node_id": "PR_kwDOKwunUc8AAAABCxTFBQ",
+        "number": 7104,
+        "state": "closed",
+        "title": "fix(ai-sdk): keep replacement MCP clients after stale timeouts",
+        "body": "## Problem\n\nConcurrent `AISDKToolkit.tools()` calls can share one MCP client while carrying different timeout deadlines. If the first call times out, a later call may create a healthy replacement. When another old call subsequently times out, it deletes the replacement from the pool and the next request opens a duplicate connection.\n\nThe regression reproduces the interleaving with staggered callers. Before this change, the fourth lookup creates a third client instead of reusing the second client.\n\n## Root cause\n\nThe tool-list timeout handler deleted the pool entry by server name without checking whether that entry still referred to the client used by the timed-out request.\n\n## Change\n\nCapture the exact pooled client promise used by each request. Timeout cleanup now evicts and closes the client only while that promise is still the current entry for the server name. Stale callers still reject with their timeout, but cannot remove a newer connection.\n\n## Verification\n\n- `pnpm --filter @assistant-ui/ai-sdk test`: 25 files, 275 tests passed\n- `pnpm --filter @assistant-ui/ai-sdk build`\n- scoped Oxlint and Oxfmt checks\n- `pnpm changesets:check`\n- the new regression fails on `origin/main` with three client creations and passes here with two\n\n## Public surface\n\n`@assistant-ui/ai-sdk` behavior only. No exported signatures or documentation change. Includes a patch changeset.\n\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7104?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.40QTfTuRHaWnFj7jh5NxddcNCag5wof8i5lxmT_UmgowNu0jfL-u32ZhyDI?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7104",
+        "created_at": "2026-09-09T03:46:10Z",
+        "updated_at": "2026-09-09T13:10:56Z",
+        "closed_at": "2026-09-09T13:10:50Z",
+        "merged_at": "2026-09-09T13:10:50Z",
+        "merge_commit_sha": "1d371db254fae7b15fa93e34f10369d61a0fc301",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "544bd24c030ea088c920a152d2da990a829be455",
+          "ref": "fix/ai-sdk-mcp-timeout-eviction"
+        },
+        "base": {
+          "sha": "1f787162bd7832a19f30104df2d00cc509d88255",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474618912,
+        "node_id": "PR_kwDOKwunUc8AAAABCrVEIA",
+        "number": 7066,
+        "state": "closed",
+        "title": "fix(react-streamdown): keep text-only pre elements",
+        "body": "## Problem\n\nRaw HTML `<pre>` blocks lose their leading spaces and line breaks. The browser displays `first second` on one line instead of two indented lines.\n\nThis reproduction applies to base `55c34a62512f901194470c6ad6fc561d69be207b`, where `@assistant-ui/react-streamdown` is version `0.3.13`. Render this component from the repository root:\n\n```tsx\nimport { Streamdown } from \"streamdown\";\nimport { PreOverride } from \"./packages/react-streamdown/src/adapters/PreOverride\";\n\nexport default function Repro() {\n  return (\n    <Streamdown mode=\"static\" components={{ pre: PreOverride }}>\n      {'<pre title=\"Plain text\">  first\\n  second</pre>'}\n    </Streamdown>\n  );\n}\n```\n\n## Root cause\n\nThe override removes every `<pre>` wrapper. A `<code>` child normally renders the replacement wrapper, but text-only blocks have no such child.\n\n## Change\n\nBlocks without a `<code>` child use the consumer's `components.pre` renderer, or a native `<pre>` if none is supplied. Native elements do not receive the HTML tree node. Code blocks retain the existing context and `data-block` behavior. The child check uses the same approach as the Markdown package.\n\n## Verification\n\n`pnpm --filter @assistant-ui/react-streamdown test src/__tests__/PreOverride.test.tsx` produced the missing-element failure before the correction. All 12 tests pass after the correction. Scoped Oxlint and `pnpm changesets:check` pass.\n\nBrowser checks confirmed the whitespace correction, text updates, nested text, empty blocks, inline code, and settled fenced code without duplicate wrappers.\n\n## Public surface\n\n`@assistant-ui/react-streamdown` has a patch changeset. Public exports and signatures stay unchanged. Documentation, generated API pages, and templates require no changes.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7066?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.OCvbObunu_Az_EyGsZkDMoggRZUzve-71MwIrmHl19iMbCSocwJP-JV6uLY?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7066",
+        "created_at": "2026-09-08T13:14:41Z",
+        "updated_at": "2026-09-09T04:02:35Z",
+        "closed_at": "2026-09-09T04:02:31Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "4d2ea4429cb9febb9530c4d2bc1bbd029949c3cb",
+          "ref": "fix/streamdown-text-only-pre"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4475570423,
+        "node_id": "PR_kwDOKwunUc8AAAABCsPI9w",
+        "number": 7082,
+        "state": "closed",
+        "title": "fix(react-streamdown): render user pre and code components through the code adapter",
+        "body": "## Problem\n\n`StreamdownTextPrimitive` accepts `components.pre` and `components.code` (they are part of streamdown's `Components` type and the migration guide points react-markdown users at `components`), but neither is rendered once `SyntaxHighlighter`, `CodeHeader`, or `componentsByLanguage` is set, and `pre` is never rendered at all. With `components={{ pre, code, SyntaxHighlighter }}` on a message holding an inline span and a fenced block, `pre` and `code` are called zero times; inline code renders through the adapter's own `<code>` and the block through the adapter's own `<pre>`/`<code>` defaults. A raw `<pre>` with no `code` child (rehype-raw HTML) loses its element entirely.\n\nCloses #7081\n\n## Root cause\n\n`useAdaptedComponents` spreads `{ pre: PreOverride }` after the user's components unconditionally and `code: AdaptedCode` after them whenever an adapter trigger is set. `createCodeAdapter` never received the user's `pre`/`code`; it rendered hard-coded `DefaultPre`/`DefaultCode` and a hard-coded inline `<code>`. `PreOverride` renders only a context provider, so a `<pre>` without a `code` child had nothing to emit its element.\n\n## Change\n\nThe adapter now follows `@assistant-ui/react-markdown`'s `CodeOverride` contract. `useAdaptedComponents` destructures `pre` and `code` alongside `SyntaxHighlighter` and `CodeHeader` and passes them into `createCodeAdapter` as `Pre`/`Code`: inline code renders through the user `Code` with the adapter's inline class merged in, the `SyntaxHighlighter` receives `components={{ Pre, Code }}` as the user's components, and the block fallback wraps `<Pre {...preProps}><Code/></Pre>` with them. `PreOverride` gains a `fallbackPre`: a `<pre>` whose node has no `code` child renders through the user's `pre` or a plain `<pre>`, as react-markdown's `PreOverride` does. Intrinsic tag names (`pre: \"section\"`), which streamdown's `Components` map already admits and `StreamdownTextComponents` inherits, are wrapped into components with `node` stripped; a typed test uses them without a cast. The `mergedComponents` memo in `StreamdownText` re-spread what the adapter had already merged and is removed; `useAdaptedComponents` returns the final map.\n\n- The `pre` entry keeps a stable component identity across renders: `PreWithFallback` is built with `useCallbackRef`, the same guard `@assistant-ui/react-markdown` applies at the identical site, so an inline `components={{ pre }}` object, and an inline-arrow `pre`, no longer remount every `<pre>` subtree per streamed token; intrinsic tag wrappers are cached per tag name. The wrapper serves the previous `pre` for one render after `pre` changes, which is unobservable through the primitive because streamdown's block memo does not re-render on `components` changes (verified on main). `useCallbackRef` is a local hook (`src/useCallbackRef.ts`) rather than `@radix-ui/react-use-callback-ref`, because that hook is one of the utilities to localize as this repo moves off Radix and this package declares no other Radix dependency. It also assigns its ref during render rather than in an effect: the consumers here are component types, which run in the same pass that produced the new callback, so an effect would hand them the previous one with nothing scheduled to correct it. `src/__tests__/useCallbackRef.test.tsx` pins both halves and its second case fails on the effect-based form.\n- `{ pre, code }` with no other adapter trigger now routes through the adapter (`shouldUseCodeAdapter` owns that rule): the user's `code` had already replaced streamdown's `CodeBlock` on that path, so there is no chrome to preserve, and the fence renders as `<Pre><Code/></Pre>`. `{ pre }` alone still leaves fences to streamdown's `CodeBlock`; `{ code }` alone is unchanged.\n- The highlighter receives `Pre`/`Code` wrapped with the source pre and code props through `useCallbackRef`, merging `className` as react-markdown's `withDefaultProps` does, so the same `SyntaxHighlighter` keeps both the source and its own classes under both primitives.\n- A raw `<pre>` with no `code` child now keeps its element for every user, including users who pass no `components`. streamdown's own default `pre` drops it; react-markdown keeps it. Named in the changeset.\n- User `pre` alone, with no `code` and no adapter trigger, still lets streamdown's own `CodeBlock` render fences. Activating the adapter on `pre` alone would silently drop streamdown's code block chrome.\n- The block fallback's `Pre` now receives the pre node from `PreContext` instead of the code node; the only in-repo consumer of `useStreamdownPreProps` is this adapter, and the docs already describe those props as the parent `<pre>`'s.\n- `DefaultPre` is defined once in `PreOverride.tsx` and reused by the adapter.\n- The `code` entry keeps a stable component identity too. The adapter options travel as a prop on a fixed `CodeAdapter` component, the shape `@assistant-ui/react-markdown` uses for `CodeOverride`, so a fresh `components` object updates the code block through the memo comparator instead of replacing the component type. `createCodeAdapter` is gone: with the options on a prop it had no production caller, so the four-line binder its unit tests render through lives in the test file. `StreamdownText` also passes the components map through `useStableProps`, which this PR is the right place for because it deleted the outer `mergedComponents` memo and took ownership of the map identity.\n- Docs: the `components` row of the props table names `pre`/`code`, and the migration section states which combinations route `pre`/`code` through the adapter.\n- Pre-existing and out of scope: `{ SyntaxHighlighter }` alone does not satisfy `StreamdownTextComponents` for a typed consumer because streamdown's `Components` index signature rejects `SyntaxHighlighterProps`; the tests cast around it on main too. Tracked as a follow-up.\n\n## Verification\n\nRender counts on main versus this branch for the text ``inline `x` and`` plus a fenced `ts` block:\n\n| components | main | this PR |\n| --- | --- | --- |\n| `{ pre, code, SyntaxHighlighter }` | `pre` 0, `code` 0 | `code` renders the inline span with `aui-streamdown-inline-code`; `SyntaxHighlighter` receives `Pre`/`Code` as the user's |\n| `{ pre, code }`, with or without `componentsByLanguage` for another language | `pre` 0, `code` 2, no `<pre>` element | block fallback renders `<pre data-testid=user-pre><code data-testid=user-code>` |\n| `{ pre }` on `<pre>raw text</pre>` | `pre` 0, no `<pre>` element | user `pre` renders `raw text` |\n| none, on `<pre>raw text</pre>` | no `<pre>` element | `<pre>raw text</pre>` |\n| `{ SyntaxHighlighter }` only | reference | byte-identical HTML |\n| `{ code }` only, no trigger | `code` passed through | unchanged |\n| `{ pre }` only, fenced block | streamdown `CodeBlock` | unchanged |\n\nRemount counts for the user `pre`/`code` over 5 appended tokens, with `components` written as the documented inline object literal. The fence itself grows, because streamdown memoizes a block whose text has not changed and a probe that only grows the paragraph above the fence measures nothing:\n\n| components | main | before the identity fix | this PR | `@assistant-ui/react-markdown` |\n| --- | --- | --- | --- | --- |\n| stable `pre`/`code` values | 0 | `pre` 5, `code` 5 | 0 | 0 |\n| inline-arrow `pre`/`code` | `pre` 0 (never rendered), `code` 5 | 5 / 5 | 5 / 5 | 4 / 4 |\n| stable values + inline `componentsByLanguage` | 0 | 5 / 5 | 0 | n/a |\n\nHoisting the map to a module constant gives 0 on every row, which isolates the cause to the `components` object identity. The inline-arrow row is inherent rather than a remaining gap: the user's arrow is eventually named as an element type and a fresh type remounts, which is why main and the sibling package do the same. Holding `Pre`/`Code` at a stable identity inside `CodeAdapterInner` was tried and moved the remount one level down for identical counts.\n\nSwapping `SyntaxHighlighter` or `code` for a different component with the fence text unchanged does not take effect, on main, before the fix, and after it alike; react-markdown behaves the same way. With an inline `componentsByLanguage` and unchanged text the highlighter is invoked once at mount and zero more times across 5 parent re-renders.\n\n- `packages/react-streamdown`: `pnpm exec vitest run` exits 0 (11 files, 248 tests). With the four source files restored to main, the four touched test files exit 1 with 14 failures; with only the two adapter files restored to the pre-fix state, the four identity tests fail and the other 242 pass.\n- Mid-fence streaming (`intro` + blank line + an unclosed `ts` fence with `isRunning`) still reaches the `SyntaxHighlighter`, so the `code`-child check holds for the streaming hast shape.\n- `pnpm exec oxlint` and `pnpm exec oxfmt --check` on the package source exit 0; `pnpm exec tsc --noEmit -p tsconfig.json` exits 0.\n- `node scripts/generate-api-surface.mjs --check --filter @assistant-ui/react-streamdown` exits 0; `git diff origin/main -- api-surface` is empty.\n- `pnpm changesets:check` exits 0.\n- `pnpm exec turbo build --filter='...@assistant-ui/react-streamdown'` exits 0 (27 tasks).\n- `pnpm size:check`: `@assistant-ui/react-streamdown .` measures 4613 gzip bytes against a recorded 4454, reported ok because the 159 B sit inside the max(2%, 256 B) tolerance. A full `aui-build` of the package followed by `size --update` writes the file unchanged, because `packages/x-performance/lib/size.mjs:258` re-records an entry only when its status is not `ok`. Main's own `dist` under the current lockfile measures 4334 on the same toolchain, so part of the move is drift already on main; the local `useCallbackRef` accounts for about 14 B of it, since the Radix package was externalised from the bundle. #7053 re-records the same entry, so whichever lands second takes a one-line rebase of `size-budgets.json`.\n\n## Public surface\n\n`@assistant-ui/react-streamdown`, patch changeset. No dependency added or removed. No export added or changed: `PreComponent`, `PreOverrideProps`, `DefaultPre`, `CodeAdapter`, `CodeAdapterProps`, `CodeAdapterOptions`, and `useCallbackRef` are module-level exports the package index does not re-export, and the api-surface file is unchanged. Docs: one clause in `apps/docs/content/docs/guides/streamdown.mdx`.\n\n\n\n\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7082",
+        "created_at": "2026-09-08T14:57:38Z",
+        "updated_at": "2026-09-09T04:02:19Z",
+        "closed_at": "2026-09-09T04:02:14Z",
+        "merged_at": "2026-09-09T04:02:14Z",
+        "merge_commit_sha": "3a45a01c0d6141102638ecd4f32d1af4d01fb510",
+        "draft": false,
+        "user": {
+          "id": 115853816,
+          "node_id": "U_kgDOBufJ-A",
+          "login": "ShobhitPatra",
+          "type": "User",
+          "html_url": "https://github.com/ShobhitPatra"
+        },
+        "head": {
+          "sha": "ff493738116ee839a39951b9b8f506bc145ff483",
+          "ref": "streamdown-user-pre-code-components"
+        },
+        "base": {
+          "sha": "0afb5989cc3e2f1b9343f687025bbef009151ca0",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4480193140,
+        "node_id": "PR_kwDOKwunUc8AAAABCwpSdA",
+        "number": 7096,
+        "state": "closed",
+        "title": "fix(ui): render non-json tool values safely",
+        "body": "## Problem\n\nThe canonical ToolFallback renderers pass arbitrary tool results and errors directly to JSON.stringify(). Valid runtime values such as bigint and circular objects therefore throw during React rendering and can take down the fallback message UI.\n\nOn current main (9b9d5e936), rendering <ToolFallback.Result result={1n} /> fails with TypeError: Do not know how to serialize a BigInt.\n\n## Root cause\n\nThe fallback assumes every non-string unknown value is JSON-serializable even though the public result and error fields are typed as unknown.\n\n## Change\n\nUse a local best-effort formatter that preserves existing JSON output, falls back to String(value) for non-JSON values, and uses a final placeholder when even string coercion throws. Apply it consistently to tool results and incomplete-status errors, then sync the canonical component into the minimal template.\n\n## Verification\n\n- Confirmed the focused bigint reproduction fails on unchanged main and passes with this change.\n- ./node_modules/.bin/vitest run src/components/react/assistant-ui/elements/tool-fallback.aui.test.tsx --reporter=dot (19 passed)\n- ./node_modules/.bin/vitest run --reporter=dot (730 passed, 16 skipped)\n- bash scripts/sync-templates.sh\n- oxlint on both changed source/test files\n- git diff --check\n\n## Public surface\n\n@assistant-ui/ui canonical registry component behavior and the synchronized minimal template. No exports, API reference, or documentation change. The package is private, so no changeset is required.\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.MUGxwx1oc2_R3vbh0ZpiuM8TqQ3gcVFzmfEX3y9kQV7xP8vSWwwCR7Ik3aM?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7096",
+        "created_at": "2026-09-09T01:39:10Z",
+        "updated_at": "2026-09-09T03:00:12Z",
+        "closed_at": "2026-09-09T03:00:05Z",
+        "merged_at": "2026-09-09T03:00:05Z",
+        "merge_commit_sha": "1f787162bd7832a19f30104df2d00cc509d88255",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "f0b094b96fac161b9e94bf2da7164ce10140fde1",
+          "ref": "fix/ui-non-json-tool-results"
+        },
+        "base": {
+          "sha": "103c385dc680b429b6d8ab392302b0d5dd932dcd",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474612929,
+        "node_id": "PR_kwDOKwunUc8AAAABCrUswQ",
+        "number": 7061,
+        "state": "closed",
+        "title": "fix(assistant-stream): use final message token usage",
+        "body": "## Problem\n\nA stream can report 20 output tokens in its final message, but timing metadata shows a text estimate of 1 token instead.\n\nThis reproduction returns 1 instead of 20 on base `55c34a62512f901194470c6ad6fc561d69be207b` (`assistant-stream` 0.3.41). It runs with Bun from the repository root:\n\n```js\nimport assert from \"node:assert/strict\";\nimport { AssistantMessageAccumulator } from \"./packages/assistant-stream/src/core/accumulators/assistant-message-accumulator.ts\";\n\nconst chunks = [\n  { type: \"part-start\", path: [], part: { type: \"text\" } },\n  { type: \"text-delta\", path: [0], textDelta: \"test\" },\n  { type: \"part-finish\", path: [0] },\n  { type: \"message-finish\", path: [], finishReason: \"stop\",\n    usage: { inputTokens: 5, outputTokens: 20 } },\n];\nlet last;\nawait new ReadableStream({\n  start(controller) {\n    for (const chunk of chunks) controller.enqueue(chunk);\n    controller.close();\n  },\n}).pipeThrough(new AssistantMessageAccumulator()).pipeTo(\n  new WritableStream({ write(message) { last = message; } }),\n);\nassert.equal(last.metadata.timing.tokenCount, 20);\n```\n\n## Root cause\n\nThe accumulator discards final usage. Its timing calculation only reads step usage before it estimates tokens from text.\n\n## Change\n\nTiming uses a positive final output total without adding step counts to it. Zero or absent final usage keeps the existing step-total and text-estimate fallback.\n\n## Verification\n\nThe reproduction returns 20 after the correction. Two regression cases fail before the correction, then pass afterward.\n\nThe focused accumulator suite passes all 38 tests. The adjacent message-stream, data-stream decoder, and UI-message decoder suites pass all 67 tests.\n\nThe package build, scoped Oxlint and formatting checks, and `pnpm changesets:check` pass. A smoke check through the rebuilt public decoder and accumulator confirms final usage and missing-usage fallback.\n\n## Public surface\n\n`assistant-stream` receives a patch changeset. Public signatures and exports stay unchanged. Existing documentation and generated API pages remain applicable. No template changes.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7061?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.I9WapVmch5ws9ieraqRlD9wEvbQ9r3esifjvNlyMc-p8NOGwB1qx8YFtoTA?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7061",
+        "created_at": "2026-09-08T13:14:05Z",
+        "updated_at": "2026-09-09T02:24:47Z",
+        "closed_at": "2026-09-09T02:24:42Z",
+        "merged_at": "2026-09-09T02:24:42Z",
+        "merge_commit_sha": "a16b9908d0a4ee74573ee94228b4d87aa4f977f8",
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "cdb7e9fdc1430148bf2ff047a12d27e77af0768f",
+          "ref": "fix/final-message-token-usage"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474608105,
+        "node_id": "PR_kwDOKwunUc8AAAABCrUZ6Q",
+        "number": 7058,
+        "state": "closed",
+        "title": "fix(assistant-stream): stop cancelled tools after validation",
+        "body": "## Problem\n\nA cancelled run can still start tool side effects when asynchronous schema validation completes. This occurs in `assistant-stream` 0.3.41 at base `55c34a62512f901194470c6ad6fc561d69be207b`.\n\nThe following reproduction runs with Bun from that repository checkout after `pnpm install --frozen-lockfile`. The assertion fails because the tool executes once.\n\n```js\nimport assert from \"node:assert/strict\";\nimport { unstable_runPendingTools } from \"./packages/assistant-stream/src/core/tool/toolResultStream.ts\";\nimport { createInitialMessage } from \"./packages/assistant-stream/src/core/accumulators/assistant-message-accumulator.ts\";\n\nlet finishValidation;\nconst validation = new Promise(resolve => { finishValidation = resolve; });\nlet executions = 0;\nconst part = {\n  type: \"tool-call\", toolCallId: \"t\", toolName: \"save\", state: \"call\",\n  status: { type: \"running\", isArgsComplete: true }, argsText: \"{}\", args: {},\n};\nconst controller = new AbortController();\nconst pending = unstable_runPendingTools(\n  { ...createInitialMessage(), parts: [part], content: [part] },\n  { save: {\n    parameters: { \"~standard\": {\n      version: 1, vendor: \"example\", validate: () => validation,\n    } },\n    execute: () => { executions++; return \"saved\"; },\n  } },\n  controller.signal,\n  async () => null,\n);\ncontroller.abort();\nfinishValidation({ value: {} });\nawait pending;\nassert.equal(executions, 0);\n```\n\n## Root cause\n\nThe cancellation check preceded the validation await. After validation, the cancellation promise did not prevent the immediate call to the tool.\n\n## Change\n\nCancelled runs return the existing cancellation response before tool execution. The shared correction covers pending and streamed tool calls. Cancellation behavior for tools that already started stays unchanged.\n\n## Verification\n\nThe reproduction and new regression failed before the correction and passed afterward. All 28 tests in `toolResultStream.test.ts` passed. The command was `pnpm --filter assistant-stream exec vitest run src/core/tool/toolResultStream.test.ts src/core/tool/ToolExecutionStream.test.ts`. Only `toolResultStream.test.ts` matched.\n\nA Node smoke test against the new build covered pending and streamed calls with valid and invalid arguments. Each case returned cancellation without side effects.\n\nThe package build, scoped Oxlint and formatting checks, and `pnpm changesets:check` passed.\n\n## Public surface\n\nThe change includes an `assistant-stream` patch changeset. Public exports and signatures stay unchanged. Documentation, API-reference output, and templates need no changes. Validation that never completes remains outside this correction.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7058?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.jkpQMH_2jHzqO4bNDp2OeeWehNQtNY_WH3mLpObF2uMEwMOPUU62NhkxKGE?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7058",
+        "created_at": "2026-09-08T13:13:35Z",
+        "updated_at": "2026-09-09T02:18:02Z",
+        "closed_at": "2026-09-09T02:17:58Z",
+        "merged_at": "2026-09-09T02:17:58Z",
+        "merge_commit_sha": "3bcd6dbacd4ac0d13c30cf82b974e98aaa514ad9",
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "95b680a4c6f0d3008d1fa2dbea046ea3e3fbae26",
+          "ref": "fix/tool-validation-cancellation"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474616717,
+        "node_id": "PR_kwDOKwunUc8AAAABCrU7jQ",
+        "number": 7062,
+        "state": "closed",
+        "title": "fix(core): complete final-only voice transcripts",
+        "body": "## Problem\n\nAn assistant voice reply that arrives as a single final transcript stays in `running` status. The thread keeps showing the streaming affordances for a reply that has already finished, and when the agent sends two replies in a row the first one never leaves `running` at all, because `_finishVoiceAssistantMessage` only repairs `_voiceMessages.at(-1)` on the next user turn.\n\n`examples/with-elevenlabs-conversational` hits this on every reply: its adapter maps each `onMessage` to `emitTranscript({ ..., isFinal: true })` and never emits a partial. The behavior also contradicts the documented contract in `apps/docs/content/docs/guides/voice.mdx`: \"The message stays in a running status until `isFinal: true`\".\n\n## Root cause\n\n`_handleVoiceTranscript` expressed the `isFinal` rule in only one of its two branches. The update branch applied `complete/stop`; the create branch hard-coded `running`. A final transcript then cleared `_currentAssistantMsg`, so a first-and-only transcript never reached the branch that would have completed it.\n\n## Change\n\nThe `isFinal` rule is derived once, before the branch, and both the created message and the updated message take it. That removes the duplication the gap grew out of, rather than copying the rule into the second branch. A partial transcript still yields `running`, and because a final transcript clears `_currentAssistantMsg`, the update branch only ever sees a message that was already `running`.\n\n## Verification\n\n`pnpm --filter @assistant-ui/core test src/runtime/base/base-thread-runtime-core.test.ts src/adapters/voice.test.ts`: 16 passed.\n\nBoth directions on the new test: with the source reverted to the base commit it fails with `status: { type: \"running\" }` where `{ type: \"complete\", reason: \"stop\" }` is expected, and it passes on this branch. The full `@assistant-ui/core` suite reports the same 11 pre-existing failures before and after the change (all under `src/react/**`, from an unbuilt `@assistant-ui/tap`).\n\nThe test runs on the `TestRuntime` and `createVoiceAdapter` harness this file already carries, with `emitTranscript` added next to the existing `emitVolume`, so a base-class test does not have to construct a sibling runtime. It covers a final-only reply followed by a separate partial-to-final reply.\n\nOxlint and oxfmt pass on both touched files.\n\n## Public surface\n\n`@assistant-ui/core` gets a patch changeset. No export, signature, template, or api-reference change. The fix restores the documented `isFinal` behavior.\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.aNseM1EflVSNeE_UQnIAnrCjcxVFq0y_HE9l4AHG_qy4SxvI6RjswMBsQXk?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7062",
+        "created_at": "2026-09-08T13:14:28Z",
+        "updated_at": "2026-09-09T02:17:25Z",
+        "closed_at": "2026-09-09T02:17:20Z",
+        "merged_at": "2026-09-09T02:17:20Z",
+        "merge_commit_sha": "571cd7c673130d896692f15257037a777711df44",
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "038cec9164c7e6522c477d33e2c1a3e18ff89dd9",
+          "ref": "fix/final-only-voice-transcript"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474616829,
+        "node_id": "PR_kwDOKwunUc8AAAABCrU7_Q",
+        "number": 7063,
+        "state": "closed",
+        "title": "fix(langgraph): accept late tool names",
+        "body": "## Problem\n\nA streamed tool call stays unnamed when its name arrives after the first chunk. The converted tool call then has an empty `toolName`.\n\nThis reproduction affects `@assistant-ui/react-langgraph` 0.14.26 at base `55c34a62512f901194470c6ad6fc561d69be207b`. After dependency installation and package builds, Bun can run this snippet from the repository root:\n\n```ts\nimport assert from \"node:assert/strict\";\nimport { appendLangChainChunk } from \"./packages/react-langgraph/src/appendLangChainChunk.ts\";\nimport { normalizeLangGraphTupleMessage } from \"./packages/react-langgraph/src/normalizeLangGraphTupleMessage.ts\";\n\nconst first = normalizeLangGraphTupleMessage({\n  id: \"ai-1\", type: \"ai\", content: \"\",\n  tool_call_chunks: [{ index: 0 }],\n});\nconst next = normalizeLangGraphTupleMessage({\n  id: \"ai-1\", type: \"ai\", content: \"\",\n  tool_call_chunks: [{ index: 0, id: \"call-1\", name: \"search\", args: \"{}\" }],\n});\nassert.ok(first && next);\nconst result = appendLangChainChunk(\n  appendLangChainChunk(undefined, first.message), next.message,\n);\nassert.equal(result.tool_calls[0].name, \"search\");\n```\n\n## Root cause\n\nThe chunk merge keeps every accumulated field except `id`, so a tool call that started without a name never picks one up. Two wire shapes reach that state: tuple normalization coerces a missing name to an empty string, and a provider that opens the call with `name: null` (Bedrock) keeps the null. `_mergeDicts` in `@langchain/core` treats `id` and `name` alike, replacing either one when the incoming value is truthy, so the accumulator now follows that rule for both.\n\n## Change\n\nThe merger accepts the later name when the accumulated name is empty, as it already does for IDs. Later unnamed chunks retain that name.\n\n## Verification\n\nThe API reproduction and the focused regressions failed before the correction and passed afterward. Three regressions cover the empty name, the `null` name, and the tuple path through conversion, and all three fail on the base commit.\n\n`pnpm --filter @assistant-ui/react-langgraph test` passed all 318 tests. The scoped Oxlint and format checks passed, and the package typecheck reports no error in the touched file.\n\n## Public surface\n\nThe patch changeset covers `@assistant-ui/react-langgraph`. Public exports and signatures remain unchanged. Documentation, generated API references, and templates remain unchanged because their contracts do not change.\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.4lJ2e2bF1aWbBtBqlrIKIfsZnNCTzVgJmMDb1G_RyMlbzA9Nm12MfgOi_58?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7063?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7063",
+        "created_at": "2026-09-08T13:14:29Z",
+        "updated_at": "2026-09-09T02:12:04Z",
+        "closed_at": "2026-09-09T02:06:08Z",
+        "merged_at": "2026-09-09T02:06:08Z",
+        "merge_commit_sha": "9b02b791a9cec8843dacfb6da5153248bd40d710",
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "f19820f4807b1f9a56730301b46589bd3416fdb5",
+          "ref": "fix/langgraph-late-tool-name"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474610779,
+        "node_id": "PR_kwDOKwunUc8AAAABCrUkWw",
+        "number": 7060,
+        "state": "closed",
+        "title": "fix(assistant-stream): prevent standard schema conversion crashes",
+        "body": "## Problem\n\nTool parameter conversion throws when a Standard JSON Schema converter reads its mandatory `target` option. With this correction, the converter receives `draft-07` and returns the tool schema.\n\nThis reproduction throws on base `55c34a62512f901194470c6ad6fc561d69be207b` (`assistant-stream` 0.3.41). It runs with Bun from the repository root:\n\n```js\nimport assert from \"node:assert/strict\";\nimport { toToolsJSONSchema } from \"./packages/assistant-stream/src/core/tool/schema-utils.ts\";\n\nconst convert = ({ target }) => {\n  assert.equal(target, \"draft-07\");\n  return { type: \"object\", properties: { name: { type: \"string\" } } };\n};\nconst parameters = {\n  \"~standard\": {\n    version: 1,\n    vendor: \"local-example\",\n    validate: (value) => ({ value }),\n    jsonSchema: { input: convert, output: convert },\n  },\n};\nconst converted = toToolsJSONSchema({ example: { parameters } });\nassert.equal(converted.example.parameters.type, \"object\");\n```\n\n## Root cause\n\nThe shared `toJSONSchema` function called `jsonSchema.input()` without options. Its private type also described a zero-argument converter, contrary to the Standard JSON Schema contract.\n\n## Change\n\nThe shared converter supplies `{ target: \"draft-07\" }` to match its existing `JSONSchema7` return contract. Its private type uses the installed standard definition. Other conversion methods and their priority remain unchanged.\n\n## Verification\n\nThe regression in the existing schema test file throws before the correction. After the correction, `pnpm --filter assistant-stream exec vitest run src/core/tool/schema-utils.test.ts` passes all 37 tests.\n\nThe original API reproduction passes against the source and the fresh public build. `pnpm --filter assistant-stream build`, scoped Oxlint, and `pnpm changesets:check` also pass.\n\n## Public surface\n\n`assistant-stream` includes a patch changeset. Public exports and signatures remain unchanged. No documentation claims, generated API pages, or templates change.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7060?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.HnJFxEtQ0ON1rhdDJjIMS3ZbnU92DmqhdRwPFS9l41arxdIm2V2AbY2RmME?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7060",
+        "created_at": "2026-09-08T13:13:51Z",
+        "updated_at": "2026-09-09T02:09:41Z",
+        "closed_at": "2026-09-09T02:09:36Z",
+        "merged_at": "2026-09-09T02:09:36Z",
+        "merge_commit_sha": "b505555a7a8c98e09bdcb718dd74aaa48eb57bee",
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "9a1e24f36d1900654aa1efffacfa2f2fad89c241",
+          "ref": "fix/standard-json-schema-target"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474609893,
+        "node_id": "PR_kwDOKwunUc8AAAABCrUg5Q",
+        "number": 7059,
+        "state": "closed",
+        "title": "fix(assistant-stream): remove nested partial schema requirements",
+        "body": "## Problem\n\nPartial update schemas still require nested fields when the nested object has no `properties` keyword. For example, `{ settings: {} }` still requires `settings.name`.\n\nThis reproduction fails at base `55c34a62512f901194470c6ad6fc561d69be207b` (`assistant-stream` 0.3.41). It passes after the correction:\n\n```js\nimport assert from \"node:assert/strict\";\nimport { toPartialJSONSchema } from \"./packages/assistant-stream/src/core/tool/schema-utils.ts\";\n\nconst partial = toPartialJSONSchema({\n  type: \"object\",\n  properties: {\n    settings: {\n      type: \"object\",\n      required: [\"name\"],\n      additionalProperties: { type: \"string\" },\n    },\n  },\n  required: [\"settings\"],\n});\n\nassert.equal(partial.properties.settings.required, undefined);\nassert.deepEqual(partial.properties.settings.additionalProperties, { type: \"string\" });\n```\n\nThe snippet runs with `bun` from the repository root.\n\n## Root cause\n\nNested conversion depended on the presence of `properties`, but JSON Schema does not require that keyword beside `required`.\n\n## Change\n\nThe shared utility removes `required` from each nested property schema. It retains `additionalProperties` and leaves array-item schemas unchanged.\n\n## Verification\n\nThe original reproduction and the new regression failed before the correction and passed afterward. All 38 tests passed with `pnpm --filter assistant-stream exec vitest run src/core/tool/schema-utils.test.ts`.\n\n`pnpm --filter assistant-stream build`, scoped Oxlint and format checks, and `pnpm changesets:check` passed. The reproduction also passed through the built `assistant-stream` export in Node.\n\n## Public surface\n\nThe correction affects `assistant-stream` and includes a patch changeset. Public exports and signatures are unchanged. No documentation, API-reference output, or template changes are necessary.\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7059?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2.PKYuz9EjdqFIEpgDW2sr0i5pBp6YrsrXezLGUfgpNqYePeIUSINBgs74cz4?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7059",
+        "created_at": "2026-09-08T13:13:45Z",
+        "updated_at": "2026-09-09T02:00:55Z",
+        "closed_at": "2026-09-09T02:00:51Z",
+        "merged_at": "2026-09-09T02:00:51Z",
+        "merge_commit_sha": "12c54477a18b0ebd2b9cf397da1a1427704ea0c9",
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "31f1bad2d3065bc26f4d32859ee2891b0ccea744",
+          "ref": "fix/nested-partial-schema-required"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4479176791,
+        "node_id": "PR_kwDOKwunUc8AAAABCvrQVw",
+        "number": 7095,
+        "state": "closed",
+        "title": "test(react-streamdown): pin primitive render count",
+        "body": "Closes #6734\n\n## Problem\n\nThe deferred-render fix from #6732 is not protected by an exact performance contract. Reintroducing deferred work at the Streamdown primitive boundary would add another primitive render for every streamed token without failing CI.\n\n## Root cause\n\nThe existing Markdown contract measures parser and renderer work, not `StreamdownTextPrimitive` itself. Streamdown's memoized body hides the redundant primitive pass from child-render counters, leaving the boundary where the earlier regression occurred unmeasured.\n\n## Change\n\nAdd a cross-package contract beside the other performance contracts. It imports the built public `@assistant-ui/react-streamdown` entry, drives tokens through `useExternalStoreRuntime`, and observes the primitive's existing message-hook boundary. Both deferred and non-deferred modes are pinned at one primitive render per token; the intended deferred pass remains below that boundary. The performance package gains Streamdown as a workspace-only development dependency.\n\n## Verification\n\n- Counterfactual check: temporarily adding `useDeferredValue` at the primitive boundary made both cases fail with 10 renders instead of 5.\n- `pnpm --filter @assistant-ui/x-performance exec vitest run` — 82 tests passed.\n- `pnpm --filter @assistant-ui/x-performance exec tsc --noEmit`\n- `pnpm turbo build --filter=@assistant-ui/react-streamdown`\n- `pnpm changesets:check`\n- `git diff --check`\n\n## Public surface\n\nNone. The contract lives in the private performance package and imports the built public Streamdown entry. No package exports, runtime source, documentation, API-reference output, templates, or changesets are affected.\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7095",
+        "created_at": "2026-09-08T22:34:44Z",
+        "updated_at": "2026-09-09T01:37:57Z",
+        "closed_at": "2026-09-09T01:37:51Z",
+        "merged_at": "2026-09-09T01:37:51Z",
+        "merge_commit_sha": "103c385dc680b429b6d8ab392302b0d5dd932dcd",
+        "draft": false,
+        "user": {
+          "id": 65047246,
+          "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+          "login": "Kinfe123",
+          "type": "User",
+          "html_url": "https://github.com/Kinfe123"
+        },
+        "head": {
+          "sha": "3e8f0e8aec64158f8a1849675354d00159add310",
+          "ref": "test/streamdown-render-contract"
+        },
+        "base": {
+          "sha": "8ef164f304e0ce70eb7c1375f1313f5856981f60",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4474617174,
+        "node_id": "PR_kwDOKwunUc8AAAABCrU9Vg",
+        "number": 7065,
+        "state": "closed",
+        "title": "fix(assistant-stream): keep tool response messages",
+        "body": "## Problem\n\nProvider messages disappear from backend tool readers and completed pending tool calls. Callers receive `undefined` instead of the original `messages` payload.\n\nThis occurs in `assistant-stream` 0.3.41 at base commit `55c34a62512f901194470c6ad6fc561d69be207b`. The following snippet reproduces the pending-tool path from that checkout after `pnpm install --frozen-lockfile`. It runs with Bun.\n\n```js\nimport assert from \"node:assert/strict\";\nimport { unstable_runPendingTools } from \"./packages/assistant-stream/src/core/tool/toolResultStream.ts\";\nimport { ToolResponse } from \"./packages/assistant-stream/src/core/tool/ToolResponse.ts\";\nimport { createInitialMessage } from \"./packages/assistant-stream/src/core/accumulators/assistant-message-accumulator.ts\";\n\nconst messages = [{ role: \"assistant\", content: [] }];\nconst part = {\n  type: \"tool-call\",\n  toolCallId: \"p\",\n  toolName: \"front\",\n  state: \"call\",\n  status: { type: \"running\", isArgsComplete: true },\n  argsText: \"{}\",\n  args: {},\n};\nconst settled = await unstable_runPendingTools(\n  { ...createInitialMessage(), parts: [part], content: [part] },\n  {\n    front: {\n      parameters: { type: \"object\" },\n      execute: () => new ToolResponse({ result: \"ok\", messages }),\n    },\n  },\n  new AbortController().signal,\n  async () => null,\n);\nassert.deepEqual(settled.parts[0].messages, messages);\n```\n\n## Root cause\n\nThe backend result conversion omits `messages` from `ToolResponse`. The pending-tool conversion omits the same field from the completed part.\n\n## Change\n\nThe two conversions keep `messages` through the existing response-field handling. Responses without messages keep their current behavior.\n\n## Verification\n\nThe original API reproduction returned `undefined` on each path before the correction and passed afterward. The two regression checks also failed before the correction.\n\n`pnpm --filter assistant-stream exec vitest run src/core/tool/toolResultStream.test.ts src/core/modules/tool-call.test.ts` passed all 32 tests afterward.\n\n`pnpm --filter assistant-stream exec tsc --noEmit` passed. Scoped `oxlint` and `oxfmt --check` checks passed for the four changed TypeScript files.\n\n## Public surface\n\nThe change affects `assistant-stream` and includes a patch changeset. Public exports, signatures, documentation, API-reference output, and templates are unchanged.\n\n<!-- rupic:badge:start -->\n<a href=\"https://rupic.dev/s/s2._wBzm1WzLV1S-b8oOpWSQKvO7oXPiRlYKzQO2L8Je1xxdHQtCYSK0GgpzJw?ref=github\" target=\"_blank\" rel=\"noopener noreferrer\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://rupic.dev/badges/track-dark-v1.svg\"><img alt=\"Track in Rupic\" src=\"https://rupic.dev/badges/track-light-v1.svg\"></picture></a>\n<!-- rupic:badge:end -->\n\n<!-- This is an auto-generated description by cubic. -->\n<a href=\"https://cubic.dev/pr/assistant-ui/assistant-ui/pull/7065?utm_source=github\" target=\"_blank\" rel=\"noopener noreferrer\" data-no-image-dialog=\"true\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://www.cubic.dev/buttons/review-in-cubic-light.svg\"><img alt=\"Review in cubic\" src=\"https://www.cubic.dev/buttons/review-in-cubic-dark.svg\"></picture></a>\n<!-- End of auto-generated description by cubic. -->\n\n",
+        "html_url": "https://github.com/assistant-ui/assistant-ui/pull/7065",
+        "created_at": "2026-09-08T13:14:31Z",
+        "updated_at": "2026-09-08T22:49:45Z",
+        "closed_at": "2026-09-08T22:49:40Z",
+        "merged_at": "2026-09-08T22:49:40Z",
+        "merge_commit_sha": "9b9d5e936395ce878464c9c50a75e8344aaeb067",
+        "draft": false,
+        "user": {
+          "id": 55143799,
+          "node_id": "MDQ6VXNlcjU1MTQzNzk5",
+          "login": "ephraimduncan",
+          "type": "User",
+          "html_url": "https://github.com/ephraimduncan"
+        },
+        "head": {
+          "sha": "63d9207e5aaead32be23dcdfca6dc651f7370dc5",
+          "ref": "fix/preserve-tool-response-messages"
+        },
+        "base": {
+          "sha": "2ae5208f15d578253a5bcef8dd0ee4558eaba93c",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}

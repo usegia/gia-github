@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/orgs/vercel-labs/repos?type=public&sort=updated&direction=desc&per_page=100&page=1",
+  "observedAt": "2026-09-10T10:25:42.171425+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"ed1d1d51d1d592c01fc2db2a6c64d5718bdd17dc91f03c4bb7818b0c28aa7dba\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/organizations/108547162/repos?type=public&sort=updated&direction=desc&per_page=100&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "repositories",
+    "records": [
+      {
+        "id": 1163569028,
+        "node_id": "R_kgDORVqnhA",
+        "name": "github-tools",
+        "full_name": "vercel-labs/github-tools",
+        "html_url": "https://github.com/vercel-labs/github-tools",
+        "description": "GitHub tools and agents for the Vercel AI SDK, wrap GitHub's API as AI SDK tools ready to plug into any agent",
+        "fork": false,
+        "created_at": "2026-02-21T20:33:53Z",
+        "updated_at": "2026-09-05T13:52:34Z",
+        "pushed_at": "2026-09-01T10:09:55Z",
+        "homepage": "https://github-tools.com",
+        "size": 2290,
+        "stargazers_count": 124,
+        "watchers_count": 124,
+        "language": "TypeScript",
+        "forks_count": 10,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 3,
+        "topics": [
+          "agent",
+          "agents",
+          "ai",
+          "ai-sdk",
+          "github",
+          "presets",
+          "tools"
+        ],
+        "default_branch": "main",
+        "visibility": "public",
+        "owner": {
+          "id": 108547162,
+          "node_id": "O_kgDOBnhMWg",
+          "login": "vercel-labs",
+          "type": "Organization",
+          "html_url": "https://github.com/vercel-labs"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-python/pulls/258/files?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:38.828146+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"a7e673300314befd4955b729dc435e7244c1371d37ec130f9c62946aaf0af8b9\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_request_files",
+    "repositoryId": 1135322438,
+    "repository": "vercel-labs/ai-python",
+    "pullRequestId": 4230553909,
+    "records": [
+      {
+        "sha": "7027cfc5c25b1990f2730af1773bf266b6a940ac",
+        "filename": "examples/README.md",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1,
+        "changes": 2,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/examples%2FREADME.md",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/examples%2FREADME.md",
+        "patch": "@@ -4,7 +4,7 @@ Examples are grouped by the main API surface they demonstrate.\n \n - `apps/` contains end-to-end demos.\n - `agents/` contains agent loops, tools, hooks, and MCP examples.\n-- `media/` contains image, video, multimodal, and embedding examples.\n+- `media/` contains image, video, multimodal, embedding, and reranking examples.\n - `models/` contains model streaming, structured output, and provider examples.\n \n Provider-specific model examples live under `models/<provider>/`, such as"
+      },
+      {
+        "sha": "468596bcdb257c21c8263a690cd95469b396502a",
+        "filename": "examples/media/reranking.py",
+        "previous_filename": null,
+        "status": "added",
+        "additions": 34,
+        "deletions": 0,
+        "changes": 34,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/examples%2Fmedia%2Freranking.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/examples%2Fmedia%2Freranking.py",
+        "patch": "@@ -0,0 +1,34 @@\n+\"\"\"Document reranking — dedicated reranking model via ai.ops.rerank().\"\"\"\n+\n+import asyncio\n+\n+import ai\n+\n+model = ai.get_model(\"cohere/rerank-v3.5\")\n+\n+query = \"How do I reset my password?\"\n+\n+documents = [\n+    \"Our office is open Monday through Friday, 9am to 5pm.\",\n+    \"To reset your password, click 'Forgot password' on the login page.\",\n+    \"The quarterly report shows strong growth in the APAC region.\",\n+    \"Password requirements: at least 12 characters, one number.\",\n+    \"Contact support via the chat widget in the bottom right corner.\",\n+]\n+\n+\n+async def main() -> None:\n+    result = await ai.ops.rerank(\n+        model,\n+        documents,\n+        query,\n+        params=ai.ops.RerankParams(top_n=3),\n+    )\n+\n+    print(f\"Query: {query!r}\\n\")\n+    for ranked in result.value:\n+        print(f\"  {ranked.score:.3f}: {documents[ranked.index]!r}\")\n+\n+\n+if __name__ == \"__main__\":\n+    asyncio.run(main())"
+      },
+      {
+        "sha": "fb58181177e23d9bf6250666d59084a7942b3eff",
+        "filename": "src/ai/ops/__init__.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0,
+        "changes": 4,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fops%2F__init__.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fops%2F__init__.py",
+        "patch": "@@ -4,6 +4,7 @@\n from .embeddings import EmbedParams, embed\n from .images import ImageParams, generate_image\n from .items import Item\n+from .reranking import RankedDocument, RerankParams, rerank\n from .transcriptions import (\n     TranscribeParams,\n     Transcription,\n@@ -17,6 +18,8 @@\n     \"EmbedParams\",\n     \"ImageParams\",\n     \"Item\",\n+    \"RankedDocument\",\n+    \"RerankParams\",\n     \"TranscribeParams\",\n     \"Transcription\",\n     \"TranscriptionSegment\",\n@@ -25,5 +28,6 @@\n     \"generate_audio\",\n     \"generate_image\",\n     \"generate_video\",\n+    \"rerank\",\n     \"transcribe\",\n ]"
+      },
+      {
+        "sha": "828a9acd33b43c16d00300b4fbcb57e31fcfb124",
+        "filename": "src/ai/ops/reranking.py",
+        "previous_filename": null,
+        "status": "added",
+        "additions": 71,
+        "deletions": 0,
+        "changes": 71,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fops%2Freranking.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fops%2Freranking.py",
+        "patch": "@@ -0,0 +1,71 @@\n+\"\"\"Document reranking via dedicated reranking models.\n+\n+::\n+\n+    import ai\n+\n+    model = ai.get_model(\"cohere/rerank-v3.5\")\n+    documents = [\"Paris is in France.\", \"Tokyo is in Japan.\"]\n+\n+    result = await ai.ops.rerank(model, documents, \"capital of Japan\")\n+    [documents[r.index] for r in result.value]  # most relevant first\n+\"\"\"\n+\n+from __future__ import annotations\n+\n+import dataclasses\n+from typing import TYPE_CHECKING, Any\n+\n+import pydantic\n+\n+from . import items\n+\n+if TYPE_CHECKING:\n+    from collections.abc import Mapping\n+\n+    from ..models.core import model as model_\n+\n+\n+class RankedDocument(pydantic.BaseModel):\n+    \"\"\"A document's position in the reranked order.\"\"\"\n+\n+    index: int\n+    \"\"\"Index of the document in the original documents list.\"\"\"\n+    score: float\n+    \"\"\"Relevance score of the document against the query.\"\"\"\n+\n+    model_config = pydantic.ConfigDict(frozen=True)\n+\n+\n+@dataclasses.dataclass(frozen=True, kw_only=True)\n+class RerankParams:\n+    \"\"\"Parameters for reranking.\"\"\"\n+\n+    top_n: int | None = None\n+    \"\"\"Return only the top N documents; all documents when ``None``.\"\"\"\n+    provider_options: Mapping[str, Any] = dataclasses.field(\n+        default_factory=dict\n+    )\n+    \"\"\"Provider-specific options, keyed by provider name.\"\"\"\n+\n+\n+async def rerank(\n+    model: model_.Model,\n+    documents: list[str] | list[dict[str, Any]],\n+    query: str,\n+    *,\n+    params: RerankParams | None = None,\n+) -> items.Item[list[RankedDocument]]:\n+    \"\"\"Rerank documents against a query with a dedicated reranking model.\n+\n+    ``documents`` is a list of texts or a list of JSON objects. Returns an\n+    :class:`~ai.ops.Item` whose ``value`` is one :class:`RankedDocument`\n+    per returned document, sorted by descending relevance score. Reranking\n+    models do not report token usage; cost information, when the provider\n+    sends it, is on ``.provider_metadata``.\n+    \"\"\"\n+    if not documents:\n+        return items.Item(value=[])\n+    return await model.provider.rerank(\n+        model, documents, query, params=params or RerankParams()\n+    )"
+      },
+      {
+        "sha": "7da8803e0d976040e739ee1c8d3883949b0fb3a2",
+        "filename": "src/ai/providers/ai_gateway/client/_client.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 11,
+        "deletions": 2,
+        "changes": 13,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fproviders%2Fai_gateway%2Fclient%2F_client.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fproviders%2Fai_gateway%2Fclient%2F_client.py",
+        "patch": "@@ -24,7 +24,13 @@\n \n AuthMethod = Literal[\"api-key\", \"oidc\"]\n ModelType = Literal[\n-    \"language\", \"image\", \"video\", \"speech\", \"embedding\", \"transcription\"\n+    \"language\",\n+    \"image\",\n+    \"video\",\n+    \"speech\",\n+    \"embedding\",\n+    \"transcription\",\n+    \"reranking\",\n ]\n \n \n@@ -33,7 +39,7 @@ class GatewayClient:\n \n     This intentionally implements only the calls used by the current provider:\n     config/credits reads, language streaming, image/video/speech\n-    generation, embeddings, and transcription.\n+    generation, embeddings, transcription, and reranking.\n     \"\"\"\n \n     def __init__(\n@@ -113,6 +119,9 @@ def model_headers(\n                 spec_version\n             )\n             headers[\"ai-model-id\"] = model.id\n+        elif model_type == \"reranking\":\n+            headers[\"ai-reranking-model-specification-version\"] = spec_version\n+            headers[\"ai-model-id\"] = model.id\n         else:\n             headers[\"ai-speech-model-specification-version\"] = spec_version\n             headers[\"ai-model-id\"] = model.id"
+      },
+      {
+        "sha": "4d70ec55a7bb724c60f55fe2ce8bf9e7b0aec3ff",
+        "filename": "src/ai/providers/ai_gateway/protocol/v4.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 66,
+        "deletions": 0,
+        "changes": 66,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fproviders%2Fai_gateway%2Fprotocol%2Fv4.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fproviders%2Fai_gateway%2Fprotocol%2Fv4.py",
+        "patch": "@@ -639,6 +639,59 @@ async def transcribe(\n     )\n \n \n+# ---------------------------------------------------------------------------\n+# Reranking\n+# ---------------------------------------------------------------------------\n+\n+\n+async def rerank(\n+    gateway: gateway_client.GatewayClient,\n+    model: models.Model,\n+    documents: list[str] | list[dict[str, Any]],\n+    query: str,\n+    *,\n+    params: ops.reranking.RerankParams,\n+) -> ops.items.Item[list[ops.reranking.RankedDocument]]:\n+    \"\"\"Hit ``/reranking-model`` and return an Item with the ranking.\"\"\"\n+    body: dict[str, Any] = {\n+        \"query\": query,\n+        \"documents\": {\n+            \"type\": \"text\" if isinstance(documents[0], str) else \"object\",\n+            \"values\": documents,\n+        },\n+    }\n+    if params.top_n is not None:\n+        body[\"topN\"] = params.top_n\n+    if params.provider_options:\n+        body[\"providerOptions\"] = dict(params.provider_options)\n+\n+    try:\n+        response = await gateway.post(\n+            \"reranking-model\",\n+            body,\n+            model=model,\n+            model_type=\"reranking\",\n+            spec_version=SPEC_VERSION,\n+        )\n+    except gateway_client.errors.GatewayError as exc:\n+        raise errors.map_error(exc) from exc\n+\n+    data = response.json()\n+    for warning in data.get(\"warnings\") or []:\n+        logger.warning(\"gateway rerank warning: %s\", warning)\n+\n+    return ops.items.Item(\n+        value=[\n+            ops.reranking.RankedDocument(\n+                index=entry[\"index\"],\n+                score=entry[\"relevanceScore\"],\n+            )\n+            for entry in data.get(\"ranking\") or []\n+        ],\n+        provider_metadata=data.get(\"providerMetadata\"),\n+    )\n+\n+\n class GatewayV4Protocol(base.ProviderProtocol[gateway_client.GatewayClient]):\n     \"\"\"AI Gateway v4 wire protocol.\"\"\"\n \n@@ -730,3 +783,16 @@ async def transcribe(\n     ) -> ops.items.Item[ops.transcriptions.Transcription]:\n         _ = provider\n         return await transcribe(client, model, audio, params=params)\n+\n+    async def rerank(\n+        self,\n+        client: gateway_client.GatewayClient,\n+        model: models.Model,\n+        documents: list[str] | list[dict[str, Any]],\n+        query: str,\n+        *,\n+        params: ops.reranking.RerankParams,\n+        provider: str,\n+    ) -> ops.items.Item[list[ops.reranking.RankedDocument]]:\n+        _ = provider\n+        return await rerank(client, model, documents, query, params=params)"
+      },
+      {
+        "sha": "c258d5158d797031625901c6dae10c920a384c6e",
+        "filename": "src/ai/providers/base.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 35,
+        "deletions": 0,
+        "changes": 35,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fproviders%2Fbase.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/src%2Fai%2Fproviders%2Fbase.py",
+        "patch": "@@ -29,6 +29,7 @@\n         embeddings,\n         images,\n         items,\n+        reranking,\n         transcriptions,\n         videos,\n     )\n@@ -250,6 +251,21 @@ async def transcribe(\n             f\"protocol {type(self).__name__!r} does not support transcribe()\"\n         )\n \n+    async def rerank(\n+        self,\n+        client: ClientT,\n+        model: model_.Model,\n+        documents: list[str] | list[dict[str, Any]],\n+        query: str,\n+        *,\n+        params: reranking.RerankParams,\n+        provider: str,\n+    ) -> items.Item[list[reranking.RankedDocument]]:\n+        \"\"\"Rerank documents with a dedicated reranking model using *client*.\"\"\"\n+        raise NotImplementedError(\n+            f\"protocol {type(self).__name__!r} does not support rerank()\"\n+        )\n+\n \n class Provider(pydantic.BaseModel, Generic[ClientT]):\n     \"\"\"Base class for model providers.\n@@ -578,6 +594,25 @@ async def transcribe(\n             provider=self.name,\n         )\n \n+    async def rerank(\n+        self,\n+        model: model_.Model,\n+        documents: list[str] | list[dict[str, Any]],\n+        query: str,\n+        *,\n+        params: reranking.RerankParams,\n+    ) -> items.Item[list[reranking.RankedDocument]]:\n+        \"\"\"Rerank documents with this provider's reranking model.\"\"\"\n+        selected_protocol = model.protocol or self.protocol\n+        return await selected_protocol.rerank(\n+            self.client,\n+            model,\n+            documents,\n+            query,\n+            params=params,\n+            provider=self.name,\n+        )\n+\n     async def probe(self, model: model_.Model) -> None:\n         \"\"\"Probe if provider is online and can serve given model.\n "
+      },
+      {
+        "sha": "1651b5caa1181c16459bd53903e7167871b5d79b",
+        "filename": "tests/ops/test_reranking.py",
+        "previous_filename": null,
+        "status": "added",
+        "additions": 33,
+        "deletions": 0,
+        "changes": 33,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/tests%2Fops%2Ftest_reranking.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/tests%2Fops%2Ftest_reranking.py",
+        "patch": "@@ -0,0 +1,33 @@\n+\"\"\"Tests for ``ai.ops.reranking`` dispatch behavior.\n+\n+Gateway wire-format specifics live in\n+``tests/providers/ai_gateway/protocol/test_v4.py``; these tests cover\n+the ops layer: parameter defaults and provider dispatch.\n+\"\"\"\n+\n+from __future__ import annotations\n+\n+import ai\n+from ai import ops\n+\n+\n+async def test_rerank_raises_not_implemented() -> None:\n+    provider = ai.get_provider(\"openai\", api_key=\"sk-test\")\n+    model = ai.Model(id=\"rerank-test\", provider=provider)\n+\n+    try:\n+        await ops.rerank(model, [\"hello\"], \"query\")\n+    except NotImplementedError as exc:\n+        assert \"rerank\" in str(exc)\n+    else:\n+        raise AssertionError(\"expected NotImplementedError\")\n+\n+\n+async def test_rerank_empty_documents_skips_provider() -> None:\n+    provider = ai.get_provider(\"openai\", api_key=\"sk-test\")\n+    model = ai.Model(id=\"rerank-test\", provider=provider)\n+\n+    result = await ops.rerank(model, [], \"query\")\n+\n+    assert result.value == []\n+    assert result.usage is None"
+      },
+      {
+        "sha": "10cb9744b3f333c2fa437c83b1c334ae4dd03ded",
+        "filename": "tests/providers/ai_gateway/protocol/test_v4.py",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 187,
+        "deletions": 0,
+        "changes": 187,
+        "blob_url": "https://github.com/vercel-labs/ai-python/blob/36203e6087353672d1a9444bd07cf3757d57b797/tests%2Fproviders%2Fai_gateway%2Fprotocol%2Ftest_v4.py",
+        "raw_url": "https://github.com/vercel-labs/ai-python/raw/36203e6087353672d1a9444bd07cf3757d57b797/tests%2Fproviders%2Fai_gateway%2Fprotocol%2Ftest_v4.py",
+        "patch": "@@ -10,6 +10,8 @@\n   an ``httpx.MockTransport``\n - ``v4.GatewayV4Protocol.transcribe``: the v4-only transcription\n   endpoint, exercised end-to-end via ``ai.ops.transcribe``\n+- ``v4.GatewayV4Protocol.rerank``: the v4-only reranking endpoint,\n+  exercised end-to-end via ``ai.ops.rerank``\n \n Version-independent pieces are tested in ``test_shared.py``; end-to-end\n request/response behavior in ``../test_stream.py``.\n@@ -612,3 +614,188 @@ def handler(req: httpx.Request) -> httpx.Response:\n             ),\n             _MP3_HEADER,\n         )\n+\n+\n+# ---------------------------------------------------------------------------\n+# rerank (reranking-model endpoint, via ops.rerank)\n+# ---------------------------------------------------------------------------\n+\n+_RERANKING_MODEL_ID = \"cohere/rerank-v3.5\"\n+_RANKING = [\n+    {\"index\": 2, \"relevanceScore\": 0.9},\n+    {\"index\": 0, \"relevanceScore\": 0.4},\n+]\n+_DOCUMENTS = [\"apple pie\", \"stock market\", \"capital of Japan\"]\n+\n+\n+async def test_basic_rerank() -> None:\n+    \"\"\"Documents in -> ranking of index/score pairs back, server order.\"\"\"\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        return httpx.Response(200, json={\"ranking\": _RANKING})\n+\n+    model = mock_model(\n+        httpx.MockTransport(handler), model_id=_RERANKING_MODEL_ID\n+    )\n+    result = await ops.rerank(model, _DOCUMENTS, \"tokyo\")\n+\n+    assert result.value == [\n+        ops.RankedDocument(index=2, score=0.9),\n+        ops.RankedDocument(index=0, score=0.4),\n+    ]\n+    assert result.usage is None\n+\n+\n+async def test_rerank_request_body_and_url() -> None:\n+    captured_body: dict[str, Any] = {}\n+    captured_url: list[str] = []\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured_body.update(json.loads(req.content))\n+        captured_url.append(str(req.url))\n+        return httpx.Response(200, json={\"ranking\": _RANKING})\n+\n+    await ops.rerank(\n+        mock_model(httpx.MockTransport(handler), model_id=_RERANKING_MODEL_ID),\n+        _DOCUMENTS,\n+        \"tokyo\",\n+    )\n+\n+    assert captured_body == {\n+        \"query\": \"tokyo\",\n+        \"documents\": {\"type\": \"text\", \"values\": _DOCUMENTS},\n+    }\n+    assert captured_url[0] == \"https://gw.test/v4/ai/reranking-model\"\n+\n+\n+async def test_rerank_object_documents() -> None:\n+    \"\"\"dict documents are sent with the ``object`` wire type.\"\"\"\n+    captured_body: dict[str, Any] = {}\n+    documents = [{\"title\": \"pie\"}, {\"title\": \"tokyo\"}]\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured_body.update(json.loads(req.content))\n+        return httpx.Response(200, json={\"ranking\": _RANKING})\n+\n+    await ops.rerank(\n+        mock_model(httpx.MockTransport(handler), model_id=_RERANKING_MODEL_ID),\n+        documents,\n+        \"tokyo\",\n+    )\n+\n+    assert captured_body[\"documents\"] == {\n+        \"type\": \"object\",\n+        \"values\": documents,\n+    }\n+\n+\n+async def test_rerank_top_n_only_when_set() -> None:\n+    captured_bodies: list[dict[str, Any]] = []\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured_bodies.append(json.loads(req.content))\n+        return httpx.Response(200, json={\"ranking\": _RANKING})\n+\n+    model = mock_model(\n+        httpx.MockTransport(handler), model_id=_RERANKING_MODEL_ID\n+    )\n+    await ops.rerank(model, _DOCUMENTS, \"tokyo\")\n+    await ops.rerank(\n+        model, _DOCUMENTS, \"tokyo\", params=ops.RerankParams(top_n=2)\n+    )\n+\n+    assert \"topN\" not in captured_bodies[0]\n+    assert captured_bodies[1][\"topN\"] == 2\n+\n+\n+async def test_rerank_protocol_headers() -> None:\n+    captured: dict[str, str] = {}\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured.update(dict(req.headers))\n+        return httpx.Response(200, json={\"ranking\": _RANKING})\n+\n+    model = mock_model(\n+        httpx.MockTransport(handler),\n+        api_key=\"sk-test\",\n+        model_id=_RERANKING_MODEL_ID,\n+    )\n+    await ops.rerank(model, _DOCUMENTS, \"tokyo\")\n+\n+    assert captured[\"authorization\"] == \"Bearer sk-test\"\n+    assert captured[\"ai-reranking-model-specification-version\"] == \"4\"\n+    assert captured[\"ai-model-id\"] == _RERANKING_MODEL_ID\n+    assert captured[\"ai-gateway-auth-method\"] == \"api-key\"\n+\n+\n+async def test_rerank_forwards_provider_options() -> None:\n+    captured_body: dict[str, Any] = {}\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        captured_body.update(json.loads(req.content))\n+        return httpx.Response(200, json={\"ranking\": _RANKING})\n+\n+    await ops.rerank(\n+        mock_model(httpx.MockTransport(handler), model_id=_RERANKING_MODEL_ID),\n+        _DOCUMENTS,\n+        \"tokyo\",\n+        params=ops.RerankParams(\n+            provider_options={\"cohere\": {\"maxTokensPerDoc\": 512}}\n+        ),\n+    )\n+\n+    assert captured_body[\"providerOptions\"] == {\n+        \"cohere\": {\"maxTokensPerDoc\": 512}\n+    }\n+\n+\n+async def test_rerank_provider_metadata_and_warnings(\n+    caplog: pytest.LogCaptureFixture,\n+) -> None:\n+    \"\"\"``providerMetadata`` lands on the item; warnings are logged.\"\"\"\n+    metadata = {\"gateway\": {\"cost\": \"0.002\"}}\n+    warning = {\"type\": \"other\", \"message\": \"topN clamped\"}\n+\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        return httpx.Response(\n+            200,\n+            json={\n+                \"ranking\": _RANKING,\n+                \"providerMetadata\": metadata,\n+                \"warnings\": [warning],\n+            },\n+        )\n+\n+    with caplog.at_level(\"WARNING\", logger=v4.logger.name):\n+        result = await ops.rerank(\n+            mock_model(\n+                httpx.MockTransport(handler), model_id=_RERANKING_MODEL_ID\n+            ),\n+            _DOCUMENTS,\n+            \"tokyo\",\n+        )\n+\n+    assert result.provider_metadata == metadata\n+    assert str(warning) in caplog.text\n+\n+\n+async def test_rerank_401_authentication_error() -> None:\n+    def handler(req: httpx.Request) -> httpx.Response:\n+        return httpx.Response(\n+            401,\n+            json={\n+                \"error\": {\n+                    \"message\": \"Invalid API key\",\n+                    \"type\": \"authentication_error\",\n+                }\n+            },\n+        )\n+\n+    with pytest.raises(ai.ProviderAuthenticationError):\n+        await ops.rerank(\n+            mock_model(\n+                httpx.MockTransport(handler), model_id=_RERANKING_MODEL_ID\n+            ),\n+            _DOCUMENTS,\n+            \"tokyo\",\n+        )"
+      }
+    ],
+    "headSha": "36203e6087353672d1a9444bd07cf3757d57b797"
+  }
+}

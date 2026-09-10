@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/natural-language-postgres/languages",
+  "observedAt": "2026-09-10T10:28:22.165073+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"1757e09bd6cfa93592bc04cdb9211070b21fb2c6a070c6da123e15832f5c218a\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 869760181,
+    "repository": "vercel-labs/natural-language-postgres",
+    "records": {
+      "TypeScript": 73339,
+      "JavaScript": 1908,
+      "CSS": 1720
+    }
+  }
+}

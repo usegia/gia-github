@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/users/CahidArda",
+  "observedAt": "2026-09-10T10:28:46.365326+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"62119ffd4d6b665caa48fbd9dc49eeaa5d1b908dc99cde32c46c25b22f7c24ee\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "profiles",
+    "records": [
+      {
+        "id": 57228345,
+        "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+        "login": "CahidArda",
+        "type": "User",
+        "html_url": "https://github.com/CahidArda",
+        "avatar_url": "https://avatars.githubusercontent.com/u/57228345?v=4",
+        "name": "Cahid Arda",
+        "company": "@upstash",
+        "blog": "cahidarda.github.io",
+        "location": "Turkey, Istanbul",
+        "bio": "Upstash - DX/Software Developer - Bogazici Uni Cmpe\r\n",
+        "public_repos": 38,
+        "followers": 47,
+        "following": 19,
+        "created_at": "2019-10-31T15:36:55Z",
+        "updated_at": "2026-08-10T07:31:17Z"
+      }
+    ]
+  }
+}

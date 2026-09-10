@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-python/pulls/277/reviews?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:33.827091+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"330df4a2c81101328c54aae5bce38198854a54959e8f3634da70bd22339acf66\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "reviews",
+    "repositoryId": 1135322438,
+    "repository": "vercel-labs/ai-python",
+    "pullRequestId": 4417243097,
+    "records": [
+      {
+        "id": 5091479208,
+        "node_id": "PRR_kwDOQ6ulRs8AAAABL3nOqA",
+        "body": "",
+        "state": "APPROVED",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/277#pullrequestreview-5091479208",
+        "submitted_at": "2026-09-02T15:10:40Z",
+        "commit_id": "703911954e14b6c6a1b303b0bb40f1c137a2f765",
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        }
+      }
+    ]
+  }
+}

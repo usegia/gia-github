@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/ai/languages",
+  "observedAt": "2026-09-10T10:28:20.497783+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"ebaf0ec68e92a82aa0521a5725ad5f2e732ba6362db17518e5b4fc7cb563305c\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 644461337,
+    "repository": "vercel/ai",
+    "records": {
+      "TypeScript": 23310727,
+      "MDX": 4478768,
+      "JavaScript": 138265,
+      "Vue": 12324,
+      "Shell": 12028,
+      "CSS": 9999,
+      "Open Policy Agent": 4125,
+      "Dockerfile": 1056,
+      "Svelte": 889,
+      "HTML": 613,
+      "Batchfile": 20
+    }
+  }
+}

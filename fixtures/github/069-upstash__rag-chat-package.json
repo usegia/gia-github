@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/rag-chat/contents/package.json",
+  "observedAt": "2026-09-10T10:28:44.017402+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"d14d7123e61612577790a7f008044c4feb843e99\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "manifest",
+    "repositoryId": 794140072,
+    "repository": "upstash/rag-chat",
+    "content": {
+      "type": "file",
+      "encoding": "base64",
+      "size": 2447,
+      "name": "package.json",
+      "path": "package.json",
+      "content": "ewogICJuYW1lIjogIkB1cHN0YXNoL3JhZy1jaGF0IiwKICAidmVyc2lvbiI6\nICIxLjAuNSIsCiAgIm1haW4iOiAiLi9pbmRleC5tanMiLAogICJtb2R1bGUi\nOiAiLi9pbmRleC5tanMiLAogICJ0eXBlcyI6ICIuL2luZGV4LmQudHMiLAog\nICJzaWRlRWZmZWN0cyI6IGZhbHNlLAogICJzY3JpcHRzIjogewogICAgInRl\nc3QiOiAiYnVuIHRlc3Qgc3JjIiwKICAgICJmbXQiOiAicHJldHRpZXIgLS13\ncml0ZSAuIiwKICAgICJsaW50IjogImVzbGludCBcInNyYy8qKi8qLntqcyx0\ncyx0c3h9XCIgLS1xdWlldCAtLWZpeCIsCiAgICAiYnVpbGQiOiAidHN1cCAm\nJiBjcCBwYWNrYWdlLmpzb24gUkVBRE1FLm1kIExJQ0VOU0UgZGlzdC8iLAog\nICAgInByZXBhcmUiOiAiaHVza3kiLAogICAgImNoZWNrLXR5cGVzIjogInRz\nYyAtLW5vRW1pdCIsCiAgICAiY2hlY2stZXhwb3J0cyI6ICJidW4gcnVuIGJ1\naWxkICYmIGNkIGRpc3QgJiYgYXR0dyAtUCIKICB9LAogICJsaW50LXN0YWdl\nZCI6IHsKICAgICIqIjogWwogICAgICAiZXNsaW50IC0tZml4IiwKICAgICAg\nInByZXR0aWVyIC0taWdub3JlLXVua25vd24gLS13cml0ZSIKICAgIF0KICB9\nLAogICJidWdzIjogewogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20v\ndXBzdGFzaC9yYWctY2hhdC9pc3N1ZXMiCiAgfSwKICAiZGVzY3JpcHRpb24i\nOiAiU2ltcGxlIFJBRyBDaGF0IHVzaW5nIFVwc3Rhc2giLAogICJmaWxlcyI6\nIFsKICAgICIuLyoiCiAgXSwKICAiZXhwb3J0cyI6IHsKICAgICIuIjogewog\nICAgICAiaW1wb3J0IjogIi4vaW5kZXgubWpzIiwKICAgICAgInJlcXVpcmUi\nOiAiLi9pbmRleC5qcyIKICAgIH0sCiAgICAiLi9uZXh0anMiOiB7CiAgICAg\nICJyZWFjdC1zZXJ2ZXIiOiAiLi9uZXh0anMvcnNjLXNlcnZlci5tanMiLAog\nICAgICAiaW1wb3J0IjogIi4vbmV4dGpzL2luZGV4Lm1qcyIsCiAgICAgICJy\nZXF1aXJlIjogIi4vbmV4dGpzL2luZGV4LmpzIgogICAgfQogIH0sCiAgImhv\nbWVwYWdlIjogImh0dHBzOi8vdXBzdGFzaC5jb20vZG9jcy92ZWN0b3Ivc2Rr\ncy9yYWctY2hhdCIsCiAgImtleXdvcmRzIjogWwogICAgInZlY3RvciIsCiAg\nICAidXBzdGFzaCIsCiAgICAiZGIiLAogICAgInJhZy1jaGF0IiwKICAgICJh\naSIKICBdLAogICJhdXRob3IiOiAiT2d1emhhbiBPbGd1bmN1IDxvZ3V6aGFu\nQHVwc3Rhc2guY29tPiIsCiAgInJlcG9zaXRvcnkiOiB7CiAgICAidHlwZSI6\nICJnaXQiLAogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vdXBzdGFz\naC9yYWctY2hhdCIKICB9LAogICJsaWNlbnNlIjogIk1JVCIsCiAgImRldkRl\ncGVuZGVuY2llcyI6IHsKICAgICJAY29tbWl0bGludC9jbGkiOiAiXjE5LjIu\nMiIsCiAgICAiQGNvbW1pdGxpbnQvY29uZmlnLWNvbnZlbnRpb25hbCI6ICJe\nMTkuMi4yIiwKICAgICJAdHlwZXMvYnVuIjogIl4xLjEuMTAiLAogICAgIkB0\neXBlcy9yZWFjdCI6ICJeMTguMy4zIiwKICAgICJAdHlwZXNjcmlwdC1lc2xp\nbnQvZXNsaW50LXBsdWdpbiI6ICJeOC42LjAiLAogICAgImJ1bi10eXBlcyI6\nICJeMS4xLjE5IiwKICAgICJlc2xpbnQiOiAiXjkuMTEuMCIsCiAgICAiZXNs\naW50LXBsdWdpbi11bmljb3JuIjogIl41NS4wLjAiLAogICAgImh1c2t5Ijog\nIl45LjAuMTAiLAogICAgImxpbnQtc3RhZ2VkIjogIl4xNS4yLjEwIiwKICAg\nICJwcmV0dGllciI6ICJeMy4yLjUiLAogICAgInRzdXAiOiAiXjguMy4wIiwK\nICAgICJ0eXBlc2NyaXB0IjogIl41LjQuNSIsCiAgICAidml0ZXN0IjogIl4y\nLjEuMSIKICB9LAogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAiQGFpLXNkay9v\ncGVuYWkiOiAiXjAuMC40NCIsCiAgICAiQGxhbmdjaGFpbi9hbnRocm9waWMi\nOiAiXjAuMi4xNSIsCiAgICAiQGxhbmdjaGFpbi9jb21tdW5pdHkiOiAiXjAu\nMy40IiwKICAgICJAbGFuZ2NoYWluL2NvcmUiOiAiXjAuMi45IiwKICAgICJA\nbGFuZ2NoYWluL21pc3RyYWxhaSI6ICJeMC4wLjI4IiwKICAgICJAdXBzdGFz\naC92ZWN0b3IiOiAiXjEuMi4wIiwKICAgICJhaSI6ICJeMy4xLjEiLAogICAg\nImNoZWVyaW8iOiAiXjEuMC4wLXJjLjEyIiwKICAgICJkMy1kc3YiOiAiXjMu\nMC4xIiwKICAgICJodG1sLXRvLXRleHQiOiAiXjkuMC41IiwKICAgICJsYW5n\nY2hhaW4iOiAiXjAuMi4wIiwKICAgICJsYW5nc21pdGgiOiAiXjAuMS40MSIs\nCiAgICAibmFub2lkIjogIl41LjAuNyIsCiAgICAicGRmLXBhcnNlIjogIl4x\nLjEuMSIsCiAgICAidW5zdHJ1Y3R1cmVkLWNsaWVudCI6ICJeMC4xNS4xIgog\nIH0sCiAgInBlZXJEZXBlbmRlbmNpZXMiOiB7CiAgICAiQGxhbmdjaGFpbi9v\ncGVuYWkiOiAiXjAuMi44IiwKICAgICJAdXBzdGFzaC9yYXRlbGltaXQiOiAi\nXjEgfHwgXjIiLAogICAgIkB1cHN0YXNoL3JlZGlzIjogIl4xLjM0LjAiLAog\nICAgInJlYWN0IjogIl4xOCB8fCBeMTkiLAogICAgInJlYWN0LWRvbSI6ICJe\nMTggfHwgXjE5IgogIH0KfQo=\n",
+      "sha": "d14d7123e61612577790a7f008044c4feb843e99",
+      "url": "https://api.github.com/repos/upstash/rag-chat/contents/package.json?ref=master",
+      "git_url": "https://api.github.com/repos/upstash/rag-chat/git/blobs/d14d7123e61612577790a7f008044c4feb843e99",
+      "html_url": "https://github.com/upstash/rag-chat/blob/master/package.json"
+    }
+  }
+}

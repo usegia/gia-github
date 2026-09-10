@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/ai/pulls/20551/reviews?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:34.519017+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"5a383fb88dc47d305b50c26eb60ffbb9b14cae116d2fea7e3b0dcbc136fc8427\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "reviews",
+    "repositoryId": 644461337,
+    "repository": "vercel/ai",
+    "pullRequestId": 4487731670,
+    "records": [
+      {
+        "id": 5158369115,
+        "node_id": "PRR_kwDOJmmzGc8AAAABM3Z3Ww",
+        "body": "",
+        "state": "APPROVED",
+        "html_url": "https://github.com/vercel/ai/pull/20551#pullrequestreview-5158369115",
+        "submitted_at": "2026-09-09T18:36:03Z",
+        "commit_id": "9436081fab8070c9f4e41c6e5c20e830ab3c09f1",
+        "user": {
+          "id": 39992,
+          "node_id": "MDQ6VXNlcjM5OTky",
+          "login": "gr2m",
+          "type": "User",
+          "html_url": "https://github.com/gr2m"
+        }
+      }
+    ]
+  }
+}

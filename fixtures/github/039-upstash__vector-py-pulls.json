@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/vector-py/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:45.121966+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"d495e58675187de17fabb2f8aca40f5cfdd16f798c0f0c559fd2a16111852f36\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/739473584/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 739473584,
+    "repository": "upstash/vector-py",
+    "records": [
+      {
+        "id": 2929644006,
+        "node_id": "PR_kwDOLBN4sM6untHm",
+        "number": 50,
+        "state": "closed",
+        "title": "DX-2204: Add telemetry information and opt-out option to README",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/50",
+        "created_at": "2025-10-20T12:18:14Z",
+        "updated_at": "2025-10-21T06:15:53Z",
+        "closed_at": "2025-10-21T06:15:53Z",
+        "merged_at": "2025-10-21T06:15:52Z",
+        "merge_commit_sha": "56ecfe35070e05794d624e76c5b6d65c929384bf",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "afbacbb91cf52d006b4533b3eb7268fec61d83d8",
+          "ref": "DX-2204-telemetry-docs"
+        },
+        "base": {
+          "sha": "f3c4ebb674309e30c332fdb7171b369cad160a14",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2436770973,
+        "node_id": "PR_kwDOLBN4sM6RPiyd",
+        "number": 48,
+        "state": "closed",
+        "title": "Bump version to 0.8.1",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/48",
+        "created_at": "2025-04-03T11:30:11Z",
+        "updated_at": "2025-04-03T13:34:44Z",
+        "closed_at": "2025-04-03T13:34:39Z",
+        "merged_at": "2025-04-03T13:34:39Z",
+        "merge_commit_sha": "f3c4ebb674309e30c332fdb7171b369cad160a14",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "31c427d5bef7e60e80f473e53bb6edc2a9e22adb",
+          "ref": "bump-0.8.1"
+        },
+        "base": {
+          "sha": "c120ab46e6fc521e2951f18f08c030f9f4d90c92",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2436716045,
+        "node_id": "PR_kwDOLBN4sM6RPVYN",
+        "number": 47,
+        "state": "closed",
+        "title": "DX-1794: Do not make further requests for resumable query for non-existing namespaces",
+        "body": "When the server sends an empty uuid as response to the resumable query start, for example when no such namespace exists, we should not make further fetch next or stop calls, as no resumable query has started.",
+        "html_url": "https://github.com/upstash/vector-py/pull/47",
+        "created_at": "2025-04-03T11:07:34Z",
+        "updated_at": "2025-04-03T11:28:01Z",
+        "closed_at": "2025-04-03T11:27:55Z",
+        "merged_at": "2025-04-03T11:27:54Z",
+        "merge_commit_sha": "c120ab46e6fc521e2951f18f08c030f9f4d90c92",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "744f984dbe354d6248cca7b4f4ba9ce4f1014ba3",
+          "ref": "empty-uuid-resumable-query"
+        },
+        "base": {
+          "sha": "c354216302b6b39b971c1e7902e88eecbc361771",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2355788015,
+        "node_id": "PR_kwDOLBN4sM6Manjv",
+        "number": 46,
+        "state": "closed",
+        "title": "Bump version to 0.8.0",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/46",
+        "created_at": "2025-02-25T07:27:43Z",
+        "updated_at": "2025-02-27T11:17:34Z",
+        "closed_at": "2025-02-27T11:17:30Z",
+        "merged_at": "2025-02-27T11:17:30Z",
+        "merge_commit_sha": "c354216302b6b39b971c1e7902e88eecbc361771",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "7840ed84cee17181ea7108ba678317876a948878",
+          "ref": "bump-0.8.0"
+        },
+        "base": {
+          "sha": "22bc162cb2db49994ffc701e71faf0d2f80223c5",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2341579518,
+        "node_id": "PR_kwDOLBN4sM6Lkar-",
+        "number": 42,
+        "state": "closed",
+        "title": "Allow users to opt out for telemetry",
+        "body": "We were always sending the telemetry headers but not collecting it in the server. We now started collecting it, so we should give users a way to opt out of it.",
+        "html_url": "https://github.com/upstash/vector-py/pull/42",
+        "created_at": "2025-02-18T10:02:48Z",
+        "updated_at": "2025-02-24T16:27:04Z",
+        "closed_at": "2025-02-24T16:26:44Z",
+        "merged_at": "2025-02-24T16:26:44Z",
+        "merge_commit_sha": "22bc162cb2db49994ffc701e71faf0d2f80223c5",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "259e6269a8a305ce30d04f45b9279a4400bf6831",
+          "ref": "telemetry"
+        },
+        "base": {
+          "sha": "0a851d62dd9c2f719bcbe6798ee55fbeb5de0c89",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2341659130,
+        "node_id": "PR_kwDOLBN4sM6LkuH6",
+        "number": 43,
+        "state": "closed",
+        "title": "Allow deleting vectors with prefix or filter",
+        "body": "We have started supporting deleting vectors with id prefix or metadata filter.",
+        "html_url": "https://github.com/upstash/vector-py/pull/43",
+        "created_at": "2025-02-18T10:37:28Z",
+        "updated_at": "2025-02-24T16:26:04Z",
+        "closed_at": "2025-02-24T16:26:01Z",
+        "merged_at": "2025-02-24T16:26:01Z",
+        "merge_commit_sha": "ced4d9003c1b652012effa7f6d01f32d12461221",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "3e6bae4268f9199d5351bc80f2187787ec1050f4",
+          "ref": "delete"
+        },
+        "base": {
+          "sha": "0a851d62dd9c2f719bcbe6798ee55fbeb5de0c89",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2341960892,
+        "node_id": "PR_kwDOLBN4sM6Ll3y8",
+        "number": 44,
+        "state": "closed",
+        "title": "Allow fetching vectors with prefix",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/44",
+        "created_at": "2025-02-18T12:39:52Z",
+        "updated_at": "2025-02-24T16:00:45Z",
+        "closed_at": "2025-02-24T16:00:38Z",
+        "merged_at": "2025-02-24T16:00:37Z",
+        "merge_commit_sha": "0cb004b02f91df6ae08cf40e1f8971bd81997363",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "4a1f85d0b4781bcda229d75fbb9ab624ca8769e6",
+          "ref": "fetch-prefix"
+        },
+        "base": {
+          "sha": "0a851d62dd9c2f719bcbe6798ee55fbeb5de0c89",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2341996117,
+        "node_id": "PR_kwDOLBN4sM6LmAZV",
+        "number": 45,
+        "state": "closed",
+        "title": "Allow ranging over vectors with prefix",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/45",
+        "created_at": "2025-02-18T12:55:54Z",
+        "updated_at": "2025-02-24T16:00:43Z",
+        "closed_at": "2025-02-24T15:58:55Z",
+        "merged_at": "2025-02-24T15:58:55Z",
+        "merge_commit_sha": "084183aec2da985c3833da4ea91658e4c981a270",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "9433fcc2239b11401f28acd0d93a89c3e07f0b49",
+          "ref": "range-prefix"
+        },
+        "base": {
+          "sha": "0a851d62dd9c2f719bcbe6798ee55fbeb5de0c89",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2163787131,
+        "node_id": "PR_kwDOLBN4sM6A-MV7",
+        "number": 36,
+        "state": "closed",
+        "title": "Update README",
+        "body": "Updated the README to match other SDKs by keeping it brief and linking to the documentation for more details.",
+        "html_url": "https://github.com/upstash/vector-py/pull/36",
+        "created_at": "2024-11-05T19:40:12Z",
+        "updated_at": "2025-02-05T21:42:35Z",
+        "closed_at": "2025-02-05T21:42:35Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 101020733,
+          "node_id": "U_kgDOBgV0PQ",
+          "login": "enesgules",
+          "type": "User",
+          "html_url": "https://github.com/enesgules"
+        },
+        "head": {
+          "sha": "8e1d6b675625d19c424fbaaf9357a07d009b4db4",
+          "ref": "master"
+        },
+        "base": {
+          "sha": "7f3d7799132e995a310231c1143b7b17318fe42e",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2317107201,
+        "node_id": "PR_kwDOLBN4sM6KHEAB",
+        "number": 41,
+        "state": "closed",
+        "title": "Allow upserting data as vector",
+        "body": "I stumbled upon this problem while using the sample code provided in the console. If the index is created with an embedding model, we still try to use `Vector` type with only data field. It should have been `Data`, but I think this is a mistake that can happen a lot. So, we now allow such usages. If this is wrong, server will reject it anyway, just like it does.",
+        "html_url": "https://github.com/upstash/vector-py/pull/41",
+        "created_at": "2025-02-05T09:23:50Z",
+        "updated_at": "2025-02-05T14:46:59Z",
+        "closed_at": "2025-02-05T14:33:35Z",
+        "merged_at": "2025-02-05T14:33:35Z",
+        "merge_commit_sha": "8753faefba9844c16f051b9b96edb3d64cc7a7f6",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "78ecb3db51079dcdbb8bf398706646646d97f4c1",
+          "ref": "data-as-vector"
+        },
+        "base": {
+          "sha": "17e719611db4896e6d22746592a37ccaa17599e2",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2315406469,
+        "node_id": "PR_kwDOLBN4sM6KAkyF",
+        "number": 40,
+        "state": "closed",
+        "title": "Add support for new info endpoint fields",
+        "body": "We wanted to add embedding model info to the info endpoint, as well as having some separate fields for dense and sparse indexes.\r\n\r\nFor now, there is some duplicate information in the top level fields and the fields in the dense_index, but we might deprecate the top level fields later on.",
+        "html_url": "https://github.com/upstash/vector-py/pull/40",
+        "created_at": "2025-02-04T14:41:57Z",
+        "updated_at": "2025-02-05T14:46:49Z",
+        "closed_at": "2025-02-05T14:45:18Z",
+        "merged_at": "2025-02-05T14:45:18Z",
+        "merge_commit_sha": "0a851d62dd9c2f719bcbe6798ee55fbeb5de0c89",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "fc9b1ef91038e56c19af01783c0fc25c58183f92",
+          "ref": "new-info-fields"
+        },
+        "base": {
+          "sha": "17e719611db4896e6d22746592a37ccaa17599e2",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2263405933,
+        "node_id": "PR_kwDOLBN4sM6G6NVt",
+        "number": 39,
+        "state": "closed",
+        "title": "Bump version to 0.7.0",
+        "body": "Also, updated the mypy dev dependency to the latest minor version.",
+        "html_url": "https://github.com/upstash/vector-py/pull/39",
+        "created_at": "2025-01-07T09:08:40Z",
+        "updated_at": "2025-01-07T11:58:00Z",
+        "closed_at": "2025-01-07T11:57:35Z",
+        "merged_at": "2025-01-07T11:57:34Z",
+        "merge_commit_sha": "17e719611db4896e6d22746592a37ccaa17599e2",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "6b630abae5283eebcee55c2eb319d8abc526857f",
+          "ref": "bump-0.7.0"
+        },
+        "base": {
+          "sha": "c4f878d6889d5d5224fd7683864ff450f416ccd8",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2220303500,
+        "node_id": "PR_kwDOLBN4sM6EVySM",
+        "number": 37,
+        "state": "closed",
+        "title": "VEC-224: Add support for sparse and hybrid indexes",
+        "body": "Added support for sparse and hybrid vectors to upsert, query, resumable query, fetch, update, and range apis. Also, added new query options for sparse and hybrid indexes; namely the weighting strategy and fusion algorithm.",
+        "html_url": "https://github.com/upstash/vector-py/pull/37",
+        "created_at": "2024-12-06T15:22:23Z",
+        "updated_at": "2025-01-07T09:13:21Z",
+        "closed_at": "2025-01-07T09:02:36Z",
+        "merged_at": "2025-01-07T09:02:36Z",
+        "merge_commit_sha": "c4f878d6889d5d5224fd7683864ff450f416ccd8",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "ba4bb7902eb135661a1ef8fa0fcd87441623d092",
+          "ref": "sparse-and-hybrid-indexes"
+        },
+        "base": {
+          "sha": "7f3d7799132e995a310231c1143b7b17318fe42e",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2111057589,
+        "node_id": "PR_kwDOLBN4sM591C61",
+        "number": 33,
+        "state": "closed",
+        "title": "Fix: Handle None Namespace Case Properly",
+        "body": "Currently, the below snippet upserts a vector to namespace `None`. We're now handling it to upsert to the default namespace.\r\n\r\n```python\r\nindex = Index.from_env()\r\n\r\nvec = [1] * 1536\r\n\r\nres = index.upsert(vectors=[{\"id\": \"1\", \"vector\": vec}], namespace=None)\r\n```",
+        "html_url": "https://github.com/upstash/vector-py/pull/33",
+        "created_at": "2024-10-07T14:48:03Z",
+        "updated_at": "2025-01-07T09:03:17Z",
+        "closed_at": "2024-10-11T07:40:23Z",
+        "merged_at": "2024-10-11T07:40:23Z",
+        "merge_commit_sha": "4bb79dfb22b221160aa12ecfa709ea9964dc7058",
+        "draft": false,
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        },
+        "head": {
+          "sha": "b0a859df3c9884c202a01d2f3db5d4ddfb75e894",
+          "ref": "DX-1331"
+        },
+        "base": {
+          "sha": "0800e7c342f775b01d618b0b6feacd38571d1241",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2246148609,
+        "node_id": "PR_kwDOLBN4sM6F4YIB",
+        "number": 38,
+        "state": "closed",
+        "title": "Increase http read/write timeout",
+        "body": "We saw that during upsert of large batches, index might fail to answer in 2 minutes if it is performing indexing in the background.\r\n\r\nTherefore, I am bumping the http timeout to 10 minutes until we make it faster on the backend.",
+        "html_url": "https://github.com/upstash/vector-py/pull/38",
+        "created_at": "2024-12-20T07:29:41Z",
+        "updated_at": "2025-01-03T09:35:38Z",
+        "closed_at": "2025-01-03T09:35:33Z",
+        "merged_at": "2025-01-03T09:35:33Z",
+        "merge_commit_sha": "cafb37b2ca98ba44e30a08c7c12f6dc0fee4758b",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "64475239031da05958805fce56ee97bb9f642396",
+          "ref": "incr-timeout"
+        },
+        "base": {
+          "sha": "7f3d7799132e995a310231c1143b7b17318fe42e",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2145349855,
+        "node_id": "PR_kwDOLBN4sM5_33Df",
+        "number": 35,
+        "state": "closed",
+        "title": "Do not retry in case of an nginx timeout error",
+        "body": "When the client request timeouts, the nginx returns an HTML error page.\r\n\r\nWe should not retry when that happens (which would fail the respone.json() call as it is not a json).\r\n\r\nThis PR pulls the parsing of the response body out of the retry logic.",
+        "html_url": "https://github.com/upstash/vector-py/pull/35",
+        "created_at": "2024-10-25T08:50:46Z",
+        "updated_at": "2024-10-25T09:07:32Z",
+        "closed_at": "2024-10-25T09:07:29Z",
+        "merged_at": "2024-10-25T09:07:29Z",
+        "merge_commit_sha": "7f3d7799132e995a310231c1143b7b17318fe42e",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "0b5d8c33142f930fa9660d2de16d51dd4e8083f6",
+          "ref": "timeout-retry"
+        },
+        "base": {
+          "sha": "4bb79dfb22b221160aa12ecfa709ea9964dc7058",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2095606386,
+        "node_id": "PR_kwDOLBN4sM586Gpy",
+        "number": 32,
+        "state": "closed",
+        "title": "Change the resumable query API",
+        "body": "There were couple of problems with it:\r\n\r\n- We don't use the async prefix in async method names in the public API\r\n- We don't return the result for APIs that returns Success string only\r\n\r\nSo, I have changed the implementation to fix these problems.\r\n\r\nAlso, I think it is much better to return the first batch of the results directly to the user, along with an handle to fetch more or stop. This is more similar to API we have in JS SDK, makes the possible misuses impossible (you can't call stop before the start anymore etc.), and makes more sense for the async version. For the async version, we previously marked the function async but did not call any async functions, which was weird.\r\n\r\nAlso, I have changed the tests a bit to make them more resillient to failures due to potentially delayed indexing, which might happen from time to time.",
+        "html_url": "https://github.com/upstash/vector-py/pull/32",
+        "created_at": "2024-09-27T11:13:17Z",
+        "updated_at": "2024-09-27T12:04:27Z",
+        "closed_at": "2024-09-27T12:00:54Z",
+        "merged_at": "2024-09-27T12:00:54Z",
+        "merge_commit_sha": "0800e7c342f775b01d618b0b6feacd38571d1241",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "9a5d4cd88974f3a50591480676087bec9146aa7c",
+          "ref": "resumable-query-refactor"
+        },
+        "base": {
+          "sha": "1a52dcb905a64ea995cfc8005e20a50ae4419262",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2041278322,
+        "node_id": "PR_kwDOLBN4sM55q29y",
+        "number": 30,
+        "state": "closed",
+        "title": "DX-1200: Resumable Query",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/30",
+        "created_at": "2024-08-28T07:41:01Z",
+        "updated_at": "2024-09-12T07:51:33Z",
+        "closed_at": "2024-09-12T07:51:29Z",
+        "merged_at": "2024-09-12T07:51:29Z",
+        "merge_commit_sha": "1a52dcb905a64ea995cfc8005e20a50ae4419262",
+        "draft": false,
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        },
+        "head": {
+          "sha": "b7821811c2e7fb2b1fd7c28db194039e536c72ab",
+          "ref": "DX-1200"
+        },
+        "base": {
+          "sha": "10a0fdf73804a34bc3815d3c078d7f28076e6e72",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2041663492,
+        "node_id": "PR_kwDOLBN4sM55sVAE",
+        "number": 31,
+        "state": "closed",
+        "title": "Use a higher timeout for httpx client",
+        "body": "The default timeout of 5 seconds is sometimes not enough if you are upserting a huge batch. So, I bumped the default timeout values to something more relaxed.",
+        "html_url": "https://github.com/upstash/vector-py/pull/31",
+        "created_at": "2024-08-28T10:56:05Z",
+        "updated_at": "2024-09-02T06:51:28Z",
+        "closed_at": "2024-09-02T06:51:25Z",
+        "merged_at": "2024-09-02T06:51:25Z",
+        "merge_commit_sha": "a001d9505788fd89b5d9cc3c183af12f3df61b8f",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "8aca894f9f2c347cdbcceb28b180edad02373838",
+          "ref": "timeout"
+        },
+        "base": {
+          "sha": "10a0fdf73804a34bc3815d3c078d7f28076e6e72",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1935417023,
+        "node_id": "PR_kwDOLBN4sM5zXB6_",
+        "number": 29,
+        "state": "closed",
+        "title": "Bump version to 0.5.0",
+        "body": "Also, allow wider version range of httpx like the other SDKs.",
+        "html_url": "https://github.com/upstash/vector-py/pull/29",
+        "created_at": "2024-06-24T12:16:42Z",
+        "updated_at": "2024-06-24T13:32:52Z",
+        "closed_at": "2024-06-24T13:31:49Z",
+        "merged_at": "2024-06-24T13:31:49Z",
+        "merge_commit_sha": "10a0fdf73804a34bc3815d3c078d7f28076e6e72",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "69f5d3ab9e70451291a1b8bc1a674b0474b22385",
+          "ref": "bump-0.5.0"
+        },
+        "base": {
+          "sha": "5e76f4b758ac892442b48c125aa66170a5abd3e7",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1920214888,
+        "node_id": "PR_kwDOLBN4sM5ydCdo",
+        "number": 28,
+        "state": "closed",
+        "title": "Implement new vector features",
+        "body": "- Added query_many api that allows you to perform batch queries\r\n- Added support for newly added data field to upsert and queries\r\n- Added support for patching metadata, instead of overwriting it\r\n- Added support for updating multiple fields of vector within the update endpoint",
+        "html_url": "https://github.com/upstash/vector-py/pull/28",
+        "created_at": "2024-06-14T08:31:13Z",
+        "updated_at": "2024-06-24T10:08:50Z",
+        "closed_at": "2024-06-24T10:08:45Z",
+        "merged_at": "2024-06-24T10:08:45Z",
+        "merge_commit_sha": "5e76f4b758ac892442b48c125aa66170a5abd3e7",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "bef5d6128e8c8ad5d3f4c6dd18efaf16098cc37c",
+          "ref": "new-features"
+        },
+        "base": {
+          "sha": "ba761beec3647a0e0e97534258ab8678be247ff2",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1867064812,
+        "node_id": "PR_kwDOLBN4sM5vSSXs",
+        "number": 27,
+        "state": "closed",
+        "title": "bump version to 0.4.0",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/27",
+        "created_at": "2024-05-13T16:40:21Z",
+        "updated_at": "2024-05-13T16:42:36Z",
+        "closed_at": "2024-05-13T16:42:33Z",
+        "merged_at": "2024-05-13T16:42:33Z",
+        "merge_commit_sha": "ba761beec3647a0e0e97534258ab8678be247ff2",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "8f85bf4ed15235838547c2ccd10fdad0f72ea173",
+          "ref": "0.4.0"
+        },
+        "base": {
+          "sha": "dce6d3b0226cec3a847ca55c97b1a8f572021e5f",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1866309067,
+        "node_id": "PR_kwDOLBN4sM5vPZ3L",
+        "number": 26,
+        "state": "closed",
+        "title": "Add update method",
+        "body": "A method to update either the vector value or metadata.",
+        "html_url": "https://github.com/upstash/vector-py/pull/26",
+        "created_at": "2024-05-13T10:57:26Z",
+        "updated_at": "2024-05-13T16:37:17Z",
+        "closed_at": "2024-05-13T16:37:15Z",
+        "merged_at": "2024-05-13T16:37:15Z",
+        "merge_commit_sha": "dce6d3b0226cec3a847ca55c97b1a8f572021e5f",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "660603a3331b161c01c78ad19ae7f19378d64ddb",
+          "ref": "update"
+        },
+        "base": {
+          "sha": "be1a0e974263bdcff0776c5f27828dce4a0ed07f",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1866178797,
+        "node_id": "PR_kwDOLBN4sM5vO6Dt",
+        "number": 25,
+        "state": "closed",
+        "title": "Add reset all namespaces API",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/25",
+        "created_at": "2024-05-13T09:48:41Z",
+        "updated_at": "2024-05-13T16:37:07Z",
+        "closed_at": "2024-05-13T16:37:05Z",
+        "merged_at": "2024-05-13T16:37:04Z",
+        "merge_commit_sha": "c3155f0cacc32d846bff6795b54d3bf6cc200736",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "826ec2bda1924dada2c593cc680055c48b34cb03",
+          "ref": "reset-all"
+        },
+        "base": {
+          "sha": "be1a0e974263bdcff0776c5f27828dce4a0ed07f",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1853684896,
+        "node_id": "PR_kwDOLBN4sM5ufPyg",
+        "number": 24,
+        "state": "closed",
+        "title": "Add support for namespaces",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/24",
+        "created_at": "2024-05-03T15:49:53Z",
+        "updated_at": "2024-05-13T09:26:57Z",
+        "closed_at": "2024-05-13T09:26:54Z",
+        "merged_at": "2024-05-13T09:26:54Z",
+        "merge_commit_sha": "be1a0e974263bdcff0776c5f27828dce4a0ed07f",
+        "draft": false,
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        },
+        "head": {
+          "sha": "731c8268ebcce955cb39b8145fd97e942b52708e",
+          "ref": "namespaces"
+        },
+        "base": {
+          "sha": "4a29a577ef703eb781e8c6769112cac084ee79af",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1710273712,
+        "node_id": "PR_kwDOLBN4sM5l8LSw",
+        "number": 15,
+        "state": "closed",
+        "title": "Fix httpx dependency version to be compatible with langchain",
+        "body": "```\r\n> poetry add upstash_vector --optional\r\nUsing version ^0.2.0 for upstash-vector\r\n\r\nUpdating dependencies\r\nResolving dependencies... (0.2s)\r\n\r\nBecause upstash-vector (0.2.0) depends on httpx (>=0.25.0,<0.26.0)\r\n and no versions of upstash-vector match >0.2.0,<0.3.0, upstash-vector (>=0.2.0,<0.3.0) requires httpx (>=0.25.0,<0.26.0).\r\nSo, because langchain-community depends on both httpx (^0.24.1) and upstash-vector (^0.2.0), version solving failed.\r\n```",
+        "html_url": "https://github.com/upstash/vector-py/pull/15",
+        "created_at": "2024-02-04T08:55:52Z",
+        "updated_at": "2024-04-15T20:37:30Z",
+        "closed_at": "2024-02-08T13:08:46Z",
+        "merged_at": "2024-02-08T13:08:46Z",
+        "merge_commit_sha": "0d6a48359bb749c83651f63ed1e306fa1d898280",
+        "draft": false,
+        "user": {
+          "id": 18082091,
+          "node_id": "MDQ6VXNlcjE4MDgyMDkx",
+          "login": "ytkimirti",
+          "type": "User",
+          "html_url": "https://github.com/ytkimirti"
+        },
+        "head": {
+          "sha": "72b3c1cafafd693419884814fe0c0bbb03748a0e",
+          "ref": "httpx-dep"
+        },
+        "base": {
+          "sha": "ee4b8191e3124d8ec8b1fb306e8d9062ed3ca8cf",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1701393336,
+        "node_id": "PR_kwDOLBN4sM5laTO4",
+        "number": 14,
+        "state": "closed",
+        "title": "change stats to info",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/14",
+        "created_at": "2024-01-30T06:59:56Z",
+        "updated_at": "2024-04-15T20:37:08Z",
+        "closed_at": "2024-01-30T09:13:34Z",
+        "merged_at": "2024-01-30T09:13:34Z",
+        "merge_commit_sha": "ee4b8191e3124d8ec8b1fb306e8d9062ed3ca8cf",
+        "draft": false,
+        "user": {
+          "id": 100838962,
+          "node_id": "U_kgDOBgKuMg",
+          "login": "burak-upstash",
+          "type": "User",
+          "html_url": "https://github.com/burak-upstash"
+        },
+        "head": {
+          "sha": "e4f0bc4f729799cda6e83acc0794dd5779141800",
+          "ref": "change_stats_to_info"
+        },
+        "base": {
+          "sha": "f56e7c17821530a3ec3c65fb3e5bf61668c955e1",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1737848498,
+        "node_id": "PR_kwDOLBN4sM5nlXay",
+        "number": 18,
+        "state": "closed",
+        "title": "Update README.md",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/18",
+        "created_at": "2024-02-21T23:21:28Z",
+        "updated_at": "2024-04-15T20:36:38Z",
+        "closed_at": "2024-02-21T23:21:37Z",
+        "merged_at": "2024-02-21T23:21:37Z",
+        "merge_commit_sha": "273c0315685e6fe7efe66b02d12db426690c60ca",
+        "draft": false,
+        "user": {
+          "id": 234086,
+          "node_id": "MDQ6VXNlcjIzNDA4Ng==",
+          "login": "enesakar",
+          "type": "User",
+          "html_url": "https://github.com/enesakar"
+        },
+        "head": {
+          "sha": "1dce82e9fd3a07a86d454697b3d9e3c08d0a61a3",
+          "ref": "enesakar-patch-1"
+        },
+        "base": {
+          "sha": "09a5471bb684d385903725fde6158cc02298be8b",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1804249533,
+        "node_id": "PR_kwDOLBN4sM5riqm9",
+        "number": 21,
+        "state": "closed",
+        "title": "embedding support",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/21",
+        "created_at": "2024-04-03T09:48:19Z",
+        "updated_at": "2024-04-15T20:36:20Z",
+        "closed_at": "2024-04-15T16:32:49Z",
+        "merged_at": "2024-04-15T16:32:49Z",
+        "merge_commit_sha": "9f7a1d31940b7679a274f40bb99d333fb7ba6619",
+        "draft": false,
+        "user": {
+          "id": 100838962,
+          "node_id": "U_kgDOBgKuMg",
+          "login": "burak-upstash",
+          "type": "User",
+          "html_url": "https://github.com/burak-upstash"
+        },
+        "head": {
+          "sha": "9c7deeb850562a1ed2061c15d3ac64899229cfe4",
+          "ref": "dx-814"
+        },
+        "base": {
+          "sha": "d1a75f83f4491e97dcfdd3833c28b9ec3875bdaa",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1823701985,
+        "node_id": "PR_kwDOLBN4sM5ss3vh",
+        "number": 22,
+        "state": "closed",
+        "title": "bump version",
+        "body": null,
+        "html_url": "https://github.com/upstash/vector-py/pull/22",
+        "created_at": "2024-04-15T16:34:58Z",
+        "updated_at": "2024-04-15T20:36:12Z",
+        "closed_at": "2024-04-15T16:36:41Z",
+        "merged_at": "2024-04-15T16:36:41Z",
+        "merge_commit_sha": "6d19228f7428593fdb5a0f8dcebad8961d5b9972",
+        "draft": false,
+        "user": {
+          "id": 100838962,
+          "node_id": "U_kgDOBgKuMg",
+          "login": "burak-upstash",
+          "type": "User",
+          "html_url": "https://github.com/burak-upstash"
+        },
+        "head": {
+          "sha": "864af56ca54ac60be6292c897e0e4c5cf1300e3a",
+          "ref": "bump_version_0.3.0"
+        },
+        "base": {
+          "sha": "9f7a1d31940b7679a274f40bb99d333fb7ba6619",
+          "ref": "master"
+        }
+      }
+    ]
+  }
+}

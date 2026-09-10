@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/natural-language-postgres/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:35.737327+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"fce9fcc851e51ec0daf2e2f04d1de4732d1a86d5cf522aab5e4c7120ecc6e603\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 869760181,
+    "repository": "vercel-labs/natural-language-postgres",
+    "records": [
+      {
+        "id": 3583127787,
+        "node_id": "PR_kwDOM9d8tc7VkjDr",
+        "number": 21,
+        "state": "closed",
+        "title": "chore: patch React RSC security releases",
+        "body": "## Summary\n- pin `next` and `eslint-config-next` to patched 15.5.10 releases to remove vulnerable React Server Components paths affected by CVE-2025-55183 and CVE-2025-55184\n- upgrade `react` and `react-dom` from 19.0.0 to the patched 19.0.4 backport release and refresh the pnpm lockfile\n- keep the change scoped to dependency and lockfile updates only\n\n## Testing\n- ran `pnpm install`",
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/21",
+        "created_at": "2026-04-25T09:02:24Z",
+        "updated_at": "2026-04-25T09:04:47Z",
+        "closed_at": "2026-04-25T09:04:47Z",
+        "merged_at": "2026-04-25T09:04:47Z",
+        "merge_commit_sha": "f5af6a2d267b653802cddd76da6874bffec0ee95",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "13a147969a92fccaa036d23f5b6bb77f717667d1",
+          "ref": "chore/react-rsc-security-update"
+        },
+        "base": {
+          "sha": "52cfb494310ec9bce2fad9e4ff7c9a1f8131078b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3551011545,
+        "node_id": "PR_kwDOM9d8tc7TqCLZ",
+        "number": 20,
+        "state": "closed",
+        "title": "feat: replace kasada with vercel botid",
+        "body": "## Summary\n- Removes all Kasada bot detection infrastructure (client SDK, server handler, proxy route)\n- Integrates [Vercel BotID](https://vercel.com/docs/botid) as replacement\n- Adds `checkBotId()` server-side verification in the `generateQuery` server action\n- Existing rate limiting middleware preserved as-is\n\n## Changes\n- **`app/layout.tsx`**: Replaced `KasadaClient` with `BotIdClient` (protects `POST /`)\n- **`next.config.js`**: Wrapped with `withBotId()` for proxy rewrites\n- **`middleware.ts`**: Removed Kasada handler, kept rate limiting\n- **`app/actions.ts`**: Added `checkBotId()` gate in `generateQuery`\n- **Deleted**: `utils/kasada/*`, `app/(kasada)/*` (Kasada client, server, proxy route)\n\n## Post-merge\n- Remove `KASADA_TOKEN` env var from project settings\n- Enable BotID Deep Analysis in the Vercel dashboard Firewall tab if desired",
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/20",
+        "created_at": "2026-04-19T01:06:45Z",
+        "updated_at": "2026-04-19T01:35:08Z",
+        "closed_at": "2026-04-19T01:35:08Z",
+        "merged_at": "2026-04-19T01:35:08Z",
+        "merge_commit_sha": "fc9f849d6dede864802452f299291a79bd973f21",
+        "draft": false,
+        "user": {
+          "id": 17938322,
+          "node_id": "MDQ6VXNlcjE3OTM4MzIy",
+          "login": "jeremyphilemon",
+          "type": "User",
+          "html_url": "https://github.com/jeremyphilemon"
+        },
+        "head": {
+          "sha": "499cf7b94fd7f0c67f976d7ba2a0963f6dc054a7",
+          "ref": "incident/replace-kasada-with-botid"
+        },
+        "base": {
+          "sha": "e8d16793321f71fd09d8da1e7068cbe73bcdce7c",
+          "ref": "live"
+        }
+      },
+      {
+        "id": 3472441842,
+        "node_id": "PR_kwDOM9d8tc7O-UHy",
+        "number": 19,
+        "state": "closed",
+        "title": "chore: upgrade AI SDK dependencies and refactor to new API",
+        "body": "## Summary\n\nUpgrades AI SDK and related dependencies to the latest versions, refactoring the codebase to align with the new API while converting schema fields from optional to nullable.\n\n## Changes\n\n**Dependencies (`package.json`, `pnpm-lock.yaml`)**\n\n- Upgrade ai-sdk and ai packages to latest versions\n- Reduce lock file size by removing unnecessary transitive dependencies\n\n**Types (`lib/types.ts`)**\n\n- Refactor schema fields from optional to nullable\n- Update type definitions to match new AI SDK API\n\n**Actions (`app/actions.ts`)**\n\n- Update implementation to use new AI SDK API\n- Adjust OpenAI model specification for new SDK version\n\n---\n\n[Chat](https://openharness.dev/sessions/XQ6A-bZ4Uql26afGR9P7Q/chats/5c728e30-0cba-454f-bdf3-dd4d63aee2be) - Built with guidance from [Nico Albanese](https://github.com/nicoalbanese)",
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/19",
+        "created_at": "2026-03-31T14:36:23Z",
+        "updated_at": "2026-03-31T14:37:34Z",
+        "closed_at": "2026-03-31T14:37:34Z",
+        "merged_at": "2026-03-31T14:37:34Z",
+        "merge_commit_sha": "52cfb494310ec9bce2fad9e4ff7c9a1f8131078b",
+        "draft": false,
+        "user": {
+          "id": 10137,
+          "node_id": "MDQ6VXNlcjEwMTM3",
+          "login": "ghost",
+          "type": "User",
+          "html_url": "https://github.com/ghost"
+        },
+        "head": {
+          "sha": "567a2ee463d0c294a34f9f53705fa0d79b70ab06",
+          "ref": "na/12073aee"
+        },
+        "base": {
+          "sha": "2d021b50da96f2f91c13b95bc06581797331d4be",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2848206762,
+        "node_id": "PR_kwDOM9d8tc6pxC-q",
+        "number": 14,
+        "state": "closed",
+        "title": "fix data parsing to match with dataset source",
+        "body": "dataset source had time formatted as MM/DD/YY rather than DD/MM/YY",
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/14",
+        "created_at": "2025-09-22T07:16:45Z",
+        "updated_at": "2026-02-05T15:37:32Z",
+        "closed_at": "2026-02-05T15:37:32Z",
+        "merged_at": null,
+        "merge_commit_sha": "a7ff95e2fc30067846282a34e5faf82e027cb933",
+        "draft": false,
+        "user": {
+          "id": 113545860,
+          "node_id": "U_kgDOBsSShA",
+          "login": "Systemized",
+          "type": "User",
+          "html_url": "https://github.com/Systemized"
+        },
+        "head": {
+          "sha": "19005559fa690231755b6542b29733d9b14d81a5",
+          "ref": "date-fix"
+        },
+        "base": {
+          "sha": "2db29a44457d59d55e885270563b10eebb98b247",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2678626274,
+        "node_id": "PR_kwDOM9d8tc6fqJfi",
+        "number": 13,
+        "state": "closed",
+        "title": "7/18/25 data work",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/13",
+        "created_at": "2025-07-19T02:55:11Z",
+        "updated_at": "2026-01-05T23:32:37Z",
+        "closed_at": "2025-07-29T20:41:11Z",
+        "merged_at": null,
+        "merge_commit_sha": "09874c4a3fe7793d7c446f3f638601c4b8281849",
+        "draft": false,
+        "user": {
+          "id": 93538980,
+          "node_id": "U_kgDOBZNKpA",
+          "login": "jwoodcodes",
+          "type": "User",
+          "html_url": "https://github.com/jwoodcodes"
+        },
+        "head": {
+          "sha": "5ed93ff87a3c88bf83b2c7e25b8763498bffe94c",
+          "ref": "7/18/25-data-work"
+        },
+        "base": {
+          "sha": "2db29a44457d59d55e885270563b10eebb98b247",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2642649569,
+        "node_id": "PR_kwDOM9d8tc6dg6Hh",
+        "number": 12,
+        "state": "closed",
+        "title": "Start ag grid",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/12",
+        "created_at": "2025-07-05T02:43:16Z",
+        "updated_at": "2026-01-05T23:32:35Z",
+        "closed_at": "2025-07-29T20:41:03Z",
+        "merged_at": null,
+        "merge_commit_sha": "32119a66857ddb9786682fef7fe71a66ec56beb2",
+        "draft": false,
+        "user": {
+          "id": 93538980,
+          "node_id": "U_kgDOBZNKpA",
+          "login": "jwoodcodes",
+          "type": "User",
+          "html_url": "https://github.com/jwoodcodes"
+        },
+        "head": {
+          "sha": "b7658c029c560d2b1b71d6f9b0eedfb70fd2fc30",
+          "ref": "start-Ag-grid"
+        },
+        "base": {
+          "sha": "2db29a44457d59d55e885270563b10eebb98b247",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2608708202,
+        "node_id": "PR_kwDOM9d8tc6bfbpq",
+        "number": 11,
+        "state": "closed",
+        "title": "free model is connected and generating query (still wrong format)",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/11",
+        "created_at": "2025-06-21T03:11:31Z",
+        "updated_at": "2026-01-05T23:32:33Z",
+        "closed_at": "2025-07-29T20:40:57Z",
+        "merged_at": null,
+        "merge_commit_sha": "43e8c42b2223016511080a756690aec060900b72",
+        "draft": false,
+        "user": {
+          "id": 93538980,
+          "node_id": "U_kgDOBZNKpA",
+          "login": "jwoodcodes",
+          "type": "User",
+          "html_url": "https://github.com/jwoodcodes"
+        },
+        "head": {
+          "sha": "dff11589e99cdf6b5126b06fa91a9c34f8fa4c84",
+          "ref": "initial-code-walkthrough"
+        },
+        "base": {
+          "sha": "2db29a44457d59d55e885270563b10eebb98b247",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3076872483,
+        "node_id": "PR_kwDOM9d8tc63ZVkj",
+        "number": 16,
+        "state": "closed",
+        "title": "chore: upgrade Next.js to 15.1.9 (CVE-2025-55182)",
+        "body": "## Summary\n\nUpgrade Next.js from 15.1.0 to 15.1.9 to fix CVE-2025-55182.\n\n## CVE Details\n\nCVE-2025-55182 is a critical Remote Code Execution vulnerability in React Server Components.\n\n## Changes\n\n- Updated `next` dependency to `^15.1.9`\n- Fixed any type/lint/build errors caused by the upgrade",
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/16",
+        "created_at": "2025-12-06T02:19:14Z",
+        "updated_at": "2025-12-06T02:28:36Z",
+        "closed_at": "2025-12-06T02:28:35Z",
+        "merged_at": "2025-12-06T02:28:35Z",
+        "merge_commit_sha": "2d021b50da96f2f91c13b95bc06581797331d4be",
+        "draft": false,
+        "user": {
+          "id": 366502,
+          "node_id": "MDQ6VXNlcjM2NjUwMg==",
+          "login": "ctate",
+          "type": "User",
+          "html_url": "https://github.com/ctate"
+        },
+        "head": {
+          "sha": "c26ed9a6e185714411a6cbbfdbaf85faf7bdf1a2",
+          "ref": "ctate/upgrade-next"
+        },
+        "base": {
+          "sha": "2db29a44457d59d55e885270563b10eebb98b247",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2582690554,
+        "node_id": "PR_kwDOM9d8tc6Z8Lr6",
+        "number": 10,
+        "state": "closed",
+        "title": "Complete tutorial",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/10",
+        "created_at": "2025-06-10T23:38:29Z",
+        "updated_at": "2025-07-29T20:40:35Z",
+        "closed_at": "2025-07-29T20:40:35Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 194825742,
+          "node_id": "U_kgDOC5zODg",
+          "login": "guy-car",
+          "type": "User",
+          "html_url": "https://github.com/guy-car"
+        },
+        "head": {
+          "sha": "6169acb2e53abf39c06b1636d3a1b4dedd4958e7",
+          "ref": "complete-tutorial"
+        },
+        "base": {
+          "sha": "2db29a44457d59d55e885270563b10eebb98b247",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2153967940,
+        "node_id": "PR_kwDOM9d8tc6AYvFE",
+        "number": 5,
+        "state": "closed",
+        "title": "Fix typo on actions.ts prompt",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/5",
+        "created_at": "2024-10-30T13:31:34Z",
+        "updated_at": "2024-10-30T21:38:29Z",
+        "closed_at": "2024-10-30T21:38:29Z",
+        "merged_at": "2024-10-30T21:38:29Z",
+        "merge_commit_sha": "5f05ea4af6157c48cf13bf9645ce40556f7e6311",
+        "draft": false,
+        "user": {
+          "id": 26875009,
+          "node_id": "MDQ6VXNlcjI2ODc1MDA5",
+          "login": "luistorres",
+          "type": "User",
+          "html_url": "https://github.com/luistorres"
+        },
+        "head": {
+          "sha": "ae92f108e1bdbd5c8b43410306e786e9b87b19c7",
+          "ref": "patch-1"
+        },
+        "base": {
+          "sha": "14bdb32a42f8d118ca94d311c953200fff460e39",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2116131723,
+        "node_id": "PR_kwDOM9d8tc5-IZuL",
+        "number": 1,
+        "state": "closed",
+        "title": "add charts",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/1",
+        "created_at": "2024-10-09T21:03:06Z",
+        "updated_at": "2024-10-30T12:33:43Z",
+        "closed_at": "2024-10-10T16:13:10Z",
+        "merged_at": "2024-10-10T16:13:10Z",
+        "merge_commit_sha": "173e4fb46edccd4e60a8859f0b2130de6e779b69",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "947c7b7890b1aad3eb4b95a3eee7fd971dcaf317",
+          "ref": "na/add-charts"
+        },
+        "base": {
+          "sha": "b20b4367db99fb41591e4ccc2e8a3a9a1bc508bd",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2125570281,
+        "node_id": "PR_kwDOM9d8tc5-saDp",
+        "number": 2,
+        "state": "closed",
+        "title": "fix comments",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/natural-language-postgres/pull/2",
+        "created_at": "2024-10-15T15:22:46Z",
+        "updated_at": "2024-10-30T12:33:38Z",
+        "closed_at": "2024-10-15T15:22:58Z",
+        "merged_at": "2024-10-15T15:22:58Z",
+        "merge_commit_sha": "c10e24e20138e1f0aa6f4752ab243cf343ecdfd5",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "8beb871d972e216f23e39ed9ab9f3c9b7d6ab026",
+          "ref": "na/fix-comments"
+        },
+        "base": {
+          "sha": "74bd9dae748805b24c2098bdbcca3c7e225bbc36",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}

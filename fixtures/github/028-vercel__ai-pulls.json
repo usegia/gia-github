@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/ai/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:33.587179+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"67fbf3b46a4bf7ad3307acaa6e2bb8584fa6ff096565e1e3ba8e3e0814590420\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/644461337/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 644461337,
+    "repository": "vercel/ai",
+    "records": [
+      {
+        "id": 4106911569,
+        "node_id": "PR_kwDOJmmzGc70yn9R",
+        "number": 17695,
+        "state": "closed",
+        "title": "[v5.0] reproduction: Bedrock client doesn't support alternate URLs for non-standard",
+        "body": "## Bug\n\nBedrock client doesn't support alternate URLs for non-standard AWS Regions.\n\n## Reproduction\n\n- On target `@ai-sdk/amazon-bedrock` 3.0.108, `examples/ai-functions/src/reproduction/issue-11197-bedrock-nonstandard-region.ts` observed `us-iso-east-1` resolving to `bedrock-runtime.us-iso-east-1.amazonaws.com` instead of the documented `bedrock-runtime.us-iso-east-1.c2s.ic.gov` host.\n- The reproduction also observed that `AWS_ENDPOINT_URL_BEDROCK_RUNTIME` was ignored, preventing the documented service-specific override from correcting the request destination.\n- `packages/amazon-bedrock/src/bedrock-provider.test.ts` contains a focused regression test that expected the ISO endpoint but received the hard-coded `amazonaws.com` endpoint.\n- `packages/amazon-bedrock/src/__fixtures__/issue-11197-live-attempt.json` records the live attempt's incorrect selected URL; the sandbox proxy cancelled the request before an AWS service response was returned.\n- `packages/amazon-bedrock/src/bedrock-provider.ts` hard-codes `amazonaws.com` and does not read AWS endpoint override variables; manually supplying `baseURL` is the only available endpoint override on this branch.\n- The exact Bedrock control-plane versus Runtime conflict from the comment cannot be exercised because `packages/amazon-bedrock/src/index.ts` exposes model Runtime operations but no Bedrock control-plane client.\n- `examples/ai-functions/package.json` provides the workspace package required to run the reproduction replay command.\n\n## Relevant Documentation\n\n- https://github.com/aws/aws-sdk-js-v3/blob/a0bd362cca53a59918a8b55ed12dcda421edc9b5/codegen/sdk-codegen/aws-models/bedrock-runtime.json\n- https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html\n- https://docs.aws.amazon.com/sdkref/latest/guide/ss-endpoints-table.html\n- https://docs.aws.amazon.com/general/latest/gr/bedrock.html\n\n## Related Issues\n\nReproduces #11197",
+        "html_url": "https://github.com/vercel/ai/pull/17695",
+        "created_at": "2026-07-22T09:30:20Z",
+        "updated_at": "2026-09-10T08:38:26Z",
+        "closed_at": "2026-09-10T08:38:26Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": true,
+        "user": {
+          "id": 205036,
+          "node_id": "MDQ6VXNlcjIwNTAzNg==",
+          "login": "lgrammel",
+          "type": "User",
+          "html_url": "https://github.com/lgrammel"
+        },
+        "head": {
+          "sha": "dd371b78f4be3d7a699bd66fb168e8620d548906",
+          "ref": "bug-11197-3"
+        },
+        "base": {
+          "sha": "5bb3ae44ee6f6139fbb7584614a76cba16be39d8",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4101539254,
+        "node_id": "PR_kwDOJmmzGc70eIW2",
+        "number": 17654,
+        "state": "closed",
+        "title": "[v6.0] reproduction: Bedrock client doesn't support alternate URLs for non-standard",
+        "body": "## Bug\n\nBedrock client doesn't support alternate URLs for non-standard AWS Regions.\n\n## Reproduction\n\n- On `release-v6.0`, `packages/amazon-bedrock/src/bedrock-provider.ts` hard-codes `amazonaws.com`; `us-iso-east-1` therefore resolves to `bedrock-runtime.us-iso-east-1.amazonaws.com` instead of AWS's `bedrock-runtime.us-iso-east-1.c2s.ic.gov` endpoint.\n- `examples/ai-functions/src/reproduction/issue-11197-bedrock-nonstandard-region.ts` reproduced the invalid ISO endpoint, showed that `AWS_ENDPOINT_URL_BEDROCK_RUNTIME` is ignored, and showed that one `baseURL` routes both Runtime and Agent Runtime operations to the same host.\n- `packages/amazon-bedrock/src/bedrock-provider.test.ts` contains a focused regression test that expects the ISO endpoint and receives the hard-coded `amazonaws.com` endpoint.\n- `packages/amazon-bedrock/src/__fixtures__/issue-11197-live-attempt.json` records the live attempt's selected URL; the sandbox canceled the network request after the invalid URL had been selected, so no AWS service response was available.\n- The package exposes Bedrock Runtime and Agent Runtime operations but not Bedrock control-plane operations, so the comment's exact control-plane-versus-Runtime pair could not be exercised; the analogous shared-`baseURL` conflict was observed between Runtime and Agent Runtime.\n\n## Relevant Documentation\n\n- https://github.com/aws/aws-sdk-js-v3/blob/a0bd362cca53a59918a8b55ed12dcda421edc9b5/codegen/sdk-codegen/aws-models/bedrock-runtime.json\n- https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html\n- https://docs.aws.amazon.com/sdkref/latest/guide/ss-endpoints-table.html\n- https://docs.aws.amazon.com/general/latest/gr/bedrock.html\n\n## Related Issues\n\nReproduces #11197",
+        "html_url": "https://github.com/vercel/ai/pull/17654",
+        "created_at": "2026-07-21T16:52:12Z",
+        "updated_at": "2026-09-10T08:38:23Z",
+        "closed_at": "2026-09-10T08:38:23Z",
+        "merged_at": null,
+        "merge_commit_sha": "6b822c807d4e4aca9bacd5292b9720acd1768288",
+        "draft": true,
+        "user": {
+          "id": 205036,
+          "node_id": "MDQ6VXNlcjIwNTAzNg==",
+          "login": "lgrammel",
+          "type": "User",
+          "html_url": "https://github.com/lgrammel"
+        },
+        "head": {
+          "sha": "1376451ced45c0d9e8352e1a73cd6f1443254d7e",
+          "ref": "bug-11197-2"
+        },
+        "base": {
+          "sha": "b7afc8061376b42b71439de387f3daec907687ca",
+          "ref": "release-v6.0"
+        }
+      },
+      {
+        "id": 4487534789,
+        "node_id": "PR_kwDOJmmzGc8AAAABC3pYxQ",
+        "number": 20549,
+        "state": "closed",
+        "title": "[v5.0] fix: support Bedrock Runtime endpoints in non-standard AWS regions and configured endpoint overrides",
+        "body": "## Background\n\nBedrock Runtime requests for non-standard AWS regions targeted invalid amazonaws.com hosts, and AWS endpoint override variables were ignored.\n\n## Root Cause\n\nThe provider hard-coded the amazonaws.com DNS suffix and never consulted AWS_ENDPOINT_URL_BEDROCK_RUNTIME or AWS_ENDPOINT_URL; the immutable reproduction confirmed both incorrect request destinations.\n\n## Summary\n\nAdded shared partition-aware endpoint resolution for the standard and Anthropic Bedrock providers, with explicit baseURL, service-specific environment variable, global environment variable, then generated endpoint precedence.\n\n## Testing\n\nAdded regression coverage for commercial, China, GovCloud, ISO, ISO-B, ISO-E, ISO-F, and EUSC partitions, endpoint override precedence, trailing-slash removal, and deferred region loading.\n\n## End-to-end Validation\n\n- `pnpm -C examples/ai-functions exec tsx src/reproduction/issue-11197-bedrock-nonstandard-region.ts` via immutable replay exited successfully without the bug signal.\n- `pnpm -C examples/ai-core exec tsx src/generate-text/amazon-bedrock.ts` completed a live Bedrock generation successfully.\n\n## Related Issues\n\nFixes #11197\n\nCloses #17695",
+        "html_url": "https://github.com/vercel/ai/pull/20549",
+        "created_at": "2026-09-09T17:14:38Z",
+        "updated_at": "2026-09-10T00:45:49Z",
+        "closed_at": "2026-09-09T21:08:49Z",
+        "merged_at": "2026-09-09T21:08:49Z",
+        "merge_commit_sha": "24bda53c7299c8c3892052afcf055b82baf2d036",
+        "draft": false,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "5255e83137e7394ca2e4ff2698f726d87964ab4d",
+          "ref": "bugfix-11197-20260909165904678418"
+        },
+        "base": {
+          "sha": "97cf1ab496d0a8c957b3c931ba96520877a366cc",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4489175312,
+        "node_id": "PR_kwDOJmmzGc8AAAABC5NhEA",
+        "number": 20564,
+        "state": "closed",
+        "title": "chore: fix flaky test",
+        "body": "## Background\r\n\r\nthere was a test failing from a prev commit. CI test intermittently timed out while round-tripping a 100,000-byte array through Base64 conversion.\r\n\r\n## End-to-End Verification\r\n\r\nna\r\n\r\n## Checklist\r\n\r\n- [x] All commits are signed (PRs with unsigned commits cannot be merged)\r\n- [x] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [ ] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [x] I have reviewed this pull request (self-review)",
+        "html_url": "https://github.com/vercel/ai/pull/20564",
+        "created_at": "2026-09-09T20:37:40Z",
+        "updated_at": "2026-09-10T00:45:46Z",
+        "closed_at": "2026-09-09T20:51:03Z",
+        "merged_at": "2026-09-09T20:51:03Z",
+        "merge_commit_sha": "97cf1ab496d0a8c957b3c931ba96520877a366cc",
+        "draft": false,
+        "user": {
+          "id": 83492835,
+          "node_id": "MDQ6VXNlcjgzNDkyODM1",
+          "login": "aayush-kapoor",
+          "type": "User",
+          "html_url": "https://github.com/aayush-kapoor"
+        },
+        "head": {
+          "sha": "f8ea5b16a28162737566dac47c1b0e9bb0f9336e",
+          "ref": "aayush/fix-v5-flaky-uint8-test"
+        },
+        "base": {
+          "sha": "bceba9f6fa9efbe0bc76116406bbb4243bfd2eee",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4487805440,
+        "node_id": "PR_kwDOJmmzGc8AAAABC356AA",
+        "number": 20552,
+        "state": "closed",
+        "title": "[v6.0] fix: support Bedrock endpoints for non-standard AWS regions and service-specific overrides",
+        "body": "## Background\n\nThe published Amazon Bedrock provider generated invalid URLs for non-standard AWS partitions, ignored AWS endpoint override variables, and could not independently route Runtime and Agent Runtime operations.\n\n## Root Cause\n\nEndpoint construction hard-coded the amazonaws.com DNS suffix and reused one baseURL without consulting service-specific or global AWS endpoint variables; captured request URLs confirmed the incorrect ISO host and ignored override.\n\n## Summary\n\nAdded shared partition-aware endpoint resolution for standard and Anthropic Bedrock providers, with explicit baseURL, service-specific environment variable, global environment variable, then generated endpoint precedence.\n\n## Testing\n\nAdded coverage for commercial, China, GovCloud, ISO, ISO-B, ISO-E, ISO-F, and EUSC endpoints; Runtime and Agent Runtime overrides; precedence; trailing-slash removal; and deferred region loading.\n\n## End-to-end Validation\n\n- `replay_original_reproduction`: exited successfully and captured the correct ISO and AWS_ENDPOINT_URL_BEDROCK_RUNTIME request URLs without the original bug signal.\n\n## Related Issues\n\nFixes #11197\n\nCloses #17654",
+        "html_url": "https://github.com/vercel/ai/pull/20552",
+        "created_at": "2026-09-09T17:47:48Z",
+        "updated_at": "2026-09-10T00:45:45Z",
+        "closed_at": "2026-09-09T21:08:52Z",
+        "merged_at": "2026-09-09T21:08:52Z",
+        "merge_commit_sha": "6626af160a1c60cf38c10ffbc8ad8497fd4435a9",
+        "draft": false,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "fa2124bd12dae86cd59332f0a6b8fae00bc341a0",
+          "ref": "bugfix-11197-20260909165904649655"
+        },
+        "base": {
+          "sha": "1a4dbb1c335ffe91c1de21fa9d499fa336a9a4f4",
+          "ref": "release-v6.0"
+        }
+      },
+      {
+        "id": 4487731670,
+        "node_id": "PR_kwDOJmmzGc8AAAABC31Z1g",
+        "number": 20551,
+        "state": "closed",
+        "title": "feat(openai): add batch cancellation and listing",
+        "body": "## Background\r\n\r\nhttps://github.com/vercel/ai/pull/20543 added batch cancel and list APIs\r\n\r\n## Summary\r\n\r\nadd support for batch cancel and list to openai provider\r\n\r\n## End-to-End Verification\r\n\r\nadded an example that creates a batch, lists it, and cancels the batch\r\n\r\n## Checklist\r\n\r\n- [X] All commits are signed (PRs with unsigned commits cannot be merged)\r\n- [X] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [X] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [X] I have reviewed this pull request (self-review)\r\n",
+        "html_url": "https://github.com/vercel/ai/pull/20551",
+        "created_at": "2026-09-09T17:38:54Z",
+        "updated_at": "2026-09-10T00:45:42Z",
+        "closed_at": "2026-09-09T18:36:36Z",
+        "merged_at": "2026-09-09T18:36:36Z",
+        "merge_commit_sha": "99421961221a46f9267080717eacb0109cb9f22d",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "9436081fab8070c9f4e41c6e5c20e830ab3c09f1",
+          "ref": "nick/openai-batch-cancel-list"
+        },
+        "base": {
+          "sha": "912fb015dd599871940e7adc3791b56fb4516374",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4488224232,
+        "node_id": "PR_kwDOJmmzGc8AAAABC4Td6A",
+        "number": 20555,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## ai@7.0.97\n\n### Patch Changes\n\n- ef3bac4: Observe video webhook receiver rejections before generation starts to prevent unhandled rejections during or after a failed start. Preserve start error precedence and assimilate custom receivers only once.\n- 9942196: feat: add batch cancel and list APIs\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/gateway@4.0.78\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/alibaba@2.0.44\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/amazon-bedrock@5.0.81\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n- Updated dependencies [9942196]\n- Updated dependencies [5a7e647]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai@4.0.65\n  - @ai-sdk/anthropic@4.0.52\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/angular@3.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/anthropic@4.0.52\n\n### Patch Changes\n\n- 5a7e647: feat(anthropic): add batch cancellation and listing\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/anthropic-aws@2.0.44\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n- Updated dependencies [5a7e647]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/anthropic@4.0.52\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/assemblyai@3.0.39\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/azure@4.0.68\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai@4.0.65\n  - @ai-sdk/deepseek@3.0.42\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/baseten@2.1.25\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/black-forest-labs@2.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/bytedance@2.0.42\n\n### Patch Changes\n\n- ef3bac4: Forward `webhookUrl` as `callback_url` in `doStart`, taking precedence over raw provider callback URLs. Callers provide a progress-aware receiver; `generateVideo({ webhook })` continues to fall back to polling.\n\n  Treat expired video generation tasks as terminal errors, preserving the provider's diagnostic details.\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/cartesia@3.0.34\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/cerebras@3.0.47\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/code-mode@1.0.54\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n## @ai-sdk/cohere@4.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/deepgram@3.1.10\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/deepinfra@3.0.47\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/deepseek@3.0.42\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/devtools@1.0.18\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n## @ai-sdk/elevenlabs@3.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/fal@3.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/fireworks@3.0.50\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/fish-audio@3.0.17\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/gateway@4.0.78\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/gladia@3.0.39\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/gmicloud@3.0.18\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/google@4.0.67\n\n### Patch Changes\n\n- ab6e9f9: feat(google): add batch cancellation and listing\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/google-vertex@5.0.79\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n- Updated dependencies [ab6e9f9]\n- Updated dependencies [5a7e647]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/google@4.0.67\n  - @ai-sdk/anthropic@4.0.52\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/groq@4.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness@1.0.107\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness-acp@1.0.45\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness-claude-code@1.0.111\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness-cline@1.0.34\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/harness@1.0.107\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness-codex@1.0.109\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness-cursor@1.0.20\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n- @ai-sdk/harness-acp@1.0.45\n## @ai-sdk/harness-deepagents@1.0.107\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness-fx@1.0.20\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n- @ai-sdk/harness-acp@1.0.45\n## @ai-sdk/harness-github-copilot@1.0.2\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n- @ai-sdk/harness-acp@1.0.45\n## @ai-sdk/harness-grok-build@1.0.44\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n- @ai-sdk/harness-acp@1.0.45\n## @ai-sdk/harness-opencode@1.0.109\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/harness-pi@1.0.109\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/huggingface@2.0.47\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/hume@3.0.39\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/klingai@4.0.41\n\n### Patch Changes\n\n- ef3bac4: Forward `webhookUrl` as `callback_url` in `doStart` for text-to-video, image-to-video, multi-image-to-video, and motion control. Explicit URLs take precedence over raw provider callback URLs. Callers provide a progress-aware receiver; `generateVideo({ webhook })` continues to fall back to polling.\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/langchain@3.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n## @ai-sdk/llamaindex@3.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n## @ai-sdk/luma@3.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/mcp@2.0.48\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/minimax@3.0.29\n\n### Patch Changes\n\n- ef3bac4: Forward `webhookUrl` as `callback_url` in `doStart` for application-owned receivers. Document challenge verification and terminal-status handling requirements. `generateVideo({ webhook })` continues to fall back to SDK polling without invoking the webhook factory.\n- Updated dependencies [9942196]\n- Updated dependencies [5a7e647]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/anthropic@4.0.52\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/mistral@4.0.42\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/moonshotai@3.0.48\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/open-responses@2.0.43\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/openai@4.0.65\n\n### Patch Changes\n\n- 9942196: feat(openai): add batch cancellation and listing\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/openai-compatible@3.0.47\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/otel@1.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider@4.0.13\n## @ai-sdk/perplexity@4.0.42\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/policy-opa@1.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/prodia@2.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/provider@4.0.13\n\n### Patch Changes\n\n- 9942196: feat: add batch cancel and list APIs\n## @ai-sdk/provider-utils@5.0.39\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n## @ai-sdk/quiverai@2.0.39\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/react@4.0.100\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/mcp@2.0.48\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/replicate@3.0.40\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/revai@3.0.39\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/rsc@3.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/sandbox-just-bash@1.0.107\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/sandbox-vercel@1.0.107\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/svelte@5.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/togetherai@3.0.48\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/tui@1.0.98\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n## @ai-sdk/valibot@3.0.39\n\n### Patch Changes\n\n- @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/voyage@2.0.39\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/vue@4.0.97\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/workflow@2.0.28\n\n### Patch Changes\n\n- Updated dependencies [ef3bac4]\n- Updated dependencies [9942196]\n  - ai@7.0.97\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/workflow-harness@1.0.107\n\n### Patch Changes\n\n- @ai-sdk/harness@1.0.107\n## @ai-sdk/xai@4.0.57\n\n### Patch Changes\n\n- 4b8c4fa: feat(xai): add batch cancellation and listing\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/provider-utils@5.0.39\n## @ai-sdk/zai@3.0.9\n\n### Patch Changes\n\n- Updated dependencies [9942196]\n  - @ai-sdk/provider@4.0.13\n  - @ai-sdk/openai-compatible@3.0.47\n  - @ai-sdk/provider-utils@5.0.39",
+        "html_url": "https://github.com/vercel/ai/pull/20555",
+        "created_at": "2026-09-09T18:39:33Z",
+        "updated_at": "2026-09-10T00:45:41Z",
+        "closed_at": "2026-09-09T20:18:22Z",
+        "merged_at": "2026-09-09T20:18:22Z",
+        "merge_commit_sha": "e9795abf6185594ecdde53226c8149f8ea8b288d",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "c82bf4b8e1044746c0ff3f0daf58f53a48a476ca",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "ef3bac4c174f4650bb03aca0b5783fcfa6232a3b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4488240053,
+        "node_id": "PR_kwDOJmmzGc8AAAABC4UbtQ",
+        "number": 20556,
+        "state": "closed",
+        "title": "feat(anthropic): add batch cancellation and listing",
+        "body": "## Background\r\n\r\nhttps://github.com/vercel/ai/pull/20543 added batch cancel and list APIs\r\n\r\n## Summary\r\n\r\nadd support for batch cancel and list to anthropic provider\r\n\r\n## End-to-End Verification\r\n\r\nadded an example that creates a batch, lists it, and cancels the batch\r\n\r\n## Checklist\r\n\r\n- [X] All commits are signed (PRs with unsigned commits cannot be merged)\r\n- [X] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [X] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [X] I have reviewed this pull request (self-review)\r\n",
+        "html_url": "https://github.com/vercel/ai/pull/20556",
+        "created_at": "2026-09-09T18:41:30Z",
+        "updated_at": "2026-09-10T00:45:40Z",
+        "closed_at": "2026-09-09T18:54:39Z",
+        "merged_at": "2026-09-09T18:54:39Z",
+        "merge_commit_sha": "5a7e647f888455638db19ce7baf9c998d9e6a44a",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "4ae157c845d0fd6c519bc53ac22abc6281aefd9a",
+          "ref": "nick/anthropic-batch-cancel-list"
+        },
+        "base": {
+          "sha": "99421961221a46f9267080717eacb0109cb9f22d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4488256506,
+        "node_id": "PR_kwDOJmmzGc8AAAABC4Vb-g",
+        "number": 20557,
+        "state": "closed",
+        "title": "feat(google): add batch cancellation and listing",
+        "body": "## Background\r\n\r\nhttps://github.com/vercel/ai/pull/20543 added batch cancel and list APIs\r\n\r\n## Summary\r\n\r\nadd support for batch cancel and list to google provider\r\n\r\n## End-to-End Verification\r\n\r\nadded an example that creates a batch, lists it, and cancels the batch\r\n\r\n## Checklist\r\n\r\n- [X] All commits are signed (PRs with unsigned commits cannot be merged)\r\n- [X] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [X] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [X] I have reviewed this pull request (self-review)\r\n",
+        "html_url": "https://github.com/vercel/ai/pull/20557",
+        "created_at": "2026-09-09T18:43:37Z",
+        "updated_at": "2026-09-10T00:45:38Z",
+        "closed_at": "2026-09-09T18:56:16Z",
+        "merged_at": "2026-09-09T18:56:16Z",
+        "merge_commit_sha": "ab6e9f9a3ab03062dec1f622e65a25351f5aad28",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "cc958fca698a0a7632a0c450d1b789798a0bd994",
+          "ref": "nick/google-batch-cancel-list"
+        },
+        "base": {
+          "sha": "99421961221a46f9267080717eacb0109cb9f22d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4488276704,
+        "node_id": "PR_kwDOJmmzGc8AAAABC4Wq4A",
+        "number": 20558,
+        "state": "closed",
+        "title": "feat(xai): add batch cancellation and listing",
+        "body": "## Background\r\n\r\nhttps://github.com/vercel/ai/pull/20543 added batch cancel and list APIs\r\n\r\n## Summary\r\n\r\nadd support for batch cancel and list to xai provider\r\n\r\n## End-to-End Verification\r\n\r\nadded an example that creates a batch, lists it, and cancels the batch\r\n\r\n## Checklist\r\n\r\n- [X] All commits are signed (PRs with unsigned commits cannot be merged)\r\n- [X] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [X] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [X] I have reviewed this pull request (self-review)\r\n",
+        "html_url": "https://github.com/vercel/ai/pull/20558",
+        "created_at": "2026-09-09T18:46:13Z",
+        "updated_at": "2026-09-10T00:45:37Z",
+        "closed_at": "2026-09-09T18:58:41Z",
+        "merged_at": "2026-09-09T18:58:41Z",
+        "merge_commit_sha": "4b8c4fa34fe87d500d98747c378cbd4f46b4ea18",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "f249c4e443e617358fe7c5c7d1a868df911cb42f",
+          "ref": "nick/xai-batch-cancel-list"
+        },
+        "base": {
+          "sha": "99421961221a46f9267080717eacb0109cb9f22d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4488706854,
+        "node_id": "PR_kwDOJmmzGc8AAAABC4w7Jg",
+        "number": 20561,
+        "state": "closed",
+        "title": "fix: forward video callback URLs for caller-managed receivers",
+        "body": "## Background\n\nKlingAI, ByteDance, and MiniMax video adapters accept the start-operation interface but previously ignored its callback URL. Applications with their own callback endpoints need that URL included in the task submission. These providers send progress notifications or require challenge verification, so callback registration does not imply compatibility with a generic first-notification receiver.\n\n## Summary\n\n- Forward `doStart({ webhookUrl })` as `callback_url` in all three adapters, including all four KlingAI endpoints. Preserve field omission and explicit-over-raw callback URL precedence.\n- Leave `handleWebhookOption` undefined, with regression assertions and short protocol explanations. Document caller-managed `experimental_startVideo` / `experimental_getVideoStatus` usage and retain generic polling fallback.\n- Treat ByteDance `expired` tasks as terminal errors.\n- Observe video delivery-promise rejections before awaiting task submission, preserving start-error precedence and assimilating custom thenables once.\n- Add Google batch callback-omission tests for inline and uploaded-file inputs alongside existing forwarding coverage.\n- Update the KlingAI fallback example and add four patch changesets.\n\n## Verification\n\nUsing Node 24.14.0:\n\n| Suite | Node | Edge |\n| --- | ---: | ---: |\n| KlingAI package | 122 | 122 |\n| ByteDance package | 90 | 90 |\n| MiniMax package | 170 | 170 |\n| Google package | 826 | 826 |\n| Core generate-video | 69 | 69 |\n\n`pnpm type-check:full`, `pnpm check`, and `git diff --check` passed. The six core rejection regressions were also checked against the original implementation and failed without the fix. Independent final review found no implementation blockers.\n\n## End-to-End Verification\n\nLive provider callback delivery and challenge exchange have not been exercised. Callback receiver behavior still needs live verification with application-owned endpoints.\n\n## Checklist\n\n- [x] All commits are signed (PRs with unsigned commits cannot be merged)\n- [x] Tests have been added / updated (for bug fixes / features)\n- [x] Documentation has been added / updated (for bug fixes / features)\n- [x] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\n- [x] I have reviewed this pull request (self-review)\n\n## Future Work\n\nGeneric progress-aware receivers with bounded waits, and polling fallback after an early notification, remain separate work. This PR does not change the Workflow package or video specification.",
+        "html_url": "https://github.com/vercel/ai/pull/20561",
+        "created_at": "2026-09-09T19:38:06Z",
+        "updated_at": "2026-09-10T00:45:36Z",
+        "closed_at": "2026-09-09T20:00:44Z",
+        "merged_at": "2026-09-09T20:00:44Z",
+        "merge_commit_sha": "ef3bac4c174f4650bb03aca0b5783fcfa6232a3b",
+        "draft": false,
+        "user": {
+          "id": 947949,
+          "node_id": "MDQ6VXNlcjk0Nzk0OQ==",
+          "login": "kkdawkins",
+          "type": "User",
+          "html_url": "https://github.com/kkdawkins"
+        },
+        "head": {
+          "sha": "d41befbcedcbc98d2dc602d1df97880f2ee33ebf",
+          "ref": "video-provider-webhooks"
+        },
+        "base": {
+          "sha": "4b8c4fa34fe87d500d98747c378cbd4f46b4ea18",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4488845515,
+        "node_id": "PR_kwDOJmmzGc8AAAABC45Yyw",
+        "number": 20562,
+        "state": "closed",
+        "title": "fix: reject unsupported batch request types",
+        "body": "## Background\r\n\r\nRight now, the only Batch request type is `text`. Both AI SDK Core and provider packages follow that TypeScript type, and assume `type` is *always* `text`.\r\n\r\nWhen we extend that `type` to a union and add other request types (e.g. image, embedding) it will break existing provider packages that treat all requests as text requests.\r\n\r\n## Summary\r\n\r\nValidate that `type` is a supported request type.\r\n- In core, check that it's any valid request type\r\n- In providers, check that it's a supported request type for that provider\r\n\r\n## Checklist\r\n\r\n- [X] All commits are signed (PRs with unsigned commits cannot be merged)\r\n- [X] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [X] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [X] I have reviewed this pull request (self-review)\r\n",
+        "html_url": "https://github.com/vercel/ai/pull/20562",
+        "created_at": "2026-09-09T19:55:31Z",
+        "updated_at": "2026-09-10T00:45:35Z",
+        "closed_at": "2026-09-09T22:17:32Z",
+        "merged_at": "2026-09-09T22:17:32Z",
+        "merge_commit_sha": "5ec21a6946e13159d3c353c3fcd170ca8564d378",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "c8462597535919aeaba27aae49472f4755cef99f",
+          "ref": "nick/validate-batch-request-types"
+        },
+        "base": {
+          "sha": "ef3bac4c174f4650bb03aca0b5783fcfa6232a3b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4489568351,
+        "node_id": "PR_kwDOJmmzGc8AAAABC5lgXw",
+        "number": 20567,
+        "state": "closed",
+        "title": "fix: support Bedrock endpoints for non-standard AWS regions and service-specific overrides",
+        "body": "## Background\r\n\r\nhttps://github.com/vercel/ai/issues/11197\r\n\r\nThe published Amazon Bedrock provider generated invalid URLs for non-standard AWS partitions, ignored AWS endpoint override variables, and could not independently route Runtime and Agent Runtime operations.\r\n\r\nUp-port for https://github.com/vercel/ai/pull/20552\r\n\r\n## Root Cause\r\n\r\nEndpoint construction hard-coded the amazonaws.com DNS suffix and reused one baseURL without consulting service-specific or global AWS endpoint variables; captured request URLs confirmed the incorrect ISO host and ignored override.\r\n\r\n## Summary\r\n\r\nAdded shared partition-aware endpoint resolution for standard and Anthropic Bedrock providers, with explicit baseURL, service-specific environment variable, global environment variable, then generated endpoint precedence.\r\n\r\n## End-to-end Validation\r\n\r\n- `replay_original_reproduction`: exited successfully and captured the correct ISO and AWS_ENDPOINT_URL_BEDROCK_RUNTIME request URLs without the original bug signal.\r\n\r\n## Related Issues\r\n\r\nFixes #11197\r\n\r\nCloses #17652\r\nCloses #13179\r\nCloses #17624",
+        "html_url": "https://github.com/vercel/ai/pull/20567",
+        "created_at": "2026-09-09T21:32:27Z",
+        "updated_at": "2026-09-10T00:45:34Z",
+        "closed_at": "2026-09-09T21:43:57Z",
+        "merged_at": "2026-09-09T21:43:57Z",
+        "merge_commit_sha": "5191b6149812ee4025538ceae445333aa6abd8f3",
+        "draft": false,
+        "user": {
+          "id": 83492835,
+          "node_id": "MDQ6VXNlcjgzNDkyODM1",
+          "login": "aayush-kapoor",
+          "type": "User",
+          "html_url": "https://github.com/aayush-kapoor"
+        },
+        "head": {
+          "sha": "3c6ad94b67cf8daeabc6111adeeee847f93812e5",
+          "ref": "aayush/59"
+        },
+        "base": {
+          "sha": "e9795abf6185594ecdde53226c8149f8ea8b288d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4489679960,
+        "node_id": "PR_kwDOJmmzGc8AAAABC5sUWA",
+        "number": 20570,
+        "state": "closed",
+        "title": "chore: remove unrelated example",
+        "body": "## Background\r\n\r\ni accidentally added an example in https://github.com/vercel/ai/pull/20567 that was unrelated\r\n\r\n## Summary\r\n\r\nrm the example\r\n\r\n## Checklist\r\n\r\n- [x] All commits are signed (PRs with unsigned commits cannot be merged)\r\n- [ ] Tests have been added / updated (for bug fixes / features)\r\n- [ ] Documentation has been added / updated (for bug fixes / features)\r\n- [ ] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [x] I have reviewed this pull request (self-review)",
+        "html_url": "https://github.com/vercel/ai/pull/20570",
+        "created_at": "2026-09-09T21:47:52Z",
+        "updated_at": "2026-09-10T00:45:32Z",
+        "closed_at": "2026-09-09T22:00:12Z",
+        "merged_at": "2026-09-09T22:00:12Z",
+        "merge_commit_sha": "007cceb7b9760a8cb97aebc20eacd41ecd6cb4d7",
+        "draft": false,
+        "user": {
+          "id": 83492835,
+          "node_id": "MDQ6VXNlcjgzNDkyODM1",
+          "login": "aayush-kapoor",
+          "type": "User",
+          "html_url": "https://github.com/aayush-kapoor"
+        },
+        "head": {
+          "sha": "2e8e298ff0967e2308bed387285f80171b1e8b10",
+          "ref": "aayush/61"
+        },
+        "base": {
+          "sha": "5191b6149812ee4025538ceae445333aa6abd8f3",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4478069810,
+        "node_id": "PR_kwDOJmmzGc8AAAABCunsMg",
+        "number": 20480,
+        "state": "closed",
+        "title": "[v5.0] reproduction: getTextFromDataUrl always throws in Node.js window.atob",
+        "body": "## Bug\n\ngetTextFromDataUrl always throws in Node.js (window.atob)\n\n## Reproduction\n\n- Added the runnable reproduction `examples/ai-functions/src/reproduction/get-text-from-data-url-node.ts` and its manifest `examples/ai-functions/package.json`.\n- On Node.js 22.23.2, the valid URL `data:text/plain;base64,aGk=` throws `Error decoding data URL` instead of returning `\"hi\"`, preventing server-side decoding.\n- `packages/ai/src/util/data-url.ts` calls `window.atob`; the tested Node.js runtime has no `window` but provides a working global `atob`.\n- The utility is publicly exported through `packages/ai/src/util/index.ts` and `packages/ai/src/index.ts`; `packages/ai/package.json` is version 5.0.253 and supports Node.js 18 or newer.\n\n## Relevant Documentation\n\n- https://nodejs.org/download/release/latest-jod/docs/api/globals.html\n\n## Related Issues\n\nReproduces #20348",
+        "html_url": "https://github.com/vercel/ai/pull/20480",
+        "created_at": "2026-09-08T19:58:36Z",
+        "updated_at": "2026-09-09T21:50:12Z",
+        "closed_at": "2026-09-09T21:50:12Z",
+        "merged_at": null,
+        "merge_commit_sha": "509561a7e41bfaaf426b7f674b07aa7fc0ae3f78",
+        "draft": true,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "76a7489c3ed22dba431e0b744d33201343eaf245",
+          "ref": "bug-reproduction-20348-20260908195226998218"
+        },
+        "base": {
+          "sha": "79ac7d96fee4a21272e018d11adef2801302894d",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4437000451,
+        "node_id": "PR_kwDOJmmzGc8AAAABCHdBAw",
+        "number": 20338,
+        "state": "closed",
+        "title": "[v5.0] reproduction: generateImage.maxRetries does not retry a no-image result, even",
+        "body": "## Bug\n\n`generateImage.maxRetries` does not retry a no-image result, even when a later attempt would succeed\n\n## Reproduction\n\n- On target `ai@5.0.252`, the equivalent `MockImageModelV2` scenario reproduced the issue without provider credentials or user configuration.\n- Added `examples/ai-functions/src/reproduction/issue-20156-generate-image-empty-result-retry.ts`, supported by `examples/ai-functions/package.json` and `pnpm-lock.yaml`.\n- With `maxRetries: 2`, the first successful response contained no images and `generateImage` rejected with `AI_NoImageGeneratedError` after one model call instead of reaching the second response containing a valid image.\n- `packages/ai/src/generate-image/generate-image.ts` retries only `model.doGenerate`; it derives `NoImageGeneratedError` from the collected empty result after leaving the retry scope.\n- The target API exposes no retry predicate or empty-result opt-in that could distinguish a transient empty response from a terminal moderation result.\n\n## Relevant Documentation\n\n- https://ai-sdk.dev/docs/reference/ai-sdk-core/generate-image\n- https://ai-sdk.dev/docs/reference/ai-sdk-errors/ai-no-image-generated-error\n\n## Related Issues\n\nReproduces #20156",
+        "html_url": "https://github.com/vercel/ai/pull/20338",
+        "created_at": "2026-09-03T21:11:07Z",
+        "updated_at": "2026-09-09T21:50:09Z",
+        "closed_at": "2026-09-09T21:50:09Z",
+        "merged_at": null,
+        "merge_commit_sha": "79976bdeaf9cc1a152fa93397653ae0b936ffa28",
+        "draft": true,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "ec6fbc7c5d13a5effa5a6a7abbdde946ac47778a",
+          "ref": "bug-reproduction-20156-20260903210458809879"
+        },
+        "base": {
+          "sha": "1a80de8fbd01a5c18a60adfb36005c928e0f9d69",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4436994628,
+        "node_id": "PR_kwDOJmmzGc8AAAABCHcqRA",
+        "number": 20337,
+        "state": "closed",
+        "title": "[v6.0] reproduction: generateImage.maxRetries does not retry a no-image result, even",
+        "body": "## Bug\n\n`generateImage.maxRetries` does not retry a no-image result, even when a later attempt would succeed\n\n## Reproduction\n\n- Added credential-free reproduction `examples/ai-functions/src/reproduction/issue-20156-generate-image-empty-result-retry.ts` using the branch-native `ImageModelV3` equivalent of the issue's AI SDK 7 mock.\n- With `maxRetries: 2`, the first empty image result caused `generateImage` to reject with `AI_NoImageGeneratedError` after one model call; expected behavior was a second call that returned one image.\n- `packages/ai/src/generate-image/generate-image.ts` retries only `model.doGenerate`, then checks the collected images and throws `NoImageGeneratedError` outside the retry scope.\n- The exact reported `MockImageModelV4` is unavailable on release-v6, but `packages/provider/src/image-model/v3/image-model-v3.ts` supports the same valid empty `images` result and reproduces the public failure on `ai@6.0.276`.\n\n## Relevant Documentation\n\n- https://ai-sdk.dev/docs/reference/ai-sdk-core/generate-image\n- https://ai-sdk.dev/docs/reference/ai-sdk-errors/ai-no-image-generated-error\n\n## Related Issues\n\nReproduces #20156",
+        "html_url": "https://github.com/vercel/ai/pull/20337",
+        "created_at": "2026-09-03T21:10:13Z",
+        "updated_at": "2026-09-09T21:50:05Z",
+        "closed_at": "2026-09-09T21:50:05Z",
+        "merged_at": null,
+        "merge_commit_sha": "3df79ad509dc7a6d849b5248fd17c369e68b5c21",
+        "draft": true,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "2d411e6db32b214032c545f925873bfd9be3b003",
+          "ref": "bug-reproduction-20156-20260903210457648274"
+        },
+        "base": {
+          "sha": "0465c7e712b29c4ceae68609a0796f1bc3f367e6",
+          "ref": "release-v6.0"
+        }
+      },
+      {
+        "id": 4100224732,
+        "node_id": "PR_kwDOJmmzGc70ZHbc",
+        "number": 17624,
+        "state": "closed",
+        "title": "reproduction: Bedrock client doesn't support alternate URLs for non-standard",
+        "body": "## Bug\n\nBedrock client doesn't support alternate URLs for non-standard AWS Regions.\n\n## Reproduction\n\n- On `@ai-sdk/amazon-bedrock` 5.0.26, `us-iso-east-1` resolves to the invalid `bedrock-runtime.us-iso-east-1.amazonaws.com` host instead of AWS's documented `bedrock-runtime.us-iso-east-1.c2s.ic.gov` host.\n- `examples/ai-functions/src/reproduction/issue-11197-bedrock-nonstandard-region.ts` observed the incorrect outgoing URL and showed that `AWS_ENDPOINT_URL_BEDROCK_RUNTIME` was ignored; the expected behavior was automatic non-standard-region resolution or use of the service-specific override.\n- `packages/amazon-bedrock/src/amazon-bedrock-provider.test.ts` now contains a focused regression test that expected the ISO endpoint and received the hard-coded `amazonaws.com` endpoint.\n- `packages/amazon-bedrock/src/amazon-bedrock-provider.ts` constructs both Runtime and Agent Runtime endpoints with `amazonaws.com` and applies the same `baseURL` option to both services, confirming the override conflict described in the comment.\n- The package does not expose Bedrock control-plane operations, so the comment's exact Bedrock control-plane versus Bedrock Runtime call pair could not be exercised; the analogous Runtime versus Agent Runtime configuration conflict is present in source.\n- The sandbox proxy prevented an AWS service response and returned a tunneling error, but the client-selected request URL was captured before that blocker and directly reproduced the reported endpoint-resolution failure.\n\n## Relevant Documentation\n\n- https://github.com/aws/aws-sdk-js-v3/blob/a0bd362cca53a59918a8b55ed12dcda421edc9b5/codegen/sdk-codegen/aws-models/bedrock-runtime.json\n- https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html\n- https://docs.aws.amazon.com/sdkref/latest/guide/ss-endpoints-table.html\n- https://docs.aws.amazon.com/general/latest/gr/bedrock.html\n\n## Related Issues\n\nReproduces #11197",
+        "html_url": "https://github.com/vercel/ai/pull/17624",
+        "created_at": "2026-07-21T13:56:19Z",
+        "updated_at": "2026-09-09T21:43:59Z",
+        "closed_at": "2026-09-09T21:43:59Z",
+        "merged_at": null,
+        "merge_commit_sha": "aadaff16bb99b3f43b5ddd59b65addce958e9526",
+        "draft": true,
+        "user": {
+          "id": 205036,
+          "node_id": "MDQ6VXNlcjIwNTAzNg==",
+          "login": "lgrammel",
+          "type": "User",
+          "html_url": "https://github.com/lgrammel"
+        },
+        "head": {
+          "sha": "6d749405789a2a0e0b6daf7798fdcd673cd13486",
+          "ref": "bug-11197-1"
+        },
+        "base": {
+          "sha": "97de198a92c87e636b691b7f16c82b0e274f3dc5",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4101421595,
+        "node_id": "PR_kwDOJmmzGc70drob",
+        "number": 17652,
+        "state": "closed",
+        "title": "fix: resolve Bedrock endpoints in non-standard AWS regions and honor service-specific endpoint overrides",
+        "body": "## Background\n\nBedrock Runtime, Agent Runtime, and Anthropic requests could target invalid commercial AWS hosts in alternate partitions, while a shared base URL prevented independent service overrides.\n\n## Root Cause\n\nThe provider hard-coded amazonaws.com and reused one base URL for separate Bedrock services. The first resolver iteration also omitted EUSC, ISO-E, and ISO-F and eagerly loaded AWS_REGION before honoring overrides; endpoint probes and regression tests confirmed each failure.\n\n## Summary\n\nIntroduced shared partition-aware endpoint resolution for Runtime, Agent Runtime, and Anthropic clients with explicit, service-specific, global, then generated precedence. It supports China, GovCloud, ISO, ISO-B, ISO-E, ISO-F, and EUSC, loads regions lazily for custom endpoints, documents overrides, and includes a patch changeset.\n\n## Testing\n\nCoverage verifies partition suffixes, Runtime and Agent Runtime separation, complete override precedence, regionless API-key custom endpoints, and Anthropic partition and environment handling. Package Node and Edge suites, build, full type checking, and repository checks pass.\n\n## End-to-end Validation\n\n- `pnpm -C examples/ai-functions exec tsx -e \"...custom fetch...\"` exercised `generateText`, returned `OK`, and captured correct ISO-E, ISO-F, EUSC, and regionless override URLs.\n- The live ISO `generateText` command selected `bedrock-runtime.us-iso-east-1.c2s.ic.gov`; the sandbox proxy blocked the external request with HTTP 502.\n\n## Related Issues\n\nFixes #11197\n\nCloses #17624\n\nCo-authored-by: mrburrito <1143629+mrburrito@users.noreply.github.com>\nCo-authored-by: lgrammel <205036+lgrammel@users.noreply.github.com>",
+        "html_url": "https://github.com/vercel/ai/pull/17652",
+        "created_at": "2026-07-21T16:35:46Z",
+        "updated_at": "2026-09-09T21:43:58Z",
+        "closed_at": "2026-09-09T21:43:58Z",
+        "merged_at": null,
+        "merge_commit_sha": "299d5ae5f9d00b39c2130a9508e42ebea65223ab",
+        "draft": false,
+        "user": {
+          "id": 205036,
+          "node_id": "MDQ6VXNlcjIwNTAzNg==",
+          "login": "lgrammel",
+          "type": "User",
+          "html_url": "https://github.com/lgrammel"
+        },
+        "head": {
+          "sha": "4694b1184aa87d21782e30643fc4e66a9c6795dd",
+          "ref": "bugfix/11197-1"
+        },
+        "base": {
+          "sha": "c595e6e35388c14b9f7d71e5f0ddf2ae8952cffd",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3365194061,
+        "node_id": "PR_kwDOJmmzGc7IlMlN",
+        "number": 13179,
+        "state": "closed",
+        "title": "feat(amazon-bedrock): add partition-aware endpoint resolution",
+        "body": "## Background\r\n\r\nThe Bedrock provider hardcodes `amazonaws.com` as the domain suffix when constructing endpoint URLs. This fails in non-standard AWS partitions (ISO, ISOB, China, etc.) where the DNS suffix differs. Users in these environments must override `baseURL` manually, which is error-prone and can break other operations.\r\n\r\nRelates to #11197.\r\n\r\n## Summary\r\n\r\nAdded a lightweight `resolvePartitionDomain()` helper that maps AWS region prefixes to the correct DNS suffix for all 7 AWS partitions:\r\n\r\n| Name              | Partition   | Region Prefix | DNS Suffix       |\r\n|-------------------|-------------|---------------|------------------|\r\n| AWS Standard      | aws         | us-, eu-, ... | amazonaws.com    |\r\n| AWS China         | aws-cn      | cn-           | amazonaws.com.cn |\r\n| AWS GovCloud (US) | aws-us-gov  | us-gov-       | amazonaws.com    |\r\n| AWS ISO (US)      | aws-iso     | us-iso-       | c2s.ic.gov       |\r\n| AWS ISOB (US)     | aws-iso-b   | us-isob-      | sc2s.sgov.gov    |\r\n| AWS ISOE (Europe) | aws-iso-e   | eu-isoe-      | cloud.adc-e.uk   |\r\n| AWS ISOF          | aws-iso-f   | us-isof-      | csp.hci.ic.gov   |\r\n\r\nThe helper is used in three places where endpoints are constructed:\r\n- `bedrock-provider.ts` — `getBedrockRuntimeBaseUrl()` and `getBedrockAgentRuntimeBaseUrl()`\r\n- `bedrock-anthropic-provider.ts` — `getBaseURL()`\r\n\r\nExplicit `baseURL` overrides continue to take precedence. No new dependencies introduced. Partition data sourced from the [AWS SDK for JS v3 partition metadata](https://github.com/aws/aws-sdk-js-v3/blob/main/packages-internal/util-endpoints/src/lib/aws/partitions.json).\r\n\r\n## Manual Verification\r\n\r\n- Ran the full test suite for `@ai-sdk/amazon-bedrock` (327 tests passing)\r\n- Verified endpoint construction for `us-east-1`, `cn-north-1`, `us-gov-west-1`, `us-iso-east-1`, `us-isob-east-1`, `eu-isoe-west-1`, and `us-isof-east-1`\r\n- Verified explicit `baseURL` override still takes precedence over partition resolution\r\n- Build and formatting checks pass\r\n\r\n## Checklist\r\n\r\n- [x] Tests have been added / updated (for bug fixes / features)\r\n- [x] Documentation has been added / updated (for bug fixes / features)\r\n- [x] A _patch_ changeset for relevant packages has been added (for bug fixes / features - run `pnpm changeset` in the project root)\r\n- [x] I have reviewed this pull request (self-review)\r\n\r\n## Future Work\r\n\r\n- If Bedrock becomes available in new partitions, the `resolvePartitionDomain()` helper can be updated to match the upstream [partitions.json](https://github.com/aws/aws-sdk-js-v3/blob/main/packages-internal/util-endpoints/src/lib/aws/partitions.json).\r\n\r\n## Related Issues\r\n\r\nFixes #11197\r\n",
+        "html_url": "https://github.com/vercel/ai/pull/13179",
+        "created_at": "2026-03-06T19:17:40Z",
+        "updated_at": "2026-09-09T21:43:58Z",
+        "closed_at": "2026-09-09T21:43:58Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 1143629,
+          "node_id": "MDQ6VXNlcjExNDM2Mjk=",
+          "login": "mrburrito",
+          "type": "User",
+          "html_url": "https://github.com/mrburrito"
+        },
+        "head": {
+          "sha": "77001897416bb1bf5299eeca2e4d3129fc28dbe6",
+          "ref": "aws-region-endpoints"
+        },
+        "base": {
+          "sha": "d442551816f11f0a35ca009b46b544e32162919c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4476234342,
+        "node_id": "PR_kwDOJmmzGc8AAAABCs3qZg",
+        "number": 20453,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to release-v5.0, this PR will be updated.\n\n\n# Releases\n## ai@5.0.254\n\n### Patch Changes\n\n- Updated dependencies [79ac7d9]\n- Updated dependencies [ca8f9e5]\n  - @ai-sdk/gateway@2.0.148\n## @ai-sdk/angular@1.0.254\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-sdk/azure@2.0.132\n\n### Patch Changes\n\n- 022f24b: Include explicit message item types in Azure AI Foundry Responses requests.\n- Updated dependencies [022f24b]\n- Updated dependencies [a15b75a]\n  - @ai-sdk/openai@2.0.126\n## @ai-sdk/gateway@2.0.148\n\n### Patch Changes\n\n- 79ac7d9: Backport: chore(provider/gateway): update gateway model settings files\n- ca8f9e5: Backport: chore(provider/gateway): update gateway model settings files\n## @ai-sdk/langchain@1.0.254\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-sdk/llamaindex@1.0.254\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-sdk/openai@2.0.126\n\n### Patch Changes\n\n- 022f24b: Include explicit message item types in Azure AI Foundry Responses requests.\n- a15b75a: Add async function tool calling support for OpenAI Responses models.\n## @ai-sdk/react@2.0.257\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-sdk/rsc@1.0.256\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-sdk/svelte@3.0.254\n\n### Patch Changes\n\n- ai@5.0.254\n## @ai-sdk/vue@2.0.254\n\n### Patch Changes\n\n- ai@5.0.254",
+        "html_url": "https://github.com/vercel/ai/pull/20453",
+        "created_at": "2026-09-08T16:09:23Z",
+        "updated_at": "2026-09-09T18:22:17Z",
+        "closed_at": "2026-09-09T13:38:52Z",
+        "merged_at": "2026-09-09T13:38:52Z",
+        "merge_commit_sha": "e1291619967cfdb14e95a372b73b778c80bc1e8f",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "7212268125df4ee2906c64fc93ac80e0f3fd796d",
+          "ref": "changeset-release/release-v5.0"
+        },
+        "base": {
+          "sha": "022f24bf9ad49422fd786994eb8bc3a967735789",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4477556901,
+        "node_id": "PR_kwDOJmmzGc8AAAABCuIYpQ",
+        "number": 20473,
+        "state": "closed",
+        "title": "[v5.0] fix: generateImage maxRetries skips transient empty image results",
+        "body": "## Background\n\n`generateImage` treated successful responses containing no images as failures only after leaving its retry scope, preventing recovery from transient empty results while requiring moderation blocks to remain terminal.\n\n## Root Cause\n\nEmpty-image validation occurred outside the retry operation, so `maxRetries` never observed the derived failure; the immutable reproduction confirmed only one provider call. The result contract also lacked a provider-neutral way to classify terminal empty responses.\n\n## Summary\n\nThe PR retries unclassified empty image results within the retry operation, preserves completed-attempt diagnostics and usage, honors optional `ImageModelV4Result.isRetryable: false`, marks Google and Google Vertex content-filter results terminal, documents the policy, and adds patch changesets. No dependency, lockfile, or tsconfig changes remain.\n\n## Testing\n\nRegression coverage verifies transient recovery, exhaustion with `NoImageGeneratedError`, terminal single-call behavior, Google and Google Vertex prompt-block classification, retry predicates, and complete attempt accounting. Focused Node and Edge suites, full type checking, checks, docs validation, and affected package builds pass.\n\n## End-to-end Validation\n\n- `replay_original_reproduction`: exited 0 without the original failure signal and was classified as `no-longer-reproduces`.\n- `pnpm -C examples/ai-functions exec tsx src/generate-image/google/gemini-minimal.ts`: live Google image generation succeeded.\n- Live Google Vertex validation was attempted but blocked by the missing `GOOGLE_VERTEX_PROJECT` setting.\n\n## Related Issues\n\nFixes #20156\n\nCloses #20338\n\nBackport of #20170",
+        "html_url": "https://github.com/vercel/ai/pull/20473",
+        "created_at": "2026-09-08T18:53:11Z",
+        "updated_at": "2026-09-09T18:22:16Z",
+        "closed_at": "2026-09-09T17:13:24Z",
+        "merged_at": "2026-09-09T17:13:24Z",
+        "merge_commit_sha": "c2089a99a480893482c64f1acede38f5b54591bf",
+        "draft": false,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "bddc2f0d982aa5f1887504d5889fbcc47492908d",
+          "ref": "backport-20156-20260908180128832389"
+        },
+        "base": {
+          "sha": "79ac7d96fee4a21272e018d11adef2801302894d",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4479684115,
+        "node_id": "PR_kwDOJmmzGc8AAAABCwKOEw",
+        "number": 20517,
+        "state": "closed",
+        "title": "[v5.0] fix: decode valid text data URLs in Node.js",
+        "body": "## Background\n\nThe public ai utility getTextFromDataUrl rejected valid base64 text data URLs in Node.js instead of decoding them.\n\n## Root Cause\n\ngetTextFromDataUrl called window.atob, but Node.js 22.23.2 has no window while globalThis.atob is available; the original reproduction confirmed this caused the decoding error.\n\n## Summary\n\nUpdated getTextFromDataUrl to use the cross-runtime globalThis.atob decoder, removed reproduction-only artifacts, and added a patch changeset.\n\n## Testing\n\nAdded a regression test verifying that a base64 text data URL decodes to \"hi\" in both Node.js and Edge test environments.\n\n## End-to-end Validation\n\n- `pnpm -C examples/ai-functions exec tsx src/reproduction/get-text-from-data-url-node.ts` completed successfully through the immutable replay without the original failure signal.\n\n## Related Issues\n\nFixes #20348\n\nCloses #20480\n\nBackport of #20354",
+        "html_url": "https://github.com/vercel/ai/pull/20517",
+        "created_at": "2026-09-09T00:05:58Z",
+        "updated_at": "2026-09-09T18:22:13Z",
+        "closed_at": "2026-09-09T16:18:13Z",
+        "merged_at": "2026-09-09T16:18:13Z",
+        "merge_commit_sha": "7f4e217391c2bd017a96ca7b07db30e35a5719a1",
+        "draft": false,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "08937898fc9043c66c82cadd72c019cc42e75e80",
+          "ref": "backport-20348-20260908235448432803"
+        },
+        "base": {
+          "sha": "022f24bf9ad49422fd786994eb8bc3a967735789",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4485908800,
+        "node_id": "PR_kwDOJmmzGc8AAAABC2GJQA",
+        "number": 20523,
+        "state": "closed",
+        "title": "[v5.0] fix: surface empty chat completion choices as AI SDK response errors",
+        "body": "## Background\n\nOpenAI and OpenAI-compatible non-streaming chat calls returned a raw TypeError when successful provider responses contained no choices, preventing standard AI SDK error handling.\n\n## Root Cause\n\nBoth response schemas accepted empty choices arrays, but doGenerate unconditionally accessed choices[0].message; the original reproduction confirmed this path in both published adapters.\n\n## Summary\n\nAdded empty-choice guards that throw InvalidResponseDataError with the raw provider response, removed reproduction-only artifacts, and added patch changesets for both providers.\n\n## Testing\n\nAdded regression tests verifying that empty choices responses from both chat adapters produce InvalidResponseDataError containing the raw response.\n\n## End-to-end Validation\n\n- `replay_original_reproduction`: passed; both adapters surfaced empty choices as AISDKError and the original failure signal was absent.\n\n## Related Issues\n\nFixes #20351\n\nCloses #20509",
+        "html_url": "https://github.com/vercel/ai/pull/20523",
+        "created_at": "2026-09-09T14:15:21Z",
+        "updated_at": "2026-09-09T18:22:11Z",
+        "closed_at": "2026-09-09T14:42:13Z",
+        "merged_at": "2026-09-09T14:42:13Z",
+        "merge_commit_sha": "fd889a304628642044e31dbf9225500e840db501",
+        "draft": false,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "8a182fc51f4912c02c1f4e85d6ef79ae868e4659",
+          "ref": "bugfix-20351-20260909134937508849"
+        },
+        "base": {
+          "sha": "e1291619967cfdb14e95a372b73b778c80bc1e8f",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4486190414,
+        "node_id": "PR_kwDOJmmzGc8AAAABC2XVTg",
+        "number": 20525,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to release-v5.0, this PR will be updated.\n\n\n# Releases\n## ai@5.0.255\n\n### Patch Changes\n\n- c2089a9: Retry unclassified empty image results, preserve completed-attempt diagnostics, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google Vertex RAI-filtered results as terminal.\n- 7f4e217: fix(ai): decode text data URLs in Node.js\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/gateway@2.0.149\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/alibaba@0.0.26\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/amazon-bedrock@3.0.130\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n  - @ai-sdk/anthropic@2.0.102\n## @ai-sdk/angular@1.0.255\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [7f4e217]\n- Updated dependencies [ab3990f]\n  - ai@5.0.255\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/anthropic@2.0.102\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/anthropic-aws@0.1.17\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n  - @ai-sdk/anthropic@2.0.102\n## @ai-sdk/assemblyai@1.0.42\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/azure@2.0.133\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai@2.0.127\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n  - @ai-sdk/deepseek@1.0.56\n## @ai-sdk/baseten@0.1.7\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/black-forest-labs@0.0.26\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/cerebras@1.0.59\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/cohere@2.0.41\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/deepgram@1.0.40\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/deepinfra@1.0.57\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/deepseek@1.0.56\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/elevenlabs@1.0.40\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/fal@1.0.44\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/fireworks@1.0.58\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/gateway@2.0.149\n\n### Patch Changes\n\n- c2089a9: Retry unclassified empty image results, preserve completed-attempt diagnostics, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google Vertex RAI-filtered results as terminal.\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/gladia@1.0.39\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/gmicloud@1.0.6\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/google@2.0.97\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/google-vertex@3.0.174\n\n### Patch Changes\n\n- c2089a9: Retry unclassified empty image results, preserve completed-attempt diagnostics, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google Vertex RAI-filtered results as terminal.\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n  - @ai-sdk/anthropic@2.0.102\n  - @ai-sdk/google@2.0.97\n## @ai-sdk/groq@2.0.53\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/huggingface@0.0.37\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/hume@1.0.39\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/langchain@1.0.255\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [7f4e217]\n  - ai@5.0.255\n## @ai-sdk/llamaindex@1.0.255\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [7f4e217]\n  - ai@5.0.255\n## @ai-sdk/luma@1.0.39\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/mcp@0.0.33\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/mistral@2.0.48\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/moonshotai@0.0.26\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/openai@2.0.127\n\n### Patch Changes\n\n- fd889a3: fix(openai): return an AI SDK error for empty chat completion choices\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/openai-compatible@1.0.54\n\n### Patch Changes\n\n- fd889a3: fix(openai): return an AI SDK error for empty chat completion choices\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/perplexity@2.0.43\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/prodia@0.0.21\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/provider@2.0.4\n\n### Patch Changes\n\n- c2089a9: Retry unclassified empty image results, preserve completed-attempt diagnostics, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google Vertex RAI-filtered results as terminal.\n## @ai-sdk/provider-utils@3.0.37\n\n### Patch Changes\n\n- ab3990f: fix(provider-utils): avoid excessive memory usage when base64 encoding byte arrays\n- Updated dependencies [c2089a9]\n  - @ai-sdk/provider@2.0.4\n## @ai-sdk/react@2.0.258\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [7f4e217]\n- Updated dependencies [ab3990f]\n  - ai@5.0.255\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/replicate@1.0.39\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/revai@1.0.39\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/rsc@1.0.257\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [7f4e217]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider@2.0.4\n  - ai@5.0.255\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/svelte@3.0.255\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [7f4e217]\n- Updated dependencies [ab3990f]\n  - ai@5.0.255\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/togetherai@1.0.58\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/valibot@1.0.37\n\n### Patch Changes\n\n- Updated dependencies [ab3990f]\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/vercel@1.0.55\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/vue@2.0.255\n\n### Patch Changes\n\n- Updated dependencies [c2089a9]\n- Updated dependencies [7f4e217]\n- Updated dependencies [ab3990f]\n  - ai@5.0.255\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/xai@2.0.93\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37\n## @ai-sdk/zai@1.0.3\n\n### Patch Changes\n\n- Updated dependencies [fd889a3]\n- Updated dependencies [c2089a9]\n- Updated dependencies [ab3990f]\n  - @ai-sdk/openai-compatible@1.0.54\n  - @ai-sdk/provider@2.0.4\n  - @ai-sdk/provider-utils@3.0.37",
+        "html_url": "https://github.com/vercel/ai/pull/20525",
+        "created_at": "2026-09-09T14:43:44Z",
+        "updated_at": "2026-09-09T18:22:08Z",
+        "closed_at": "2026-09-09T18:08:03Z",
+        "merged_at": "2026-09-09T18:08:03Z",
+        "merge_commit_sha": "bceba9f6fa9efbe0bc76116406bbb4243bfd2eee",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "fce1d37eb03601208753c790ed53c93ce3960462",
+          "ref": "changeset-release/release-v5.0"
+        },
+        "base": {
+          "sha": "c2089a99a480893482c64f1acede38f5b54591bf",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4486390384,
+        "node_id": "PR_kwDOJmmzGc8AAAABC2jicA",
+        "number": 20529,
+        "state": "closed",
+        "title": "[v5.0] revert: remove Synthorai provider documentation",
+        "body": "## Summary\n\nReverts #19682, the v5 backport of #19678, and removes the Synthorai provider page and its index entry.\n\nThis follows the documentation request in #19675.\n\n## Verification\n\n- `git diff --check`",
+        "html_url": "https://github.com/vercel/ai/pull/20529",
+        "created_at": "2026-09-09T15:05:11Z",
+        "updated_at": "2026-09-09T18:22:07Z",
+        "closed_at": "2026-09-09T15:16:00Z",
+        "merged_at": "2026-09-09T15:16:00Z",
+        "merge_commit_sha": "20f127c0555e4ed91336d8c691cd32b0c01c3488",
+        "draft": false,
+        "user": {
+          "id": 39992,
+          "node_id": "MDQ6VXNlcjM5OTky",
+          "login": "gr2m",
+          "type": "User",
+          "html_url": "https://github.com/gr2m"
+        },
+        "head": {
+          "sha": "cae606a3ca4ea0f96463ed918ce05243490863f9",
+          "ref": "codex/revert-synthorai-v5"
+        },
+        "base": {
+          "sha": "fd889a304628642044e31dbf9225500e840db501",
+          "ref": "release-v5.0"
+        }
+      },
+      {
+        "id": 4477243195,
+        "node_id": "PR_kwDOJmmzGc8AAAABCt1POw",
+        "number": 20470,
+        "state": "closed",
+        "title": "[v6.0] fix: generateImage maxRetries skips transient empty image results",
+        "body": "## Background\n\n`generateImage` treated successful responses containing no images as failures only after leaving its retry scope, preventing recovery from transient empty results while requiring moderation blocks to remain terminal.\n\n## Root Cause\n\nEmpty-image validation occurred outside the retry operation, so `maxRetries` never observed the derived failure; the immutable reproduction confirmed only one provider call. The result contract also lacked a provider-neutral way to classify terminal empty responses.\n\n## Summary\n\nThe PR retries unclassified empty image results within the retry operation, preserves completed-attempt diagnostics and usage, honors optional `ImageModelV4Result.isRetryable: false`, marks Google and Google Vertex content-filter results terminal, documents the policy, and adds patch changesets. No dependency, lockfile, or tsconfig changes remain.\n\n## Testing\n\nRegression coverage verifies transient recovery, exhaustion with `NoImageGeneratedError`, terminal single-call behavior, Google and Google Vertex prompt-block classification, retry predicates, and complete attempt accounting. Focused Node and Edge suites, full type checking, checks, docs validation, and affected package builds pass.\n\n## End-to-end Validation\n\n- `replay_original_reproduction`: exited 0 without the original failure signal and was classified as `no-longer-reproduces`.\n- `pnpm -C examples/ai-functions exec tsx src/generate-image/google/gemini-minimal.ts`: live Google image generation succeeded.\n- Live Google Vertex validation was attempted but blocked by the missing `GOOGLE_VERTEX_PROJECT` setting.\n\n## Related Issues\n\nFixes #20156\n\nCloses #20337\n\nBackport of #20170",
+        "html_url": "https://github.com/vercel/ai/pull/20470",
+        "created_at": "2026-09-08T18:15:49Z",
+        "updated_at": "2026-09-09T18:22:05Z",
+        "closed_at": "2026-09-09T17:10:54Z",
+        "merged_at": "2026-09-09T17:10:54Z",
+        "merge_commit_sha": "1a4dbb1c335ffe91c1de21fa9d499fa336a9a4f4",
+        "draft": false,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "217ffc701322643d8b6079a15f685476f018a4f2",
+          "ref": "backport-20156-20260908180128161725"
+        },
+        "base": {
+          "sha": "3d2db73a997a044d483ddb4bf37126d8049e1f06",
+          "ref": "release-v6.0"
+        }
+      },
+      {
+        "id": 4479091505,
+        "node_id": "PR_kwDOJmmzGc8AAAABCvmDMQ",
+        "number": 20502,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to release-v6.0, this PR will be updated.\n\n\n# Releases\n## ai@6.0.279\n\n### Patch Changes\n\n- 6517262: fix(ai): decode text data URLs in Node.js\n## @ai-sdk/amazon-bedrock@4.0.174\n\n### Patch Changes\n\n- Updated dependencies [1f75808]\n- Updated dependencies [65150c2]\n  - @ai-sdk/openai@3.0.111\n## @ai-sdk/angular@2.0.280\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279\n## @ai-sdk/azure@3.0.118\n\n### Patch Changes\n\n- 1f75808: Include explicit message item types in Azure AI Foundry Responses requests.\n- Updated dependencies [1f75808]\n- Updated dependencies [65150c2]\n  - @ai-sdk/openai@3.0.111\n## @ai-sdk/langchain@2.0.287\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279\n## @ai-sdk/llamaindex@2.0.279\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279\n## @ai-sdk/open-responses@1.0.41\n\n### Patch Changes\n\n- 216b285: fix(open-responses): include image detail in input image parts\n## @ai-sdk/openai@3.0.111\n\n### Patch Changes\n\n- 1f75808: Include explicit message item types in Azure AI Foundry Responses requests.\n- 65150c2: feat(openai): add GPT Image 2.5 Flare and Sunburst model IDs\n## @ai-sdk/react@3.0.282\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279\n## @ai-sdk/rsc@2.0.279\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279\n## @ai-sdk/svelte@4.0.279\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279\n## @ai-sdk/vue@3.0.279\n\n### Patch Changes\n\n- Updated dependencies [6517262]\n  - ai@6.0.279",
+        "html_url": "https://github.com/vercel/ai/pull/20502",
+        "created_at": "2026-09-08T22:22:20Z",
+        "updated_at": "2026-09-09T18:22:03Z",
+        "closed_at": "2026-09-09T13:38:44Z",
+        "merged_at": "2026-09-09T13:38:44Z",
+        "merge_commit_sha": "cadd01d8526ec8b482b1faeb63cd87d7c7fadb25",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "5e858d8378d355b75e33086a06b4379982b1cc23",
+          "ref": "changeset-release/release-v6.0"
+        },
+        "base": {
+          "sha": "216b2859e1bac49de741725e4e80da796be18170",
+          "ref": "release-v6.0"
+        }
+      },
+      {
+        "id": 4485828641,
+        "node_id": "PR_kwDOJmmzGc8AAAABC2BQIQ",
+        "number": 20522,
+        "state": "closed",
+        "title": "[v6.0] fix: classify empty non-streaming chat choices as invalid provider responses",
+        "body": "## Background\n\nOpenAI and OpenAI-compatible non-streaming chat models returned a raw TypeError when an HTTP 200 response contained no choices, preventing normal AI SDK error handling.\n\n## Root Cause\n\nBoth response schemas allowed empty choices arrays, while doGenerate unconditionally dereferenced choices[0]. The original reproduction confirmed this path in both published adapters.\n\n## Summary\n\nAdded empty-choice guards to both chat adapters that throw InvalidResponseDataError with the raw response, plus patch changesets for both packages.\n\n## Testing\n\nAdded regression tests confirming empty choices produce InvalidResponseDataError in both adapters.\n\n## End-to-end Validation\n\n- `replay_original_reproduction`: the immutable reproduction exited successfully; both adapters returned AI_InvalidResponseDataError and the original TypeError signal was absent.\n\n## Related Issues\n\nFixes #20351\n\nCloses #20508",
+        "html_url": "https://github.com/vercel/ai/pull/20522",
+        "created_at": "2026-09-09T14:07:05Z",
+        "updated_at": "2026-09-09T18:22:01Z",
+        "closed_at": "2026-09-09T14:42:10Z",
+        "merged_at": "2026-09-09T14:42:10Z",
+        "merge_commit_sha": "1336501f9a1183087ae66794adb04f1bc088a823",
+        "draft": false,
+        "user": {
+          "id": 305873210,
+          "node_id": "BOT_kgDOEjtBOg",
+          "login": "ai-sdk-factory[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/ai-sdk-factory"
+        },
+        "head": {
+          "sha": "b3474f745c56fb02b63f68966362879f581a43b1",
+          "ref": "bugfix-20351-20260909134929664170"
+        },
+        "base": {
+          "sha": "cadd01d8526ec8b482b1faeb63cd87d7c7fadb25",
+          "ref": "release-v6.0"
+        }
+      },
+      {
+        "id": 4486191357,
+        "node_id": "PR_kwDOJmmzGc8AAAABC2XY_Q",
+        "number": 20526,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to release-v6.0, this PR will be updated.\n\n\n# Releases\n## ai@6.0.280\n\n### Patch Changes\n\n- 04783ca: fix(ai): call `atob` without a receiver for Cloudflare Workers compatibility\n- 1a4dbb1: Retry unclassified empty image results, preserve retry-attempt accounting, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google and Google Vertex content-filtered results as terminal.\n- Updated dependencies [1a4dbb1]\n- Updated dependencies [b273f40]\n  - @ai-sdk/gateway@3.0.191\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/alibaba@1.0.53\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/amazon-bedrock@4.0.175\n\n### Patch Changes\n\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai@3.0.112\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/anthropic@3.0.117\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/angular@2.0.281\n\n### Patch Changes\n\n- Updated dependencies [04783ca]\n- Updated dependencies [1a4dbb1]\n  - ai@6.0.280\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/anthropic@3.0.117\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/anthropic-aws@1.0.39\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/anthropic@3.0.117\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/assemblyai@2.0.58\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/azure@3.0.119\n\n### Patch Changes\n\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai@3.0.112\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/deepseek@2.0.63\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/baseten@1.1.12\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/black-forest-labs@1.0.61\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/bytedance@1.0.40\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/cerebras@2.0.81\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/cohere@3.0.61\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/deepgram@2.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/deepinfra@2.0.79\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/deepseek@2.0.63\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/devtools@0.0.26\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n## @ai-sdk/elevenlabs@2.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/fal@2.0.58\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/fireworks@2.0.85\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/fish-audio@2.0.10\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/gateway@3.0.191\n\n### Patch Changes\n\n- 1a4dbb1: Retry unclassified empty image results, preserve retry-attempt accounting, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google and Google Vertex content-filtered results as terminal.\n- b273f40: Backport: chore(provider/gateway): update gateway model settings files\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/gladia@2.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/gmicloud@2.0.8\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/google@3.0.122\n\n### Patch Changes\n\n- 1a4dbb1: Retry unclassified empty image results, preserve retry-attempt accounting, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google and Google Vertex content-filtered results as terminal.\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/google-vertex@4.0.198\n\n### Patch Changes\n\n- 1a4dbb1: Retry unclassified empty image results, preserve retry-attempt accounting, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google and Google Vertex content-filtered results as terminal.\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/google@3.0.122\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/anthropic@3.0.117\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/groq@3.0.65\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/huggingface@1.0.77\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/hume@2.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/klingai@3.0.43\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/langchain@2.0.288\n\n### Patch Changes\n\n- Updated dependencies [04783ca]\n- Updated dependencies [1a4dbb1]\n  - ai@6.0.280\n## @ai-sdk/llamaindex@2.0.280\n\n### Patch Changes\n\n- Updated dependencies [04783ca]\n- Updated dependencies [1a4dbb1]\n  - ai@6.0.280\n## @ai-sdk/luma@2.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/mcp@1.0.80\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/minimax@2.0.15\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/anthropic@3.0.117\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/mistral@3.0.64\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/moonshotai@2.0.55\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/open-responses@1.0.42\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/openai@3.0.112\n\n### Patch Changes\n\n- 1336501: fix(openai): return an AI SDK error for empty chat completion choices\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/openai-compatible@2.0.75\n\n### Patch Changes\n\n- f3c1980: fix(openai-compatible): keep reasoning streams contiguous when deltas include empty tool call arrays\n- 1336501: fix(openai): return an AI SDK error for empty chat completion choices\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/perplexity@3.0.60\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/prodia@1.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/provider@3.0.16\n\n### Patch Changes\n\n- 1a4dbb1: Retry unclassified empty image results, preserve retry-attempt accounting, add provider-independent result retryability classification, preserve it through the AI Gateway, and mark Google and Google Vertex content-filtered results as terminal.\n## @ai-sdk/provider-utils@4.0.51\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n## @ai-sdk/quiverai@1.0.24\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/react@3.0.283\n\n### Patch Changes\n\n- Updated dependencies [04783ca]\n- Updated dependencies [1a4dbb1]\n  - ai@6.0.280\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/replicate@2.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/revai@2.0.57\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/rsc@2.0.280\n\n### Patch Changes\n\n- Updated dependencies [04783ca]\n- Updated dependencies [1a4dbb1]\n  - ai@6.0.280\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/svelte@4.0.280\n\n### Patch Changes\n\n- Updated dependencies [04783ca]\n- Updated dependencies [1a4dbb1]\n  - ai@6.0.280\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/togetherai@2.0.81\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/valibot@2.0.52\n\n### Patch Changes\n\n- @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/vercel@2.0.77\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/voyage@1.0.28\n\n### Patch Changes\n\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/vue@3.0.280\n\n### Patch Changes\n\n- Updated dependencies [04783ca]\n- Updated dependencies [1a4dbb1]\n  - ai@6.0.280\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/xai@3.0.131\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51\n## @ai-sdk/zai@2.0.3\n\n### Patch Changes\n\n- Updated dependencies [f3c1980]\n- Updated dependencies [1336501]\n- Updated dependencies [1a4dbb1]\n  - @ai-sdk/openai-compatible@2.0.75\n  - @ai-sdk/provider@3.0.16\n  - @ai-sdk/provider-utils@4.0.51",
+        "html_url": "https://github.com/vercel/ai/pull/20526",
+        "created_at": "2026-09-09T14:43:50Z",
+        "updated_at": "2026-09-09T18:21:58Z",
+        "closed_at": "2026-09-09T18:07:26Z",
+        "merged_at": "2026-09-09T18:07:26Z",
+        "merge_commit_sha": "6fabd709198fa0f98f4d2262bd099b52ca6a0bc6",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "229552bcc783cf551a29649bc8eaee8e50628120",
+          "ref": "changeset-release/release-v6.0"
+        },
+        "base": {
+          "sha": "1a4dbb1c335ffe91c1de21fa9d499fa336a9a4f4",
+          "ref": "release-v6.0"
+        }
+      }
+    ]
+  }
+}

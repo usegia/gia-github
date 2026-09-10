@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/rag-chat-component/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:44.363629+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"338ba7f2d0acee315f86cdd6d1943228d30cbd5daed8b7ea3e16ed37643eb6ff\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 848693066,
+    "repository": "upstash/rag-chat-component",
+    "records": [
+      {
+        "id": 3095795138,
+        "node_id": "PR_kwDOMpYHSs64hhXC",
+        "number": 10,
+        "state": "closed",
+        "title": "DX-2316: bump next",
+        "body": "https://nextjs.org/blog/security-update-2025-12-11",
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/10",
+        "created_at": "2025-12-12T08:56:35Z",
+        "updated_at": "2025-12-12T08:56:43Z",
+        "closed_at": "2025-12-12T08:56:43Z",
+        "merged_at": "2025-12-12T08:56:43Z",
+        "merge_commit_sha": "39ea46043b0541691c8c14b58b6f68d1c5fec278",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "239220e74a390b51473b1d2eb7d5c278b8ef5871",
+          "ref": "DX-2316-bump-next"
+        },
+        "base": {
+          "sha": "bd0964caaf064c783f3f27ac14606f8938f68245",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2361823266,
+        "node_id": "PR_kwDOMpYHSs6MxpAi",
+        "number": 8,
+        "state": "closed",
+        "title": "added zod to package json file | zod package was missing",
+        "body": "zod was missing from package json. ",
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/8",
+        "created_at": "2025-02-27T10:30:02Z",
+        "updated_at": "2025-04-30T10:33:47Z",
+        "closed_at": "2025-04-30T10:33:47Z",
+        "merged_at": null,
+        "merge_commit_sha": "90c4cf2f6952b75636179c6b4a457986e024b226",
+        "draft": false,
+        "user": {
+          "id": 26034768,
+          "node_id": "MDQ6VXNlcjI2MDM0NzY4",
+          "login": "odinous95",
+          "type": "User",
+          "html_url": "https://github.com/odinous95"
+        },
+        "head": {
+          "sha": "439c856d38c377fa5bc96af3f65cf5397b07775c",
+          "ref": "master"
+        },
+        "base": {
+          "sha": "cd9ea021276dc5bf9f5cab9ab8770de858ba9bfd",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2317021119,
+        "node_id": "PR_kwDOMpYHSs6KGu-_",
+        "number": 6,
+        "state": "closed",
+        "title": "feat: playground",
+        "body": "This PR introduces a playground which allows developers to contribute to the library with live updates. ",
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/6",
+        "created_at": "2025-02-05T08:41:53Z",
+        "updated_at": "2025-02-05T08:42:02Z",
+        "closed_at": "2025-02-05T08:42:02Z",
+        "merged_at": "2025-02-05T08:42:02Z",
+        "merge_commit_sha": "cd9ea021276dc5bf9f5cab9ab8770de858ba9bfd",
+        "draft": false,
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        },
+        "head": {
+          "sha": "074c1910c198729cbdfc9a1aa2437bbc8f7ffae7",
+          "ref": "DX-1635"
+        },
+        "base": {
+          "sha": "2bb5d8a9e85753438a12a9e8f0180dbbf09717d0",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2315964040,
+        "node_id": "PR_kwDOMpYHSs6KCs6I",
+        "number": 5,
+        "state": "closed",
+        "title": "Responsive widget",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/5",
+        "created_at": "2025-02-04T19:17:15Z",
+        "updated_at": "2025-02-04T19:17:33Z",
+        "closed_at": "2025-02-04T19:17:33Z",
+        "merged_at": "2025-02-04T19:17:33Z",
+        "merge_commit_sha": "ee6de1e083bf369f337b3f3f57bc803e6ab957f7",
+        "draft": false,
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        },
+        "head": {
+          "sha": "d193ba330d3e90abc4a3712288c2f9468f04c1eb",
+          "ref": "responsive-widget"
+        },
+        "base": {
+          "sha": "4018fa672128a9d4008a1d29c0f5aecfe5d6cfbb",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2276289589,
+        "node_id": "PR_kwDOMpYHSs6HrWw1",
+        "number": 4,
+        "state": "closed",
+        "title": "Update README",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/4",
+        "created_at": "2025-01-14T09:13:18Z",
+        "updated_at": "2025-01-14T09:13:29Z",
+        "closed_at": "2025-01-14T09:13:25Z",
+        "merged_at": "2025-01-14T09:13:25Z",
+        "merge_commit_sha": "fefbe78dca1df71ad0877d0f9fb9774e5c365cf7",
+        "draft": false,
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        },
+        "head": {
+          "sha": "f1be6496b1bc6a309ca47eaf71e925ad158068d0",
+          "ref": "update-readme"
+        },
+        "base": {
+          "sha": "cbf513ea3d5d2e18812b3d9e83bfb890cbd6125d",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2255040211,
+        "node_id": "PR_kwDOMpYHSs6GaS7T",
+        "number": 3,
+        "state": "closed",
+        "title": "feat: add nextjs 15 to peer dependency versions",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/3",
+        "created_at": "2024-12-30T07:16:43Z",
+        "updated_at": "2024-12-30T09:47:20Z",
+        "closed_at": "2024-12-30T09:47:20Z",
+        "merged_at": "2024-12-30T09:47:20Z",
+        "merge_commit_sha": "5c2059ea1cc21d5c5c3f926896bd4c23a902dceb",
+        "draft": false,
+        "user": {
+          "id": 18082091,
+          "node_id": "MDQ6VXNlcjE4MDgyMDkx",
+          "login": "ytkimirti",
+          "type": "User",
+          "html_url": "https://github.com/ytkimirti"
+        },
+        "head": {
+          "sha": "58f62ef7e49c73c8caac2aafbd4362bfdcb6589e",
+          "ref": "fix-nextjs-peer-dep"
+        },
+        "base": {
+          "sha": "924f454d30197f5de7f325d5d5eeebe90df984cd",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2253549355,
+        "node_id": "PR_kwDOMpYHSs6GUm8r",
+        "number": 2,
+        "state": "closed",
+        "title": "Fix esm output not having file extensions",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/2",
+        "created_at": "2024-12-27T16:07:04Z",
+        "updated_at": "2024-12-30T08:58:10Z",
+        "closed_at": "2024-12-30T08:58:10Z",
+        "merged_at": "2024-12-30T08:58:10Z",
+        "merge_commit_sha": "924f454d30197f5de7f325d5d5eeebe90df984cd",
+        "draft": false,
+        "user": {
+          "id": 18082091,
+          "node_id": "MDQ6VXNlcjE4MDgyMDkx",
+          "login": "ytkimirti",
+          "type": "User",
+          "html_url": "https://github.com/ytkimirti"
+        },
+        "head": {
+          "sha": "7ed40cbda0cc5256e448b8553492676335c9bf81",
+          "ref": "DX-1127-esm-fix"
+        },
+        "base": {
+          "sha": "082f10e21529942c94efb4c26a80f4b8a650c179",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2197845331,
+        "node_id": "PR_kwDOMpYHSs6DAHVT",
+        "number": 1,
+        "state": "closed",
+        "title": "Add Next.js Example and README",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat-component/pull/1",
+        "created_at": "2024-11-25T09:01:53Z",
+        "updated_at": "2024-12-11T22:36:06Z",
+        "closed_at": "2024-12-11T22:36:06Z",
+        "merged_at": "2024-12-11T22:36:06Z",
+        "merge_commit_sha": "743a6629e99894eb6b58dcd724f70acccf0294b6",
+        "draft": false,
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        },
+        "head": {
+          "sha": "a08ebf26f5f854ad527711784202bcbf99df3e26",
+          "ref": "DX-1127"
+        },
+        "base": {
+          "sha": "dddac9e69d07f6306a470cf16b5f8a8c2672ca12",
+          "ref": "master"
+        }
+      }
+    ]
+  }
+}

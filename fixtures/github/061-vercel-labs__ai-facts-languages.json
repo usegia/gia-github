@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-facts/languages",
+  "observedAt": "2026-09-10T10:28:26.563619+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"cedb8b2ed6d4c7eb03d9a4f5f26c08f5696f6ca452e82c91b2d931a9ef119db8\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 900901983,
+    "repository": "vercel-labs/ai-facts",
+    "records": {
+      "TypeScript": 69123,
+      "CSS": 1743,
+      "JavaScript": 204
+    }
+  }
+}

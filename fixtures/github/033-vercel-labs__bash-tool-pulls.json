@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/bash-tool/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:38.592653+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"fb4a9f7a03310a9d118f8029ef27988eb5e47345739f149e4e4a195a0025060f\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 1128648949,
+    "repository": "vercel-labs/bash-tool",
+    "records": [
+      {
+        "id": 4336519065,
+        "node_id": "PR_kwDOQ0XQ9c8AAAABAnoHmQ",
+        "number": 31,
+        "state": "closed",
+        "title": "Fix the sandbox type to be more compatible",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/31",
+        "created_at": "2026-08-22T02:57:10Z",
+        "updated_at": "2026-08-22T03:19:07Z",
+        "closed_at": "2026-08-22T03:19:07Z",
+        "merged_at": "2026-08-22T03:19:07Z",
+        "merge_commit_sha": "70ba5ad4d01be465e76acb5b6bd0c6221a2af1b9",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "a312b14f6e86f217a86a9ab3269f79649713c33a",
+          "ref": "types-fix"
+        },
+        "base": {
+          "sha": "bd77fe96e8e14755296a6d9c0f793cf8897a40b2",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3691613122,
+        "node_id": "PR_kwDOQ0XQ9c7cCYvC",
+        "number": 25,
+        "state": "closed",
+        "title": "fix(exports): expose individual tool creators",
+        "body": "## Summary\n\nFixes #17.\n\n`createBashTool()` is useful when a caller can resolve and prepare a sandbox before constructing tools, but durable/orchestrated runtimes sometimes need to define tool schemas in one context and execute against a sandbox proxy in another context.\n\nThe individual tool creator functions already exist internally and only need a `Sandbox` interface plus `cwd`. This PR exposes them from the package root so callers can compose them with custom sandbox implementations:\n\n- `createBashExecuteTool`\n- `createReadFileTool`\n- `createWriteFileTool`\n\nIt also exports the corresponding option types and adds a public export smoke test.\n\n## Verification\n\n- `pnpm run test:run -- src/index.test.ts src/tools/bash.test.ts`\n- `pnpm run typecheck`\n- `pnpm run build`\n- `pnpm run lint`\n- `git diff --check`\n",
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/25",
+        "created_at": "2026-05-15T19:10:47Z",
+        "updated_at": "2026-07-18T21:39:31Z",
+        "closed_at": "2026-07-18T21:39:31Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 75971010,
+          "node_id": "MDQ6VXNlcjc1OTcxMDEw",
+          "login": "EfeDurmaz16",
+          "type": "User",
+          "html_url": "https://github.com/EfeDurmaz16"
+        },
+        "head": {
+          "sha": "b3fce71ff64626422ee82498620a7e25c6b06c15",
+          "ref": "fix/export-tool-creators"
+        },
+        "base": {
+          "sha": "9fcf58550312d3eb517dd4a33111e5bb3c40ffdb",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3688893541,
+        "node_id": "PR_kwDOQ0XQ9c7b4Axl",
+        "number": 24,
+        "state": "closed",
+        "title": "feat(prompt): support custom generated tool hints",
+        "body": "## Summary\n- add `promptOptions.additionalTools` so custom sandbox commands can augment generated bash-tool prompts\n- include additional tools in the main available-tools line and optional file-format hints\n- keep `promptOptions.toolPrompt` as a full override for callers that want to replace prompt generation\n\nCloses #14.\n\n## Verification\n- `corepack pnpm@8.15.9 test:run src/tools-prompt.test.ts src/tool.test.ts`\n- `corepack pnpm@8.15.9 run typecheck`\n- `corepack pnpm@8.15.9 run lint`\n- `corepack pnpm@8.15.9 run build`\n\nNote: this checkout required `corepack pnpm@8.15.9 install --frozen-lockfile` because the lockfile is pnpm v8 format while global pnpm is v10.",
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/24",
+        "created_at": "2026-05-15T10:22:19Z",
+        "updated_at": "2026-07-18T21:39:31Z",
+        "closed_at": "2026-07-18T21:39:31Z",
+        "merged_at": null,
+        "merge_commit_sha": "d786063a82bf2c2ded7f29c1feb1424bcc5e4679",
+        "draft": false,
+        "user": {
+          "id": 75971010,
+          "node_id": "MDQ6VXNlcjc1OTcxMDEw",
+          "login": "EfeDurmaz16",
+          "type": "User",
+          "html_url": "https://github.com/EfeDurmaz16"
+        },
+        "head": {
+          "sha": "4155f1205475f80d7cc6eaee61e765bfea4c3c7a",
+          "ref": "efe/additional-tool-prompt-hints"
+        },
+        "base": {
+          "sha": "9fcf58550312d3eb517dd4a33111e5bb3c40ffdb",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4028749890,
+        "node_id": "PR_kwDOQ0XQ9c7wIdhC",
+        "number": 29,
+        "state": "closed",
+        "title": "fix: add AI SDK 7 compatibility",
+        "body": "## Summary\n\n- allow consumers to use either AI SDK 6 or AI SDK 7\n- compile and test the package against AI SDK 7, including portable tool return types and required execution context fixtures\n- update README and packaged agent instructions to the AI SDK 7 isStepCount API\n- run CI on Node.js 22, the minimum supported runtime for AI SDK 7\n\n## Validation\n\n- pnpm validate\n- 10 test files passed\n- 152 tests passed",
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/29",
+        "created_at": "2026-07-10T10:49:31Z",
+        "updated_at": "2026-07-15T17:53:25Z",
+        "closed_at": "2026-07-15T17:53:25Z",
+        "merged_at": "2026-07-15T17:53:24Z",
+        "merge_commit_sha": "f12ad3ea188c569dcdc641820818f716a5a31500",
+        "draft": false,
+        "user": {
+          "id": 22665058,
+          "node_id": "MDQ6VXNlcjIyNjY1MDU4",
+          "login": "songkeys",
+          "type": "User",
+          "html_url": "https://github.com/songkeys"
+        },
+        "head": {
+          "sha": "195ab29d29c49dab110cfa4c30fd6e8abacecdf4",
+          "ref": "fix/ai-sdk-7-compatibility"
+        },
+        "base": {
+          "sha": "b222e475021a06d142b1f67a0edbd7d0001fad48",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3776809611,
+        "node_id": "PR_kwDOQ0XQ9c7hHYqL",
+        "number": 26,
+        "state": "closed",
+        "title": "Make bash-tool explicitly compatible with just-bash@3",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/26",
+        "created_at": "2026-05-31T16:01:31Z",
+        "updated_at": "2026-05-31T16:03:40Z",
+        "closed_at": "2026-05-31T16:03:40Z",
+        "merged_at": "2026-05-31T16:03:40Z",
+        "merge_commit_sha": "b222e475021a06d142b1f67a0edbd7d0001fad48",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "061d389d88a28b657a33162c82b331d891b65882",
+          "ref": "just-bash-3"
+        },
+        "base": {
+          "sha": "9fcf58550312d3eb517dd4a33111e5bb3c40ffdb",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3493978762,
+        "node_id": "PR_kwDOQ0XQ9c7QQeKK",
+        "number": 20,
+        "state": "closed",
+        "title": "Remove gray-matter dependency for simpler front-matter parsing",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/20",
+        "created_at": "2026-04-06T16:41:20Z",
+        "updated_at": "2026-04-06T16:41:40Z",
+        "closed_at": "2026-04-06T16:41:40Z",
+        "merged_at": "2026-04-06T16:41:39Z",
+        "merge_commit_sha": "768c1d2bf3c9f04855783664d081ca174e632b72",
+        "draft": false,
+        "user": {
+          "id": 32676955,
+          "node_id": "MDQ6VXNlcjMyNjc2OTU1",
+          "login": "quuu",
+          "type": "User",
+          "html_url": "https://github.com/quuu"
+        },
+        "head": {
+          "sha": "c0db17f40ba6ee67fac8391fae472a15bb9e4930",
+          "ref": "remove-gray-matter"
+        },
+        "base": {
+          "sha": "134d5fb01d13be12d87cdb21581260d57acf01a8",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3295303256,
+        "node_id": "PR_kwDOQ0XQ9c7EalZY",
+        "number": 16,
+        "state": "closed",
+        "title": "Add support for experimentalTeeTransform to allow models to re-grep commands",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/16",
+        "created_at": "2026-02-17T17:23:56Z",
+        "updated_at": "2026-02-17T17:25:49Z",
+        "closed_at": "2026-02-17T17:25:49Z",
+        "merged_at": "2026-02-17T17:25:49Z",
+        "merge_commit_sha": "47f6b674dc8ec6324a98a9ff4f8a625a6d204fd9",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "22ecca59eb211b23eb96b786ec67e8bd2971d543",
+          "ref": "tee"
+        },
+        "base": {
+          "sha": "b9774b512688115d17ae88c0da54b66ea06827e3",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3195635947,
+        "node_id": "PR_kwDOQ0XQ9c6-eYjr",
+        "number": 8,
+        "state": "closed",
+        "title": "Instruction tuning for skills",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/8",
+        "created_at": "2026-01-21T15:10:58Z",
+        "updated_at": "2026-01-21T15:18:31Z",
+        "closed_at": "2026-01-21T15:18:31Z",
+        "merged_at": "2026-01-21T15:18:31Z",
+        "merge_commit_sha": "3f841f0544708e09ec679aeacf0acf3cac0b6705",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "1f021029fc9ebb37882c751d180818ce1f025009",
+          "ref": "malte/skill-update"
+        },
+        "base": {
+          "sha": "eaa8712df8007034b798c0e3aab88a76e5e04a8a",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3179727638,
+        "node_id": "PR_kwDOQ0XQ9c69hssW",
+        "number": 6,
+        "state": "closed",
+        "title": "Prototype: Skills support for AI SDK",
+        "body": "```ts\r\n  // Discover skills and get files to upload\r\n  const { loadSkill, skills, files, instructions } = await createSkillTool({\r\n    skillsDirectory: path.join(import.meta.dirname, \"skills\"),\r\n  });\r\n\r\n  // Create bash tool with skill files\r\n  const { tools } = await createBashTool({\r\n    files,\r\n    extraInstructions: instructions,\r\n  });\r\n\r\n  // Create the agent with skills\r\n  const agent = new ToolLoopAgent({\r\n    model: \"anthropic/claude-haiku-4.5\",\r\n    tools: {\r\n      loadSkill,\r\n      bash: tools.bash,\r\n    },\r\n  …\r\n```\r\n",
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/6",
+        "created_at": "2026-01-16T04:20:55Z",
+        "updated_at": "2026-01-21T03:51:00Z",
+        "closed_at": "2026-01-21T03:51:00Z",
+        "merged_at": "2026-01-21T03:50:59Z",
+        "merge_commit_sha": "25c0cbce7b2585c7deb70f26ef76aa82e2ef872f",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "818d7b212439b8f3e5a4d5d1e3974f45029331fb",
+          "ref": "skills"
+        },
+        "base": {
+          "sha": "a7d44f1e70646aa3d10f50c900804eba75524f44",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3158299161,
+        "node_id": "PR_kwDOQ0XQ9c68P9IZ",
+        "number": 4,
+        "state": "closed",
+        "title": "Fix default @vercel/sandbox destination",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/4",
+        "created_at": "2026-01-09T03:40:12Z",
+        "updated_at": "2026-01-09T03:42:23Z",
+        "closed_at": "2026-01-09T03:42:23Z",
+        "merged_at": "2026-01-09T03:42:23Z",
+        "merge_commit_sha": "88f028962365c6f012f35c3854d6bb7c2a79d3e1",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "67a7139c15e49c27947400377685f2e0905433d1",
+          "ref": "working-dir"
+        },
+        "base": {
+          "sha": "0ff26af612a875b5746ae053c74de465c064cc91",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3153256380,
+        "node_id": "PR_kwDOQ0XQ9c678t-8",
+        "number": 3,
+        "state": "closed",
+        "title": "List available tools in prompt",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/3",
+        "created_at": "2026-01-07T16:55:00Z",
+        "updated_at": "2026-01-08T16:34:22Z",
+        "closed_at": "2026-01-08T16:34:22Z",
+        "merged_at": "2026-01-08T16:34:22Z",
+        "merge_commit_sha": "7617a3f6483e5890510ffeda520002745ca3ccf4",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "115c7beaea09ad48bff49a37103a8b743935a625",
+          "ref": "tools-prompt"
+        },
+        "base": {
+          "sha": "00cae8b1670f0cc2632f463c35df108fe2e06751",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3150549367,
+        "node_id": "PR_kwDOQ0XQ9c67yZF3",
+        "number": 2,
+        "state": "closed",
+        "title": "Formalize before and after events",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/2",
+        "created_at": "2026-01-06T20:20:55Z",
+        "updated_at": "2026-01-06T20:22:21Z",
+        "closed_at": "2026-01-06T20:22:21Z",
+        "merged_at": "2026-01-06T20:22:21Z",
+        "merge_commit_sha": "8487f5c3f78cec29f382812da7acddd96a2bbf32",
+        "draft": false,
+        "user": {
+          "id": 89679,
+          "node_id": "MDQ6VXNlcjg5Njc5",
+          "login": "cramforce",
+          "type": "User",
+          "html_url": "https://github.com/cramforce"
+        },
+        "head": {
+          "sha": "0308645faa5394ebcd3a59aa10708da287e7fcf3",
+          "ref": "events"
+        },
+        "base": {
+          "sha": "808bb475ca4e2d892f86ba20939d01dc7c20c466",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3150188256,
+        "node_id": "PR_kwDOQ0XQ9c67xA7g",
+        "number": 1,
+        "state": "closed",
+        "title": "AI SDK v6 compatible API",
+        "body": "previously built for ai sdk v4, but incompatible with v5 and v6 because of `parameters` instead of `inputSchema`",
+        "html_url": "https://github.com/vercel-labs/bash-tool/pull/1",
+        "created_at": "2026-01-06T17:51:49Z",
+        "updated_at": "2026-01-06T17:55:34Z",
+        "closed_at": "2026-01-06T17:55:34Z",
+        "merged_at": "2026-01-06T17:55:34Z",
+        "merge_commit_sha": "b3cd88788d459ed7c83002a7ebd2b0f1bc521bbc",
+        "draft": false,
+        "user": {
+          "id": 32676955,
+          "node_id": "MDQ6VXNlcjMyNjc2OTU1",
+          "login": "quuu",
+          "type": "User",
+          "html_url": "https://github.com/quuu"
+        },
+        "head": {
+          "sha": "273ce8370f8c78939b7cd339ab267325f7058241",
+          "ref": "ai-sdk-v6-compat"
+        },
+        "base": {
+          "sha": "bc544980e8f4203ed7b714a5abbeb6f9184c8b25",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}

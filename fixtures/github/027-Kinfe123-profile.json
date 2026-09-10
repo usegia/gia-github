@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/users/Kinfe123",
+  "observedAt": "2026-09-10T10:28:47.271458+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"a95fc977f765e5af033d0b0bc6da0a5b0cc297191563bf7896a46826bf646d01\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "profiles",
+    "records": [
+      {
+        "id": 65047246,
+        "node_id": "MDQ6VXNlcjY1MDQ3MjQ2",
+        "login": "Kinfe123",
+        "type": "User",
+        "html_url": "https://github.com/Kinfe123",
+        "avatar_url": "https://avatars.githubusercontent.com/u/65047246?v=4",
+        "name": "KinfeMichael Tariku",
+        "company": "@better-auth",
+        "blog": "kinfish.dev",
+        "location": null,
+        "bio": "maintainer @better-auth ",
+        "public_repos": 247,
+        "followers": 625,
+        "following": 211,
+        "created_at": "2020-05-08T21:42:55Z",
+        "updated_at": "2026-09-08T14:45:52Z"
+      }
+    ]
+  }
+}

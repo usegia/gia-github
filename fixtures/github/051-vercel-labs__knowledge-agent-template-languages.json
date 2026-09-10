@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/knowledge-agent-template/languages",
+  "observedAt": "2026-09-10T10:28:23.020203+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"464f30cf9fe8f6f09926cfa63713b7360d5e1ee92e0d147596f4b0c4163c3d5c\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 1138349022,
+    "repository": "vercel-labs/knowledge-agent-template",
+    "records": {
+      "TypeScript": 326055,
+      "Vue": 266867,
+      "CSS": 1355,
+      "JavaScript": 294
+    }
+  }
+}

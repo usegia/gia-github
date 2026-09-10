@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/github-tools/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:37.708966+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"f0f112651064d82001a16bde50b4ab1a8ae8890f46578e4664b830fac9118077\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/1163569028/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 1163569028,
+    "repository": "vercel-labs/github-tools",
+    "records": [
+      {
+        "id": 4411010951,
+        "node_id": "PR_kwDORVqnhM8AAAABBuqvhw",
+        "number": 128,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/sdk@1.16.0\n\n### Minor Changes\n\n- [#127](https://github.com/vercel-labs/github-tools/pull/127) [`d6a0ef3`](https://github.com/vercel-labs/github-tools/commit/d6a0ef32a79dcc80e43111b786629b87223c566d) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Structured error catalog (evlog): classifiable failures now carry a stable `code`, a `why` (technical cause), and a `fix` (actionable remedy) instead of a bare message.\n\n  - GitHub API errors are mapped by status: `UNAUTHORIZED` (401), `FORBIDDEN` (403), `RATE_LIMITED` (403/429, with reset info), `NOT_FOUND` (404 — explicitly states GitHub masks no-access private resources as 404), `VALIDATION_FAILED` (422). Unmapped statuses pass through; the original Octokit error stays as `cause`.\n  - An expired `VERCEL_OIDC_TOKEN` now throws `OIDC_TOKEN_EXPIRED` with the exact expiry time before any Connect request, instead of surfacing as an opaque 403. `@vercel/connect` failures map to `CONNECT_NOT_AUTHORIZED`, `CONNECT_USER_NOT_CONNECTED`, and `CONNECT_INSTALLATION_REQUIRED`.\n  - In the eve extension, failing tools return `{ error: { code, message, why, fix, link } }` to the model; unclassified failures keep the plain message string.\n  - The catalog is exported as `githubToolsErrors`; use evlog's `parseError` to read the structure from thrown errors in AI SDK apps.\n## @github-tools/eve-extension@0.7.0\n\n### Minor Changes\n\n- [#127](https://github.com/vercel-labs/github-tools/pull/127) [`d6a0ef3`](https://github.com/vercel-labs/github-tools/commit/d6a0ef32a79dcc80e43111b786629b87223c566d) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Structured error catalog (evlog): classifiable failures now carry a stable `code`, a `why` (technical cause), and a `fix` (actionable remedy) instead of a bare message.\n\n  - GitHub API errors are mapped by status: `UNAUTHORIZED` (401), `FORBIDDEN` (403), `RATE_LIMITED` (403/429, with reset info), `NOT_FOUND` (404 — explicitly states GitHub masks no-access private resources as 404), `VALIDATION_FAILED` (422). Unmapped statuses pass through; the original Octokit error stays as `cause`.\n  - An expired `VERCEL_OIDC_TOKEN` now throws `OIDC_TOKEN_EXPIRED` with the exact expiry time before any Connect request, instead of surfacing as an opaque 403. `@vercel/connect` failures map to `CONNECT_NOT_AUTHORIZED`, `CONNECT_USER_NOT_CONNECTED`, and `CONNECT_INSTALLATION_REQUIRED`.\n  - In the eve extension, failing tools return `{ error: { code, message, why, fix, link } }` to the model; unclassified failures keep the plain message string.\n  - The catalog is exported as `githubToolsErrors`; use evlog's `parseError` to read the structure from thrown errors in AI SDK apps.\n\n### Patch Changes\n\n- Updated dependencies [[`d6a0ef3`](https://github.com/vercel-labs/github-tools/commit/d6a0ef32a79dcc80e43111b786629b87223c566d)]:\n  - @github-tools/sdk@1.16.0",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/128",
+        "created_at": "2026-09-01T10:07:46Z",
+        "updated_at": "2026-09-01T10:08:46Z",
+        "closed_at": "2026-09-01T10:08:43Z",
+        "merged_at": "2026-09-01T10:08:43Z",
+        "merge_commit_sha": "6e1c3889a90e4d4eef09a75a7ff28432b8467617",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "c8760bf9e5ff330954cb3a9a5208c20c85851990",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "d6a0ef32a79dcc80e43111b786629b87223c566d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4410886982,
+        "node_id": "PR_kwDORVqnhM8AAAABBujLRg",
+        "number": 127,
+        "state": "closed",
+        "title": "feat(sdk): map failures to a structured evlog error catalog",
+        "body": "## Summary\n\nRaw failures made models hallucinate: an expired `VERCEL_OIDC_TOKEN` surfaced as a bare \"Not authorized\" (read as \"the repo is private\"), and GitHub's 404-for-private-repos masking looked like a missing resource. This PR maps every classifiable failure to a structured [evlog](https://evlog.dev) catalog error with a stable `code`, a `why` (technical cause), and a `fix` (actionable remedy).\n\n- New `github_tools` catalog (`src/core/errors.ts`, exported as `githubToolsErrors`): `TOKEN_REQUIRED`, `OIDC_TOKEN_EXPIRED`, `CONNECT_NOT_AUTHORIZED`, `CONNECT_USER_NOT_CONNECTED`, `CONNECT_INSTALLATION_REQUIRED`, `SUBJECT_CONTEXT_REQUIRED`, plus GitHub API codes by status: `UNAUTHORIZED` (401), `FORBIDDEN` (403), `RATE_LIMITED` (403/429 with reset info), `NOT_FOUND` (404 — explicitly names the private-repo masking), `VALIDATION_FAILED` (422). Unmapped statuses pass through; the original Octokit error stays as `cause`, request coordinates in `internal` (never model-facing).\n- Root-cause fix for the pinned OIDC token: `resolveConnectOptions` decodes the JWT `exp` claim (zero dependencies) and throws `OIDC_TOKEN_EXPIRED` with the exact expiry time before any doomed Connect request. `@vercel/connect` errors are mapped in the token provider.\n- eve: `runGithubToolStep` returns `{ error: { code, message, why, fix } }` for catalog errors (via `EvlogError.isEvlogError`, copy-safe across duplicated installs); plain string otherwise. The extension's `requireToolContext` throws `SUBJECT_CONTEXT_REQUIRED`.\n- `enrichGithubRateLimitError` removed (superseded by the catalog mapping; its suffix logic lives on in `formatRateLimitSuffix`).\n- Docs: new [Errors guide](apps/docs/content/docs/4.guide/7.errors.md), README section, API reference, SKILL, eve-extension and Vercel Connect pages updated. Changeset: minor for both packages.\n\n## Test plan\n\n- [x] New unit tests: status mapping incl. rate-limit vs plain 403 (`core/errors.test.ts`), OIDC expiry + the three Connect error mappings (`connect/token.test.ts`), structured vs plain error payloads (`eve/steps.test.ts`)\n- [x] `pnpm build && pnpm lint && pnpm typecheck && pnpm test` exit 0 (117 SDK tests)",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/127",
+        "created_at": "2026-09-01T09:51:05Z",
+        "updated_at": "2026-09-01T10:07:09Z",
+        "closed_at": "2026-09-01T10:06:52Z",
+        "merged_at": "2026-09-01T10:06:52Z",
+        "merge_commit_sha": "d6a0ef32a79dcc80e43111b786629b87223c566d",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "ed30eca5c9248acb0cd4aea1808d8bf032ffb4a0",
+          "ref": "feat/evlog-error-catalog"
+        },
+        "base": {
+          "sha": "1b92e93c62bf74e92b14d61e15ddd6d3bb6193d9",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4403479911,
+        "node_id": "PR_kwDORVqnhM8AAAABBnfFZw",
+        "number": 123,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/sdk@1.15.0\n\n### Minor Changes\n\n- [#125](https://github.com/vercel-labs/github-tools/pull/125) [`c84ae07`](https://github.com/vercel-labs/github-tools/commit/c84ae075c8ccb3791e73e7897b7b7c2bc0898a96) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Support per-user Vercel Connect subjects. `GithubConnectParams` now accepts a `subject` (default stays `{ type: 'app' }`, the project's GitHub App installation), so multi-user apps can mint each caller's own connection token with `subject: { type: 'user', id }`. In the eve extension, `connect.subject` also accepts a per-caller resolver called with the tool execution context on every call — e.g. `(ctx) => ({ type: 'user', id: ctx.session.auth.current!.principalId })` — so each signed-in user reaches GitHub through their own connection instead of the shared app installation.\n## @github-tools/eve-extension@0.6.0\n\n### Minor Changes\n\n- [#125](https://github.com/vercel-labs/github-tools/pull/125) [`c84ae07`](https://github.com/vercel-labs/github-tools/commit/c84ae075c8ccb3791e73e7897b7b7c2bc0898a96) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Support per-user Vercel Connect subjects. `GithubConnectParams` now accepts a `subject` (default stays `{ type: 'app' }`, the project's GitHub App installation), so multi-user apps can mint each caller's own connection token with `subject: { type: 'user', id }`. In the eve extension, `connect.subject` also accepts a per-caller resolver called with the tool execution context on every call — e.g. `(ctx) => ({ type: 'user', id: ctx.session.auth.current!.principalId })` — so each signed-in user reaches GitHub through their own connection instead of the shared app installation.\n\n### Patch Changes\n\n- Updated dependencies [[`c84ae07`](https://github.com/vercel-labs/github-tools/commit/c84ae075c8ccb3791e73e7897b7b7c2bc0898a96)]:\n  - @github-tools/sdk@1.15.0",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/123",
+        "created_at": "2026-08-31T14:51:48Z",
+        "updated_at": "2026-08-31T15:05:14Z",
+        "closed_at": "2026-08-31T15:05:11Z",
+        "merged_at": "2026-08-31T15:05:11Z",
+        "merge_commit_sha": "1b92e93c62bf74e92b14d61e15ddd6d3bb6193d9",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "2bd7112335097e39c915eb375f399a588e616a2c",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "c84ae075c8ccb3791e73e7897b7b7c2bc0898a96",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4403526288,
+        "node_id": "PR_kwDORVqnhM8AAAABBnh6kA",
+        "number": 125,
+        "state": "closed",
+        "title": "feat(sdk): support per-user Vercel Connect subjects",
+        "body": "## Summary\n\n- `GithubConnectParams` now accepts a `subject`; the default stays `{ type: 'app' }` (the project's GitHub App installation), so nothing changes for existing consumers.\n- In the eve extension, `connect.subject` also accepts a per-caller resolver called with the tool execution context on every call — e.g. `(ctx) => ({ type: 'user', id: ctx.session.auth.current!.principalId })`. Multi-user apps where each user connects their own GitHub account can now mint each caller's own connection token instead of routing everyone through the shared app installation. A caller without an active connection gets `UserAuthorizationRequiredError` from Connect rather than silently falling back to the app token.\n- The extension threads the eve `ToolContext` from `execute` into token resolution; the token is minted lazily, per tool call. The durable-callback AST guard still passes — callbacks stay inline and only gain the `ctx` parameter.\n\nDocs updated (Vercel Connect guide \"Per-user tokens\", eve extension page, API reference, published skill, extension README) plus a minor changeset for both packages.\n\n## Test plan\n\n- [x] `pnpm build`, `pnpm lint`, `pnpm typecheck`, `pnpm test` all green (91 SDK tests, extension AST guard)\n- [x] New test: explicit user subject passes through to `getToken` instead of the app default\n- [ ] Real-world check in a multi-user eve template: multi-step turn with a GitHub tool using the per-caller resolver",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/125",
+        "created_at": "2026-08-31T14:57:34Z",
+        "updated_at": "2026-08-31T15:01:46Z",
+        "closed_at": "2026-08-31T15:01:43Z",
+        "merged_at": "2026-08-31T15:01:43Z",
+        "merge_commit_sha": "c84ae075c8ccb3791e73e7897b7b7c2bc0898a96",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "6c1b4d5e72286a4dbfd88dae81bd1a6617cfecdd",
+          "ref": "feat/connect-per-user-subject"
+        },
+        "base": {
+          "sha": "51d788fdb83ab2012e407f84f09c5c633f4f0453",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4403496465,
+        "node_id": "PR_kwDORVqnhM8AAAABBngGEQ",
+        "number": 124,
+        "state": "closed",
+        "title": "chore(sdk): revert per-user Connect subjects to reland via PR",
+        "body": "## Summary\n\nReverts 6c1b4d5, which landed on `main` through a direct push (a local branch was mistakenly tracking `origin/main`, so a regular push went straight to `main` without a PR).\n\nCI and release both passed on the direct push, so nothing is broken — this revert only restores the review trail. The feature (per-user Vercel Connect subjects) is relanded unchanged in a follow-up PR right after this merges.\n\n## Test plan\n\n- [x] CI green on the revert (build, lint, typecheck, test)",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/124",
+        "created_at": "2026-08-31T14:53:51Z",
+        "updated_at": "2026-08-31T14:56:37Z",
+        "closed_at": "2026-08-31T14:56:37Z",
+        "merged_at": null,
+        "merge_commit_sha": "9a794c5a1075aa393471e131a3bb13d6cd58126b",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "f9c227b6f56ac505d4d258db9a1dbd80f3d8f23c",
+          "ref": "revert/connect-per-user-subject-direct-push"
+        },
+        "base": {
+          "sha": "6c1b4d5e72286a4dbfd88dae81bd1a6617cfecdd",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4400764884,
+        "node_id": "PR_kwDORVqnhM8AAAABBk5X1A",
+        "number": 120,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/sdk@1.14.0\n\n### Minor Changes\n\n- [#119](https://github.com/vercel-labs/github-tools/pull/119) [`8bcb3fb`](https://github.com/vercel-labs/github-tools/commit/8bcb3fb7c459000106bcc018bb6685c84c7189e5) Thanks [@HugoRCD](https://github.com/HugoRCD)! - REST list tools now return `{ items, hasMore, page, perPage, nextPage }` instead of a bare array. Object-shaped lists (`listCheckRuns`, `listWorkflowRuns`, `listWorkflows`, `listWorkflowJobs`, reactions) add the same paging fields next to their existing keys. When `hasMore` is true, call again with `nextPage` (or raise `maxPages`) — do not repeat the same page. `page` is restored on `listCommits`, `listIssues`, `listPullRequests`, `listCheckRuns`, `listReleases`, and `listBranches`. Filter `listCommits` with `path` / `author` / `since` / `until`. `getRepositoryTree` accepts a `path` prefix; tree and large diffs are capped in the model-facing output.\n## @github-tools/eve-extension@0.5.1\n\n### Patch Changes\n\n- Updated dependencies [[`8bcb3fb`](https://github.com/vercel-labs/github-tools/commit/8bcb3fb7c459000106bcc018bb6685c84c7189e5)]:\n  - @github-tools/sdk@1.14.0",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/120",
+        "created_at": "2026-08-31T08:54:48Z",
+        "updated_at": "2026-08-31T10:14:55Z",
+        "closed_at": "2026-08-31T10:14:51Z",
+        "merged_at": "2026-08-31T10:14:50Z",
+        "merge_commit_sha": "51d788fdb83ab2012e407f84f09c5c633f4f0453",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "6d80a400fafa5fd74ee9b40a996845ccf9be0e5e",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "7e51064e7aa81c086f4c18bbc87dc2bdca10585a",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4400695294,
+        "node_id": "PR_kwDORVqnhM8AAAABBk1H_g",
+        "number": 119,
+        "state": "closed",
+        "title": "feat(sdk): return paged list results so models stop repeating the same page",
+        "body": "### 🔗 Linked issue\n\n—\n\n### 📚 Description\n\nREST list tools used to return a bare array with no `hasMore`, and several schemas (`listCommits`, `listIssues`, `listPullRequests`, …) dropped `page` — unknown `page` inputs were stripped by Zod, so every call returned page 1. That made it cheap for a model to loop the same list until a length cutoff.\n\nList tools now return `{ items, hasMore, page, perPage, nextPage }` (object-shaped lists add the same paging fields next to `checkRuns` / `runs` / …). When `hasMore`, call with `nextPage` or raise `maxPages`. `getRepositoryTree` accepts a `path` prefix; tree listings and large diffs are capped in the model-facing output.\n\nThis changes the execute result shape for previously array-valued list tools (`result.items` instead of mapping the array directly).\n\n### 📝 Checklist\n\n- [ ] I have linked an issue or discussion.\n- [x] I have updated the documentation accordingly.\n\n## Test plan\n\n- [ ] `pnpm --filter @github-tools/sdk test` (pagination + model-output caps)\n- [ ] Call `listCommits` twice: first page has `hasMore`/`nextPage`; second call with `nextPage` returns a different window\n- [ ] Confirm `listCommits({ page: 2 })` is not stripped (Zod accepts `page`)\n- [ ] `getRepositoryTree` with `path` filters entries; recursive trees over 200 entries set `truncated` / `entriesOmitted` in `toModelOutput`",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/119",
+        "created_at": "2026-08-31T08:44:47Z",
+        "updated_at": "2026-08-31T08:53:56Z",
+        "closed_at": "2026-08-31T08:53:53Z",
+        "merged_at": "2026-08-31T08:53:53Z",
+        "merge_commit_sha": "8bcb3fb7c459000106bcc018bb6685c84c7189e5",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "aef3790a91c10d9c08b396bb304bfbbb10208a13",
+          "ref": "feat/sdk-paged-list-context"
+        },
+        "base": {
+          "sha": "0dfd7d6d4bec7863363774401d88ca00d9860faa",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4386400763,
+        "node_id": "PR_kwDORVqnhM8AAAABBXMp-w",
+        "number": 113,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/sdk@1.13.0\n\n### Minor Changes\n\n- [#115](https://github.com/vercel-labs/github-tools/pull/115) [`d5ea800`](https://github.com/vercel-labs/github-tools/commit/d5ea800436cd0f79a49378ccb5ec8873f5521a2e) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Add five tools (84 total): `getWorkflowJobLogs` reads a workflow job's log output, returning the last `maxLines` lines (default 200, max 2000) with per-line timestamps stripped to keep token usage low. `listPullRequestReviewThreads` lists PR review threads via GraphQL with resolution state and the IDs needed to reply or resolve — unresolved threads only and truncated comment bodies by default (`status: 'all'`, `detail: 'full'` to override). `replyToReviewComment` and `resolveReviewThread` answer and close review threads, and `deleteBranch` deletes a branch — all three are write tools requiring approval by default. Presets updated: `ci-ops`, `security-audit`, and `repo-explorer` gain job logs; `code-review` and `pr-author` gain the review-thread tools; `pr-author` also gains `deleteBranch`.\n\n### Patch Changes\n\n- [#114](https://github.com/vercel-labs/github-tools/pull/114) [`09aeafb`](https://github.com/vercel-labs/github-tools/commit/09aeafb86c29db0cdfe4d616180f3720ad02a93b) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Object-shaped eve `ApprovalConfiguration` values (`{ request, response }`) passed via `requireApproval` or `overrides.approval` are now honored instead of being silently replaced by `always()`. Configurations pass through to `defineTool` unchanged so a `response` authorizer survives. Also declares the tested eve peer range (`>=0.44.0 <0.48.0` instead of `>=0.19.0`) and deprecates `MISSING_EVE_MESSAGE`, which has not been thrown since eve moved to static imports.\n\n- [#116](https://github.com/vercel-labs/github-tools/pull/116) [`c38cb9b`](https://github.com/vercel-labs/github-tools/commit/c38cb9bbf5a84caa6b4fc06944683bbd2e403271) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Internal refactor: introduce `GITHUB_TOOL_CATALOG` as the single source of truth for tool metadata. `GITHUB_TOOL_NAMES`, `GITHUB_WRITE_TOOLS`, `TOOL_CONNECT_SCOPES`, and the eve tool registry are now derived from it instead of being maintained as parallel hand-written registries. No public API changes.\n## @github-tools/eve-extension@0.5.0\n\n### Minor Changes\n\n- [#115](https://github.com/vercel-labs/github-tools/pull/115) [`d5ea800`](https://github.com/vercel-labs/github-tools/commit/d5ea800436cd0f79a49378ccb5ec8873f5521a2e) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Add five tools (84 total): `getWorkflowJobLogs` reads a workflow job's log output, returning the last `maxLines` lines (default 200, max 2000) with per-line timestamps stripped to keep token usage low. `listPullRequestReviewThreads` lists PR review threads via GraphQL with resolution state and the IDs needed to reply or resolve — unresolved threads only and truncated comment bodies by default (`status: 'all'`, `detail: 'full'` to override). `replyToReviewComment` and `resolveReviewThread` answer and close review threads, and `deleteBranch` deletes a branch — all three are write tools requiring approval by default. Presets updated: `ci-ops`, `security-audit`, and `repo-explorer` gain job logs; `code-review` and `pr-author` gain the review-thread tools; `pr-author` also gains `deleteBranch`.\n\n### Patch Changes\n\n- [#112](https://github.com/vercel-labs/github-tools/pull/112) [`790f68d`](https://github.com/vercel-labs/github-tools/commit/790f68dd1d92285beb5a730541711aa91422feed) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Register `approval` as a direct `defineTool` property so eve 0.44+ can stamp a durable `approvalRequest` descriptor. Write tools no longer cause the resolver to discard the whole GitHub toolset. Requires `eve` `>=0.44.0`.\n\n- [#114](https://github.com/vercel-labs/github-tools/pull/114) [`09aeafb`](https://github.com/vercel-labs/github-tools/commit/09aeafb86c29db0cdfe4d616180f3720ad02a93b) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Validate `requireApproval` and `overrides` keys against the GitHub tool catalog at mount time — a mistyped tool name now fails config validation instead of being silently ignored. The eve peer range is bounded to the tested versions (`>=0.44.0 <0.48.0`).\n\n- Updated dependencies [[`d5ea800`](https://github.com/vercel-labs/github-tools/commit/d5ea800436cd0f79a49378ccb5ec8873f5521a2e), [`09aeafb`](https://github.com/vercel-labs/github-tools/commit/09aeafb86c29db0cdfe4d616180f3720ad02a93b), [`c38cb9b`](https://github.com/vercel-labs/github-tools/commit/c38cb9bbf5a84caa6b4fc06944683bbd2e403271)]:\n  - @github-tools/sdk@1.13.0",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/113",
+        "created_at": "2026-08-28T16:35:09Z",
+        "updated_at": "2026-08-28T19:05:34Z",
+        "closed_at": "2026-08-28T19:05:31Z",
+        "merged_at": "2026-08-28T19:05:31Z",
+        "merge_commit_sha": "cb459f1049d17bbfce569f490f9dbe658b6233ae",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "25d5eec56797e5b793ecaa9262e1779015a24e90",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "c38cb9bbf5a84caa6b4fc06944683bbd2e403271",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4387330447,
+        "node_id": "PR_kwDORVqnhM8AAAABBYFZjw",
+        "number": 116,
+        "state": "closed",
+        "title": "refactor(sdk): derive tool registries from a single GITHUB_TOOL_CATALOG",
+        "body": "<!---☝️ PR title should follow conventional commits (https://conventionalcommits.org)\r\nHere are the available types and scopes:\r\n\r\n### Types\r\n- breaking (fix or feature that would cause existing functionality to change) 💥\r\n- feat (a non-breaking change that adds functionality) ✨\r\n- fix (a non-breaking change that fixes an issue) 🐞\r\n- build (changes that affect the build system or external dependencies) 🏗\r\n- ci (changes to our CI configuration files and scripts) 🚀\r\n- docs (updates to the documentation or readme) 📖\r\n- enhancement (improving an existing functionality) 🌈\r\n- chore (updates to the build process or auxiliary tools and libraries) 📦\r\n- perf (a code change that improves performance) ⚡️\r\n- style (changes that do not affect the meaning of the code) 💅\r\n- test (adding or updating tests) 🧪\r\n- refactor (a code change that neither fixes a bug nor adds a feature) 🛠\r\n- revert (reverts a previous commit) 🔄\r\n\r\n### Scopes\r\n- chat (the chat application)\r\n- deps (dependencies)\r\n- docs (the documentation site)\r\n- eve (the eve extension package)\r\n- sdk (the @github-tools/sdk package)\r\n-->\r\n\r\n### 🔗 Linked issue\r\n\r\n<!-- If it resolves an open issue, please link the issue here. For example \"Resolves #123\" -->\r\n\r\n### 📚 Description\r\n\r\n<!-- Describe your changes in detail -->\r\n<!-- Why is this change required? What problem does it solve? -->\r\n\r\n### 📝 Checklist\r\n\r\n<!-- Put an `x` in all the boxes that apply. -->\r\n<!-- If your change requires a documentation PR, please link it appropriately -->\r\n<!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->\r\n\r\n- [ ] I have linked an issue or discussion.\r\n- [ ] I have updated the documentation accordingly.\r\n",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/116",
+        "created_at": "2026-08-28T19:00:45Z",
+        "updated_at": "2026-08-28T19:03:52Z",
+        "closed_at": "2026-08-28T19:03:50Z",
+        "merged_at": "2026-08-28T19:03:49Z",
+        "merge_commit_sha": "c38cb9bbf5a84caa6b4fc06944683bbd2e403271",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "365e41f91739c5de0186bb3e92539a4879387766",
+          "ref": "refactor/tool-catalog"
+        },
+        "base": {
+          "sha": "d5ea800436cd0f79a49378ccb5ec8873f5521a2e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4387073746,
+        "node_id": "PR_kwDORVqnhM8AAAABBX1u0g",
+        "number": 115,
+        "state": "closed",
+        "title": "feat(sdk): add getWorkflowJobLogs, PR review thread tools, and deleteBranch",
+        "body": "## Summary\n\nAdds five tools (79 → 84), each shaped to keep model context lean:\n\n- **`getWorkflowJobLogs`** (read) — fetches a workflow job's log and returns only the last `maxLines` lines (default 200, max 2000), with the per-line ISO timestamps GitHub prefixes stripped out. The response reports `totalLines` / `returnedLines` / `omittedLines` so the model knows what it isn't seeing.\n- **`listPullRequestReviewThreads`** (read, GraphQL) — review threads with resolution state and the IDs needed to act: `threadId` for resolving, `commentId` for replying. Defaults to unresolved threads only, comment bodies truncated at ~500 chars (`detail: 'summary'`), cursor-paginated.\n- **`replyToReviewComment`** (write) — reply inside a review thread.\n- **`resolveReviewThread`** (write, GraphQL) — mark a thread resolved. Idempotent.\n- **`deleteBranch`** (write) — permanently delete a branch.\n\nAll three writes require approval by default and are registered in `GITHUB_WRITE_TOOLS`.\n\n## Registration & presets\n\n- Registered across `tool-names`, `write-tools`, `index.ts`, the eve registry, Connect scopes (`actions:read`, `pull_requests:read/write`, `contents:write` — no preset scope changes needed), and chat app metadata.\n- Presets: `ci-ops` / `repo-explorer` / `security-audit` gain `getWorkflowJobLogs`; `code-review` gains the three review-thread tools; `pr-author` gains review threads + `deleteBranch`; `maintainer` gains all five. Preset system prompts updated accordingly.\n- Docs: tools catalog, approval-control risk table, presets guide, working-context lean-defaults table, README tables, published skill, and the 84-tool count everywhere.\n\n## Test plan\n\n- [x] New unit tests for the log shaping helper (`shapeJobLog`): timestamp stripping, tail truncation with omitted-count reporting, CRLF normalization\n- [x] Existing eve registry parity test now covers the five new tools (84 = 84)\n- [x] `pnpm build && pnpm lint && pnpm typecheck && pnpm test` all pass",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/115",
+        "created_at": "2026-08-28T18:19:32Z",
+        "updated_at": "2026-08-28T18:34:12Z",
+        "closed_at": "2026-08-28T18:34:10Z",
+        "merged_at": "2026-08-28T18:34:10Z",
+        "merge_commit_sha": "d5ea800436cd0f79a49378ccb5ec8873f5521a2e",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "03387a0badc15f211222f1dc5c4cacc2043ed0e6",
+          "ref": "feat/ci-logs-review-threads-delete-branch"
+        },
+        "base": {
+          "sha": "09aeafb86c29db0cdfe4d616180f3720ad02a93b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4386856776,
+        "node_id": "PR_kwDORVqnhM8AAAABBXofSA",
+        "number": 114,
+        "state": "closed",
+        "title": "fix(eve): harden the eve integration against upstream drift",
+        "body": "## Summary\n\nFollow-up to an audit of the eve integration after #108/#110/#112. eve ships several releases a week and the durable-stamp contract is undocumented; this PR fixes one latent bug and adds the guards that catch upstream drift before consumers do.\n\n- **Fix:** object-shaped eve `ApprovalConfiguration` values (`{ request, response }`) passed via `requireApproval` or `overrides.approval` were silently replaced by `always()`. They now pass through to `defineTool` unchanged, so a `response` authorizer survives.\n- **Version alignment:** the SDK was typed and tested against `eve ~0.40.0` while the extension used `^0.46.1`. The workspace is now on a single version (0.46.1). The bump surfaced two real type breaks the skew was masking (approval types moved to `eve/tools/approval`; `defineTool` overload resolution picks the background-tool overload on bare literals), both fixed.\n- **Peer ranges** bounded to the tested versions on both packages: `eve >=0.44.0 <0.48.0` (the SDK claimed `>=0.19.0`).\n- **New guards:** a parity test pins the eve tool registry to `GITHUB_TOOL_NAMES` (TypeScript catches typos but not omissions), and a scheduled canary workflow (`eve-canary.yml`, daily) builds and tests the SDK and extension against `eve@latest` — the static AST guard only encodes stamping rules we already know about.\n- **Config validation:** `requireApproval` and `overrides` keys are validated against the tool catalog at mount time; a mistyped tool name now fails validation instead of being silently ignored.\n- `MISSING_EVE_MESSAGE` is deprecated (never thrown since eve moved to static imports); docs corrected (ten presets, not five).\n\nChangesets: patch for `@github-tools/sdk` and `@github-tools/eve-extension`.\n\n## Test plan\n\n- [x] `pnpm build`, `pnpm lint`, `pnpm typecheck`, `pnpm test` all pass\n- [x] New tests: registry parity, `ApprovalConfiguration` passthrough (`resolveEveToolApproval`) and `request` extraction (`mapEveApprovalValue`)\n- [ ] Canary workflow runs green on its first scheduled/manual dispatch",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/114",
+        "created_at": "2026-08-28T17:46:51Z",
+        "updated_at": "2026-08-28T18:04:06Z",
+        "closed_at": "2026-08-28T18:04:03Z",
+        "merged_at": "2026-08-28T18:04:03Z",
+        "merge_commit_sha": "09aeafb86c29db0cdfe4d616180f3720ad02a93b",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "1fe9458fbd6c43b9f020379ffdcd006e9c7e1f90",
+          "ref": "chore/eve-audit-hardening"
+        },
+        "base": {
+          "sha": "790f68dd1d92285beb5a730541711aa91422feed",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4386342440,
+        "node_id": "PR_kwDORVqnhM8AAAABBXJGKA",
+        "number": 112,
+        "state": "closed",
+        "title": "fix(eve): stamp approval as a direct defineTool property",
+        "body": "## Summary\n- Register `approval` as a direct inline `defineTool` property so eve 0.44+ can stamp `approvalRequest`. After #110, spreading `resolveEveApproval(...)` still discarded the whole GitHub toolset on write tools.\n- Add an AST CI guard that fails if `execute`, `toModelOutput`, or `approval` are spread or not inline on `defineTool`.\n- Wire `turbo test` into the quality job.\n\n## Test plan\n- [ ] `pnpm test` (SDK vitest + `durable-define-tool` AST guard)\n- [ ] Consumer agent on eve 0.46: a write tool (`createPullRequest`) no longer logs `callback \"approvalRequest\" does not have a durable descriptor`\n- [ ] Read tools still resolve; write tools still pause for approval under the default `always()` policy",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/112",
+        "created_at": "2026-08-28T16:26:22Z",
+        "updated_at": "2026-08-28T16:34:19Z",
+        "closed_at": "2026-08-28T16:34:17Z",
+        "merged_at": "2026-08-28T16:34:17Z",
+        "merge_commit_sha": "790f68dd1d92285beb5a730541711aa91422feed",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "8344c48656131d941a48fc70d421808db8b7cd39",
+          "ref": "fix/eve-durable-tomodeloutput"
+        },
+        "base": {
+          "sha": "f378133ab2c53fbe0a53bc3788791023686f4509",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4383655682,
+        "node_id": "PR_kwDORVqnhM8AAAABBUlHAg",
+        "number": 111,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/eve-extension@0.4.1\n\n### Patch Changes\n\n- [#110](https://github.com/vercel-labs/github-tools/pull/110) [`b57987f`](https://github.com/vercel-labs/github-tools/commit/b57987f6bb73f08f942baa25fd806ceef7e1ac80) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Register `toModelOutput` as a direct `defineTool` property so eve 0.44+ can stamp a durable descriptor. Agents on eve 0.46.1 no longer lose the whole GitHub toolset when a formatter like `getFileContent` fails descriptor validation. Requires `eve` `>=0.44.0`.",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/111",
+        "created_at": "2026-08-28T09:52:00Z",
+        "updated_at": "2026-08-28T09:52:43Z",
+        "closed_at": "2026-08-28T09:52:41Z",
+        "merged_at": "2026-08-28T09:52:41Z",
+        "merge_commit_sha": "f378133ab2c53fbe0a53bc3788791023686f4509",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "107b8f2c00fc3c6deab5b848cc714896161ae40e",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "b57987f6bb73f08f942baa25fd806ceef7e1ac80",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4383498200,
+        "node_id": "PR_kwDORVqnhM8AAAABBUbf2A",
+        "number": 110,
+        "state": "closed",
+        "title": "fix(eve): stamp toModelOutput as a direct defineTool property",
+        "body": "A spread ternary left the callback without a durable descriptor, so eve 0.44+ discarded the whole GitHub toolset. Requires eve >=0.44.\r\n\r\n<!---\r\n☝️ PR title should follow conventional commits (https://conventionalcommits.org)\r\nHere are the available types and scopes:\r\n\r\n### Types\r\n- breaking (fix or feature that would cause existing functionality to change) 💥\r\n- feat (a non-breaking change that adds functionality) ✨\r\n- fix (a non-breaking change that fixes an issue) 🐞\r\n- build (changes that affect the build system or external dependencies) 🏗\r\n- ci (changes to our CI configuration files and scripts) 🚀\r\n- docs (updates to the documentation or readme) 📖\r\n- enhancement (improving an existing functionality) 🌈\r\n- chore (updates to the build process or auxiliary tools and libraries) 📦\r\n- perf (a code change that improves performance) ⚡️\r\n- style (changes that do not affect the meaning of the code) 💅\r\n- test (adding or updating tests) 🧪\r\n- refactor (a code change that neither fixes a bug nor adds a feature) 🛠\r\n- revert (reverts a previous commit) 🔄\r\n\r\n### Scopes\r\n- chat (the chat application)\r\n- deps (dependencies)\r\n- docs (the documentation site)\r\n- eve (the eve extension package)\r\n- sdk (the @github-tools/sdk package)\r\n-->\r\n\r\n### 🔗 Linked issue\r\n\r\n<!-- If it resolves an open issue, please link the issue here. For example \"Resolves #123\" -->\r\n\r\n### 📚 Description\r\n\r\n<!-- Describe your changes in detail -->\r\n<!-- Why is this change required? What problem does it solve? -->\r\n\r\n### 📝 Checklist\r\n\r\n<!-- Put an `x` in all the boxes that apply. -->\r\n<!-- If your change requires a documentation PR, please link it appropriately -->\r\n<!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->\r\n\r\n- [ ] I have linked an issue or discussion.\r\n- [ ] I have updated the documentation accordingly.\r\n",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/110",
+        "created_at": "2026-08-28T09:27:46Z",
+        "updated_at": "2026-08-28T09:50:59Z",
+        "closed_at": "2026-08-28T09:50:57Z",
+        "merged_at": "2026-08-28T09:50:57Z",
+        "merge_commit_sha": "b57987f6bb73f08f942baa25fd806ceef7e1ac80",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "1d0d399e4a525cde917c42b9f82f84a56f283ff9",
+          "ref": "fix/eve-durable-tomodeloutput"
+        },
+        "base": {
+          "sha": "f9ca6f4756f5ef117c0e36aee5158781f35759e7",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4358129193,
+        "node_id": "PR_kwDORVqnhM8AAAABA8PGKQ",
+        "number": 102,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/sdk@1.12.0\n\n### Minor Changes\n\n- [#106](https://github.com/vercel-labs/github-tools/pull/106) [`584817c`](https://github.com/vercel-labs/github-tools/commit/584817c310adc11acb92a101e677d2343faf9c92) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Object-shaped tool results now include `rateLimit` (`remaining`, `limit`, `reset`, `resource`) from the last GitHub response. The field is stripped before the model sees the output. Array-shaped list tools are unchanged. 403/429 errors include remaining/reset in the message.\n\n### Patch Changes\n\n- [#107](https://github.com/vercel-labs/github-tools/pull/107) [`2edd9ea`](https://github.com/vercel-labs/github-tools/commit/2edd9ea9372c707808d2246965dfb57f8c8e08a1) Thanks [@HugoRCD](https://github.com/HugoRCD)! - `connectGithubToken` now passes `VERCEL_OIDC_TOKEN` to Connect as `vercelToken` so local eve/workflow steps do not fail looking for a `.vercel` project root.\n\n- [#100](https://github.com/vercel-labs/github-tools/pull/100) [`0a9eae4`](https://github.com/vercel-labs/github-tools/commit/0a9eae4df8c431faa63aadad18112149aabab6f9) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Apply built-in eve `toModelOutput` formatters through an inline callback that only closes over the tool name. On eve 0.44.x this keeps tools like `getFileContent` from failing durable-descriptor validation and dropping the whole GitHub toolset.\n\n- [#108](https://github.com/vercel-labs/github-tools/pull/108) [`5bbcab1`](https://github.com/vercel-labs/github-tools/commit/5bbcab1e45ce86b8a2edd06a2d5a025ad8d255c5) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Eve GitHub tool execute now returns `{ error }` on failure instead of throwing, so the model always gets a `tool_result` and the turn does not die with `MODEL_CALL_FAILED`.\n\n- [#101](https://github.com/vercel-labs/github-tools/pull/101) [`ade87da`](https://github.com/vercel-labs/github-tools/commit/ade87da57d9a9de4994ed2848244a9404f5c369e) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Skip the REST update when `updatePullRequest` is called with only `draft`. Octokit was sending an empty PATCH body (`''`), which GitHub rejects with 400 before the GraphQL draft mutation could run.\n## @github-tools/eve-extension@0.4.0\n\n### Minor Changes\n\n- [#98](https://github.com/vercel-labs/github-tools/pull/98) [`96059c2`](https://github.com/vercel-labs/github-tools/commit/96059c28492bdd3609253daa112c4d38bed46f18) Thanks [@ycarmel](https://github.com/ycarmel)! - Accept an async token provider in the extension's `token` config (`string | (() => Promise<string>)`), matching the SDK's `GithubTokenInput`. Agents authenticating with a GitHub App can pass their installation-token minter directly instead of falling back to the `@github-tools/sdk/eve-runtime` subpath.\n\n### Patch Changes\n\n- [#100](https://github.com/vercel-labs/github-tools/pull/100) [`0a9eae4`](https://github.com/vercel-labs/github-tools/commit/0a9eae4df8c431faa63aadad18112149aabab6f9) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Apply built-in eve `toModelOutput` formatters through an inline callback that only closes over the tool name. On eve 0.44.x this keeps tools like `getFileContent` from failing durable-descriptor validation and dropping the whole GitHub toolset.\n\n- Updated dependencies [[`2edd9ea`](https://github.com/vercel-labs/github-tools/commit/2edd9ea9372c707808d2246965dfb57f8c8e08a1), [`0a9eae4`](https://github.com/vercel-labs/github-tools/commit/0a9eae4df8c431faa63aadad18112149aabab6f9), [`5bbcab1`](https://github.com/vercel-labs/github-tools/commit/5bbcab1e45ce86b8a2edd06a2d5a025ad8d255c5), [`584817c`](https://github.com/vercel-labs/github-tools/commit/584817c310adc11acb92a101e677d2343faf9c92), [`ade87da`](https://github.com/vercel-labs/github-tools/commit/ade87da57d9a9de4994ed2848244a9404f5c369e)]:\n  - @github-tools/sdk@1.12.0",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/102",
+        "created_at": "2026-08-25T13:22:57Z",
+        "updated_at": "2026-08-26T09:53:30Z",
+        "closed_at": "2026-08-26T09:53:28Z",
+        "merged_at": "2026-08-26T09:53:28Z",
+        "merge_commit_sha": "f9ca6f4756f5ef117c0e36aee5158781f35759e7",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "78f5800f894c7a01dfc0fd54a3bacc801cf828c5",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "5bbcab1e45ce86b8a2edd06a2d5a025ad8d255c5",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4365768170,
+        "node_id": "PR_kwDORVqnhM8AAAABBDhV6g",
+        "number": 108,
+        "state": "closed",
+        "title": "fix(eve): return tool errors as execute results",
+        "body": "## Summary\n- Eve GitHub `execute` now returns `{ error }` on failure instead of throwing.\n- Eve's tool-loop logs thrown execute errors (`tool execution failed`) but does not always append a `tool_result`, so the next model call dies with `MODEL_CALL_FAILED` (`tool_use` without `tool_result`).\n- Token mint failures, GitHub 403/429, and other core throws stay visible to the model as a normal tool result.\n\nStacked on the Connect OIDC PR (this branch → `fix/connect-oidc-env-token` → `evl-343` → `main`).\n\nApproval **deny** and the stale World `Event id is not slot-numbered` spam are still eve/world-local — not fixable in this repo.\n\n## Test plan\n- [ ] `pnpm --filter @github-tools/sdk test`\n- [ ] Force a token failure in `examples/eve` and confirm the turn continues with `{ error }` instead of `MODEL_CALL_FAILED`\n- [ ] Confirm a successful tool still returns its normal payload",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/108",
+        "created_at": "2026-08-26T09:36:06Z",
+        "updated_at": "2026-08-26T09:50:55Z",
+        "closed_at": "2026-08-26T09:50:54Z",
+        "merged_at": "2026-08-26T09:50:54Z",
+        "merge_commit_sha": "5bbcab1e45ce86b8a2edd06a2d5a025ad8d255c5",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "0ab3107b2958e81c5b1e31cb5b52383382a0388c",
+          "ref": "fix/eve-tool-error-result"
+        },
+        "base": {
+          "sha": "2edd9ea9372c707808d2246965dfb57f8c8e08a1",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4365767886,
+        "node_id": "PR_kwDORVqnhM8AAAABBDhUzg",
+        "number": 107,
+        "state": "closed",
+        "title": "fix(sdk): pass VERCEL_OIDC_TOKEN into Connect getToken",
+        "body": "## Summary\n- `connectGithubToken` forwards `VERCEL_OIDC_TOKEN` to Connect as `vercelToken` (explicit `connectOptions.vercelToken` still wins).\n- That skips `@vercel/oidc`'s `.vercel` project-root walk, which fails inside eve/workflow snapshots (`Unable to find project root directory`).\n- Write-scoped mint (e.g. `createIssue`) was hitting this after a successful read, because Connect cache keys differ by scopes.\n\nStacked on https://github.com/vercel-labs/github-tools/pull/106.\n\n## Test plan\n- [ ] `pnpm --filter @github-tools/sdk test` (connect token tests)\n- [ ] In `examples/eve` with a pulled `.env`: `createIssue` after `listIssues` no longer throws `VercelOidcTokenError` about project root\n- [ ] Re-run `vercel env pull` if the OIDC token is expired (Connect will then 401 instead of looking for `.vercel`)",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/107",
+        "created_at": "2026-08-26T09:36:04Z",
+        "updated_at": "2026-08-26T09:41:23Z",
+        "closed_at": "2026-08-26T09:41:20Z",
+        "merged_at": "2026-08-26T09:41:20Z",
+        "merge_commit_sha": "2edd9ea9372c707808d2246965dfb57f8c8e08a1",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "df2d47723177df75d8a63e6040264d49ff8648ce",
+          "ref": "fix/connect-oidc-env-token"
+        },
+        "base": {
+          "sha": "584817c310adc11acb92a101e677d2343faf9c92",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4365504238,
+        "node_id": "PR_kwDORVqnhM8AAAABBDRO7g",
+        "number": 106,
+        "state": "closed",
+        "title": "feat(sdk): attach rate-limit metadata on object-shaped tool results",
+        "body": "## Summary\n- Object-shaped GitHub tool results now include `rateLimit` (`remaining`, `limit`, `reset`, `resource`, optional `retryAfter`) from the last response.\n- The field is on the execute result (hooks, channels, chat UI) and is stripped by `toModelOutput` so it does not reach the model. Array-shaped list tools are unchanged.\n- 403/429 error text includes remaining/reset/resource. Chat tool rows show a remaining/limit chip.\n\n## Test plan\n- [ ] SDK tests: `pnpm --filter @github-tools/sdk test`\n- [ ] `pnpm build && pnpm lint && pnpm typecheck`\n- [ ] Confirm an object-shaped tool (`searchCode`, `getRepository`) exposes `rateLimit` on the execute result\n- [ ] Confirm `toModelOutput` / model-facing payload does not include `rateLimit`\n- [ ] Confirm a 403/429 includes remaining/reset in the error message\n- [ ] Confirm the chat tool row shows a `remaining/limit` chip when `invocation.output.rateLimit` is present",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/106",
+        "created_at": "2026-08-26T08:59:56Z",
+        "updated_at": "2026-08-26T09:38:32Z",
+        "closed_at": "2026-08-26T09:38:30Z",
+        "merged_at": "2026-08-26T09:38:29Z",
+        "merge_commit_sha": "584817c310adc11acb92a101e677d2343faf9c92",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "64f60a28d201cb2bdd81eef739d5bba5670fc45c",
+          "ref": "evl-343"
+        },
+        "base": {
+          "sha": "5f69ce4d9958969de9d5f3649cdba5686f170d42",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4365495084,
+        "node_id": "PR_kwDORVqnhM8AAAABBDQrLA",
+        "number": 105,
+        "state": "closed",
+        "title": "revert(sdk): undo rate-limit commit pushed to main",
+        "body": "### 🔗 Linked issue\n\n—\n\n### 📚 Description\n\n`bf17136` was pushed directly to `main` because `evl-343` was tracking `origin/main`. The feature is not published (release only updated the Version Packages PR). This reverts that commit so it can land through https://github.com/vercel-labs/github-tools/pull/new/evl-343 instead.\n\nThe feature branch is `evl-343`. After this revert merges, a follow-up PR will re-open the same change for review.\n\n### 📝 Checklist\n\n- [x] I have linked an issue or explained why this is a standalone PR\n- [x] I have added a changeset (`pnpm changeset`) if this is a user-facing change\n- [x] I have updated the documentation if my change requires it",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/105",
+        "created_at": "2026-08-26T08:58:33Z",
+        "updated_at": "2026-08-26T08:59:48Z",
+        "closed_at": "2026-08-26T08:59:45Z",
+        "merged_at": null,
+        "merge_commit_sha": "be7657f7eff056a3d8900e93b3d317ab17d79b65",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "fa25e6f5ee71f3353b9117ca25c1688112e12ed1",
+          "ref": "revert/rate-limit-from-main"
+        },
+        "base": {
+          "sha": "5f69ce4d9958969de9d5f3649cdba5686f170d42",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4364470889,
+        "node_id": "PR_kwDORVqnhM8AAAABBCSKaQ",
+        "number": 104,
+        "state": "closed",
+        "title": "docs: link production eve templates",
+        "body": "Links the eve extension and Vercel Connect guides to the Software Factory and Incident Response Agent examples.\n\nAdds explicit spacing between template descriptions, resources, and related guidance so each section renders clearly.",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/104",
+        "created_at": "2026-08-26T06:19:01Z",
+        "updated_at": "2026-08-26T06:20:10Z",
+        "closed_at": "2026-08-26T06:19:59Z",
+        "merged_at": "2026-08-26T06:19:59Z",
+        "merge_commit_sha": "5f69ce4d9958969de9d5f3649cdba5686f170d42",
+        "draft": false,
+        "user": {
+          "id": 27636870,
+          "node_id": "MDQ6VXNlcjI3NjM2ODcw",
+          "login": "bensabic",
+          "type": "User",
+          "html_url": "https://github.com/bensabic"
+        },
+        "head": {
+          "sha": "4e92e0a93a527838f4558e2ff55e916e800a7a5d",
+          "ref": "docs/add-production-template-links"
+        },
+        "base": {
+          "sha": "876cb5e6a9cc0b8c25f40d3aec21cc8f6737f6d1",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4364388297,
+        "node_id": "PR_kwDORVqnhM8AAAABBCNHyQ",
+        "number": 103,
+        "state": "closed",
+        "title": "docs: add production templates and Connect references",
+        "body": "Adds a production eve templates section to the examples overview, linking the Software Factory and Incident Response Agent sources, deploy pages, and guides.\n\nAdds the Vercel Connect guide and credential-sprawl article to the Connect documentation.",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/103",
+        "created_at": "2026-08-26T06:03:22Z",
+        "updated_at": "2026-08-26T06:05:15Z",
+        "closed_at": "2026-08-26T06:05:13Z",
+        "merged_at": "2026-08-26T06:05:13Z",
+        "merge_commit_sha": "876cb5e6a9cc0b8c25f40d3aec21cc8f6737f6d1",
+        "draft": false,
+        "user": {
+          "id": 27636870,
+          "node_id": "MDQ6VXNlcjI3NjM2ODcw",
+          "login": "bensabic",
+          "type": "User",
+          "html_url": "https://github.com/bensabic"
+        },
+        "head": {
+          "sha": "42ed323a1a627c25c7a5665b49e15ad8c67a194e",
+          "ref": "docs/add-docs-template-references"
+        },
+        "base": {
+          "sha": "96059c28492bdd3609253daa112c4d38bed46f18",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4355738426,
+        "node_id": "PR_kwDORVqnhM8AAAABA59LOg",
+        "number": 98,
+        "state": "closed",
+        "title": "feat(eve): accept an async token provider in `token`",
+        "body": "The extension's config schema narrowed `token` to `z.string()` while the\nSDK underneath (`EveGithubToolsOptions.token`) already accepts\n`GithubTokenInput = string | (() => Promise<string>)`. Agents that\nauthenticate as a GitHub App mint short-lived installation tokens (≤1h),\nso a string forces them off the extension and onto the\n`@github-tools/sdk/eve-runtime` subpath — which, since eve 0.43 made\ndynamic-tool callbacks durable-by-transform, no longer produces replayable\ntools from library code. Widening the schema (same `z.custom` shape\n`connector` already uses) lets those agents mount the extension and pass\ntheir token minter directly; `buildSessionOptions` forwards it unchanged.\n\n## Verification\n- `pnpm --filter @github-tools/eve-extension typecheck` and `build` (`eve extension build`) pass.\n- Consumer context: an eve 0.44.4 agent authenticating with a GitHub App (hourly-rotating installation tokens) that currently has to author its own `defineDynamic`/`defineTool` resolver over `listEveToolDescriptors`/`executeGithubEveTool` because the extension can't take a token factory.\n\nChangeset included (`@github-tools/eve-extension`: minor).",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/98",
+        "created_at": "2026-08-25T08:08:01Z",
+        "updated_at": "2026-08-25T22:06:35Z",
+        "closed_at": "2026-08-25T22:06:35Z",
+        "merged_at": "2026-08-25T22:06:35Z",
+        "merge_commit_sha": "96059c28492bdd3609253daa112c4d38bed46f18",
+        "draft": false,
+        "user": {
+          "id": 1690830,
+          "node_id": "MDQ6VXNlcjE2OTA4MzA=",
+          "login": "ycarmel",
+          "type": "User",
+          "html_url": "https://github.com/ycarmel"
+        },
+        "head": {
+          "sha": "e6e7e3a6f56774122c3d8b34da2d1f2397d0c222",
+          "ref": "eve-extension-token-factory"
+        },
+        "base": {
+          "sha": "ade87da57d9a9de4994ed2848244a9404f5c369e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4358053167,
+        "node_id": "PR_kwDORVqnhM8AAAABA8KdLw",
+        "number": 101,
+        "state": "closed",
+        "title": "fix(sdk): skip empty REST update when only toggling PR draft",
+        "body": "Octokit serializes a PATCH with all REST fields undefined to an empty body, which GitHub rejects before the GraphQL draft mutation runs.\r\n\r\n<!---\r\n☝️ PR title should follow conventional commits (https://conventionalcommits.org)\r\nHere are the available types and scopes:\r\n\r\n### Types\r\n- breaking (fix or feature that would cause existing functionality to change) 💥\r\n- feat (a non-breaking change that adds functionality) ✨\r\n- fix (a non-breaking change that fixes an issue) 🐞\r\n- build (changes that affect the build system or external dependencies) 🏗\r\n- ci (changes to our CI configuration files and scripts) 🚀\r\n- docs (updates to the documentation or readme) 📖\r\n- enhancement (improving an existing functionality) 🌈\r\n- chore (updates to the build process or auxiliary tools and libraries) 📦\r\n- perf (a code change that improves performance) ⚡️\r\n- style (changes that do not affect the meaning of the code) 💅\r\n- test (adding or updating tests) 🧪\r\n- refactor (a code change that neither fixes a bug nor adds a feature) 🛠\r\n- revert (reverts a previous commit) 🔄\r\n\r\n### Scopes\r\n- chat (the chat application)\r\n- deps (dependencies)\r\n- docs (the documentation site)\r\n- eve (the eve extension package)\r\n- sdk (the @github-tools/sdk package)\r\n-->\r\n\r\n### 🔗 Linked issue\r\n\r\nCloses #89 \r\n\r\n### 📚 Description\r\n\r\n<!-- Describe your changes in detail -->\r\n<!-- Why is this change required? What problem does it solve? -->\r\n\r\n### 📝 Checklist\r\n\r\n<!-- Put an `x` in all the boxes that apply. -->\r\n<!-- If your change requires a documentation PR, please link it appropriately -->\r\n<!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->\r\n\r\n- [ ] I have linked an issue or discussion.\r\n- [ ] I have updated the documentation accordingly.\r\n",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/101",
+        "created_at": "2026-08-25T13:14:31Z",
+        "updated_at": "2026-08-25T13:35:11Z",
+        "closed_at": "2026-08-25T13:35:08Z",
+        "merged_at": "2026-08-25T13:35:08Z",
+        "merge_commit_sha": "ade87da57d9a9de4994ed2848244a9404f5c369e",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "e15e105c3ca9c08298e75e9d1817406079e8cdb5",
+          "ref": "fix/sdk-update-pr-draft-only"
+        },
+        "base": {
+          "sha": "0a9eae4df8c431faa63aadad18112149aabab6f9",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4358006297,
+        "node_id": "PR_kwDORVqnhM8AAAABA8HmGQ",
+        "number": 100,
+        "state": "closed",
+        "title": "fix(eve): apply built-in toModelOutput through an inline name lookup",
+        "body": "eve 0.44 validates every dynamic-tool callback, spreading SDK formatters dropped the whole GitHub toolset. The inline callback only closes over the tool name, same as execute after #51.\r\n\r\n<!---\r\n☝️ PR title should follow conventional commits (https://conventionalcommits.org)\r\nHere are the available types and scopes:\r\n\r\n### Types\r\n- breaking (fix or feature that would cause existing functionality to change) 💥\r\n- feat (a non-breaking change that adds functionality) ✨\r\n- fix (a non-breaking change that fixes an issue) 🐞\r\n- build (changes that affect the build system or external dependencies) 🏗\r\n- ci (changes to our CI configuration files and scripts) 🚀\r\n- docs (updates to the documentation or readme) 📖\r\n- enhancement (improving an existing functionality) 🌈\r\n- chore (updates to the build process or auxiliary tools and libraries) 📦\r\n- perf (a code change that improves performance) ⚡️\r\n- style (changes that do not affect the meaning of the code) 💅\r\n- test (adding or updating tests) 🧪\r\n- refactor (a code change that neither fixes a bug nor adds a feature) 🛠\r\n- revert (reverts a previous commit) 🔄\r\n\r\n### Scopes\r\n- chat (the chat application)\r\n- deps (dependencies)\r\n- docs (the documentation site)\r\n- eve (the eve extension package)\r\n- sdk (the @github-tools/sdk package)\r\n-->\r\n\r\n### 🔗 Linked issue\r\n\r\nCloses #99 \r\n\r\n### 📚 Description\r\n\r\n<!-- Describe your changes in detail -->\r\n<!-- Why is this change required? What problem does it solve? -->\r\n\r\n### 📝 Checklist\r\n\r\n<!-- Put an `x` in all the boxes that apply. -->\r\n<!-- If your change requires a documentation PR, please link it appropriately -->\r\n<!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->\r\n\r\n- [ ] I have linked an issue or discussion.\r\n- [ ] I have updated the documentation accordingly.\r\n",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/100",
+        "created_at": "2026-08-25T13:09:00Z",
+        "updated_at": "2026-08-25T13:22:09Z",
+        "closed_at": "2026-08-25T13:22:06Z",
+        "merged_at": "2026-08-25T13:22:06Z",
+        "merge_commit_sha": "0a9eae4df8c431faa63aadad18112149aabab6f9",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "54e1f212308f3d2b09d28c40388b57169f18af77",
+          "ref": "fix/eve-tomodeloutput-durable"
+        },
+        "base": {
+          "sha": "e67d6076afaf607a1a515b258ee6f1bc3aff186c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4298816683,
+        "node_id": "PR_kwDORVqnhM8AAAABADq8qw",
+        "number": 87,
+        "state": "closed",
+        "title": "feat(eve): authorize approval responders by repository permission",
+        "body": "### 🔗 Linked issue\n\nRelated to vercel/eve#1559.\n\n### 📚 Description\n\nAdds opt-in responder authorization for Eve write-tool approvals. `createGithubTools({ authorizeApprovalResponse })` accepts one policy for all write tools or a per-tool policy map; omitting it preserves existing approval behavior.\n\n```ts\nimport {\n  createGithubTools,\n  githubRepositoryApprover,\n} from '@github-tools/sdk/eve'\nimport { connectGithubApproverAuth } from '@github-tools/sdk/connect'\n\nconst approverAuth = connectGithubApproverAuth('github')\n\nexport default createGithubTools({\n  // Opt in for every write-tool approval.\n  authorizeApprovalResponse: githubRepositoryApprover({\n    auth: approverAuth,\n    minimumPermission: 'write', // default\n  }),\n})\n```\n\n```ts\nimport {\n  createGithubTools,\n  githubRepositoryApprover,\n} from '@github-tools/sdk/eve'\nimport { connectGithubApproverAuth } from '@github-tools/sdk/connect'\n\nexport default createGithubTools({\n  authorizeApprovalResponse: {\n    mergePullRequest: githubRepositoryApprover({\n      auth: connectGithubApproverAuth('github'),\n      minimumPermission: 'maintain',\n    }),\n    createIssue: githubRepositoryApprover({\n      auth: connectGithubApproverAuth('github'),\n      minimumPermission: 'triage',\n    }),\n  },\n})\n```\n\n`githubRepositoryApprover()` verifies the responder with a user-scoped Vercel Connect credential, then checks their repository permission with the agent token. Request-policy overrides continue to control when approval is requested and cannot remove responder authorization.\n\n### 🧪 Validation\n\n- `pnpm --filter @github-tools/sdk build`\n- `pnpm --filter @github-tools/sdk lint`\n- `pnpm --filter @github-tools/sdk typecheck`\n- `pnpm --filter @github-tools/sdk test` — 59 tests passed\n- Root `pnpm build` completed SDK and docs builds; the chat Nuxt build ran out of Node heap (`exit 137`)\n\n### 📝 Checklist\n\n- [x] I have linked an issue or discussion.\n- [ ] I have updated the documentation accordingly.\n",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/87",
+        "created_at": "2026-08-17T19:55:26Z",
+        "updated_at": "2026-08-17T20:29:49Z",
+        "closed_at": "2026-08-17T20:29:49Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": true,
+        "user": {
+          "id": 10215173,
+          "node_id": "MDQ6VXNlcjEwMjE1MTcz",
+          "login": "benpankow",
+          "type": "User",
+          "html_url": "https://github.com/benpankow"
+        },
+        "head": {
+          "sha": "45f1ab552664610481dfba823954cd60e1bd48fc",
+          "ref": "ben/eve-authorized-approvers"
+        },
+        "base": {
+          "sha": "d708dc4603dc8402a3d88ffe02cb4f48c6ae9280",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4238423622,
+        "node_id": "PR_kwDORVqnhM78oTZG",
+        "number": 78,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/sdk@1.11.1\n\n### Patch Changes\n\n- [#77](https://github.com/vercel-labs/github-tools/pull/77) [`d2c65d3`](https://github.com/vercel-labs/github-tools/commit/d2c65d367e54e8e1bad99de78613d2c2dc3dcc51) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Fix eve durable tool registration so consumers can drop pnpm patches: rebuild options per execute (no module-level race), resolve tools on `step.started`, and omit the `approval` field for `false` / `'never'` instead of attaching `never()`. Also map `listIssueComments` in Connect tool scopes.\n## @github-tools/eve-extension@0.3.2\n\n### Patch Changes\n\n- [#77](https://github.com/vercel-labs/github-tools/pull/77) [`d2c65d3`](https://github.com/vercel-labs/github-tools/commit/d2c65d367e54e8e1bad99de78613d2c2dc3dcc51) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Fix eve durable tool registration so consumers can drop pnpm patches: rebuild options per execute (no module-level race), resolve tools on `step.started`, and omit the `approval` field for `false` / `'never'` instead of attaching `never()`. Also map `listIssueComments` in Connect tool scopes.\n\n- Updated dependencies [[`d2c65d3`](https://github.com/vercel-labs/github-tools/commit/d2c65d367e54e8e1bad99de78613d2c2dc3dcc51)]:\n  - @github-tools/sdk@1.11.1",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/78",
+        "created_at": "2026-08-09T12:22:31Z",
+        "updated_at": "2026-08-09T12:23:18Z",
+        "closed_at": "2026-08-09T12:23:16Z",
+        "merged_at": "2026-08-09T12:23:16Z",
+        "merge_commit_sha": "d708dc4603dc8402a3d88ffe02cb4f48c6ae9280",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "5e3ed5b0a3e968a7078cf5f77e7f4bca5d7952b7",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "d2c65d367e54e8e1bad99de78613d2c2dc3dcc51",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4238399057,
+        "node_id": "PR_kwDORVqnhM78oNZR",
+        "number": 77,
+        "state": "closed",
+        "title": "fix(eve): durable registration",
+        "body": "## Summary\n- Port the behaviors Evi was carrying as a pnpm patch into `@github-tools/eve-extension` / `@github-tools/sdk`:\n  - rebuild options from extension config on every `execute` (no module-level `sessionOptions` race across concurrent sessions)\n  - resolve dynamic tools on `step.started` instead of once on `session.started`\n  - omit the `approval` field for `false` / `'never'` (eve’s default) instead of attaching `never()`\n- Map `listIssueComments` in `TOOL_CONNECT_SCOPES` (missed in #75; unblocked typecheck)\n\n## Follow-up\nAfter release (`eve-extension` patch + `sdk` patch), [HugoRCD/evlog#527](https://github.com/HugoRCD/evlog/pull/527) can stay patch-free and bump to the new versions. The remaining `eve@0.30.6` patch in evlog is unrelated (workflow step-id scoping) and stays until eve ships that fix.\n\n## Test plan\n- [x] `vitest` eve approval + build tests\n- [x] `pnpm --filter @github-tools/sdk --filter @github-tools/eve-extension` lint / typecheck / build\n- [ ] Smoke: mount extension with `requireApproval: { createIssue: false }` → tool has no `approval` property\n- [ ] Smoke: concurrent sessions do not share Connect token / context via module state",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/77",
+        "created_at": "2026-08-09T12:15:00Z",
+        "updated_at": "2026-08-09T12:21:39Z",
+        "closed_at": "2026-08-09T12:21:37Z",
+        "merged_at": "2026-08-09T12:21:37Z",
+        "merge_commit_sha": "d2c65d367e54e8e1bad99de78613d2c2dc3dcc51",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "a79ead1fc59220897f7d227c874ce9dfdde5ab30",
+          "ref": "fix/eve-extension-drop-pnpm-patch-needs"
+        },
+        "base": {
+          "sha": "f52cc0d60bc5b164b3f395ca1c3995b7212bb448",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4238334391,
+        "node_id": "PR_kwDORVqnhM78n9m3",
+        "number": 76,
+        "state": "closed",
+        "title": "chore: version packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @github-tools/sdk@1.11.0\n\n### Minor Changes\n\n- [#74](https://github.com/vercel-labs/github-tools/pull/74) [`c445040`](https://github.com/vercel-labs/github-tools/commit/c445040528b42bcc47ef2e27e11e090f8dcdbe8e) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Add `createLabel`, `updateLabel`, and `deleteLabel` tools for repository label management. Included in the `issue-triage` and `maintainer` presets.\n\n- [#75](https://github.com/vercel-labs/github-tools/pull/75) [`827e856`](https://github.com/vercel-labs/github-tools/commit/827e8567a2ac39f8ad3716555a0908f20b922893) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Expose `listIssueComments` as a public tool for paginating issue comments beyond `getIssueContext`. Included in the `issue-triage`, `repo-explorer`, and `maintainer` presets.\n\n### Patch Changes\n\n- [#73](https://github.com/vercel-labs/github-tools/pull/73) [`538d3f3`](https://github.com/vercel-labs/github-tools/commit/538d3f3f9086b962811dfdec9915e6c17e0890e3) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Derive Connect scopes from the resolved `include` / `exclude` tool set instead of minting the full preset union (including `administration:write`) when `preset` is omitted.\n## @github-tools/eve-extension@0.3.1\n\n### Patch Changes\n\n- [#73](https://github.com/vercel-labs/github-tools/pull/73) [`538d3f3`](https://github.com/vercel-labs/github-tools/commit/538d3f3f9086b962811dfdec9915e6c17e0890e3) Thanks [@HugoRCD](https://github.com/HugoRCD)! - Derive Connect scopes from the resolved `include` / `exclude` tool set instead of minting the full preset union (including `administration:write`) when `preset` is omitted.\n\n- Updated dependencies [[`538d3f3`](https://github.com/vercel-labs/github-tools/commit/538d3f3f9086b962811dfdec9915e6c17e0890e3), [`c445040`](https://github.com/vercel-labs/github-tools/commit/c445040528b42bcc47ef2e27e11e090f8dcdbe8e), [`827e856`](https://github.com/vercel-labs/github-tools/commit/827e8567a2ac39f8ad3716555a0908f20b922893)]:\n  - @github-tools/sdk@1.11.0",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/76",
+        "created_at": "2026-08-09T11:54:45Z",
+        "updated_at": "2026-08-09T12:04:33Z",
+        "closed_at": "2026-08-09T12:03:17Z",
+        "merged_at": "2026-08-09T12:03:17Z",
+        "merge_commit_sha": "f52cc0d60bc5b164b3f395ca1c3995b7212bb448",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "a54dfdfa67b95eaafa3550f54649a408fe6c0aac",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "827e8567a2ac39f8ad3716555a0908f20b922893",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4238273153,
+        "node_id": "PR_kwDORVqnhM78nuqB",
+        "number": 75,
+        "state": "closed",
+        "title": "feat(sdk): expose listIssueComments as a public tool",
+        "body": "## Summary\n- Promote `listIssueComments` (core already existed for `getIssueContext`) to a public read tool with pagination (`perPage` / `page`).\n- Include it in `issue-triage`, `repo-explorer`, and `maintainer`.\n- Prefer `getIssueContext` for the first page when triaging; use this tool to page further.\n\n## Test plan\n- [x] `pnpm --filter @github-tools/sdk build && lint && typecheck && test`\n- [x] `pnpm --filter @github-tools/eve-extension build && typecheck`\n- [ ] Call `listIssueComments` with `page: 2` on a busy issue and confirm pagination\n\n**Merge note:** Tool count docs say 76 here; [#74](https://github.com/vercel-labs/github-tools/pull/74) says 78. After both land the total is **79** — reconcile the count on the second merge. If [#73](https://github.com/vercel-labs/github-tools/pull/73) merges first, add `listIssueComments: ISSUES_READ` to `TOOL_CONNECT_SCOPES`.",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/75",
+        "created_at": "2026-08-09T11:35:20Z",
+        "updated_at": "2026-08-09T12:01:53Z",
+        "closed_at": "2026-08-09T12:01:51Z",
+        "merged_at": "2026-08-09T12:01:50Z",
+        "merge_commit_sha": "827e8567a2ac39f8ad3716555a0908f20b922893",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "434588ca12d5040c4165ba2077c415017dddbe09",
+          "ref": "feat/sdk-list-issue-comments"
+        },
+        "base": {
+          "sha": "c445040528b42bcc47ef2e27e11e090f8dcdbe8e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4238263888,
+        "node_id": "PR_kwDORVqnhM78nsZQ",
+        "number": 73,
+        "state": "closed",
+        "title": "fix(sdk): derive Connect scopes from include/exclude",
+        "body": "## Summary\n- When `include` / `exclude` are set, Connect scopes are derived from the resolved tool set via a per-tool scope map, instead of minting the union of every preset (including `administration:write`) whenever `preset` is omitted.\n- `connect.scopes` still overrides. Preset-only selection keeps the existing `PRESET_CONNECT_SCOPES` mapping.\n- Eve extension and deprecated `connect/eve` pass `include` / `exclude` through to `connectGithubToken`.\n\n## Test plan\n- [x] `pnpm --filter @github-tools/sdk test` (scopes + token tests)\n- [x] `pnpm --filter @github-tools/sdk build && lint && typecheck`\n- [x] `pnpm --filter @github-tools/eve-extension build && typecheck`\n- [ ] Confirm an eve agent with `include: [...]` and no `preset` / no `connect.scopes` no longer requests `administration:write`",
+        "html_url": "https://github.com/vercel-labs/github-tools/pull/73",
+        "created_at": "2026-08-09T11:32:18Z",
+        "updated_at": "2026-08-09T12:01:27Z",
+        "closed_at": "2026-08-09T12:01:26Z",
+        "merged_at": "2026-08-09T12:01:26Z",
+        "merge_commit_sha": "538d3f3f9086b962811dfdec9915e6c17e0890e3",
+        "draft": false,
+        "user": {
+          "id": 71938701,
+          "node_id": "MDQ6VXNlcjcxOTM4NzAx",
+          "login": "HugoRCD",
+          "type": "User",
+          "html_url": "https://github.com/HugoRCD"
+        },
+        "head": {
+          "sha": "fba7d3c2dbd390a73da7d02f28079ab5ddcc14cd",
+          "ref": "fix/sdk-connect-scopes-from-include"
+        },
+        "base": {
+          "sha": "c445040528b42bcc47ef2e27e11e090f8dcdbe8e",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}

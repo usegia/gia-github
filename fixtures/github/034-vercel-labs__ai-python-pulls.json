@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-python/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:40.793254+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"11b92eeb6bb480ab1607e443fb8109fda2d679281f6dba1396d5db011f1ae084\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/1135322438/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 1135322438,
+    "repository": "vercel-labs/ai-python",
+    "records": [
+      {
+        "id": 4436025023,
+        "node_id": "PR_kwDOQ6ulRs8AAAABCGhevw",
+        "number": 283,
+        "state": "closed",
+        "title": "Make the message hydrator able to restore message ids",
+        "body": "And also to handle a stream with multiple messages.\r\n\r\nAnd make it a (semi?)-public API.\r\n\r\nWe have it stamp the message id onto StreamStart objects so that even if messages are stripped, we can recover the ids by replaying the stream.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/283",
+        "created_at": "2026-09-03T18:58:13Z",
+        "updated_at": "2026-09-09T23:55:00Z",
+        "closed_at": "2026-09-09T23:54:58Z",
+        "merged_at": "2026-09-09T23:54:58Z",
+        "merge_commit_sha": "7f16689bfc790fc03c35809dc7994428f56b4d70",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "89300331ffc47984c7e290656b66fb4c60371baa",
+          "ref": "better-aggregate"
+        },
+        "base": {
+          "sha": "6234624b2bec96a373c858b1e38a42ff8440d76d",
+          "ref": "omit-event-messages"
+        }
+      },
+      {
+        "id": 4436015488,
+        "node_id": "PR_kwDOQ6ulRs8AAAABCGg5gA",
+        "number": 282,
+        "state": "closed",
+        "title": "Add an OmitEventMessages[...] wrapper that skips message bodies when dumping",
+        "body": "The message is emitted as just `{\"id\":...}`.\r\n\r\nReduces serialized data by ~97% when serializing messages from a prompt that's asking for about 800 words of output.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/282",
+        "created_at": "2026-09-03T18:56:58Z",
+        "updated_at": "2026-09-09T23:54:59Z",
+        "closed_at": "2026-09-09T23:54:56Z",
+        "merged_at": "2026-09-09T23:54:56Z",
+        "merge_commit_sha": "0b628f90d425d858873c0363290a7cf93a3b2946",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "6234624b2bec96a373c858b1e38a42ff8440d76d",
+          "ref": "omit-event-messages"
+        },
+        "base": {
+          "sha": "c825623ee10610b778c8bf097bb592dca68266f2",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4478113054,
+        "node_id": "PR_kwDOQ6ulRs8AAAABCuqVHg",
+        "number": 288,
+        "state": "closed",
+        "title": "Upgrade to mcp>=2.0.0",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/288",
+        "created_at": "2026-09-08T20:03:35Z",
+        "updated_at": "2026-09-09T23:53:23Z",
+        "closed_at": "2026-09-09T23:53:21Z",
+        "merged_at": "2026-09-09T23:53:20Z",
+        "merge_commit_sha": "193a319c6d950b3a2d7c0d4a00fc777d5d8880f8",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "81f1bad00e582833efa4515e3a12e7f33a4bb34c",
+          "ref": "mcp2"
+        },
+        "base": {
+          "sha": "cb0f055fe62b81f254b9bf5d4bde83b5e2588f5c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4447002297,
+        "node_id": "PR_kwDOQ6ulRs8AAAABCQ_euQ",
+        "number": 286,
+        "state": "closed",
+        "title": "Depend on just vercel-oidc instead of vercel",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/286",
+        "created_at": "2026-09-04T21:56:42Z",
+        "updated_at": "2026-09-08T19:56:46Z",
+        "closed_at": "2026-09-08T19:56:43Z",
+        "merged_at": "2026-09-08T19:56:43Z",
+        "merge_commit_sha": "cb0f055fe62b81f254b9bf5d4bde83b5e2588f5c",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "0ab157eef43156435dee08a658e77b0719afa786",
+          "ref": "vercel-oidc"
+        },
+        "base": {
+          "sha": "22896783337d728f7c6d90cb049a8f2a39209295",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4447034343,
+        "node_id": "PR_kwDOQ6ulRs8AAAABCRBb5w",
+        "number": 287,
+        "state": "closed",
+        "title": "Switch to httpx2",
+        "body": "This is a potentially breaking change for any users that are passing clients in.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/287",
+        "created_at": "2026-09-04T22:01:20Z",
+        "updated_at": "2026-09-08T18:09:23Z",
+        "closed_at": "2026-09-08T18:09:20Z",
+        "merged_at": "2026-09-08T18:09:20Z",
+        "merge_commit_sha": "a0273ba0a51b4bd9a58a58ed78fcea2632ed7936",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "9ba082d2c00d47f2fdb7b36512f09739f65e596f",
+          "ref": "httpx2"
+        },
+        "base": {
+          "sha": "22896783337d728f7c6d90cb049a8f2a39209295",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4426144087,
+        "node_id": "PR_kwDOQ6ulRs8AAAABB9GZVw",
+        "number": 280,
+        "state": "closed",
+        "title": "Support running Agent.loop in lockstep with consumer of Agent.run",
+        "body": "Add a buffer argument to Agent.run that controls the buffer size.  The\ndefault, `None`, maintains the current behavior of fully decoupling\nthem. At `buffer=0`, they will run in lockstep.\n\nThe reason I want this is so that a custom loop and client code that\ndo out-of-band messaging will interact in a predictable way.\n\n(In particular, when doing a durable agent loop, I want to be able to\nsend all the streaming messages from the client code, but the messages\nneed to be queued *before* a new llm call is made.)\n",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/280",
+        "created_at": "2026-09-02T19:58:02Z",
+        "updated_at": "2026-09-04T21:22:08Z",
+        "closed_at": "2026-09-04T21:22:07Z",
+        "merged_at": "2026-09-04T21:22:07Z",
+        "merge_commit_sha": "22896783337d728f7c6d90cb049a8f2a39209295",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "1ab4322d52f14f1c8aa4bc03fc37a63ad0cc2c38",
+          "ref": "lockstep-2"
+        },
+        "base": {
+          "sha": "14930fba59a6c5f3f27816bf26844b4ca288cff4",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4437493655,
+        "node_id": "PR_kwDOQ6ulRs8AAAABCH7Hlw",
+        "number": 285,
+        "state": "closed",
+        "title": "Support anthropic>=1.0.0 and openai>=3.0.0 (httpx2 change)",
+        "body": "Stop doing our own runtime enforcement of the client objects for anthropic and openai, just pass them through and see what they allow. (anthropic will only allow httpx2, openai has compat goo to allow both.)\r\n\r\nBump the minimum version of openai to 2.34.0, because it turned out that was already the case.\r\n\r\nAdd CI to test different upstream SDK versions.\r\n(Though it is still all a bit marginal because we don't actually make any requests in CI!)",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/285",
+        "created_at": "2026-09-03T22:30:31Z",
+        "updated_at": "2026-09-04T17:19:02Z",
+        "closed_at": "2026-09-04T17:19:00Z",
+        "merged_at": "2026-09-04T17:19:00Z",
+        "merge_commit_sha": "6e29cae29fbfd29278a63a97fedd62d857cab934",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "d1acea9be5474bb81c4ce9d4fba9d91cb0e2c5e9",
+          "ref": "new-openai-anthropic"
+        },
+        "base": {
+          "sha": "c825623ee10610b778c8bf097bb592dca68266f2",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4428197682,
+        "node_id": "PR_kwDOQ6ulRs8AAAABB_DvMg",
+        "number": 281,
+        "state": "closed",
+        "title": "Move _aggregate_event to an events._MessageHydrator class",
+        "body": "The inverse logic (_replay_message_events) already lives there.\r\n\r\nThis is in preparation for making something like it a public API, but this PR is a pure refactor.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/281",
+        "created_at": "2026-09-03T01:25:51Z",
+        "updated_at": "2026-09-03T17:20:53Z",
+        "closed_at": "2026-09-03T17:20:51Z",
+        "merged_at": "2026-09-03T17:20:51Z",
+        "merge_commit_sha": "c825623ee10610b778c8bf097bb592dca68266f2",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "540f81886304bce14ab540725abd5b581a33f595",
+          "ref": "clean-hydrate-messages"
+        },
+        "base": {
+          "sha": "14930fba59a6c5f3f27816bf26844b4ca288cff4",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4425973397,
+        "node_id": "PR_kwDOQ6ulRs8AAAABB87-lQ",
+        "number": 279,
+        "state": "closed",
+        "title": "Some tweaks to util.decouple",
+        "body": "Make buffer argument required, update documentation.\n",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/279",
+        "created_at": "2026-09-02T19:39:18Z",
+        "updated_at": "2026-09-02T19:56:47Z",
+        "closed_at": "2026-09-02T19:56:45Z",
+        "merged_at": "2026-09-02T19:56:45Z",
+        "merge_commit_sha": "14930fba59a6c5f3f27816bf26844b4ca288cff4",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "791073595c7d4d451a6120372161de7015bf4300",
+          "ref": "decouple-cleanup"
+        },
+        "base": {
+          "sha": "f9ecbf8f5496536f256858d334dd763da63afedf",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4417595704,
+        "node_id": "PR_kwDOQ6ulRs8AAAABB08pOA",
+        "number": 278,
+        "state": "closed",
+        "title": "Add a priority flag to merge",
+        "body": "We are going to want to be able to do a merge where one of the\narguments (the _event_queue) is prioritized, and will always yield if\navailable instead of other iterators.\n\nThe old asyncio.wait() based implementation of merge() made that much\neasier to add, so revert back to that and add it.\n",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/278",
+        "created_at": "2026-09-02T00:45:23Z",
+        "updated_at": "2026-09-02T18:11:21Z",
+        "closed_at": "2026-09-02T18:11:19Z",
+        "merged_at": "2026-09-02T18:11:19Z",
+        "merge_commit_sha": "f9ecbf8f5496536f256858d334dd763da63afedf",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "6ba8c68bc1d481ace6bd86d8346bd9c2a1a6048a",
+          "ref": "merge-priority"
+        },
+        "base": {
+          "sha": "f1b7c32f443581ff4b479dc609a96cb7f19e0ddc",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4417243097,
+        "node_id": "PR_kwDOQ6ulRs8AAAABB0nH2Q",
+        "number": 277,
+        "state": "closed",
+        "title": "Fix streaming tools in 3.13 and later",
+        "body": "And fix CI so the right versions are in use in CI.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/277",
+        "created_at": "2026-09-01T23:34:59Z",
+        "updated_at": "2026-09-02T18:07:46Z",
+        "closed_at": "2026-09-02T18:07:43Z",
+        "merged_at": "2026-09-02T18:07:43Z",
+        "merge_commit_sha": "7206369d9298761e119bb271cd16568f702293fe",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "703911954e14b6c6a1b303b0bb40f1c137a2f765",
+          "ref": "ci"
+        },
+        "base": {
+          "sha": "f1b7c32f443581ff4b479dc609a96cb7f19e0ddc",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4407502009,
+        "node_id": "PR_kwDOQ6ulRs8AAAABBrUkuQ",
+        "number": 275,
+        "state": "closed",
+        "title": "Make decouple/merge stay in lockstep with the generators",
+        "body": "Currently an underlying generator passed to merge can get up to three\nelements ahead of the consumer, with elements buffered:\n * one in the decouple queue\n * one blocked on queue.put in decouple\n * one buffered in the anext task in merge, created before the yield\n\nModify decouple to use a semaphore so that the decoupled producer\nstill runs in lockstep with the consumer and make merge only launch a\nnew task once back from yielding.\n\nShouldn't be any major practical impacts of this change.\n",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/275",
+        "created_at": "2026-09-01T00:26:29Z",
+        "updated_at": "2026-09-01T17:26:11Z",
+        "closed_at": "2026-09-01T17:26:07Z",
+        "merged_at": "2026-09-01T17:26:07Z",
+        "merge_commit_sha": "f1b7c32f443581ff4b479dc609a96cb7f19e0ddc",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "e31b904f56a7abcc2b54ad1b8616eb3ee36fbcc1",
+          "ref": "lockstep"
+        },
+        "base": {
+          "sha": "73f96a89ae087662a425e759f5a2a98c8a1b4a85",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4390362312,
+        "node_id": "PR_kwDOQ6ulRs8AAAABBa-cyA",
+        "number": 274,
+        "state": "closed",
+        "title": "Add a to_model_input argument to the tool decorator",
+        "body": "We need a way to allow non-streaming tools to customize their output\nfor the model.\n",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/274",
+        "created_at": "2026-08-29T06:15:38Z",
+        "updated_at": "2026-09-01T00:25:34Z",
+        "closed_at": "2026-09-01T00:25:31Z",
+        "merged_at": "2026-09-01T00:25:31Z",
+        "merge_commit_sha": "73f96a89ae087662a425e759f5a2a98c8a1b4a85",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "843e8e7b29a1f64bf402bca670e9d5f42d768ef1",
+          "ref": "to-model-input"
+        },
+        "base": {
+          "sha": "3bcebacdd12972d46936018c104254c5cd093ed3",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4316688576,
+        "node_id": "PR_kwDOQ6ulRs8AAAABAUtwwA",
+        "number": 265,
+        "state": "closed",
+        "title": "Instrument ai.ops with telemetry",
+        "body": "`ai.ops` should emit their own spans by default, same as `ai.stream` and `ai.generate`.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/265",
+        "created_at": "2026-08-19T18:55:16Z",
+        "updated_at": "2026-08-21T18:31:13Z",
+        "closed_at": "2026-08-21T18:31:11Z",
+        "merged_at": "2026-08-21T18:31:10Z",
+        "merge_commit_sha": "3bcebacdd12972d46936018c104254c5cd093ed3",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "2ecf5b9b64e9ae6e9c558b1e98b5e0363c297595",
+          "ref": "ops-telemetry"
+        },
+        "base": {
+          "sha": "2da0d225478a8bb208e5016b2f89b31a48993e07",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4326292948,
+        "node_id": "PR_kwDOQ6ulRs8AAAABAd391A",
+        "number": 266,
+        "state": "closed",
+        "title": "TEST PR PLEASE IGNORE",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/266",
+        "created_at": "2026-08-20T20:19:30Z",
+        "updated_at": "2026-08-20T20:20:32Z",
+        "closed_at": "2026-08-20T20:20:27Z",
+        "merged_at": null,
+        "merge_commit_sha": "68f1943e3dffbe28c59d30115f630ce322cd6072",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "299059a9e8f242cbb1d5aad2ecd6d009fd52b60c",
+          "ref": "test-pr"
+        },
+        "base": {
+          "sha": "2da0d225478a8bb208e5016b2f89b31a48993e07",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4298150836,
+        "node_id": "PR_kwDOQ6ulRs8AAAABADCTtA",
+        "number": 264,
+        "state": "closed",
+        "title": "Support passing store=False to openai SDK for Responses",
+        "body": "Being able to do this is necessary for using the Codex endpoints directly. It can be *set* directly as a param, but we want to also pass it natively to the openai SDK, or it still expects things to be stored serverside.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/264",
+        "created_at": "2026-08-17T18:18:26Z",
+        "updated_at": "2026-08-19T06:33:10Z",
+        "closed_at": "2026-08-19T06:33:07Z",
+        "merged_at": "2026-08-19T06:33:07Z",
+        "merge_commit_sha": "2da0d225478a8bb208e5016b2f89b31a48993e07",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "521b3a7bff927804166b75afcc9b6b22f1ca54af",
+          "ref": "store-openai"
+        },
+        "base": {
+          "sha": "4c0289876edcf172c6aff450610fea87ed93cbae",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4233710151,
+        "node_id": "PR_kwDOQ6ulRs78WUpH",
+        "number": 260,
+        "state": "closed",
+        "title": "fix(types): detect video media types in FilePart.from_bytes",
+        "body": "## What\n\n`FilePart.from_bytes()` could not detect video files: it only checked image and audio signatures, so `file_part(video_bytes)` raised `ValueError` unless you passed `media_type` manually. The `VIDEO_SIGNATURES` table already existed but had no public wrapper.\n\n## Why\n\nImage and audio detection work; video doesn't — a concrete capability gap for attaching video input (e.g. video-capable gateway models) and video round-trips. `ai.file_part(open(\"clip.mp4\", \"rb\").read())` should just work.\n\n## How\n\n- Add `media.detect_video_media_type()` mirroring the existing image/audio wrappers\n- Chain it into `FilePart.from_bytes`: image → audio → video\n\n## Tests\n\n- `detect_video_media_type`: mp4 detection, base64 input, rejects non-video (image)\n- `FilePart.from_bytes`: video/mp4 detection\n\nFull local gate green: ruff format/check, mypy, ty, 690 pytest tests, check-examples.\n\n## Known limitation (pre-existing, not changed)\n\nWebm is container-ambiguous — `audio/webm` is checked before `video/webm`, so webm video still reports `audio/webm`. Reordering would regress genuine webm audio detection. Also note `video/quicktime` is shadowed by the mp4 signature's wildcard size byte — both pre-existing table behavior.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/260",
+        "created_at": "2026-08-08T07:43:00Z",
+        "updated_at": "2026-08-18T07:16:48Z",
+        "closed_at": "2026-08-18T07:16:48Z",
+        "merged_at": "2026-08-18T07:16:48Z",
+        "merge_commit_sha": "89fa2f3db2d4bf080c657999e8793cf6934d58e1",
+        "draft": false,
+        "user": {
+          "id": 146335736,
+          "node_id": "U_kgDOCLjn-A",
+          "login": "jaygupta17",
+          "type": "User",
+          "html_url": "https://github.com/jaygupta17"
+        },
+        "head": {
+          "sha": "ba6989e1e7c671f2df560bb5e8b7633460b2ca01",
+          "ref": "fix/file-part-video-detection"
+        },
+        "base": {
+          "sha": "1d7220a73b094c2680404cc39f679f442032d58c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4233611958,
+        "node_id": "PR_kwDOQ6ulRs78V8q2",
+        "number": 259,
+        "state": "closed",
+        "title": "fix(ui): propagate StreamEnd finish_reason to UI finish event",
+        "body": "## What\n\nThe AI SDK UI `finish` event always carries `finishReason: \"stop\"`, regardless of why the model actually stopped: `_StreamState` discarded `StreamEnd.finish_reason` and `finish()` hardcoded `\"stop\"`.\n\n## Why\n\nFrontends built on `useChat`/the AI SDK UI message stream branch on `finishReason` — surfacing truncation (`length`), content-filter stops, or recognizing that a turn ended because tools were called (`tool-calls`). With the hardcoded value every run looks like a clean text stop, which breaks that logic.\n\n## How\n\n- Capture `StreamEnd.finish_reason` in `_StreamState`\n- Map the internal OpenTelemetry-style vocabulary (`content_filter`, `tool_call`) to the UI wire values (`content-filter`, `tool-calls`); unknown values → `other`, missing → `stop` (preserving current behavior)\n\n## Tests\n\nAdded coverage for: default `stop`, `stop` passthrough, `content_filter` → `content-filter`, `tool_call` → `tool-calls`, `length`/`error` passthrough, and unknown → `other`. Full local gate green: ruff format/check, mypy, ty, 692 pytest tests, check-examples.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/259",
+        "created_at": "2026-08-08T07:15:52Z",
+        "updated_at": "2026-08-18T07:16:24Z",
+        "closed_at": "2026-08-18T07:16:24Z",
+        "merged_at": "2026-08-18T07:16:24Z",
+        "merge_commit_sha": "e68868cbcf042391180e407720b823d63fb33e1f",
+        "draft": false,
+        "user": {
+          "id": 146335736,
+          "node_id": "U_kgDOCLjn-A",
+          "login": "jaygupta17",
+          "type": "User",
+          "html_url": "https://github.com/jaygupta17"
+        },
+        "head": {
+          "sha": "0d5fb1678a0d0b6d8219e5a38a8a4aa16f7a8345",
+          "ref": "fix/ui-stream-finish-reason"
+        },
+        "base": {
+          "sha": "1d7220a73b094c2680404cc39f679f442032d58c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4084861843,
+        "node_id": "PR_kwDOQ6ulRs7zeguT",
+        "number": 225,
+        "state": "closed",
+        "title": "Add Google provider with generateContent protocol",
+        "body": "Adds a Google Gemini provider following the Anthropic provider's pattern: the official `google-genai` SDK handles transport, and the protocol layer does the message/params translation.\n\n- `GoogleProvider` (handles `google` / `@ai-sdk/google`) with a lazily-created `genai.Client`, `GOOGLE_GENERATIVE_AI_API_KEY`/`GEMINI_API_KEY`/`GOOGLE_API_KEY` env fallbacks, `list_models()`, and `probe()`. `google-genai>=2.0.0` ships as the `ai[google]` extra.\n- `GoogleGenerateContentProtocol` streams via `generate_content_stream`, mapping text/thought parts, function calls, code-execution parts, inline data, and usage into framework events. `thought_signature` round-trips through provider metadata so multi-turn function calling works with thinking models.\n- Finish reasons are normalized to the OTel vocabulary on `StreamEnd`, along with `response_id`/`response_model`; unmapped raw values land in provider metadata.\n- Reasoning effort maps to `thinking_level` on Gemini 3 (`None` → `minimal`, which rejects a zero budget) and to a token budget on earlier models, which reject `thinking_level`.\n- Built-in tool factories: `google_search`, `url_context`, `code_execution`.\n- Transport errors are mapped into the provider error hierarchy (the SDK doesn't wrap httpx errors), and safety-blocked prompts raise instead of yielding an empty message.\n\nKnown limitations, to be addressed in follow-ups: grounding metadata (search queries/citations) for `google_search`/`url_context` is not surfaced as builtin tool events, explicit `cached_content` doesn't strip conflicting system/tools fields, and Vertex AI is not supported yet.\n\nVerified against the live Gemini API: text, tool-call round-trip, structured output, thinking on 2.5/3, and error mapping.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/225",
+        "created_at": "2026-07-19T05:30:43Z",
+        "updated_at": "2026-08-17T18:25:49Z",
+        "closed_at": "2026-08-17T18:25:48Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 699636,
+          "node_id": "MDQ6VXNlcjY5OTYzNg==",
+          "login": "aisk",
+          "type": "User",
+          "html_url": "https://github.com/aisk"
+        },
+        "head": {
+          "sha": "d6d43a7cb9afdcad5318b78302c7d3e8418e9afd",
+          "ref": "google-provider"
+        },
+        "base": {
+          "sha": "1ea0a40c81a3a6ecd7594549950c62c5ba92788d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4181363943,
+        "node_id": "PR_kwDOQ6ulRs75Oozn",
+        "number": 242,
+        "state": "closed",
+        "title": "Run CI on all supported python versions",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/242",
+        "created_at": "2026-07-31T22:47:46Z",
+        "updated_at": "2026-08-17T18:24:07Z",
+        "closed_at": "2026-08-17T18:24:06Z",
+        "merged_at": "2026-08-17T18:24:06Z",
+        "merge_commit_sha": "1d7220a73b094c2680404cc39f679f442032d58c",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "d2d697ea3d8b14944827d8213934ebc6c8dd107a",
+          "ref": "ci"
+        },
+        "base": {
+          "sha": "1767bf36a7df91271db0a2be366bf79ede13fd37",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4223809625,
+        "node_id": "PR_kwDOQ6ulRs77wjhZ",
+        "number": 253,
+        "state": "closed",
+        "title": "Make ToolRunner a little more flexible",
+        "body": "`schedule()` now returns the task that the tool is run on, which\nallows a caller to cancel it, if desired.\nTo support this better, BoundToolCall will catch CancelledError and\nturn it into an error tool result.\n\nToolRunner also gets a `discard()` method, which cancels the task and\nremoves it from the ToolRunner's tracking. This is useful if tools are\nlaunched speculatively, for example.\n",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/253",
+        "created_at": "2026-08-06T20:44:14Z",
+        "updated_at": "2026-08-17T18:18:09Z",
+        "closed_at": "2026-08-17T18:18:07Z",
+        "merged_at": "2026-08-17T18:18:07Z",
+        "merge_commit_sha": "4c0289876edcf172c6aff450610fea87ed93cbae",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "981126d068fec786d5d4bdf25bd20acd297c7404",
+          "ref": "expose-tool-task"
+        },
+        "base": {
+          "sha": "1767bf36a7df91271db0a2be366bf79ede13fd37",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4247298449,
+        "node_id": "PR_kwDOQ6ulRs79KKGR",
+        "number": 261,
+        "state": "closed",
+        "title": "Docs v0.5",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/261",
+        "created_at": "2026-08-10T18:32:30Z",
+        "updated_at": "2026-08-14T16:31:51Z",
+        "closed_at": "2026-08-14T16:31:46Z",
+        "merged_at": "2026-08-14T16:31:46Z",
+        "merge_commit_sha": "1767bf36a7df91271db0a2be366bf79ede13fd37",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "58b88194e30541b92ea5d824c72c610b1c00c57b",
+          "ref": "docs-v0.5"
+        },
+        "base": {
+          "sha": "3eecfa8804df23a164f2d0c135900658d2c0cd7b",
+          "ref": "refine-ops"
+        }
+      },
+      {
+        "id": 4255401009,
+        "node_id": "PR_kwDOQ6ulRs79pEQx",
+        "number": 262,
+        "state": "closed",
+        "title": "Update ai.ops apis to replace messages with dedicated types",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/262",
+        "created_at": "2026-08-11T17:20:13Z",
+        "updated_at": "2026-08-14T16:31:50Z",
+        "closed_at": "2026-08-14T16:31:45Z",
+        "merged_at": "2026-08-14T16:31:45Z",
+        "merge_commit_sha": "1dc39f67c554f169c5fa5dd332d6b72a04353f5a",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "3eecfa8804df23a164f2d0c135900658d2c0cd7b",
+          "ref": "refine-ops"
+        },
+        "base": {
+          "sha": "36203e6087353672d1a9444bd07cf3757d57b797",
+          "ref": "implement-reranking"
+        }
+      },
+      {
+        "id": 4230553909,
+        "node_id": "PR_kwDOQ6ulRs78KSE1",
+        "number": 258,
+        "state": "closed",
+        "title": "Implement reranking",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/258",
+        "created_at": "2026-08-07T17:51:34Z",
+        "updated_at": "2026-08-14T16:31:49Z",
+        "closed_at": "2026-08-14T16:31:44Z",
+        "merged_at": "2026-08-14T16:31:44Z",
+        "merge_commit_sha": "fb2fe42f2d5a9dc7ef8ac1ecca87eddf54f1108e",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "36203e6087353672d1a9444bd07cf3757d57b797",
+          "ref": "implement-reranking"
+        },
+        "base": {
+          "sha": "fd5e046e469c3f50a3a8fcac3156f7eda825c70d",
+          "ref": "implement-stt"
+        }
+      },
+      {
+        "id": 4230396019,
+        "node_id": "PR_kwDOQ6ulRs78Jrhz",
+        "number": 257,
+        "state": "closed",
+        "title": "Implement speech to text",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/257",
+        "created_at": "2026-08-07T17:24:42Z",
+        "updated_at": "2026-08-14T16:31:49Z",
+        "closed_at": "2026-08-14T16:31:43Z",
+        "merged_at": "2026-08-14T16:31:43Z",
+        "merge_commit_sha": "34cdc90e30cca085354a9eedb2cd4e6b52054125",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "fd5e046e469c3f50a3a8fcac3156f7eda825c70d",
+          "ref": "implement-stt"
+        },
+        "base": {
+          "sha": "e23aabd3cde9ecdfd06a49aa457c28f9a45fd359",
+          "ref": "implement-embeddings"
+        }
+      },
+      {
+        "id": 4224468960,
+        "node_id": "PR_kwDOQ6ulRs77zEfg",
+        "number": 255,
+        "state": "closed",
+        "title": "Implement embedding model support",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/255",
+        "created_at": "2026-08-06T23:38:10Z",
+        "updated_at": "2026-08-14T16:31:48Z",
+        "closed_at": "2026-08-14T16:31:42Z",
+        "merged_at": "2026-08-14T16:31:42Z",
+        "merge_commit_sha": "85cf39638558497c727e6b92d3aa45b79b2cff4e",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "e23aabd3cde9ecdfd06a49aa457c28f9a45fd359",
+          "ref": "implement-embeddings"
+        },
+        "base": {
+          "sha": "74d408396553152d1e322af12a4468541e49c788",
+          "ref": "gateway-v4"
+        }
+      },
+      {
+        "id": 4223932802,
+        "node_id": "PR_kwDOQ6ulRs77xBmC",
+        "number": 254,
+        "state": "closed",
+        "title": "Implement Gateway v4",
+        "body": "We need to migrate to v4 to support speech-to-text and reranking.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/254",
+        "created_at": "2026-08-06T21:12:50Z",
+        "updated_at": "2026-08-14T16:31:47Z",
+        "closed_at": "2026-08-14T16:31:41Z",
+        "merged_at": "2026-08-14T16:31:41Z",
+        "merge_commit_sha": "b02c8f922bb4160652a1121743c07d930e64371c",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "74d408396553152d1e322af12a4468541e49c788",
+          "ref": "gateway-v4"
+        },
+        "base": {
+          "sha": "68ebfe739a33b48f2da59657ae3a3611d0f4f2f1",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4217253541,
+        "node_id": "PR_kwDOQ6ulRs77Xi6l",
+        "number": 252,
+        "state": "closed",
+        "title": "Add a `cancelled` check to hook's `set_result` call",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/252",
+        "created_at": "2026-08-06T02:05:47Z",
+        "updated_at": "2026-08-06T15:33:08Z",
+        "closed_at": "2026-08-06T15:33:05Z",
+        "merged_at": "2026-08-06T15:33:05Z",
+        "merge_commit_sha": "68ebfe739a33b48f2da59657ae3a3611d0f4f2f1",
+        "draft": false,
+        "user": {
+          "id": 340349,
+          "node_id": "MDQ6VXNlcjM0MDM0OQ==",
+          "login": "msullivan",
+          "type": "User",
+          "html_url": "https://github.com/msullivan"
+        },
+        "head": {
+          "sha": "b25479bd9c2a87b2d74050e224d810df59f87016",
+          "ref": "cancel-safety"
+        },
+        "base": {
+          "sha": "e66e1014a0c4d9f13921f8d662750596ca6dd2f1",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4216708028,
+        "node_id": "PR_kwDOQ6ulRs77Vdu8",
+        "number": 250,
+        "state": "closed",
+        "title": "Convert `ai.ops` functions to return `Item[FilePart]`",
+        "body": "`ai.ops.Item[T]` is a new Pydantic model used to wrap model results that don't go directly into the message history (such as outputs of all `ai.ops` functions).",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/250",
+        "created_at": "2026-08-05T23:48:48Z",
+        "updated_at": "2026-08-06T15:31:09Z",
+        "closed_at": "2026-08-06T15:31:05Z",
+        "merged_at": "2026-08-06T15:31:05Z",
+        "merge_commit_sha": "07e6ae6072bf19119a9d17801bc4a47f31218781",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "c1b484269b2c106a5fdbeda306229d60746d1e17",
+          "ref": "convert-from-message"
+        },
+        "base": {
+          "sha": "33849e2d98f08c15d1dd6414676c1f7215b2f7d9",
+          "ref": "implement-audio"
+        }
+      },
+      {
+        "id": 4214692924,
+        "node_id": "PR_kwDOQ6ulRs77Nxw8",
+        "number": 249,
+        "state": "closed",
+        "title": "Implement text-to-speech",
+        "body": "Can't to speech-to-text counterpart until we migrate AI Gateway to v4 protocol.",
+        "html_url": "https://github.com/vercel-labs/ai-python/pull/249",
+        "created_at": "2026-08-05T18:05:53Z",
+        "updated_at": "2026-08-06T15:31:09Z",
+        "closed_at": "2026-08-06T15:31:04Z",
+        "merged_at": "2026-08-06T15:31:04Z",
+        "merge_commit_sha": "5428b589071518e1a08d966c7497fe8838c171c8",
+        "draft": false,
+        "user": {
+          "id": 24557773,
+          "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+          "login": "anbuzin",
+          "type": "User",
+          "html_url": "https://github.com/anbuzin"
+        },
+        "head": {
+          "sha": "33849e2d98f08c15d1dd6414676c1f7215b2f7d9",
+          "ref": "implement-audio"
+        },
+        "base": {
+          "sha": "ad3b957040fea8e05600ac364e78691829eb8da5",
+          "ref": "reimplement-video"
+        }
+      }
+    ]
+  }
+}

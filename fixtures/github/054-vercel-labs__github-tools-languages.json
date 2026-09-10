@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/github-tools/languages",
+  "observedAt": "2026-09-10T10:28:23.986974+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"9522ea5a149a235007fad6e920f24462e0efdc90e80cfad8dfc610d4965bbed1\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 1163569028,
+    "repository": "vercel-labs/github-tools",
+    "records": {
+      "TypeScript": 476044,
+      "Vue": 83909,
+      "JavaScript": 11396,
+      "Python": 5073,
+      "CSS": 3064
+    }
+  }
+}

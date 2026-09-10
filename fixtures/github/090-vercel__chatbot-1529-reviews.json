@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/chatbot/pulls/1529/reviews?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:36.079374+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"64787fc3f2eee2fabca3b01c7a70e02d0b3406e3846fa63bef721b0e1b201e06\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "reviews",
+    "repositoryId": 642917329,
+    "repository": "vercel/chatbot",
+    "pullRequestId": 4017717586,
+    "records": [
+      {
+        "id": 4658204362,
+        "node_id": "PRR_kwDOJlIj0c8AAAABFaaOyg",
+        "body": "",
+        "state": "APPROVED",
+        "html_url": "https://github.com/vercel/chatbot/pull/1529#pullrequestreview-4658204362",
+        "submitted_at": "2026-07-08T21:54:14Z",
+        "commit_id": "1d24f490bf8941ac3aa01cf26222b6efabb9f395",
+        "user": {
+          "id": 39992,
+          "node_id": "MDQ6VXNlcjM5OTky",
+          "login": "gr2m",
+          "type": "User",
+          "html_url": "https://github.com/gr2m"
+        }
+      }
+    ]
+  }
+}

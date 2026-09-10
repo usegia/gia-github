@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/orgs/upstash/repos?type=public&sort=updated&direction=desc&per_page=100&page=1",
+  "observedAt": "2026-09-10T10:25:43.782367+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"96a7397bc6d347cc20b8654c9ea0d9d837e44d4696cd398c33ff3599e3108da5\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/organizations/74989412/repos?type=public&sort=updated&direction=desc&per_page=100&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "repositories",
+    "records": [
+      {
+        "id": 741829177,
+        "node_id": "R_kgDOLDdqOQ",
+        "name": "vector-js",
+        "full_name": "upstash/vector-js",
+        "html_url": "https://github.com/upstash/vector-js",
+        "description": "Upstash Vector JS SDK",
+        "fork": false,
+        "created_at": "2024-01-11T07:41:45Z",
+        "updated_at": "2026-06-30T16:45:26Z",
+        "pushed_at": "2026-03-09T11:53:38Z",
+        "homepage": "https://docs.upstash.com/vector",
+        "size": 1309,
+        "stargazers_count": 70,
+        "watchers_count": 70,
+        "language": "TypeScript",
+        "forks_count": 13,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 0,
+        "topics": [
+          "upstash",
+          "upstash-sdk",
+          "vector"
+        ],
+        "default_branch": "master",
+        "visibility": "public",
+        "owner": {
+          "id": 74989412,
+          "node_id": "MDEyOk9yZ2FuaXphdGlvbjc0OTg5NDEy",
+          "login": "upstash",
+          "type": "Organization",
+          "html_url": "https://github.com/upstash"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/bash-tool/contents/package.json",
+  "observedAt": "2026-09-10T10:28:44.717506+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"daa863954a87779057b453ba00b9c75c56a939b5\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "manifest",
+    "repositoryId": 1128648949,
+    "repository": "vercel-labs/bash-tool",
+    "content": {
+      "type": "file",
+      "encoding": "base64",
+      "size": 2252,
+      "name": "package.json",
+      "path": "package.json",
+      "content": "ewogICJuYW1lIjogImJhc2gtdG9vbCIsCiAgInB1Ymxpc2hDb25maWciOiB7\nCiAgICAiYWNjZXNzIjogInB1YmxpYyIKICB9LAogICJ2ZXJzaW9uIjogIjEu\nMy4xOSIsCiAgImRlc2NyaXB0aW9uIjogIkdlbmVyaWMgYmFzaCB0b29sIGZv\nciBBSSBhZ2VudHMsIGNvbXBhdGlibGUgd2l0aCBBSSBTREsiLAogICJ0eXBl\nIjogIm1vZHVsZSIsCiAgIm1haW4iOiAiZGlzdC9pbmRleC5qcyIsCiAgInR5\ncGVzIjogImRpc3QvaW5kZXguZC50cyIsCiAgImV4cG9ydHMiOiB7CiAgICAi\nLiI6IHsKICAgICAgInR5cGVzIjogIi4vZGlzdC9pbmRleC5kLnRzIiwKICAg\nICAgImltcG9ydCI6ICIuL2Rpc3QvaW5kZXguanMiCiAgICB9CiAgfSwKICAi\nZmlsZXMiOiBbCiAgICAiZGlzdCIsCiAgICAiTElDRU5TRSIsCiAgICAiUkVB\nRE1FLm1kIgogIF0sCiAgInNpZGVFZmZlY3RzIjogZmFsc2UsCiAgInNjcmlw\ndHMiOiB7CiAgICAiYnVpbGQiOiAidHNjIC1wIHRzY29uZmlnLmJ1aWxkLmpz\nb24gJiYgc2VkICcxLC9eLS0+L2QnIEFHRU5UUy5ucG0ubWQgPiBkaXN0L0FH\nRU5UUy5tZCIsCiAgICAidHlwZWNoZWNrIjogInRzYyAtLW5vRW1pdCAmJiB0\nc2MgLS1ub0VtaXQgLXAgdHNjb25maWcuZXhhbXBsZXMuanNvbiIsCiAgICAi\ndGVzdCI6ICJ2aXRlc3QgLS1leGNsdWRlICdzcmMvdG9vbC52ZXJjZWwuaW50\nZWdyYXRpb24udGVzdC50cyciLAogICAgInRlc3Q6cnVuIjogInZpdGVzdCBy\ndW4gLS1leGNsdWRlICdzcmMvdG9vbC52ZXJjZWwuaW50ZWdyYXRpb24udGVz\ndC50cyciLAogICAgInRlc3Q6dmVyY2VsIjogInZpdGVzdCBydW4gc3JjL3Rv\nb2wudmVyY2VsLmludGVncmF0aW9uLnRlc3QudHMgLS1zZXF1ZW5jZS5jb25j\ndXJyZW50IiwKICAgICJsaW50IjogImJpb21lIGNoZWNrIC4iLAogICAgImxp\nbnQ6Zml4IjogImJpb21lIGNoZWNrIC0td3JpdGUgLiIsCiAgICAiZm9ybWF0\nIjogImJpb21lIGZvcm1hdCAtLXdyaXRlIC4iLAogICAgImtuaXAiOiAia25p\ncCIsCiAgICAidmFsaWRhdGUiOiAicG5wbSBydW4gbGludCAmJiBwbnBtIHJ1\nbiBrbmlwICYmIHBucG0gcnVuIHR5cGVjaGVjayAmJiBwbnBtIHJ1biBidWls\nZCAmJiBwbnBtIHJ1biB0ZXN0OnJ1biIsCiAgICAicHJlcHVibGlzaE9ubHki\nOiAicG5wbSBydW4gdmFsaWRhdGUgJiYgcG5wbSBydW4gYnVpbGQiCiAgfSwK\nICAia2V5d29yZHMiOiBbCiAgICAiYmFzaCIsCiAgICAiYWkiLAogICAgInRv\nb2wiLAogICAgImFnZW50IiwKICAgICJhaS1zZGsiLAogICAgInNhbmRib3gi\nLAogICAgInZlcmNlbCIKICBdLAogICJhdXRob3IiOiAiVmVyY2VsLCBJbmMu\nIiwKICAibGljZW5zZSI6ICJNSVQiLAogICJyZXBvc2l0b3J5IjogewogICAg\nInR5cGUiOiAiZ2l0IiwKICAgICJ1cmwiOiAiZ2l0K2h0dHBzOi8vZ2l0aHVi\nLmNvbS92ZXJjZWwtbGFicy9iYXNoLXRvb2wuZ2l0IgogIH0sCiAgImJ1Z3Mi\nOiB7CiAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS92ZXJjZWwtbGFi\ncy9iYXNoLXRvb2wvaXNzdWVzIgogIH0sCiAgImhvbWVwYWdlIjogImh0dHBz\nOi8vZ2l0aHViLmNvbS92ZXJjZWwtbGFicy9iYXNoLXRvb2wjcmVhZG1lIiwK\nICAiZW5naW5lcyI6IHsKICAgICJub2RlIjogIj49MTgiCiAgfSwKICAiZGVw\nZW5kZW5jaWVzIjogewogICAgImZhc3QtZ2xvYiI6ICJeMy4zLjIiLAogICAg\nImp1c3QtYmFzaCI6ICJeMy4wLjEiLAogICAgInlhbWwiOiAiXjIuOC4zIiwK\nICAgICJ6b2QiOiAiXjMuMjMuOCIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMi\nOiB7CiAgICAiQGJpb21lanMvYmlvbWUiOiAiXjIuMy4xMSIsCiAgICAiQHR5\ncGVzL2pzb24tc2NoZW1hIjogIl43LjAuMTUiLAogICAgIkB0eXBlcy9ub2Rl\nIjogIl4yMi4xMC4wIiwKICAgICJAdmVyY2VsL3NhbmRib3giOiAiXjEuMi4w\nIiwKICAgICJhaSI6ICJeNy4wLjAiLAogICAgImtuaXAiOiAiXjUuODAuMCIs\nCiAgICAidHlwZXNjcmlwdCI6ICJeNS43LjAiLAogICAgInZpdGVzdCI6ICJe\nMi4xLjAiCiAgfSwKICAicGVlckRlcGVuZGVuY2llcyI6IHsKICAgICJAdmVy\nY2VsL3NhbmRib3giOiAiKiIsCiAgICAiYWkiOiAiXjYuMC4wIHx8IF43LjAu\nMCIsCiAgICAianVzdC1iYXNoIjogIl4yLjkuMyB8fCBeMy4wLjAiCiAgfSwK\nICAicGVlckRlcGVuZGVuY2llc01ldGEiOiB7CiAgICAianVzdC1iYXNoIjog\newogICAgICAib3B0aW9uYWwiOiB0cnVlCiAgICB9LAogICAgIkB2ZXJjZWwv\nc2FuZGJveCI6IHsKICAgICAgIm9wdGlvbmFsIjogdHJ1ZQogICAgfQogIH0K\nfQo=\n",
+      "sha": "daa863954a87779057b453ba00b9c75c56a939b5",
+      "url": "https://api.github.com/repos/vercel-labs/bash-tool/contents/package.json?ref=main",
+      "git_url": "https://api.github.com/repos/vercel-labs/bash-tool/git/blobs/daa863954a87779057b453ba00b9c75c56a939b5",
+      "html_url": "https://github.com/vercel-labs/bash-tool/blob/main/package.json"
+    }
+  }
+}

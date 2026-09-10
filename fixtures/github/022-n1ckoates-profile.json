@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/users/n1ckoates",
+  "observedAt": "2026-09-10T10:28:45.736108+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"b268784dd9a13d8e44dea9f737d63f19f824b8acf7c043f2e7912c99d5ed69cd\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "profiles",
+    "records": [
+      {
+        "id": 58091943,
+        "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+        "login": "n1ckoates",
+        "type": "User",
+        "html_url": "https://github.com/n1ckoates",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58091943?v=4",
+        "name": "Nick Oates",
+        "company": "@Vercel",
+        "blog": "https://nickoates.com",
+        "location": "pdx",
+        "bio": null,
+        "public_repos": 28,
+        "followers": 106,
+        "following": 0,
+        "created_at": "2019-11-22T21:46:00Z",
+        "updated_at": "2026-08-29T13:12:06Z"
+      }
+    ]
+  }
+}

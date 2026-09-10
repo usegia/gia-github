@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/rag-chat/pulls/28/files?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:40.693341+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"45858b5536bf6ef234fdfa2079c228992c499c3269df1404cca0722079317f17\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_request_files",
+    "repositoryId": 794140072,
+    "repository": "upstash/rag-chat",
+    "pullRequestId": 1994182370,
+    "records": [
+      {
+        "sha": "8495e039c6f5f8b5bfd2ae32c56bc3c092de296b",
+        "filename": "src/constants.ts",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 11,
+        "deletions": 0,
+        "changes": 11,
+        "blob_url": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Fconstants.ts",
+        "raw_url": "https://github.com/upstash/rag-chat/raw/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Fconstants.ts",
+        "patch": "@@ -37,3 +37,14 @@ export const DEFAULT_PROMPT: CustomPrompt = ({ context, question, chatHistory })\n \n   Question: ${question}\n   Helpful answer:`;\n+\n+export const DEFAULT_PROMPT_WITHOUT_RAG: CustomPrompt = ({ question, chatHistory }) =>\n+  `You are a friendly AI assistant.\n+    To help you answer the questions, a chat history will be provided.\n+    Answer the question at the end.\n+    -------------\n+    Chat history:\n+    ${chatHistory}\n+    -------------\n+    Question: ${question}\n+    Helpful answer:`;"
+      },
+      {
+        "sha": "ee3da7a3912b2bc22fcaa2110d61251b36638d63",
+        "filename": "src/rag-chat-base.ts",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 3,
+        "deletions": 5,
+        "changes": 8,
+        "blob_url": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat-base.ts",
+        "raw_url": "https://github.com/upstash/rag-chat/raw/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat-base.ts",
+        "patch": "@@ -7,7 +7,6 @@ import { ContextService } from \"./context-service\";\n import type { Database, VectorPayload } from \"./database\";\n import type { HistoryService } from \"./history-service\";\n import type { ChatOptions, PrepareChatResult, UpstashMessage } from \"./types\";\n-import { sanitizeQuestion } from \"./utils\";\n import type { InMemoryHistory } from \"./history-service/in-memory-history\";\n import type { UpstashRedisHistory } from \"./history-service/redis-custom-history\";\n import { ChatLogger } from \"./logger\";\n@@ -59,14 +58,13 @@ export class RAGChatBase {\n    * @returns Promise that resolves to PrepareChatResult, containing the sanitized question and retrieved context.\n    */\n   protected async prepareChat({\n-    question: input,\n+    question,\n     similarityThreshold,\n     topK,\n     namespace,\n   }: VectorPayload): Promise<PrepareChatResult> {\n     // Sanitize the input question to ensure consistency.\n-    await this.debug?.logSendPrompt(input);\n-    const question = sanitizeQuestion(input);\n+    await this.debug?.logSendPrompt(question);\n \n     this.debug?.startRetrieveContext();\n     // Retrieve context relevant to the sanitized question using vector operations.\n@@ -79,7 +77,7 @@ export class RAGChatBase {\n \n     await this.debug?.endRetrieveContext(context);\n     // Return the sanitized question and the retrieved context for further processing.\n-    return { question, context };\n+    return context;\n   }\n \n   protected async makeStreamingLLMRequest({"
+      },
+      {
+        "sha": "435ec9ea752431c9f73d6271b3121f2767d95709",
+        "filename": "src/rag-chat.test.ts",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 113,
+        "deletions": 4,
+        "changes": 117,
+        "blob_url": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat.test.ts",
+        "raw_url": "https://github.com/upstash/rag-chat/raw/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat.test.ts",
+        "patch": "@@ -4,7 +4,7 @@ import { Ratelimit } from \"@upstash/ratelimit\";\n import { Redis } from \"@upstash/redis\";\n import { Index } from \"@upstash/vector\";\n import { LangChainAdapter, StreamingTextResponse } from \"ai\";\n-import { afterAll, beforeAll, describe, expect, test } from \"bun:test\";\n+import { afterAll, afterEach, beforeAll, describe, expect, test } from \"bun:test\";\n import { RatelimitUpstashError } from \"./error\";\n import { upstash } from \"./models\";\n import { RAGChat } from \"./rag-chat\";\n@@ -543,7 +543,7 @@ describe(\"RAGChat pass options from constructor\", () => {\n   });\n });\n \n-describe(\"RAGChat init with upstash model - ozoz\", () => {\n+describe(\"RAGChat init with upstash model\", () => {\n   const namespace = \"japan\";\n   const vector = new Index({\n     token: process.env.UPSTASH_VECTOR_REST_TOKEN!,\n@@ -571,7 +571,6 @@ describe(\"RAGChat init with upstash model - ozoz\", () => {\n       await awaitUntilIndexed(vector);\n \n       const result = await ragChat.chat(\"Where is the capital of Japan?\", {\n-        metadataKey: \"text\",\n         namespace,\n         streaming: true,\n       });\n@@ -611,7 +610,6 @@ describe(\"RAGChat - chat usage with onHistoryFetched hook\", () => {\n \n       let firstHistoryContent = \"\";\n       await ragChat.chat(\"Where is the capital of Japan?\", {\n-        metadataKey: \"text\",\n         namespace,\n         onChatHistoryFetched(messages) {\n           firstHistoryContent = messages[0].content;\n@@ -623,3 +621,114 @@ describe(\"RAGChat - chat usage with onHistoryFetched hook\", () => {\n     { timeout: 30_000 }\n   );\n });\n+\n+describe(\"RAGChat - chat usage with disabled RAG \", () => {\n+  const namespace = \"japan\";\n+  const vector = new Index({\n+    token: process.env.UPSTASH_VECTOR_REST_TOKEN!,\n+    url: process.env.UPSTASH_VECTOR_REST_URL!,\n+  });\n+  const redis = Redis.fromEnv();\n+\n+  const ragChat = new RAGChat({\n+    vector,\n+    streaming: false,\n+    redis,\n+    model: upstash(\"meta-llama/Meta-Llama-3-8B-Instruct\", { apiKey: process.env.QSTASH_TOKEN! }),\n+  });\n+\n+  afterEach(async () => {\n+    await vector.reset({ namespace });\n+    await redis.flushdb();\n+  });\n+\n+  test(\n+    \"should be able to chat without rag not ask question\",\n+    async () => {\n+      await ragChat.context.add({\n+        type: \"text\",\n+        data: \"Tokyo is the Capital of Japan.\",\n+        options: { namespace },\n+      });\n+      await awaitUntilIndexed(vector);\n+\n+      const result = await ragChat.chat(\"Ankara is the capital of Turkey\", {\n+        namespace,\n+        disableRAG: true,\n+        prompt: ({ question }) => {\n+          return `Is the following a question? Answer \"YES\" if it is a question and \"NO\" if it is not.\n+              Input: ${question}\n+              Answer:`;\n+        },\n+      });\n+\n+      let actualResult = \"\";\n+      if (result.output.includes(\"YES\")) {\n+        const actualQuestion = await ragChat.chat(\"Where is the capital of Japan?\", {\n+          namespace,\n+        });\n+        actualResult = actualQuestion.output;\n+        expect(actualQuestion.output).toContain(\"Tokyo\");\n+      } else {\n+        expect(actualResult).not.toContain(\"Tokyo\");\n+      }\n+    },\n+    { timeout: 30_000 }\n+  );\n+\n+  test(\n+    \"should be able to chat without rag and ask question\",\n+    async () => {\n+      await ragChat.context.add({\n+        type: \"text\",\n+        data: \"Tokyo is the Capital of Japan.\",\n+        options: { namespace },\n+      });\n+      await awaitUntilIndexed(vector);\n+\n+      const result = await ragChat.chat(\"Where is the capital of Japan?\", {\n+        namespace,\n+        disableRAG: true,\n+        prompt: ({ question }) => {\n+          return `Is the following a question? Answer \"YES\" if it is a question and \"NO\" if it is not. Maku sure its either capitalized \"YES\" or \"NO\"\n+            Input: ${question}\n+            Answer:`;\n+        },\n+      });\n+\n+      let actualResult = \"\";\n+      if (result.output.includes(\"YES\")) {\n+        const actualQuestion = await ragChat.chat(\"Where is the capital of Japan?\", {\n+          namespace,\n+          prompt: ({ question, context }) => {\n+            return `Answer the question using following context. Give answer in all lowercase\"\n+              Context: ${context}\n+              Input: ${question}\n+              Answer:`;\n+          },\n+        });\n+        actualResult = actualQuestion.output;\n+        expect(actualQuestion.output.toLowerCase()).toContain(\"tokyo\");\n+      } else {\n+        expect(actualResult.toLowerCase()).not.toContain(\"tokyo\");\n+      }\n+    },\n+    { timeout: 30_000 }\n+  );\n+\n+  test(\n+    \"should be able to chat without rag and ask question with default disabled rag chat prompt\",\n+    async () => {\n+      await ragChat.chat(\"Tokyo is the capital of Japan.\", { disableRAG: true });\n+      await awaitUntilIndexed(vector);\n+\n+      const result = await ragChat.chat(\"Where is the capital of Japan?\", {\n+        namespace,\n+        disableRAG: true,\n+      });\n+\n+      expect(result.output.toLowerCase()).toContain(\"tokyo\");\n+    },\n+    { timeout: 30_000 }\n+  );\n+});"
+      },
+      {
+        "sha": "de8ff343b91afd818ffeaf763cfa4e28c3e63739",
+        "filename": "src/rag-chat.ts",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 25,
+        "deletions": 15,
+        "changes": 40,
+        "blob_url": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat.ts",
+        "raw_url": "https://github.com/upstash/rag-chat/raw/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Frag-chat.ts",
+        "patch": "@@ -8,9 +8,9 @@ import type { CustomPrompt } from \"./rag-chat-base\";\n import { RAGChatBase } from \"./rag-chat-base\";\n import { RateLimitService } from \"./ratelimit-service\";\n import type { ChatOptions, RAGChatConfig, UpstashDict } from \"./types\";\n-import { appendDefaultsIfNeeded, formatFacts } from \"./utils\";\n+import { appendDefaultsIfNeeded, formatFacts, sanitizeQuestion } from \"./utils\";\n import { RatelimitUpstashError } from \"./error\";\n-import { DEFAULT_NAMESPACE } from \"./constants\";\n+import { DEFAULT_NAMESPACE, DEFAULT_PROMPT_WITHOUT_RAG } from \"./constants\";\n \n type ChatReturnType<T extends Partial<ChatOptions>> = Promise<\n   T[\"streaming\"] extends true\n@@ -123,22 +123,26 @@ export class RAGChat extends RAGChatBase {\n         message: { content: input, role: \"user\" },\n         sessionId: optionsWithDefault.sessionId,\n       });\n-      // Sanitizes the given input by stripping all the newline chars. Then, queries vector db with sanitized question.\n-      const { question, context: originalContext } = await this.prepareChat({\n-        question: input,\n-        similarityThreshold: optionsWithDefault.similarityThreshold,\n-        topK: optionsWithDefault.topK,\n-        namespace: optionsWithDefault.namespace,\n-      });\n \n-      // clone context to avoid mutation issues\n-      const clonedContext = structuredClone(originalContext);\n-      const modifiedContext = await options?.onContextFetched?.(clonedContext);\n+      // Sanitizes the given input by stripping all the newline chars.\n+      const question = sanitizeQuestion(input);\n+      let context = \"\";\n+      if (!optionsWithDefault.disableRAG) {\n+        // Queries vector db with sanitized question.\n+        const originalContext = await this.prepareChat({\n+          question: input,\n+          similarityThreshold: optionsWithDefault.similarityThreshold,\n+          topK: optionsWithDefault.topK,\n+          namespace: optionsWithDefault.namespace,\n+        });\n+        // clone context to avoid mutation issues\n+        const clonedContext = structuredClone(originalContext);\n+        const modifiedContext = await options?.onContextFetched?.(clonedContext);\n \n-      const context = formatFacts((modifiedContext ?? originalContext).map(({ data }) => data));\n+        context = formatFacts((modifiedContext ?? originalContext).map(({ data }) => data));\n+      }\n \n       this.debug?.startRetrieveHistory();\n-\n       // Gets the chat history from redis or in-memory store.\n       const originalChatHistory = await this.history.getMessages({\n         sessionId: optionsWithDefault.sessionId,\n@@ -160,8 +164,14 @@ export class RAGChat extends RAGChatBase {\n         .join(\"\\n\");\n       await this.debug?.logRetrieveFormatHistory(formattedHistory);\n \n+      // If rag is disabled and prompt is missing use DEFAULT_PROMPT_WITHOUT_RAG this as LLM. Only includes chat history.\n+      if (optionsWithDefault.disableRAG && options && !options.prompt) {\n+        options.prompt = DEFAULT_PROMPT_WITHOUT_RAG;\n+      }\n       // Allows users to pass type-safe prompts\n-      const prompt = this.promptFn({ context, question, chatHistory: formattedHistory });\n+      const prompt =\n+        options?.prompt?.({ context, question, chatHistory: formattedHistory }) ??\n+        this.promptFn({ context, question, chatHistory: formattedHistory });\n       await this.debug?.logFinalPrompt(prompt);\n \n       // Either calls streaming or non-streaming function from RAGChatBase. Streaming function returns AsyncIterator and allows callbacks like onComplete."
+      },
+      {
+        "sha": "e14865d1303d26ee0d72f3486692a7e391d95bf5",
+        "filename": "src/types.ts",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 28,
+        "deletions": 25,
+        "changes": 53,
+        "blob_url": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Ftypes.ts",
+        "raw_url": "https://github.com/upstash/rag-chat/raw/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Ftypes.ts",
+        "patch": "@@ -56,21 +56,23 @@ export type ChatOptions = {\n    * Hook to access the retrieved context and modify as you wish.\n    */\n   onContextFetched?: (\n-    context: PrepareChatResult[\"context\"]\n-  ) => OptionalAsync<PrepareChatResult[\"context\"]> | OptionalAsync<undefined | null>;\n+    context: PrepareChatResult\n+  ) => OptionalAsync<PrepareChatResult> | OptionalAsync<undefined | null>;\n \n   /**\n    * Hook to access the retrieved history and modify as you wish.\n    */\n   onChatHistoryFetched?: (\n     messages: UpstashMessage[]\n   ) => OptionalAsync<UpstashMessage[]> | OptionalAsync<undefined | null>;\n+\n+  /**\n+   * Allows disabling RAG and use chat as LLM in combination with prompt. This will give you ability to build your own pipelines.\n+   */\n+  disableRAG?: boolean;\n } & CommonChatAndRAGOptions;\n \n-export type PrepareChatResult = {\n-  question: string;\n-  context: { data: string; id: string }[];\n-};\n+export type PrepareChatResult = { data: string; id: string }[];\n \n /**Config needed to initialize RAG Chat SDK */\n export type RAGChatConfig = {\n@@ -86,26 +88,7 @@ export type RAGChatConfig = {\n     })\n   */\n   model?: LLMClient | ChatOpenAI;\n-  /**\n-     * If no Index name or instance is provided, falls back to the default.\n-     * @default\n-          PromptTemplate.fromTemplate(`You are a friendly AI assistant augmented with an Upstash Vector Store.\n-          To help you answer the questions, a context will be provided. This context is generated by querying the vector store with the user question.\n-          Answer the question at the end using only the information available in the context and chat history.\n-          If the answer is not available in the chat history or context, do not answer the question and politely let the user know that you can only answer if the answer is available in context or the chat history.\n \n-          -------------\n-          Chat history:\n-          {chat_history}\n-          -------------\n-          Context:\n-          {context}\n-          -------------\n-\n-          Question: {question}\n-          Helpful answer:`)\n-     */\n-  prompt?: CustomPrompt;\n   /**\n      * Ratelimit instance\n      * @example new Ratelimit({\n@@ -157,6 +140,26 @@ export type CommonChatAndRAGOptions = {\n    * @default \"upstash-rag-chat-ratelimit-session\"\n    */\n   ratelimitSessionId?: string;\n+  /**\n+     * If no Index name or instance is provided, falls back to the default.\n+     * @default\n+          PromptTemplate.fromTemplate(`You are a friendly AI assistant augmented with an Upstash Vector Store.\n+          To help you answer the questions, a context will be provided. This context is generated by querying the vector store with the user question.\n+          Answer the question at the end using only the information available in the context and chat history.\n+          If the answer is not available in the chat history or context, do not answer the question and politely let the user know that you can only answer if the answer is available in context or the chat history.\n+\n+          -------------\n+          Chat history:\n+          {chat_history}\n+          -------------\n+          Context:\n+          {context}\n+          -------------\n+\n+          Question: {question}\n+          Helpful answer:`)\n+     */\n+  prompt?: CustomPrompt;\n };\n \n export type HistoryOptions = Pick<ChatOptions, \"historyLength\" | \"sessionId\">;"
+      },
+      {
+        "sha": "60935040a89476ce907a2399eeb1615faa1c6d6c",
+        "filename": "src/utils.ts",
+        "previous_filename": null,
+        "status": "modified",
+        "additions": 5,
+        "deletions": 1,
+        "changes": 6,
+        "blob_url": "https://github.com/upstash/rag-chat/blob/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Futils.ts",
+        "raw_url": "https://github.com/upstash/rag-chat/raw/77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7/src%2Futils.ts",
+        "patch": "@@ -31,11 +31,15 @@ export const formatChatHistory = (chatHistory: BaseMessage[]) => {\n export function appendDefaultsIfNeeded(\n   options: Partial<ChatOptions> | undefined\n ): Required<\n-  Omit<ChatOptions, \"ratelimitDetails\" | \"onChunk\" | \"onContextFetched\" | \"onChatHistoryFetched\">\n+  Omit<\n+    ChatOptions,\n+    \"ratelimitDetails\" | \"onChunk\" | \"onContextFetched\" | \"onChatHistoryFetched\" | \"prompt\"\n+  >\n > {\n   return {\n     streaming: false,\n     metadata: {},\n+    disableRAG: false,\n     sessionId: DEFAULT_CHAT_SESSION_ID,\n     ratelimitSessionId: DEFAULT_CHAT_RATELIMIT_SESSION_ID,\n     similarityThreshold: DEFAULT_SIMILARITY_THRESHOLD,"
+      }
+    ],
+    "headSha": "77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7"
+  }
+}

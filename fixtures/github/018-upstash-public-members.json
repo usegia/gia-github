@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/orgs/upstash/public_members?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:25:21.414018+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"4d1751f25ae0ae041325bbe89829f507e0eadf650d109e59995bcb938f5dd102\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "memberships",
+    "organization": {
+      "id": 74989412,
+      "node_id": "MDEyOk9yZ2FuaXphdGlvbjc0OTg5NDEy",
+      "login": "upstash",
+      "type": "Organization",
+      "html_url": "https://github.com/upstash"
+    },
+    "records": []
+  }
+}

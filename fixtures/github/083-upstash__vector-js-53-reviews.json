@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/vector-js/pulls/53/reviews?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:36.721538+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"4ec872445c24cd721427193b1adba049ef70330a7ca2e1169d1e3ae2a93fde48\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "reviews",
+    "repositoryId": 741829177,
+    "repository": "upstash/vector-js",
+    "pullRequestId": 2252052632,
+    "records": [
+      {
+        "id": 2523012633,
+        "node_id": "PRR_kwDOLDdqOc6WYh4Z",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523012633",
+        "submitted_at": "2024-12-26T09:43:12Z",
+        "commit_id": "e34429e45511f7adbd8c2a3cc670394f87e9ee09",
+        "user": {
+          "id": 29387993,
+          "node_id": "MDQ6VXNlcjI5Mzg3OTkz",
+          "login": "mdumandag",
+          "type": "User",
+          "html_url": "https://github.com/mdumandag"
+        }
+      },
+      {
+        "id": 2523034423,
+        "node_id": "PRR_kwDOLDdqOc6WYnM3",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523034423",
+        "submitted_at": "2024-12-26T10:03:40Z",
+        "commit_id": "e34429e45511f7adbd8c2a3cc670394f87e9ee09",
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        }
+      },
+      {
+        "id": 2523790523,
+        "node_id": "PRR_kwDOLDdqOc6Wbfy7",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523790523",
+        "submitted_at": "2024-12-27T07:51:49Z",
+        "commit_id": "9fe82ca85784489218e3ede24944948e586dab7b",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      },
+      {
+        "id": 2523795456,
+        "node_id": "PRR_kwDOLDdqOc6WbhAA",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523795456",
+        "submitted_at": "2024-12-27T07:58:26Z",
+        "commit_id": "9fe82ca85784489218e3ede24944948e586dab7b",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      },
+      {
+        "id": 2523795851,
+        "node_id": "PRR_kwDOLDdqOc6WbhGL",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523795851",
+        "submitted_at": "2024-12-27T07:58:59Z",
+        "commit_id": "9fe82ca85784489218e3ede24944948e586dab7b",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      },
+      {
+        "id": 2523917833,
+        "node_id": "PRR_kwDOLDdqOc6Wb-4J",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523917833",
+        "submitted_at": "2024-12-27T10:17:45Z",
+        "commit_id": "9fe82ca85784489218e3ede24944948e586dab7b",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      },
+      {
+        "id": 2523918379,
+        "node_id": "PRR_kwDOLDdqOc6Wb_Ar",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523918379",
+        "submitted_at": "2024-12-27T10:18:27Z",
+        "commit_id": "9fe82ca85784489218e3ede24944948e586dab7b",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      },
+      {
+        "id": 2523920027,
+        "node_id": "PRR_kwDOLDdqOc6Wb_ab",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2523920027",
+        "submitted_at": "2024-12-27T10:20:41Z",
+        "commit_id": "9fe82ca85784489218e3ede24944948e586dab7b",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      },
+      {
+        "id": 2525360428,
+        "node_id": "PRR_kwDOLDdqOc6WhfEs",
+        "body": "",
+        "state": "COMMENTED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2525360428",
+        "submitted_at": "2024-12-30T09:20:07Z",
+        "commit_id": "9fe82ca85784489218e3ede24944948e586dab7b",
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        }
+      },
+      {
+        "id": 2525740647,
+        "node_id": "PRR_kwDOLDdqOc6Wi75n",
+        "body": "",
+        "state": "DISMISSED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2525740647",
+        "submitted_at": "2024-12-30T15:54:44Z",
+        "commit_id": "56529db48f5848785105be92ab93b26726a58933",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      },
+      {
+        "id": 2526300812,
+        "node_id": "PRR_kwDOLDdqOc6WlEqM",
+        "body": "",
+        "state": "APPROVED",
+        "html_url": "https://github.com/upstash/vector-js/pull/53#pullrequestreview-2526300812",
+        "submitted_at": "2024-12-31T09:17:09Z",
+        "commit_id": "e5020c6f5dcc106b1d2c7c813e08b808492e286a",
+        "user": {
+          "id": 88107904,
+          "node_id": "MDQ6VXNlcjg4MTA3OTA0",
+          "login": "fahreddinozcan",
+          "type": "User",
+          "html_url": "https://github.com/fahreddinozcan"
+        }
+      }
+    ]
+  }
+}

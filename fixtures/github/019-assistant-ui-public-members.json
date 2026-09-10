@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/orgs/assistant-ui/public_members?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:25:21.039569+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"d969649dbefc9ae87557c5982100d81dbe600ec6a3d69cdd06abe46b59e8fd46\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "memberships",
+    "organization": {
+      "id": 189563271,
+      "node_id": "O_kgDOC0yBhw",
+      "login": "assistant-ui",
+      "type": "Organization",
+      "html_url": "https://github.com/assistant-ui"
+    },
+    "records": [
+      {
+        "id": 115853816,
+        "node_id": "U_kgDOBufJ-A",
+        "login": "ShobhitPatra",
+        "type": "User",
+        "html_url": "https://github.com/ShobhitPatra"
+      },
+      {
+        "id": 1394504,
+        "node_id": "MDQ6VXNlcjEzOTQ1MDQ=",
+        "login": "Yonom",
+        "type": "User",
+        "html_url": "https://github.com/Yonom"
+      }
+    ]
+  }
+}

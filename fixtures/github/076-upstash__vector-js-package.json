@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/vector-js/contents/package.json",
+  "observedAt": "2026-09-10T10:28:44.373279+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"fbf5fe03593e5fe0c31d2885eb28c6fa5c2b4086\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "manifest",
+    "repositoryId": 741829177,
+    "repository": "upstash/vector-js",
+    "content": {
+      "type": "file",
+      "encoding": "base64",
+      "size": 1577,
+      "name": "package.json",
+      "path": "package.json",
+      "content": "ewogICJuYW1lIjogIkB1cHN0YXNoL3ZlY3RvciIsCiAgInZlcnNpb24iOiAi\nMS4xLjciLAogICJhdXRob3IiOiAiT2d1emhhbiBPbGd1bmN1IDxvZ3V6aGFu\nQHVwc3Rhc2guY29tPiIsCiAgInJlcG9zaXRvcnkiOiB7CiAgICAidHlwZSI6\nICJnaXQiLAogICAgInVybCI6ICJnaXRAZ2l0aHViLmNvbTp1cHN0YXNoL3Zl\nY3Rvci1qcy5naXQiCiAgfSwKICAiZXhwb3J0cyI6IHsKICAgICIuIjogewog\nICAgICAiaW1wb3J0IjogIi4vZGlzdC9ub2RlanMubWpzIiwKICAgICAgInJl\ncXVpcmUiOiAiLi9kaXN0L25vZGVqcy5qcyIKICAgIH0sCiAgICAiLi9jbG91\nZGZsYXJlIjogewogICAgICAiaW1wb3J0IjogIi4vZGlzdC9jbG91ZGZsYXJl\nLm1qcyIsCiAgICAgICJyZXF1aXJlIjogIi4vZGlzdC9jbG91ZGZsYXJlLmpz\nIgogICAgfSwKICAgICIuL25vZGVqcyI6IHsKICAgICAgImltcG9ydCI6ICIu\nL2Rpc3Qvbm9kZWpzLm1qcyIsCiAgICAgICJyZXF1aXJlIjogIi4vZGlzdC9u\nb2RlanMuanMiCiAgICB9CiAgfSwKICAibWFpbiI6ICIuL2Rpc3Qvbm9kZWpz\nLmpzIiwKICAibW9kdWxlIjogIi4vZGlzdC9ub2RlanMubWpzIiwKICAidHlw\nZXMiOiAiLi9kaXN0L25vZGVqcy5kLnRzIiwKICAiZGV2RGVwZW5kZW5jaWVz\nIjogewogICAgIkBjb21taXRsaW50L2NsaSI6ICJeMTguNi4wIiwKICAgICJA\nY29tbWl0bGludC9jb25maWctY29udmVudGlvbmFsIjogIl4xOC42LjAiLAog\nICAgIkB0eXBlc2NyaXB0LWVzbGludC9lc2xpbnQtcGx1Z2luIjogIl44LjQu\nMCIsCiAgICAiYnVuLXR5cGVzIjogImxhdGVzdCIsCiAgICAiZXNsaW50Ijog\nIjkuMTAuMCIsCiAgICAiZXNsaW50LXBsdWdpbi11bmljb3JuIjogIl41NS4w\nLjAiLAogICAgImh1c2t5IjogIl44LjAuMyIsCiAgICAicHJldHRpZXIiOiAi\nXjMuMy4zIiwKICAgICJ0c3VwIjogImxhdGVzdCIsCiAgICAidHlwZXNjcmlw\ndCI6ICJeNS4wLjAiLAogICAgInZpdGVzdCI6ICJeMS4yLjIiCiAgfSwKICAi\nYnVncyI6IHsKICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL3Vwc3Rh\nc2gvdmVjdG9yL2lzc3VlcyIKICB9LAogICJkZXNjcmlwdGlvbiI6ICJBbiBI\nVFRQL1JFU1QgYmFzZWQgVmVjdG9yIERCIGNsaWVudCBidWlsdCBvbiB0b3Ag\nb2YgVXBzdGFzaCBSRVNUIEFQSS4iLAogICJmaWxlcyI6IFsKICAgICJkaXN0\nIgogIF0sCiAgImhvbWVwYWdlIjogImh0dHBzOi8vdXBzdGFzaC5jb20vdmVj\ndG9yIiwKICAia2V5d29yZHMiOiBbCiAgICAidmVjdG9yIiwKICAgICJ1cHN0\nYXNoIiwKICAgICJkYiIKICBdLAogICJsaWNlbnNlIjogIk1JVCIsCiAgInNj\ncmlwdHMiOiB7CiAgICAidGVzdCI6ICJidW4gdGVzdCBzcmMgLS1jb3ZlcmFn\nZSAtLWJhaWwgLS1jb3ZlcmFnZVNraXBUZXN0RmlsZXM9W3Rlc3QtdXRpbHMu\ndHNdIC0tdGltZW91dCAyMDAwMCIsCiAgICAiZm10IjogInByZXR0aWVyIC0t\nd3JpdGUgLiIsCiAgICAibGludCI6ICJ0c2MgJiYgZXNsaW50IFwic3JjLyoq\nLyoue2pzLHRzLHRzeH1cIiAtLXF1aWV0IC0tZml4IiwKICAgICJidWlsZCI6\nICJ0c3VwICIsCiAgICAicHJlcGFyZSI6ICJodXNreSBpbnN0YWxsIgogIH0K\nfQo=\n",
+      "sha": "fbf5fe03593e5fe0c31d2885eb28c6fa5c2b4086",
+      "url": "https://api.github.com/repos/upstash/vector-js/contents/package.json?ref=master",
+      "git_url": "https://api.github.com/repos/upstash/vector-js/git/blobs/fbf5fe03593e5fe0c31d2885eb28c6fa5c2b4086",
+      "html_url": "https://github.com/upstash/vector-js/blob/master/package.json"
+    }
+  }
+}

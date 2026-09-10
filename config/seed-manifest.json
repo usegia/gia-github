@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "organizations": ["vercel", "vercel-labs", "upstash", "assistant-ui"],
+  "repositories": [
+    {
+      "id": "644461337",
+      "fullName": "vercel/ai"
+    },
+    {
+      "id": "642917329",
+      "fullName": "vercel/chatbot"
+    },
+    {
+      "id": "869760181",
+      "fullName": "vercel-labs/natural-language-postgres"
+    },
+    {
+      "id": "1138349022",
+      "fullName": "vercel-labs/knowledge-agent-template"
+    },
+    {
+      "id": "1163569028",
+      "fullName": "vercel-labs/github-tools"
+    },
+    {
+      "id": "1128648949",
+      "fullName": "vercel-labs/bash-tool"
+    },
+    {
+      "id": "1135322438",
+      "fullName": "vercel-labs/ai-python"
+    },
+    {
+      "id": "900901983",
+      "fullName": "vercel-labs/ai-facts"
+    },
+    {
+      "id": "931560949",
+      "fullName": "vercel-labs/ai-sdk-persistence-db"
+    },
+    {
+      "id": "794140072",
+      "fullName": "upstash/rag-chat"
+    },
+    {
+      "id": "848693066",
+      "fullName": "upstash/rag-chat-component"
+    },
+    {
+      "id": "739473584",
+      "fullName": "upstash/vector-py"
+    },
+    {
+      "id": "741829177",
+      "fullName": "upstash/vector-js"
+    },
+    {
+      "id": "1274085842",
+      "fullName": "upstash/agentkit"
+    },
+    {
+      "id": "722184017",
+      "fullName": "assistant-ui/assistant-ui"
+    }
+  ],
+  "pullRequestPages": 1,
+  "pullRequestsPerPage": 30,
+  "windowDays": 180,
+  "maximumProfiles": 150,
+  "maximumReviewedPullRequests": 30,
+  "maximumPullRequestFiles": 15
+}

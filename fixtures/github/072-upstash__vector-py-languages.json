@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/vector-py/languages",
+  "observedAt": "2026-09-10T10:28:30.018128+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"fe1fda539e77319d0af62c9d20916ae7f720365ff69b0f089229159f3ee98815\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 739473584,
+    "repository": "upstash/vector-py",
+    "records": {
+      "Python": 224493
+    }
+  }
+}

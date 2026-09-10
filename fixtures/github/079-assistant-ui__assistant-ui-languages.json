@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/assistant-ui/assistant-ui/languages",
+  "observedAt": "2026-09-10T10:28:32.461620+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"5e3c39f42a839abb95666d1b2dd6c7b155d5590412dcc828f55296e1d7a6aae3\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 722184017,
+    "repository": "assistant-ui/assistant-ui",
+    "records": {
+      "TypeScript": 19471952,
+      "MDX": 2979776,
+      "Python": 359608,
+      "JavaScript": 315391,
+      "CSS": 77332,
+      "Vue": 34709,
+      "Shell": 31201,
+      "HTML": 5148,
+      "Svelte": 1440
+    }
+  }
+}

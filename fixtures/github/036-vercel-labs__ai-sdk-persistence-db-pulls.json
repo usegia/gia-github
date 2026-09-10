@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-sdk-persistence-db/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:42.461448+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"280697b41f0f49002266a0f21d4ffde77a56b4ee781c40b166339e456c386ee1\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 931560949,
+    "repository": "vercel-labs/ai-sdk-persistence-db",
+    "records": [
+      {
+        "id": 3041654226,
+        "node_id": "PR_kwDON4Z99c61S_XS",
+        "number": 10,
+        "state": "closed",
+        "title": "Migrate to Streamdown",
+        "body": "This pull request refactors markdown rendering in the chat UI to use the new `streamdown` library, removes old markdown dependencies, and updates global styling and Tailwind configuration for improved theme support and consistency. The most important changes are listed below.\r\n\r\n**Markdown Rendering Refactor:**\r\n\r\n* Replaced the custom `MemoizedMarkdown` component and its dependencies (`marked`, `react-markdown`) with the `Streamdown` component for rendering markdown in chat messages (`app/chat/[id]/chat.tsx`, `app/chat/[id]/memoized-markdown.tsx`, `package.json`). ([app/chat/[id]/chat.tsxL8-R8](diffhunk://#diff-8efcc1be1e15529a35787d815f565a8db1092383c9ed7ceb47b6606e7b6f368bL8-R8), [app/chat/[id]/chat.tsxL80-R88](diffhunk://#diff-8efcc1be1e15529a35787d815f565a8db1092383c9ed7ceb47b6606e7b6f368bL80-R88), [app/chat/[id]/memoized-markdown.tsxL1-L32](diffhunk://#diff-05c8c5c624327cedc2a5348b6148772953623e5403cc20146ab44a7be2d2b4b5L1-L32), [package.jsonL16-R25](diffhunk://#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519L16-R25))\r\n\r\n**Dependency Updates:**\r\n\r\n* Removed unused markdown libraries (`marked`, `react-markdown`, `@tailwindcss/typography`) and added `streamdown` and `tailwindcss-animate` to dependencies (`package.json`).\r\n\r\n**Tailwind and Styling Improvements:**\r\n\r\n* Overhauled global CSS variables for color theming, added support for both light and dark modes, and applied background and text color via Tailwind classes (`app/globals.css`).\r\n* Updated Tailwind configuration to use new color variables, added container settings, border radius, font family, keyframes, and included the `tailwindcss-animate` plugin. Also added support for `streamdown` styles (`tailwind.config.ts`).\r\n\r\nThese changes modernize markdown rendering, simplify dependencies, and improve theme consistency across the application.",
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/pull/10",
+        "created_at": "2025-11-24T22:21:40Z",
+        "updated_at": "2025-12-06T19:33:49Z",
+        "closed_at": "2025-12-06T19:33:49Z",
+        "merged_at": "2025-12-06T19:33:49Z",
+        "merge_commit_sha": "43ca92768d41161d21c0bf645d58f8cb620070d3",
+        "draft": false,
+        "user": {
+          "id": 4142719,
+          "node_id": "MDQ6VXNlcjQxNDI3MTk=",
+          "login": "haydenbleasel",
+          "type": "User",
+          "html_url": "https://github.com/haydenbleasel"
+        },
+        "head": {
+          "sha": "39389e00b7e67cda766a8aa794dbfc15e9ba6779",
+          "ref": "streamdown"
+        },
+        "base": {
+          "sha": "28e59d1a19ba772bcf4163107936ad3aa53f73e1",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3076854946,
+        "node_id": "PR_kwDON4Z99c63ZRSi",
+        "number": 11,
+        "state": "closed",
+        "title": "chore: upgrade Next.js to 15.1.9 (CVE-2025-55182)",
+        "body": "## Summary\n\nUpgrade Next.js from 15.1.7 to 15.1.9 to fix CVE-2025-55182.\n\n## CVE Details\n\nCVE-2025-55182 is a critical Remote Code Execution vulnerability in React Server Components.\n\n## Changes\n\n- Updated `next` dependency to `^15.1.9`\n- Fixed any type/lint/build errors caused by the upgrade",
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/pull/11",
+        "created_at": "2025-12-06T02:06:23Z",
+        "updated_at": "2025-12-06T04:56:34Z",
+        "closed_at": "2025-12-06T04:56:34Z",
+        "merged_at": "2025-12-06T04:56:34Z",
+        "merge_commit_sha": "28e59d1a19ba772bcf4163107936ad3aa53f73e1",
+        "draft": false,
+        "user": {
+          "id": 366502,
+          "node_id": "MDQ6VXNlcjM2NjUwMg==",
+          "login": "ctate",
+          "type": "User",
+          "html_url": "https://github.com/ctate"
+        },
+        "head": {
+          "sha": "5ed9679783d36295e99a1b8957023b28277bed32",
+          "ref": "ctate/upgrade-next"
+        },
+        "base": {
+          "sha": "1c2f43d78afa08f53492cf47dfdcd84ba37aaa27",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2703405317,
+        "node_id": "PR_kwDON4Z99c6hIrEF",
+        "number": 5,
+        "state": "closed",
+        "title": "add start step",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/pull/5",
+        "created_at": "2025-07-29T09:19:16Z",
+        "updated_at": "2025-07-29T09:21:04Z",
+        "closed_at": "2025-07-29T09:21:04Z",
+        "merged_at": "2025-07-29T09:21:04Z",
+        "merge_commit_sha": "1c2f43d78afa08f53492cf47dfdcd84ba37aaa27",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "a929af667c4402aaf35f420702336e2aeea90a84",
+          "ref": "na/f7034a1e"
+        },
+        "base": {
+          "sha": "4de2bb632d30610d00784c2fe67755f9ca577ce1",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2694311814,
+        "node_id": "PR_kwDON4Z99c6gl--G",
+        "number": 4,
+        "state": "closed",
+        "title": "feat: update tool schema to use shared cols",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/pull/4",
+        "created_at": "2025-07-25T08:53:26Z",
+        "updated_at": "2025-07-25T08:53:41Z",
+        "closed_at": "2025-07-25T08:53:41Z",
+        "merged_at": "2025-07-25T08:53:41Z",
+        "merge_commit_sha": "4de2bb632d30610d00784c2fe67755f9ca577ce1",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "ab839f8aa3d17de1fd92993821fd7fb90d86f8fd",
+          "ref": "na/f7034a1e"
+        },
+        "base": {
+          "sha": "6aeda89a9752a1af3736ea4347ad969afa16d593",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2512242556,
+        "node_id": "PR_kwDON4Z99c6Vvcd8",
+        "number": 2,
+        "state": "closed",
+        "title": "update to onStepFinish",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/pull/2",
+        "created_at": "2025-05-11T17:57:55Z",
+        "updated_at": "2025-07-22T16:13:22Z",
+        "closed_at": "2025-07-22T16:13:22Z",
+        "merged_at": null,
+        "merge_commit_sha": "80e50a4fe98cbe30c6ebb0152bbd1bb31942248d",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "e611ff97c0518af7ecf94f02f0cfc329576f2b51",
+          "ref": "na/save-on-step-finish"
+        },
+        "base": {
+          "sha": "9b90886a832c9fbe816144cd753bcf4c1958470d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2587457062,
+        "node_id": "PR_kwDON4Z99c6aOXYm",
+        "number": 3,
+        "state": "closed",
+        "title": "chore: update to v5",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/pull/3",
+        "created_at": "2025-06-12T13:54:23Z",
+        "updated_at": "2025-07-22T15:45:43Z",
+        "closed_at": "2025-07-22T15:45:43Z",
+        "merged_at": "2025-07-22T15:45:43Z",
+        "merge_commit_sha": "b6676bfc384df74d39f15e6ae6be92f8a8d470fc",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "b7c20ec79a99e8010be71c5a1f1541e12368bc86",
+          "ref": "na/update-to-v5"
+        },
+        "base": {
+          "sha": "9b90886a832c9fbe816144cd753bcf4c1958470d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 2488761823,
+        "node_id": "PR_kwDON4Z99c6UV33f",
+        "number": 1,
+        "state": "closed",
+        "title": "update to parts",
+        "body": null,
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db/pull/1",
+        "created_at": "2025-04-29T12:49:01Z",
+        "updated_at": "2025-04-29T13:43:01Z",
+        "closed_at": "2025-04-29T13:43:00Z",
+        "merged_at": "2025-04-29T13:43:00Z",
+        "merge_commit_sha": "9b90886a832c9fbe816144cd753bcf4c1958470d",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "5a288dfc6854bf5bd2bdbfc6ac070cb021b26fc3",
+          "ref": "na/update-to-parts"
+        },
+        "base": {
+          "sha": "b1c681f84a4efa2acbeafa926289a83526b38239",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}

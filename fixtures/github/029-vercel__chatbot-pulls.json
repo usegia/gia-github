@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/chatbot/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:34.751490+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"089a9baeec1f4d9f2e85d7d6274c7a39abe0262c52e13d755e62b2956b6b2db8\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/642917329/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 642917329,
+    "repository": "vercel/chatbot",
+    "records": [
+      {
+        "id": 4020997324,
+        "node_id": "PR_kwDOJlIj0c7vq4zM",
+        "number": 1530,
+        "state": "closed",
+        "title": "新增风险测试解决方案",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1530",
+        "created_at": "2026-07-09T09:49:36Z",
+        "updated_at": "2026-09-03T22:05:22Z",
+        "closed_at": "2026-09-03T22:05:22Z",
+        "merged_at": null,
+        "merge_commit_sha": "445afaa630ff556a8e06b5c005f79c4a4d057d62",
+        "draft": false,
+        "user": {
+          "id": 274821851,
+          "node_id": "U_kgDOEGFy2w",
+          "login": "yewyile0915-prog",
+          "type": "User",
+          "html_url": "https://github.com/yewyile0915-prog"
+        },
+        "head": {
+          "sha": "0dce3ca6f6e2270afc58910e1e2177344c5cf5cb",
+          "ref": "patch-3"
+        },
+        "base": {
+          "sha": "c2f8235e1f3ea903ad8b7f61447c4f74164b5c58",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4339519402,
+        "node_id": "PR_kwDOJlIj0c8AAAABAqfPqg",
+        "number": 1543,
+        "state": "closed",
+        "title": "Create webpack.yml",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1543",
+        "created_at": "2026-08-22T19:27:45Z",
+        "updated_at": "2026-09-03T22:05:03Z",
+        "closed_at": "2026-09-03T22:05:02Z",
+        "merged_at": null,
+        "merge_commit_sha": "958ea7837767444813722bb63b2e74fa410289cc",
+        "draft": false,
+        "user": {
+          "id": 263799550,
+          "node_id": "U_kgDOD7lC_g",
+          "login": "Flompe",
+          "type": "User",
+          "html_url": "https://github.com/Flompe"
+        },
+        "head": {
+          "sha": "45d86b35eac6f09d53f5e4d12b532bab9eb35967",
+          "ref": "main"
+        },
+        "base": {
+          "sha": "c2f8235e1f3ea903ad8b7f61447c4f74164b5c58",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4401456048,
+        "node_id": "PR_kwDOJlIj0c8AAAABBljjsA",
+        "number": 1546,
+        "state": "closed",
+        "title": "Route models through HypO OpenAI-compatible gateway",
+        "body": "Replace Vercel AI Gateway with custom OpenAI-compatible provider. Simplify model list, selector UI, chat route accordingly.",
+        "html_url": "https://github.com/vercel/chatbot/pull/1546",
+        "created_at": "2026-08-31T10:33:19Z",
+        "updated_at": "2026-08-31T10:34:45Z",
+        "closed_at": "2026-08-31T10:34:35Z",
+        "merged_at": null,
+        "merge_commit_sha": "f72280ca960b726703cb1979baf051261bc19773",
+        "draft": false,
+        "user": {
+          "id": 141974463,
+          "node_id": "U_kgDOCHZbvw",
+          "login": "marvin3dp",
+          "type": "User",
+          "html_url": "https://github.com/marvin3dp"
+        },
+        "head": {
+          "sha": "27aef44aa4fbed953394809864fbb8833ad7747e",
+          "ref": "hypo"
+        },
+        "base": {
+          "sha": "c2f8235e1f3ea903ad8b7f61447c4f74164b5c58",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4301575573,
+        "node_id": "PR_kwDOJlIj0c8AAAABAGTVlQ",
+        "number": 1541,
+        "state": "closed",
+        "title": "feat: add an on-device model backed by Chrome built-in AI",
+        "body": "## What\n\nAdds a **Built-in AI** entry to the model selector, which runs the chat on-device using the Chrome/Edge built-in AI APIs instead of the gateway. It only appears on browsers that expose those APIs; everywhere else the selector is byte-for-byte what it is today.\n\nIt's backed by [`@browser-ai/core`](https://browser-ai.dev/), an AI SDK community provider ([listed on ai-sdk.dev](https://ai-sdk.dev/providers/community-providers), and the subject of the Chrome for Developers post [Use the Prompt API with the Vercel AI SDK](https://developer.chrome.com/blog/prompt-api-with-vercel-ai)). Disclosure: I maintain it.\n\n## Why\n\nThe template is the reference for \"how do I build this with the AI SDK,\" and in-browser inference is the one provider shape it can't currently demonstrate — not because the AI SDK can't do it, but because the whole chat path assumes a server round-trip. This shows the seam where that assumption can be relaxed, and it's genuinely useful on its own: no key, no gateway spend, and no prompt text leaving the device.\n\n## How\n\nThree pieces, all additive:\n\n- **`ModelAwareChatTransport`** (`lib/ai/browser-transport.ts`) chooses between the existing `DefaultChatTransport` and a browser transport per request. `useChat` reads its transport once, so the switch has to happen inside the transport rather than by swapping instances. The gateway path is untouched — same `prepareSendMessagesRequest`, same body, same `/api/chat`.\n- **Capability-gated selector entry.** `useBrowserAISupport` checks after mount (the server render has no `LanguageModel` global), so nothing changes for unsupported browsers and there's no hydration mismatch.\n- **`POST /api/chat/local`** persists the exchange once generation finishes, since the stream never reaches the server and `/api/chat` therefore never writes it. It reuses the same auth check, IP rate limit, entitlement check, `saveChat`/`saveMessages`, and title generation as `/api/chat` rather than introducing a second persistence story.\n\n## Scope and trade-offs\n\nThe on-device path is text only: no tools, no artifacts, no resumable streams. None of those are reachable without a server round-trip, so it's scoped down rather than the gateway models being degraded to match. `reconnectToStream` returns `null` for the same reason.\n\nAdds one dependency (`@browser-ai/core`), client-side only.\n\n`tsc --noEmit`, `biome check`, and `next build` all pass; `/api/chat/local` shows up in the route table.\n\nHappy to split the persistence route out, gate the whole thing behind a flag, or drop it if this is more surface than you want in the template — I'd rather ask than guess.\n",
+        "html_url": "https://github.com/vercel/chatbot/pull/1541",
+        "created_at": "2026-08-18T04:52:45Z",
+        "updated_at": "2026-08-18T05:16:39Z",
+        "closed_at": "2026-08-18T05:14:47Z",
+        "merged_at": null,
+        "merge_commit_sha": "d3a4b3ee735a03a15cafc26a08164f8da4faf2e9",
+        "draft": false,
+        "user": {
+          "id": 114422072,
+          "node_id": "U_kgDOBtHxOA",
+          "login": "jakobhoeg",
+          "type": "User",
+          "html_url": "https://github.com/jakobhoeg"
+        },
+        "head": {
+          "sha": "d4ac4c223e09a997bdae1c81d954171d6935f645",
+          "ref": "feat/browser-ai-on-device-model"
+        },
+        "base": {
+          "sha": "c2f8235e1f3ea903ad8b7f61447c4f74164b5c58",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4174317515,
+        "node_id": "PR_kwDOJlIj0c74zwfL",
+        "number": 1536,
+        "state": "closed",
+        "title": "Dev csw ",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1536",
+        "created_at": "2026-07-31T01:44:31Z",
+        "updated_at": "2026-07-31T01:48:41Z",
+        "closed_at": "2026-07-31T01:45:03Z",
+        "merged_at": null,
+        "merge_commit_sha": "141e6eaf771d0c7c4952809093c2e8e936204d60",
+        "draft": false,
+        "user": {
+          "id": 113418245,
+          "node_id": "U_kgDOBsKgBQ",
+          "login": "CswProgrammer",
+          "type": "User",
+          "html_url": "https://github.com/CswProgrammer"
+        },
+        "head": {
+          "sha": "6c646abe3976211a895e57842d6e4465c42b0d0c",
+          "ref": "dev-csw"
+        },
+        "base": {
+          "sha": "c2f8235e1f3ea903ad8b7f61447c4f74164b5c58",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4085884088,
+        "node_id": "PR_kwDOJlIj0c7ziaS4",
+        "number": 1533,
+        "state": "closed",
+        "title": "Upgrade @types/react and @types/react-dom to v19",
+        "body": "Align React type definitions with react/react-dom 19.2.7.",
+        "html_url": "https://github.com/vercel/chatbot/pull/1533",
+        "created_at": "2026-07-19T12:59:13Z",
+        "updated_at": "2026-07-20T02:50:12Z",
+        "closed_at": "2026-07-20T02:50:12Z",
+        "merged_at": null,
+        "merge_commit_sha": "cce289a8011090a65dd9ed05e729d99cd481869b",
+        "draft": false,
+        "user": {
+          "id": 141594291,
+          "node_id": "U_kgDOCHCOsw",
+          "login": "FanetheDivine",
+          "type": "User",
+          "html_url": "https://github.com/FanetheDivine"
+        },
+        "head": {
+          "sha": "6639122395a44fa4aeff95782562228122e5886b",
+          "ref": "main"
+        },
+        "base": {
+          "sha": "c2f8235e1f3ea903ad8b7f61447c4f74164b5c58",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4017717586,
+        "node_id": "PR_kwDOJlIj0c7veYFS",
+        "number": 1529,
+        "state": "closed",
+        "title": "Check Bot ID result",
+        "body": "The result of `checkBotId()` was being thrown away previously.",
+        "html_url": "https://github.com/vercel/chatbot/pull/1529",
+        "created_at": "2026-07-08T21:33:51Z",
+        "updated_at": "2026-07-08T21:55:02Z",
+        "closed_at": "2026-07-08T21:55:01Z",
+        "merged_at": "2026-07-08T21:55:01Z",
+        "merge_commit_sha": "c2f8235e1f3ea903ad8b7f61447c4f74164b5c58",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "1d24f490bf8941ac3aa01cf26222b6efabb9f395",
+          "ref": "nick/check-botid-result"
+        },
+        "base": {
+          "sha": "d7cec6ded8b78ebb47ac3f5a4fb96061928be607",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4015930387,
+        "node_id": "PR_kwDOJlIj0c7vXjwT",
+        "number": 1527,
+        "state": "closed",
+        "title": "Model selector tweaks",
+        "body": "* add tooltip + disabled cursor for locked models\r\n<img width=\"585\" height=\"121\" alt=\"image\" src=\"https://github.com/user-attachments/assets/737dea5f-a419-4a97-95b9-ba89027028d8\" />\r\n\r\n* add bg on hover to available models\r\n* add tooltip to icons \r\n<img width=\"365\" height=\"166\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2057c5d6-6c73-4adc-ab1f-9668a5ceece5\" />\r\n",
+        "html_url": "https://github.com/vercel/chatbot/pull/1527",
+        "created_at": "2026-07-08T16:11:22Z",
+        "updated_at": "2026-07-08T18:14:37Z",
+        "closed_at": "2026-07-08T18:14:35Z",
+        "merged_at": "2026-07-08T18:14:35Z",
+        "merge_commit_sha": "d7cec6ded8b78ebb47ac3f5a4fb96061928be607",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "4ddbdfe99008984ac39b94d3ad4475273785ceca",
+          "ref": "nick/model-input"
+        },
+        "base": {
+          "sha": "75722ab1e8eda57176a57d75d83c7b7479e7ce2b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4016499882,
+        "node_id": "PR_kwDOJlIj0c7vZuyq",
+        "number": 1528,
+        "state": "closed",
+        "title": "Update Playwright tests",
+        "body": "Auth and model pickers changed over time but tests were never updated, so Playwright couldn't find the elements on the page. Updated tests to fix\r\n\r\nAlso added comment to playwright gh action around what env vars to use",
+        "html_url": "https://github.com/vercel/chatbot/pull/1528",
+        "created_at": "2026-07-08T17:47:24Z",
+        "updated_at": "2026-07-08T18:14:20Z",
+        "closed_at": "2026-07-08T18:14:19Z",
+        "merged_at": "2026-07-08T18:14:19Z",
+        "merge_commit_sha": "6593009ddedb000842081c74419eb3830438d74a",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "35eac75bd90c9e7a6d657c59ae685f59380a3c1a",
+          "ref": "nick/update-playwright-tests"
+        },
+        "base": {
+          "sha": "75722ab1e8eda57176a57d75d83c7b7479e7ce2b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4015032407,
+        "node_id": "PR_kwDOJlIj0c7vUIhX",
+        "number": 1526,
+        "state": "closed",
+        "title": "Claude/run it 5xp6ux",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1526",
+        "created_at": "2026-07-08T14:00:41Z",
+        "updated_at": "2026-07-08T15:17:28Z",
+        "closed_at": "2026-07-08T14:02:02Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 213546777,
+          "node_id": "U_kgDODLp3GQ",
+          "login": "goldylocks-ai",
+          "type": "User",
+          "html_url": "https://github.com/goldylocks-ai"
+        },
+        "head": {
+          "sha": "ca8d65b533c5016dc222cdd3db69a1aa108d4921",
+          "ref": "claude/run-it-5xp6ux"
+        },
+        "base": {
+          "sha": "75722ab1e8eda57176a57d75d83c7b7479e7ce2b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4010456596,
+        "node_id": "PR_kwDOJlIj0c7vCrYU",
+        "number": 1525,
+        "state": "closed",
+        "title": "Precommit hook",
+        "body": "Add a precommit hook using Husky that uses `lint-staged` to only lint/fmt the staged portion of staged files.",
+        "html_url": "https://github.com/vercel/chatbot/pull/1525",
+        "created_at": "2026-07-07T22:57:51Z",
+        "updated_at": "2026-07-07T23:39:29Z",
+        "closed_at": "2026-07-07T23:39:27Z",
+        "merged_at": "2026-07-07T23:39:27Z",
+        "merge_commit_sha": "75722ab1e8eda57176a57d75d83c7b7479e7ce2b",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "dc1da23a5ed11049e533cc036d9a5657ee4842b6",
+          "ref": "nick/precommit-lint"
+        },
+        "base": {
+          "sha": "cd6e5772edc7238c63776108565d49dd6cd10960",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4009607254,
+        "node_id": "PR_kwDOJlIj0c7u_cBW",
+        "number": 1524,
+        "state": "closed",
+        "title": "Fix formatting for real this time",
+        "body": "https://github.com/vercel/chatbot/pull/1522 updated lint tooling but didn't fix all lint errors",
+        "html_url": "https://github.com/vercel/chatbot/pull/1524",
+        "created_at": "2026-07-07T20:07:22Z",
+        "updated_at": "2026-07-07T22:04:59Z",
+        "closed_at": "2026-07-07T22:04:57Z",
+        "merged_at": "2026-07-07T22:04:57Z",
+        "merge_commit_sha": "cd6e5772edc7238c63776108565d49dd6cd10960",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "3cbc879affda7acdcc29c582bf2d700240ac2107",
+          "ref": "nick/fix-lint-for-real-this-time"
+        },
+        "base": {
+          "sha": "e42d3efd28ff7f4b5d4d4369a0faad355d39e620",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4009195808,
+        "node_id": "PR_kwDOJlIj0c7u93kg",
+        "number": 1523,
+        "state": "closed",
+        "title": "Warn when model health is degraded",
+        "body": "* changed \"Thinking...\" to \"Waiting...\" before a model has begun sending chunks\r\n* when a model has been waiting for 9 seconds, do a health check using AI Gateway uptime\r\n* if uptime is degraded, show warning\r\n\r\n<img width=\"1883\" height=\"446\" alt=\"image\" src=\"https://github.com/user-attachments/assets/01471af5-0556-462e-9239-f982baac9c09\" />\r\n",
+        "html_url": "https://github.com/vercel/chatbot/pull/1523",
+        "created_at": "2026-07-07T18:54:58Z",
+        "updated_at": "2026-07-07T21:18:48Z",
+        "closed_at": "2026-07-07T21:18:46Z",
+        "merged_at": "2026-07-07T21:18:46Z",
+        "merge_commit_sha": "e42d3efd28ff7f4b5d4d4369a0faad355d39e620",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "a2927b458988865f1f277aefebcd0c2420752c3b",
+          "ref": "nick/model-health"
+        },
+        "base": {
+          "sha": "90d51b673272b73a43ef7481f3cecf5f1fe685f9",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4007991007,
+        "node_id": "PR_kwDOJlIj0c7u5Rbf",
+        "number": 1522,
+        "state": "closed",
+        "title": "Update lint tooling",
+        "body": "Updated ultracite and biome, ran `pn fix` for autofix, and then manually fixed the unused error var in `catch {}` blocks",
+        "html_url": "https://github.com/vercel/chatbot/pull/1522",
+        "created_at": "2026-07-07T15:29:27Z",
+        "updated_at": "2026-07-07T18:54:46Z",
+        "closed_at": "2026-07-07T18:53:58Z",
+        "merged_at": "2026-07-07T18:53:58Z",
+        "merge_commit_sha": "90d51b673272b73a43ef7481f3cecf5f1fe685f9",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "b95a5fd48489ce28ce14cc9a689bfce713e666fc",
+          "ref": "nick/update-lint"
+        },
+        "base": {
+          "sha": "3f2f239cc5df503cc5b5523bb0a712a2b076d73c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4002419475,
+        "node_id": "PR_kwDOJlIj0c7ukBMT",
+        "number": 1520,
+        "state": "closed",
+        "title": "Bump deps",
+        "body": "Bumped dependencies that required no code changes. Will circle back to the rest of the dependencies that do individually.",
+        "html_url": "https://github.com/vercel/chatbot/pull/1520",
+        "created_at": "2026-07-06T22:02:18Z",
+        "updated_at": "2026-07-07T18:13:23Z",
+        "closed_at": "2026-07-07T18:13:21Z",
+        "merged_at": "2026-07-07T18:13:21Z",
+        "merge_commit_sha": "3f2f239cc5df503cc5b5523bb0a712a2b076d73c",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "9cda1413b5d58d407d7e2bae2b030f0628c42ca5",
+          "ref": "nick/bump-deps"
+        },
+        "base": {
+          "sha": "41092c514c5818b97131c0babea3ea9e7453d332",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4001997235,
+        "node_id": "PR_kwDOJlIj0c7uiaGz",
+        "number": 1519,
+        "state": "closed",
+        "title": "Zod 4",
+        "body": "> [!NOTE]\r\n> #1515 should be merged before this PR.\r\n\r\nUpgrade from Zod 3 to Zod 4",
+        "html_url": "https://github.com/vercel/chatbot/pull/1519",
+        "created_at": "2026-07-06T20:37:50Z",
+        "updated_at": "2026-07-06T21:29:40Z",
+        "closed_at": "2026-07-06T21:29:38Z",
+        "merged_at": "2026-07-06T21:29:38Z",
+        "merge_commit_sha": "41092c514c5818b97131c0babea3ea9e7453d332",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "5091a755d613ac926cddb5d2ac479a0a189136eb",
+          "ref": "nick/zod-4"
+        },
+        "base": {
+          "sha": "2397c783b505997a09968c4619ec42dc450cc705",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3981169097,
+        "node_id": "PR_kwDOJlIj0c7tS9HJ",
+        "number": 1515,
+        "state": "closed",
+        "title": "AI SDK 7",
+        "body": "Migrated to AI SDK 7, mostly just using the migrate skill.",
+        "html_url": "https://github.com/vercel/chatbot/pull/1515",
+        "created_at": "2026-07-02T20:05:20Z",
+        "updated_at": "2026-07-06T20:44:36Z",
+        "closed_at": "2026-07-06T20:44:32Z",
+        "merged_at": "2026-07-06T20:44:32Z",
+        "merge_commit_sha": "2397c783b505997a09968c4619ec42dc450cc705",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "b84d8ac85e618b095a763dd07e277c455085c0dd",
+          "ref": "nick/ai-sdk-7"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3816930846,
+        "node_id": "PR_kwDOJlIj0c7jgb4e",
+        "number": 1505,
+        "state": "closed",
+        "title": "Codex/localize multimodal input",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1505",
+        "created_at": "2026-06-06T19:53:13Z",
+        "updated_at": "2026-07-06T19:33:50Z",
+        "closed_at": "2026-07-06T19:33:50Z",
+        "merged_at": null,
+        "merge_commit_sha": "b61cc5929acb502b4d989d3d54b4449d97eab98d",
+        "draft": false,
+        "user": {
+          "id": 291087047,
+          "node_id": "U_kgDOEVmixw",
+          "login": "JohnJ0523",
+          "type": "User",
+          "html_url": "https://github.com/JohnJ0523"
+        },
+        "head": {
+          "sha": "d2fc5a33d5fc1916d72e085eec6d3ab27d256a6c",
+          "ref": "codex/localize-multimodal-input"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3889070089,
+        "node_id": "PR_kwDOJlIj0c7nzoAJ",
+        "number": 1510,
+        "state": "closed",
+        "title": "Update extensions.json",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1510",
+        "created_at": "2026-06-18T06:30:06Z",
+        "updated_at": "2026-07-06T19:33:35Z",
+        "closed_at": "2026-07-06T19:33:35Z",
+        "merged_at": null,
+        "merge_commit_sha": "ecf6441956f0a89e6974ac7f65a236acaa5f338f",
+        "draft": false,
+        "user": {
+          "id": 230457447,
+          "node_id": "U_kgDODbyAZw",
+          "login": "Jhensae",
+          "type": "User",
+          "html_url": "https://github.com/Jhensae"
+        },
+        "head": {
+          "sha": "1a903e082b84f04701fc98688008faf03e344752",
+          "ref": "main"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3814430432,
+        "node_id": "PR_kwDOJlIj0c7jW5bg",
+        "number": 1504,
+        "state": "closed",
+        "title": "Update prompts.ts",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1504",
+        "created_at": "2026-06-06T04:42:24Z",
+        "updated_at": "2026-07-06T19:32:36Z",
+        "closed_at": "2026-07-06T19:32:36Z",
+        "merged_at": null,
+        "merge_commit_sha": "028018ce08d9bebb93eb25ce78fb82db34a24852",
+        "draft": false,
+        "user": {
+          "id": 291087047,
+          "node_id": "U_kgDOEVmixw",
+          "login": "JohnJ0523",
+          "type": "User",
+          "html_url": "https://github.com/JohnJ0523"
+        },
+        "head": {
+          "sha": "addef314c3ca02afe7e59a9ad39c3504671b1298",
+          "ref": "JohnJ0523-patch-1"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3536677801,
+        "node_id": "PR_kwDOJlIj0c7SzWup",
+        "number": 1484,
+        "state": "closed",
+        "title": "Create webpack.yml",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1484",
+        "created_at": "2026-04-15T22:58:03Z",
+        "updated_at": "2026-07-06T19:31:38Z",
+        "closed_at": "2026-07-06T19:31:38Z",
+        "merged_at": null,
+        "merge_commit_sha": "4bd44c8428a33adb3e07b9833499949062e9b49d",
+        "draft": false,
+        "user": {
+          "id": 263799550,
+          "node_id": "U_kgDOD7lC_g",
+          "login": "Flompe",
+          "type": "User",
+          "html_url": "https://github.com/Flompe"
+        },
+        "head": {
+          "sha": "45d86b35eac6f09d53f5e4d12b532bab9eb35967",
+          "ref": "main"
+        },
+        "base": {
+          "sha": "71fb58b93f7802b36db90191e0a2fe5f97386a78",
+          "ref": "vvo/blob-private-access"
+        }
+      },
+      {
+        "id": 3492329132,
+        "node_id": "PR_kwDOJlIj0c7QKLas",
+        "number": 1481,
+        "state": "closed",
+        "title": "Update README.md",
+        "body": "tytle",
+        "html_url": "https://github.com/vercel/chatbot/pull/1481",
+        "created_at": "2026-04-06T09:09:34Z",
+        "updated_at": "2026-07-06T19:31:15Z",
+        "closed_at": "2026-07-06T19:31:15Z",
+        "merged_at": null,
+        "merge_commit_sha": "1711518757888042d9e1f3d16c756f9d592c17ed",
+        "draft": false,
+        "user": {
+          "id": 273931657,
+          "node_id": "U_kgDOEFPdiQ",
+          "login": "apricot626",
+          "type": "User",
+          "html_url": "https://github.com/apricot626"
+        },
+        "head": {
+          "sha": "11bc3f6ec4dfbdbafadfcf3ffcac1ea594529b9b",
+          "ref": "patch-1"
+        },
+        "base": {
+          "sha": "146b3cb8cf2ffbb5b985819f06f6b8357bd464e7",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3490759487,
+        "node_id": "PR_kwDOJlIj0c7QEMM_",
+        "number": 1480,
+        "state": "closed",
+        "title": "Claude addition 2.0",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/1480",
+        "created_at": "2026-04-05T18:00:27Z",
+        "updated_at": "2026-07-06T19:30:57Z",
+        "closed_at": "2026-07-06T19:30:57Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 150553445,
+          "node_id": "U_kgDOCPlDZQ",
+          "login": "shyrradev",
+          "type": "User",
+          "html_url": "https://github.com/shyrradev"
+        },
+        "head": {
+          "sha": "9e445602a8de9bc45c947a742093c8e637581167",
+          "ref": "claude_addition_2.0"
+        },
+        "base": {
+          "sha": "146b3cb8cf2ffbb5b985819f06f6b8357bd464e7",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3744755187,
+        "node_id": "PR_kwDOJlIj0c7fNG3z",
+        "number": 1500,
+        "state": "closed",
+        "title": "I added a new folder and file",
+        "body": "I added a folder and a name file",
+        "html_url": "https://github.com/vercel/chatbot/pull/1500",
+        "created_at": "2026-05-25T23:56:16Z",
+        "updated_at": "2026-07-06T19:30:23Z",
+        "closed_at": "2026-07-06T19:30:23Z",
+        "merged_at": null,
+        "merge_commit_sha": "956b8c3c50fd0beebea0c84ca40859dc044e3d22",
+        "draft": false,
+        "user": {
+          "id": 159464953,
+          "node_id": "U_kgDOCYE9-Q",
+          "login": "CosbertGames",
+          "type": "User",
+          "html_url": "https://github.com/CosbertGames"
+        },
+        "head": {
+          "sha": "3073826e1ec5a7c45256ba49fef7b259caed474b",
+          "ref": "my_branch"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4001033159,
+        "node_id": "PR_kwDOJlIj0c7ueuvH",
+        "number": 1518,
+        "state": "closed",
+        "title": "fix(lint): remove redundant `noUnnecessaryConditions` option",
+        "body": "Biome fails config parsing with\r\n\"Found an unknown key\", breaking `ultracite check` both locally and in CI\r\n\r\nThe `nursery.noUnnecessaryConditions` override in biome.jsonc was redundant because ultracite's shared config does not enable that rule",
+        "html_url": "https://github.com/vercel/chatbot/pull/1518",
+        "created_at": "2026-07-06T18:03:50Z",
+        "updated_at": "2026-07-06T18:20:50Z",
+        "closed_at": "2026-07-06T18:20:48Z",
+        "merged_at": "2026-07-06T18:20:48Z",
+        "merge_commit_sha": "77d362e596e2c624638cad5a35199c0c8785c9fd",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "f1300ddc7627bdae0ff1d3874c26409d67d71546",
+          "ref": "nick/fix-lint"
+        },
+        "base": {
+          "sha": "df6b196e9e131a13d59c354a9d9dc114ce71fec4",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3981378687,
+        "node_id": "PR_kwDOJlIj0c7tTwR_",
+        "number": 1516,
+        "state": "closed",
+        "title": "fix playwright ci secret var",
+        "body": "Playwright action has better auth secrets defined but we don't use better auth. Swapped them to the proper ones for Auth.js.",
+        "html_url": "https://github.com/vercel/chatbot/pull/1516",
+        "created_at": "2026-07-02T20:46:32Z",
+        "updated_at": "2026-07-02T21:19:27Z",
+        "closed_at": "2026-07-02T21:18:45Z",
+        "merged_at": "2026-07-02T21:18:45Z",
+        "merge_commit_sha": "df6b196e9e131a13d59c354a9d9dc114ce71fec4",
+        "draft": false,
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        },
+        "head": {
+          "sha": "21d84eae4aaa57532d593bb7a898e24c548e61bf",
+          "ref": "nick/fix-playwright-ci"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3929315816,
+        "node_id": "PR_kwDOJlIj0c7qNJno",
+        "number": 1513,
+        "state": "closed",
+        "title": "[TEST] classifier test case — applyDiscount intentional bug",
+        "body": "Throwaway PR to exercise the local test-classifier `--submit` flow end-to-end (classify → comment → metrics row). Introduces `lib/discount.ts` with an intentional off-by-one-style bug and a test that asserts the correct behavior. **Do not merge — for classifier testing only.**",
+        "html_url": "https://github.com/vercel/chatbot/pull/1513",
+        "created_at": "2026-06-24T16:50:10Z",
+        "updated_at": "2026-06-24T16:51:47Z",
+        "closed_at": "2026-06-24T16:50:30Z",
+        "merged_at": null,
+        "merge_commit_sha": null,
+        "draft": false,
+        "user": {
+          "id": 189638926,
+          "node_id": "U_kgDOC02pDg",
+          "login": "fg-nava",
+          "type": "User",
+          "html_url": "https://github.com/fg-nava"
+        },
+        "head": {
+          "sha": "fbfd262a9025a2db53c86fd5b936565db58fe611",
+          "ref": "setup-ai-classifier-local"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 1359367642,
+        "node_id": "PR_kwDOJlIj0c5RBk3a",
+        "number": 4,
+        "state": "closed",
+        "title": "Move to next-auth",
+        "body": null,
+        "html_url": "https://github.com/vercel/chatbot/pull/4",
+        "created_at": "2023-05-22T14:30:37Z",
+        "updated_at": "2026-06-23T14:37:01Z",
+        "closed_at": "2023-05-22T14:52:34Z",
+        "merged_at": "2023-05-22T14:52:34Z",
+        "merge_commit_sha": "f14e73ac8f96adb2359a67ded00c1c79e38d2253",
+        "draft": false,
+        "user": {
+          "id": 4060187,
+          "node_id": "MDQ6VXNlcjQwNjAxODc=",
+          "login": "jaredpalmer",
+          "type": "User",
+          "html_url": "https://github.com/jaredpalmer"
+        },
+        "head": {
+          "sha": "29ddc26bbf640900881248abd1e96551f3c41e38",
+          "ref": "jp/next-auth"
+        },
+        "base": {
+          "sha": "3b8bb9dea49ed832b387b5f6f0603fdd335519a6",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3910284690,
+        "node_id": "PR_kwDOJlIj0c7pEjWS",
+        "number": 1511,
+        "state": "closed",
+        "title": "fix: extract getBackoffDelay to client-safe util to fix Vercel deploy (#32)",
+        "body": "## Summary\n- Root cause: `AgentSessionCard` (client component) imported `getBackoffDelay` from `agent-sse-manager`, which transitively imports `postgres` → Node.js built-ins (`net`, `tls`, `crypto`, `stream`, `perf_hooks`) leaked into client bundle\n- Fix: extract `getBackoffDelay` into `lib/agent-sse-utils.ts` (pure TS, zero server deps)\n- `AgentSessionCard` now imports from `agent-sse-utils`\n\n## Test plan\n- [ ] Vercel deploy should build successfully\n- [ ] `curl https://neptune-chat-ashy.vercel.app/api/diagnostics` returns fresh response\n- [ ] AgentSessionCard still renders with SSE reconnection backoff\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "html_url": "https://github.com/vercel/chatbot/pull/1511",
+        "created_at": "2026-06-22T08:18:50Z",
+        "updated_at": "2026-06-22T08:19:08Z",
+        "closed_at": "2026-06-22T08:18:58Z",
+        "merged_at": null,
+        "merge_commit_sha": "c00a513c6c19b584812362a3035ace01ca22f812",
+        "draft": false,
+        "user": {
+          "id": 252243939,
+          "node_id": "U_kgDODwjv4w",
+          "login": "abhiswami2121",
+          "type": "User",
+          "html_url": "https://github.com/abhiswami2121"
+        },
+        "head": {
+          "sha": "fda37fc1fcb478199d8a2b38f5623a90b0186bd6",
+          "ref": "fix/client-bundle-postgres-leak"
+        },
+        "base": {
+          "sha": "2becdb4a56e7683ae08aef927cec1c6c52dfad5e",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3523716659,
+        "node_id": "PR_kwDOJlIj0c7SB6Yz",
+        "number": 1483,
+        "state": "closed",
+        "title": "fix(blob): switch to private access with auth-gated delivery route",
+        "body": "## Summary\n\nUser-uploaded images are auth-gated content that should not be publicly accessible. This switches from public to private blob storage and adds a delivery route that checks the user's session before serving files.\n\n**Changes:**\n- Upload: `access: \"public\"` -> `access: \"private\"`, returns `/api/files/serve?pathname=...` instead of raw blob URL\n- New `/api/files/serve` route: checks auth, streams private blob with ETag caching support\n- Removed `*.public.blob.vercel-storage.com` from `next.config.ts` image patterns\n- `vercel-template.json`: forces private access in 1-click deploy flow\n\n**No client changes needed** — the upload response interface (`{ url, pathname, contentType }`) is preserved, and `next/image` works with same-origin URLs without `remotePatterns`.\n\n**Test deploy:** https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fchatbot%2Ftree%2Fblob-private-access\n\n## Context\n\nAligns with the private-by-default direction for Vercel Blob (see vercel/front#65379, vercel/vercel#15375). The CLI now defaults to private-first prompts and requires explicit `--access` flags.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "html_url": "https://github.com/vercel/chatbot/pull/1483",
+        "created_at": "2026-04-13T15:33:00Z",
+        "updated_at": "2026-05-18T14:29:08Z",
+        "closed_at": "2026-05-18T14:29:08Z",
+        "merged_at": null,
+        "merge_commit_sha": "171889a33834a5c3ae9dd96c55dd69b9b7c4c1bc",
+        "draft": true,
+        "user": {
+          "id": 123822,
+          "node_id": "MDQ6VXNlcjEyMzgyMg==",
+          "login": "vvo",
+          "type": "User",
+          "html_url": "https://github.com/vvo"
+        },
+        "head": {
+          "sha": "4e99a4e75b82d8f51a104c468f2a2ea1e9f3ef1a",
+          "ref": "blob-private-access"
+        },
+        "base": {
+          "sha": "146b3cb8cf2ffbb5b985819f06f6b8357bd464e7",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}

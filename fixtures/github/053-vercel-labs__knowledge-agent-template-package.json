@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/knowledge-agent-template/contents/package.json",
+  "observedAt": "2026-09-10T10:28:42.843934+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"70af26f1598adc724d546cc44cf0b2a8c9e91e36\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "manifest",
+    "repositoryId": 1138349022,
+    "repository": "vercel-labs/knowledge-agent-template",
+    "content": {
+      "type": "file",
+      "encoding": "base64",
+      "size": 1174,
+      "name": "package.json",
+      "path": "package.json",
+      "content": "ewogICJuYW1lIjogIkBzYXZvaXIvbW9ub3JlcG8iLAogICJwcml2YXRlIjog\ndHJ1ZSwKICAidHlwZSI6ICJtb2R1bGUiLAogICJsaWNlbnNlIjogIk1JVCIs\nCiAgImRlc2NyaXB0aW9uIjogIk9wZW4gc291cmNlIGZpbGUtc3lzdGVtIGFu\nZCBrbm93bGVkZ2UgYmFzZWQgYWdlbnQgdGVtcGxhdGUiLAogICJhdXRob3Ii\nOiAiSHVnb1JDRCIsCiAgInJlcG9zaXRvcnkiOiB7CiAgICAidHlwZSI6ICJn\naXQiLAogICAgInVybCI6ICJnaXQraHR0cHM6Ly9naXRodWIuY29tL3ZlcmNl\nbC1sYWJzL2tub3dsZWRnZS1hZ2VudC10ZW1wbGF0ZS5naXQiCiAgfSwKICAi\nYnVncyI6IHsKICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL3ZlcmNl\nbC1sYWJzL2tub3dsZWRnZS1hZ2VudC10ZW1wbGF0ZS9pc3N1ZXMiCiAgfSwK\nICAid29ya3NwYWNlcyI6IFsKICAgICJhcHBzLyoiLAogICAgInBhY2thZ2Vz\nLyoiCiAgXSwKICAic2NyaXB0cyI6IHsKICAgICJwcmVwYXJlIjogInR1cmJv\nIHJ1biBidWlsZCAtLWZpbHRlcj0nLi9wYWNrYWdlcy8qJyIsCiAgICAiYnVp\nbGQiOiAidHVyYm8gcnVuIGJ1aWxkIiwKICAgICJkZXYiOiAidHVyYm8gcnVu\nIGRldiIsCiAgICAiZGV2OmFwcCI6ICJ0dXJibyBydW4gZGV2IC0tZmlsdGVy\nPUBzYXZvaXIvYXBwIiwKICAgICJkZXY6Z2F0ZXdheSI6ICJjdXJsIC1YIEdF\nVCBodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL2Rpc2NvcmQvZ2F0ZXdheSIs\nCiAgICAibGludCI6ICJ0dXJibyBydW4gbGludCIsCiAgICAibGludDpmaXgi\nOiAidHVyYm8gcnVuIGxpbnQ6Zml4IiwKICAgICJ0eXBlY2hlY2siOiAidHVy\nYm8gcnVuIHR5cGVjaGVjayIsCiAgICAidGVzdCI6ICJ0dXJibyBydW4gdGVz\ndCIsCiAgICAiYXV0b21kIjogImF1dG9tZCIsCiAgICAid29ya2Zsb3ciOiAi\ndHVyYm8gcnVuIHdvcmtmbG93OndlYiAtLWZpbHRlcj1Ac2F2b2lyL2FwcCIK\nICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQGhyY2QvZXNsaW50\nLWNvbmZpZyI6ICJeMy4wLjMiLAogICAgImF1dG9tZCI6ICJeMC40LjMiLAog\nICAgInBsYXl3cmlnaHQiOiAiXjEuNTguMiIsCiAgICAidHVyYm8iOiAiXjIu\nOC4zIgogIH0sCiAgInBhY2thZ2VNYW5hZ2VyIjogImJ1bkAxLjMuMTQiLAog\nICJvdmVycmlkZXMiOiB7CiAgICAibWluaW1hdGNoIjogIl4xMC4wLjEiCiAg\nfQp9Cg==\n",
+      "sha": "70af26f1598adc724d546cc44cf0b2a8c9e91e36",
+      "url": "https://api.github.com/repos/vercel-labs/knowledge-agent-template/contents/package.json?ref=main",
+      "git_url": "https://api.github.com/repos/vercel-labs/knowledge-agent-template/git/blobs/70af26f1598adc724d546cc44cf0b2a8c9e91e36",
+      "html_url": "https://github.com/vercel-labs/knowledge-agent-template/blob/main/package.json"
+    }
+  }
+}

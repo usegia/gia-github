@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-sdk-persistence-db/languages",
+  "observedAt": "2026-09-10T10:28:27.404018+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"d48be213dafc11d778da8b2afde82f2f43eb62ab2616706813ac3d17cc1161d1\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 931560949,
+    "repository": "vercel-labs/ai-sdk-persistence-db",
+    "records": {
+      "TypeScript": 39563,
+      "CSS": 1535,
+      "JavaScript": 528
+    }
+  }
+}

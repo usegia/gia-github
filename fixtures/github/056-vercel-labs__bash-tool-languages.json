@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/bash-tool/languages",
+  "observedAt": "2026-09-10T10:28:24.807036+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"181a659b248381d3a3fa044ac1f53c309398ca6db772dd6d9b7dc7202fb0dd47\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 1128648949,
+    "repository": "vercel-labs/bash-tool",
+    "records": {
+      "TypeScript": 148415
+    }
+  }
+}

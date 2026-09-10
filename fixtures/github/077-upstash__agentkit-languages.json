@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/agentkit/languages",
+  "observedAt": "2026-09-10T10:28:31.686344+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"4844d05a500c68a79791c1a52e8617ca9de4fee5e1c5877033598d85692aa414\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 1274085842,
+    "repository": "upstash/agentkit",
+    "records": {
+      "TypeScript": 345941,
+      "JavaScript": 3882
+    }
+  }
+}

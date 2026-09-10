@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/chatbot/languages",
+  "observedAt": "2026-09-10T10:28:21.298264+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"f58767033164dd32224e3889b56308d71d388df990c5aa29339779313a5b42ea\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "languages",
+    "repositoryId": 642917329,
+    "repository": "vercel/chatbot",
+    "records": {
+      "TypeScript": 597781,
+      "JavaScript": 13271,
+      "CSS": 11156
+    }
+  }
+}

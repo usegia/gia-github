@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/users/anbuzin",
+  "observedAt": "2026-09-10T10:28:45.084384+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"7b2ac79db53a026e6c3c0e052defd1c2bd1a9067e54cb679c9c1a87da9e2306a\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "profiles",
+    "records": [
+      {
+        "id": 24557773,
+        "node_id": "MDQ6VXNlcjI0NTU3Nzcz",
+        "login": "anbuzin",
+        "type": "User",
+        "html_url": "https://github.com/anbuzin",
+        "avatar_url": "https://avatars.githubusercontent.com/u/24557773?v=4",
+        "name": "Andrey Buzin",
+        "company": "Vercel",
+        "blog": "https://makeai.substack.com",
+        "location": "San Francisco, CA",
+        "bio": "▲ uv add ai",
+        "public_repos": 15,
+        "followers": 19,
+        "following": 1,
+        "created_at": "2016-12-14T02:03:26Z",
+        "updated_at": "2026-08-03T23:47:46Z"
+      }
+    ]
+  }
+}

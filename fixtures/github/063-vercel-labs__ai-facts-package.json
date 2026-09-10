@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-facts/contents/package.json",
+  "observedAt": "2026-09-10T10:28:43.230036+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"44ad939493564fed0f3bcf5d804431062ad2b3ca\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "manifest",
+    "repositoryId": 900901983,
+    "repository": "vercel-labs/ai-facts",
+    "content": {
+      "type": "file",
+      "encoding": "base64",
+      "size": 1231,
+      "name": "package.json",
+      "path": "package.json",
+      "content": "ewogICJuYW1lIjogImFpLWZhY3RzIiwKICAidmVyc2lvbiI6ICIxLjAuMCIs\nCiAgInByaXZhdGUiOiB0cnVlLAogICJzY3JpcHRzIjogewogICAgImRldiI6\nICJuZXh0IGRldiIsCiAgICAiYnVpbGQiOiAibmV4dCBidWlsZCIsCiAgICAi\nc3RhcnQiOiAibmV4dCBzdGFydCIsCiAgICAibGludCI6ICJuZXh0IGxpbnQi\nCiAgfSwKICAiZGVwZW5kZW5jaWVzIjogewogICAgIkBkZWVwZ3JhbS9zZGsi\nOiAiXjMuMy4wIiwKICAgICJAcmFkaXgtdWkvcmVhY3QtZGlhbG9nIjogIl4x\nLjEuMiIsCiAgICAiQHJhZGl4LXVpL3JlYWN0LWxhYmVsIjogIl4yLjEuMCIs\nCiAgICAiQHJhZGl4LXVpL3JlYWN0LXNlbGVjdCI6ICJeMi4xLjIiLAogICAg\nIkByYWRpeC11aS9yZWFjdC1zbG90IjogIl4xLjEuMCIsCiAgICAiQHJhZGl4\nLXVpL3JlYWN0LXRvb2x0aXAiOiAiXjEuMS40IiwKICAgICJhaSI6ICJeNi4w\nLjE2OCIsCiAgICAiY2xhc3MtdmFyaWFuY2UtYXV0aG9yaXR5IjogIl4wLjcu\nMSIsCiAgICAiY2xhc3NuYW1lcyI6ICJeMi41LjEiLAogICAgImNsc3giOiAi\nXjIuMS4xIiwKICAgICJnZWlzdCI6ICJeMS4zLjEiLAogICAgImx1Y2lkZS1y\nZWFjdCI6ICJeMC40NjQuMCIsCiAgICAibW90aW9uIjogIl4xMS4xMy4xIiwK\nICAgICJuZXh0IjogIjE1LjUuMTUiLAogICAgIm5leHQtdGhlbWVzIjogIl4w\nLjQuMyIsCiAgICAicmVhY3QiOiAiXjE4LjMuMSIsCiAgICAicmVhY3QtZGV2\naWNlLWRldGVjdCI6ICJeMi4yLjMiLAogICAgInJlYWN0LWRvbSI6ICJeMTgu\nMy4xIiwKICAgICJzb25uZXIiOiAiXjEuNy4wIiwKICAgICJ0YWlsd2luZC1t\nZXJnZSI6ICJeMi41LjUiLAogICAgInRhaWx3aW5kY3NzLWFuaW1hdGUiOiAi\nXjEuMC43IiwKICAgICJ6b2QiOiAiXjMuMjMuOCIsCiAgICAiem9kLXRvLWpz\nb24tc2NoZW1hIjogIl4zLjIzLjUiCiAgfSwKICAiZGV2RGVwZW5kZW5jaWVz\nIjogewogICAgIkB0eXBlcy9ub2RlIjogIl4yMCIsCiAgICAiQHR5cGVzL3Jl\nYWN0IjogIl4xOCIsCiAgICAiQHR5cGVzL3JlYWN0LWRvbSI6ICJeMTgiLAog\nICAgImF1dG9wcmVmaXhlciI6ICJeMTAuMC4xIiwKICAgICJlc2xpbnQiOiAi\nXjgiLAogICAgImVzbGludC1jb25maWctbmV4dCI6ICIxNS41LjE1IiwKICAg\nICJwb3N0Y3NzIjogIl44IiwKICAgICJwcmV0dHktcXVpY2siOiAiXjQuMC4w\nIiwKICAgICJ0YWlsd2luZGNzcyI6ICJeMy40LjEiLAogICAgInR5cGVzY3Jp\ncHQiOiAiXjUiCiAgfQp9Cg==\n",
+      "sha": "44ad939493564fed0f3bcf5d804431062ad2b3ca",
+      "url": "https://api.github.com/repos/vercel-labs/ai-facts/contents/package.json?ref=main",
+      "git_url": "https://api.github.com/repos/vercel-labs/ai-facts/git/blobs/44ad939493564fed0f3bcf5d804431062ad2b3ca",
+      "html_url": "https://github.com/vercel-labs/ai-facts/blob/main/package.json"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-sdk-persistence-db",
+  "observedAt": "2026-09-10T10:25:16.130885+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"8d9a3dbb70388d5e81dd405af10e24bd9c3f2ef8f85f8f77327381d9393b9df1\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "repositories",
+    "records": [
+      {
+        "id": 931560949,
+        "node_id": "R_kgDON4Z99Q",
+        "name": "ai-sdk-persistence-db",
+        "full_name": "vercel-labs/ai-sdk-persistence-db",
+        "html_url": "https://github.com/vercel-labs/ai-sdk-persistence-db",
+        "description": null,
+        "fork": false,
+        "created_at": "2025-02-12T13:41:58Z",
+        "updated_at": "2026-08-13T15:10:10Z",
+        "pushed_at": "2025-12-06T19:33:49Z",
+        "homepage": null,
+        "size": 378,
+        "stargazers_count": 232,
+        "watchers_count": 232,
+        "language": "TypeScript",
+        "forks_count": 16,
+        "archived": true,
+        "disabled": false,
+        "open_issues_count": 5,
+        "topics": [],
+        "default_branch": "main",
+        "visibility": "public",
+        "owner": {
+          "id": 108547162,
+          "node_id": "O_kgDOBnhMWg",
+          "login": "vercel-labs",
+          "type": "Organization",
+          "html_url": "https://github.com/vercel-labs"
+        }
+      }
+    ]
+  }
+}

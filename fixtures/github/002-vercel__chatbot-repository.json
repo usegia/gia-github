@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/ai-chatbot",
+  "observedAt": "2026-09-10T10:25:13.666163+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"1fdc329c530464fe1ce4cae3b2a6bd719f405b8fc001e57d0e2e3d5cee372c97\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "repositories",
+    "records": [
+      {
+        "id": 642917329,
+        "node_id": "R_kgDOJlIj0Q",
+        "name": "chatbot",
+        "full_name": "vercel/chatbot",
+        "html_url": "https://github.com/vercel/chatbot",
+        "description": "A full-featured, hackable Next.js AI chatbot built by Vercel",
+        "fork": false,
+        "created_at": "2023-05-19T16:36:23Z",
+        "updated_at": "2026-09-10T10:23:01Z",
+        "pushed_at": "2026-07-08T21:55:02Z",
+        "homepage": "https://chatbot.ai-sdk.dev",
+        "size": 6321,
+        "stargazers_count": 20933,
+        "watchers_count": 20933,
+        "language": "TypeScript",
+        "forks_count": 6752,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 29,
+        "topics": [
+          "ai",
+          "chatgpt",
+          "nextjs",
+          "react",
+          "redis",
+          "shadcn-ui",
+          "vercel"
+        ],
+        "default_branch": "main",
+        "visibility": "public",
+        "owner": {
+          "id": 14985020,
+          "node_id": "MDEyOk9yZ2FuaXphdGlvbjE0OTg1MDIw",
+          "login": "vercel",
+          "type": "Organization",
+          "html_url": "https://github.com/vercel"
+        }
+      }
+    ]
+  }
+}

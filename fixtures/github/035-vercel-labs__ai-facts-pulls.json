@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/ai-facts/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:41.853366+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"6162a749bcb035f1d26f856bfb202cb9e0ceef741b93ed19bd64a2da091afb20\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 900901983,
+    "repository": "vercel-labs/ai-facts",
+    "records": [
+      {
+        "id": 3583074998,
+        "node_id": "PR_kwDONbKsX87VkWK2",
+        "number": 4,
+        "state": "closed",
+        "title": "Upgrade Next.js to patched RSC security release",
+        "body": "## Summary\n- upgrade `next` and `eslint-config-next` to `15.5.15`, the patched release for the App Router / React Server Components denial-of-service advisories affecting the current app setup\n- align `react` and `react-dom` to `18.3.1` so the app stays on a compatible React 18 line with the new Next.js release\n- refresh `package-lock.json` to capture the upgraded dependency graph and remove the previously reported Next.js RSC DoS findings from `npm audit`\n\n## Testing\n- not run",
+        "html_url": "https://github.com/vercel-labs/ai-facts/pull/4",
+        "created_at": "2026-04-25T08:24:34Z",
+        "updated_at": "2026-04-25T08:29:23Z",
+        "closed_at": "2026-04-25T08:29:23Z",
+        "merged_at": "2026-04-25T08:29:23Z",
+        "merge_commit_sha": "a952f6b0858ff7df2d614421ace544694a206d6f",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "5e4fe64a48ad48aa4b26e0b520d88b9b3447adf2",
+          "ref": "fix/next-rsc-security-upgrade"
+        },
+        "base": {
+          "sha": "c8e5684b0c1180c6a21bff960f8a0869aed7137d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3552563223,
+        "node_id": "PR_kwDONbKsX87Tv9AX",
+        "number": 3,
+        "state": "closed",
+        "title": "feat: replace kasada with botid, switch to ai-gateway",
+        "body": "## Summary\n- Removes all Kasada bot detection (client SDK, server handler, proxy route)\n- Adds Vercel BotID client-side challenge + server-side `checkBotId()`\n- Switches OpenAI calls to `@ai-sdk/gateway` (`openai/gpt-4o-mini`) with OIDC auth\n- Keeps Perplexity via `createOpenAI` (no gateway support for Perplexity)\n- Upgrades ai to v6, `@ai-sdk/openai` to v3, zod to 3.25.76\n- Build verified locally\n\n## Changes\n- **`app/api/validate-statement/route.ts`**: `createGateway()` for OpenAI, `checkBotId()`, `maxTokens` → `maxOutputTokens`\n- **`app/layout.tsx`**: `KasadaClient` → `BotIdClient`\n- **`next.config.js`**: Wrapped with `withBotId()`\n- **`middleware.ts`**: Removed Kasada handler, kept CORS + rate limiting\n- **Deleted**: `utils/kasada/*`, `app/(kasada)/*`\n\n## Post-merge\n- Remove `KASADA_TOKEN` and `OPENAI_API_KEY` env vars (keep `PERPLEXITY_API_KEY`)",
+        "html_url": "https://github.com/vercel-labs/ai-facts/pull/3",
+        "created_at": "2026-04-19T18:31:22Z",
+        "updated_at": "2026-04-19T18:39:13Z",
+        "closed_at": "2026-04-19T18:39:13Z",
+        "merged_at": "2026-04-19T18:39:12Z",
+        "merge_commit_sha": "41e66b73b42020c0ac893ba437d9099be7ccddf5",
+        "draft": false,
+        "user": {
+          "id": 17938322,
+          "node_id": "MDQ6VXNlcjE3OTM4MzIy",
+          "login": "jeremyphilemon",
+          "type": "User",
+          "html_url": "https://github.com/jeremyphilemon"
+        },
+        "head": {
+          "sha": "20eb24f64511c3d5aa7ae2dd31734a00f15d6d4a",
+          "ref": "incident/replace-kasada-with-botid"
+        },
+        "base": {
+          "sha": "a9232345fbcc99bceec0e37cd025ae9223fb5a18",
+          "ref": "live"
+        }
+      },
+      {
+        "id": 3551710520,
+        "node_id": "PR_kwDONbKsX87Tss04",
+        "number": 2,
+        "state": "closed",
+        "title": "docs: update to Vercel AI Gateway and add AI SDK documentation",
+        "body": "## Summary\n\nUpdate project to use Vercel AI Gateway for LLM access and add comprehensive AI SDK documentation including skill definitions, API references, and error handling guides.\n\n## Changes\n\n**Documentation (`README.md`)**\n\n- Update README with AI Gateway integration information\n- Clarify environment setup requirements\n\n**AI SDK Documentation (`.agents/skills/ai-sdk/`)**\n\n- Add SKILL.md with AI SDK skill definitions\n- Add ai-gateway.md reference guide\n- Add common-errors.md with error handling and troubleshooting information\n- Add devtools.md development tools reference\n- Add type-safe-agents.md type safety documentation\n\n**Configuration (`.env.example`)**\n\n- Update environment variable examples for AI Gateway setup\n\n**API Routes (`app/api/validate-statement/route.ts`)**\n\n- Update to integrate with Vercel AI Gateway\n\n**Dependencies (`package.json`, `package-lock.json`)**\n\n- Update dependencies for AI Gateway compatibility\n- Resolve and lock dependency versions\n\n**Project Configuration (`skills-lock.json`)**\n\n- Add skills lock file for dependency management\n\n---\n\n[Chat](https://open-agents.dev/sessions/zv9Gf1u_vlMq0KyZQYkNd/chats/432bb6a6-1f65-4c4b-b330-3cb684c80d66) - Built with guidance from [Nico Albanese](https://github.com/nicoalbanese)",
+        "html_url": "https://github.com/vercel-labs/ai-facts/pull/2",
+        "created_at": "2026-04-19T10:04:42Z",
+        "updated_at": "2026-04-19T10:06:39Z",
+        "closed_at": "2026-04-19T10:06:39Z",
+        "merged_at": "2026-04-19T10:06:39Z",
+        "merge_commit_sha": "c8e5684b0c1180c6a21bff960f8a0869aed7137d",
+        "draft": false,
+        "user": {
+          "id": 49612682,
+          "node_id": "MDQ6VXNlcjQ5NjEyNjgy",
+          "login": "nicoalbanese",
+          "type": "User",
+          "html_url": "https://github.com/nicoalbanese"
+        },
+        "head": {
+          "sha": "9da59bdbd089d20cb49cdca2be6066fa40ebb00c",
+          "ref": "na/update-to-gateway"
+        },
+        "base": {
+          "sha": "f05c8e0ed390f88d713a1e34a971b98f96f48bcf",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}

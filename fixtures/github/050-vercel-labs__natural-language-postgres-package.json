@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel-labs/natural-language-postgres/contents/package.json",
+  "observedAt": "2026-09-10T10:28:42.377505+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"b13eec68188a0a8abaac8863a95af9a8e79d40b4\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "manifest",
+    "repositoryId": 869760181,
+    "repository": "vercel-labs/natural-language-postgres",
+    "content": {
+      "type": "file",
+      "encoding": "base64",
+      "size": 1419,
+      "name": "package.json",
+      "path": "package.json",
+      "content": "ewogICJuYW1lIjogInBvc3RncmVzLXN0YXJ0ZXIiLAogICJyZXBvc2l0b3J5\nIjogImh0dHBzOi8vZ2l0aHViLmNvbS92ZXJjZWwvZXhhbXBsZXMuZ2l0IiwK\nICAibGljZW5zZSI6ICJNSVQiLAogICJ2ZXJzaW9uIjogIjAuMC4wIiwKICAi\ncHJpdmF0ZSI6IHRydWUsCiAgInNjcmlwdHMiOiB7CiAgICAiZGV2IjogIm5l\neHQgZGV2IC0tdHVyYm8iLAogICAgImJ1aWxkIjogIm5leHQgYnVpbGQiLAog\nICAgInN0YXJ0IjogIm5leHQgc3RhcnQiLAogICAgImxpbnQiOiAibmV4dCBs\naW50IiwKICAgICJzZWVkIjogInRzeCBsaWIvc2VlZC50cyIKICB9LAogICJk\nZXBlbmRlbmNpZXMiOiB7CiAgICAiQHJhZGl4LXVpL3JlYWN0LWRpYWxvZyI6\nICJeMS4xLjIiLAogICAgIkByYWRpeC11aS9yZWFjdC1zbG90IjogIl4xLjEu\nMCIsCiAgICAiQHJhZGl4LXVpL3JlYWN0LXRhYnMiOiAiXjEuMS4xIiwKICAg\nICJAcmFkaXgtdWkvcmVhY3QtdG9vbHRpcCI6ICJeMS4xLjQiLAogICAgIkB0\neXBlcy9tcyI6ICJeMC43LjM0IiwKICAgICJAdHlwZXMvbm9kZSI6ICIyMi4x\nMC4yIiwKICAgICJAdHlwZXMvcmVhY3QiOiAiMTkuMC4xIiwKICAgICJAdHlw\nZXMvcmVhY3QtZG9tIjogIjE5LjAuMiIsCiAgICAiQHR5cGVzL3JlY2hhcnRz\nIjogIl4xLjguMjkiLAogICAgIkB2ZXJjZWwvcG9zdGdyZXMiOiAiMC4xMC4w\nIiwKICAgICJhaSI6ICJeNi4wLjE0MSIsCiAgICAiYXV0b3ByZWZpeGVyIjog\nIjEwLjQuMjAiLAogICAgImNsYXNzLXZhcmlhbmNlLWF1dGhvcml0eSI6ICJe\nMC43LjEiLAogICAgImNsc3giOiAiXjIuMS4xIiwKICAgICJlc2xpbnQiOiAi\nOS4xNi4wIiwKICAgICJlc2xpbnQtY29uZmlnLW5leHQiOiAiMTUuNS4xMCIs\nCiAgICAiZnJhbWVyLW1vdGlvbiI6ICJeMTEuMTQuMSIsCiAgICAiZ2Vpc3Qi\nOiAiXjEuMy4xIiwKICAgICJsdWNpZGUtcmVhY3QiOiAiXjAuNDY4LjAiLAog\nICAgIm1zIjogIl4yLjEuMyIsCiAgICAibmV4dCI6ICIxNS41LjEwIiwKICAg\nICJuZXh0LXRoZW1lcyI6ICJeMC40LjQiLAogICAgInBvc3Rjc3MiOiAiOC40\nLjQ5IiwKICAgICJyZWFjdCI6ICIxOS4wLjQiLAogICAgInJlYWN0LWRvbSI6\nICIxOS4wLjQiLAogICAgInJlY2hhcnRzIjogIl4yLjE0LjEiLAogICAgInNv\nbm5lciI6ICJeMS43LjEiLAogICAgInRhaWx3aW5kLW1lcmdlIjogIl4yLjUu\nNSIsCiAgICAidGFpbHdpbmRjc3MiOiAiMy40LjE2IiwKICAgICJ0YWlsd2lu\nZGNzcy1hbmltYXRlIjogIl4xLjAuNyIsCiAgICAidHlwZXNjcmlwdCI6ICI1\nLjcuMiIsCiAgICAidmF1bCI6ICJeMS4xLjEiLAogICAgInpvZCI6ICJeMy4y\nNS43NiIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiY3N2LXBh\ncnNlciI6ICJeMy4wLjAiLAogICAgImRvdGVudiI6ICJeMTYuNC43IiwKICAg\nICJ0c3giOiAiXjQuMTkuMiIKICB9Cn0K\n",
+      "sha": "b13eec68188a0a8abaac8863a95af9a8e79d40b4",
+      "url": "https://api.github.com/repos/vercel-labs/natural-language-postgres/contents/package.json?ref=main",
+      "git_url": "https://api.github.com/repos/vercel-labs/natural-language-postgres/git/blobs/b13eec68188a0a8abaac8863a95af9a8e79d40b4",
+      "html_url": "https://github.com/vercel-labs/natural-language-postgres/blob/main/package.json"
+    }
+  }
+}

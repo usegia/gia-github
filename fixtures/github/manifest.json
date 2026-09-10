@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "description": "Allowlisted public GitHub API observations captured 2026-09-10T10:25:13Z through 2026-09-10T10:28:47Z. Actual records; bounded PR/review coverage. No email fields or credentials. Digests cover exact UTF-8 capture bytes.",
+  "files": [
+    {
+      "path": "001-vercel__ai-repository.json",
+      "sha256": "b335dd92d2c637f9cae9edc3038c5e4091df2554cf8cbc91f7868688bae5a0fc"
+    },
+    {
+      "path": "002-vercel__chatbot-repository.json",
+      "sha256": "dcf019b8fe4d2a44c14f2547690f9313d3902d8b7ae8226b2fd88a66fdca1baa"
+    },
+    {
+      "path": "003-vercel-labs__natural-language-postgres-repository.json",
+      "sha256": "43bcf88c53d3e39ea3708a3a14b725d2864ea0eaef6a9687e4b607874aec4b1b"
+    },
+    {
+      "path": "004-vercel-labs__knowledge-agent-template-repository.json",
+      "sha256": "dcb477332ac7380cfb03c98e894c5d79b86fae4bbb70b9ae990a7abbec6ea2d8"
+    },
+    {
+      "path": "005-vercel-labs__github-tools-repository.json",
+      "sha256": "72574fae5dfb4dff049b1bb363e6121d86af50f91545ce7b762b45034cfcb85d"
+    },
+    {
+      "path": "006-vercel-labs__bash-tool-repository.json",
+      "sha256": "6b1451d04401766303b14ba31673773cd98c43d9d6d4b1361fe9ffcedc5ac4af"
+    },
+    {
+      "path": "007-vercel-labs__ai-python-repository.json",
+      "sha256": "8f94cc671de159e2b05a8af1c281308858e4429d108b495a17af590e11066c53"
+    },
+    {
+      "path": "008-vercel-labs__ai-facts-repository.json",
+      "sha256": "d976e2433e053b53ae88d90cf60cd461bc64ca837219941b73b89eb60ec237bc"
+    },
+    {
+      "path": "009-vercel-labs__ai-sdk-persistence-db-repository.json",
+      "sha256": "3b85ccc12dcf509ef83d2760582c1fb4c23854352dda9c08b992b0ac88268386"
+    },
+    {
+      "path": "010-upstash__rag-chat-repository.json",
+      "sha256": "7ee0c80b04bb9342168a535f69a797d2710375e639aa717626ba07b67512ba05"
+    },
+    {
+      "path": "011-upstash__rag-chat-component-repository.json",
+      "sha256": "bbe68fc25388ddd58a7beb7a7bcf54b5c7a1ca1f6dd803bd9f230ec494ec5555"
+    },
+    {
+      "path": "012-upstash__vector-py-repository.json",
+      "sha256": "625d9befbef1c92bbdc0fddefa16708a9f585f1aaddca1ab565f3ae52103552c"
+    },
+    {
+      "path": "013-upstash__vector-js-repository.json",
+      "sha256": "341ad2a1b311bf788d1eacd91f698b655be221e197c6c7346e3f800819e2e869"
+    },
+    {
+      "path": "014-upstash__agentkit-repository.json",
+      "sha256": "8aabca984b707bf76e7bb05033e832285bd95ad24987b6dcab50a61f5f4773ae"
+    },
+    {
+      "path": "015-assistant-ui__assistant-ui-repository.json",
+      "sha256": "538a8d01a38bab632fc1b6657184ee6f77aaf5e70f10ce7ae03692a22456f0bc"
+    },
+    {
+      "path": "016-vercel-public-members.json",
+      "sha256": "16b2ca648008de29ed941155a62917fce6dceef87578e52c563aacd0e7f19664"
+    },
+    {
+      "path": "017-vercel-labs-public-members.json",
+      "sha256": "87b5a4f28805f3ee51b41b19dfb7de054f3b3fc02e73575e18d91477d6c2c78c"
+    },
+    {
+      "path": "018-upstash-public-members.json",
+      "sha256": "297be773389895a67701a6b09abd370dc54bee048bdf8e8191bc992e26839592"
+    },
+    {
+      "path": "019-assistant-ui-public-members.json",
+      "sha256": "bd78c360fc4f970abbd7bc742cbec5dbe64af78ebf70a7d8e3e95d8075398603"
+    },
+    {
+      "path": "020-anbuzin-profile.json",
+      "sha256": "3d3fe524716ca4c40dec6c3988de6a7ea5cd35fbd981956450d9e9a84fe714ce"
+    },
+    {
+      "path": "021-msullivan-profile.json",
+      "sha256": "a1e50b1c67b9fd56cf863d9ecbbaa9ec1596d715337f0566a4439c1f91054ca5"
+    },
+    {
+      "path": "022-n1ckoates-profile.json",
+      "sha256": "edc465955ac92f6ca3c68ceec71f6e69a69dde36dff2706aacaef519dccc86c7"
+    },
+    {
+      "path": "023-HugoRCD-profile.json",
+      "sha256": "b733804fad28c2eb6a3285e65aa2b4671ef3aa7bfe590e158862dd39910b4415"
+    },
+    {
+      "path": "024-CahidArda-profile.json",
+      "sha256": "adee7b94c882472e60de67829d9218d0b2705545278e3bfea8b4a070cee21c15"
+    },
+    {
+      "path": "025-ephraimduncan-profile.json",
+      "sha256": "36fe0ed240de016041abe48deb470cce3f169c3191475d9d3c51ddfbffa27d2c"
+    },
+    {
+      "path": "026-ogzhanolguncu-profile.json",
+      "sha256": "8df0f5346fe35f5cb9edf50e4f12acc66edcea393656f9d947822a489c2724f6"
+    },
+    {
+      "path": "027-Kinfe123-profile.json",
+      "sha256": "a771225ca1084aba7ba8c12a86572798fd9caeaa54ccd9dc6bbfb0bb8a99e9be"
+    },
+    {
+      "path": "028-vercel__ai-pulls.json",
+      "sha256": "b6cbd985f90691b2202db959c9e948d3a31fc70ee5c856b9f48963352f680f77"
+    },
+    {
+      "path": "029-vercel__chatbot-pulls.json",
+      "sha256": "c2e885312a967b50d7b0668c6b5afbed9f2e2eba623e0ba2138d31020f30e47b"
+    },
+    {
+      "path": "030-vercel-labs__natural-language-postgres-pulls.json",
+      "sha256": "dff0dd9a2d60b13039daba4d2640104c8adb5025645ff9db6d0be8bd03188468"
+    },
+    {
+      "path": "031-vercel-labs__knowledge-agent-template-pulls.json",
+      "sha256": "196ac406d074bfe7bd2fe347c8cf7b94db593cabe45a22adbb8f7f8affbc37e5"
+    },
+    {
+      "path": "032-vercel-labs__github-tools-pulls.json",
+      "sha256": "09e620b6c684b3b954af2875e44647e7df82fb2e5a126fa717363c6735ebd848"
+    },
+    {
+      "path": "033-vercel-labs__bash-tool-pulls.json",
+      "sha256": "9f2cfbd2b854a06ec73a9a108258a159f54b829846f95d524879020e3fa945ff"
+    },
+    {
+      "path": "034-vercel-labs__ai-python-pulls.json",
+      "sha256": "ae8a70b39163b435b02f0fac7782fdd0110c04ee853f595abc1197c24a973d91"
+    },
+    {
+      "path": "035-vercel-labs__ai-facts-pulls.json",
+      "sha256": "66ef67d9fb8db3daad52e047d64bf983f4f2cd7522f5a807ec18f841605cb712"
+    },
+    {
+      "path": "036-vercel-labs__ai-sdk-persistence-db-pulls.json",
+      "sha256": "33e0acff3fb662b198e541afda9b22d523647513f2ee6db8a6a4f372f8e792bd"
+    },
+    {
+      "path": "037-upstash__rag-chat-pulls.json",
+      "sha256": "7a79d8f9769b5414e1ca29a1c89f84c5e2626fd5a1d7822e213271f1a8ff3374"
+    },
+    {
+      "path": "038-upstash__rag-chat-component-pulls.json",
+      "sha256": "1f044f2d57a5ff9318a1d18383efd7f88b6b89f719aa01f354b97fe022d17f71"
+    },
+    {
+      "path": "039-upstash__vector-py-pulls.json",
+      "sha256": "0f90be9ee33b5d5fa28dcae4eee6f9120042d92123294f102f9269cd7111d2a5"
+    },
+    {
+      "path": "040-upstash__vector-js-pulls.json",
+      "sha256": "d0875c6ddf7c39984ad53adc9be243afce8b4cb76d5ed2a3467b826dc8ff5067"
+    },
+    {
+      "path": "041-upstash__agentkit-pulls.json",
+      "sha256": "0ff6e3fff2487ac8dfd2a80dd0a1e0da658f35af66b2666b4e9aa84ee93c8884"
+    },
+    {
+      "path": "042-assistant-ui__assistant-ui-pulls.json",
+      "sha256": "b77c7750eea96a21cbb790e2872697ff7181fa44add49ea5792dcb1e3840c183"
+    },
+    {
+      "path": "043-vercel__ai-languages.json",
+      "sha256": "ece3fef9c5c98d61d0353069326d6b352f11406e9d71c614426ce468c81d3957"
+    },
+    {
+      "path": "044-vercel__ai-readme.json",
+      "sha256": "d735c4893975d5ab6a821ba44751e353408b9c1e192f3f2757a11c08cc4d32dd"
+    },
+    {
+      "path": "045-vercel__chatbot-languages.json",
+      "sha256": "d4aedde301858f9a46c015faf7f11484b0b42602abcaf424bb7aa038360380f9"
+    },
+    {
+      "path": "046-vercel__chatbot-readme.json",
+      "sha256": "b3108c12466cae197fe389a8a26ecb5b09a4026b381d0320dc9def51bd4cb8e9"
+    },
+    {
+      "path": "047-vercel__chatbot-package.json",
+      "sha256": "ef22cf30b86c9908ef29225c0e8e712ed6a3b7041cb66eb8a03c38955cb2e5ea"
+    },
+    {
+      "path": "048-vercel-labs__natural-language-postgres-languages.json",
+      "sha256": "bcdacc275e159f0575ad7636e6ad87ff9abd3e6c0c980c3ca6f7e7b05b2b9bfc"
+    },
+    {
+      "path": "049-vercel-labs__natural-language-postgres-readme.json",
+      "sha256": "61aa1b2d4e936fef022eca091d41fa4943703591f2a87b5656a005183da0e8a9"
+    },
+    {
+      "path": "050-vercel-labs__natural-language-postgres-package.json",
+      "sha256": "251c021d3b190a42e8a664f452e56f0416303cf688b6ab851cd8c1c42d183f2e"
+    },
+    {
+      "path": "051-vercel-labs__knowledge-agent-template-languages.json",
+      "sha256": "5059fa6815f52a2cee6e74edbafef3deabc398e5b0d51d28a56a0742c6ff7111"
+    },
+    {
+      "path": "052-vercel-labs__knowledge-agent-template-readme.json",
+      "sha256": "3ac9380602a0ebe7e8162b3559eb8ca7b5c9a71504dde0121ccdc95453ecdb60"
+    },
+    {
+      "path": "053-vercel-labs__knowledge-agent-template-package.json",
+      "sha256": "8869439dc699883db9e3e039ddcdf84523a4515c4c2c6ecdca504a1dbf34ce92"
+    },
+    {
+      "path": "054-vercel-labs__github-tools-languages.json",
+      "sha256": "01e8fd89a4eec98a1b4bba1d4b4ddde99a52bf177bf06d8672c88eb17d33f3ba"
+    },
+    {
+      "path": "055-vercel-labs__github-tools-readme.json",
+      "sha256": "d2115deae86dac844b928a93ff0aefee544bb572ea29fc843470702de2b67237"
+    },
+    {
+      "path": "056-vercel-labs__bash-tool-languages.json",
+      "sha256": "eafb8c40c7a6b87f6aa413a0b1af5b31a5e021954711a50c595b8a3dbe09810c"
+    },
+    {
+      "path": "057-vercel-labs__bash-tool-readme.json",
+      "sha256": "b158ea391e1278edf18943af638839c3cc6573b4b6d69adfa50753e93c92ba8f"
+    },
+    {
+      "path": "058-vercel-labs__bash-tool-package.json",
+      "sha256": "f8f8ab37c4bdb629762abc933fa22839868f823e7bf2a3965b83a5dd88b65c00"
+    },
+    {
+      "path": "059-vercel-labs__ai-python-languages.json",
+      "sha256": "ec59c50ced1d2b865b70ef030e1e710fe6d946e520fef2481f4c69bf4d16570f"
+    },
+    {
+      "path": "060-vercel-labs__ai-python-readme.json",
+      "sha256": "321c2f04cdb2e1d13d2e9f31e3f5dcfa472b8e1026eaec50b966c4556fa341b4"
+    },
+    {
+      "path": "061-vercel-labs__ai-facts-languages.json",
+      "sha256": "698dae1b16838fc38e88774376a225b6a225e3fe6ca97ad0460fe50a26bf702d"
+    },
+    {
+      "path": "062-vercel-labs__ai-facts-readme.json",
+      "sha256": "b8c391d4aaafd91181d6788d930a04b1c8089994be01a83f62d1dda1f04562ea"
+    },
+    {
+      "path": "063-vercel-labs__ai-facts-package.json",
+      "sha256": "bae4301fc7b5aeecc33766c3c48f4281143fbac7bf3f722da7df4e8fb73695f9"
+    },
+    {
+      "path": "064-vercel-labs__ai-sdk-persistence-db-languages.json",
+      "sha256": "944af641681530f5af47deca447a21cd5a0ebd528b1a6a0d549651fd90f35772"
+    },
+    {
+      "path": "065-vercel-labs__ai-sdk-persistence-db-readme.json",
+      "sha256": "556593cea9cbc4fc869035ce0fb549ba89bb89d32deb6c531b9c2677a66694af"
+    },
+    {
+      "path": "066-vercel-labs__ai-sdk-persistence-db-package.json",
+      "sha256": "9ec412a1de2c88abc3677af8ccdb07ef784448bb59863924d84ce3731c87945b"
+    },
+    {
+      "path": "067-upstash__rag-chat-languages.json",
+      "sha256": "dddfbfb9f45cc225ef120a8e0a3e637eabcf80383011d4721ad074336ca49744"
+    },
+    {
+      "path": "068-upstash__rag-chat-readme.json",
+      "sha256": "c79342761c5793e2d66906e1a0304ef2d2f53be618659c068858fbd8d255d4ee"
+    },
+    {
+      "path": "069-upstash__rag-chat-package.json",
+      "sha256": "e366bb8492d10f9d850c209c3b003c9163ca5588d8c890fc161d5f4a96c2ecd9"
+    },
+    {
+      "path": "070-upstash__rag-chat-component-languages.json",
+      "sha256": "fcadd588244c6da90fa1adab65a71f3756c5ee93564acd6f55ca221121c64b1f"
+    },
+    {
+      "path": "071-upstash__rag-chat-component-readme.json",
+      "sha256": "2d9d7e139cdcb0ec0a54235b1f49c5897371f127739eec96e04a47fd02567b84"
+    },
+    {
+      "path": "072-upstash__vector-py-languages.json",
+      "sha256": "421662981fe46c64ec591cdd14ff91c3fff5369b7695d016beb0cdb77917995e"
+    },
+    {
+      "path": "073-upstash__vector-py-readme.json",
+      "sha256": "69e940b42e03b7f0f141de9fd72c60185d8e617324803ba15bd3084d855b0f59"
+    },
+    {
+      "path": "074-upstash__vector-js-languages.json",
+      "sha256": "96cc251b5f84e01b933dd2e9fe4c2e0882519df7da6be5e799c340f007a91534"
+    },
+    {
+      "path": "075-upstash__vector-js-readme.json",
+      "sha256": "60fc5682349ab925dd94b5203de8cc54e28d57ad656c92aa17391f661ef052c3"
+    },
+    {
+      "path": "076-upstash__vector-js-package.json",
+      "sha256": "f8261e44026f2d8f559d68b112da6b748bc7a657ca84ea9cf69386c8d4094b83"
+    },
+    {
+      "path": "077-upstash__agentkit-languages.json",
+      "sha256": "1b20eb16688225dbd0369e7ba3133e892280814d7bbfdb88f477801b30cbeb97"
+    },
+    {
+      "path": "078-upstash__agentkit-readme.json",
+      "sha256": "ab727ac966803e15a3c6df59a7a2d8611e1fcad00c00c6b2ff42b587b80c6b01"
+    },
+    {
+      "path": "079-assistant-ui__assistant-ui-languages.json",
+      "sha256": "de31f48326eed45ec2d33afcaa79d43511797d2918510dde750d028fdb3afeb7"
+    },
+    {
+      "path": "080-assistant-ui__assistant-ui-readme.json",
+      "sha256": "087f2dacaf7eafba7abdf3ae252ac4d5211dc69dfabe67d8eed48e1ef96786ba"
+    },
+    {
+      "path": "081-assistant-ui__assistant-ui-7142-reviews.json",
+      "sha256": "d10ac5b3c2dec2660015fd59b8392154c4234c0074874a63dd787633f375fbcb"
+    },
+    {
+      "path": "082-upstash__rag-chat-28-reviews.json",
+      "sha256": "768e65dc8d9426a6470c1521048ef80dd800c0f76ef282ed6c256680a4252070"
+    },
+    {
+      "path": "083-upstash__vector-js-53-reviews.json",
+      "sha256": "8543feea3d6dcd900ec2a71ce237247b6d01f15942e4f3125f715a066f858059"
+    },
+    {
+      "path": "084-vercel-labs__ai-python-255-reviews.json",
+      "sha256": "1e3aaca125677b15363e9647710af6ab062d853fe4849121f7b600f487a5a50e"
+    },
+    {
+      "path": "085-vercel-labs__ai-python-258-reviews.json",
+      "sha256": "765e164f0e13fa9c4fa47d827c16c631246578064fda1a33e8d0d3e0de754f6a"
+    },
+    {
+      "path": "086-vercel-labs__ai-python-277-reviews.json",
+      "sha256": "fde64f7bb1b816c6ef4327ca31892c637f28a64651fc7a34f566ce1e4cb9a692"
+    },
+    {
+      "path": "087-vercel-labs__github-tools-115-reviews.json",
+      "sha256": "3f64d1a8658d7ad15ec03848420b4f78f97603dd3505f5ace27d1489ea957485"
+    },
+    {
+      "path": "088-vercel__ai-20551-reviews.json",
+      "sha256": "efa12f64759d22129f1aaeef555fdf857c43c719ec3e97fdfe576e422a6140e2"
+    },
+    {
+      "path": "089-vercel__ai-20564-reviews.json",
+      "sha256": "9308b306fd188d82e4524e9e58c2e068e364f05cf24fdf4c7ded61b41ee94f8b"
+    },
+    {
+      "path": "090-vercel__chatbot-1529-reviews.json",
+      "sha256": "759fb625421f036750194d7f7a14c4a9ee93356db72668a515e655099699c4fe"
+    },
+    {
+      "path": "091-upstash__rag-chat-28-files.json",
+      "sha256": "fdb4f9ecd4b7d0adac38c1583341a07323a72b1b0667a9599eb5949d0832812a"
+    },
+    {
+      "path": "092-upstash__vector-js-53-files.json",
+      "sha256": "d5648e4b02ebf0d54078b9524864446eed66caec1a27ed2b72484a2385c4a9cd"
+    },
+    {
+      "path": "093-vercel-labs__ai-python-255-files.json",
+      "sha256": "5955882058e7761ac545f7fe607ac9f13f452c0c093e723ee9c41c19040367b6"
+    },
+    {
+      "path": "094-vercel-labs__ai-python-258-files.json",
+      "sha256": "3ecd48df11ac5bc557ac50bb69b6d0b5e39eb1000b610bbd47aa14c824aaece4"
+    },
+    {
+      "path": "095-vercel-labs__github-tools-115-files.json",
+      "sha256": "844c6ce8a76fda1e7a08d4525fa0438bfdbf398e7e3bdbe946a0c93eceb89ceb"
+    }
+  ]
+}

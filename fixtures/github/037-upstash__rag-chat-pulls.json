@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/rag-chat/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:43.132759+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"bb1ad13a3291743f7b78ed9959093ce7838cb77ec6f7a21a46bbf98aa406c1c2\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/794140072/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 794140072,
+    "repository": "upstash/rag-chat",
+    "records": [
+      {
+        "id": 3096465682,
+        "node_id": "PR_kwDOL1WdqM64kFES",
+        "number": 108,
+        "state": "closed",
+        "title": "DX-2316: bump next",
+        "body": "https://nextjs.org/blog/security-update-2025-12-11",
+        "html_url": "https://github.com/upstash/rag-chat/pull/108",
+        "created_at": "2025-12-12T13:02:30Z",
+        "updated_at": "2025-12-15T08:00:31Z",
+        "closed_at": "2025-12-15T08:00:31Z",
+        "merged_at": "2025-12-15T08:00:31Z",
+        "merge_commit_sha": "4c3f290908150b216cd19985a4c7c601ab78d22f",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "c9eb407c4499d526770f2cd67ce1423d9fbafd85",
+          "ref": "DX-2316-bump-next"
+        },
+        "base": {
+          "sha": "3c1adf7ee348168b8ee27572ccfb3045a9c17e86",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1989399059,
+        "node_id": "PR_kwDOL1WdqM52k9IT",
+        "number": 24,
+        "state": "closed",
+        "title": "Add Cloudflare Example",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/24",
+        "created_at": "2024-07-26T12:50:17Z",
+        "updated_at": "2025-05-20T01:04:36Z",
+        "closed_at": "2024-07-30T06:40:04Z",
+        "merged_at": "2024-07-30T06:40:04Z",
+        "merge_commit_sha": "e27d6e2f7904ec894c5e806a65388158beb480b8",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "2a3fd6a90f80054b15c364c30b0571183b34288e",
+          "ref": "DX-1101-cf-worker-example"
+        },
+        "base": {
+          "sha": "2f032bd7625b9428c4415d1bbf6f78fb04b8f340",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1994182370,
+        "node_id": "PR_kwDOL1WdqM523M7i",
+        "number": 28,
+        "state": "closed",
+        "title": "feat: add disableRAG and prompt to chat options",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/28",
+        "created_at": "2024-07-30T11:11:12Z",
+        "updated_at": "2025-05-20T01:04:07Z",
+        "closed_at": "2024-07-30T12:48:37Z",
+        "merged_at": "2024-07-30T12:48:37Z",
+        "merge_commit_sha": "7af2a89319cfd9c088ae59d7bfb5569ae72c1852",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "77b3fad16ebb4c3116d721afd7fd877c8d6d6ef7",
+          "ref": "DX-1120"
+        },
+        "base": {
+          "sha": "5c78865df2262ac60cc6c3f037f2dbf0b3fcea44",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 1996421913,
+        "node_id": "PR_kwDOL1WdqM52_vsZ",
+        "number": 33,
+        "state": "closed",
+        "title": "Fix metadata",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/33",
+        "created_at": "2024-07-31T13:26:52Z",
+        "updated_at": "2025-05-20T01:03:33Z",
+        "closed_at": "2024-07-31T15:00:11Z",
+        "merged_at": "2024-07-31T15:00:11Z",
+        "merge_commit_sha": "c33b32c3a50df5e56807b9d856d12ab833b82cf1",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "63d930a7ff22ae2f72b39b252c38c64c5b982c89",
+          "ref": "fix-metadata"
+        },
+        "base": {
+          "sha": "9770579eb185fa9100395bc9ee3d1b8dca46c924",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2008252322,
+        "node_id": "PR_kwDOL1WdqM53s3-i",
+        "number": 36,
+        "state": "closed",
+        "title": "feat: add metadata to pdf",
+        "body": "This PR adds some useful metadata when parsing and loading PDF files.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/36",
+        "created_at": "2024-08-07T11:38:37Z",
+        "updated_at": "2025-05-20T01:02:57Z",
+        "closed_at": "2024-08-07T11:47:32Z",
+        "merged_at": "2024-08-07T11:47:32Z",
+        "merge_commit_sha": "6c914461e56441d3cd4ab1c9979ca83b4c13e986",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "8d6bea8771fb2913865c09910c94560800aa4f90",
+          "ref": "add-metadata-to-pdf"
+        },
+        "base": {
+          "sha": "fa70ac46b216a4e078de8c7fae15064ca87e90cc",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2010659123,
+        "node_id": "PR_kwDOL1WdqM532Dkz",
+        "number": 37,
+        "state": "closed",
+        "title": "feat: add helicone",
+        "body": "This PR gives rag-chat observability via Helicone.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/37",
+        "created_at": "2024-08-08T14:15:53Z",
+        "updated_at": "2025-05-20T01:02:33Z",
+        "closed_at": "2024-08-09T12:54:35Z",
+        "merged_at": "2024-08-09T12:54:35Z",
+        "merge_commit_sha": "1f50c91524b4ba7f267e1806a246688f2e1ba2fc",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "edaa3a1460d2dfc513d7d99f8421e45f1cf7d281",
+          "ref": "add-helicone"
+        },
+        "base": {
+          "sha": "10953a2e743646bad4adc38346cee13d4d3f3b1a",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2013035599,
+        "node_id": "PR_kwDOL1WdqM53_HxP",
+        "number": 41,
+        "state": "closed",
+        "title": "Fix: Correct URL reconstruction to properly handle URLs with protocol",
+        "body": "Corrected URL reconstruction to handle protocols properly. \r\n```console.log of params and reconstructedUrl```\r\nBefore the Fix:\r\n\r\n\t•\tInput: ['https%3A', 'example.com']\r\n\t•\tOutput: https:/example.com\r\n\r\nAfter the Fix:\r\n\r\n\t•\tInput: ['https%3A', 'example.com']\r\n\t•\tOutput: https://example.com",
+        "html_url": "https://github.com/upstash/rag-chat/pull/41",
+        "created_at": "2024-08-09T20:41:32Z",
+        "updated_at": "2025-05-20T01:02:12Z",
+        "closed_at": "2024-08-12T07:17:57Z",
+        "merged_at": "2024-08-12T07:17:57Z",
+        "merge_commit_sha": "96b69b74c0b3b41bf73f10a864f7605543483fa5",
+        "draft": false,
+        "user": {
+          "id": 48212803,
+          "node_id": "MDQ6VXNlcjQ4MjEyODAz",
+          "login": "sijan2",
+          "type": "User",
+          "html_url": "https://github.com/sijan2"
+        },
+        "head": {
+          "sha": "71fb70078713525fe921e3a3721147fad86a89d0",
+          "ref": "master"
+        },
+        "base": {
+          "sha": "2a3e49d78c560ed6f05d9919e5e0605dbfed5c84",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2014386114,
+        "node_id": "PR_kwDOL1WdqM54ERfC",
+        "number": 45,
+        "state": "closed",
+        "title": "Disable test for precommit",
+        "body": "This PR disables pre-commit tests to make contributions easier. In the future we'll find a way to make testing easier for contributors.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/45",
+        "created_at": "2024-08-12T07:29:00Z",
+        "updated_at": "2025-05-20T01:01:55Z",
+        "closed_at": "2024-08-12T07:30:06Z",
+        "merged_at": "2024-08-12T07:30:06Z",
+        "merge_commit_sha": "ec7cd00a05cc5e275773caf47bd928d0f485c47d",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "3ab957f984badeddd83b12e87481265f5ea27a23",
+          "ref": "disable-test-for-precommit"
+        },
+        "base": {
+          "sha": "96b69b74c0b3b41bf73f10a864f7605543483fa5",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2019400670,
+        "node_id": "PR_kwDOL1WdqM54XZve",
+        "number": 55,
+        "state": "closed",
+        "title": "feat: add new models",
+        "body": "This PR adds following providers\r\n\r\n- [x] Groq\r\n- [x] OpenRouter\r\n- [x] TogetherAI\r\n- [x] MistralAI ",
+        "html_url": "https://github.com/upstash/rag-chat/pull/55",
+        "created_at": "2024-08-14T14:04:29Z",
+        "updated_at": "2025-05-20T01:01:18Z",
+        "closed_at": "2024-08-14T14:25:35Z",
+        "merged_at": "2024-08-14T14:25:35Z",
+        "merge_commit_sha": "0bea9d93ced71c6412b1cc0ca3cdcd41059885bb",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "d3b189c81b156166e4d90d8fb533eaef9af13c85",
+          "ref": "add-new-models"
+        },
+        "base": {
+          "sha": "ed74b4b96e9741857eb83703eb03bed5ace0dd4e",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2022558054,
+        "node_id": "PR_kwDOL1WdqM54jclm",
+        "number": 57,
+        "state": "closed",
+        "title": "feat: add disableHistory option and related tests for issue #44",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/57",
+        "created_at": "2024-08-16T08:41:45Z",
+        "updated_at": "2025-05-20T01:00:52Z",
+        "closed_at": "2024-08-16T14:00:15Z",
+        "merged_at": "2024-08-16T14:00:15Z",
+        "merge_commit_sha": "fcdfa73ce724b07195ed6a0069020074bf79be0c",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "b845a317de04730e570e7244757a84eb1281f4d7",
+          "ref": "disable-history-option"
+        },
+        "base": {
+          "sha": "9b6b89df117fc3f9263becc32b0c1bdcb84b677a",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2032166455,
+        "node_id": "PR_kwDOL1WdqM55IGY3",
+        "number": 61,
+        "state": "closed",
+        "title": "feat: add unstructured loader",
+        "body": "This PR adds support for unstructured.io. This loader allows users to add unstructured data, such as receipts and webpages that do not follow a specific order.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/61",
+        "created_at": "2024-08-22T13:28:07Z",
+        "updated_at": "2025-05-20T01:00:23Z",
+        "closed_at": "2024-08-26T20:55:33Z",
+        "merged_at": "2024-08-26T20:55:33Z",
+        "merge_commit_sha": "abd1c564281ac6df86ae4d8e8a6ad9248fd85666",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "365b72b5d41c902bafdcbd96b6d845c2406bcca3",
+          "ref": "add-unstructured-loader"
+        },
+        "base": {
+          "sha": "fcdfa73ce724b07195ed6a0069020074bf79be0c",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2039768708,
+        "node_id": "PR_kwDOL1WdqM55lGaE",
+        "number": 64,
+        "state": "closed",
+        "title": "feat: add anthropic model",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/64",
+        "created_at": "2024-08-27T14:03:49Z",
+        "updated_at": "2025-05-20T01:00:05Z",
+        "closed_at": "2024-08-27T14:04:20Z",
+        "merged_at": "2024-08-27T14:04:20Z",
+        "merge_commit_sha": "36277cbc93f44984e98f2c08634b1639de4b3066",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "ddba7c12b9e6d780a6a2b7cb51dd8ed33e85c1c8",
+          "ref": "add-anthropic-model"
+        },
+        "base": {
+          "sha": "abd1c564281ac6df86ae4d8e8a6ad9248fd85666",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2053140633,
+        "node_id": "PR_kwDOL1WdqM56YHCZ",
+        "number": 69,
+        "state": "closed",
+        "title": "fix: add some packages to tsup external",
+        "body": "This PR adds anthropic, mistral and langsmith to `tsup`'s external dependencies to resolve some `cjs` import issues.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/69",
+        "created_at": "2024-09-04T10:52:44Z",
+        "updated_at": "2025-05-20T00:59:40Z",
+        "closed_at": "2024-09-04T11:01:50Z",
+        "merged_at": "2024-09-04T11:01:50Z",
+        "merge_commit_sha": "10c90ea8a626344577ef54cba906891b03da5dcd",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "fae68c137df66aade4c7690c7c2314647fcd5c09",
+          "ref": "dependecy-fix"
+        },
+        "base": {
+          "sha": "435387311889bd4bed2abe2a7ff76911d3cbd8a8",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2053635312,
+        "node_id": "PR_kwDOL1WdqM56Z_zw",
+        "number": 70,
+        "state": "closed",
+        "title": "feat: add llama parse",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/70",
+        "created_at": "2024-09-04T14:31:17Z",
+        "updated_at": "2025-05-20T00:59:19Z",
+        "closed_at": "2024-09-04T14:33:00Z",
+        "merged_at": "2024-09-04T14:33:00Z",
+        "merge_commit_sha": "d15f1a370df83fc0eda9e5bb0c6b1742f8432d26",
+        "draft": false,
+        "user": {
+          "id": 21091016,
+          "node_id": "MDQ6VXNlcjIxMDkxMDE2",
+          "login": "ogzhanolguncu",
+          "type": "User",
+          "html_url": "https://github.com/ogzhanolguncu"
+        },
+        "head": {
+          "sha": "76e6891f7b125e4be532cc3b86aa92d5f873dcf5",
+          "ref": "add-llama-parse"
+        },
+        "base": {
+          "sha": "10c90ea8a626344577ef54cba906891b03da5dcd",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2075610049,
+        "node_id": "PR_kwDOL1WdqM57t0vB",
+        "number": 75,
+        "state": "closed",
+        "title": "fix: downgrade llamaindex to 0.5.24",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/75",
+        "created_at": "2024-09-17T07:17:14Z",
+        "updated_at": "2025-05-20T00:58:55Z",
+        "closed_at": "2024-09-17T07:17:20Z",
+        "merged_at": "2024-09-17T07:17:20Z",
+        "merge_commit_sha": "47f5bb7ae5f9b058f418b22aa3b028e95a218c60",
+        "draft": false,
+        "user": {
+          "id": 18082091,
+          "node_id": "MDQ6VXNlcjE4MDgyMDkx",
+          "login": "ytkimirti",
+          "type": "User",
+          "html_url": "https://github.com/ytkimirti"
+        },
+        "head": {
+          "sha": "a2a19d68ba82c4a641ae176ad9e1ec12734b1ae5",
+          "ref": "hotfix-rsc"
+        },
+        "base": {
+          "sha": "fa598833ed82900d30a728b5fea8575ad623f929",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2086083744,
+        "node_id": "PR_kwDOL1WdqM58Vxyg",
+        "number": 79,
+        "state": "closed",
+        "title": "DX-1264: Update Exports & Add CI Tests",
+        "body": "This PR has three main changes:\r\n- update eslint & exports in package.json\r\n- fixing small errors in examples and adding extensive CI\r\n- llamaindex is removed, as it was causing errors explained below\r\n\r\nSince llamaindex is removed, we will release a major version (2.0.0)\r\n\r\n## Eslint & Exports\r\n\r\n- Updated tsup config\r\n- Updated exports field in package.json\r\n>NOTE: This should not bring any breaking changes with the old version. Here is the old and new output coming from the attw cli:\r\n<img width=\"625\" alt=\"rag before\" src=\"https://github.com/user-attachments/assets/0e5e0569-b496-498f-895f-2b4ee5a5878d\">\r\n<img width=\"620\" alt=\"rag after\" src=\"https://github.com/user-attachments/assets/fc526775-553c-4cd9-a1ec-57c33d46fe32\">\r\n\r\n## CI\r\n\r\nThe examples are first tested with a local build. Then, a release is made with ci tag and it's released. It's tested by deploying to Vercel and CF workers.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/79",
+        "created_at": "2024-09-23T09:38:17Z",
+        "updated_at": "2025-05-20T00:58:12Z",
+        "closed_at": "2024-10-03T11:25:18Z",
+        "merged_at": "2024-10-03T11:25:18Z",
+        "merge_commit_sha": "5b804cf00a38c3563f8149e700c163182eb59248",
+        "draft": false,
+        "user": {
+          "id": 18082091,
+          "node_id": "MDQ6VXNlcjE4MDgyMDkx",
+          "login": "ytkimirti",
+          "type": "User",
+          "html_url": "https://github.com/ytkimirti"
+        },
+        "head": {
+          "sha": "834fff357805b1cc0d3b492f7e227cd70536ef19",
+          "ref": "DX-1264"
+        },
+        "base": {
+          "sha": "dc0dd2c7d72b1b6855391ad13a642369790396a7",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2107953954,
+        "node_id": "PR_kwDOL1WdqM59pNMi",
+        "number": 85,
+        "state": "closed",
+        "title": "Fix test file paths in the CI",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/85",
+        "created_at": "2024-10-04T16:49:28Z",
+        "updated_at": "2025-05-20T00:57:33Z",
+        "closed_at": "2024-10-09T14:53:17Z",
+        "merged_at": "2024-10-09T14:53:17Z",
+        "merge_commit_sha": "cb61a0b52248e746300f96874d102d58f33bf89b",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "368d650e3e92520a6ea92a2ad56a952fa5699aa6",
+          "ref": "fix-ci-test-paths"
+        },
+        "base": {
+          "sha": "cf26b3a524aad12a9a18a96484ca342a77bad71d",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2143235288,
+        "node_id": "PR_kwDOL1WdqM5_vyzY",
+        "number": 88,
+        "state": "closed",
+        "title": "Add pages router test to nextjs/vercel-ai-sdk",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/88",
+        "created_at": "2024-10-24T10:04:23Z",
+        "updated_at": "2025-05-20T00:57:15Z",
+        "closed_at": "2024-10-25T11:17:52Z",
+        "merged_at": "2024-10-25T11:17:52Z",
+        "merge_commit_sha": "1bc3f044c3ea4a47292da888ecfdb2c086fda196",
+        "draft": false,
+        "user": {
+          "id": 18082091,
+          "node_id": "MDQ6VXNlcjE4MDgyMDkx",
+          "login": "ytkimirti",
+          "type": "User",
+          "html_url": "https://github.com/ytkimirti"
+        },
+        "head": {
+          "sha": "12ea46deec299c4a231a609b55767b78342da4e0",
+          "ref": "DX-1376"
+        },
+        "base": {
+          "sha": "807f7515f0cba466a484e817b7ad0b72f3b3eaa5",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2153595334,
+        "node_id": "PR_kwDOL1WdqM6AXUHG",
+        "number": 89,
+        "state": "closed",
+        "title": "Chat with non-embedding db",
+        "body": "Fixes two functionality for usage with non-embedding Vector Index:\r\n- It was only possible to upsert without `data`. Vectors without `data` are not usable in chat. Now it's possible to pass a text with your embedding:\r\n```ts\r\nawait ragChat.context.addMany([\r\n  {\r\n    id: 1,\r\n    type: \"embedding\",\r\n    data: [1, 1, 0],\r\n    text: \"first embedding\", // NEW\r\n    options: { namespace },\r\n  },\r\n  {\r\n    id: 2,\r\n    type: \"embedding\",\r\n    data: [1, 0, 1],\r\n    text: \"second embedding\", // NEW\r\n    options: { namespace },\r\n  },\r\n]);\r\n```\r\ntext is added to the data field of the index.\r\n\r\n- adding `embedding` option in chat to make it possible to query a non-embedding index with your own embedding\r\n```ts\r\nawait ragChat.chat(\"hello world!\", {\r\n  embedding: [0, 0, 0.5], // NEW\r\n  onContextFetched,\r\n  namespace,\r\n});\r\n```\r\n\r\n### Fixes\r\n\r\nindex.addMany is fixed with Promise.all",
+        "html_url": "https://github.com/upstash/rag-chat/pull/89",
+        "created_at": "2024-10-30T10:53:18Z",
+        "updated_at": "2025-05-20T00:56:54Z",
+        "closed_at": "2024-11-01T13:49:57Z",
+        "merged_at": "2024-11-01T13:49:57Z",
+        "merge_commit_sha": "47e08539fc31fc9750fe1c79c39b5dfa99b6e24d",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "031447416e4e8c897ef4b0259c8d76016de089a4",
+          "ref": "DX-1398"
+        },
+        "base": {
+          "sha": "1bc3f044c3ea4a47292da888ecfdb2c086fda196",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2188075393,
+        "node_id": "PR_kwDOL1WdqM6Ca2GB",
+        "number": 95,
+        "state": "closed",
+        "title": "Add custom metadata to uploaded files",
+        "body": "Opened to run CI in #93.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/95",
+        "created_at": "2024-11-19T17:11:55Z",
+        "updated_at": "2025-05-19T20:01:38Z",
+        "closed_at": "2024-11-19T19:23:37Z",
+        "merged_at": "2024-11-19T19:23:37Z",
+        "merge_commit_sha": "5e4c3de79d9d8c73704b6ff29d61be6cf129912c",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "c6a733774f499a747092ac50af9e82f6b9289d2a",
+          "ref": "metadata-for-file-source"
+        },
+        "base": {
+          "sha": "0a78037189c39daf1f42a34bb7f76e55f70b4c29",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2247754014,
+        "node_id": "PR_kwDOL1WdqM6F-gEe",
+        "number": 98,
+        "state": "closed",
+        "title": "feat(chat): add onFinish hook to RAGChat for final response handling",
+        "body": "- Implemented an `onFinish` callback in the RAGChat class to allow users to access and modify the final output of the chat.\r\n- Updated the ChatOptions type to include the new `onFinish` property.\r\n- Added a new test suite to validate the functionality of the `onFinish` hook, ensuring it is called with the correct output after a chat interaction.\r\n\r\ncloses #96",
+        "html_url": "https://github.com/upstash/rag-chat/pull/98",
+        "created_at": "2024-12-21T11:32:10Z",
+        "updated_at": "2025-01-23T07:22:41Z",
+        "closed_at": "2025-01-23T07:22:41Z",
+        "merged_at": "2025-01-23T07:22:41Z",
+        "merge_commit_sha": "3c1adf7ee348168b8ee27572ccfb3045a9c17e86",
+        "draft": false,
+        "user": {
+          "id": 4389565,
+          "node_id": "MDQ6VXNlcjQzODk1NjU=",
+          "login": "ronal2do",
+          "type": "User",
+          "html_url": "https://github.com/ronal2do"
+        },
+        "head": {
+          "sha": "8d51cc68c5b84594ea72f3dbfcb456287ad694f9",
+          "ref": "feat/onFinishCallback"
+        },
+        "base": {
+          "sha": "2934d94eb2eff47a0554cbb484a90a9f5414ecc3",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2247909567,
+        "node_id": "PR_kwDOL1WdqM6F_GC_",
+        "number": 99,
+        "state": "closed",
+        "title": "Fix URL reading issue in [..url]/page.tsx",
+        "body": "Update page.tsx - replace \"//\" with \"/\" in decodedComponents.join() - url was not reading before and the bot wouldn't answer questions correctly.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/99",
+        "created_at": "2024-12-21T14:30:49Z",
+        "updated_at": "2025-01-17T12:32:15Z",
+        "closed_at": "2025-01-17T12:18:25Z",
+        "merged_at": "2025-01-17T12:18:25Z",
+        "merge_commit_sha": "2934d94eb2eff47a0554cbb484a90a9f5414ecc3",
+        "draft": false,
+        "user": {
+          "id": 102487158,
+          "node_id": "U_kgDOBhvUdg",
+          "login": "daviddragan377",
+          "type": "User",
+          "html_url": "https://github.com/daviddragan377"
+        },
+        "head": {
+          "sha": "c8d08b3b0175b5f3e0e15b2454090feb308ab001",
+          "ref": "patch-1"
+        },
+        "base": {
+          "sha": "5e4c3de79d9d8c73704b6ff29d61be6cf129912c",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2248419342,
+        "node_id": "PR_kwDOL1WdqM6GBCgO",
+        "number": 100,
+        "state": "closed",
+        "title": "test(database): fix returning ids",
+        "body": "When we try to retrieve a saved context by a text or embedding by the RagChat instead to return the nanoid, it returns `['Success']`, when saving a file for example a PDF it returns the proper ids, it allow us to delete or update contexts, this PR aims to just fix this small issue",
+        "html_url": "https://github.com/upstash/rag-chat/pull/100",
+        "created_at": "2024-12-22T15:04:48Z",
+        "updated_at": "2025-01-10T10:17:31Z",
+        "closed_at": "2025-01-10T10:17:31Z",
+        "merged_at": "2025-01-10T10:17:31Z",
+        "merge_commit_sha": "620c8aa3a8e0cffa9ff367f73d1963f49fc832ea",
+        "draft": false,
+        "user": {
+          "id": 4389565,
+          "node_id": "MDQ6VXNlcjQzODk1NjU=",
+          "login": "ronal2do",
+          "type": "User",
+          "html_url": "https://github.com/ronal2do"
+        },
+        "head": {
+          "sha": "71e534d838a2a1341072f24c45cb1bd4d57da2d8",
+          "ref": "fix/returning-ids"
+        },
+        "base": {
+          "sha": "5e4c3de79d9d8c73704b6ff29d61be6cf129912c",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2256283484,
+        "node_id": "PR_kwDOL1WdqM6GfCdc",
+        "number": 101,
+        "state": "closed",
+        "title": "feat: add queryMode option",
+        "body": null,
+        "html_url": "https://github.com/upstash/rag-chat/pull/101",
+        "created_at": "2024-12-31T09:52:08Z",
+        "updated_at": "2025-01-10T08:00:20Z",
+        "closed_at": "2025-01-10T08:00:16Z",
+        "merged_at": "2025-01-10T08:00:16Z",
+        "merge_commit_sha": "e635f7b45d8e8ed4cf8a5a93ff42308464f9dcd1",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "6b3d73460d645b778685610cb49aaae89fb4e7ff",
+          "ref": "DX-1497-hybrid-search"
+        },
+        "base": {
+          "sha": "5e4c3de79d9d8c73704b6ff29d61be6cf129912c",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2233643670,
+        "node_id": "PR_kwDOL1WdqM6FIrKW",
+        "number": 97,
+        "state": "closed",
+        "title": "feat(tests): Add Tools to the chat",
+        "body": "The idea is to catch up with other ai sdk allowing for tooling use, this implementation are using openai only, other models still implementing it with different apis \r\n\r\nFor example \r\n\r\n```typescript\r\nimport { RAGChat } from \"@/lib/rag-chat\";\r\nimport { aiUseChatAdapter } from \"@upstash/rag-chat/nextjs\";\r\nimport type { Message } from \"ai\";\r\nimport { z } from \"zod\";\r\nimport { tool } from 'ai';\r\nimport { openai } from \"@ai-sdk/openai\";\r\n\r\n// 👇 allow streaming responses up to 30 seconds\r\nexport const maxDuration = 30;\r\n\r\nconst ragChat = new RAGChat({\r\n  model: openai(\"gpt-4-turbo\"), // <- import { openai } from \"@ai-sdk/openai\";\r\n});\r\n\r\nexport async function POST(request: Request) {\r\n  const { messages } = await request.json();\r\n\r\n  const question = (messages as Message[]).at(-1)?.content;\r\n  if (!question) throw new Error(\"No question in the request\");\r\n\r\n  const myAbortSignal = new AbortController().signal;\r\n\r\n  const response = await ragChat.chat(question, \r\n    { \r\n      streaming: true,\r\n\r\n      toolingOptions: {\r\n        abortSignal: myAbortSignal,\r\n        tools: {\r\n          weather: tool({\r\n            description: 'Get the weather in a location',\r\n            parameters: z.object({ location: z.string() }),\r\n            \r\n            execute: async ({ location }, { abortSignal }) => {\r\n              return fetch(\r\n                // you might need an API key\r\n                `https://api.weatherapi.com/v1/current.json?q=${location}`,\r\n                { signal: abortSignal }, // forward the abort signal to fetch\r\n              );\r\n            },\r\n          }),\r\n        },\r\n        maxSteps: 5,\r\n        // Force the model to attempt tool usage (for testing)\r\n        toolChoice: \"auto\",\r\n        // Attach context data\r\n        // Handle step completion\r\n        onStepFinish: ({ text, toolCalls, toolResults, finishReason }) => {\r\n          console.log(\"onStepFinish\", {\r\n            text,\r\n            toolCalls,\r\n            toolResults,\r\n            finishReason,\r\n          });\r\n        },\r\n        // Handle completion\r\n        onFinish: ({ text, toolCalls, toolResults }) => {\r\n          console.log(\"onFinish\", {\r\n            text,\r\n            toolCalls,\r\n            toolResults,\r\n          });\r\n        },\r\n      }\r\n    }\r\n  );\r\n\r\n  return aiUseChatAdapter(response);\r\n}\r\n```\r\n\r\n\r\n- Add streaming and non-streaming mode tests\r\n- Implement error handling tests for both modes\r\n- Add tooling options support with integration tests\r\n- Update type definitions for ToolingOptions integration\r\n\r\nThe test suite now covers core functionality, error cases, and tooling features, ensuring robust handling of LLM interactions across different scenarios.\r\n\r\n\r\n<img width=\"832\" alt=\"Screenshot 2024-12-13 at 12 56 34\" src=\"https://github.com/user-attachments/assets/fdacea1a-c5cf-4800-aa00-6fed3d510c3a\" />\r\n\r\n```sh\r\n@rkt/app:dev:  POST /api/public/leads 200 in 1735ms\r\n@rkt/app:dev: Step finished: {\r\n@rkt/app:dev:   text: '',\r\n@rkt/app:dev:   toolCalls: [\r\n@rkt/app:dev:     {\r\n@rkt/app:dev:       type: 'tool-call',\r\n@rkt/app:dev:       toolCallId: 'call_L8V9K27KegppPNexhCBbcO6F',\r\n@rkt/app:dev:       toolName: 'discountCupomCode',\r\n@rkt/app:dev:       args: [Object]\r\n@rkt/app:dev:     }\r\n@rkt/app:dev:   ],\r\n@rkt/app:dev:   toolResults: [\r\n@rkt/app:dev:     {\r\n@rkt/app:dev:       type: 'tool-result',\r\n@rkt/app:dev:       toolCallId: 'call_L8V9K27KegppPNexhCBbcO6F',\r\n@rkt/app:dev:       toolName: 'discountCupomCode',\r\n@rkt/app:dev:       args: [Object],\r\n@rkt/app:dev:       result: [Object]\r\n@rkt/app:dev:     }\r\n@rkt/app:dev:   ],\r\n@rkt/app:dev:   finishReason: 'tool-calls'\r\n@rkt/app:dev: }\r\n```\r\n\r\n\r\nLimitations:\r\n\r\nonToolCall has not been called from the frontend, we might need to update out streamText wrapper and the nextjs connector\r\nhttps://github.com/vercel/ai/blob/b9cba49c0db07890e46aa9ea6e53023f1f051a2a/content/cookbook/20-rsc/21-stream-text-with-chat-prompt.mdx#L4",
+        "html_url": "https://github.com/upstash/rag-chat/pull/97",
+        "created_at": "2024-12-13T11:36:33Z",
+        "updated_at": "2024-12-19T18:11:38Z",
+        "closed_at": "2024-12-19T18:11:38Z",
+        "merged_at": null,
+        "merge_commit_sha": "407c5f5b2360988b3143aa509798087a9855ecd7",
+        "draft": false,
+        "user": {
+          "id": 4389565,
+          "node_id": "MDQ6VXNlcjQzODk1NjU=",
+          "login": "ronal2do",
+          "type": "User",
+          "html_url": "https://github.com/ronal2do"
+        },
+        "head": {
+          "sha": "77bece53bdad4f5bf57c9c66f57d33482bb753ce",
+          "ref": "feat/add-ai-tools"
+        },
+        "base": {
+          "sha": "5e4c3de79d9d8c73704b6ff29d61be6cf129912c",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2178402334,
+        "node_id": "PR_kwDOL1WdqM6B18ge",
+        "number": 93,
+        "state": "closed",
+        "title": "Add custom metadata to uploaded files",
+        "body": "Hi, not sure if is intended, but users are not able to save custom metadata to the vector when uploading a file from ragchat.\r\n\r\nUsage example:\r\n```ts\r\nawait ragChat.context.add({\r\n  type: \"pdf\",\r\n  fileSource: \"./data/physics_basics.pdf\",\r\n  options: { \r\n    namespace: \"user-123-documents\",\r\n    metadata: {\r\n      theme: \"physics_basics\",\r\n    }\r\n  },\r\n});\r\n```\r\n\r\n**Given** a setup RagChat instance,\r\n**When** adding a new context from sources (e.g., PDF),\r\n**And** including custom metadata,\r\n**Then** users should be able to visualize their custom metadata in the Upstash vector console.\r\n\r\n\r\nPlease refer to the attached screenshot for a visual example of the issue:\r\n<img width=\"856\" alt=\"Screenshot 2024-11-13 at 21 55 06\" src=\"https://github.com/user-attachments/assets/0ced66b4-4334-45c3-8a26-c6cccbeeec6a\">\r\n\r\nProposed solution on this PR extends `config.options?.metadata` for `mapDocumentsIntoInsertPayload` and turn it into a private method in order to be able to read the config.\r\n\r\n",
+        "html_url": "https://github.com/upstash/rag-chat/pull/93",
+        "created_at": "2024-11-13T21:40:54Z",
+        "updated_at": "2024-11-19T19:24:05Z",
+        "closed_at": "2024-11-19T19:24:05Z",
+        "merged_at": null,
+        "merge_commit_sha": "439eeb65ea8f914df971e98b3867a7119d3bb9df",
+        "draft": false,
+        "user": {
+          "id": 4389565,
+          "node_id": "MDQ6VXNlcjQzODk1NjU=",
+          "login": "ronal2do",
+          "type": "User",
+          "html_url": "https://github.com/ronal2do"
+        },
+        "head": {
+          "sha": "c6a733774f499a747092ac50af9e82f6b9289d2a",
+          "ref": "feat/add-custom-metadata-to-uploaded-files"
+        },
+        "base": {
+          "sha": "af2e30cdb7446327ea1696c0e8baa4630f97add6",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2173744858,
+        "node_id": "PR_kwDOL1WdqM6BkLba",
+        "number": 92,
+        "state": "closed",
+        "title": "Add context filter to VectorPayload",
+        "body": "based on this issue https://github.com/upstash/rag-chat/issues/91\r\n\r\n## Context\r\nAs a user I want to be able to use filter operations when using my chat \r\n\r\n```ts\r\nconst result = await ragChat.chat<{ unit: string }>(\"Where is the capital of Japan?\", {\r\n    namespace,\r\n    contextFilter: \"unit = 'Samurai'\",\r\n});\r\n```\r\n\r\n## Reference\r\nhttps://upstash.com/docs/vector/features/filtering#metadata-filtering",
+        "html_url": "https://github.com/upstash/rag-chat/pull/92",
+        "created_at": "2024-11-11T23:06:29Z",
+        "updated_at": "2024-11-19T16:43:56Z",
+        "closed_at": "2024-11-19T16:43:56Z",
+        "merged_at": null,
+        "merge_commit_sha": "00f1eb95b77b7afa0bb85f38806d240967fc8a2b",
+        "draft": false,
+        "user": {
+          "id": 4389565,
+          "node_id": "MDQ6VXNlcjQzODk1NjU=",
+          "login": "ronal2do",
+          "type": "User",
+          "html_url": "https://github.com/ronal2do"
+        },
+        "head": {
+          "sha": "70ab7c18d3d001b2397f4504c01125a0e2a3d11a",
+          "ref": "Add-context-filter-to-VectorPayload"
+        },
+        "base": {
+          "sha": "af2e30cdb7446327ea1696c0e8baa4630f97add6",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2187984517,
+        "node_id": "PR_kwDOL1WdqM6Caf6F",
+        "number": 94,
+        "state": "closed",
+        "title": "Add context filter to VectorPayload",
+        "body": "Closed https://github.com/upstash/rag-chat/pull/92 and opened this PR to run CI properly.\r\n\r\nfixes https://github.com/upstash/rag-chat/issues/91",
+        "html_url": "https://github.com/upstash/rag-chat/pull/94",
+        "created_at": "2024-11-19T16:25:09Z",
+        "updated_at": "2024-11-19T16:43:55Z",
+        "closed_at": "2024-11-19T16:43:55Z",
+        "merged_at": "2024-11-19T16:43:55Z",
+        "merge_commit_sha": "0a78037189c39daf1f42a34bb7f76e55f70b4c29",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "1f4b0df38dcca34b310d69136e9cdb425033c940",
+          "ref": "context-filter"
+        },
+        "base": {
+          "sha": "af2e30cdb7446327ea1696c0e8baa4630f97add6",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2157213447,
+        "node_id": "PR_kwDOL1WdqM6AlHcH",
+        "number": 90,
+        "state": "closed",
+        "title": "Fix grammatical errors in markdown files by Gitfix",
+        "body": "This pull request fixes grammatical errors in the markdown files. Changes are made by Gitfix, which is an AI-powered application, aims to help developers in their daily tasks.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/90",
+        "created_at": "2024-10-31T23:20:02Z",
+        "updated_at": "2024-10-31T23:21:04Z",
+        "closed_at": "2024-10-31T23:21:04Z",
+        "merged_at": "2024-10-31T23:21:03Z",
+        "merge_commit_sha": "5d75ba85e2b97148c8a3caa22f02534eb650420f",
+        "draft": false,
+        "user": {
+          "id": 103972661,
+          "node_id": "U_kgDOBjJ_NQ",
+          "login": "ErayEroglu",
+          "type": "User",
+          "html_url": "https://github.com/ErayEroglu"
+        },
+        "head": {
+          "sha": "75a50ce06a5b1231b0e62b5574cbf7e674a39efe",
+          "ref": "master"
+        },
+        "base": {
+          "sha": "1bc3f044c3ea4a47292da888ecfdb2c086fda196",
+          "ref": "master"
+        }
+      },
+      {
+        "id": 2136731315,
+        "node_id": "PR_kwDOL1WdqM5_W-6z",
+        "number": 87,
+        "state": "closed",
+        "title": "Initialize Redis if Env vars are set",
+        "body": "after https://github.com/upstash/redis-js/pull/1311, the redis initialization didn't work like before. so we replace the try/catch with a check.",
+        "html_url": "https://github.com/upstash/rag-chat/pull/87",
+        "created_at": "2024-10-21T18:13:33Z",
+        "updated_at": "2024-10-22T10:12:01Z",
+        "closed_at": "2024-10-22T10:11:52Z",
+        "merged_at": "2024-10-22T10:11:52Z",
+        "merge_commit_sha": "807f7515f0cba466a484e817b7ad0b72f3b3eaa5",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "3ca5c227671c739960f3735c06d17b352f0ec7ad",
+          "ref": "fix-ci-test-paths"
+        },
+        "base": {
+          "sha": "cb61a0b52248e746300f96874d102d58f33bf89b",
+          "ref": "master"
+        }
+      }
+    ]
+  }
+}

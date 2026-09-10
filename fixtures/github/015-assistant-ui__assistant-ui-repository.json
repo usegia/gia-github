@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/assistant-ui/assistant-ui",
+  "observedAt": "2026-09-10T10:25:18.685825+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"64130a7754750f211315031146b3e4de57bfd6444d0b93cdb828b37d34af95f0\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "repositories",
+    "records": [
+      {
+        "id": 722184017,
+        "node_id": "R_kgDOKwunUQ",
+        "name": "assistant-ui",
+        "full_name": "assistant-ui/assistant-ui",
+        "html_url": "https://github.com/assistant-ui/assistant-ui",
+        "description": "Typescript/React Library for AI Chat💬🚀",
+        "fork": false,
+        "created_at": "2023-11-22T16:01:17Z",
+        "updated_at": "2026-09-10T10:06:53Z",
+        "pushed_at": "2026-09-10T04:33:50Z",
+        "homepage": "https://www.assistant-ui.com",
+        "size": 141533,
+        "stargazers_count": 12089,
+        "watchers_count": 12089,
+        "language": "TypeScript",
+        "forks_count": 1173,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 126,
+        "topics": [
+          "ai-chatbot",
+          "base-ui",
+          "chatbot",
+          "conversational-ai",
+          "copilot",
+          "radix-ui",
+          "react-chatbot",
+          "shadcn",
+          "ui-components",
+          "vercel-ai-sdk"
+        ],
+        "default_branch": "main",
+        "visibility": "public",
+        "owner": {
+          "id": 189563271,
+          "node_id": "O_kgDOC0yBhw",
+          "login": "assistant-ui",
+          "type": "Organization",
+          "html_url": "https://github.com/assistant-ui"
+        }
+      }
+    ]
+  }
+}

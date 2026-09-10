@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/vercel/ai/pulls/20564/reviews?per_page=100&page=1",
+  "observedAt": "2026-09-10T10:28:35.064578+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"f2c32337db4ea92244a8c72355e2809668c9d494d103a00b80101be0b7a55f13\"",
+  "coverage": {
+    "status": "complete",
+    "page": 1,
+    "nextCursor": null,
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "reviews",
+    "repositoryId": 644461337,
+    "repository": "vercel/ai",
+    "pullRequestId": 4489175312,
+    "records": [
+      {
+        "id": 5159721641,
+        "node_id": "PRR_kwDOJmmzGc8AAAABM4saqQ",
+        "body": "",
+        "state": "APPROVED",
+        "html_url": "https://github.com/vercel/ai/pull/20564#pullrequestreview-5159721641",
+        "submitted_at": "2026-09-09T20:50:35Z",
+        "commit_id": "f8ea5b16a28162737566dac47c1b0e9bb0f9336e",
+        "user": {
+          "id": 58091943,
+          "node_id": "MDQ6VXNlcjU4MDkxOTQz",
+          "login": "n1ckoates",
+          "type": "User",
+          "html_url": "https://github.com/n1ckoates"
+        }
+      }
+    ]
+  }
+}

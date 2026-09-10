@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "sourceUrl": "https://api.github.com/repos/upstash/agentkit/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=1",
+  "observedAt": "2026-09-10T10:26:47.200439+00:00",
+  "apiVersion": "2022-11-28",
+  "etag": "\"a76b370469103da8d43631a5106dfb00b69d6427cc3c5d2702dc7f0a249f1473\"",
+  "coverage": {
+    "status": "partial",
+    "page": 1,
+    "nextCursor": "https://api.github.com/repositories/1274085842/pulls?state=closed&sort=updated&direction=desc&per_page=30&page=2",
+    "windowStart": null,
+    "windowEnd": null
+  },
+  "payload": {
+    "kind": "pull_requests",
+    "repositoryId": 1274085842,
+    "repository": "upstash/agentkit",
+    "records": [
+      {
+        "id": 4486752808,
+        "node_id": "PR_kwDOS_EB0s8AAAABC25qKA",
+        "number": 39,
+        "state": "closed",
+        "title": "chore: bump to eve 0.52.3, raise eve-extension peer floor to >=0.52.3",
+        "body": "> [!NOTE]\n> **upstash-tag is still working on this.** The description and evidence below\n> are rewritten when the mission finishes — [follow it live](https://upstash-tag.vercel.app/missions/bb023ce4-de82-43db-8931-828ecf139ff4).\n\nMoves every `eve` pin in the repo (packages/eve, packages/eve-extension, examples/eve-demo, examples/eve-extension-demo) from ^0.52.2 to ^0.52.3, the current npm `latest`. Rebuilding `packages/eve-extension` against 0.52.3 re-stamps its compatibility manifest (tool 30→32, dynamicTool 29→31, hook 20→22), so its `eve` peer floor moves `>=0.52.2` → `>=0.52.3` to match what the rebuilt dist actually requires — otherwise the next publish would silently claim support for 0.52.2 it no longer has.\n\n`packages/eve` only moves its devDependency: its built `dist` is byte-identical before and after the bump (diffed directly), so it ships no changeset — only `@upstash/agentkit-eve-extension` gets one, worded against the last published version (0.10.0) per the repo's one-changeset-per-changed-package convention. CLAUDE.md, the extension's README and AGENTS.md are updated to match the new version/contract numbers.\n\nVerified: a fresh npm consumer installing `eve@latest` + both packages `@latest` builds clean today (this bump doesn't fix a break — eve 0.52.3 kept accepting the old contract 30, it just added newer ones); the repo builds, typechecks and lints clean with these pins; and the rebuilt extension mounts correctly under 0.52.3 in a packed-tarball check. Redis-backed tests and the mocked eval could not be exercised in this sandbox (`*.upstash.io` egress is blocked here) but nothing in that path depends on the eve version.\n\n---\n\nBuilt by **upstash-tag** · mission [`bb023ce4-de82-43db-8931-828ecf139ff4`](https://upstash-tag.vercel.app/missions/bb023ce4-de82-43db-8931-828ecf139ff4) · `chore/eve-0.52.3` → `main`",
+        "html_url": "https://github.com/upstash/agentkit/pull/39",
+        "created_at": "2026-09-09T15:46:02Z",
+        "updated_at": "2026-09-10T08:43:40Z",
+        "closed_at": "2026-09-10T08:43:40Z",
+        "merged_at": "2026-09-10T08:43:40Z",
+        "merge_commit_sha": "3a6b0b59a22100a92f5d46f976fc801b78c35b68",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "619293f1a66b317b595fe1b7dc5a1a2b28ab1fa7",
+          "ref": "chore/eve-0.52.3"
+        },
+        "base": {
+          "sha": "91324bbf6b50c491dda61f5ea71582fbbc9d90e9",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4472706554,
+        "node_id": "PR_kwDOS_EB0s8AAAABCpgV-g",
+        "number": 37,
+        "state": "closed",
+        "title": "fix(eve-extension): make agentkit()'s config argument optional",
+        "body": "The README's minimal usage example (`export default agentkit();`) no longer typechecks against the published eve-extension package, because the exported `agentkit(...)` handle's call signature (defined upstream in eve's `ExtensionHandle`) requires an argument. Fixed the doc example to `agentkit({})`, which does typecheck, and added an AGENTS.md note explaining why so it doesn't get \"corrected\" back. No changeset, since this only touches documentation.\n\n---\n\nBuilt by **upstash-tag** · mission [`90d57fc8-fd1c-4b50-8db5-4d3271a83c05`](https://upstash-tag.vercel.app/missions/90d57fc8-fd1c-4b50-8db5-4d3271a83c05) · `fix/eve-extension-optional-mount-config` → `main` · $8.26",
+        "html_url": "https://github.com/upstash/agentkit/pull/37",
+        "created_at": "2026-09-08T09:31:24Z",
+        "updated_at": "2026-09-08T14:44:26Z",
+        "closed_at": "2026-09-08T14:43:24Z",
+        "merged_at": "2026-09-08T14:43:24Z",
+        "merge_commit_sha": "91324bbf6b50c491dda61f5ea71582fbbc9d90e9",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "aa363692af0eb60ea71efa68a4bf2c7503bd5028",
+          "ref": "fix/eve-extension-optional-mount-config"
+        },
+        "base": {
+          "sha": "4308ce1dcbab0e4ef8e7d8fc759c5348c445ea28",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4471973381,
+        "node_id": "PR_kwDOS_EB0s8AAAABCozmBQ",
+        "number": 36,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve-extension@0.10.0\n\n### Minor Changes\n\n- b524fcf: fix!: rebuild against eve 0.52.2 and raise the `eve` peer floor to `>=0.52.2`\n\n  The extension is now built with **eve 0.52.2**, whose\n  `dist/extension/_manifest.json` stamps formatVersion 2 and contracts\n  extension 1 / **tool 30** / **dynamicTool 29** / **hook 20** / instructions 2 /\n  config 1 — up from **tool 24 / dynamicTool 21 / hook 16** in the published `0.9.0`\n  build (eve 0.49.0). All three moving contracts advanced this time.\n\n  **This release fixes a real break in `0.9.0`.** eve 0.50.0 and every release above\n  it _dropped_ the contracts the published dist requires, so `0.9.0` installs cleanly\n  against its `\">=0.48.0\"` peer and then fails `eve build` with\n  `Selected module binding \"extensions/agentkit.ts\" has no compile or runtime usage.`\n  Anyone on eve ≥0.50.0 needs this version.\n\n  eve 0.52.2 is the only release whose `EXTENSION_CAPABILITY_CONTRACTS` accept the new\n  stamps (0.52.0/0.52.1 top out at tool 29, 0.51.1 at tool 27, 0.51.0 at tool 25 /\n  hook 18, 0.50.0 at dynamicTool 22 / hook 17), so the `eve` peer moves from\n  `\">=0.48.0\"` to `\">=0.52.2\"`. Verified by packing the rebuilt extension into a real\n  eve app: on eve 0.52.1 it installs cleanly and then fails `eve build` with the message\n  above, while eve 0.52.2 builds and mounts all seven tools plus the chat-history hook.\n\n  Note that eve now **drops** contracts out of the middle of its supported range rather\n  than only adding new ones — 0.52.2 supports `tool` [1–13, 28, 29, 30] and drops 14–27.\n  A newer eve is therefore no longer automatically compatible, and a floored peer with no\n  ceiling is not by itself a guarantee; always re-derive the floor from the freshly built\n  manifest.\n\n  No extension source changed: the `chat_history` hook subscribes only to\n  `message.received`/`message.completed` (not the append events cited in eve's drop\n  reasons), and nothing here uses `TaskExec.delegated`. All packages build, typecheck and\n  pass their tests against eve 0.52.2, and the demo's mocked-model eval is green.\n## eve-extension-demo@0.0.9\n\n### Patch Changes\n\n- Updated dependencies [b524fcf]\n  - @upstash/agentkit-eve-extension@0.10.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/36",
+        "created_at": "2026-09-08T08:12:10Z",
+        "updated_at": "2026-09-08T08:14:06Z",
+        "closed_at": "2026-09-08T08:14:06Z",
+        "merged_at": "2026-09-08T08:14:05Z",
+        "merge_commit_sha": "4308ce1dcbab0e4ef8e7d8fc759c5348c445ea28",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "8e0798a1f283b22e7c480f526dd7e63328b44654",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "b524fcf3009e435d1ecf95bf0f57f486ecd46bd7",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4464683498,
+        "node_id": "PR_kwDOS_EB0s8AAAABCh2p6g",
+        "number": 35,
+        "state": "closed",
+        "title": "chore: bump to eve 0.52.2, raise eve-extension peer floor to >=0.52.2",
+        "body": "The published `@upstash/agentkit-eve-extension@0.9.0` (built against eve 0.49.0) fails `eve build` on current eve@latest (0.52.2) — eve 0.50.0+ dropped the contract versions (tool 24, dynamicTool 21, hook 16) its manifest requires, so the extension mounts nothing and eve reports the misleading \"has no compile or runtime usage\" error. `@upstash/agentkit-eve` was unaffected.\n\nThis bumps every `eve` pin in the repo to 0.52.2, rebuilds the extension so its manifest re-stamps the current contracts (tool 30, dynamicTool 29, hook 20), and raises its peer floor from `>=0.48.0` to `>=0.52.2` — confirmed by packing the rebuilt dist into a real eve app: 0.52.1 installs but fails `eve build`, 0.52.2 builds and mounts all 7 tools plus the hook. `@upstash/agentkit-eve`'s peer floor (`>=0.32.0`) is untouched: its rebuilt dist is byte-identical to the published 0.9.0 and typechecks clean across the whole version range. No source changed — build, typecheck, tests, example builds and the mocked-model eval are all green against 0.52.2 (the repo's 11 pre-existing test failures are a live-Redis index-count cap on the throwaway instance, reproduced identically on unmodified `main`, unrelated to this bump). CLAUDE.md and the extension's README/AGENTS.md version references are updated to match, and one changeset covers the extension's published change.\n\n---\n\nBuilt by **upstash-tag** · mission [`4fb31071-7a11-4693-9ab0-1644cbac0de6`](https://upstash-tag.vercel.app/missions/4fb31071-7a11-4693-9ab0-1644cbac0de6) · `chore/eve-0.52.2` → `main` · $7.04",
+        "html_url": "https://github.com/upstash/agentkit/pull/35",
+        "created_at": "2026-09-07T13:28:51Z",
+        "updated_at": "2026-09-08T08:11:36Z",
+        "closed_at": "2026-09-08T08:11:36Z",
+        "merged_at": "2026-09-08T08:11:36Z",
+        "merge_commit_sha": "b524fcf3009e435d1ecf95bf0f57f486ecd46bd7",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "4f4c8b102ca772e92915a0376c44d72928f54079",
+          "ref": "chore/eve-0.52.2"
+        },
+        "base": {
+          "sha": "ad106a74afad0938f8f9fa18f965873e3a24b950",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4415691255,
+        "node_id": "PR_kwDOS_EB0s8AAAABBzIZ9w",
+        "number": 32,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve@0.9.0\n\n### Minor Changes\n\n- 0117c2e: feat(eve): add `@upstash/agentkit-eve/memory` — Upstash Redis behind eve's memory slots\n\n  A new subpath with two integrations for eve's [memory](https://eve.dev/docs/memory) feature\n  (`agent/memory/<slot>.ts`), because eve exposes two different seams:\n\n  - **`redisDocuments()`** — a `MemoryDocumentBackend` for eve's built-in `fileMemory()`, replacing its\n    Vercel Blob storage: `fileMemory({ backend: redisDocuments() })`. Without a `backend`,\n    `fileMemory()` only resolves storage under `eve dev` and on Vercel with a Blob store attached.\n  - **`redisMemory()`** — a full `MemoryProvider` over the SDK's `AgentMemory`: ranked BM25 recall at\n    `turn.started` / `compaction.completed`, capture at `turn.completed`, and the tools\n    `<slot>__save_memory`, `<slot>__search_memory`, `<slot>__read_session` and `<slot>__forget_memory`,\n    bound to the slot's locked scope. Where `fileMemory()` replays one curated document, this recalls\n    the top-K memories relevant to the current turn and needs no tool call to remember anything.\n\n  Both are additive: `defineMemoryRecallTool` / `defineMemorySaveTool` are unchanged and remain the\n  right choice for model-driven memory with no slot.\n\n  **Requirements.** The subpath imports `eve/memory` and `eve/memory/file` (added in eve 0.45.1 and\n  0.45.2), so it needs **eve ≥ 0.45.2** — the package's `eve` peer stays `>=0.32.0` because the root\n  and `./sandbox` entry points still work further back. The `@upstash/redis` peer floor moves to\n  **`>=1.38.4`**, whose read-your-writes fix `redisDocuments()` relies on.\n\n  **`redisMemory()` options:** `rememberMessages` (default `true`, meaning `\"fromUser\"`; also `\"all\"`,\n  `\"fromModel\"`, `false`), `maxRecallCharacters` (4000), `maxMemoryCharacters` (2048), plus `topK`,\n  `minScore`, `prefix`, `indexName`.\n\n  Three behaviours worth knowing before you configure it:\n\n  - **Automatic recall injects saved facts only.** Captured messages share the store but not the\n    ranking, and are reached on demand through `search_memory` / `read_session`. Otherwise a stored\n    _\"What do you remember?\"_ outranks real facts on the next identical question.\n  - **`forget_memory` redacts rather than deletes.** The text is erased and the entry marked deleted,\n    so it can never be recalled or searched again, but `read_session` renders it as `[redacted]` — a\n    silent gap invites re-deriving the very thing that was removed.\n  - **`\"all\"` and `\"fromModel\"` do not get `forget_memory`.** Those modes store the assistant's\n    replies, and a reply confirming a deletion quotes the text it deleted — so erasing something would\n    write a fresh copy of it. They contribute `save_memory`, `search_memory` and `read_session` only.\n\n  Everything the slot keeps lives in one keyspace of its own (`agentkit:memorySlot`) with `sessionId`,\n  `source` and `deleted` indexed, so there is no separate transcript store to fall out of sync.\n  Recalled memories are tagged `session=<id>`, and `read_session` replays that session in order.\n\n### Patch Changes\n\n- Updated dependencies [0117c2e]\n  - @upstash/agentkit-sdk@0.9.0\n  - @upstash/agentkit-ai-sdk@0.9.0\n## @upstash/agentkit-eve-extension@0.9.0\n\n### Minor Changes\n\n- 35e3d69: fix!: rebuild against eve 0.49.0 and raise the `eve` peer floor to `>=0.48.0`\n\n  No source changed. The extension's `dist` is rebuilt with eve 0.49.0, which re-stamps the manifest's\n  tool contract 21 → 24 (every other contribution contract is unchanged). eve 0.48.0 is the first\n  release accepting tool 24, so the `eve` peer moves `\">=0.47.0\"` → `\">=0.48.0\"`.\n\n  No 0.47.x works, including 0.47.7 — the tool contract moved twice in three releases (22 → 23 in\n  0.47.7, 23 → 24 in 0.48.0). On an unsupported eve the mount contributes nothing and `eve build`\n  fails with `Selected module binding \"extensions/agentkit.ts\" has no compile or runtime usage.`\n\n  This supersedes the unreleased 0.47.6 rebuild (tool 22, floor `>=0.47.5`), which never shipped.\n\n### Patch Changes\n\n- Updated dependencies [0117c2e]\n  - @upstash/agentkit-sdk@0.9.0\n## @upstash/agentkit-sdk@0.9.0\n\n### Minor Changes\n\n- 0117c2e: feat(sdk): typed indexed metadata on `AgentMemory`, plus `get`/`list`/`count`\n\n  `AgentMemory` accepts a `metadataSchema` of Upstash Search field builders, whose values are supplied\n  per record as `metadata` and can then be filtered on:\n\n  ```ts\n  const memory = new AgentMemory({\n    redis,\n    prefix: \"myapp:memory\", // ← its own prefix; see below\n    metadataSchema: { source: s.string().noTokenize(), deleted: s.boolean() },\n  });\n\n  await memory.add({ text: \"…\", userId: \"u1\", metadata: { source: \"agent\", deleted: false } });\n  await memory.recall({ userId: \"u1\", query: \"…\", filter: { source: { $eq: \"agent\" } } });\n  ```\n\n  The schema types everything: `metadata` and each `filter` are derived from it, so a wrong operand\n  type or an undeclared field is a compile error rather than a query that quietly matches nothing. To\n  narrow a derived type, pass it as a second argument, constrained to the schema:\n  `new AgentMemory<typeof schema, { source: \"agent\" | \"userMessage\" }>(…)`.\n\n  Also new: `list({ userId, filter, limit })` (filter-first, unranked), `count({ userId, filter })`,\n  and `get({ userId, id })` — a direct-key read, for when you have an id and a bounded search page\n  could hide it.\n\n  **Give an extended store its own `prefix`.** A stricter schema pointed at a keyspace that already\n  holds records written without those fields makes them permanently unreachable: Upstash Search does\n  not match a missing field against `{$eq: …}` and has no `$ne`. Omitting `metadataSchema` leaves the\n  store exactly as it was.\n\n  **Behaviour change:** `recall()` no longer falls back to \"everything for the user\" when a `query`\n  matches nothing; it returns nothing, since the fallback made a miss indistinguishable from a hit.\n  Omitting the query is still how you ask for the whole set. This reaches every caller of `recall`,\n  including the memory tools in `@upstash/agentkit-ai-sdk`, `@upstash/agentkit-eve` and the extension.\n## @upstash/agentkit-ai-sdk@0.9.0\n\n### Patch Changes\n\n- Updated dependencies [0117c2e]\n  - @upstash/agentkit-sdk@0.9.0\n## ai-sdk-demo@0.1.4\n\n### Patch Changes\n\n- Updated dependencies [0117c2e]\n  - @upstash/agentkit-sdk@0.9.0\n  - @upstash/agentkit-ai-sdk@0.9.0\n## eve-demo@0.0.10\n\n### Patch Changes\n\n- Updated dependencies [0117c2e]\n  - @upstash/agentkit-eve@0.9.0\n## eve-extension-demo@0.0.8\n\n### Patch Changes\n\n- Updated dependencies [35e3d69]\n  - @upstash/agentkit-eve-extension@0.9.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/32",
+        "created_at": "2026-09-01T19:44:29Z",
+        "updated_at": "2026-09-04T12:32:24Z",
+        "closed_at": "2026-09-04T12:32:24Z",
+        "merged_at": "2026-09-04T12:32:24Z",
+        "merge_commit_sha": "ad106a74afad0938f8f9fa18f965873e3a24b950",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "e46b37476dcd70e0da84b238e7e99ba6c4e7cf77",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "0117c2ed5fcd49eaa771c9ea1d9d37d18b55052d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4419563690,
+        "node_id": "PR_kwDOS_EB0s8AAAABB20wqg",
+        "number": 33,
+        "state": "closed",
+        "title": "feat(eve): Redis-backed memory integration for eve's native memory slots",
+        "body": "Adds a new subpath, @upstash/agentkit-eve/memory, with two complementary Redis-backed pieces for eve's native memory-slot feature: redisDocuments() (a MemoryDocumentBackend over @upstash/redis, using an atomic Lua EVAL compare-and-set for optimistic-concurrency writes since the REST client has no WATCH/MULTI) and redisMemory() (a full MemoryProvider wrapping the existing AgentMemory for automatic recall/capture on eve's turn and compaction lifecycle hooks, plus BM25 ranked/fuzzy recall). Both are additive — the existing tool-based memory in packages/sdk, packages/eve/src/memory.ts, packages/ai-sdk and eve-extension is untouched and remains ai-sdk's only memory path.\n\nFollow-up: added 12 tests closing a coverage gap flagged in review — the existing suite only asserted that a save happened, never that recall actually invoked AgentMemory.recall at the right lifecycle hooks, nor that captured memories were actually persisted to and readable back from Redis. New tests spy/verify the recall/capture call sites directly, assert real Redis state after a capture (keys + json.get content), and prove a full capture→Redis→recall round trip; the eve-demo eval gained two persistence-verifying gates that scan Redis for a per-run nonce. Mutation-tested to confirm they fail without the underlying wiring.\n\n---\n\nBuilt by **upstash-tag** · mission [`625458a1-b6a5-4562-be3c-e3c0419fe5c2`](https://upstash-tag.vercel.app/missions/625458a1-b6a5-4562-be3c-e3c0419fe5c2) · `feat/eve-redis-memory` → `main` · $42.20",
+        "html_url": "https://github.com/upstash/agentkit/pull/33",
+        "created_at": "2026-09-02T06:53:49Z",
+        "updated_at": "2026-09-04T12:30:57Z",
+        "closed_at": "2026-09-04T12:30:57Z",
+        "merged_at": "2026-09-04T12:30:57Z",
+        "merge_commit_sha": "0117c2ed5fcd49eaa771c9ea1d9d37d18b55052d",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "554d9f76fdce78b4bd7401eafcb7eb73f16a7bb4",
+          "ref": "feat/eve-redis-memory"
+        },
+        "base": {
+          "sha": "35e3d69c81718c5ebd9c0afbc6e1c8d0744d43db",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4421515467,
+        "node_id": "PR_kwDOS_EB0s8AAAABB4r4yw",
+        "number": 34,
+        "state": "closed",
+        "title": "chore: bump to eve 0.49.0, raise eve-extension peer floor to >=0.48.0",
+        "body": "eve's tool contribution contract moved twice since the repo's current 0.47.6 pin (22→23 in 0.47.7, 23→24 in 0.48.0). Rebuilding `@upstash/agentkit-eve-extension` against eve 0.49.0 re-stamps its manifest to tool 24, which makes the currently-declared `eve` peer floor (`>=0.47.5`) stale: eve 0.47.5, 0.47.6 and 0.47.7 all install cleanly and then fail `eve build` with \"Selected module binding … has no compile or runtime usage.\" This raises the floor to `>=0.48.0`, the oldest eve verified end-to-end (packed dist into a real consumer app) to actually build the rebuilt manifest.\n\n`@upstash/agentkit-eve`'s peer floor (`>=0.32.0`) needed no change — its sandbox-backend type surface is byte-identical between 0.47.6 and 0.49.0, so `SandboxBackendHandle` gained no new required member.\n\nEvery `eve` pin in the repo (both packages' devDependency, both eve example apps) moves to `^0.49.0`; install/build/typecheck/lint/tests/example-builds/mocked-model-eval all pass. The prior unreleased `eve-extension-0476-rebuild` changeset (from PR #31/#32, never actually published) is folded into a single changeset describing the final state relative to the last version that *was* published (0.8.0, built with eve 0.47.3, floor `>=0.47.0`), rather than left as a second, now-inaccurate pending entry. CLAUDE.md, the extension's README and AGENTS.md are updated to match, plus a note on the `pnpm@11.5.3` `manage-package-manager-versions` setup gotcha hit while verifying this.\n\n---\n\nBuilt by **upstash-tag** · mission [`6b4bdfb9-68c3-44cd-b235-bac3600b02a0`](https://upstash-tag.vercel.app/missions/6b4bdfb9-68c3-44cd-b235-bac3600b02a0) · `chore/eve-0.49.0-upgrade` → `main` · $9.24",
+        "html_url": "https://github.com/upstash/agentkit/pull/34",
+        "created_at": "2026-09-02T11:09:27Z",
+        "updated_at": "2026-09-02T11:11:34Z",
+        "closed_at": "2026-09-02T11:10:06Z",
+        "merged_at": "2026-09-02T11:10:06Z",
+        "merge_commit_sha": "35e3d69c81718c5ebd9c0afbc6e1c8d0744d43db",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "58ae24ccaad698b3cc9128b621ebb6b9eb2a2071",
+          "ref": "chore/eve-0.49.0-upgrade"
+        },
+        "base": {
+          "sha": "5adfee6584f43f65bd9f4f6c78e0a382e40d9c14",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4415618992,
+        "node_id": "PR_kwDOS_EB0s8AAAABBzD_sA",
+        "number": 31,
+        "state": "closed",
+        "title": "chore: bump to eve 0.47.6, raise eve-extension peer floor to >=0.47.5, sync ai pin",
+        "body": "eve's tool contribution contract moved 21 → 22 inside the 0.47.5 patch release (0.47.4 was never published to npm), so rebuilding `@upstash/agentkit-eve-extension` against eve 0.47.6 re-stamps its manifest and makes the current `eve: \">=0.47.0\"` peer floor stale — an eve 0.47.0–0.47.3 consumer now installs fine and then fails `eve build` with \"Selected module binding has no compile or runtime usage\". This raises the floor to `>=0.47.5`, the oldest eve verified (by packing the rebuilt extension into a throwaway consumer) to actually build. `@upstash/agentkit-eve`'s own peer floor (`>=0.32.0`) was independently re-verified against 20 eve releases and is unchanged.\n\neve 0.47.6 also raised its own peer on `ai` from `^7.0.58` to `^7.0.82`, so the repo's exact-pinned `ai: \"7.0.58\"` (a hard `ERESOLVE` for anyone who installs eve alongside it) moves to `7.0.87`, with a matching `@ai-sdk/*` bump that incidentally collapses a pre-existing duplicate `ai` copy in the lockfile. Docs (CLAUDE.md, the extension's README/AGENTS.md) and a single changeset for `@upstash/agentkit-eve-extension` are updated to match — no changeset for `@upstash/agentkit-eve`/`@upstash/agentkit-ai-sdk` since their pin moves are devDependency-only and never reach their published tarballs. No source code changed; install, build, typecheck, lint, tests, example builds and the mocked-model eval all pass against the new versions.\n\n## Evidence\n\n<details>\n<summary>22 captures</summary>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/01-messages-before.png\" alt=\"01-messages-before\" width=\"380\" /><br/><sub>01-messages-before · <code>.agent/evidence/01-messages-before.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/02-messages-after.png\" alt=\"02-messages-after\" width=\"380\" /><br/><sub>02-messages-after · <code>.agent/evidence/02-messages-after.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/03-todo-header-before.png\" alt=\"03-todo-header-before\" width=\"380\" /><br/><sub>03-todo-header-before · <code>.agent/evidence/03-todo-header-before.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/04-spinner-returns-after-approval.png\" alt=\"04-spinner-returns-after-approval\" width=\"380\" /><br/><sub>04-spinner-returns-after-approval · <code>.agent/evidence/04-spinner-returns-after-approval.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/05-todo-header-after.png\" alt=\"05-todo-header-after\" width=\"380\" /><br/><sub>05-todo-header-after · <code>.agent/evidence/05-todo-header-after.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/06-todo-cancelled.png\" alt=\"06-todo-cancelled\" width=\"380\" /><br/><sub>06-todo-cancelled · <code>.agent/evidence/06-todo-cancelled.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/07-board-cancelled-in-done.png\" alt=\"07-board-cancelled-in-done\" width=\"380\" /><br/><sub>07-board-cancelled-in-done · <code>.agent/evidence/07-board-cancelled-in-done.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/08-delegate-row-expanded.png\" alt=\"08-delegate-row-expanded\" width=\"380\" /><br/><sub>08-delegate-row-expanded · <code>.agent/evidence/08-delegate-row-expanded.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/after-1-three-pending-banners.png\" alt=\"after-1-three-pending-banners\" width=\"380\" /><br/><sub>after-1-three-pending-banners · <code>.agent/evidence/after-1-three-pending-banners.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/after-2-three-cards-pending.png\" alt=\"after-2-three-cards-pending\" width=\"380\" /><br/><sub>after-2-three-cards-pending · <code>.agent/evidence/after-2-three-cards-pending.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/after-3-only-clicked-card-resolved.png\" alt=\"after-3-only-clicked-card-resolved\" width=\"380\" /><br/><sub>after-3-only-clicked-card-resolved · <code>.agent/evidence/after-3-only-clicked-card-resolved.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/after-4-batch-fully-resolved.png\" alt=\"after-4-batch-fully-resolved\" width=\"380\" /><br/><sub>after-4-batch-fully-resolved · <code>.agent/evidence/after-4-batch-fully-resolved.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/after-5-board-card-counts-them.png\" alt=\"after-5-board-card-counts-them\" width=\"380\" /><br/><sub>after-5-board-card-counts-them · <code>.agent/evidence/after-5-board-card-counts-them.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/before-1-three-cards-pending.png\" alt=\"before-1-three-cards-pending\" width=\"380\" /><br/><sub>before-1-three-cards-pending · <code>.agent/evidence/before-1-three-cards-pending.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/before-2-wrong-call-resolved.png\" alt=\"before-2-wrong-call-resolved\" width=\"380\" /><br/><sub>before-2-wrong-call-resolved · <code>.agent/evidence/before-2-wrong-call-resolved.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/before-3-no-pending-approval-error.png\" alt=\"before-3-no-pending-approval-error\" width=\"380\" /><br/><sub>before-3-no-pending-approval-error · <code>.agent/evidence/before-3-no-pending-approval-error.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/verify-1-delegate-row.png\" alt=\"verify-1-delegate-row\" width=\"380\" /><br/><sub>verify-1-delegate-row · <code>.agent/evidence/verify-1-delegate-row.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/verify-2-todo-start-and-cancel.png\" alt=\"verify-2-todo-start-and-cancel\" width=\"380\" /><br/><sub>verify-2-todo-start-and-cancel · <code>.agent/evidence/verify-2-todo-start-and-cancel.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/verify-3-todo-cancelled.png\" alt=\"verify-3-todo-cancelled\" width=\"380\" /><br/><sub>verify-3-todo-cancelled · <code>.agent/evidence/verify-3-todo-cancelled.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/verify-4-three-approvals-pending-no-spinner.png\" alt=\"verify-4-three-approvals-pending-no-spinner\" width=\"380\" /><br/><sub>verify-4-three-approvals-pending-no-spinner · <code>.agent/evidence/verify-4-three-approvals-pending-no-spinner.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/verify-5-one-approved-others-still-pending.png\" alt=\"verify-5-one-approved-others-still-pending\" width=\"380\" /><br/><sub>verify-5-one-approved-others-still-pending · <code>.agent/evidence/verify-5-one-approved-others-still-pending.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf/building/verify-6-all-resolved-spinner-returns.png\" alt=\"verify-6-all-resolved-spinner-returns\" width=\"380\" /><br/><sub>verify-6-all-resolved-spinner-returns · <code>.agent/evidence/verify-6-all-resolved-spinner-returns.png</code></sub>\n\n</details>\n\n---\n\nBuilt by **upstash-tag** · mission [`1db41444-150a-469c-8cc2-b3ba0c58cddf`](https://upstash-tag.vercel.app/missions/1db41444-150a-469c-8cc2-b3ba0c58cddf) · `chore/eve-0476-bump` → `main` · $113.61\n\nAlso part of this mission: [upstash/upstash-tag#84](https://github.com/upstash/upstash-tag/pull/84) · [upstash/upstash-tag#85](https://github.com/upstash/upstash-tag/pull/85) · [upstash/upstash-tag#86](https://github.com/upstash/upstash-tag/pull/86)",
+        "html_url": "https://github.com/upstash/agentkit/pull/31",
+        "created_at": "2026-09-01T19:35:16Z",
+        "updated_at": "2026-09-02T11:07:28Z",
+        "closed_at": "2026-09-01T19:43:57Z",
+        "merged_at": "2026-09-01T19:43:57Z",
+        "merge_commit_sha": "5adfee6584f43f65bd9f4f6c78e0a382e40d9c14",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "2f1e5ea1c173f6a602311313170b9b3f3bf24ad3",
+          "ref": "chore/eve-0476-bump"
+        },
+        "base": {
+          "sha": "0e26aff63ec13512bc56201106ce9cb346634f69",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4370350576,
+        "node_id": "PR_kwDOS_EB0s8AAAABBH5B8A",
+        "number": 28,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve@0.8.0\n\n### Minor Changes\n\n- f426c7d: feat(eve/sandbox): implement the `delete()` sandbox-handle method (eve 0.47)\n\n  eve 0.47.0 added a required `delete(options?: SandboxDeleteOptions)` to\n  `SandboxBackendHandle`, so the Box-backed handle stopped satisfying the interface\n  (`TS2741: Property 'delete' is missing …`). It now implements it: `delete()` calls\n  `box.delete()` — Upstash Box's permanent teardown — instead of the `box.pause()`\n  that `stop()`/`shutdown()` use to keep the box reattachable. Per eve's contract it\n  destroys only _disposable_ state: the prewarmed template snapshot and its Redis\n  `templateKey → snapshotId` registry entry are left intact, so eve provisions the\n  session's replacement box from the same template. Provider errors reject (eve then\n  preserves the reconnect state for a retry), `options.abortSignal` is honoured before\n  the call, and a deleted handle turns further `delete`/`stop`/`shutdown` calls into\n  no-ops (eve still pauses deleted handles at server shutdown).\n\n  The `eve` devDependency of `packages/eve` moves to `^0.47.3`. The `eve` peer range\n  stays `>=0.32.0`: the built `dist` names no post-0.32 type and was re-verified against\n  eve 0.32.0 and 0.46.1.\n## @upstash/agentkit-eve-extension@0.8.0\n\n### Minor Changes\n\n- f426c7d: fix!: rebuild against eve 0.47.3 and raise the `eve` peer floor to `>=0.47.0`\n\n  The extension is now built with **eve 0.47.3**, whose\n  `dist/extension/_manifest.json` stamps formatVersion 2 and contracts\n  extension 1 / **tool 21** / **dynamicTool 21** / **hook 16** / instructions 2 /\n  config 1 — up from tool 17 / dynamicTool 18 / hook 14 in the published\n  `0.7.0` build (eve 0.44.3). This supersedes the unreleased intermediate rebuilds\n  on eve 0.45.0/0.45.2 (tool 18/19), which never shipped.\n\n  eve 0.47.0 is the first release whose `EXTENSION_CAPABILITY_CONTRACTS` accept\n  those contracts (0.46.1 tops out at tool 20 / hook 15; 0.45.1–0.46.0 at tool 19 /\n  hook 14; 0.45.0 at tool 18; 0.43.0–0.44.4 at tool 17), so the `eve` peer moves\n  from `\">=0.43.0\"` to `\">=0.47.0\"`. Verified by mounting the rebuilt extension in\n  a real eve app: it builds on eve 0.47.0 and fails on 0.46.1. Contribution\n  contracts move in _patch_ releases, so always re-derive the floor from the freshly\n  built manifest.\n\n  No extension source changed; all packages build, typecheck, lint and pass their\n  tests against eve 0.47.3.\n## eve-demo@0.0.9\n\n### Patch Changes\n\n- Updated dependencies [f426c7d]\n  - @upstash/agentkit-eve@0.8.0\n## eve-extension-demo@0.0.7\n\n### Patch Changes\n\n- Updated dependencies [f426c7d]\n  - @upstash/agentkit-eve-extension@0.8.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/28",
+        "created_at": "2026-08-26T20:01:11Z",
+        "updated_at": "2026-08-31T11:42:23Z",
+        "closed_at": "2026-08-31T11:42:23Z",
+        "merged_at": "2026-08-31T11:42:23Z",
+        "merge_commit_sha": "0e26aff63ec13512bc56201106ce9cb346634f69",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "92a0a60c2f522bd727ab6a889a9a8fdb9af524ed",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "f426c7d1d9fca7085d21e0cdab853db2f6c8a87d",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4400881184,
+        "node_id": "PR_kwDOS_EB0s8AAAABBlAeIA",
+        "number": 30,
+        "state": "closed",
+        "title": "Implement SandboxBackendHandle.delete() for the Box backend, bump to eve 0.47.3",
+        "body": "Implements the `delete(options?: SandboxDeleteOptions)` member eve 0.47 added to `SandboxBackendHandle`, using Box's real delete call (distinct from the pause-style call `stop`/`shutdown` use) so the sandbox and its disposable state are removed while reusable template/snapshot state is untouched. Bumps eve to 0.47.3 across the repo and re-stamps packages/eve-extension's manifest/peer floor for the resulting contract (tool 21 / dynamicTool 21 / hook 16 / instructions 2 / config 1, peer >=0.47.0).\n\nRebased on top of main's own unrelated eve-0.45.2 bump (#29): that turned out to be a no-op rebase (the branch already sat on top of it), but its unreleased changeset for eve-extension conflicted with this PR's — both bumped the same package's peer floor with different numbers — so they're folded into one changeset reflecting the final 0.47.3 state instead of leaving two contradictory pending entries.\n\nVerified: `pnpm build`, `pnpm typecheck`, `pnpm lint`, `pnpm test` (36 passed/63 skipped, no live Redis/Box creds in CI) at the repo root, plus both example apps' builds/typechecks, and CI is green on the pushed branch.\n\n## Evidence\n\n<details>\n<summary>2 captures</summary>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/3cda211c-7740-4efc-a412-a4de3982acbd/building/eve-demo-memory-turn.png\" alt=\"eve-demo-memory-turn\" width=\"380\" /><br/><sub>eve-demo-memory-turn · <code>.agent/evidence/eve-demo-memory-turn.png</code></sub>\n\n<img src=\"https://gnakqvmipxzjeola.public.blob.vercel-storage.com/missions/3cda211c-7740-4efc-a412-a4de3982acbd/building/eve-demo-sandbox-bash-turn.png\" alt=\"eve-demo-sandbox-bash-turn\" width=\"380\" /><br/><sub>eve-demo-sandbox-bash-turn · <code>.agent/evidence/eve-demo-sandbox-bash-turn.png</code></sub>\n\n</details>\n\n---\n\nBuilt by **upstash-tag** · mission [`3cda211c-7740-4efc-a412-a4de3982acbd`](https://upstash-tag.vercel.app/missions/3cda211c-7740-4efc-a412-a4de3982acbd) · `feat/eve-sandbox-delete` → `main` · $31.39",
+        "html_url": "https://github.com/upstash/agentkit/pull/30",
+        "created_at": "2026-08-31T09:11:58Z",
+        "updated_at": "2026-08-31T10:43:53Z",
+        "closed_at": "2026-08-31T10:07:09Z",
+        "merged_at": "2026-08-31T10:07:09Z",
+        "merge_commit_sha": "f426c7d1d9fca7085d21e0cdab853db2f6c8a87d",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "32088aa274ef9f00496e799a7f77d62cfcb549b0",
+          "ref": "feat/eve-sandbox-delete"
+        },
+        "base": {
+          "sha": "4b29d96fb4a93e7d42f530c7450306b951a332ab",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4376670472,
+        "node_id": "PR_kwDOS_EB0s8AAAABBN6xCA",
+        "number": 29,
+        "state": "closed",
+        "title": "Bump to eve 0.45.2 and correct the extension's peer floor to >=0.45.1",
+        "body": "Bumps the `eve` pin to 0.45.2 across the repo (packages, examples). Rebuilding the extension against it re-stamps its manifest's tool contract from 18 to 19, so the extension's `eve` peer floor moves from `>=0.45.0` to `>=0.45.1` (0.45.0 cannot satisfy tool 19; 0.45.1 is the first patch that can) — `packages/eve`'s peer floor needs no change. No source changes were required anywhere. Includes a single terse changeset for the extension's version bump, and a few corrected version/fact lines in CLAUDE.md — kept intentionally short, proportionate to a version bump rather than a narrative writeup.\n\n---\n\nBuilt by **upstash-tag** · mission [`a49a8452-8b90-4d4d-8148-bc7802a21249`](https://upstash-tag.vercel.app/missions/a49a8452-8b90-4d4d-8148-bc7802a21249) · `eve/0.45.2-upgrade` → `main` · $17.80",
+        "html_url": "https://github.com/upstash/agentkit/pull/29",
+        "created_at": "2026-08-27T14:18:53Z",
+        "updated_at": "2026-08-31T08:37:30Z",
+        "closed_at": "2026-08-31T08:37:30Z",
+        "merged_at": "2026-08-31T08:37:30Z",
+        "merge_commit_sha": "4b29d96fb4a93e7d42f530c7450306b951a332ab",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "f46f1fb18800ebfe835a2a1941703cf380fb6e09",
+          "ref": "eve/0.45.2-upgrade"
+        },
+        "base": {
+          "sha": "d11584ae5293f0a110741c77d5f6d3fcd50f9a2c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4366505552,
+        "node_id": "PR_kwDOS_EB0s8AAAABBEOWUA",
+        "number": 27,
+        "state": "closed",
+        "title": "fix!: rebuild eve extension against eve 0.45 and raise its peer floor",
+        "body": "Bumps every `eve` pin in the repo to 0.45.0, rebuilds `@upstash/agentkit-eve-extension`'s manifest against the new tool/dynamicTool contract versions (17→18, 18→19) and raises its stale peer floor (`>=0.43.0`→`>=0.45.0`) so a consumer can't install an eve that fails at `eve build`; also fixes a nested AGENTS.md note that still told future agents to keep the old floor.\n\nOn top of that, this fixes the CI red that was blocking the PR: `packages/sdk/src/chat-history.test.ts` and `packages/eve/src/search-tools.test.ts` were flaking against live Upstash Redis Search independently of the eve bump (reproduced identically on `main`). Root cause was two-fold — the search index has to already exist before a doc is written or the create-time backfill drops that doc permanently, and `waitIndexing()` is a no-op on a not-yet-existing index — so both tests now provision the index before seeding and poll for the expected result instead of asserting on the first read; no assertion's expected behavior changed. Verified 10/10 clean runs on a fresh Redis where the baseline was 4/10.\n\nCLAUDE.md documents the real indexing-order mechanism, and `packages/eve-extension`'s changeset/README already carry the version bump.\n\n---\n\nBuilt by **upstash-tag** · mission [`38815da1-2d40-487b-9073-a70e9116dbb7`](https://upstash-1mm2rpfa0-upstash.vercel.app/missions/38815da1-2d40-487b-9073-a70e9116dbb7) · `chore/eve-compat-0.45.0` → `main` · $25.23",
+        "html_url": "https://github.com/upstash/agentkit/pull/27",
+        "created_at": "2026-08-26T11:18:04Z",
+        "updated_at": "2026-08-26T20:00:37Z",
+        "closed_at": "2026-08-26T20:00:37Z",
+        "merged_at": "2026-08-26T20:00:37Z",
+        "merge_commit_sha": "d11584ae5293f0a110741c77d5f6d3fcd50f9a2c",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "128afde4d174500e05630762b3f284343578ed5e",
+          "ref": "chore/eve-compat-0.45.0"
+        },
+        "base": {
+          "sha": "8ccaab56f63273828b3aa01f1759f1e8e2400634",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4357400497,
+        "node_id": "PR_kwDOS_EB0s8AAAABA7insQ",
+        "number": 26,
+        "state": "closed",
+        "title": "docs: correct what eve extensions can contribute (channels/schedules/subagents ARE allowed)",
+        "body": "CLAUDE.md stated in two places that eve extensions cannot contribute channels, schedules, or subagents. That's wrong as of eve >=0.41 (per eve's docs/extensions.md): extensions can contribute all of tools, channels, connections, skills, schedules, subagents, instruction fragments, and hooks. The only things actually excluded at the extension root are sandbox, agent config, and nested extensions (a contributed subagent may still own its own config/sandbox).\n\nThis fixes both spots in CLAUDE.md and the same incorrect claim repeated in packages/eve-extension/AGENTS.md, packages/eve-extension/README.md, and packages/eve/README.md — the latter two previously used the false \"extensions can't carry channel/sandbox config\" framing to justify the eve vs eve-extension package split, now reworded around the real reasons (sandbox backend can't live at an extension root; rate-limit auth and defineCachedTool are just pieces you compose into your own tree).\n\n---\n\nBuilt by **upstash-tag** · mission [`fe0f5b94-ea6d-4611-bdac-60d6c2aebcf6`](https://upstash-tag.vercel.app/missions/fe0f5b94-ea6d-4611-bdac-60d6c2aebcf6) · `docs/fix-eve-extension-contributions` → `main` · $1.58",
+        "html_url": "https://github.com/upstash/agentkit/pull/26",
+        "created_at": "2026-08-25T11:49:53Z",
+        "updated_at": "2026-08-25T12:58:40Z",
+        "closed_at": "2026-08-25T12:58:40Z",
+        "merged_at": "2026-08-25T12:58:40Z",
+        "merge_commit_sha": "8ccaab56f63273828b3aa01f1759f1e8e2400634",
+        "draft": false,
+        "user": {
+          "id": 313023939,
+          "node_id": "BOT_kgDOEqhdww",
+          "login": "upstash-tag[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/upstash-tag"
+        },
+        "head": {
+          "sha": "b55d051af3af44b5d0ec89950dea432f42026ee4",
+          "ref": "docs/fix-eve-extension-contributions"
+        },
+        "base": {
+          "sha": "73c5894c285f02c6a713306a762c5e639c9001a5",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4351797528,
+        "node_id": "PR_kwDOS_EB0s8AAAABA2MpGA",
+        "number": 25,
+        "state": "closed",
+        "title": "ci: run the CI workflow nightly",
+        "body": "DX-2954. Add a daily schedule (00:00 UTC) and a manual trigger so the lint/typecheck/test/build/e2e pipeline also runs on main without commits, in line with the nightly runs in workflow-js, redis-js and ratelimit-js.",
+        "html_url": "https://github.com/upstash/agentkit/pull/25",
+        "created_at": "2026-08-24T19:41:39Z",
+        "updated_at": "2026-08-24T19:46:01Z",
+        "closed_at": "2026-08-24T19:46:01Z",
+        "merged_at": "2026-08-24T19:46:01Z",
+        "merge_commit_sha": "73c5894c285f02c6a713306a762c5e639c9001a5",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "44db77e39e736d11f904e79449daddacf2eb15fe",
+          "ref": "DX-2954-nightly-ci"
+        },
+        "base": {
+          "sha": "e7ec2709082c0b702781f6c0043235992cc06fea",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4347406820,
+        "node_id": "PR_kwDOS_EB0s8AAAABAyAp5A",
+        "number": 24,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve@0.7.0\n\n### Minor Changes\n\n- 55db7e1: feat!: rebuild against eve 0.44 so the extension loads on current eve (fixes #22)\n\n  `@upstash/agentkit-eve-extension@0.6.0` was built with eve 0.32.0, stamping hook\n  contract v9 in its `dist/extension/_manifest.json` — a contract eve 0.33.0\n  dropped, so the extension failed `eve build` on every eve released after 0.32.0.\n\n  - The extension is now built with **eve 0.44.3** (manifest: formatVersion 2,\n    tool 17 / dynamicTool 18 / hook 14 / instructions 2) and loads on\n    **eve ≥ 0.43.0**.\n  - The extension's `eve` peer dependency is tightened from `\"*\"` to\n    `\">=0.43.0\"`, so an incompatible eve now fails at install time with an\n    actionable message instead of at `eve build`.\n  - `@upstash/agentkit-eve`'s `eve` peer is corrected from `>=0.24.0` to\n    `>=0.32.0` — the Upstash Box sandbox backend implements the `stop()` handle\n    contract eve requires since 0.32.\n\n  No runtime behavior changed; all sources compile and pass unmodified against\n  eve 0.44.3.\n## @upstash/agentkit-eve-extension@0.7.0\n\n### Minor Changes\n\n- 55db7e1: feat!: rebuild against eve 0.44 so the extension loads on current eve (fixes #22)\n\n  `@upstash/agentkit-eve-extension@0.6.0` was built with eve 0.32.0, stamping hook\n  contract v9 in its `dist/extension/_manifest.json` — a contract eve 0.33.0\n  dropped, so the extension failed `eve build` on every eve released after 0.32.0.\n\n  - The extension is now built with **eve 0.44.3** (manifest: formatVersion 2,\n    tool 17 / dynamicTool 18 / hook 14 / instructions 2) and loads on\n    **eve ≥ 0.43.0**.\n  - The extension's `eve` peer dependency is tightened from `\"*\"` to\n    `\">=0.43.0\"`, so an incompatible eve now fails at install time with an\n    actionable message instead of at `eve build`.\n  - `@upstash/agentkit-eve`'s `eve` peer is corrected from `>=0.24.0` to\n    `>=0.32.0` — the Upstash Box sandbox backend implements the `stop()` handle\n    contract eve requires since 0.32.\n\n  No runtime behavior changed; all sources compile and pass unmodified against\n  eve 0.44.3.\n## eve-demo@0.0.8\n\n### Patch Changes\n\n- Updated dependencies [55db7e1]\n  - @upstash/agentkit-eve@0.7.0\n## eve-extension-demo@0.0.6\n\n### Patch Changes\n\n- Updated dependencies [55db7e1]\n  - @upstash/agentkit-eve-extension@0.7.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/24",
+        "created_at": "2026-08-24T10:07:59Z",
+        "updated_at": "2026-08-24T10:11:43Z",
+        "closed_at": "2026-08-24T10:11:43Z",
+        "merged_at": "2026-08-24T10:11:43Z",
+        "merge_commit_sha": "f4061274f968d5de96525dc452f0caec6e88f23f",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "ae3badf45bf1e7b79f822774f64a99b865f1a9cf",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "55db7e1a8479ec3ca7c0f143dc533961bb6f3560",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4347384739,
+        "node_id": "PR_kwDOS_EB0s8AAAABAx_Tow",
+        "number": 23,
+        "state": "closed",
+        "title": "fix!: rebuild eve extension against eve 0.44 so it loads on current eve",
+        "body": "The published extension was built with eve 0.32.0, stamping hook contract v9 in dist/extension/_manifest.json — a contract eve 0.33.0 dropped, so the extension failed eve build on every eve released after 0.32.0.\n\n- bump eve to ^0.44.3 across packages/eve, packages/eve-extension and both eve demos; the rebuilt manifest stamps formatVersion 2 with tool 17 / dynamicTool 18 / hook 14 / instructions 2 (loads on eve >= 0.43.0)\n- tighten the extension's eve peer from \"*\" to \">=0.43.0\" so an incompatible eve fails at install time with an actionable message instead of at eve build\n- correct packages/eve's eve peer from >=0.24.0 to >=0.32.0 (the Box sandbox backend implements the stop() handle contract eve requires since 0.32)\n\nNo source changes were needed; ai stays exact-pinned at 7.0.58 (eve 0.44's peer is still ^7.0.58).\n\nFixes #22",
+        "html_url": "https://github.com/upstash/agentkit/pull/23",
+        "created_at": "2026-08-24T10:05:02Z",
+        "updated_at": "2026-08-24T10:07:29Z",
+        "closed_at": "2026-08-24T10:07:29Z",
+        "merged_at": "2026-08-24T10:07:29Z",
+        "merge_commit_sha": "55db7e1a8479ec3ca7c0f143dc533961bb6f3560",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "8156dffb745f2d18cba827eae7b63ba45c5c966e",
+          "ref": "fix/issue-22-eve-044-rebuild"
+        },
+        "base": {
+          "sha": "beb7572abee32c8b6e48ef79604b7a1e9423c271",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4302688790,
+        "node_id": "PR_kwDOS_EB0s8AAAABAHXSFg",
+        "number": 21,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-ai-sdk@0.6.0\n\n### Minor Changes\n\n- 5c93af5: feat: report the sdk name + version to Upstash via the redis client's telemetry headers\n\n  Every feature that takes a `redis` client now appends its package tag to the client's\n  `Upstash-Telemetry-Sdk` header (e.g.\n  `@upstash/redis@1.38.0,@upstash/agentkit-sdk@0.2.0,@upstash/agentkit-ai-sdk@0.2.0`), matching\n  `@upstash/ratelimit`. No personal data, keys or identifiers are collected. Opt out with\n  `enableTelemetry: false` on any config, with the same option on the redis client, or with the\n  `UPSTASH_DISABLE_TELEMETRY` env var.\n\n### Patch Changes\n\n- Updated dependencies [5c93af5]\n  - @upstash/agentkit-sdk@0.6.0\n## @upstash/agentkit-eve@0.6.0\n\n### Minor Changes\n\n- 5c93af5: feat: report the sdk name + version to Upstash via the redis client's telemetry headers\n\n  Every feature that takes a `redis` client now appends its package tag to the client's\n  `Upstash-Telemetry-Sdk` header (e.g.\n  `@upstash/redis@1.38.0,@upstash/agentkit-sdk@0.2.0,@upstash/agentkit-ai-sdk@0.2.0`), matching\n  `@upstash/ratelimit`. No personal data, keys or identifiers are collected. Opt out with\n  `enableTelemetry: false` on any config, with the same option on the redis client, or with the\n  `UPSTASH_DISABLE_TELEMETRY` env var.\n\n### Patch Changes\n\n- Updated dependencies [5c93af5]\n  - @upstash/agentkit-sdk@0.6.0\n  - @upstash/agentkit-ai-sdk@0.6.0\n## @upstash/agentkit-eve-extension@0.6.0\n\n### Minor Changes\n\n- 5c93af5: feat: report the sdk name + version to Upstash via the redis client's telemetry headers\n\n  Every feature that takes a `redis` client now appends its package tag to the client's\n  `Upstash-Telemetry-Sdk` header (e.g.\n  `@upstash/redis@1.38.0,@upstash/agentkit-sdk@0.2.0,@upstash/agentkit-ai-sdk@0.2.0`), matching\n  `@upstash/ratelimit`. No personal data, keys or identifiers are collected. Opt out with\n  `enableTelemetry: false` on any config, with the same option on the redis client, or with the\n  `UPSTASH_DISABLE_TELEMETRY` env var.\n\n### Patch Changes\n\n- Updated dependencies [5c93af5]\n  - @upstash/agentkit-sdk@0.6.0\n## @upstash/agentkit-sdk@0.6.0\n\n### Minor Changes\n\n- 5c93af5: feat: report the sdk name + version to Upstash via the redis client's telemetry headers\n\n  Every feature that takes a `redis` client now appends its package tag to the client's\n  `Upstash-Telemetry-Sdk` header (e.g.\n  `@upstash/redis@1.38.0,@upstash/agentkit-sdk@0.2.0,@upstash/agentkit-ai-sdk@0.2.0`), matching\n  `@upstash/ratelimit`. No personal data, keys or identifiers are collected. Opt out with\n  `enableTelemetry: false` on any config, with the same option on the redis client, or with the\n  `UPSTASH_DISABLE_TELEMETRY` env var.\n## ai-sdk-demo@0.1.3\n\n### Patch Changes\n\n- Updated dependencies [5c93af5]\n  - @upstash/agentkit-sdk@0.6.0\n  - @upstash/agentkit-ai-sdk@0.6.0\n## eve-demo@0.0.7\n\n### Patch Changes\n\n- Updated dependencies [5c93af5]\n  - @upstash/agentkit-eve@0.6.0\n## eve-extension-demo@0.0.5\n\n### Patch Changes\n\n- Updated dependencies [5c93af5]\n  - @upstash/agentkit-eve-extension@0.6.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/21",
+        "created_at": "2026-08-18T08:01:52Z",
+        "updated_at": "2026-08-18T10:11:40Z",
+        "closed_at": "2026-08-18T10:11:40Z",
+        "merged_at": "2026-08-18T10:11:39Z",
+        "merge_commit_sha": "beb7572abee32c8b6e48ef79604b7a1e9423c271",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "f84ebf9fcb99797e56aec59c7e268d56d527f2c3",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "5c93af58dcd485f08d12c08a7d7115bd618d8a13",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4279503728,
+        "node_id": "PR_kwDOS_EB0s7_FAtw",
+        "number": 19,
+        "state": "closed",
+        "title": "DX-2925: report sdk name and version via redis telemetry headers",
+        "body": "Every feature that takes a redis client now appends its package tag to the client's Upstash-Telemetry-Sdk header, matching @upstash/ratelimit. Opt out with `enableTelemetry: false` on any config, on the redis client itself, or with the UPSTASH_DISABLE_TELEMETRY env var.\n\nThe per-package VERSION constants are stamped by scripts/sync-version.mjs, run from `ci:version` at release time only — never from build/dev, which must not rewrite tracked source. CI verifies them with the script's read-only --check.",
+        "html_url": "https://github.com/upstash/agentkit/pull/19",
+        "created_at": "2026-08-14T11:51:40Z",
+        "updated_at": "2026-08-18T08:01:22Z",
+        "closed_at": "2026-08-18T08:01:22Z",
+        "merged_at": "2026-08-18T08:01:22Z",
+        "merge_commit_sha": "5c93af58dcd485f08d12c08a7d7115bd618d8a13",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "0075cd6129012492045ef36b0b3065cfd8549509",
+          "ref": "DX-2925-telemetry-headers"
+        },
+        "base": {
+          "sha": "0289e79d8384a414a984330a304fd6496d31ad0b",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4269493440,
+        "node_id": "PR_kwDOS_EB0s7-e0zA",
+        "number": 18,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve@0.5.0\n\n### Minor Changes\n\n- b0ef882: Upgrade to eve 0.32 (repo now builds and tests against eve 0.32.0 / AI SDK 7.0.58).\n\n  `@upstash/agentkit-eve`:\n\n  - The Upstash Box sandbox backend implements eve ≥0.32's `SandboxBackendHandle.stop()` (authored\n    `ctx.getSandbox().stop()`): pauses the box, keeps the session reattachable, and rejects on provider\n    errors per the contract (`shutdown()` stays best-effort).\n  - `defineCachedTool` does not cache streams: eve ≥0.31 lets tool executors be async generators\n    (streaming preliminary output snapshots), but a cache hit could never replay them —\n    `DefineCachedToolConfig` now rejects async-generator executors at the type level (its `execute`\n    must resolve to a value), and a runtime `TypeError` backstops untyped JS callers before the\n    generator object would be serialized into the cache.\n\n  `@upstash/agentkit-eve-extension`:\n\n  - The prebuilt `dist/extension` is now built with eve 0.32, so its compatibility manifest requires\n    eve 0.32's contribution formats — **consumers need eve ≥0.32** to mount this version of the\n    extension. (The eve ≥0.25.3 fix for extensions installed as physical `node_modules` directories\n    means the old pnpm-only caveat is gone.)\n## @upstash/agentkit-eve-extension@0.5.0\n\n### Minor Changes\n\n- b0ef882: Upgrade to eve 0.32 (repo now builds and tests against eve 0.32.0 / AI SDK 7.0.58).\n\n  `@upstash/agentkit-eve`:\n\n  - The Upstash Box sandbox backend implements eve ≥0.32's `SandboxBackendHandle.stop()` (authored\n    `ctx.getSandbox().stop()`): pauses the box, keeps the session reattachable, and rejects on provider\n    errors per the contract (`shutdown()` stays best-effort).\n  - `defineCachedTool` does not cache streams: eve ≥0.31 lets tool executors be async generators\n    (streaming preliminary output snapshots), but a cache hit could never replay them —\n    `DefineCachedToolConfig` now rejects async-generator executors at the type level (its `execute`\n    must resolve to a value), and a runtime `TypeError` backstops untyped JS callers before the\n    generator object would be serialized into the cache.\n\n  `@upstash/agentkit-eve-extension`:\n\n  - The prebuilt `dist/extension` is now built with eve 0.32, so its compatibility manifest requires\n    eve 0.32's contribution formats — **consumers need eve ≥0.32** to mount this version of the\n    extension. (The eve ≥0.25.3 fix for extensions installed as physical `node_modules` directories\n    means the old pnpm-only caveat is gone.)\n## eve-demo@0.0.6\n\n### Patch Changes\n\n- Updated dependencies [b0ef882]\n  - @upstash/agentkit-eve@0.5.0\n## eve-extension-demo@0.0.4\n\n### Patch Changes\n\n- Updated dependencies [b0ef882]\n  - @upstash/agentkit-eve-extension@0.5.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/18",
+        "created_at": "2026-08-13T08:41:26Z",
+        "updated_at": "2026-08-13T08:43:50Z",
+        "closed_at": "2026-08-13T08:43:50Z",
+        "merged_at": "2026-08-13T08:43:50Z",
+        "merge_commit_sha": "0289e79d8384a414a984330a304fd6496d31ad0b",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "7bcba9b6270515ef25717f1fcf6957aaf9a39a76",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "b0ef88232b472eb0499c5bee55899bd4616d9756",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4268553200,
+        "node_id": "PR_kwDOS_EB0s7-bPPw",
+        "number": 17,
+        "state": "closed",
+        "title": "feat!: upgrade to eve 0.32 (ai 7.0.58)",
+        "body": "- eve ^0.32.0 + ai exact-pin 7.0.58 across all packages and demos; @ai-sdk/* ranges re-resolved to the latest minors so a single ai copy remains.\n- sandbox backend: implement eve >=0.32's required SandboxBackendHandle.stop() (authored-runtime pause; rejects on provider errors, unlike best-effort shutdown()).\n- tool factories return new ResolvedToolDefinition (eve >=0.31 widened execute's return type with AsyncIterable streaming snapshots; this re-narrows it to Promise for direct callers).\n- defineCachedTool drains async-generator executors and caches the final snapshot (cached tools don't stream).\n- eve-demo: agent.send is positional in eve >=0.31 (send(value), not send({message})).\n- eve-extension dist rebuilt with eve 0.32: manifest now requires 0.32's contribution formats, so consumers need eve >=0.32.\n\nAll 69 tests pass against real Redis/Box; all example apps build.",
+        "html_url": "https://github.com/upstash/agentkit/pull/17",
+        "created_at": "2026-08-13T06:10:22Z",
+        "updated_at": "2026-08-13T08:40:46Z",
+        "closed_at": "2026-08-13T08:40:46Z",
+        "merged_at": "2026-08-13T08:40:46Z",
+        "merge_commit_sha": "b0ef88232b472eb0499c5bee55899bd4616d9756",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "863446b21d10e610b5211776145468855aec9930",
+          "ref": "eve-0.32-upgrade"
+        },
+        "base": {
+          "sha": "cfd7c7314f6fe4f4e20d5ece6c5c1a29ace4a4b1",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4145913397,
+        "node_id": "PR_kwDOS_EB0s73HZ41",
+        "number": 16,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve-extension@0.4.0\n\n### Minor Changes\n\n- 399b20c: Add `search_chat_history` and `read_chat_history` tools, contributed whenever `chatHistory` is enabled\n\n  Captured transcripts were write-only from the agent's side: the hook persisted every message to\n  Upstash Redis, but nothing read them back, so recalling an earlier conversation wasn't possible\n  without querying `ChatHistory` from your own code.\n\n  `chatHistory: true` now also contributes two tools over the same store:\n\n  - `<ns>__search_chat_history` — `{ query, target?, limit? }`, a typo-tolerant (`$smart`) search over\n    what was said, returning matching chats as summaries (`sessionId`, `title`, `updatedAt`,\n    `messageCount`, `score`). The current session is excluded — its text is already in context.\n  - `<ns>__read_chat_history` — `{ sessionId, limit? }`, reads one of those chats back (newest messages\n    last, capped at 50 per call with a `truncated` flag).\n\n  Both pin `userId` from the session rather than model input, so a chat lookup can only reach the\n  current user's own transcripts. They're dedicated tools rather than something you point the generic\n  `search` tool at, which means your `search` slot stays free for RAG over your own data. Like the\n  search tools they're dynamic, so they don't exist at all when `chatHistory` is off; drop them with\n  `disableTool()` if you want capture without model-facing reads.\n\n  The instructions fragment gains a short rule telling the model to look back at past conversations\n  when the user refers to one.\n## eve-extension-demo@0.0.3\n\n### Patch Changes\n\n- Updated dependencies [399b20c]\n  - @upstash/agentkit-eve-extension@0.4.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/16",
+        "created_at": "2026-07-27T20:34:44Z",
+        "updated_at": "2026-07-27T20:35:25Z",
+        "closed_at": "2026-07-27T20:35:25Z",
+        "merged_at": "2026-07-27T20:35:25Z",
+        "merge_commit_sha": "cfd7c7314f6fe4f4e20d5ece6c5c1a29ace4a4b1",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "ce1bb22ec32807c42c83cebf2b6672512c2cc38d",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "399b20c5929446abcc47cf5782ba07fc15cd1fc0",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4145836830,
+        "node_id": "PR_kwDOS_EB0s73HHMe",
+        "number": 15,
+        "state": "closed",
+        "title": "DX-2846: feat(eve-extension): add search_chat_history and read_chat_history tools",
+        "body": "Captured transcripts were write-only from the agent's side — the hook persisted every message, but no tool read them back. `chatHistory` now also contributes two dynamic tools over the same store:\n\n- search_chat_history: $smart search over what was said, returning chat summaries (the live session is excluded, its text is already in context)\n- read_chat_history: reads one chat back by sessionId, capped at 50 messages\n\nBoth pin `userId` from the session rather than model input, so a lookup can only reach the current user's transcripts — which is why they're dedicated tools instead of pointing the generic `search` tool at the chat keyspace (its filter comes from the model, so nothing would force a userId clause). The `search` slot stays free for RAG over your own data.\n\nReplaces the README's point-`search`-at-`agentkit:chat:` workaround.",
+        "html_url": "https://github.com/upstash/agentkit/pull/15",
+        "created_at": "2026-07-27T20:22:57Z",
+        "updated_at": "2026-07-27T20:34:12Z",
+        "closed_at": "2026-07-27T20:34:12Z",
+        "merged_at": "2026-07-27T20:34:12Z",
+        "merge_commit_sha": "399b20c5929446abcc47cf5782ba07fc15cd1fc0",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "6c2bc0a650a6f8d84050fb5ea4a3a60823dd37d0",
+          "ref": "DX-2846-chat-history-tools"
+        },
+        "base": {
+          "sha": "1ab24f224307040665832b2f372e24aba1d4ee02",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4091583659,
+        "node_id": "PR_kwDOS_EB0s7z4Jyr",
+        "number": 14,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve-extension@0.3.1\n\n### Patch Changes\n\n- c198499: Rebuild on eve ≥0.25's dist packaging format (`eve.extension.source`/`.dist`, prebuilt `dist/extension` + compatibility manifest, dist-only tarball). Fixes installing the extension from npm: eve 0.25 rejects the old source-recompile format outright, and the prebuilt dist also removes the need to install `@upstash/agentkit-sdk` alongside the extension. Consumers need eve ≥0.25.2; apps that configure `search` also declare `@upstash/redis` themselves (their own mount file imports the `s` schema builder from it — a mount without `search` needs no extra installs).\n## eve-extension-demo@0.0.2\n\n### Patch Changes\n\n- Updated dependencies [c198499]\n  - @upstash/agentkit-eve-extension@0.3.1",
+        "html_url": "https://github.com/upstash/agentkit/pull/14",
+        "created_at": "2026-07-20T13:48:02Z",
+        "updated_at": "2026-07-20T13:48:29Z",
+        "closed_at": "2026-07-20T13:48:29Z",
+        "merged_at": "2026-07-20T13:48:29Z",
+        "merge_commit_sha": "fea0a8a9b4edf0d6b17438a4966cd0ed897a4f04",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "c89e4c7aa63b03d52f2ca03e042c27ad0f76d463",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "c198499bae37e35aa8f422da7b9f3628fc4ec5c8",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4091543002,
+        "node_id": "PR_kwDOS_EB0s7z3_3a",
+        "number": 13,
+        "state": "closed",
+        "title": "fix(eve-extension): rebuild on eve 0.25 dist extension format",
+        "body": "Re-scaffold the package with eve 0.25's extension packaging (npx eve extension init) and move the extension source over unchanged. eve 0.25 ships prebuilt dist/extension + a compatibility manifest instead of source the consumer recompiles, and rejects the old format at discovery ('must declare eve.extension.dist').\n\nThis fixes installing the extension from npm: the compiled dist resolves @upstash/agentkit-sdk from the extension's own package, so consumers no longer need to install the sdk themselves (verified end-to-end in a standalone pnpm consumer against the packed tarball: tools, dynamic search, chat capture). Consumers still declare @upstash/redis - their own mount file imports the s schema builder from it.\n\nAlso bumps eve to ^0.25.2 across the repo (single lockfile copy; the eve adapter's API is unchanged 0.24->0.25, peer range stays >=0.24.0) and keeps the eve peer of the extension as the scaffold's wildcard - the built manifest, not the range, is the compatibility tie.\n\nKnown upstream issue (not ours): eve dev fails to load extensions installed as real directories (npm/yarn hoisted layouts) - its dev-snapshot module-map uses a relative ../../node_modules path. pnpm symlink installs and production eve build both work.",
+        "html_url": "https://github.com/upstash/agentkit/pull/13",
+        "created_at": "2026-07-20T13:42:41Z",
+        "updated_at": "2026-07-20T13:47:30Z",
+        "closed_at": "2026-07-20T13:47:30Z",
+        "merged_at": "2026-07-20T13:47:30Z",
+        "merge_commit_sha": "c198499bae37e35aa8f422da7b9f3628fc4ec5c8",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "a113c67e3251b2adf873341cd0ed561b2baf3663",
+          "ref": "DX-2846-eve-bump"
+        },
+        "base": {
+          "sha": "2314bf06822c10d10a5d0928fb23e6b8c1b3bc6c",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4090321775,
+        "node_id": "PR_kwDOS_EB0s7zzVtv",
+        "number": 12,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve@0.3.0\n\n### Minor Changes\n\n- 463c788: Add `@upstash/agentkit-eve-extension`: AgentKit as a mountable eve extension (eve ≥0.24). One file in `agent/extensions/` composes memory tools, schema-aware Redis Search tools, an opt-in durable chat-history hook, and a memory instructions fragment under one namespace.\n\n  `@upstash/agentkit-eve` moves to **eve 0.24.6** and **ai 7.0.30** (stable). Breaking: eve ≥0.24 replaced the sandbox backend handle's `dispose()` with `shutdown()` (fires only on server shutdown; the Upstash Box backend now pauses the box), and the `eve` peer range is now `>=0.24.0`.\n## @upstash/agentkit-eve-extension@0.3.0\n\n### Minor Changes\n\n- 463c788: Add `@upstash/agentkit-eve-extension`: AgentKit as a mountable eve extension (eve ≥0.24). One file in `agent/extensions/` composes memory tools, schema-aware Redis Search tools, an opt-in durable chat-history hook, and a memory instructions fragment under one namespace.\n\n  `@upstash/agentkit-eve` moves to **eve 0.24.6** and **ai 7.0.30** (stable). Breaking: eve ≥0.24 replaced the sandbox backend handle's `dispose()` with `shutdown()` (fires only on server shutdown; the Upstash Box backend now pauses the box), and the `eve` peer range is now `>=0.24.0`.\n## eve-demo@0.0.5\n\n### Patch Changes\n\n- Updated dependencies [463c788]\n  - @upstash/agentkit-eve@0.3.0\n## eve-extension-demo@0.0.1\n\n### Patch Changes\n\n- Updated dependencies [463c788]\n  - @upstash/agentkit-eve-extension@0.3.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/12",
+        "created_at": "2026-07-20T10:36:26Z",
+        "updated_at": "2026-07-20T10:42:39Z",
+        "closed_at": "2026-07-20T10:42:39Z",
+        "merged_at": "2026-07-20T10:42:39Z",
+        "merge_commit_sha": "2314bf06822c10d10a5d0928fb23e6b8c1b3bc6c",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "2a9e8bf56b1b6f60c27b099422c397f677eaf16a",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "463c7889b1a4caf25e112fe8df00dbb4bc4812ef",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 4076110581,
+        "node_id": "PR_kwDOS_EB0s7y9IL1",
+        "number": 11,
+        "state": "closed",
+        "title": "DX-2846: Eve Extension package and demo",
+        "body": "AgentKit for eve is now **one file** instead of one file per tool.\r\n\r\n```ts\r\n// agent/extensions/agentkit.ts\r\nimport { s } from \"@upstash/redis\";\r\nimport agentkit from \"@upstash/agentkit-eve-extension\";\r\n\r\nexport default agentkit({\r\n  userId: (ctx) => ctx.session.auth.current?.principalId ?? ctx.session.id,\r\n  search: {\r\n    schema: s.object({ title: s.string(), author: s.string().noTokenize(), year: s.number() }),\r\n    indexName: \"books\",\r\n  },\r\n});\r\n```\r\n\r\nThat single mount composes, under the `agentkit__` namespace:\r\n\r\n| Contribution | |\r\n| --- | --- |\r\n| `agentkit__recall_memory` / `agentkit__save_memory` | long-term memory on Upstash Redis |\r\n| `agentkit__search` / `agentkit__search_aggregate` / `agentkit__search_count` | schema-aware Redis Search tools (RAG) — only exist when `search` is configured |\r\n| `agentkit__chat_history` (hook) | every message durably captured to `agentkit:chat:<userId>:<sessionId>` — searchable with `ChatHistory` |\r\n| instructions fragment | teaches the model when to save/recall memories |\r\n\r\nDon't want a tool? Disable its slot:\r\n\r\n```ts\r\n// agent/extensions/agentkit/tools/save_memory.ts\r\nimport { disableTool } from \"eve/tools\";\r\nexport default disableTool();\r\n```\r\n\r\nLive, from `examples/eve-extension-demo` (new):\r\n\r\n```\r\nuser: My name is Arda and my favorite author is Ursula K. Le Guin — remember that.\r\n      Then search the book index for her books and tell me the earliest one.\r\n\r\n→ agentkit__save_memory {\"text\": \"The user's name is Arda.\"}\r\n→ agentkit__save_memory {\"text\": \"The user's favorite author is Ursula K. Le Guin.\"}\r\n→ agentkit__search     {\"filter\": {\"author\": {\"$smart\": \"Ursula K. Le Guin\"}}}\r\n\r\nassistant: … the earliest is A Wizard of Earthsea (1968).\r\n\r\n# next session\r\nuser: What is my name and what author do I like?\r\n→ agentkit__recall_memory {\"query\": \"user name\"}\r\nassistant: Your name is Arda, and you like Ursula K. Le Guin.\r\n```\r\n\r\n<details>\r\n<summary><b>Technical details</b></summary>\r\n\r\n### Extension design\r\n\r\n- `extension/extension.ts` declares config with `defineExtension` + zod; non-JSON values (`Redis`\r\n  client, `userId` functions, the `s` search schema) pass through `z.custom` — the mount file is\r\n  evaluated in the runtime, so live values are fine.\r\n- **Search tools are dynamic** (`defineDynamic`, resolved at `session.started`), not static: their\r\n  descriptions/input schemas are generated from the consumer's `search.schema` (per-field filter\r\n  guides for the model), and mount config is **not bound** when static modules evaluate at discovery.\r\n  One resolver per file keeps each tool in its own slot, so `disableTool()` overrides still target\r\n  them individually. Unconfigured `search` → resolver returns `null` → tools don't exist.\r\n- **Chat-history hook** subscribes to `message.received` / `message.completed` and appends via core\r\n  `ChatHistory.getChat` + `saveChat` (events per session are dispatched in order, so the\r\n  read-modify-write doesn't race). Errors are logged and swallowed — a thrown eve hook fails the turn.\r\n  On by default; `chatHistory: false` opts out.\r\n- `userId` fns are typed with eve's public **`SessionContext`** (`eve/tools`) — the shared base of tool\r\n  and hook ctx, so one function serves every contribution. Default derivation:\r\n  `auth.current?.principalId ?? auth.initiator?.principalId ?? session.id`, with `:` sanitized to `_`\r\n  (eve principal ids like `eve:app` would violate core key-part validation).\r\n- Shared code lives in `extension/lib/runtime.ts` — extensions can have internal modules, unlike\r\n  agent files (eve's per-file snapshot restriction), which is exactly why this packaging wins.\r\n- What extensions can't carry stays in `@upstash/agentkit-eve`: the Box sandbox backend, the\r\n  rate-limit channel auth, and `defineCachedTool`.\r\n- Built with `eve extension build`; `eve` is a peer (`^0.24.6`); ships `extension/` (source the\r\n  consumer recompiles) + `dist/` (mount factory and `./tools` re-exports for overrides /\r\n  `toolResultFrom`).\r\n\r\n### Version bumps (whole repo)\r\n\r\n- `eve` `0.17.1 → 0.24.6` everywhere, single lockfile copy. One API break: `SandboxBackendHandle.dispose`\r\n  → **`shutdown()`** (fires only on server shutdown, must leave the session reattachable) — the Box\r\n  backend now does a tolerated `box.pause()`, mirroring eve's own Vercel backend.\r\n- `ai` beta `7.0.0-beta.178` → stable **`7.0.30`**, exact-pinned everywhere (eve ≥0.24 declares `ai`\r\n  as a peer, apps provide the single copy). Providers to stable: `@ai-sdk/openai ^4.0.15`,\r\n  `@ai-sdk/provider ^4.0.3`, `@ai-sdk/react ^4.0.33`.\r\n- Fixed 7 pre-existing test failures the bump surfaced: tests passed colon-containing\r\n  `uniquePrefix()` values as userIds, which core key-part validation rejects (unnoticed because\r\n  Redis-less CI skips those suites). New colon-free `uniqueUserId()` helper in both test-supports.\r\n\r\n### Verification\r\n\r\n- `pnpm lint` / `typecheck` / `build` / `test` all green (69 tests against real Upstash Redis).\r\n- All three example apps build; `eve-extension-demo` exercised live end-to-end (real Redis + OpenAI):\r\n  memory writes, schema-aware `$smart` search, transcript capture, and cross-session recall verified\r\n  in Redis.\r\n\r\n</details>\r\n",
+        "html_url": "https://github.com/upstash/agentkit/pull/11",
+        "created_at": "2026-07-17T11:30:36Z",
+        "updated_at": "2026-07-20T10:35:59Z",
+        "closed_at": "2026-07-20T10:35:59Z",
+        "merged_at": "2026-07-20T10:35:58Z",
+        "merge_commit_sha": "463c7889b1a4caf25e112fe8df00dbb4bc4812ef",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "186e80b17b424dda47758392337d0c91066f6f40",
+          "ref": "DX-2846"
+        },
+        "base": {
+          "sha": "7667e3c820b1141cf88abe1dd5e01dd38d9409d3",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3971405315,
+        "node_id": "PR_kwDOS_EB0s7sttYD",
+        "number": 10,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve@0.2.2\n\n### Patch Changes\n\n- 0970c09: change network policy to open boxes with allow-all network\n## eve-demo@0.0.4\n\n### Patch Changes\n\n- Updated dependencies [0970c09]\n  - @upstash/agentkit-eve@0.2.2",
+        "html_url": "https://github.com/upstash/agentkit/pull/10",
+        "created_at": "2026-07-01T14:15:24Z",
+        "updated_at": "2026-07-01T14:15:59Z",
+        "closed_at": "2026-07-01T14:15:58Z",
+        "merged_at": "2026-07-01T14:15:58Z",
+        "merge_commit_sha": "7667e3c820b1141cf88abe1dd5e01dd38d9409d3",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "bd13378b0df58c6fc91fbc518b3e1eb60852743d",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "0970c09c3675460cdec484a8f84ece17c5d3abb8",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3970065885,
+        "node_id": "PR_kwDOS_EB0s7somXd",
+        "number": 9,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-eve@0.2.1\n\n### Patch Changes\n\n- fcc8eb1: Add baseSnapshot parameter to upstash sandbox\n## eve-demo@0.0.3\n\n### Patch Changes\n\n- Updated dependencies [fcc8eb1]\n  - @upstash/agentkit-eve@0.2.1",
+        "html_url": "https://github.com/upstash/agentkit/pull/9",
+        "created_at": "2026-07-01T10:52:06Z",
+        "updated_at": "2026-07-01T10:52:52Z",
+        "closed_at": "2026-07-01T10:52:52Z",
+        "merged_at": "2026-07-01T10:52:52Z",
+        "merge_commit_sha": "05791a4ff50e948d4ea322448170f6a4decb65cb",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "c18b16906d435ebb2681d29ac46184712327c6b0",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "fcc8eb1b8762c28a0a6503adadddbfc3435ba7e0",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3925446855,
+        "node_id": "PR_kwDOS_EB0s7p-ZDH",
+        "number": 4,
+        "state": "closed",
+        "title": "Version Packages",
+        "body": "This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and the packages will be published to npm automatically. If you're not ready to do a release yet, that's fine, whenever you add more changesets to main, this PR will be updated.\n\n\n# Releases\n## @upstash/agentkit-ai-sdk@0.2.0\n\n### Minor Changes\n\n- 7f706d0: Tenant-isolation hardening, a type-safe reactive search index, and a consistent `prefix`/`indexName`/`userId`/`toolName` API. Contains breaking changes.\n\n  **Tenant isolation**\n\n  - `ChatHistory` is keyed per user (`<prefix>:<userId>:<sessionId>`), so a chat can never be read or overwritten by a different user. Every method takes a single object; `userId`/`sessionId` are required, validated non-empty, and rejected if they contain the `:` key separator (which would otherwise let keys collide across users).\n  - `AgentMemory` requires a non-empty `userId` on every call (no silent shared bucket) and rejects a `:` in `userId`; `add`/`recall` take a single object param.\n  - `ToolCache` keys are `<prefix>:<userId>:<toolName>:<hash>` — scoped per user, then per tool; `userId`/`toolName` are rejected if they contain `:`.\n  - `createRateLimit`/`createRateLimitAuth` require an explicit `limiter` (removed `limit`/`window`); eve's `createRateLimitAuth` requires `identifier` (no implicit global bucket) and counts only `POST` requests, so a turn (a message `POST` plus its follow-up stream `GET`) is charged once, not twice.\n  - The eve sandbox denies network egress by default. Its `upstash()` backend config is now the `@upstash/box` `BoxConfig` passed through verbatim (`runtime`/`size`/`apiKey`/`keepAlive`/`initCommand`/`env`/`skills`/…) plus an optional `redis`/`templatePrefix` — the invented `resources.vcpus` hint and runtime-string coercion (`\"node24\"`) are removed (use `runtime`/`size` as Box expects), and `networkPolicy` is no longer a config knob (egress is governed by the deny-all default plus per-session `use({ networkPolicy })`).\n  - The eve sandbox now reuses prewarmed Box snapshots correctly: the `templateKey → snapshotId` map is stored in a durable Redis registry (Box has no static snapshot lookup, and `prewarm`/`create` run in different processes), so `create` restores the prewarmed template instead of spinning a fresh, empty box. `prewarm` builds no box when there's nothing to bake. It also bridges Eve's `/workspace` root to Box's `/workspace/home` working directory in both file ops and raw commands, so the agent's `find`/`grep`/file tools hit the right directory.\n  - The eve sandbox now reuses one box per conversation instead of creating a new box on every session open: `create` reattaches to the box from `existingMetadata` (Eve re-opens a session many times per turn) and `dispose` no longer tears the box down. `keepAlive` defaults to `false` (Box's pause-based idle lifecycle), so idle boxes are auto-paused/reaped rather than leaked.\n  - The eve sandbox no longer silently drops Eve's per-domain network rules. Box's network policy is a plain domain/CIDR allow-list, so a policy carrying `transform` (firewall header injection / credential brokering) or `forwardURL` now **throws** instead of being quietly reduced to a bare allow-list (which would send the request unauthenticated). For credential brokering, set Box's `attachHeaders` at backend creation via `upstash({ attachHeaders })`.\n  - `createRateLimit`'s `redis` is now optional and defaults to `Redis.fromEnv()`, matching the \"`redis` defaults everywhere\" convention — previously it was the one feature that required an explicit client.\n\n  **Reactive search index**\n\n  - New `ReactiveSearchIndex` provisions the Upstash index on the first read (`query`/`aggregate`/`count`) via `existsOk` + retry; writes go straight to Redis, so features never create the index on the write path. Replaces the internal `withIndex` helper.\n\n  **API naming (consistent across features)**\n\n  - `prefix` — base key prefix (was `namespace`).\n  - `indexName` — explicit Redis Search index name, separate from `prefix` (was `name`).\n  - `userId` — per-call tenant scope for memory/tools (was the per-call `namespace`).\n  - `toolName` — per-tool cache segment.\n\n  **Removed**\n\n  - The `Rag` primitive — use the schema-driven search tools (`createSearchToolDefs`/`createSearchTools`/`defineSearchTools`) over your own documents instead.\n  - `search-index.ts`/`RedisSearchIndex` (folded into `AgentMemory` + `ReactiveSearchIndex`).\n  - ai-sdk singular `cachedTool` — use `cachedTools(map, { userId })` (the tool name comes from the map key).\n  - `ChatHistory.createChat`/`setTitle`, the unused `metadata` field on `ChatRecord`/`MemoryRecord`, and the `@upstash/agentkit-sdk/testing` (`MockModel`) subpath.\n\n  **Other**\n\n  - `Ratelimit` + `Duration` are re-exported from every package, so you never import or install `@upstash/ratelimit` directly.\n  - Bumped the eve peer to `^0.13.1`.\n\n### Patch Changes\n\n- Updated dependencies [7f706d0]\n  - @upstash/agentkit-sdk@0.2.0\n## @upstash/agentkit-eve@0.2.0\n\n### Minor Changes\n\n- 7f706d0: Tenant-isolation hardening, a type-safe reactive search index, and a consistent `prefix`/`indexName`/`userId`/`toolName` API. Contains breaking changes.\n\n  **Tenant isolation**\n\n  - `ChatHistory` is keyed per user (`<prefix>:<userId>:<sessionId>`), so a chat can never be read or overwritten by a different user. Every method takes a single object; `userId`/`sessionId` are required, validated non-empty, and rejected if they contain the `:` key separator (which would otherwise let keys collide across users).\n  - `AgentMemory` requires a non-empty `userId` on every call (no silent shared bucket) and rejects a `:` in `userId`; `add`/`recall` take a single object param.\n  - `ToolCache` keys are `<prefix>:<userId>:<toolName>:<hash>` — scoped per user, then per tool; `userId`/`toolName` are rejected if they contain `:`.\n  - `createRateLimit`/`createRateLimitAuth` require an explicit `limiter` (removed `limit`/`window`); eve's `createRateLimitAuth` requires `identifier` (no implicit global bucket) and counts only `POST` requests, so a turn (a message `POST` plus its follow-up stream `GET`) is charged once, not twice.\n  - The eve sandbox denies network egress by default. Its `upstash()` backend config is now the `@upstash/box` `BoxConfig` passed through verbatim (`runtime`/`size`/`apiKey`/`keepAlive`/`initCommand`/`env`/`skills`/…) plus an optional `redis`/`templatePrefix` — the invented `resources.vcpus` hint and runtime-string coercion (`\"node24\"`) are removed (use `runtime`/`size` as Box expects), and `networkPolicy` is no longer a config knob (egress is governed by the deny-all default plus per-session `use({ networkPolicy })`).\n  - The eve sandbox now reuses prewarmed Box snapshots correctly: the `templateKey → snapshotId` map is stored in a durable Redis registry (Box has no static snapshot lookup, and `prewarm`/`create` run in different processes), so `create` restores the prewarmed template instead of spinning a fresh, empty box. `prewarm` builds no box when there's nothing to bake. It also bridges Eve's `/workspace` root to Box's `/workspace/home` working directory in both file ops and raw commands, so the agent's `find`/`grep`/file tools hit the right directory.\n  - The eve sandbox now reuses one box per conversation instead of creating a new box on every session open: `create` reattaches to the box from `existingMetadata` (Eve re-opens a session many times per turn) and `dispose` no longer tears the box down. `keepAlive` defaults to `false` (Box's pause-based idle lifecycle), so idle boxes are auto-paused/reaped rather than leaked.\n  - The eve sandbox no longer silently drops Eve's per-domain network rules. Box's network policy is a plain domain/CIDR allow-list, so a policy carrying `transform` (firewall header injection / credential brokering) or `forwardURL` now **throws** instead of being quietly reduced to a bare allow-list (which would send the request unauthenticated). For credential brokering, set Box's `attachHeaders` at backend creation via `upstash({ attachHeaders })`.\n  - `createRateLimit`'s `redis` is now optional and defaults to `Redis.fromEnv()`, matching the \"`redis` defaults everywhere\" convention — previously it was the one feature that required an explicit client.\n\n  **Reactive search index**\n\n  - New `ReactiveSearchIndex` provisions the Upstash index on the first read (`query`/`aggregate`/`count`) via `existsOk` + retry; writes go straight to Redis, so features never create the index on the write path. Replaces the internal `withIndex` helper.\n\n  **API naming (consistent across features)**\n\n  - `prefix` — base key prefix (was `namespace`).\n  - `indexName` — explicit Redis Search index name, separate from `prefix` (was `name`).\n  - `userId` — per-call tenant scope for memory/tools (was the per-call `namespace`).\n  - `toolName` — per-tool cache segment.\n\n  **Removed**\n\n  - The `Rag` primitive — use the schema-driven search tools (`createSearchToolDefs`/`createSearchTools`/`defineSearchTools`) over your own documents instead.\n  - `search-index.ts`/`RedisSearchIndex` (folded into `AgentMemory` + `ReactiveSearchIndex`).\n  - ai-sdk singular `cachedTool` — use `cachedTools(map, { userId })` (the tool name comes from the map key).\n  - `ChatHistory.createChat`/`setTitle`, the unused `metadata` field on `ChatRecord`/`MemoryRecord`, and the `@upstash/agentkit-sdk/testing` (`MockModel`) subpath.\n\n  **Other**\n\n  - `Ratelimit` + `Duration` are re-exported from every package, so you never import or install `@upstash/ratelimit` directly.\n  - Bumped the eve peer to `^0.13.1`.\n\n### Patch Changes\n\n- Updated dependencies [7f706d0]\n  - @upstash/agentkit-sdk@0.2.0\n  - @upstash/agentkit-ai-sdk@0.2.0\n## @upstash/agentkit-sdk@0.2.0\n\n### Minor Changes\n\n- 7f706d0: Tenant-isolation hardening, a type-safe reactive search index, and a consistent `prefix`/`indexName`/`userId`/`toolName` API. Contains breaking changes.\n\n  **Tenant isolation**\n\n  - `ChatHistory` is keyed per user (`<prefix>:<userId>:<sessionId>`), so a chat can never be read or overwritten by a different user. Every method takes a single object; `userId`/`sessionId` are required, validated non-empty, and rejected if they contain the `:` key separator (which would otherwise let keys collide across users).\n  - `AgentMemory` requires a non-empty `userId` on every call (no silent shared bucket) and rejects a `:` in `userId`; `add`/`recall` take a single object param.\n  - `ToolCache` keys are `<prefix>:<userId>:<toolName>:<hash>` — scoped per user, then per tool; `userId`/`toolName` are rejected if they contain `:`.\n  - `createRateLimit`/`createRateLimitAuth` require an explicit `limiter` (removed `limit`/`window`); eve's `createRateLimitAuth` requires `identifier` (no implicit global bucket) and counts only `POST` requests, so a turn (a message `POST` plus its follow-up stream `GET`) is charged once, not twice.\n  - The eve sandbox denies network egress by default. Its `upstash()` backend config is now the `@upstash/box` `BoxConfig` passed through verbatim (`runtime`/`size`/`apiKey`/`keepAlive`/`initCommand`/`env`/`skills`/…) plus an optional `redis`/`templatePrefix` — the invented `resources.vcpus` hint and runtime-string coercion (`\"node24\"`) are removed (use `runtime`/`size` as Box expects), and `networkPolicy` is no longer a config knob (egress is governed by the deny-all default plus per-session `use({ networkPolicy })`).\n  - The eve sandbox now reuses prewarmed Box snapshots correctly: the `templateKey → snapshotId` map is stored in a durable Redis registry (Box has no static snapshot lookup, and `prewarm`/`create` run in different processes), so `create` restores the prewarmed template instead of spinning a fresh, empty box. `prewarm` builds no box when there's nothing to bake. It also bridges Eve's `/workspace` root to Box's `/workspace/home` working directory in both file ops and raw commands, so the agent's `find`/`grep`/file tools hit the right directory.\n  - The eve sandbox now reuses one box per conversation instead of creating a new box on every session open: `create` reattaches to the box from `existingMetadata` (Eve re-opens a session many times per turn) and `dispose` no longer tears the box down. `keepAlive` defaults to `false` (Box's pause-based idle lifecycle), so idle boxes are auto-paused/reaped rather than leaked.\n  - The eve sandbox no longer silently drops Eve's per-domain network rules. Box's network policy is a plain domain/CIDR allow-list, so a policy carrying `transform` (firewall header injection / credential brokering) or `forwardURL` now **throws** instead of being quietly reduced to a bare allow-list (which would send the request unauthenticated). For credential brokering, set Box's `attachHeaders` at backend creation via `upstash({ attachHeaders })`.\n  - `createRateLimit`'s `redis` is now optional and defaults to `Redis.fromEnv()`, matching the \"`redis` defaults everywhere\" convention — previously it was the one feature that required an explicit client.\n\n  **Reactive search index**\n\n  - New `ReactiveSearchIndex` provisions the Upstash index on the first read (`query`/`aggregate`/`count`) via `existsOk` + retry; writes go straight to Redis, so features never create the index on the write path. Replaces the internal `withIndex` helper.\n\n  **API naming (consistent across features)**\n\n  - `prefix` — base key prefix (was `namespace`).\n  - `indexName` — explicit Redis Search index name, separate from `prefix` (was `name`).\n  - `userId` — per-call tenant scope for memory/tools (was the per-call `namespace`).\n  - `toolName` — per-tool cache segment.\n\n  **Removed**\n\n  - The `Rag` primitive — use the schema-driven search tools (`createSearchToolDefs`/`createSearchTools`/`defineSearchTools`) over your own documents instead.\n  - `search-index.ts`/`RedisSearchIndex` (folded into `AgentMemory` + `ReactiveSearchIndex`).\n  - ai-sdk singular `cachedTool` — use `cachedTools(map, { userId })` (the tool name comes from the map key).\n  - `ChatHistory.createChat`/`setTitle`, the unused `metadata` field on `ChatRecord`/`MemoryRecord`, and the `@upstash/agentkit-sdk/testing` (`MockModel`) subpath.\n\n  **Other**\n\n  - `Ratelimit` + `Duration` are re-exported from every package, so you never import or install `@upstash/ratelimit` directly.\n  - Bumped the eve peer to `^0.13.1`.\n## ai-sdk-demo@0.1.2\n\n### Patch Changes\n\n- Updated dependencies [7f706d0]\n  - @upstash/agentkit-sdk@0.2.0\n  - @upstash/agentkit-ai-sdk@0.2.0\n## eve-demo@0.0.2\n\n### Patch Changes\n\n- Updated dependencies [7f706d0]\n  - @upstash/agentkit-eve@0.2.0",
+        "html_url": "https://github.com/upstash/agentkit/pull/4",
+        "created_at": "2026-06-24T06:28:16Z",
+        "updated_at": "2026-06-24T12:32:51Z",
+        "closed_at": "2026-06-24T12:32:51Z",
+        "merged_at": "2026-06-24T12:32:51Z",
+        "merge_commit_sha": "2a6974048f6117817eed047d7d64c7054312314c",
+        "draft": false,
+        "user": {
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "login": "github-actions[bot]",
+          "type": "Bot",
+          "html_url": "https://github.com/apps/github-actions"
+        },
+        "head": {
+          "sha": "043e4961d50f9783fc7e39450212de54229e0df7",
+          "ref": "changeset-release/main"
+        },
+        "base": {
+          "sha": "013ee7fd05e9bd1a099d45233ca26faa866a6153",
+          "ref": "main"
+        }
+      },
+      {
+        "id": 3927614711,
+        "node_id": "PR_kwDOS_EB0s7qGqT3",
+        "number": 8,
+        "state": "closed",
+        "title": "test+docs: eve sandbox credential-brokering coverage + ReactiveSearchIndex provisioning tests",
+        "body": "## Summary\r\n\r\nFollow-up test coverage and docs for the eve sandbox and the reactive search\r\nindex. The underlying code (the `toBoxNetworkPolicy` throw, `ReactiveSearchIndex`\r\nitself, etc.) already landed on `main`; this branch adds the tests that pin the\r\nbehavior down and the user-facing docs for the credential-brokering limitation.\r\n\r\nNet diff vs `main` is three files — no production code changes.\r\n\r\n## eve sandbox: credential brokering (docs + tests)\r\n\r\nBox's network policy is a plain domain/CIDR allow-list, so Eve's per-domain\r\nfirewall rules (`transform` header injection / `forwardURL`) can't be honored and\r\nthe backend throws instead of silently sending the request unauthenticated.\r\n\r\n- **Docs** (`packages/eve/README.md`): moved the limitation into its own\r\n  \"Brokering credentials (injecting headers)\" toggle with a ❌ incorrect example\r\n  (a `transform` rule passed to `onSession`'s `use({ networkPolicy })`, which\r\n  throws) and a ✅ correct one (Box's `attachHeaders` at backend creation + a plain\r\n  allow-list per session). The same toggle was added to the docs site\r\n  (`redis/sdks/agentkit/eve`).\r\n- **Tests** (`packages/eve/src/sandbox.test.ts`): live Upstash Box tests covering\r\n  what a user actually triggers — a per-session `transform` rule throws on both the\r\n  `use()` path (`useSessionFn`) and the agent path (`setNetworkPolicy`), a plain\r\n  allow-list works, and `upstash({ attachHeaders })` creates a working session. The\r\n  test docstring carries the full `defineSandbox` correct/incorrect snippets.\r\n\r\nFollow-up test coverage and docs for the eve sandbox and the reactive search\r\nindex. The underlying code (the `toBoxNetworkPolicy` throw, `ReactiveSearchIndex`\r\nitself, etc.) already landed on `main`; this branch adds the tests that pin the\r\nbehavior down and the user-facing docs for the credential-brokering limitation.\r\n\r\nNet diff vs `main` is three files — no production code changes.\r\n\r\n## eve sandbox: credential brokering (docs + tests)\r\n\r\nBox's network policy is a plain domain/CIDR allow-list, so Eve's per-domain\r\nfirewall rules (`transform` header injection / `forwardURL`) can't be honored and\r\nthe backend throws instead of silently sending the request unauthenticated.\r\n\r\n- **Docs** (`packages/eve/README.md`): moved the limitation into its own\r\n  \"Brokering credentials (injecting headers)\" toggle with a ❌ incorrect example\r\n  (a `transform` rule passed to `onSession`'s `use({ networkPolicy })`, which\r\n  throws) and a ✅ correct one (Box's `attachHeaders` at backend creation + a plain\r\n  allow-list per session). The same toggle was added to the docs site\r\n  (`redis/sdks/agentkit/eve`).\r\n- **Tests** (`packages/eve/src/sandbox.test.ts`): live Upstash Box tests covering\r\n  what a user actually triggers — a per-session `transform` rule throws on both the\r\n  `use()` path (`useSessionFn`) and the agent path (`setNetworkPolicy`), a plain\r\n  allow-list works, and `upstash({ attachHeaders })` creates a working session. The\r\n  test docstring carries the full `defineSandbox` correct/incorrect snippets.\r\n\r\n## sdk: ReactiveSearchIndex provisioning tests\r\n\r\n`packages/sdk/src/reactive-index.test.ts` — a suite (against real Upstash Redis,\r\nspying on the real ops, no mocked responses) that pins the reactive index's core\r\ninvariant:\r\n\r\n- A missing index is signalled differently per op (`query`→`null`,\r\n  `count`→`{count:-1}`, `aggregate`→throws), and the wrapper provisions + retries\r\n  exactly once on that signal.\r\n- An existing-but-empty index returns ordinary empties (not the missing-index\r\n  sentinels), so the wrapper does **not** re-provision.\r\n- Provisioning happens only once across repeated reads on the same instance, and no\r\n  create-index request is sent when the index already exists.\r\n\r\n## Testing\r\n\r\n- `pnpm typecheck` / `lint` clean.\r\n- New eve sandbox tests pass against live Upstash Box; the ReactiveSearchIndex\r\n  suite passes against live Upstash Redis.",
+        "html_url": "https://github.com/upstash/agentkit/pull/8",
+        "created_at": "2026-06-24T12:27:45Z",
+        "updated_at": "2026-06-24T12:32:12Z",
+        "closed_at": "2026-06-24T12:32:11Z",
+        "merged_at": "2026-06-24T12:32:11Z",
+        "merge_commit_sha": "013ee7fd05e9bd1a099d45233ca26faa866a6153",
+        "draft": false,
+        "user": {
+          "id": 57228345,
+          "node_id": "MDQ6VXNlcjU3MjI4MzQ1",
+          "login": "CahidArda",
+          "type": "User",
+          "html_url": "https://github.com/CahidArda"
+        },
+        "head": {
+          "sha": "d39eb160173f43c275d390830e6018819904919c",
+          "ref": "final-review"
+        },
+        "base": {
+          "sha": "9ae2953e5485967717e692512fe20fe1ee163e5b",
+          "ref": "main"
+        }
+      }
+    ]
+  }
+}
