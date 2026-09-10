@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "sources": [
+    { "directory": "gia-core", "repository": "usegia/gia-core", "revision": "27692173fe9a83633405b5e5f30af9c8ffd2647b" },
+    { "directory": "gia-sdk-typescript", "repository": "usegia/gia-sdk-typescript", "revision": "4c35ddd0d3006185824ec06f5638a90a1a5d2963" },
+    { "directory": "gia-runtime", "repository": "usegia/gia-runtime", "revision": "46322bd6b0ab34a0679a712ba669a6b97866d685" }
+  ]
+}
