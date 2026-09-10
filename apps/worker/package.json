@@ -1,0 +1,5 @@
+{
+  "name": "@gia-github/worker", "version": "0.1.0", "private": true, "type": "module",
+  "scripts": { "build": "tsc --noEmit", "typecheck": "tsc --noEmit", "dev": "tsx src/cli.ts work", "start": "tsx src/cli.ts work", "ingest": "tsx src/cli.ts ingest" },
+  "dependencies": { "@gia-github/db": "workspace:*", "drizzle-orm": "0.45.2", "octokit": "5.0.5", "pg-boss": "12.30.0", "zod": "4.6.1", "dotenv": "17.4.2" }
+}

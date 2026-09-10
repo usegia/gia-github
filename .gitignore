@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.turbo/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.deps/
+.data/
+.gia/
+.worktrees/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.DS_Store

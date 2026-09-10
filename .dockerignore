@@ -1,0 +1,12 @@
+.git
+node_modules
+**/node_modules
+**/.next
+.env*
+!.env.example
+.gia
+.data
+.deps
+.worktrees
+test-results
+playwright-report

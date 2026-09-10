@@ -1,0 +1,2 @@
+timestamp	action	owner	status	evidence
+2026-09-10T10:36:28.738942+00:00	Establish schema and contracts; isolated worktrees and actual GitHub captures	lead	in-progress	AGENTS.md; fixtures/README.md

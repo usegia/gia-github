@@ -1,0 +1,19 @@
+name: gia-github
+services:
+  postgres:
+    image: paradedb/paradedb:0.24.3-pg17@sha256:a784ffa6471729af6be5178ad39ea607e5cbfec94f81bcaad439de40ecb45834
+    environment:
+      POSTGRES_USER: gia_github
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-development-only}
+      POSTGRES_DB: gia_github
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55448}:5432"
+    volumes:
+      - github-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gia_github -d gia_github"]
+      interval: 2s
+      timeout: 3s
+      retries: 60
+volumes:
+  github-data:

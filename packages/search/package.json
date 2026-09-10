@@ -1,0 +1,6 @@
+{
+  "name": "@gia-github/search", "version": "0.1.0", "private": true, "type": "module",
+  "exports": { "./contracts": "./src/contracts.ts", "./server": "./src/server.ts" },
+  "scripts": { "build": "tsc --noEmit", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@gia-github/db": "workspace:*", "drizzle-orm": "0.45.2", "pg": "8.23.0", "zod": "4.6.1" }
+}

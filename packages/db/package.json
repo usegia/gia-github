@@ -1,0 +1,6 @@
+{
+  "name": "@gia-github/db", "version": "0.1.0", "private": true, "type": "module",
+  "exports": { ".": "./src/client.ts", "./schema": "./src/schema.ts", "./migrate": "./src/migrate.ts" },
+  "scripts": { "build": "tsc --noEmit", "typecheck": "tsc --noEmit" },
+  "dependencies": { "drizzle-orm": "0.45.2", "pg": "8.23.0", "zod": "4.6.1" }
+}

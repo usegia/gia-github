@@ -1,0 +1,43 @@
+{
+  "name": "gia-github",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "check:boundaries": "node scripts/check-boundaries.mjs",
+    "check": "pnpm lint && pnpm check:boundaries && pnpm typecheck && pnpm test:integration",
+    "db:up": "docker compose up -d --wait postgres",
+    "db:down": "docker compose stop postgres",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:generate": "drizzle-kit generate",
+    "ingest": "pnpm --filter @gia-github/worker ingest",
+    "worker": "pnpm --filter @gia-github/worker start",
+    "test:integration": "vitest run --project integration",
+    "test:live": "vitest run --project live",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "dotenv": "17.4.2",
+    "tsx": "4.23.13",
+    "@gia-github/db": "workspace:*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.12",
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.20.2",
+    "@types/pg": "8.23.1",
+    "drizzle-kit": "0.31.10",
+    "turbo": "2.10.12",
+    "typescript": "5.9.3",
+    "vitest": "4.1.9"
+  }
+}
