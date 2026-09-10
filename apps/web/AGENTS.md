@@ -1,5 +1,7 @@
 # Web application ownership
 
+Read [the web runbook](../../docs/web.md) for environment variables, HTTP admission, evidence presentation, and the actual browser proof. Keep that runbook current when changing those boundaries.
+
 Use Next.js App Router and Server Components for pages and initial safe reads. Client Components own explicit search submission and interaction state. Paid Gia calls must never run because of a prefetch, build, or keystroke. Use a bounded POST endpoint and pass cancellation through the server service.
 
 Import browser-safe contracts from `@gia-github/search/contracts`; import the server service only from server-owned files. Do not duplicate search logic, decode arbitrary Gia tuples in the browser, or expose credentials via NEXT_PUBLIC variables. Read configuration in the app's composition root.
