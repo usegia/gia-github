@@ -1,0 +1,1394 @@
+{
+  "version": 1,
+  "summary": {
+    "completedAt": "2026-09-10T11:33:34.837219+00:00",
+    "node": "v26.5.0",
+    "pnpm": "9.15.0",
+    "sourceFiles": 261,
+    "sourceGitTree": "aaf42f7b61973ecb09665e0b13abcebc9bb22ab0",
+    "initialMainHead": "49be12c2f8caca85a81455f7ba866092c44251db",
+    "sourceDeltas": [
+      "scripts/check-release.mjs latest nonzero Git inventory guard",
+      "gia/ coherent candidate bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+      "scripts/gia/runtime.mjs lead-owned formatting correction"
+    ],
+    "commands": {
+      "pnpm gia:bootstrap": "passed: three fresh private clones at pinned clean revisions",
+      "pnpm install --frozen-lockfile": "passed",
+      "pnpm build": "passed: 4 tasks, 0 cached",
+      "pnpm lint": "passed after copying the already-fixed runtime.mjs from main",
+      "pnpm check:boundaries": "passed:36 source files",
+      "pnpm typecheck": "passed, including tools",
+      "pnpm check:release": "passed:261 staged files",
+      "node --env-file=.env scripts/check-release.mjs": "passed including actual query credential scanning",
+      "single read-only Gia query": "passed: exact10 independent-SQL identities, direct, untruncated"
+    },
+    "dependencyIsolation": {
+      "symlinksChecked": 1999,
+      "nextTraceReferencesChecked": 2257,
+      "outsideProofTargets": 0
+    },
+    "warning": "Node26 optional ssh2 native crypto binding compile failed; package installer continued with its supported fallback. No SSH connection was exercised.",
+    "initialFailure": "The initial source snapshot had one runtime.mjs formatting error; the owner had already fixed main. That exact file was recopied, staged, and lint passed.",
+    "cleanup": "Independent source, private dependency clones, installed packages, Git metadata, and owner-only .env removed after evidence capture; sanitized evidence retained."
+  },
+  "query": {
+    "question": "Find people who authored merged pull requests in at least two distinct indexed repositories.",
+    "candidateSnapshotId": "bbf65315222a20926755dde3d9193cea3565c7b65f1bdf92729ca444985dfdc6",
+    "requestId": "a61dc7ed-d9ab-440c-8c03-2f6bf9abd8af",
+    "expectedIds": [
+      "17938322",
+      "18082091",
+      "21091016",
+      "27636870",
+      "366502",
+      "49612682",
+      "57228345",
+      "58091943",
+      "71938701",
+      "88107904"
+    ],
+    "actualIds": [
+      "17938322",
+      "18082091",
+      "21091016",
+      "27636870",
+      "366502",
+      "49612682",
+      "57228345",
+      "58091943",
+      "71938701",
+      "88107904"
+    ],
+    "interpretation": "direct",
+    "truncated": false,
+    "durationMs": 4939.248375,
+    "node": "v26.5.0",
+    "result": "exact_identity_match"
+  },
+  "inventory": {
+    "gitTree": "aaf42f7b61973ecb09665e0b13abcebc9bb22ab0",
+    "files": [
+      {
+        "path": ".dockerignore",
+        "sha256": "ecf461c9cb006f06e78ad609cbe3e439365243f6ec509ff962bcdb6cc795ec52",
+        "mode": "0o644"
+      },
+      {
+        "path": ".env.example",
+        "sha256": "7308bb6b5eeb3924fe00595156ed43d41e9ff3af8561f4d02ba2f95a5b95a951",
+        "mode": "0o644"
+      },
+      {
+        "path": ".gia-docs.json",
+        "sha256": "cadd89c853d6f282f643f62af1e4a297b713d42c06e343a81ae66943209b5e7f",
+        "mode": "0o644"
+      },
+      {
+        "path": ".gia-sources.json",
+        "sha256": "9e86bd425ed02134fdb2c5a56aff0b58c43f40a538418a0a808b1d238e6bb3f6",
+        "mode": "0o644"
+      },
+      {
+        "path": ".github/workflows/data.yml",
+        "sha256": "2d4831ef6ee4a82c25b4a90c14303e8958379bac27d80d5decae5a248dc5604e",
+        "mode": "0o644"
+      },
+      {
+        "path": ".github/workflows/live.yml",
+        "sha256": "64d7f64187e49cb4c703c7f5499b7b0be7d603a19c2056c7acd5a447a3d07492",
+        "mode": "0o644"
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "8c02b26dc8ada0b6ee4569533627c53c25e5dd37a7fe0caa5315db00974fe627",
+        "mode": "0o644"
+      },
+      {
+        "path": ".node-version",
+        "sha256": "904636927bbfe077d1a82001e3c09a336737410831611fa294eeeb27babf2c81",
+        "mode": "0o644"
+      },
+      {
+        "path": ".nvmrc",
+        "sha256": "904636927bbfe077d1a82001e3c09a336737410831611fa294eeeb27babf2c81",
+        "mode": "0o644"
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "6122f6a96237c53c6f2fbbb9f9eae4d727490837ac1c95a889a294ff7827f65c",
+        "mode": "0o644"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "sha256": "f8d3587d1fd50e85e569bec2a4341264f2bf52f7c0fee9aeb73fa98a362b24b5",
+        "mode": "0o644"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "9096bb3b1e23fa5a6137563d80be6d64b7decd8949f551a9ddf1cd2b2c8d6644",
+        "mode": "0o644"
+      },
+      {
+        "path": "README.md",
+        "sha256": "0c37d43a357bd222fb6dcd9c11a0e4175a3209756caacc6d9b0aa1febb0aae64",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/.gitignore",
+        "sha256": "39a9be3187bd4084498611fde8e5c158493450a02ba4e3f0dc5bb7c56b944ba1",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/AGENTS.md",
+        "sha256": "8911ef7a9a5df06ea4d17143fcaf415f4f5e14380f9c8814b544c6f47f2e16a8",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/next.config.ts",
+        "sha256": "1f47d02668b3b9cc3a63e0e9bec01cfdd8cf3a4e04d079cdad46fc10266bc612",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/package.json",
+        "sha256": "9233cf04079627a459836bdd97a78634d0d6bef965441a477d8d5d6bf5084f18",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/postcss.config.mjs",
+        "sha256": "a1a188221f064d964dd9958c3d48b0c23252fabbeb6099d95ee8e15c764718b0",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/api/catalog/route.ts",
+        "sha256": "6e282274a9beb399a6aa755fcef3523b65e2403161b1ef4e15700b6af8a92698",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/api/people/[login]/route.ts",
+        "sha256": "d0fb7bd7b5b5f9bf74bc10bf0dc767e53842150155202cdb8f9a28a7932d192b",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/api/search/route.ts",
+        "sha256": "c50809a70162e9f334685253c4cdb4d7b738f804b1494d358449079edb76a372",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/error.tsx",
+        "sha256": "c7e0bf33675efd238a7de5b5544ecdc39091b5fa96d391707baf2eb004040546",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/globals.css",
+        "sha256": "910afa44383f076029a7a9b488780f104176f1e8c8eb0eb2007795be2755a605",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/icon.svg",
+        "sha256": "b94a1d0e3743852b3a2d962150ff9737d103c158426cb34a77b2c19be84c6e66",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/layout.tsx",
+        "sha256": "ff2701c867aa006c5c1d663777707206161b7ed06403ea0cfbc150f3b59aea31",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/not-found.tsx",
+        "sha256": "d15abcab9d2e2cf909e470fa2d65721edf30656ae2d3112cf00997dfe9fcf4fa",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/page.tsx",
+        "sha256": "d94f2abc073432cf90663946768969eba8980a767e97cad7d9f2500a4393be14",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/app/people/[login]/page.tsx",
+        "sha256": "848deb202d5b111e06e9306b1dead2f3fb8320262791fac3ae160742b7af1e21",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/components/site-header.tsx",
+        "sha256": "91480e162aa698b85ee1ae348f7d77f4435174da434148df226a2e0607a95585",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/components/ui/button.tsx",
+        "sha256": "9e4aace5ed6c2541adf24d0445fa6e937fc19b67404a7a30e68554ff9014efbc",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/components/ui/sheet.tsx",
+        "sha256": "a1f1f00b39ed87df7e6e776376f2f4f444387bcc5e5c24739856809d725866d1",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/features/people/person-details.tsx",
+        "sha256": "479343f8c3f1b7fe48ed63d70d44fc90de9ff7d2345bfad308222e3f14b282d5",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/features/search/coverage.tsx",
+        "sha256": "b317c185d2f880556578b4929095eaa14fc0ebf674d652ec6d1dd0f646e2c197",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/features/search/search-workspace.tsx",
+        "sha256": "b959da42d2dbadb11635c93ca468f56db5ea519e39bdeeb6e9e78a24ae6d7d5f",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/lib/http.ts",
+        "sha256": "61b553fba7b2a8164ffd164bdcf229e07a6a1ac35cd66dff2e3a6e64ef0df734",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/lib/service.ts",
+        "sha256": "a69e3c0fcf3f851f44a894675e5d520c2283232d0e94eec075b3ca93811f570d",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/src/lib/utils.ts",
+        "sha256": "63d89b0e33c7a1c54ea37a3b4526435e1330dfe33fa9ce1cde4e1e789e9dd131",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/web/tsconfig.json",
+        "sha256": "ee3df19f6f25195e151f46446fb53259aa1b63489a6e6e241a8f96ec6e407c5c",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/AGENTS.md",
+        "sha256": "4d61764a2eda59b5de0e54c73a2c871ad51ff456a287420158cad357ed72b5bc",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/package.json",
+        "sha256": "d2fc506e73725c7164c0beeb2986d71ae5efc7f36e7f0a55c5bcb99622da8e88",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/capture.ts",
+        "sha256": "c68317d5ac93c3773d921dea82d6bd7242744532421f1d69b659d8aebf8f5532",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/cli.ts",
+        "sha256": "61025368c2871438456ce5019143e9a0435a5081887924f940893b41c76981c7",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/collector.ts",
+        "sha256": "35cefb5b651ee16726aa53e9eb279016f1f9099a3ce986c47a8b4f2abc326379",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/enrich-database.ts",
+        "sha256": "7501c37687b94dd5d6ba883e9be0cdeb62d5da62a3bbd47da10fa271eb284830",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/enrichment.ts",
+        "sha256": "8b45a822c6c5137bed374b8479d6432fb73ff57594e349a570536a30df53cea0",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/github.ts",
+        "sha256": "eb72cf3f124deac0482a0a49133831896464804e5ea8bce9732b80cd4647cfaf",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/importer.ts",
+        "sha256": "986fc311b7c432d252138f68a023fa71cf63593238f6ef3fc98b82446c688bd4",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/src/jobs.ts",
+        "sha256": "a55de6e2b19bb0e4e8ecd5a6e98dbb5fd85172811a46203df21652b17ca64953",
+        "mode": "0o644"
+      },
+      {
+        "path": "apps/worker/tsconfig.json",
+        "sha256": "5772c2e5cac73c234773c821e3c082554d93dfacdca617d5b5e977f079a9bf9d",
+        "mode": "0o644"
+      },
+      {
+        "path": "audit/implementation.tsv",
+        "sha256": "af3592794d00761b98fb26af8062f87f4bbf5e3b656c09f9ebf3b6cb1bde440b",
+        "mode": "0o644"
+      },
+      {
+        "path": "biome.json",
+        "sha256": "345cc9f8b15c9a82f1747b97e9a7a0e48ba8d0878551bacfe2fa91b3961476b2",
+        "mode": "0o644"
+      },
+      {
+        "path": "compose.yaml",
+        "sha256": "06d652e6404ea74af135362455f801e4e4cf293d139fec99950910e2659590c6",
+        "mode": "0o644"
+      },
+      {
+        "path": "config/gia-tables.txt",
+        "sha256": "9bf3bed5fcef4a49014b9efaf98584483055719104830c1c984adb33c0bb96e2",
+        "mode": "0o644"
+      },
+      {
+        "path": "config/seed-manifest.json",
+        "sha256": "475cda9734921d7b5fd6a85267aec313c12e560f71bf786db0a7270c08aeb24b",
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/README.md",
+        "sha256": "f524cebd272c49a4ca3725b0f3852e06c5834e8a3ffd40a2579887be4d80a538",
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/architecture.md",
+        "sha256": "a3529f0f0446db7bff5affe24da8a0fd7e73cc9350b28b92e335b1236fef4565",
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/database.md",
+        "sha256": "3a552a983d76613e6d3c5b6179714c236461dd8c19ba4b24722dbd8f3aaf6994",
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/deployment.md",
+        "sha256": "699390fa3ec7bc53b948b59b60a510ac9b669129bdf8947c8fca448b862680cb",
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/gia.md",
+        "sha256": "0b3d2981b22fdec5b712f2cfa4666004f506c9d2049fc9bf496fc37d4d4c5547",
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/ingestion.md",
+        "sha256": "18503c2d75c4513e466a076fe9ccf2320e95f9d44ddfac351be5c6f722945a37",
+        "mode": "0o644"
+      },
+      {
+        "path": "docs/web.md",
+        "sha256": "3764d81655e5c2b10ba6a75c9c2b8f77809e40a1cc218a457db7035384736ba2",
+        "mode": "0o644"
+      },
+      {
+        "path": "drizzle.config.ts",
+        "sha256": "821d6b02d2486d8419d5412ef2b1625e33f91e72108d2b4fae26abac47fa5ddd",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/README.md",
+        "sha256": "8407a43b63c6f10e4f4e657ff0eb07d8016810e7a9120094f2bdf2a0312bf4b1",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/001-vercel__ai-repository.json",
+        "sha256": "b335dd92d2c637f9cae9edc3038c5e4091df2554cf8cbc91f7868688bae5a0fc",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/002-vercel__chatbot-repository.json",
+        "sha256": "dcf019b8fe4d2a44c14f2547690f9313d3902d8b7ae8226b2fd88a66fdca1baa",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/003-vercel-labs__natural-language-postgres-repository.json",
+        "sha256": "43bcf88c53d3e39ea3708a3a14b725d2864ea0eaef6a9687e4b607874aec4b1b",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/004-vercel-labs__knowledge-agent-template-repository.json",
+        "sha256": "dcb477332ac7380cfb03c98e894c5d79b86fae4bbb70b9ae990a7abbec6ea2d8",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/005-vercel-labs__github-tools-repository.json",
+        "sha256": "72574fae5dfb4dff049b1bb363e6121d86af50f91545ce7b762b45034cfcb85d",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/006-vercel-labs__bash-tool-repository.json",
+        "sha256": "6b1451d04401766303b14ba31673773cd98c43d9d6d4b1361fe9ffcedc5ac4af",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/007-vercel-labs__ai-python-repository.json",
+        "sha256": "8f94cc671de159e2b05a8af1c281308858e4429d108b495a17af590e11066c53",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/008-vercel-labs__ai-facts-repository.json",
+        "sha256": "d976e2433e053b53ae88d90cf60cd461bc64ca837219941b73b89eb60ec237bc",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/009-vercel-labs__ai-sdk-persistence-db-repository.json",
+        "sha256": "3b85ccc12dcf509ef83d2760582c1fb4c23854352dda9c08b992b0ac88268386",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/010-upstash__rag-chat-repository.json",
+        "sha256": "7ee0c80b04bb9342168a535f69a797d2710375e639aa717626ba07b67512ba05",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/011-upstash__rag-chat-component-repository.json",
+        "sha256": "bbe68fc25388ddd58a7beb7a7bcf54b5c7a1ca1f6dd803bd9f230ec494ec5555",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/012-upstash__vector-py-repository.json",
+        "sha256": "625d9befbef1c92bbdc0fddefa16708a9f585f1aaddca1ab565f3ae52103552c",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/013-upstash__vector-js-repository.json",
+        "sha256": "341ad2a1b311bf788d1eacd91f698b655be221e197c6c7346e3f800819e2e869",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/014-upstash__agentkit-repository.json",
+        "sha256": "8aabca984b707bf76e7bb05033e832285bd95ad24987b6dcab50a61f5f4773ae",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/015-assistant-ui__assistant-ui-repository.json",
+        "sha256": "538a8d01a38bab632fc1b6657184ee6f77aaf5e70f10ce7ae03692a22456f0bc",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/016-vercel-public-members.json",
+        "sha256": "16b2ca648008de29ed941155a62917fce6dceef87578e52c563aacd0e7f19664",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/017-vercel-labs-public-members.json",
+        "sha256": "87b5a4f28805f3ee51b41b19dfb7de054f3b3fc02e73575e18d91477d6c2c78c",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/018-upstash-public-members.json",
+        "sha256": "297be773389895a67701a6b09abd370dc54bee048bdf8e8191bc992e26839592",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/019-assistant-ui-public-members.json",
+        "sha256": "bd78c360fc4f970abbd7bc742cbec5dbe64af78ebf70a7d8e3e95d8075398603",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/020-anbuzin-profile.json",
+        "sha256": "3d3fe524716ca4c40dec6c3988de6a7ea5cd35fbd981956450d9e9a84fe714ce",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/021-msullivan-profile.json",
+        "sha256": "a1e50b1c67b9fd56cf863d9ecbbaa9ec1596d715337f0566a4439c1f91054ca5",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/022-n1ckoates-profile.json",
+        "sha256": "edc465955ac92f6ca3c68ceec71f6e69a69dde36dff2706aacaef519dccc86c7",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/023-HugoRCD-profile.json",
+        "sha256": "b733804fad28c2eb6a3285e65aa2b4671ef3aa7bfe590e158862dd39910b4415",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/024-CahidArda-profile.json",
+        "sha256": "adee7b94c882472e60de67829d9218d0b2705545278e3bfea8b4a070cee21c15",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/025-ephraimduncan-profile.json",
+        "sha256": "36fe0ed240de016041abe48deb470cce3f169c3191475d9d3c51ddfbffa27d2c",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/026-ogzhanolguncu-profile.json",
+        "sha256": "8df0f5346fe35f5cb9edf50e4f12acc66edcea393656f9d947822a489c2724f6",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/027-Kinfe123-profile.json",
+        "sha256": "a771225ca1084aba7ba8c12a86572798fd9caeaa54ccd9dc6bbfb0bb8a99e9be",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/028-vercel__ai-pulls.json",
+        "sha256": "b6cbd985f90691b2202db959c9e948d3a31fc70ee5c856b9f48963352f680f77",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/029-vercel__chatbot-pulls.json",
+        "sha256": "c2e885312a967b50d7b0668c6b5afbed9f2e2eba623e0ba2138d31020f30e47b",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/030-vercel-labs__natural-language-postgres-pulls.json",
+        "sha256": "dff0dd9a2d60b13039daba4d2640104c8adb5025645ff9db6d0be8bd03188468",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/031-vercel-labs__knowledge-agent-template-pulls.json",
+        "sha256": "196ac406d074bfe7bd2fe347c8cf7b94db593cabe45a22adbb8f7f8affbc37e5",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/032-vercel-labs__github-tools-pulls.json",
+        "sha256": "09e620b6c684b3b954af2875e44647e7df82fb2e5a126fa717363c6735ebd848",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/033-vercel-labs__bash-tool-pulls.json",
+        "sha256": "9f2cfbd2b854a06ec73a9a108258a159f54b829846f95d524879020e3fa945ff",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/034-vercel-labs__ai-python-pulls.json",
+        "sha256": "ae8a70b39163b435b02f0fac7782fdd0110c04ee853f595abc1197c24a973d91",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/035-vercel-labs__ai-facts-pulls.json",
+        "sha256": "66ef67d9fb8db3daad52e047d64bf983f4f2cd7522f5a807ec18f841605cb712",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/036-vercel-labs__ai-sdk-persistence-db-pulls.json",
+        "sha256": "33e0acff3fb662b198e541afda9b22d523647513f2ee6db8a6a4f372f8e792bd",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/037-upstash__rag-chat-pulls.json",
+        "sha256": "7a79d8f9769b5414e1ca29a1c89f84c5e2626fd5a1d7822e213271f1a8ff3374",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/038-upstash__rag-chat-component-pulls.json",
+        "sha256": "1f044f2d57a5ff9318a1d18383efd7f88b6b89f719aa01f354b97fe022d17f71",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/039-upstash__vector-py-pulls.json",
+        "sha256": "0f90be9ee33b5d5fa28dcae4eee6f9120042d92123294f102f9269cd7111d2a5",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/040-upstash__vector-js-pulls.json",
+        "sha256": "d0875c6ddf7c39984ad53adc9be243afce8b4cb76d5ed2a3467b826dc8ff5067",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/041-upstash__agentkit-pulls.json",
+        "sha256": "0ff6e3fff2487ac8dfd2a80dd0a1e0da658f35af66b2666b4e9aa84ee93c8884",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/042-assistant-ui__assistant-ui-pulls.json",
+        "sha256": "b77c7750eea96a21cbb790e2872697ff7181fa44add49ea5792dcb1e3840c183",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/043-vercel__ai-languages.json",
+        "sha256": "ece3fef9c5c98d61d0353069326d6b352f11406e9d71c614426ce468c81d3957",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/044-vercel__ai-readme.json",
+        "sha256": "d735c4893975d5ab6a821ba44751e353408b9c1e192f3f2757a11c08cc4d32dd",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/045-vercel__chatbot-languages.json",
+        "sha256": "d4aedde301858f9a46c015faf7f11484b0b42602abcaf424bb7aa038360380f9",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/046-vercel__chatbot-readme.json",
+        "sha256": "b3108c12466cae197fe389a8a26ecb5b09a4026b381d0320dc9def51bd4cb8e9",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/047-vercel__chatbot-package.json",
+        "sha256": "ef22cf30b86c9908ef29225c0e8e712ed6a3b7041cb66eb8a03c38955cb2e5ea",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/048-vercel-labs__natural-language-postgres-languages.json",
+        "sha256": "bcdacc275e159f0575ad7636e6ad87ff9abd3e6c0c980c3ca6f7e7b05b2b9bfc",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/049-vercel-labs__natural-language-postgres-readme.json",
+        "sha256": "61aa1b2d4e936fef022eca091d41fa4943703591f2a87b5656a005183da0e8a9",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/050-vercel-labs__natural-language-postgres-package.json",
+        "sha256": "251c021d3b190a42e8a664f452e56f0416303cf688b6ab851cd8c1c42d183f2e",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/051-vercel-labs__knowledge-agent-template-languages.json",
+        "sha256": "5059fa6815f52a2cee6e74edbafef3deabc398e5b0d51d28a56a0742c6ff7111",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/052-vercel-labs__knowledge-agent-template-readme.json",
+        "sha256": "3ac9380602a0ebe7e8162b3559eb8ca7b5c9a71504dde0121ccdc95453ecdb60",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/053-vercel-labs__knowledge-agent-template-package.json",
+        "sha256": "8869439dc699883db9e3e039ddcdf84523a4515c4c2c6ecdca504a1dbf34ce92",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/054-vercel-labs__github-tools-languages.json",
+        "sha256": "01e8fd89a4eec98a1b4bba1d4b4ddde99a52bf177bf06d8672c88eb17d33f3ba",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/055-vercel-labs__github-tools-readme.json",
+        "sha256": "d2115deae86dac844b928a93ff0aefee544bb572ea29fc843470702de2b67237",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/056-vercel-labs__bash-tool-languages.json",
+        "sha256": "eafb8c40c7a6b87f6aa413a0b1af5b31a5e021954711a50c595b8a3dbe09810c",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/057-vercel-labs__bash-tool-readme.json",
+        "sha256": "b158ea391e1278edf18943af638839c3cc6573b4b6d69adfa50753e93c92ba8f",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/058-vercel-labs__bash-tool-package.json",
+        "sha256": "f8f8ab37c4bdb629762abc933fa22839868f823e7bf2a3965b83a5dd88b65c00",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/059-vercel-labs__ai-python-languages.json",
+        "sha256": "ec59c50ced1d2b865b70ef030e1e710fe6d946e520fef2481f4c69bf4d16570f",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/060-vercel-labs__ai-python-readme.json",
+        "sha256": "321c2f04cdb2e1d13d2e9f31e3f5dcfa472b8e1026eaec50b966c4556fa341b4",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/061-vercel-labs__ai-facts-languages.json",
+        "sha256": "698dae1b16838fc38e88774376a225b6a225e3fe6ca97ad0460fe50a26bf702d",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/062-vercel-labs__ai-facts-readme.json",
+        "sha256": "b8c391d4aaafd91181d6788d930a04b1c8089994be01a83f62d1dda1f04562ea",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/063-vercel-labs__ai-facts-package.json",
+        "sha256": "bae4301fc7b5aeecc33766c3c48f4281143fbac7bf3f722da7df4e8fb73695f9",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/064-vercel-labs__ai-sdk-persistence-db-languages.json",
+        "sha256": "944af641681530f5af47deca447a21cd5a0ebd528b1a6a0d549651fd90f35772",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/065-vercel-labs__ai-sdk-persistence-db-readme.json",
+        "sha256": "556593cea9cbc4fc869035ce0fb549ba89bb89d32deb6c531b9c2677a66694af",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/066-vercel-labs__ai-sdk-persistence-db-package.json",
+        "sha256": "9ec412a1de2c88abc3677af8ccdb07ef784448bb59863924d84ce3731c87945b",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/067-upstash__rag-chat-languages.json",
+        "sha256": "dddfbfb9f45cc225ef120a8e0a3e637eabcf80383011d4721ad074336ca49744",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/068-upstash__rag-chat-readme.json",
+        "sha256": "c79342761c5793e2d66906e1a0304ef2d2f53be618659c068858fbd8d255d4ee",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/069-upstash__rag-chat-package.json",
+        "sha256": "e366bb8492d10f9d850c209c3b003c9163ca5588d8c890fc161d5f4a96c2ecd9",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/070-upstash__rag-chat-component-languages.json",
+        "sha256": "fcadd588244c6da90fa1adab65a71f3756c5ee93564acd6f55ca221121c64b1f",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/071-upstash__rag-chat-component-readme.json",
+        "sha256": "2d9d7e139cdcb0ec0a54235b1f49c5897371f127739eec96e04a47fd02567b84",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/072-upstash__vector-py-languages.json",
+        "sha256": "421662981fe46c64ec591cdd14ff91c3fff5369b7695d016beb0cdb77917995e",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/073-upstash__vector-py-readme.json",
+        "sha256": "69e940b42e03b7f0f141de9fd72c60185d8e617324803ba15bd3084d855b0f59",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/074-upstash__vector-js-languages.json",
+        "sha256": "96cc251b5f84e01b933dd2e9fe4c2e0882519df7da6be5e799c340f007a91534",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/075-upstash__vector-js-readme.json",
+        "sha256": "60fc5682349ab925dd94b5203de8cc54e28d57ad656c92aa17391f661ef052c3",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/076-upstash__vector-js-package.json",
+        "sha256": "f8261e44026f2d8f559d68b112da6b748bc7a657ca84ea9cf69386c8d4094b83",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/077-upstash__agentkit-languages.json",
+        "sha256": "1b20eb16688225dbd0369e7ba3133e892280814d7bbfdb88f477801b30cbeb97",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/078-upstash__agentkit-readme.json",
+        "sha256": "ab727ac966803e15a3c6df59a7a2d8611e1fcad00c00c6b2ff42b587b80c6b01",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/079-assistant-ui__assistant-ui-languages.json",
+        "sha256": "de31f48326eed45ec2d33afcaa79d43511797d2918510dde750d028fdb3afeb7",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/080-assistant-ui__assistant-ui-readme.json",
+        "sha256": "087f2dacaf7eafba7abdf3ae252ac4d5211dc69dfabe67d8eed48e1ef96786ba",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/081-assistant-ui__assistant-ui-7142-reviews.json",
+        "sha256": "d10ac5b3c2dec2660015fd59b8392154c4234c0074874a63dd787633f375fbcb",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/082-upstash__rag-chat-28-reviews.json",
+        "sha256": "768e65dc8d9426a6470c1521048ef80dd800c0f76ef282ed6c256680a4252070",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/083-upstash__vector-js-53-reviews.json",
+        "sha256": "8543feea3d6dcd900ec2a71ce237247b6d01f15942e4f3125f715a066f858059",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/084-vercel-labs__ai-python-255-reviews.json",
+        "sha256": "1e3aaca125677b15363e9647710af6ab062d853fe4849121f7b600f487a5a50e",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/085-vercel-labs__ai-python-258-reviews.json",
+        "sha256": "765e164f0e13fa9c4fa47d827c16c631246578064fda1a33e8d0d3e0de754f6a",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/086-vercel-labs__ai-python-277-reviews.json",
+        "sha256": "fde64f7bb1b816c6ef4327ca31892c637f28a64651fc7a34f566ce1e4cb9a692",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/087-vercel-labs__github-tools-115-reviews.json",
+        "sha256": "3f64d1a8658d7ad15ec03848420b4f78f97603dd3505f5ace27d1489ea957485",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/088-vercel__ai-20551-reviews.json",
+        "sha256": "efa12f64759d22129f1aaeef555fdf857c43c719ec3e97fdfe576e422a6140e2",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/089-vercel__ai-20564-reviews.json",
+        "sha256": "9308b306fd188d82e4524e9e58c2e068e364f05cf24fdf4c7ded61b41ee94f8b",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/090-vercel__chatbot-1529-reviews.json",
+        "sha256": "759fb625421f036750194d7f7a14c4a9ee93356db72668a515e655099699c4fe",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/091-upstash__rag-chat-28-files.json",
+        "sha256": "fdb4f9ecd4b7d0adac38c1583341a07323a72b1b0667a9599eb5949d0832812a",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/092-upstash__vector-js-53-files.json",
+        "sha256": "d5648e4b02ebf0d54078b9524864446eed66caec1a27ed2b72484a2385c4a9cd",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/093-vercel-labs__ai-python-255-files.json",
+        "sha256": "5955882058e7761ac545f7fe607ac9f13f452c0c093e723ee9c41c19040367b6",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/094-vercel-labs__ai-python-258-files.json",
+        "sha256": "3ecd48df11ac5bc557ac50bb69b6d0b5e39eb1000b610bbd47aa14c824aaece4",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/095-vercel-labs__github-tools-115-files.json",
+        "sha256": "844c6ce8a76fda1e7a08d4525fa0438bfdbf398e7e3bdbe946a0c93eceb89ceb",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/README.md",
+        "sha256": "6ba38c6b41d9d0c57507d623be11139edcbcf181567d68b0705204831e20f3e5",
+        "mode": "0o644"
+      },
+      {
+        "path": "fixtures/github/manifest.json",
+        "sha256": "5da671e5f235d6861cdd32452d0237625063c6801120b5880bed0ac92d29380d",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/.gitattributes",
+        "sha256": "dd12221ad8472ae7e3b7d2ef2e5f6a920bf1e0c314d6843c857fd3c691ea791b",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/README.md",
+        "sha256": "b99f8f25ed2f34b9361d920af5c239f59fc50e8f4f5946c41fb913a4bde4a207",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/client-authority.json",
+        "sha256": "cad2ebc3f867b83e07e34c2285149f389cc179c66fd1f7d76faa8cc4d2bcffb2",
+        "mode": "0o600"
+      },
+      {
+        "path": "gia/generated/effective-world.json",
+        "sha256": "4bf2312f04ee64485e3a6007ce0d45bc002291dd8396ac5b52b8639a0de9f1ca",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/collision-map/world.json",
+        "sha256": "7cb80ab1b96adab4d7443e8d67c026a7ba0eba9c74c0652367d7ffe64df134d0",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_6163636f756e7473.json",
+        "sha256": "4e9f8794211a68231e84f041a79ec761bbbf6d81e85d80beee9fd4b5ec828c7b",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_636f6e636570745f65766964656e6365.json",
+        "sha256": "eb2439e5de60df7d679613c5fba2819244cba1da7832fda32bfd5b090e8b75c8",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_636f6e6365707473.json",
+        "sha256": "08d9fd2648b8b4c5a57a1bb4fe50ca775b371f265d01ca87e2598ab52d2e88b0",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_7075626c69635f6d656d6265727368697073.json",
+        "sha256": "91acb08da4f97cb892ed947a6e7fa136dff596e83f2d9f336600b01bbe394e11",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_70756c6c5f726571756573745f72657669657773.json",
+        "sha256": "2b10bd378642596ad5790bc5de1e6b93e755fc9dcb29c09ac3fddabba864b286",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_70756c6c5f7265717565737473.json",
+        "sha256": "c86c2a8ace5ae70937a084d6a600f8e52a23507e24e575d3f4581f9da891f326",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_7265706f7369746f72696573.json",
+        "sha256": "5d90038e7c447be98b301f040ac1b469977dd1b7e21e43252f948e646bd1f4fc",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/enrich/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json",
+        "sha256": "ac97e56af07b12dfcef4252987e4d7997f3e927416c68dab442e5a8690439160",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_6163636f756e7473.json",
+        "sha256": "ad95787c8cbab3c6e7d88c004d768c92e0acb6eff6ae7a28b15ad105e9aacbc5",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_636f6e636570745f65766964656e6365.json",
+        "sha256": "27555c824ac2962efdb63aba0a64603a1bc2a799202e88494082abc29e809efb",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_636f6e6365707473.json",
+        "sha256": "e4cdc6daa744c61d419ad1594306942672e421a22a20c361ce8e1c3856cfed97",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_7075626c69635f6d656d6265727368697073.json",
+        "sha256": "fab85aca73b69cf8bf80ad8e459cb983c47f7bf9429364f28324f36685609373",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_70756c6c5f726571756573745f72657669657773.json",
+        "sha256": "739ff4757fedbb9d1fdfa7487f2c10673d9fa807dd7cb8904e1ac96c6b5cbbf7",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_70756c6c5f7265717565737473.json",
+        "sha256": "2a87bf7bace16bb7d9ebfaaa285cf2527f6afb40e009b1d4c4b18c3ebb7b6288",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_7265706f7369746f72696573.json",
+        "sha256": "41823492650bf09dbfaec37dc42b81738459d8c2364bb92d257b08a0cebb0afe",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/fields/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json",
+        "sha256": "65bbd7aa5d9bd5d51ef1558c0f1ba894015e234f925aff3945c311de53978253",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_6163636f756e7473.json",
+        "sha256": "cf460abe2697901ffa30a9ff3dfae1a4dd4390fff34a2d1398a3ae83b6b7a182",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_636f6e636570745f65766964656e6365.json",
+        "sha256": "f84507872cb16009aa41a56fc52db5877e676137adfc3be92712ae8a54550e49",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_636f6e6365707473.json",
+        "sha256": "e5442b60a6ad8fb3b55a55e822b4475de9fdc905f5cc30cdf359a236a3197f17",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_7075626c69635f6d656d6265727368697073.json",
+        "sha256": "9a613062d89027c1f3137f544b6d5ece3f40262420795607bfc93b8cd789fdb1",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_70756c6c5f726571756573745f72657669657773.json",
+        "sha256": "10c26b120032fbb7bb6f6e0d4f55a682018c02214b06ec81736ca33f0e339098",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_70756c6c5f7265717565737473.json",
+        "sha256": "f1d93e9bc08cefc174a378f7866caf19ee8cbecd4daa669571cfd8827477787b",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_7265706f7369746f72696573.json",
+        "sha256": "b5938ba50df7f4cf65619c559aa31edb4ab92dbb158111aad26b698b623f75a3",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/relationships/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json",
+        "sha256": "64b06d4067f0c415636b9d4cf382693b5d10650419a8f4728631db1495e66986",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/schema.json",
+        "sha256": "db78d07f17e08bd591a65613a9b623e5821433db4c9c3345ff25d5320dbb3d45",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-domains/r1_676974687562_6163636f756e7473.json",
+        "sha256": "e9b14bd95d4eb547b93bd52a9614e3b891272380b50864b092bd9ef44511f917",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-domains/r1_676974687562_636f6e636570745f65766964656e6365.json",
+        "sha256": "a4b640f0d9d6c3c0bc96c6118c9ee31a81eb6731ad5dfde905e557b794b18d12",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-domains/r1_676974687562_636f6e6365707473.json",
+        "sha256": "5083c67fe984bc07e7caa1a1aa4053d00478fcfb0add4c79fe1d10fcacf24d03",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-domains/r1_676974687562_7075626c69635f6d656d6265727368697073.json",
+        "sha256": "17e2df971067dc3c0826acff138e63255c318bc0fbcc0de09881ccf59af73396",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-domains/r1_676974687562_70756c6c5f726571756573745f72657669657773.json",
+        "sha256": "79d9a40ae1575deed5233bec3a66fcc06a4815b48756e0d5d3b38a9c2bd3c213",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-domains/r1_676974687562_70756c6c5f7265717565737473.json",
+        "sha256": "e6301e6225a44a313bc3a2381c98bc787d1c8c25f276b026ef4e35926b895bc1",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-domains/r1_676974687562_7265706f7369746f72696573.json",
+        "sha256": "5db48dea4aa0297bdebddd64b18b4ba0cc53074286f2ace3638dbccbab8b9122",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_6163636f756e7473.json",
+        "sha256": "e18da1742c9352a84d37b04cffaf25e06e20fd7f6d332ef133635afd46c25949",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_636f6e636570745f65766964656e6365.json",
+        "sha256": "9abf31b9625232ba4f5280abca42c86a839441ad0d07def99563e49a8c35d1a2",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_636f6e6365707473.json",
+        "sha256": "5388a644e1ce75e8e2ce225fdcb0b6f4d5f3c40c00364733631a36197db83ccc",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_7075626c69635f6d656d6265727368697073.json",
+        "sha256": "909566081036421047ada59ceac36f78534963b5f7abeb02396e1743c5a57c61",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_70756c6c5f726571756573745f72657669657773.json",
+        "sha256": "1ff968999b76b6f29be6c32d7c7aefb6a182ef74bb272d46a4ebca285016f11a",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_70756c6c5f7265717565737473.json",
+        "sha256": "ecb823e3f093c6e55d141c676ab9c2ad0ca4b8a1d10d57d32e6d0d7e5f050d4a",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_7265706f7369746f72696573.json",
+        "sha256": "ab46c3febbcf18ea493dafeda043f521f62a16167e06eca8ab06b8daf468d970",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/evidence/value-index/r1_676974687562_7265706f7369746f72795f6c616e677561676573.json",
+        "sha256": "1261df224226a7628a04778f801072921521da5d516603d2694315e5308fb155",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/projections/compiler-binding.json",
+        "sha256": "259da64f209c81ca0c41272245127cd47a6883e5483e8da7efd764bbd9d1bb70",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/projections/guidance.json",
+        "sha256": "c938b331465e63c12eeaae197f95c8d34bdf4b041e12e9f78a3e4bd759fd94f9",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/projections/planner-catalog.json",
+        "sha256": "78ecea66b54a0917ad783226bdce19365f9a9c5b7b0fac973deb55cd9dfa3990",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/refresh.lock.json",
+        "sha256": "1b2b67b74658981cbc01ae6d48e6692a4db69398678e6480d5bf23595aba5d34",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/generated/world-overlay.schema.json",
+        "sha256": "9a441ee205f0652ae095d0ed3e8c2ec353e2a2d06743f5b630c92af4a7082ae0",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/project.json",
+        "sha256": "70e8ef93b3961798798f0605063a8e7586a50c62b852cdd4296b61d76e1517e6",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/review/proposals/derives.json",
+        "sha256": "5a3a2d1fb3f838e34aebed82980177ab8ceac19ad4417b942d2b437176825a7a",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/review/proposals/field-distinctions.json",
+        "sha256": "abee3e56004eae5015d8a01b2e34f61bd99f3821e2bd05fb007377eb0ef5f78e",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/review/proposals/joins.json",
+        "sha256": "6206de43d44ad8e5a97f61479fab70ce8d21fd9f4545ae62665b35e5bbd882d9",
+        "mode": "0o644"
+      },
+      {
+        "path": "gia/world.json",
+        "sha256": "1e197599eb86419a86651b7cfd896ac3ea38b65bb680c98029a8f9697afd77c8",
+        "mode": "0o644"
+      },
+      {
+        "path": "package.json",
+        "sha256": "bd767caa29ec2ec3686838f2c39d9b517978fe452ca19debd5a9dc3eba90e0a1",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/AGENTS.md",
+        "sha256": "8f44073ad218533ab81371f976cbf935f0e3a09df25fb5970b7153a7acd30d52",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/migrations/0000_jittery_firebird.sql",
+        "sha256": "a5c1b02b8e304f2b8ebc323163f4946251e126436a4e81295ee9c7afbea058f4",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/migrations/0001_search_indexes_and_semantics.sql",
+        "sha256": "ed0ea6b703b47efb976949e165d9fa292ccf3800bf55088c3e59d62fb8fb24ff",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/migrations/meta/0000_snapshot.json",
+        "sha256": "a330e288877763d90032fe63243ffd22e52d96c19a73b4e3e24893ddc712e8f7",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/migrations/meta/0001_snapshot.json",
+        "sha256": "407db310d9be6d2b351739d6e8db0781ed333edbc68c2a896140a5597b8e70d2",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/migrations/meta/_journal.json",
+        "sha256": "bed0caa15dd8eccb85bce3725449d72ee3bda4e229fa209f67020b4383ed85e3",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/package.json",
+        "sha256": "c16820a53f690bd4baaf1cfea26146c0a7e61b39bbb0b7851d26f26452c6b522",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/src/client.ts",
+        "sha256": "07bb945dd6b158568c808f99dad86aa5d0ad4c389c09724cef94578f36800448",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/src/migrate.ts",
+        "sha256": "5cbfa609585c568b5c02108200dadeeadcb5f2a2fad1e0b29cfb6fb991790f3c",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/src/roles.ts",
+        "sha256": "3832f4d8bdb90de3f3406533ea76cdfeb710928c88d03e8d55467f50747acfe7",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/src/schema.ts",
+        "sha256": "3f009a594cfed11cc7145a95199d54e8a8d3253551dd8818ec9e3211bb794be5",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/db/tsconfig.json",
+        "sha256": "5772c2e5cac73c234773c821e3c082554d93dfacdca617d5b5e977f079a9bf9d",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/AGENTS.md",
+        "sha256": "e79e16bf0d42fa9fa59617b14ee760eb7639d40cf69ea6d7804770ccf3b68caa",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/package.json",
+        "sha256": "09fcada2493fd4503176ec6a2d6cb29db8aa8ffd17e9f2b3e0277c20b150eaf1",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/src/admission.ts",
+        "sha256": "348951ccaef0cc1a703d5821578028624f138d0d24c38cc6ec950da9c55ebb31",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/src/contracts.ts",
+        "sha256": "45429f1b684faa5d815cb21f707eaf99f234b2a29ae457bc4abb00c03d2d9a7b",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/src/database.ts",
+        "sha256": "24dfc1a1f0e88186c52922ec068dbe718a5151a5d738ce5883599615618a8ba6",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/src/executor.ts",
+        "sha256": "b2d3e3ecb8a01ce7844f0cb8a4e36c73de78a46158aa7a7792a958f004830d74",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/src/server.ts",
+        "sha256": "c6c92b1522cb5a36d96f7f4d32ddc8abee73990baf85bee0d518d9019f17e60b",
+        "mode": "0o644"
+      },
+      {
+        "path": "packages/search/tsconfig.json",
+        "sha256": "5772c2e5cac73c234773c821e3c082554d93dfacdca617d5b5e977f079a9bf9d",
+        "mode": "0o644"
+      },
+      {
+        "path": "playwright.config.ts",
+        "sha256": "0a4709dfdeb0aec749eba9d78db9cbf5aec949a643de54852dd2d0785a83c2ea",
+        "mode": "0o644"
+      },
+      {
+        "path": "pnpm-lock.yaml",
+        "sha256": "0b440a90bd074a097cecf07ff21d8160d113feb24146938980685d1c1f1300d5",
+        "mode": "0o644"
+      },
+      {
+        "path": "pnpm-workspace.yaml",
+        "sha256": "253208fa7c1b64372c219b9e19cef15ed70ca93b66a4d5c4c4d2297a5aff8880",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/check-boundaries.mjs",
+        "sha256": "d9f28cb34c9803ffbb6073bf9bb3c885a3253a85bc25f60fb9714c56e67096f8",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/check-release.mjs",
+        "sha256": "5791db8c5946297f94febf3591e25ae5a07511ab5adb47540ba15489c41bf143",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/gia/bootstrap.mjs",
+        "sha256": "498a4bbf0b2c9f4672e4e1d4d2be15a48c717e00a6d950b5f8550b01e015197c",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/gia/common.mjs",
+        "sha256": "33d0d87a324f6d8c0520eae63e0d1234ab104c160343d7f99f83de71b77cadc2",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/gia/project.mjs",
+        "sha256": "c5c6c45442dc158f6f0b636bd7d40bb0330b6954d323de1abe434ffc63cd7284",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/gia/runtime.mjs",
+        "sha256": "a9cc105fc1cd624a5f6605e667c13c20a18482a0e51521614b228f5e81998cc3",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/grant-database.ts",
+        "sha256": "406f63f99b2cc2fbb524061c6f4c6fc61fe64636bd2fa722c0033a063b588c22",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/log-decision.sh",
+        "sha256": "1601bc18f9aba0af3f5d6375e4f2d5dc6102334d1bca935026c0e3547cdadbbf",
+        "mode": "0o755"
+      },
+      {
+        "path": "scripts/migrate.ts",
+        "sha256": "12560fc9b6a57218ab93cb1fd955f8499a5fd6e491405b6ed8630fb95149a031",
+        "mode": "0o644"
+      },
+      {
+        "path": "scripts/prepare-local-database.ts",
+        "sha256": "972ca191c6ae8cab60fc7727c6586877a3bd451a85a034e07885c0c6d1fc4457",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/README.md",
+        "sha256": "2226b89cb4cc65cceadfe32b62adae3655fe8fc92567502be19141cd8f916567",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/browser/search.spec.ts",
+        "sha256": "652655ba8c291b8ae6fa2184b702802db42adfd13b208ccaf1b6b166610f7c62",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/integration/database.integration.test.ts",
+        "sha256": "acbdd11a1c646cf067d6194502f9f1e2e2c5faca4f16319b63c9d041e6de2727",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/integration/search.integration.test.ts",
+        "sha256": "951949680aadfe071e20a553c157c5160dc381d681078b2b71137cdb088dbe74",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/integration/setup.ts",
+        "sha256": "09a1f8f55650805cf4a70ceacfe9fcf5b5ecbb5fc74ea708de1f98981b1bfc89",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/integration/worker.integration.test.ts",
+        "sha256": "a4289a86d6772ffc03489774042c89efa42500a9dd5ce02107af093730370996",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/live/gia.live.test.ts",
+        "sha256": "2a45b7a74668822d5aa59ebed352835c7bda5000ae4ea394f707eb1208ec1041",
+        "mode": "0o644"
+      },
+      {
+        "path": "tests/live/github.live.test.ts",
+        "sha256": "0858c5c0bc67f5ec1461a3d161ee2d666bf135c672a5e7f4bba3d8ebab9eb0fc",
+        "mode": "0o644"
+      },
+      {
+        "path": "tsconfig.base.json",
+        "sha256": "94cd7ded267921c77e4119bd07b70f7c5748004fac6daf33e598017cdd5dd6ba",
+        "mode": "0o644"
+      },
+      {
+        "path": "tsconfig.tools.json",
+        "sha256": "85e2ca0f277fca0cbc198224344a2b4c5d0dcaa7a89abce86f2a4d720c17f207",
+        "mode": "0o644"
+      },
+      {
+        "path": "turbo.json",
+        "sha256": "f91cf092cebecc9c7cd83dd22e1874859b4cf72b2597545b907531d6ed74970e",
+        "mode": "0o644"
+      },
+      {
+        "path": "vitest.config.ts",
+        "sha256": "e7eba3e2aafb725dd2f8494946ecdbc8d92212f78d08a47e19523a3a3e8842ae",
+        "mode": "0o644"
+      }
+    ]
+  },
+  "publicInstallation": {
+    "node": "v26.5.0",
+    "pnpm": "9.15.0",
+    "privateGiaSourcesPresent": false,
+    "commands": [
+      "pnpm install --frozen-lockfile",
+      "pnpm lint",
+      "pnpm check:boundaries",
+      "pnpm check:release",
+      "pnpm --filter @gia-github/db --filter @gia-github/worker typecheck"
+    ],
+    "result": "passed",
+    "trackedFiles": 263,
+    "reviewer": "gpt-5.5"
+  }
+}

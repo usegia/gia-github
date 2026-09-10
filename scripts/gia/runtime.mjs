@@ -24,6 +24,7 @@ const configPath = path.join(state, "signing.json");
 const logPath = path.join(state, "runtime.log");
 const port = Number(process.env.GIA_RUNTIME_PORT ?? "8798");
 const apiUrl = `http://127.0.0.1:${port}`;
+const harnessProfileId = "terra-openai-none";
 const localDebug = process.env.GIA_RUNTIME_LOCAL_DEBUG ?? "0";
 if (!["0", "1"].includes(localDebug)) throw new Error("GIA_RUNTIME_LOCAL_DEBUG must be 0 or 1");
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error("Invalid Runtime port");
@@ -66,9 +67,28 @@ if (command === "stop") {
   }
   console.log("Local Runtime stopped; registry data preserved.");
 } else {
+  const sourceReceipt = await readJson(path.join(root, ".gia-sources.json"));
+  const expectedRevision = sourceReceipt.sources.find(
+    (entry) => entry.directory === "gia-runtime",
+  )?.revision;
+  const runtimeRevision = execFileSync("git", ["rev-parse", "HEAD"], {
+    cwd: runtimeRoot,
+    encoding: "utf8",
+  }).trim();
+  const sourceChanges = execFileSync("git", ["status", "--porcelain"], {
+    cwd: runtimeRoot,
+    encoding: "utf8",
+  }).trim();
+  if (runtimeRevision !== expectedRevision || sourceChanges)
+    throw new Error("Runtime source must be clean at the pinned revision before startup");
   if (await healthy()) {
     if (!owned(receipt))
       throw new Error("A Runtime is already listening but is not owned by this project");
+    if (
+      receipt.harnessProfileId !== harnessProfileId ||
+      receipt.runtimeRevision !== runtimeRevision
+    )
+      throw new Error("Runtime policy or source changed; stop the owned process before restarting");
     console.log(`Owned Runtime is already running at ${apiUrl}`);
   } else {
     if (owned(receipt))
@@ -115,19 +135,34 @@ if (command === "stop") {
     await log.close();
     if (child.pid === undefined) throw new Error("Runtime could not start");
     child.unref();
-    await writePrivateJson(receiptPath, { pid: child.pid, runtimeRoot, apiUrl });
+    const started = {
+      pid: child.pid,
+      runtimeRoot,
+      runtimeRevision,
+      harnessProfileId,
+      apiUrl,
+    };
+    await writePrivateJson(receiptPath, started);
     let ready = false;
     for (let attempt = 0; attempt < 100; attempt++) {
+      if (!owned(started)) break;
       if (await healthy()) {
         ready = true;
         break;
       }
       await new Promise((resolve) => setTimeout(resolve, 100));
     }
-    if (!ready)
+    if (!ready) {
+      if (owned(started)) {
+        process.kill(child.pid, "SIGTERM");
+        for (let attempt = 0; attempt < 100 && owned(started); attempt++)
+          await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+      if (!owned(started)) await rm(receiptPath, { force: true });
       throw new Error(
         `Runtime failed to become ready. Inspect ${path.relative(root, logPath)} privately.`,
       );
+    }
     console.log(`Local Gia Runtime ready at ${apiUrl}`);
   }
 }
