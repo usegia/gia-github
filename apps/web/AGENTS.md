@@ -9,3 +9,5 @@ Present actual people, source observation dates, collection coverage, assumption
 Keep shadcn components local under `src/components/ui`. Use accessible labels, focus states, keyboard submission, reduced-motion support, responsive layouts, and adequate contrast. Validate API requests before calling a provider; render remote Markdown only through a safe renderer or as plain text.
 
 Browser tests call the real application, real Gia, and real PostgreSQL with actual GitHub records. Do not intercept routes to inject fake responses. Assert person identity and meaningful evidence, not just a heading or HTTP 200.
+
+Read the relevant installed Next.js guide under `apps/web/node_modules/next/dist/docs/` before changing framework behavior. This version uses asynchronous route parameters. `next.config.ts` disables generated agent-rule edits so this file remains the maintained startup path. `next typegen` generates route declarations before TypeScript checks; never author those declarations.
