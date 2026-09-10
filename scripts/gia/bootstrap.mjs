@@ -35,7 +35,7 @@ for (const entry of receipt.sources) {
     cwd: directory,
     encoding: "utf8",
   }).trim();
-  const dirty = execFileSync("git", ["status", "--porcelain", "--untracked-files=no"], {
+  const dirty = execFileSync("git", ["status", "--porcelain"], {
     cwd: directory,
     encoding: "utf8",
   }).trim();
@@ -49,14 +49,19 @@ await run("pnpm", ["install", "--frozen-lockfile"], { cwd: source("gia-core") })
 await run("pnpm", ["build"], { cwd: source("gia-core") });
 await run("pnpm", ["install", "--frozen-lockfile"], { cwd: source("gia-sdk-typescript") });
 await run("npm", ["ci"], { cwd: source("gia-runtime") });
-await run("pnpm", ["exec", "tsc", "-b", "packages/client"], { cwd: source("gia-sdk-typescript") });
+await run("pnpm", ["exec", "tsc", "-p", "packages/client", "--sourceMap", "false"], {
+  cwd: source("gia-sdk-typescript"),
+});
 const clientPackage = path.join(root, ".deps/gia-client");
 await mkdir(clientPackage, { recursive: true });
 await rm(path.join(clientPackage, "dist"), { recursive: true, force: true });
 await cp(
   path.join(source("gia-sdk-typescript"), "packages/client/dist"),
   path.join(clientPackage, "dist"),
-  { recursive: true },
+  {
+    recursive: true,
+    filter: (filename) => !filename.endsWith(".map") && !filename.endsWith(".tsbuildinfo"),
+  },
 );
 await writeFile(
   path.join(clientPackage, "package.json"),

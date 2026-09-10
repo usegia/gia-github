@@ -1,5 +1,6 @@
 import "dotenv/config";
 import { randomUUID } from "node:crypto";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import pg from "pg";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
@@ -24,6 +25,13 @@ const service = createSearchService({
   maximumDailySearches: 100,
   maximumSearchesPerMinute: 30,
 });
+const repetitions = z.coerce
+  .number()
+  .int()
+  .min(1)
+  .max(5)
+  .parse(process.env.GIA_GOLDEN_REPETITIONS ?? 1);
+const evidenceDirectory = process.env.GIA_GOLDEN_EVIDENCE_DIR;
 const idRows = z.array(z.object({ id: z.string().regex(/^[1-9]\d*$/), login: z.string() }));
 const publicVercel = `EXISTS (SELECT 1 FROM github.public_memberships m JOIN github.accounts o ON o.id=m.organization_id WHERE m.person_id=a.id AND m.currently_public AND lower(o.login)='vercel')`;
 const merged = `EXISTS (SELECT 1 FROM github.pull_requests p WHERE p.author_id=a.id AND p.merged_at IS NOT NULL)`;
@@ -158,37 +166,82 @@ afterAll(async () => {
 });
 
 describe("real Gia golden questions over frozen public GitHub observations", () => {
-  for (const testCase of cases) {
-    for (const [variant, question] of testCase.questions.entries()) {
-      it(`${testCase.name}, wording ${variant + 1}`, async () => {
-        const expected = idRows.parse((await pool.query(testCase.sql)).rows);
-        expect(expected.length, "Golden result must fit the requested limit").toBeLessThanOrEqual(
-          50,
-        );
-        if (testCase.empty) expect(expected).toHaveLength(0);
-        else
-          expect(
-            expected.length,
-            "Every positive golden has an independent populated control",
-          ).toBeGreaterThan(0);
-        for (const login of testCase.requiredLogins)
-          expect(expected.map((person) => person.login)).toContain(login);
-        const output = await service.search({
-          question,
-          limit: 50,
-          clientKey: `golden-${randomUUID()}`,
-          signal: AbortSignal.timeout(180_000),
+  for (let repetition = 1; repetition <= repetitions; repetition++) {
+    for (const [caseIndex, testCase] of cases.entries()) {
+      for (const [variant, question] of testCase.questions.entries()) {
+        it(`${testCase.name}, wording ${variant + 1}, sample ${repetition}`, async () => {
+          const expected = idRows.parse((await pool.query(testCase.sql)).rows);
+          expect(expected.length, "Golden result must fit the requested limit").toBeLessThanOrEqual(
+            50,
+          );
+          if (testCase.empty) expect(expected).toHaveLength(0);
+          else
+            expect(
+              expected.length,
+              "Every positive golden has an independent populated control",
+            ).toBeGreaterThan(0);
+          for (const login of testCase.requiredLogins)
+            expect(expected.map((person) => person.login)).toContain(login);
+          const startedAt = new Date().toISOString();
+          const output = await service.search({
+            question,
+            limit: 50,
+            clientKey: `golden-${randomUUID()}`,
+            signal: AbortSignal.timeout(180_000),
+          });
+          if (evidenceDirectory) {
+            await mkdir(evidenceDirectory, { recursive: true, mode: 0o700 });
+            const authority = z
+              .object({ candidateSnapshotId: z.string().regex(/^[a-f0-9]{64}$/) })
+              .parse(
+                JSON.parse(
+                  await readFile(
+                    path.join(process.env.GIA_PROJECT_DIR ?? ".", "gia/client-authority.json"),
+                    "utf8",
+                  ),
+                ),
+              );
+            await writeFile(
+              path.join(evidenceDirectory, `${caseIndex + 1}-${variant + 1}-${repetition}.json`),
+              `${JSON.stringify(
+                {
+                  name: testCase.name,
+                  variant: variant + 1,
+                  repetition,
+                  question,
+                  startedAt,
+                  finishedAt: new Date().toISOString(),
+                  snapshotId: authority.candidateSnapshotId,
+                  requestId: output.requestId,
+                  kind: output.kind,
+                  expectedIds: expected.map((person) => person.id),
+                  ...(output.kind === "matches"
+                    ? {
+                        actualIds: output.people.map((person) => person.id),
+                        interpretation: output.interpretation,
+                        truncated: output.truncated,
+                      }
+                    : output.kind === "failed"
+                      ? { code: output.code }
+                      : { explanation: output.explanation }),
+                },
+                null,
+                2,
+              )}\n`,
+              { mode: 0o600, flag: "wx" },
+            );
+          }
+          expect(output.kind, JSON.stringify(output)).toBe("matches");
+          if (output.kind !== "matches") throw new Error("Gia did not produce a verified answer");
+          expect(output.truncated).toBe(false);
+          expect(output.people.map((person) => person.id).sort()).toEqual(
+            expected.map((person) => person.id).sort(),
+          );
+          expect(new Set(output.people.map((person) => person.id)).size).toBe(output.people.length);
+          expect(output.people.some((person) => person.login === "vercel")).toBe(false);
+          expect(output.coverage.partialSources).toBeGreaterThan(0);
         });
-        expect(output.kind, JSON.stringify(output)).toBe("matches");
-        if (output.kind !== "matches") throw new Error("Gia did not produce a verified answer");
-        expect(output.truncated).toBe(false);
-        expect(output.people.map((person) => person.id).sort()).toEqual(
-          expected.map((person) => person.id).sort(),
-        );
-        expect(new Set(output.people.map((person) => person.id)).size).toBe(output.people.length);
-        expect(output.people.some((person) => person.login === "vercel")).toBe(false);
-        expect(output.coverage.partialSources).toBeGreaterThan(0);
-      });
+      }
     }
   }
 
