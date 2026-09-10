@@ -8,10 +8,10 @@ export const maxDuration = 180;
 
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
-  if (
-    origin !== new URL(request.url).origin ||
-    request.headers.get("sec-fetch-site") === "cross-site"
-  ) {
+  const requestUrl = new URL(request.url);
+  // Next may normalize Request.url to its bind address. Host retains the direct request authority.
+  const expectedOrigin = `${requestUrl.protocol}//${request.headers.get("host") ?? requestUrl.host}`;
+  if (origin !== expectedOrigin || request.headers.get("sec-fetch-site") === "cross-site") {
     return failureResponse(403, "ORIGIN_REJECTED", "Submit searches from this application.");
   }
   try {

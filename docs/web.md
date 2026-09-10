@@ -8,7 +8,7 @@ The server composition root reads the repository `.env` lazily. It uses `DATABAS
 
 - `GET /api/catalog` reads actual collection counts, examples, concepts, coverage, and freshness. Unavailable counts remain unavailable; the UI never substitutes zero.
 - `GET /api/people/:login` reads one collected profile and its public source context.
-- `POST /api/search` accepts the shared strict Zod request contract. It requires an Origin matching the request URL, rejects cross-site requests, accepts only JSON, and limits the body to 12 KiB. Client cancellation reaches Gia through the request signal. No search runs during navigation, build, URL restoration, example selection, or typing.
+- `POST /api/search` accepts the shared strict Zod request contract. It requires an Origin matching the direct request Host and protocol, rejects cross-site requests, accepts only JSON, and limits the body to 12 KiB. Next may normalize its internal request URL to the bind address, so the check uses the direct Host header, never an arbitrary forwarded host. Client cancellation reaches Gia through the request signal. No search runs during navigation, build, URL restoration, example selection, or typing.
 
 The endpoint uses one conservative shared admission bucket, `public-web`. Do not derive a client identity from arbitrary forwarded headers. A deployment that needs per-client budgets must establish its trusted proxy or authenticated identity before changing this boundary. Global usage limits remain in the search service. Configure the ingress so Next.js sees the application's public request origin; the browser does not submit cross-origin searches.
 
